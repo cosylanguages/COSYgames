@@ -274,7 +274,26 @@
         return t;
     }
 
+    function applyHandoffState() {
+        if (window.COSYLoader && window.COSYLoader.getHandoffParams) {
+            const { lang, level, topic } = window.COSYLoader.getHandoffParams();
+            if (lang && ['en', 'fr', 'ru'].includes(lang)) {
+                state.lang = lang;
+            }
+            if (topic && window.HUNDRED_QUESTIONS_DECKS && window.HUNDRED_QUESTIONS_DECKS[topic]) {
+                state.deckKey = topic;
+            }
+            if (level) {
+                const levelIdxMap = { 'A2': 0, 'B1': 1, 'B2': 2, 'C1': 3, 'C2': 4 };
+                if (levelIdxMap[level] !== undefined) {
+                    state.currentLevelIdx = levelIdxMap[level];
+                }
+            }
+        }
+    }
+
     function renderSetup() {
+        applyHandoffState();
         document.getElementById('go-title').textContent = GAME_TITLE;
         document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');

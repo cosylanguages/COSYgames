@@ -81,9 +81,12 @@
                 this.sceneMatches[key] = new Set();
             });
 
-            // Set initial default scene based on level
+            // Set initial default scene based on level or URL handoff topic
+            const handoff = window.COSYLoader && window.COSYLoader.getHandoffParams ? window.COSYLoader.getHandoffParams() : {};
             if (sceneId && window.COSY_SCENE_DATA[sceneId]) {
                 this.activeSceneId = sceneId;
+            } else if (handoff.topic && window.COSY_SCENE_DATA[handoff.topic]) {
+                this.activeSceneId = handoff.topic;
             } else if (this.activeLevel === 'A2') {
                 this.activeSceneId = 'city';
             } else if (this.activeLevel === 'B1' || this.activeLevel === 'B2-C2') {
