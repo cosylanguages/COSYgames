@@ -229,8 +229,18 @@
             overflow-y: auto;
         }
     </style>
+    <link rel="stylesheet" href="../../shared/css/tokens.css">
+    <link rel="stylesheet" href="../../shared/css/games.css">
+    <link rel="stylesheet" href="../../shared/css/nav.css">
 </head>
 <body>
+    <nav class="cg-nav">
+  <a href="../../index.html" class="cg-nav-brand">🎮 COSY Games</a>
+  <div class="cg-nav-right">
+    <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSYlanguages ↗</a>
+    <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+  </div>
+</nav>
     <header>
         <h1>Scene Match Hotspot Editor <span class="badge-dev">DEV TOOL</span></h1>
         <div style="font-size: 0.85rem; color: var(--text-muted);">Percentage &amp; ViewBox Coordinate Generator</div>
@@ -624,5 +634,6 @@
             updateCodeOutput();
         })();
     </script>
+    <script src="../../shared/js/nav.js"></script>
 </body>
 </html>
