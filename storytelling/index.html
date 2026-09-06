@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Weaver 📖: COSYlanguages</title>
+    <link rel="icon" href="../../images/logos/cosylanguages.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/tokens.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/games.css">
+
+    <script src="../../js/core/engine.js"></script>
+    <style>
+        .story-container {
+            max-height: 250px;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 1rem 0;
+            scroll-behavior: smooth;
+        }
+        .story-line {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .story-line:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .story-badge {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+        .badge-grammar {
+            background: var(--indigo-light);
+            color: var(--indigo);
+        }
+        .badge-vocab {
+            background: var(--honey-light);
+            color: var(--honey);
+        }
+        .badge-link {
+            background: var(--teal-light);
+            color: var(--teal);
+        }
+        .constraint-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        @media(min-width: 768px) {
+            .constraint-cards {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .constraint-card {
+            border-radius: 16px;
+            padding: 1.25rem;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s;
+        }
+        .constraint-card.grammar {
+            border: 2px dashed var(--indigo);
+            background: rgba(79, 70, 229, 0.03);
+        }
+        .constraint-card.vocab {
+            border: 2px dashed var(--honey);
+            background: rgba(232, 168, 56, 0.03);
+        }
+        .help-drawer {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--tan-light);
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .help-drawer-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .connector-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .connector-pill {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .connector-pill:hover {
+            border-color: var(--teal);
+            background: var(--teal-light);
+            color: var(--teal);
+        }
+        .story-scroll-wrap {
+            background: #fffdf9;
+            border: 2px solid #e2dac9;
+            border-radius: 16px;
+            padding: 2rem;
+            max-height: 400px;
+            overflow-y: auto;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+            font-family: 'Fraunces', serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body class="game-standalone">
+    <nav id="cosy-nav"></nav>
+
+    <div class="game-overlay open" id="game-overlay" style="position: relative; height: calc(100vh - 62px); z-index: 1;">
+      <div class="go-topbar">
+        <button class="go-back" onclick="location.href='../index.html'">← Back to games</button>
+        <div>
+          <div class="go-title" id="go-title">Story Weaver 📖</div>
+          <div class="go-meta" id="go-meta">Speaking & Creativity</div>
+        </div>
+        <div id="go-topbar-right"></div>
+      </div>
+      <div class="go-body" id="go-body">
+          <div id="game-loader" style="text-align:center; padding: 4rem;">Loading game assets...</div>
+      </div>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="../../js/data/languages.js"></script>
+    <script src="../../js/data/emojis.js"></script>
+    <script src="../../js/data/numbers.js"></script>
+    <script src="../../js/core/i18n.js"></script>
+    <script src="../../js/core/ui.js"></script>
+    <script src="../../js/games/utils/shared.js"></script>
+
+    <!-- Game Engine -->
+    <script src="../_engine/game_session.js"></script>
+    <script src="../_engine/scores.js"></script>
+    <script src="../_engine/loader.js"></script>
+
+    <!-- Game Specific Logic (loaded by individual folders) -->
+    <script src="game.js"></script>
+
+    <div id="toast" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--ink); color: #fff; padding: 12px 24px; border-radius: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 3000; font-size: .85rem; font-weight: 500;"></div>
+</body>
+</html>

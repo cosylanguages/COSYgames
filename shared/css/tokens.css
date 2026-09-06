@@ -1,0 +1,143 @@
+/* Shared Design Tokens - COSYlanguages Monorepo Shared Workspace */
+
+:root {
+    /* ── Core Primitives Color Palette ────────────────── */
+    /* Neutrals & Off-whites */
+    --cream:      #fdfcf8;
+    --cream-dark: #f5ede0;
+    --warm-white: #FFFEFB;
+
+    /* Ink scale */
+    --ink:        #2a2a2a;
+    --ink-soft:   #4a4a4a;
+    --ink-muted:  #4a4a4a;
+    --ink-faint:  #5c5957;
+    --muted:      #5c5957;
+
+    /* Sage Brand Palette */
+    --sage:       #416b49;
+    --sage-dark:  #375742;
+    --sage-deep:  #233827;
+    --sage-soft:  #6b9474;
+    --sage-mist:  #f0f5f1;
+    --sage-pale:  #e8f0e9;
+    --sage-light: #e8f0e9;
+
+    /* Base UI Palette */
+    --teal:       var(--sage);
+    --teal-light: var(--sage-light);
+
+    --honey:      #945e05;
+    --honey-dark: #7d4d03;
+    --honey-pale: #fff8e7;
+    --honey-mid:  #fef0c7;
+
+    --coral:      #B84318;
+    --coral-light: #faeee8;
+
+    --gold:       #945e05;
+    --gold-light: #fff8e7;
+
+    --plum:       #7a5c3a;
+    --plum-light: #f5ede0;
+
+    --blue:       #3a5298;
+    --blue-light: #eef1fb;
+
+    --green:      #4a6b50;
+    --green-light: #e5f4ec;
+
+    --rose:       #a32d2d;
+    --rose-light: #fcebeb;
+
+    --navy:       #1e2f6b;
+    --navy-light: #e8ecf5;
+
+    --accent-color: #d66161;
+
+    /* ── Borders & Shadows Primitives ───────────────── */
+    --border:        rgba(74,107,80,.12);
+    --border-hover:  rgba(74,107,80,.25);
+    --shadow-sm:     0 2px 12px rgba(46,74,51,.07);
+    --shadow:        0 6px 28px rgba(46,74,51,.10);
+    --box-shadow:    var(--shadow);
+
+    /* ── Spacing Scale ─────────────────────────────────── */
+    --space-xs:  4px;
+    --space-sm:  8px;
+    --space-md:  16px;
+    --space-lg:  24px;
+    --space-xl:  32px;
+    --space-xxl: 48px;
+
+    /* ── Border Radius Scale ───────────────────────────── */
+    --r-sm:   8px;
+    --r-md:   14px;
+    --r-lg:   22px;
+    --r-xl:   32px;
+    --radius: 18px;
+    --radius-sm: 10px;
+    --border-radius: var(--radius);
+
+    /* ── Theme Logic Primitives ────────────────────────── */
+    --paper-bg:      #FDF8F0;
+    --paper-txt:     #1C1008;
+    --contrast-bg:   #111111;
+    --contrast-txt:  #FFFFFF;
+    --contrast-border: #444444;
+
+    --background-color: var(--cream);
+    --surface-color:    #FFFFFF;
+    --text-color:       var(--ink);
+    --light-gray:       var(--cream-dark);
+    --transition-speed: 0.3s;
+
+    /* ── Typography Primitives ─────────────────────────── */
+    --font-sans: 'Nunito', 'DM Sans', sans-serif;
+    --font-serif: 'Fraunces', 'Lora', serif;
+}
+
+html[data-theme="dark"], body.theme-dark {
+    /* Neutrals / Off-whites */
+    --cream:      #1a1f1a;
+    --cream-dark: #141914;
+    --warm-white: #222b22;
+
+    /* Ink scale (WCAG AA Enhanced Contrast) */
+    --ink:        #e8f0e9;
+    --ink-soft:   #c8d8c9;
+    --ink-muted:  #c8d8c9;
+    --ink-faint:  #9cb39e;
+    --muted:      #9cb39e;
+
+    /* Borders */
+    --border:     rgba(107,143,113,.2);
+    --border-hover: rgba(107,143,113,.35);
+
+    /* Sage Brand Palette dark variations */
+    --sage:       #6c9172;
+    --sage-dark:  #a8c0ab;
+    --sage-deep:  #e8f0e9;
+    --sage-pale:  #222c23;
+    --sage-mist:  #1f2720;
+    --sage-light: #222c23;
+
+    /* Base UI Dark Tints */
+    --honey-pale:  #2d2417;
+    --honey-mid:   #35291b;
+    --coral-light: #2d1a15;
+    --gold-light:  #2d2417;
+    --plum-light:  #26201a;
+    --blue-light:  #1a202d;
+    --green-light: #15241b;
+    --rose-light:  #2d1515;
+    --navy-light:  #141a29;
+
+    /* Theme Logic */
+    --paper-bg:   #1a1f1a;
+    --paper-txt:  #e8f0e9;
+    --background-color: var(--cream);
+    --surface-color:    #222b22;
+    --text-color:       var(--ink);
+    --light-gray:       var(--cream-dark);
+}

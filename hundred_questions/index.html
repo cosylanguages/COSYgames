@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Questions: COSYlanguages</title>
+    <link rel="icon" href="../../images/logos/cosylanguages.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/tokens.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/games.css">
+
+    <script src="../../js/core/engine.js"></script>
+</head>
+<body class="game-standalone">
+    <nav id="cosy-nav"></nav>
+
+    <div class="game-overlay open" id="game-overlay" style="position: relative; height: calc(100vh - 62px); z-index: 1;">
+      <div class="go-topbar">
+        <button class="go-back" onclick="location.href='../index.html'">← Back to games</button>
+        <div>
+          <div class="go-title" id="go-title">100 Questions 💬</div>
+          <div class="go-meta" id="go-meta">Speaking · Group & Friends · All Levels</div>
+        </div>
+        <div id="go-topbar-right"></div>
+      </div>
+      <div class="go-body" id="go-body">
+          <div id="game-loader" style="text-align:center; padding: 4rem;">Loading game assets...</div>
+      </div>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="../../js/data/languages.js"></script>
+    <script src="../../js/data/emojis.js"></script>
+    <script src="../../js/data/numbers.js"></script>
+    <script src="../../js/core/i18n.js"></script>
+    <script src="../../js/core/ui.js"></script>
+    <script src="../../js/games/utils/shared.js"></script>
+
+    <!-- Game Engine -->
+    <script src="../_engine/game_session.js" onerror="this.onerror=null; console.warn('_engine/game_session.js bypassed or missing.')"></script>
+    <script src="../_engine/scores.js" onerror="this.onerror=null; console.warn('_engine/scores.js bypassed or missing.')"></script>
+    <script src="../_engine/loader.js" onerror="this.onerror=null; console.warn('_engine/loader.js bypassed or missing.')"></script>
+
+    <!-- Modular Decks -->
+    <script src="decks/friends.js"></script>
+    <script src="decks/teacher.js"></script>
+    <script src="decks/interview.js"></script>
+    <script src="decks/student.js"></script>
+    <script src="decks/family.js"></script>
+    <script src="decks/civic.js"></script>
+    <script src="decks/netflix.js"></script>
+    <script src="decks/myself.js"></script>
+
+    <!-- Game Specific Logic -->
+    <script src="game.js"></script>
+
+    <div id="toast" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--ink); color: #fff; padding: 12px 24px; border-radius: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 3000; font-size: .85rem; font-weight: 500;"></div>
+</body>
+</html>
