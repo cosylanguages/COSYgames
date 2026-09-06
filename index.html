@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/2ba470ec7ca6da2a962a8f14277d8815e76317d9/css/cosy-tokens.css">
     <link rel="stylesheet" href="../css/tokens.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/components.css">
@@ -230,6 +231,70 @@
     <script src="../js/core/i18n.js"></script>
     <script src="../js/games/loader.js"></script>
     <script src="../js/core/ui.js"></script>
+    <script>
+      (function() {
+        const GAME_PATH_MAP = {
+          fluency: 'fluency_flow/index.html',
+          battle: 'battle_of_wits/index.html',
+          opinion: 'opinion_arena/index.html',
+          critic: 'critics_corner/index.html',
+          storychain: 'story_chain/index.html',
+          hotseat: 'hot_seat/index.html',
+          action: 'action_hero/index.html',
+          identity: 'identity_mystery/index.html',
+          objectquest: 'object_quest/index.html',
+          wordlinker: 'word_linker/index.html',
+          lastletter: 'last_letter/index.html',
+          emoji: 'emoji_odyssey/index.html',
+          crossword: 'cosy_crossword/index.html',
+          bingo: 'lucky_numbers/index.html',
+          etymology: 'etymology_explorer/index.html',
+          gender: 'what_gender_is_it/index.html',
+          questions: 'hundred_questions/index.html',
+          storytelling: 'storytelling/index.html',
+          scenematch: 'scene_match/index.html',
+          cosyworld: 'https://cosylanguages.github.io/COSYworld/'
+        };
+
+        const originalOpenGame = window.openGame;
+        window.openGame = function(id) {
+          let path = GAME_PATH_MAP[id];
+          if (!path) {
+            if (originalOpenGame) {
+              originalOpenGame(id);
+            }
+            return;
+          }
+
+          const params = new URLSearchParams(window.location.search);
+          const passParams = new URLSearchParams();
+          ['lang', 'level', 'topic'].forEach(key => {
+            if (params.has(key)) {
+              passParams.set(key, params.get(key));
+            }
+          });
+
+          const queryString = passParams.toString();
+          if (queryString) {
+            path += (path.includes('?') ? '&' : '?') + queryString;
+          }
+
+          if (id === 'cosyworld' && (location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
+            location.href = '../COSYworld/index.html' + (queryString ? '?' + queryString : '');
+          } else {
+            location.href = path;
+          }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+          const params = new URLSearchParams(window.location.search);
+          const gameParam = params.get('game');
+          if (gameParam && GAME_PATH_MAP[gameParam]) {
+            window.openGame(gameParam);
+          }
+        });
+      })();
+    </script>
 
     <div id="toast" class="toast-notification"></div>
 </body>
