@@ -8,16 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../../css/tokens.css">
-    <link rel="stylesheet" href="../../css/base.css">
-    <link rel="stylesheet" href="../../css/components.css">
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/games.css">
+    <link rel="stylesheet" href="../shared/css/tokens.css">
+    <link rel="stylesheet" href="../shared/css/games.css">
+    <link rel="stylesheet" href="../shared/css/nav.css">
 
-    <script src="../../js/core/engine.js"></script>
 </head>
 <body class="game-standalone">
-    <nav id="cosy-nav"></nav>
+    <nav class="cg-nav">
+  <a href="../index.html" class="cg-nav-brand">🎮 COSY Games</a>
+  <div class="cg-nav-right">
+    <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSYlanguages ↗</a>
+    <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+  </div>
+</nav>
 
     <div class="game-overlay open game-overlay-standalone" id="game-overlay">
       <div class="go-topbar">
@@ -34,11 +37,6 @@
     </div>
 
     <!-- Core Scripts -->
-    <script src="../../js/data/languages.js"></script>
-    <script src="../../js/data/emojis.js"></script>
-    <script src="../../js/data/numbers.js"></script>
-    <script src="../../js/core/i18n.js"></script>
-    <script src="../../js/core/ui.js"></script>
     <script src="../../js/games/utils/shared.js"></script>
 
     <!-- Game Engine -->
@@ -51,5 +49,6 @@
     <script src="game.js"></script>
 
     <div id="toast" class="toast-notification"></div>
+    <script src="../shared/js/nav.js"></script>
 </body>
 </html>

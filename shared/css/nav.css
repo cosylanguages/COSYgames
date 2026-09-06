@@ -1,0 +1,12 @@
+.cg-nav { position: sticky; top: 0; z-index: 100; display: flex;
+  align-items: center; justify-content: space-between; padding: 0.9rem 1.5rem;
+  background: var(--warm-white); border-bottom: 1px solid var(--border); }
+.cg-nav-brand { font-family: var(--font-serif); font-weight: 600; font-size: 1.05rem;
+  color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.cg-nav-right { display: flex; align-items: center; gap: 14px; }
+.cg-nav-hub-link { font-size: 0.85rem; color: var(--ink-muted); text-decoration: none;
+  font-weight: 600; }
+.cg-nav-hub-link:hover { color: var(--teal); }
+.cg-theme-btn { background: none; border: none; font-size: 1.15rem; cursor: pointer;
+  padding: 4px 8px; border-radius: var(--r-sm); }
+.cg-theme-btn:hover { background: var(--sage-mist); }

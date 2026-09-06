@@ -8,13 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../../css/tokens.css">
-    <link rel="stylesheet" href="../../css/base.css">
-    <link rel="stylesheet" href="../../css/components.css">
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/games.css">
+    <link rel="stylesheet" href="../shared/css/tokens.css">
+    <link rel="stylesheet" href="../shared/css/games.css">
+    <link rel="stylesheet" href="../shared/css/nav.css">
 
-    <script src="../../js/core/engine.js"></script>
     <style>
         .story-container {
             max-height: 250px;
@@ -133,9 +130,15 @@
     </style>
 </head>
 <body class="game-standalone">
-    <nav id="cosy-nav"></nav>
+    <nav class="cg-nav">
+  <a href="../index.html" class="cg-nav-brand">🎮 COSY Games</a>
+  <div class="cg-nav-right">
+    <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSYlanguages ↗</a>
+    <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+  </div>
+</nav>
 
-    <div class="game-overlay open" id="game-overlay" style="position: relative; height: calc(100vh - 62px); z-index: 1;">
+    <div class="game-overlay open game-overlay-standalone" id="game-overlay">
       <div class="go-topbar">
         <button class="go-back" onclick="location.href='../index.html'">← Back to games</button>
         <div>
@@ -145,16 +148,11 @@
         <div id="go-topbar-right"></div>
       </div>
       <div class="go-body" id="go-body">
-          <div id="game-loader" style="text-align:center; padding: 4rem;">Loading game assets...</div>
+          <div id="game-loader" class="game-loader">Loading game assets...</div>
       </div>
     </div>
 
     <!-- Core Scripts -->
-    <script src="../../js/data/languages.js"></script>
-    <script src="../../js/data/emojis.js"></script>
-    <script src="../../js/data/numbers.js"></script>
-    <script src="../../js/core/i18n.js"></script>
-    <script src="../../js/core/ui.js"></script>
     <script src="../../js/games/utils/shared.js"></script>
 
     <!-- Game Engine -->
@@ -165,6 +163,7 @@
     <!-- Game Specific Logic (loaded by individual folders) -->
     <script src="game.js"></script>
 
-    <div id="toast" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--ink); color: #fff; padding: 12px 24px; border-radius: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 3000; font-size: .85rem; font-weight: 500;"></div>
+    <div id="toast" class="toast-notification"></div>
+    <script src="../shared/js/nav.js"></script>
 </body>
 </html>

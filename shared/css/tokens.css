@@ -26,6 +26,11 @@
     /* Base UI Palette */
     --teal:       var(--sage);
     --teal-light: var(--sage-light);
+    --teal-hover: #6b8f71;
+
+    --indigo:     #4f46e5;
+    --tan:        #ede4d3;
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
 
     --honey:      #945e05;
     --honey-dark: #7d4d03;
