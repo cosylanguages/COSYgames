@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etymology Explorer: COSYlanguages</title>
+    <link rel="icon" href="../../images/cosylanguages.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/tokens.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/games.css">
+</head>
+<body class="game-standalone">
+    <nav id="cosy-nav"></nav>
+
+    <div class="game-overlay open" id="game-overlay" style="position: relative; height: calc(100vh - 62px); z-index: 1;">
+      <div class="go-topbar">
+        <button class="go-back" onclick="location.href='../index.html'">← Back to games</button>
+        <div>
+          <div class="go-title" id="go-title">Etymology Explorer 📜</div>
+          <div class="go-meta" id="go-meta">Vocabulary · Etymology</div>
+        </div>
+        <div id="go-topbar-right"></div>
+      </div>
+      <div class="go-body" id="go-body">
+          <div id="game-loader" style="text-align:center; padding: 4rem;">Loading game assets...</div>
+      </div>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="../../js/data/languages.js"></script>
+    <script src="../../js/core/engine.js"></script>
+    <script src="../../js/core/i18n.js"></script>
+    <script src="../../js/core/ui.js"></script>
+    <script src="../../js/data/pricing.js"></script>
+    <script src="../../js/games/utils/shared.js"></script>
+
+    <!-- Game Engine -->
+    <script src="../_engine/game_session.js"></script>
+    <script src="../_engine/scores.js"></script>
+    <script src="../_engine/loader.js"></script>
+
+    <!-- Game Specific Logic -->
+    <script src="game.js"></script>
+
+    <div id="toast" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--ink); color: #fff; padding: 12px 24px; border-radius: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 3000; font-size: .85rem; font-weight: 500;"></div>
+</body>
+</html>

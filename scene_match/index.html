@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="game_scene_match">Scene Match 🖼️: COSYlanguages</title>
+    <link rel="icon" href="../../images/logos/cosylanguages.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/tokens.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/games.css">
+
+    <style>
+      .sm-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1rem 1rem 4rem 1rem;
+      }
+      .sm-header-card {
+        background: white;
+        border: 2px solid var(--border);
+        border-radius: 16px;
+        padding: 1.25rem 1.5rem;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      }
+
+      /* Room Switcher Tabs */
+      .sm-room-tabs {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+      .sm-tab-btn {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        border: 2px solid var(--border);
+        border-radius: 20px;
+        background: var(--tan-light, #f8f6f0);
+        color: var(--ink);
+        cursor: pointer;
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      }
+      .sm-tab-btn:hover {
+        background: white;
+        border-color: var(--teal, #10b981);
+        color: var(--teal, #10b981);
+      }
+      .sm-tab-btn.active {
+        background: var(--teal, #10b981);
+        color: white;
+        border-color: #047857;
+      }
+      .sm-tab-lvl {
+        font-size: 0.75rem;
+        font-weight: 800;
+        opacity: 0.8;
+        margin-right: 0.35rem;
+        background: rgba(0, 0, 0, 0.08);
+        padding: 0.1rem 0.4rem;
+        border-radius: 10px;
+      }
+      .sm-tab-lvl.hub {
+        background: #ea580c;
+        color: white;
+      }
+      .sm-tab-btn.active .sm-tab-lvl {
+        background: rgba(255, 255, 255, 0.25);
+      }
+      .sm-hub-hint {
+        font-size: 1rem;
+        color: var(--ink-muted);
+        margin: 0;
+        font-weight: 500;
+      }
+
+      .sm-instruction {
+        font-size: 1.05rem;
+        color: var(--ink);
+        margin-bottom: 0.75rem;
+        font-weight: 600;
+      }
+      .sm-progress-bar-wrap {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .sm-progress-track {
+        flex: 1;
+        height: 12px;
+        background: var(--tan-light, #f3f0ea);
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+      .sm-progress-fill {
+        height: 100%;
+        background: var(--teal, #10b981);
+        width: 0%;
+        transition: width 0.3s ease;
+      }
+      .sm-progress-text {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--ink-muted);
+        white-space: nowrap;
+      }
+
+      /* Scene Viewport */
+      .sm-stage {
+        position: relative;
+        background: #faf7f2;
+        border: 2px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      }
+      .sm-svg-scene {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Hotspots */
+      .sm-hotspot {
+        cursor: pointer;
+        pointer-events: bounding-box;
+        outline: none;
+      }
+      .sm-hotspot rect.hs-hit {
+        fill: rgba(255, 255, 255, 0.01);
+        stroke: rgba(16, 185, 129, 0.35);
+        stroke-width: 2;
+        stroke-dasharray: 6 4;
+        transition: all 0.2s ease;
+      }
+      .sm-hotspot:hover rect.hs-hit,
+      .sm-hotspot:focus rect.hs-hit {
+        fill: rgba(16, 185, 129, 0.18);
+        stroke: var(--teal, #10b981);
+        stroke-width: 3;
+        stroke-dasharray: none;
+      }
+      .sm-hotspot.matched {
+        cursor: default;
+        pointer-events: none;
+      }
+      .sm-hotspot.matched rect.hs-hit {
+        fill: transparent;
+        stroke: none;
+      }
+      .sm-hotspot.shake rect.hs-hit {
+        stroke: #ef4444;
+        fill: rgba(239, 68, 68, 0.25);
+        animation: hsShake 0.4s ease;
+      }
+
+      /* Door & Portal Hotspots */
+      .sm-door-hotspot {
+        cursor: pointer;
+        outline: none;
+        transform-origin: center left;
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s;
+      }
+      .sm-door-hotspot rect {
+        fill: rgba(251, 191, 36, 0.08);
+        stroke: #f59e0b;
+        stroke-width: 2.5;
+        stroke-dasharray: 6 3;
+        transition: all 0.3s ease;
+      }
+      .sm-door-hotspot:hover,
+      .sm-door-hotspot:focus {
+        transform: perspective(600px) rotateY(-35deg) scale(1.05);
+      }
+      .sm-door-hotspot:hover rect,
+      .sm-door-hotspot:focus rect {
+        fill: rgba(245, 158, 11, 0.35);
+        stroke: #f59e0b;
+        stroke-width: 3.5;
+        stroke-dasharray: none;
+        filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.7));
+      }
+      .sm-door-hotspot:hover .sm-door-bg,
+      .sm-door-hotspot:focus .sm-door-bg {
+        fill: #92400e;
+        transform: scale(1.1);
+      }
+
+      @keyframes hsShake {
+        0%, 100% { transform: translate(0, 0); }
+        20% { transform: translate(-6px, 0); }
+        40% { transform: translate(6px, 0); }
+        60% { transform: translate(-4px, 0); }
+        80% { transform: translate(4px, 0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .sm-hotspot.shake rect.hs-hit {
+          animation: none !important;
+        }
+        .sm-tab-btn,
+        .sm-word-btn,
+        .sm-progress-fill {
+          transition: none !important;
+        }
+      }
+
+      /* Pinned Labels */
+      .sm-pinned-label {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        fill: white;
+      }
+      .sm-pinned-bg {
+        fill: #064e3b;
+        rx: 12px;
+        ry: 12px;
+        filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.25));
+      }
+
+      .sm-door-label {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 700;
+        font-size: 11px;
+        fill: #fef3c7;
+      }
+      .sm-door-bg {
+        fill: #78350f;
+        rx: 8px;
+        ry: 8px;
+      }
+
+      /* Word Bank */
+      .sm-word-bank-card {
+        background: white;
+        border: 2px solid var(--border);
+        border-radius: 16px;
+        padding: 1.25rem 1.5rem;
+      }
+      .sm-bank-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--ink-muted);
+        margin-bottom: 0.75rem;
+      }
+      .sm-words-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .sm-word-btn {
+        padding: 0.6rem 1.25rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+        border: 2px solid var(--border);
+        border-radius: 28px;
+        background: white;
+        color: var(--ink);
+        cursor: pointer;
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+      }
+      .sm-word-btn:hover:not(:disabled) {
+        border-color: var(--teal, #10b981);
+        color: var(--teal, #10b981);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+      }
+      .sm-word-btn.selected {
+        background: var(--teal, #10b981);
+        color: white;
+        border-color: #047857;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+      .sm-word-btn:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+        background: #f3f0ea;
+        text-decoration: line-through;
+        border-color: #e5e0d8;
+      }
+
+      /* Completion overlay */
+      .sm-completion-card {
+        text-align: center;
+        padding: 2.5rem;
+        background: white;
+        border: 2px solid var(--border);
+        border-radius: 16px;
+      }
+      .sm-completion-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+      .sm-completion-title {
+        font-family: 'Fraunces', serif;
+        font-size: 2rem;
+        color: var(--ink);
+        margin-bottom: 0.75rem;
+      }
+      .sm-completion-msg {
+        font-size: 1.1rem;
+        color: var(--ink-muted);
+        margin-bottom: 1.5rem;
+      }
+    </style>
+    <script src="../../js/core/engine.js"></script>
+</head>
+<body class="game-standalone">
+    <nav id="cosy-nav"></nav>
+
+    <main class="game-overlay open" id="game-overlay" style="position: relative; min-height: calc(100vh - 62px); z-index: 1;">
+      <div class="go-topbar">
+        <button class="go-back" type="button" onclick="location.href='../index.html'">← Back to games</button>
+        <div>
+          <h1 class="go-title" id="go-title" data-i18n="scene_match_title" style="margin:0; font-size:1.25rem;">Scene Match 🖼️</h1>
+          <div class="go-meta" id="go-meta" data-i18n="scene_match_meta">Vocab &amp; Puzzles · Solo</div>
+        </div>
+        <div id="go-topbar-right"></div>
+      </div>
+      <div class="go-body" id="go-body">
+          <div id="game-loader" style="text-align:center; padding: 4rem;">Loading room scenes...</div>
+      </div>
+    </main>
+
+    <!-- Core Scripts -->
+    <script src="../../js/data/languages.js"></script>
+    <script src="../../js/core/i18n.js"></script>
+    <script src="../../js/core/ui.js"></script>
+    <script src="../../js/games/utils/shared.js"></script>
+
+    <!-- Game Engine -->
+    <script src="../_engine/game_session.js"></script>
+    <script src="../_engine/scores.js"></script>
+    <script src="../_engine/loader.js"></script>
+
+    <!-- Scene Datasets -->
+    <script src="../data/scenes/apartment.js"></script>
+    <script src="../data/scenes/apartment_plan.js"></script>
+    <script src="../data/scenes/routine_calendar.js"></script>
+    <script src="../data/scenes/calendar.js"></script>
+    <script src="../data/scenes/bedroom.js"></script>
+    <script src="../data/scenes/kitchen.js"></script>
+    <script src="../data/scenes/bathroom.js"></script>
+    <script src="../data/scenes/routine.js"></script>
+    <script src="../data/scenes/seasons.js"></script>
+    <script src="../data/scenes/clothing.js"></script>
+    <script src="../data/scenes/animals.js"></script>
+    <script src="../data/scenes/city.js"></script>
+    <script src="../data/scenes/cafe.js"></script>
+    <script src="../data/scenes/market.js"></script>
+    <script src="../data/scenes/market_fruit.js"></script>
+    <script src="../data/scenes/market_veg.js"></script>
+    <script src="../data/scenes/market_fish.js"></script>
+    <script src="../data/scenes/market_bakery.js"></script>
+    <script src="../data/scenes/market_cheese.js"></script>
+    <script src="../data/scenes/school_office.js"></script>
+    <script src="../data/scenes/airport.js"></script>
+    <script src="../data/scenes/hospital.js"></script>
+    <script src="../data/scenes/park_nature.js"></script>
+    <script src="../data/scenes/restaurant.js"></script>
+
+    <!-- Game Specific Engine Logic -->
+    <script src="game.js"></script>
+
+    <div id="toast" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--ink); color: #fff; padding: 12px 24px; border-radius: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 3000; font-size: .85rem; font-weight: 500;"></div>
+</body>
+</html>

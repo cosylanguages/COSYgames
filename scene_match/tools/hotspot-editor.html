@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene Match Hotspot Editor 🛠️ (Dev Tool)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel-bg: #1e293b;
+            --panel-border: #334155;
+            --accent: #10b981;
+            --accent-hover: #059669;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --danger: #ef4444;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #020617;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--panel-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge-dev {
+            background: #f59e0b;
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .editor-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr 380px;
+            flex: 1;
+            overflow: hidden;
+            height: calc(100vh - 61px);
+        }
+
+        /* Sidebar Forms */
+        .sidebar {
+            background: var(--panel-bg);
+            border-right: 1px solid var(--panel-border);
+            padding: 1.25rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+
+        input, select {
+            background: #0f172a;
+            border: 1px solid var(--panel-border);
+            color: var(--text);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover { background: var(--accent-hover); }
+        .btn-danger { background: var(--danger); }
+        .btn-danger:hover { background: #dc2626; }
+        .btn-secondary { background: #475569; }
+        .btn-secondary:hover { background: #334155; }
+
+        /* Canvas Stage */
+        .canvas-container {
+            position: relative;
+            background: #020617;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: auto;
+        }
+
+        .stage-wrapper {
+            position: relative;
+            border: 2px dashed var(--panel-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            user-select: none;
+            background: #1e293b;
+        }
+
+        .stage-image {
+            display: block;
+            max-width: 800px;
+            max-height: 500px;
+            pointer-events: none;
+        }
+
+        .stage-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: crosshair;
+        }
+
+        /* Rect Overlay */
+        .rect-box {
+            position: absolute;
+            border: 2px dashed var(--accent);
+            background: rgba(16, 185, 129, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+        }
+
+        .rect-box.active {
+            border: 2px solid #f59e0b;
+            background: rgba(245, 158, 11, 0.3);
+            z-index: 10;
+        }
+
+        /* Output & Hotspot List */
+        .output-panel {
+            background: var(--panel-bg);
+            border-left: 1px solid var(--panel-border);
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            overflow-y: auto;
+        }
+
+        .hotspot-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+
+        .hotspot-item {
+            background: #0f172a;
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .hotspot-item.active {
+            border-color: #f59e0b;
+            background: #1e1b4b;
+        }
+
+        code-preview {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            background: #020617;
+            color: #a7f3d0;
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--panel-border);
+            white-space: pre-wrap;
+            height: 260px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Scene Match Hotspot Editor <span class="badge-dev">DEV TOOL</span></h1>
+        <div style="font-size: 0.85rem; color: var(--text-muted);">Percentage &amp; ViewBox Coordinate Generator</div>
+    </header>
+
+    <div class="editor-layout">
+        <!-- Left Sidebar: Meta Controls -->
+        <div class="sidebar">
+            <div class="form-group">
+                <label>Load Image File</label>
+                <input type="file" id="inp-file" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label>Or Image URL</label>
+                <input type="text" id="inp-url" placeholder="images/scenes/apartment.png">
+                <button class="btn btn-secondary" type="button" id="btn-load-url" style="margin-top:0.25rem;">Load URL</button>
+            </div>
+
+            <hr style="border-color: var(--panel-border);">
+
+            <div class="form-group">
+                <label>Scene ID</label>
+                <input type="text" id="meta-id" value="new_scene">
+            </div>
+
+            <div class="form-group">
+                <label>CEFR Level</label>
+                <select id="meta-level">
+                    <option value="A1">Level A1</option>
+                    <option value="A2">Level A2</option>
+                    <option value="B1">Level B1</option>
+                    <option value="B2-C2">Level B2-C2</option>
+                    <option value="hub">Hub Navigation Map</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Title (EN)</label>
+                <input type="text" id="meta-title-en" value="New Room Scene">
+            </div>
+
+            <div class="form-group">
+                <label>Title (FR)</label>
+                <input type="text" id="meta-title-fr" value="Nouvelle pièce">
+            </div>
+
+            <div class="form-group">
+                <label>ViewBox Bounds</label>
+                <div style="display: flex; gap: 0.5rem;">
+                    <input type="number" id="vb-w" value="800" placeholder="Width">
+                    <input type="number" id="vb-h" value="500" placeholder="Height">
+                </div>
+            </div>
+        </div>
+
+        <!-- Center: Interactive Drawing Stage -->
+        <div class="canvas-container">
+            <div style="margin-bottom: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
+                💡 <strong>Click &amp; drag</strong> on the image below to draw hotspot bounding boxes. Click a box to edit labels.
+            </div>
+            <div class="stage-wrapper" id="stage-wrapper" style="width: 800px; height: 500px;">
+                <img id="stage-img" class="stage-image" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='500'><rect width='800' height='500' fill='%231e293b'/><text x='400' y='250' fill='%2394a3b8' font-size='20' text-anchor='middle'>Load an Image or Draw Hotspots on Default ViewBox Canvas</text></svg>">
+                <div class="stage-overlay" id="stage-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Right Output & Inspector Panel -->
+        <div class="output-panel">
+            <h3>Hotspot Inspector</h3>
+            <div id="inspector-fields" style="display: none; flex-direction: column; gap: 0.5rem;">
+                <div class="form-group">
+                    <label>Hotspot ID</label>
+                    <input type="text" id="hs-id" placeholder="sofa">
+                </div>
+                <div class="form-group">
+                    <label>Word (EN)</label>
+                    <input type="text" id="hs-en" placeholder="Sofa">
+                </div>
+                <div class="form-group">
+                    <label>Word (FR)</label>
+                    <input type="text" id="hs-fr" placeholder="Canapé">
+                </div>
+                <div class="form-group">
+                    <label>Word (IT)</label>
+                    <input type="text" id="hs-it" placeholder="Divano">
+                </div>
+                <div class="form-group">
+                    <label>Word (RU)</label>
+                    <input type="text" id="hs-ru" placeholder="Диван">
+                </div>
+                <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                    <button class="btn btn-danger" type="button" id="btn-delete-hs">Delete Hotspot</button>
+                </div>
+            </div>
+            <div id="inspector-placeholder" style="color: var(--text-muted); font-size: 0.85rem;">
+                No hotspot selected. Draw a rectangle or select a hotspot from the list below.
+            </div>
+
+            <hr style="border-color: var(--panel-border);">
+
+            <h3>Created Hotspots (<span id="hs-count">0</span>)</h3>
+            <div class="hotspot-list" id="hotspot-list"></div>
+
+            <hr style="border-color: var(--panel-border);">
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3>Generated JS Code</h3>
+                <button class="btn" type="button" id="btn-copy">📋 Copy JS</button>
+            </div>
+            <pre class="code-preview" id="code-output"></pre>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            const stageOverlay = document.getElementById('stage-overlay');
+            const stageImg = document.getElementById('stage-img');
+            const codeOutput = document.getElementById('code-output');
+            const hotspotList = document.getElementById('hotspot-list');
+            const hsCount = document.getElementById('hs-count');
+
+            let hotspots = [];
+            let activeIndex = -1;
+            let isDrawing = false;
+            let startX = 0, startY = 0;
+            let tempBox = null;
+
+            // Load local file image
+            document.getElementById('inp-file').addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (ev) => {
+                        stageImg.src = ev.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Load URL image
+            document.getElementById('btn-load-url').addEventListener('click', () => {
+                const url = document.getElementById('inp-url').value.trim();
+                if (url) {
+                    stageImg.src = url;
+                }
+            });
+
+            // Drawing logic
+            stageOverlay.addEventListener('mousedown', (e) => {
+                if (e.target !== stageOverlay) return;
+                isDrawing = true;
+                const rect = stageOverlay.getBoundingClientRect();
+                startX = e.clientX - rect.left;
+                startY = e.clientY - rect.top;
+
+                tempBox = document.createElement('div');
+                tempBox.className = 'rect-box';
+                tempBox.style.left = startX + 'px';
+                tempBox.style.top = startY + 'px';
+                stageOverlay.appendChild(tempBox);
+            });
+
+            stageOverlay.addEventListener('mousemove', (e) => {
+                if (!isDrawing || !tempBox) return;
+                const rect = stageOverlay.getBoundingClientRect();
+                const currentX = e.clientX - rect.left;
+                const currentY = e.clientY - rect.top;
+
+                const width = Math.abs(currentX - startX);
+                const height = Math.abs(currentY - startY);
+                const left = Math.min(startX, currentX);
+                const top = Math.min(startY, currentY);
+
+                tempBox.style.left = left + 'px';
+                tempBox.style.top = top + 'px';
+                tempBox.style.width = width + 'px';
+                tempBox.style.height = height + 'px';
+            });
+
+            stageOverlay.addEventListener('mouseup', (e) => {
+                if (!isDrawing || !tempBox) return;
+                isDrawing = false;
+
+                const rect = stageOverlay.getBoundingClientRect();
+                const currentX = e.clientX - rect.left;
+                const currentY = e.clientY - rect.top;
+
+                const width = Math.round(Math.abs(currentX - startX));
+                const height = Math.round(Math.abs(currentY - startY));
+                const left = Math.round(Math.min(startX, currentX));
+                const top = Math.round(Math.min(startY, currentY));
+
+                stageOverlay.removeChild(tempBox);
+                tempBox = null;
+
+                if (width > 5 && height > 5) {
+                    const vbW = parseInt(document.getElementById('vb-w').value) || 800;
+                    const vbH = parseInt(document.getElementById('vb-h').value) || 500;
+
+                    // Scale from screen px to ViewBox
+                    const scaleX = vbW / rect.width;
+                    const scaleY = vbH / rect.height;
+
+                    const hsX = Math.round(left * scaleX);
+                    const hsY = Math.round(top * scaleY);
+                    const hsW = Math.round(width * scaleX);
+                    const hsH = Math.round(height * scaleY);
+                    const labelX = Math.round(hsX + hsW / 2);
+                    const labelY = Math.round(hsY + hsH / 2);
+
+                    const newHs = {
+                        id: `item_${hotspots.length + 1}`,
+                        x: hsX,
+                        y: hsY,
+                        width: hsW,
+                        height: hsH,
+                        labelX: labelX,
+                        labelY: labelY,
+                        screenRect: { left, top, width, height },
+                        words: {
+                            en: `Item ${hotspots.length + 1}`,
+                            fr: `Objet ${hotspots.length + 1}`
+                        }
+                    };
+
+                    hotspots.push(newHs);
+                    selectHotspot(hotspots.length - 1);
+                    renderHotspotsOnStage();
+                    updateCodeOutput();
+                }
+            });
+
+            function selectHotspot(index) {
+                activeIndex = index;
+                renderHotspotsOnStage();
+                renderHotspotList();
+
+                const inspector = document.getElementById('inspector-fields');
+                const placeholder = document.getElementById('inspector-placeholder');
+
+                if (index >= 0 && index < hotspots.length) {
+                    const hs = hotspots[index];
+                    inspector.style.display = 'flex';
+                    placeholder.style.display = 'none';
+
+                    document.getElementById('hs-id').value = hs.id;
+                    document.getElementById('hs-en').value = hs.words.en || '';
+                    document.getElementById('hs-fr').value = hs.words.fr || '';
+                    document.getElementById('hs-it').value = hs.words.it || '';
+                    document.getElementById('hs-ru').value = hs.words.ru || '';
+                } else {
+                    inspector.style.display = 'none';
+                    placeholder.style.display = 'block';
+                }
+            }
+
+            // Bind inspector input edits
+            ['hs-id', 'hs-en', 'hs-fr', 'hs-it', 'hs-ru'].forEach(id => {
+                document.getElementById(id).addEventListener('input', () => {
+                    if (activeIndex >= 0 && activeIndex < hotspots.length) {
+                        const hs = hotspots[activeIndex];
+                        if (id === 'hs-id') hs.id = document.getElementById('hs-id').value;
+                        if (id === 'hs-en') hs.words.en = document.getElementById('hs-en').value;
+                        if (id === 'hs-fr') hs.words.fr = document.getElementById('hs-fr').value;
+                        if (id === 'hs-it') hs.words.it = document.getElementById('hs-it').value;
+                        if (id === 'hs-ru') hs.words.ru = document.getElementById('hs-ru').value;
+
+                        renderHotspotsOnStage();
+                        renderHotspotList();
+                        updateCodeOutput();
+                    }
+                });
+            });
+
+            // Delete hotspot button
+            document.getElementById('btn-delete-hs').addEventListener('click', () => {
+                if (activeIndex >= 0 && activeIndex < hotspots.length) {
+                    hotspots.splice(activeIndex, 1);
+                    selectHotspot(-1);
+                    renderHotspotsOnStage();
+                    renderHotspotList();
+                    updateCodeOutput();
+                }
+            });
+
+            function renderHotspotsOnStage() {
+                stageOverlay.innerHTML = '';
+                const rect = stageOverlay.getBoundingClientRect();
+                const vbW = parseInt(document.getElementById('vb-w').value) || 800;
+                const vbH = parseInt(document.getElementById('vb-h').value) || 500;
+
+                hotspots.forEach((hs, idx) => {
+                    const box = document.createElement('div');
+                    box.className = `rect-box ${idx === activeIndex ? 'active' : ''}`;
+
+                    const leftPx = (hs.x / vbW) * rect.width;
+                    const topPx = (hs.y / vbH) * rect.height;
+                    const widthPx = (hs.width / vbW) * rect.width;
+                    const heightPx = (hs.height / vbH) * rect.height;
+
+                    box.style.left = leftPx + 'px';
+                    box.style.top = topPx + 'px';
+                    box.style.width = widthPx + 'px';
+                    box.style.height = heightPx + 'px';
+                    box.textContent = hs.words.en || hs.id;
+
+                    box.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        selectHotspot(idx);
+                    });
+
+                    stageOverlay.appendChild(box);
+                });
+            }
+
+            function renderHotspotList() {
+                hotspotList.innerHTML = '';
+                hsCount.textContent = hotspots.length;
+
+                hotspots.forEach((hs, idx) => {
+                    const item = document.createElement('div');
+                    item.className = `hotspot-item ${idx === activeIndex ? 'active' : ''}`;
+                    item.innerHTML = `<span><strong>#${idx + 1}</strong> ${hs.words.en || hs.id}</span> <span style="font-size:0.75rem; color:var(--text-muted);">(${hs.x}, ${hs.y})</span>`;
+                    item.addEventListener('click', () => selectHotspot(idx));
+                    hotspotList.appendChild(item);
+                });
+            }
+
+            function updateCodeOutput() {
+                const sceneId = document.getElementById('meta-id').value || 'new_scene';
+                const level = document.getElementById('meta-level').value;
+                const titleEn = document.getElementById('meta-title-en').value;
+                const titleFr = document.getElementById('meta-title-fr').value;
+                const vbW = document.getElementById('vb-w').value || '800';
+                const vbH = document.getElementById('vb-h').value || '500';
+                const imgUrl = document.getElementById('inp-url').value || `images/scenes/${sceneId}.png`;
+
+                const cleanHotspots = hotspots.map(h => ({
+                    id: h.id,
+                    x: h.x,
+                    y: h.y,
+                    width: h.width,
+                    height: h.height,
+                    labelX: h.labelX,
+                    labelY: h.labelY,
+                    words: h.words
+                }));
+
+                const code = `(function() {
+    'use strict';
+
+    window.COSY_SCENE_DATA = window.COSY_SCENE_DATA || {};
+    window.COSY_SCENE_DATA['${sceneId}'] = {
+        id: '${sceneId}',
+        ${level === 'hub' ? "type: 'hub'," : ''}
+        level: '${level === 'hub' ? 'A1' : level}',
+        imageUrl: '${imgUrl}',
+        title: {
+            en: "${titleEn}",
+            fr: "${titleFr}"
+        },
+        viewBox: "0 0 ${vbW} ${vbH}",
+        doors: [],
+        svgBackground: \`<!-- Visual SVG artwork / background elements -->\`,
+        hotspots: ${JSON.stringify(cleanHotspots, null, 12)}
+    };
+})();`;
+
+                codeOutput.textContent = code;
+            }
+
+            // Re-generate on meta input changes
+            ['meta-id', 'meta-level', 'meta-title-en', 'meta-title-fr', 'vb-w', 'vb-h', 'inp-url'].forEach(id => {
+                document.getElementById(id).addEventListener('input', () => {
+                    renderHotspotsOnStage();
+                    updateCodeOutput();
+                });
+            });
+
+            // Copy button
+            document.getElementById('btn-copy').addEventListener('click', () => {
+                navigator.clipboard.writeText(codeOutput.textContent).then(() => {
+                    alert('📋 JS Code copied to clipboard!');
+                });
+            });
+
+            window.addEventListener('resize', renderHotspotsOnStage);
+            updateCodeOutput();
+        })();
+    </script>
+</body>
+</html>

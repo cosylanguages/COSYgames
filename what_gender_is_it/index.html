@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Gender Is It? ♀️♂️: COSYlanguages</title>
+    <link rel="icon" href="../../images/logos/cosylanguages.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/tokens.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/games.css">
+    <style>
+        .gender-options {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .btn-gender {
+            padding: 12px 28px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            border: 2px solid var(--border);
+            background: white;
+            color: var(--ink);
+            transition: all 0.2s ease;
+        }
+        .btn-gender:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .btn-gender.masculine-btn {
+            border-color: #3182ce;
+            color: #2b6cb0;
+        }
+        .btn-gender.masculine-btn:hover:not(:disabled) {
+            background: #ebf8ff;
+        }
+        .btn-gender.masculine-btn.correct-choice {
+            background: #3182ce;
+            color: white;
+            border-color: #2b6cb0;
+        }
+        .btn-gender.feminine-btn {
+            border-color: #d53f8c;
+            color: #b83280;
+        }
+        .btn-gender.feminine-btn:hover:not(:disabled) {
+            background: #fff5f7;
+        }
+        .btn-gender.feminine-btn.correct-choice {
+            background: #d53f8c;
+            color: white;
+            border-color: #b83280;
+        }
+        .btn-gender.neuter-btn {
+            border-color: #dd6b20;
+            color: #c05621;
+        }
+        .btn-gender.neuter-btn:hover:not(:disabled) {
+            background: #fffaf0;
+        }
+        .btn-gender.neuter-btn.correct-choice {
+            background: #dd6b20;
+            color: white;
+            border-color: #c05621;
+        }
+        .btn-gender.wrong-choice {
+            background: #feb2b2 !important;
+            border-color: #e53e3e !important;
+            color: #9b2c2c !important;
+            text-decoration: line-through;
+        }
+        .gender-grid-reveal {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+            border-top: 1px dashed var(--border);
+            padding-top: 20px;
+        }
+        .reveal-lang-card {
+            background: var(--tan-light);
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .reveal-lang-name {
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--ink-muted);
+            margin-bottom: 4px;
+        }
+        .reveal-lang-word {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--ink);
+        }
+        .reveal-lang-gender {
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-top: 4px;
+            padding: 2px 6px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+        .gender-tag-masculine { background: #ebf8ff; color: #2b6cb0; }
+        .gender-tag-feminine { background: #fff5f7; color: #b83280; }
+        .gender-tag-neuter { background: #fffaf0; color: #c05621; }
+        .gender-tag-both { background: #f0fff4; color: #22543d; }
+
+        .why-container {
+            background: #f7fafc;
+            border-left: 4px solid var(--teal);
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .why-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 6px;
+            letter-spacing: 0.05em;
+        }
+        .why-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--ink);
+        }
+    </style>
+</head>
+<body class="game-standalone">
+    <nav id="cosy-nav"></nav>
+
+    <div class="game-overlay open" id="game-overlay" style="position: relative; height: calc(100vh - 62px); z-index: 1;">
+      <div class="go-topbar">
+        <button class="go-back" onclick="location.href='../index.html'">← Back to games</button>
+        <div>
+          <div class="go-title" id="go-title">What Gender Is It? ♀️♂️</div>
+          <div class="go-meta" id="go-meta">Vocabulary & Puzzles · Solo</div>
+        </div>
+        <div id="go-topbar-right"></div>
+      </div>
+      <div class="go-body" id="go-body">
+          <div id="game-loader" style="text-align:center; padding: 4rem;">Loading grammatical files...</div>
+      </div>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="../../js/data/languages.js"></script>
+    <script src="../../js/core/engine.js"></script>
+    <script src="../../js/core/i18n.js"></script>
+    <script src="../../js/core/ui.js"></script>
+    <script src="../../js/data/pricing.js"></script>
+    <script src="../../js/games/utils/shared.js"></script>
+
+    <!-- Game Engine -->
+    <script src="../_engine/game_session.js"></script>
+    <script src="../_engine/scores.js"></script>
+    <script src="../_engine/loader.js"></script>
+
+    <!-- Game Datasets -->
+    <script src="../data/gender/a1.js"></script>
+    <script src="../data/gender/a2.js"></script>
+    <script src="../data/gender/b1.js"></script>
+    <script src="../data/gender/b2.js"></script>
+    <script src="../data/gender/c1.js"></script>
+    <script src="../data/gender/c2.js"></script>
+
+    <!-- Game Specific Logic -->
+    <script src="game.js"></script>
+
+    <div id="toast" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--ink); color: #fff; padding: 12px 24px; border-radius: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s; z-index: 3000; font-size: .85rem; font-weight: 500;"></div>
+</body>
+</html>
