@@ -58,7 +58,11 @@
         ["Cuisiner chez soi 🍳", "Commander à livrer 🍕"],
         ["Transports publics 🚌", "Voiture personnelle 🚗"]
       ],
-      critic: [],
+      critic: [
+        { title: 'Délicieux, mais trop cher 🍝', type: 'Restaurant', review: 'La nourriture était fantastique et les ingrédients très frais, mais les portions étaient réduites et l\'addition fut une surprise.', question: 'Reveniriez-vous malgré le prix élevé ?' },
+        { title: 'Intrigue captivante, fin décevante 🎬', type: 'Film', review: 'Les deux premiers tiers du film étaient pleins de suspense, mais le dénouement s\'est avéré précipité et illogique.', question: 'Quelle est l\'importance de la fin d\'un film dans votre évaluation globale ?' },
+        { title: 'Graphismes superbes, mais trop de bugs 🎮', type: 'Jeu vidéo', review: 'Visuellement c\'est un chef-d\'œuvre, mais le jeu plante souvent et présente de nombreux défauts techniques.', question: 'Les graphismes et l\'atmosphère peuvent-ils compenser les défauts techniques ?' }
+      ],
       action: {
         starter: ["Chat", "Chien", "Maison", "Voiture", "Livre", "Eau", "Soleil", "Lune", "Arbre", "Téléphone", "Porte", "Chaise", "Lit", "Pain", "Poisson"],
         elementary: ["Cuisine", "Jardin", "Train", "Médecin", "Professeur", "Musique", "Anniversaire", "Natation", "Vacances", "Boutique", "Gare", "Hôpital"],
