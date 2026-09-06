@@ -256,6 +256,9 @@
           cosyworld: 'https://cosylanguages.github.io/COSYworld/'
         };
 
+        const initialParams = new URLSearchParams(window.location.search);
+        const rememberedLang = initialParams.get('lang');
+
         const originalOpenGame = window.openGame;
         window.openGame = function(id) {
           let path = GAME_PATH_MAP[id];
@@ -271,6 +274,8 @@
           ['lang', 'level', 'topic'].forEach(key => {
             if (params.has(key)) {
               passParams.set(key, params.get(key));
+            } else if (key === 'lang' && rememberedLang) {
+              passParams.set('lang', rememberedLang);
             }
           });
 
