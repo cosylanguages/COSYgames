@@ -1780,6 +1780,17 @@
               </p>
 
               <div class="setup-field" style="margin-bottom: 1rem; text-align: left;">
+                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem;">🌐 Target Language</label>
+                <select class="styled-sel" id="tot-lang-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid #e5e7eb; font-weight:600;">
+                  <option value="en" selected>🇬🇧 English</option>
+                  <option value="french">🇫🇷 Français (French)</option>
+                  <option value="italian">🇮🇹 Italiano (Italian)</option>
+                  <option value="russian">🇷🇺 Русский (Russian)</option>
+                  <option value="greek">🇬🇷 Ελληνικά (Greek)</option>
+                </select>
+              </div>
+
+              <div class="setup-field" style="margin-bottom: 1rem; text-align: left;">
                 <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem;">🎯 Target CEFR Level</label>
                 <select class="styled-sel" id="tot-level-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid #e5e7eb; font-weight:600;">
                   <option value="A0_A1">A0–A1: Starter & Basic Words</option>
@@ -1815,12 +1826,26 @@
         activeStoryIndex: 0,
 
         async start() {
+            const langSel = document.getElementById('tot-lang-sel')?.value || 'en';
             const levelSel = document.getElementById('tot-level-sel')?.value || 'A2';
             const deckSel = document.getElementById('tot-deck-sel')?.value || 'appearance';
             const body = document.getElementById('go-body');
 
             if (body) body.innerHTML = '<div style="text-align:center;padding:4rem;font-weight:700;color:var(--tinder-pink);">Shuffling Tinder deck... 🔥</div>';
             await new Promise(res => setTimeout(res, 200));
+
+            let activeDecksSource = CEFR_DECKS;
+
+            if (langSel !== 'en') {
+                try {
+                    const res = await fetch(`decks/${langSel}.json`);
+                    if (res.ok) {
+                        activeDecksSource = await res.json();
+                    }
+                } catch (e) {
+                    console.warn(`Failed to fetch deck for language ${langSel}, falling back to English.`, e);
+                }
+            }
 
             let rawCards = [];
 
@@ -1834,7 +1859,7 @@
                 const levelsToSearch = levelSel === 'ALL' ? ['A0_A1', 'A2', 'B1', 'B2'] : [levelSel];
 
                 levelsToSearch.forEach(lvl => {
-                    const levelData = CEFR_DECKS[lvl] || {};
+                    const levelData = activeDecksSource[lvl] || {};
                     if (deckSel === 'mixed') {
                         Object.keys(levelData).forEach(cat => {
                             rawCards.push(...levelData[cat]);
@@ -1842,6 +1867,14 @@
                     } else if (levelData[deckSel]) {
                         rawCards.push(...levelData[deckSel]);
                     }
+                });
+            }
+
+            if (rawCards.length === 0) {
+                // If specific category is empty for this language/level, fall back to any available category in activeDecksSource
+                ['A0_A1', 'A2', 'B1', 'B2'].forEach(lvl => {
+                    const levelData = activeDecksSource[lvl] || {};
+                    Object.keys(levelData).forEach(cat => rawCards.push(...levelData[cat]));
                 });
             }
 
@@ -1856,7 +1889,7 @@
             this.activeStoryIndex = 0;
 
             if (window.COSYGame) {
-                COSYGame.init(GAME_ID, 'en', levelSel);
+                COSYGame.init(GAME_ID, langSel, levelSel);
                 COSYGame.maxRounds = this.deck.length;
                 COSYGame.score = 0;
             }
