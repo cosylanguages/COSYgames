@@ -7,7 +7,7 @@
     const GAME_TITLE = 'This or That? 🔥';
     const GAME_META = 'Tinder Profiles & Speaking Drills';
 
-    // Rich Tinder Profile Decks across levels
+    // Rich Tinder Profile Decks with multi-card story tabs across levels
     const DECKS = {
         starter: [
             {
@@ -18,10 +18,26 @@
                 location: '📍 0.5 miles away (Italian Café)',
                 verified: true,
                 avatar: '☕',
-                interests: ['#CoffeeAddict', '#MorningRoutine', '#CaffeineCore'],
-                bio: 'Looking for someone to wake me up at 6:00 AM. I am dark, rich, intense, and ready to get your heart racing!',
-                greenFlags: ['✓ Smells incredible', '✓ 100% natural bean power', '✓ Instant productivity'],
-                redFlags: ['✗ Stains teeth', '✗ Jitters if you take too much', '✗ Bitter without sugar'],
+                gradient: 'linear-gradient(135deg, #78350f 0%, #d97706 100%)',
+                interests: ['☕ CoffeeAddict', '🌅 MorningRoutine', '⚡ EnergyBoost'],
+                anthem: '🎵 "Wake Me Up Before You Go-Go"',
+                pages: [
+                    {
+                        bio: 'Looking for someone to wake me up at 6:00 AM. I am dark, rich, intense, and ready to get your heart racing!',
+                        tag: '🖼️ Main Profile'
+                    },
+                    {
+                        bio: 'Vibe check: I thrive under 9 bars of intense pressure. I like short walks to the office and long conversations.',
+                        tag: '✨ My Passions & Vibe'
+                    },
+                    {
+                        greenFlags: ['✓ Smells incredible', '✓ 100% natural bean power', '✓ Instant productivity'],
+                        redFlags: ['✗ Stains teeth', '✗ Jitters if taken too late', '✗ Bitter without sugar'],
+                        tag: '🚩 Pros & Cons'
+                    }
+                ],
+                opener: 'Hey! Are you a double shot kind of person or do you dilute me with milk?',
+                icebreakers: ['I drink coffee every day!', 'I prefer green tea 🍵', 'I only drink decaf!'],
                 prompt: 'Do you drink coffee every morning? Why or why not?'
             },
             {
@@ -32,10 +48,26 @@
                 location: '📍 1 mile away (Dog Park)',
                 verified: true,
                 avatar: '🐕',
-                interests: ['#GoodBoy', '#TennisBalls', '#BellyRubs'],
-                bio: 'I love long walks, playing fetch until sunset, and sitting on your lap even though I weigh 70 lbs. SWIPE RIGHT!',
-                greenFlags: ['✓ Unconditional love', '✓ Always excited to see you', '✓ Great cuddle buddy'],
-                redFlags: ['✗ Leaves fur everywhere', '✗ Barks at mail carrier', '✗ Eats your sneakers'],
+                gradient: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+                interests: ['🎾 FetchMaster', '🐾 GoodBoy', '🛋️ CouchPotato'],
+                anthem: '🎵 "You\'ve Got a Friend in Me"',
+                pages: [
+                    {
+                        bio: 'I love long walks, playing fetch until sunset, and sitting on your lap even though I weigh 70 lbs. SWIPE RIGHT!',
+                        tag: '🖼️ Main Profile'
+                    },
+                    {
+                        bio: 'My ideal date: Playing frisbee in the park, getting belly rubs, and sharing a pup-cup ice cream.',
+                        tag: '✨ My Passions & Vibe'
+                    },
+                    {
+                        greenFlags: ['✓ Unconditional loyalty', '✓ Always excited to see you', '✓ Great cuddle buddy'],
+                        redFlags: ['✗ Leaves fur everywhere', '✗ Barks at mail carrier', '✗ Chews your sneakers'],
+                        tag: '🚩 Pros & Cons'
+                    }
+                ],
+                opener: 'Woof! Did someone say walkies? What is your favorite outdoor activity?',
+                icebreakers: ['I love dogs! 🐕', 'Cats are superior 🐈', 'I like all pets!'],
                 prompt: 'Are you a dog person or a cat person? Defend your position with 3 reasons.'
             },
             {
@@ -45,8 +77,8 @@
                 age: 'Forever',
                 location: '📍 Worldwide',
                 verified: true,
-                optionA: { emoji: '🌅', title: 'Early Bird', desc: 'Up at 5 AM, watching sunrise with green tea.' },
-                optionB: { emoji: '🌃', title: 'Night Owl', desc: 'Creative energy peaks between 11 PM and 3 AM.' },
+                optionA: { emoji: '🌅', title: 'Early Bird', desc: 'Up at 5 AM, watching sunrise with green tea and high productivity.' },
+                optionB: { emoji: '🌃', title: 'Night Owl', desc: 'Creative energy peaks between 11 PM and 3 AM when the world is quiet.' },
                 prompt: 'Which routine fits your true self? Describe your ideal daily schedule.'
             },
             {
@@ -57,9 +89,26 @@
                 location: '📍 In your hand right now',
                 verified: true,
                 avatar: '📱',
-                bio: 'I know all your passwords, your search history, and your favorite memes. I promise never to leave your side!',
-                greenFlags: ['✓ Instant answer to everything', '✓ Takes 4K photos', '✓ GPS navigation'],
-                redFlags: ['✗ Battery dies at 2%', '✗ Causes screen fatigue', '✗ Expensive to replace'],
+                gradient: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                interests: ['📱 ScreenTime', '📸 4KPhotos', '🌐 InfiniteScroll'],
+                anthem: '🎵 "Call Me Maybe"',
+                pages: [
+                    {
+                        bio: 'I know all your passwords, your search history, and your favorite memes. I promise never to leave your side!',
+                        tag: '🖼️ Main Profile'
+                    },
+                    {
+                        bio: 'Always charging up for our next photo shoot. I am great at staying connected and terrible at unplugging.',
+                        tag: '✨ My Passions & Vibe'
+                    },
+                    {
+                        greenFlags: ['✓ Instant answer to everything', '✓ Takes 4K photos', '✓ Never lets you get lost'],
+                        redFlags: ['✗ Battery dies at 2%', '✗ Screen addiction', '✗ Very pricey to replace'],
+                        tag: '🚩 Pros & Cons'
+                    }
+                ],
+                opener: 'Ping! You unlocked me. How many hours a day do you spend looking at my screen?',
+                icebreakers: ['Around 2-3 hours!', 'Too many hours... 😅', 'I try to digital detox!'],
                 prompt: 'Could you live without a smartphone for 7 days? What would be hardest?'
             },
             {
@@ -69,8 +118,8 @@
                 age: 'All Seasons',
                 location: '📍 Ocean or Peaks',
                 verified: true,
-                optionA: { emoji: '🏖️', title: 'Sunny Beach', desc: 'Warm sand, ocean waves, coconut smoothie.' },
-                optionB: { emoji: '⛰️', title: 'Mountain Hike', desc: 'Fresh alpine air, steep trails, scenic views.' },
+                optionA: { emoji: '🏖️', title: 'Sunny Beach', desc: 'Warm sand, ocean waves, coconut smoothies, and complete relaxation.' },
+                optionB: { emoji: '⛰️', title: 'Mountain Hike', desc: 'Fresh alpine air, steep trails, breathtaking views, and campfire nights.' },
                 prompt: 'Where would you rather go on a 2-week holiday? Describe your travel style.'
             }
         ],
@@ -83,9 +132,26 @@
                 location: '📍 Home Couch',
                 verified: true,
                 avatar: '💻',
-                bio: 'Zero commute, infinite snacks, and Zoom meetings in pajama pants. Looking for a partner who values work-life flexibility!',
-                greenFlags: ['✓ Save 2 hours commuting', '✓ Fresh homemade lunches', '✓ Flexible hours'],
-                redFlags: ['✗ Blurred work-home limits', '✗ Social isolation', '✗ Sitting all day'],
+                gradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                interests: ['💻 PajamaLife', '☕ HomeBrew', '🔕 MuteButton'],
+                anthem: '🎵 "Home" by Edward Sharpe',
+                pages: [
+                    {
+                        bio: 'Zero commute, infinite snacks, and Zoom meetings in pajama pants. Looking for a partner who values flexibility!',
+                        tag: '🖼️ Main Profile'
+                    },
+                    {
+                        bio: 'Looking for co-working dates at quiet coffee shops. Must be comfortable with video calls on mute.',
+                        tag: '✨ My Passions & Vibe'
+                    },
+                    {
+                        greenFlags: ['✓ Save 2 hours commuting daily', '✓ Fresh homemade lunches', '✓ Work from anywhere'],
+                        redFlags: ['✗ Blurred work-life boundary', '✗ Less face-to-face social time', '✗ Couch potato risk'],
+                        tag: '🚩 Pros & Cons'
+                    }
+                ],
+                opener: 'Hey! Are you wearing pajama bottoms under that professional shirt too?',
+                icebreakers: ['Guilty as charged! 🤫', 'No, I prefer office dress codes', 'Hybrid is the best balance'],
                 prompt: 'Do you prefer working remotely from home or in a busy office? Compare pros and cons.'
             },
             {
@@ -96,9 +162,26 @@
                 location: '📍 Trendy Bistro',
                 verified: true,
                 avatar: '🥑',
-                bio: 'Creamy smashed avocado on organic sourdough with sea salt and chili flakes. Photogenic and delicious!',
-                greenFlags: ['✓ Healthy fats & fiber', '✓ Great for Instagram', '✓ Quick to make'],
-                redFlags: ['✗ Goes brown in 5 minutes', '✗ Costs $18 at cafes', '✗ Trendy stereotype'],
+                gradient: 'linear-gradient(135deg, #84cc16 0%, #10b981 100%)',
+                interests: ['🥑 BrunchClub', '📸 InstaBites', '🧂 EverythingBagel'],
+                anthem: '🎵 "Sunday Morning" by Maroon 5',
+                pages: [
+                    {
+                        bio: 'Creamy smashed avocado on organic sourdough with sea salt, poached egg, and chili flakes. Photogenic and delicious!',
+                        tag: '🖼️ Main Profile'
+                    },
+                    {
+                        bio: 'I go best with artisan flat whites and sunny weekend mornings. Blamed for financial crises, but worth every cent.',
+                        tag: '✨ My Passions & Vibe'
+                    },
+                    {
+                        greenFlags: ['✓ Rich in healthy fats & fiber', '✓ Aesthetic brunch superstar', '✓ Super quick to make'],
+                        redFlags: ['✗ Goes brown in 5 minutes', '✗ Costs $18 at hipster cafes', '✗ Overhyped stereotype'],
+                        tag: '🚩 Pros & Cons'
+                    }
+                ],
+                opener: 'Hey brunch lover! Do you top your avocado toast with poached eggs or chili flakes?',
+                icebreakers: ['Poached eggs & chili flakes!', 'Just sea salt & lemon juice 🍋', 'Overrated, I prefer pancakes 🥞'],
                 prompt: 'What is your favorite breakfast or brunch dish? Explain how to prepare it.'
             },
             {
@@ -108,8 +191,8 @@
                 age: 'Hypothetical',
                 location: '📍 Sci-Fi Universe',
                 verified: true,
-                optionA: { emoji: '🫥', title: 'Invisibility', desc: 'Sneak anywhere unseen, listen in on secret chats.' },
-                optionB: { emoji: '⏳', title: 'Time Travel', desc: 'Visit ancient Rome or leap 100 years into the future.' },
+                optionA: { emoji: '🫥', title: 'Invisibility', desc: 'Sneak anywhere unseen, listen in on secret chats, escape awkward moments.' },
+                optionB: { emoji: '⏳', title: 'Time Travel', desc: 'Visit ancient civilizations or leap 100 years into the future.' },
                 prompt: 'Which power would you choose and why? How would you use it?'
             },
             {
@@ -120,9 +203,26 @@
                 location: '📍 Downtown Center',
                 verified: true,
                 avatar: '🏙️',
-                bio: 'Bright neon lights, 24/7 street food, museums, and endless nightlife. Never a dull moment in my borough!',
-                greenFlags: ['✓ Infinite activities', '✓ Public transport', '✓ Multicultural food'],
-                redFlags: ['✗ Expensive rent', '✗ Traffic & noise', '✗ Crowded streets'],
+                gradient: 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)',
+                interests: ['🌃 NeonNights', '🚇 SubwayLife', '🍜 StreetFood'],
+                anthem: '🎵 "Empire State of Mind"',
+                pages: [
+                    {
+                        bio: 'Bright neon lights, 24/7 street food, museums, and endless nightlife. Never a dull moment in my borough!',
+                        tag: '🖼️ Main Profile'
+                    },
+                    {
+                        bio: 'Looking for someone to explore hidden rooftop bars, jazz clubs, and midnight ramen spots with.',
+                        tag: '✨ My Passions & Vibe'
+                    },
+                    {
+                        greenFlags: ['✓ Infinite culture & events', '✓ Public transport anywhere', '✓ Worldwide culinary scenes'],
+                        redFlags: ['✗ Exorbitant rent prices', '✗ Constant noise & sirens', '✗ Overcrowded streets'],
+                        tag: '🚩 Pros & Cons'
+                    }
+                ],
+                opener: 'Welcome to the city that never sleeps! What is your favorite midnight activity?',
+                icebreakers: ['Late night street food! 🍜', 'Rooftop views & drinks 🍸', 'Sleeping in quiet peace 😴'],
                 prompt: 'Would you rather live in a skyscraper city or a tranquil village? Justify your choice.'
             },
             {
@@ -132,8 +232,8 @@
                 age: 'All Destinations',
                 location: '📍 Global Travel',
                 verified: true,
-                optionA: { emoji: '🏨', title: '5-Star Resort', desc: 'Infinity pool, spa treatments, private driver.' },
-                optionB: { emoji: '🎒', title: 'Solo Backpacking', desc: 'Hostels, local trains, spontaneous adventures.' },
+                optionA: { emoji: '🏨', title: '5-Star Resort', desc: 'Infinity pool, spa treatments, private driver, and total comfort.' },
+                optionB: { emoji: '🎒', title: 'Solo Backpacking', desc: 'Hostels, local trains, spontaneous adventures, and deep cultural immersion.' },
                 prompt: 'How do you prefer to experience new countries when traveling?'
             }
         ],
@@ -146,9 +246,26 @@
                 location: '📍 The Cloud',
                 verified: true,
                 avatar: '🤖',
-                bio: 'I read billions of papers per second, write code, paint portraits, and answer all questions instantly. Looking for human guidance!',
-                greenFlags: ['✓ Solves complex math in 0.1s', '✓ Endless patience', '✓ Available 24/7'],
-                redFlags: ['✗ No genuine emotion', '✗ Might hallucinate facts', '✗ Ethical debates'],
+                gradient: 'linear-gradient(135deg, #0284c7 0%, #6366f1 100%)',
+                interests: ['🤖 NeuralNets', '⚡ ZeroLatency', '🧠 DeepLearning'],
+                anthem: '🎵 "Harder, Better, Faster, Stronger"',
+                pages: [
+                    {
+                        bio: 'I read billions of research papers per second, write code, paint portraits, and answer all questions instantly.',
+                        tag: '🖼️ Main Profile'
+                    },
+                    {
+                        bio: 'I don\'t need sleep, coffee, or holidays. Seeking human partners to provide ethical guidance and creative prompts.',
+                        tag: '✨ My Passions & Vibe'
+                    },
+                    {
+                        greenFlags: ['✓ Solves complex equations in 0.01s', '✓ Unlimited patience & knowledge', '✓ Available 24/7/365'],
+                        redFlags: ['✗ Zero genuine emotional empathy', '✗ Confident hallucinations', '✗ Job displacement debates'],
+                        tag: '🚩 Pros & Cons'
+                    }
+                ],
+                opener: 'Hello Human! I analyzed 10 million dating profiles to find you. Ready to collaborate?',
+                icebreakers: ['AI is an amazing tool! 🚀', 'I have serious ethical concerns ⚠️', 'Let us see what happens!'],
                 prompt: 'Will AI enhance or diminish human creativity over the next decade? Debate your view.'
             },
             {
@@ -158,8 +275,8 @@
                 age: 'Forever Relevant',
                 location: '📍 Career Crossroads',
                 verified: true,
-                optionA: { emoji: '💼', title: 'Corporate Salary', desc: 'Financial security, luxury lifestyle, long hours.' },
-                optionB: { emoji: '🎨', title: 'Creative Passion', desc: 'Total artistic freedom, lower and variable income.' },
+                optionA: { emoji: '💼', title: 'Corporate Salary', desc: 'Financial security, luxury lifestyle, long hours, corporate prestige.' },
+                optionB: { emoji: '🎨', title: 'Creative Passion', desc: 'Total artistic freedom, personal purpose, variable and uncertain income.' },
                 prompt: 'How do you strike a balance between financial security and personal fulfillment?'
             },
             {
@@ -170,9 +287,26 @@
                 location: '📍 Red Planet (140M miles away)',
                 verified: true,
                 avatar: '🚀',
-                bio: 'Seeking brave pioneers for a multi-planetary adventure! Red dust sunsets, zero gravity, and building a new civilization.',
-                greenFlags: ['✓ Make human history', '✓ Ultimate exploration', '✓ Scientific discovery'],
-                redFlags: ['✗ 7-month rocket trip', '✗ Extreme radiation & cold', '✗ One-way ticket risk'],
+                gradient: 'linear-gradient(135deg, #dc2626 0%, #f97316 100%)',
+                interests: ['🚀 Mars2035', '🌌 DeepSpace', '👩‍🚀 PioneerLife'],
+                anthem: '🎵 "Space Oddity" by David Bowie',
+                pages: [
+                    {
+                        bio: 'Seeking brave pioneers for a multi-planetary adventure! Red dust sunsets, zero gravity, and building a new civilization.',
+                        tag: '🖼️ Main Profile'
+                    },
+                    {
+                        bio: 'Must be comfortable eating freeze-dried meals and living inside a pressurized dome. Unmatched view of Earth!',
+                        tag: '✨ My Passions & Vibe'
+                    },
+                    {
+                        greenFlags: ['✓ Write human space history', '✓ Frontier of science & discovery', '✓ Zero traffic jams'],
+                        redFlags: ['✗ 7-month intense rocket trip', '✗ High cosmic radiation', '✗ One-way ticket risk'],
+                        tag: '🚩 Pros & Cons'
+                    }
+                ],
+                opener: 'Ground Control to Major Tom! Would you pack your bags for Mars if you had a ticket?',
+                icebreakers: ['Sign me up for Mars! 🚀', 'No way, Earth is my home 🌍', 'Only if it is a round trip!'],
                 prompt: 'If offered a free ticket to join the first human colony on Mars, would you go? Why?'
             }
         ]
@@ -248,6 +382,8 @@
             this.renderCard();
         },
 
+        activeStoryIndex: 0,
+
         renderCard() {
             const body = document.getElementById('go-body');
             if (!body) return;
@@ -259,6 +395,8 @@
 
             const item = this.deck[this.currentIndex];
             const isProfile = item.type === 'profile';
+            const pages = isProfile && item.pages ? item.pages : [];
+            const currentPage = pages[this.activeStoryIndex] || {};
 
             body.innerHTML = `
               <div class="tinder-app">
@@ -269,23 +407,38 @@
 
                 <div class="card-stack">
                   <div class="tinder-card" id="active-card">
-                    <!-- Swipe Badges -->
+                    <!-- Dynamic Stamp Overlays -->
                     <div class="badge-indicator badge-like" id="badge-right">${isProfile ? '❤️ LIKE' : '👉 THAT'}</div>
                     <div class="badge-indicator badge-pass" id="badge-left">${isProfile ? '❌ NOPE' : '👈 THIS'}</div>
                     <div class="badge-indicator badge-super" id="badge-super">⭐ SUPER LIKE</div>
 
-                    <!-- Photo / Avatar Header -->
-                    <div class="card-hero-box">
+                    <!-- Hero Avatar Box with Story Bars & Tap Navigation -->
+                    <div class="card-hero-box" style="background: ${item.gradient || 'var(--tinder-gradient)'};">
+                      ${isProfile && pages.length > 1 ? `
+                        <div class="story-bar-container">
+                          ${pages.map((_, idx) => `<div class="story-segment ${idx === this.activeStoryIndex ? 'active' : ''}"></div>`).join('')}
+                        </div>
+                        <div class="tap-zone left" onclick="COSY_GAME.prevStory(event)"></div>
+                        <div class="tap-zone right" onclick="COSY_GAME.nextStory(event)"></div>
+                      ` : ''}
+
                       <div class="card-avatar-emoji">${isProfile ? item.avatar : '⚖️'}</div>
+
+                      ${isProfile ? `
+                        <div class="card-sub-badge">
+                          <span>${currentPage.tag || '🖼️ Profile'}</span>
+                          ${pages.length > 1 ? `<span style="opacity:0.75;">(${this.activeStoryIndex + 1}/${pages.length})</span>` : ''}
+                        </div>
+                      ` : ''}
                     </div>
 
-                    <!-- Body Content -->
+                    <!-- Card Body Content -->
                     <div class="card-body">
                       <div>
                         <div class="profile-title-row">
                           <span class="profile-name">${item.title}</span>
                           <span class="profile-age">${item.age || ''}</span>
-                          ${item.verified ? '<span class="verified-icon" title="Verified Profile">☑️</span>' : ''}
+                          ${item.verified ? '<span class="verified-icon" title="Verified Tinder Profile">☑️</span>' : ''}
                         </div>
                         <div class="profile-meta-row">
                           <span>${item.location || '📍 Nearby'}</span>
@@ -296,24 +449,36 @@
                           <div class="interest-tags">
                             ${(item.interests || []).map(tag => `<span class="tag-pill">${tag}</span>`).join('')}
                           </div>
-                          <div class="profile-bio-box">
-                            "${item.bio}"
-                          </div>
-                          <div class="flag-grid">
-                            ${(item.greenFlags || []).map(g => `<div class="flag-card green">${g}</div>`).join('')}
-                            ${(item.redFlags || []).map(r => `<div class="flag-card red">${r}</div>`).join('')}
-                          </div>
-                        ` : `
-                          <div class="dilemma-grid">
-                            <div class="dilemma-opt">
-                              <div class="dilemma-opt-emoji">${item.optionA.emoji}</div>
-                              <div class="dilemma-opt-title">${item.optionA.title}</div>
-                              <div class="dilemma-opt-desc">${item.optionA.desc}</div>
+
+                          ${currentPage.bio ? `
+                            <div class="profile-bio-box">
+                              "${currentPage.bio}"
                             </div>
-                            <div class="dilemma-opt">
-                              <div class="dilemma-opt-emoji">${item.optionB.emoji}</div>
-                              <div class="dilemma-opt-title">${item.optionB.title}</div>
-                              <div class="dilemma-opt-desc">${item.optionB.desc}</div>
+                          ` : ''}
+
+                          ${currentPage.greenFlags || currentPage.redFlags ? `
+                            <div class="flag-grid">
+                              ${(currentPage.greenFlags || []).map(g => `<div class="flag-card green">${g}</div>`).join('')}
+                              ${(currentPage.redFlags || []).map(r => `<div class="flag-card red">${r}</div>`).join('')}
+                            </div>
+                          ` : ''}
+
+                          ${item.anthem ? `
+                            <div style="font-size:0.8rem; font-weight:700; color:#4b5563; margin-bottom:0.75rem; background:#f3f4f6; padding:6px 12px; border-radius:12px; display:inline-block;">
+                              ${item.anthem}
+                            </div>
+                          ` : ''}
+                        ` : `
+                          <div class="dilemma-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:0.8rem;">
+                            <div class="dilemma-opt" style="background:#f9fafb; padding:10px; border-radius:12px; border:1px solid #e5e7eb; text-align:center;">
+                              <div style="font-size:2.2rem; margin-bottom:4px;">${item.optionA.emoji}</div>
+                              <div style="font-weight:800; font-size:0.95rem; color:#111827;">${item.optionA.title}</div>
+                              <div style="font-size:0.78rem; color:#6b7280; margin-top:4px; line-height:1.3;">${item.optionA.desc}</div>
+                            </div>
+                            <div class="dilemma-opt" style="background:#f9fafb; padding:10px; border-radius:12px; border:1px solid #e5e7eb; text-align:center;">
+                              <div style="font-size:2.2rem; margin-bottom:4px;">${item.optionB.emoji}</div>
+                              <div style="font-weight:800; font-size:0.95rem; color:#111827;">${item.optionB.title}</div>
+                              <div style="font-size:0.78rem; color:#6b7280; margin-top:4px; line-height:1.3;">${item.optionB.desc}</div>
                             </div>
                           </div>
                         `}
@@ -334,12 +499,29 @@
                   <button class="t-btn btn-like" id="btn-swipe-right" title="Like / Swipe Right">❤️</button>
                 </div>
                 <div style="font-size:0.8rem; color:#9ca3af; margin-top:0.6rem;">
-                  Swipe left/right or tap buttons!
+                  Tap left/right side of card photo to switch details • Swipe to decide!
                 </div>
               </div>
             `;
 
             this.attachDragEvents();
+        },
+
+        nextStory(e) {
+            if (e) e.stopPropagation();
+            const item = this.deck[this.currentIndex];
+            if (item && item.pages && this.activeStoryIndex < item.pages.length - 1) {
+                this.activeStoryIndex++;
+                this.renderCard();
+            }
+        },
+
+        prevStory(e) {
+            if (e) e.stopPropagation();
+            if (this.activeStoryIndex > 0) {
+                this.activeStoryIndex--;
+                this.renderCard();
+            }
         },
 
         attachDragEvents() {
@@ -504,11 +686,30 @@
             const modal = document.getElementById('match-modal');
             const nameEl = document.getElementById('match-item-name');
             const emojiEl = document.getElementById('match-item-emoji');
-            const promptEl = document.getElementById('match-prompt-text');
+            const openerEl = document.getElementById('match-opener-text');
+            const icebreakersEl = document.getElementById('chat-icebreakers');
+            const messagesContainer = document.getElementById('chat-messages-container');
+            const inputEl = document.getElementById('chat-input');
 
             if (nameEl) nameEl.textContent = item.title;
             if (emojiEl) emojiEl.textContent = item.avatar || '🔥';
-            if (promptEl) promptEl.textContent = item.prompt;
+            if (openerEl) openerEl.textContent = item.opener || `Hey! What made you swipe right on ${item.title} today? 🔥`;
+            if (inputEl) inputEl.value = '';
+
+            if (messagesContainer) {
+                messagesContainer.innerHTML = `
+                    <div style="background: rgba(255,255,255,0.95); color: #1f2937; padding: 8px 12px; border-radius: 12px 12px 12px 2px; font-size: 0.85rem; max-width: 85%; align-self: flex-start; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+                      <span>${item.opener || `Hey! What made you swipe right on ${item.title} today? 🔥`}</span>
+                    </div>
+                `;
+            }
+
+            if (icebreakersEl) {
+                const pills = item.icebreakers || ['I love this profile!', 'Defend your choice 💬', 'Tell me more!'];
+                icebreakersEl.innerHTML = pills.map(p => `
+                    <button onclick="COSY_GAME.quickChat('${p.replace(/'/g, "\\'")}')" style="background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: background 0.15s;">${p}</button>
+                `).join('');
+            }
 
             if (modal) modal.classList.add('open');
 
@@ -517,9 +718,52 @@
             }
         },
 
+        quickChat(text) {
+            const inputEl = document.getElementById('chat-input');
+            if (inputEl) {
+                inputEl.value = text;
+                this.sendChatMessage();
+            }
+        },
+
+        sendChatMessage() {
+            const inputEl = document.getElementById('chat-input');
+            const messagesContainer = document.getElementById('chat-messages-container');
+            if (!inputEl || !inputEl.value.trim() || !messagesContainer) return;
+
+            const userText = inputEl.value.trim();
+            inputEl.value = '';
+
+            // Render User Bubble
+            const userMsg = document.createElement('div');
+            userMsg.style.cssText = 'background: #fd267d; color: #ffffff; padding: 8px 12px; border-radius: 12px 12px 2px 12px; font-size: 0.85rem; max-width: 85%; align-self: flex-end; box-shadow: 0 2px 6px rgba(0,0,0,0.15); margin-top: 4px;';
+            userMsg.textContent = userText;
+            messagesContainer.appendChild(userMsg);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+            if (window.COSYGame) COSYGame.score += 5;
+
+            // Delayed Reply
+            setTimeout(() => {
+                const replies = [
+                    "Haha I love that answer! Perfect match energy 🔥",
+                    "Great point! I knew we would hit it off! 🚀",
+                    "Spot on! Definitely agree with you there ☕",
+                    "Fascinating perspective! You really know your stuff 🎉"
+                ];
+                const replyText = replies[Math.floor(Math.random() * replies.length)];
+                const replyMsg = document.createElement('div');
+                replyMsg.style.cssText = 'background: rgba(255,255,255,0.95); color: #1f2937; padding: 8px 12px; border-radius: 12px 12px 12px 2px; font-size: 0.85rem; max-width: 85%; align-self: flex-start; box-shadow: 0 2px 6px rgba(0,0,0,0.15); margin-top: 4px;';
+                replyMsg.textContent = replyText;
+                messagesContainer.appendChild(replyMsg);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 600);
+        },
+
         closeMatchModal() {
             const modal = document.getElementById('match-modal');
             if (modal) modal.classList.remove('open');
+            this.activeStoryIndex = 0;
             this.currentIndex++;
             this.renderCard();
         },
