@@ -85,10 +85,44 @@
         transition: none;
       }
 
+      /* Story Bar / Photo Pagination Dots */
+      .story-bar-container {
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        right: 12px;
+        display: flex;
+        gap: 6px;
+        z-index: 25;
+      }
+      .story-segment {
+        flex: 1;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 4px;
+        transition: background 0.2s ease;
+      }
+      .story-segment.active {
+        background: #ffffff;
+        box-shadow: 0 0 6px rgba(255,255,255,0.8);
+      }
+
+      /* Tap navigation zones on image */
+      .tap-zone {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 35%;
+        z-index: 15;
+        cursor: pointer;
+      }
+      .tap-zone.left { left: 0; }
+      .tap-zone.right { right: 0; }
+
       /* Photo / Avatar Box Header */
       .card-hero-box {
         position: relative;
-        height: 220px;
+        height: 230px;
         background: var(--tinder-gradient);
         display: flex;
         flex-direction: column;
@@ -96,52 +130,72 @@
         justify-content: center;
         color: #ffffff;
         padding: 1rem;
+        transition: background 0.3s ease;
       }
       .card-avatar-emoji {
-        font-size: 5rem;
-        filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
-        transition: transform 0.2s ease;
+        font-size: 5.5rem;
+        filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
+        transition: transform 0.25s ease;
       }
       .tinder-card:hover .card-avatar-emoji {
-        transform: scale(1.08);
+        transform: scale(1.1);
       }
 
-      /* Badges */
+      .card-sub-badge {
+        position: absolute;
+        bottom: 12px;
+        left: 14px;
+        background: rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(8px);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* Dynamic Rotated Stamp Overlays */
       .badge-indicator {
         position: absolute;
-        top: 24px;
-        padding: 6px 18px;
+        top: 36px;
+        padding: 8px 22px;
         border-radius: 12px;
-        font-weight: 800;
-        font-size: 1.4rem;
-        letter-spacing: 0.08em;
+        font-weight: 900;
+        font-size: 1.8rem;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.15s ease;
-        z-index: 20;
+        transition: opacity 0.1s ease;
+        z-index: 30;
       }
       .badge-like {
-        right: 20px;
-        border: 4px solid #10b981;
+        left: 24px;
+        border: 5px solid #10b981;
         color: #10b981;
-        transform: rotate(15deg);
-        background: rgba(255,255,255,0.85);
+        transform: rotate(-18deg);
+        background: rgba(255,255,255,0.92);
+        box-shadow: 0 8px 20px rgba(16,185,129,0.3);
       }
       .badge-pass {
-        left: 20px;
-        border: 4px solid #ef4444;
+        right: 24px;
+        border: 5px solid #ef4444;
         color: #ef4444;
-        transform: rotate(-15deg);
-        background: rgba(255,255,255,0.85);
+        transform: rotate(18deg);
+        background: rgba(255,255,255,0.92);
+        box-shadow: 0 8px 20px rgba(239,68,68,0.3);
       }
       .badge-super {
-        top: 50px;
+        top: 70px;
         left: 50%;
-        transform: translateX(-50%) rotate(-5deg);
-        border: 4px solid #3b82f6;
+        transform: translateX(-50%) rotate(-6deg);
+        border: 5px solid #3b82f6;
         color: #3b82f6;
-        background: rgba(255,255,255,0.85);
+        background: rgba(255,255,255,0.95);
+        box-shadow: 0 8px 20px rgba(59,130,246,0.3);
       }
 
       /* Card Content Body */
@@ -407,20 +461,39 @@
       </div>
     </div>
 
-    <!-- Match Celebration Modal -->
+    <!-- Match Celebration & Chat Interactive Modal -->
     <div class="match-modal-overlay" id="match-modal">
       <div class="match-card">
         <div class="match-title">IT'S A MATCH! 🔥</div>
-        <p style="opacity: 0.95; font-size: 0.95rem;">You and <strong id="match-item-name">this card</strong> liked each other!</p>
+        <p style="opacity: 0.95; font-size: 0.95rem; margin-bottom: 0.5rem;">You and <strong id="match-item-name">this card</strong> liked each other!</p>
         <div class="match-avatars">
           <div class="match-avatar-circle">🗣️</div>
           <div style="font-size: 1.5rem; color: #fff;">❤️</div>
           <div class="match-avatar-circle" id="match-item-emoji">☕</div>
         </div>
-        <div class="match-prompt-box">
-          💬 <strong>Speaking Challenge:</strong>
-          <div id="match-prompt-text" style="margin-top: 6px;">Explain why you matched with this profile in your target language!</div>
+
+        <!-- Interactive Chat Playground inside Modal -->
+        <div style="background: rgba(0,0,0,0.25); border-radius: 16px; padding: 0.85rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); text-align: left;">
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; margin-bottom: 0.5rem; text-align: center;">💬 Tinder Chat Opener</div>
+
+          <div id="chat-messages-container" style="max-height: 130px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; margin-bottom: 0.75rem; padding-right: 4px;">
+            <div style="background: rgba(255,255,255,0.95); color: #1f2937; padding: 8px 12px; border-radius: 12px 12px 12px 2px; font-size: 0.85rem; max-width: 85%; align-self: flex-start; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+              <span id="match-opener-text">Hey there! What made you swipe right on me today? 🔥</span>
+            </div>
+          </div>
+
+          <!-- Icebreaker Suggestion Pills -->
+          <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 0.6rem;" id="chat-icebreakers">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- User Response Input -->
+          <div style="display: flex; gap: 6px;">
+            <input type="text" id="chat-input" placeholder="Type your reply / argument..." style="flex: 1; padding: 8px 12px; border-radius: 20px; border: none; font-size: 0.85rem; outline: none; color: #111;" onkeydown="if(event.key==='Enter') COSY_GAME.sendChatMessage()" />
+            <button onclick="COSY_GAME.sendChatMessage()" style="background: #ffffff; color: var(--tinder-pink); border: none; padding: 0 14px; border-radius: 20px; font-weight: 800; cursor: pointer; font-size: 0.85rem;">Send 🚀</button>
+          </div>
         </div>
+
         <button class="match-btn" onclick="COSY_GAME.closeMatchModal()">Keep Swiping 🔥</button>
       </div>
     </div>

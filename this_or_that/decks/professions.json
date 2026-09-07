@@ -1,0 +1,394 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Professions 💼",
+      "title": "Baker (Chef John)",
+      "age": "30 yrs exp",
+      "location": "📍 0.5 miles away • Sunrise Bakery",
+      "verified": true,
+      "avatar": "👨‍🍳",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "visualDescription": "Middle-aged man in a chef hat and white baker uniform dusting flour on fresh bread loaves in a warm bakery.",
+      "interests": [
+        "#FreshBread",
+        "#EarlyMorning",
+        "#DeliciousCakes"
+      ],
+      "anthem": "🎵 'Sweet Caroline' - Classic Oldie",
+      "pages": [
+        {
+          "tag": "💼 Job Overview",
+          "bio": "I am a baker! I wake up at 4:00 AM every morning. I bake fresh bread, croissants, and delicious chocolate cakes."
+        },
+        {
+          "tag": "✨ Daily Work",
+          "bio": "Work is fun! My kitchen smells like warm sugar and fresh flour. I sell delicious breakfast to happy people."
+        },
+        {
+          "tag": "🚩 Job Pros & Cons",
+          "greenFlags": [
+            "✓ Free fresh bread every day",
+            "✓ Smells like warm cinnamon",
+            "✓ Smiles from customers"
+          ],
+          "redFlags": [
+            "✗ Waking up at 4:00 AM",
+            "✗ Flour on all clothes",
+            "✗ Hot ovens all day"
+          ]
+        }
+      ],
+      "opener": "Good morning! Do you want fresh bread or chocolate cake today?",
+      "icebreakers": [
+        "Fresh bread please!",
+        "Chocolate cake for me!",
+        "I love croissants!"
+      ],
+      "prompt": "What does a baker do every morning? Would you like this job?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Professions 💼",
+      "title": "Doctor (Dr. Sarah)",
+      "age": "8 yrs exp",
+      "location": "📍 2 miles away • City Hospital",
+      "verified": true,
+      "avatar": "👩‍⚕️",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "visualDescription": "Female doctor with blonde ponytail, wearing a white coat and blue stethoscope around her neck, standing in a bright clinic.",
+      "interests": [
+        "#HelpPeople",
+        "#WhiteCoat",
+        "#HealthyLife"
+      ],
+      "anthem": "🎵 'Healing Hands' - Calm Melodic",
+      "pages": [
+        {
+          "tag": "💼 Job Overview",
+          "bio": "I am a doctor in a hospital. I help sick people feel better. I listen to their hearts and give good medicine."
+        },
+        {
+          "tag": "✨ Daily Work",
+          "bio": "I wear a white coat and a blue stethoscope. I talk to children and adults to keep everybody healthy and happy."
+        },
+        {
+          "tag": "🚩 Job Pros & Cons",
+          "greenFlags": [
+            "✓ Helps save lives",
+            "✓ Very respected job",
+            "✓ Makes people healthy"
+          ],
+          "redFlags": [
+            "✗ Long night shifts",
+            "✗ Very busy schedule",
+            "✗ Hard examinations"
+          ]
+        }
+      ],
+      "opener": "Hello! How are you feeling today? Are you healthy?",
+      "icebreakers": [
+        "I feel great!",
+        "I have a headache",
+        "Thank you for helping people!"
+      ],
+      "prompt": "Why is a doctor's job important? Describe Dr. Sarah's uniform."
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Professions 💼",
+      "title": "Graphic Designer (Nina)",
+      "age": "4 yrs exp",
+      "location": "📍 1 mile away • Creative Loft",
+      "verified": true,
+      "avatar": "👩‍🎨",
+      "gradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
+      "visualDescription": "Creative woman sitting with a digital drawing tablet, stylus pen, colorful posters on wall, wearing round glasses and stylish sweater.",
+      "interests": [
+        "#DigitalArt",
+        "#ColorPalette",
+        "#LogosAndPosters"
+      ],
+      "anthem": "🎵 'Colors of the Wind' - Pop Cover",
+      "pages": [
+        {
+          "tag": "💼 Job Overview",
+          "bio": "I am Nina, a graphic designer! I create beautiful logos, website banners, and colorful posters for local businesses."
+        },
+        {
+          "tag": "✨ Daily Tasks",
+          "bio": "I work on my laptop and drawing tablet. I choose nice fonts, harmonize color palettes, and draw digital art."
+        },
+        {
+          "tag": "🚩 Job Pros & Cons",
+          "greenFlags": [
+            "✓ Highly creative & fun job",
+            "✓ Work from cafes or home",
+            "✓ Seeing your art on billboards"
+          ],
+          "redFlags": [
+            "✗ Staring at screens for 8 hours",
+            "✗ Clients changing their minds",
+            "✗ Eye fatigue"
+          ]
+        }
+      ],
+      "opener": "Hey! What is your absolute favorite color combination?",
+      "icebreakers": [
+        "Black & Gold!",
+        "Blue & Pastel Pink!",
+        "Green & Earthy Brown!"
+      ],
+      "prompt": "What tools does a graphic designer use? Would you enjoy this job?"
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Professions 💼",
+      "title": "Fitness Trainer (Alex)",
+      "age": "6 yrs exp",
+      "location": "📍 0.5 miles away • Metro Gym",
+      "verified": true,
+      "avatar": "🏋️‍♂️",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #22c55e 100%)",
+      "visualDescription": "Muscular trainer in black gym tank top, stopwatch around neck, pointing encouragingly at gym equipment.",
+      "interests": [
+        "#PersonalTrainer",
+        "#WorkoutRoutine",
+        "#HealthyNutrition"
+      ],
+      "anthem": "🎵 'Eye of the Tiger' - Gym Anthem",
+      "pages": [
+        {
+          "tag": "💼 Job Overview",
+          "bio": "I am Alex, a certified personal fitness trainer! I design exercise routines and teach people how to stay fit and strong."
+        },
+        {
+          "tag": "✨ Daily Tasks",
+          "bio": "I guide gym members with weights, cardio workouts, and healthy eating plans. High motivation every day!"
+        },
+        {
+          "tag": "🚩 Job Pros & Cons",
+          "greenFlags": [
+            "✓ Active healthy lifestyle",
+            "✓ Inspiring people to reach goals",
+            "✓ Great energy"
+          ],
+          "redFlags": [
+            "✗ Waking up at 5:30 AM for clients",
+            "✗ Sore muscles constantly",
+            "✗ Loud gym music all day"
+          ]
+        }
+      ],
+      "opener": "Hey! Do you prefer morning workouts or evening relaxation?",
+      "icebreakers": [
+        "Morning workouts!",
+        "Evening relaxation on couch!",
+        "Weekend sports!"
+      ],
+      "prompt": "What are the benefits and challenges of being a personal trainer?"
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Professions 💼",
+      "title": "Software Engineer (Marcus)",
+      "age": "5 yrs exp",
+      "location": "📍 1.5 miles away • Tech Hub",
+      "verified": true,
+      "avatar": "👨‍💻",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
+      "visualDescription": "Software engineer working at a dual-monitor standing desk, wearing headphones, coding on IDE software with dark theme.",
+      "interests": [
+        "#FullStackCode",
+        "#DualMonitors",
+        "#ProblemSolving"
+      ],
+      "anthem": "🎵 'Digital Love' - Electronic Synth",
+      "pages": [
+        {
+          "tag": "💼 Profession Overview",
+          "bio": "I'm Marcus, a Full-Stack Software Engineer building web apps and cloud algorithms. I turn complex logic into smooth user experiences."
+        },
+        {
+          "tag": "✨ Daily Responsibilities",
+          "bio": "Writing scalable code, reviewing pull requests, solving algorithmic puzzles, and collaborating with UI designers remotely."
+        },
+        {
+          "tag": "🚩 Career Pros & Cons",
+          "greenFlags": [
+            "✓ High remote work flexibility",
+            "✓ Strong analytical problem solving",
+            "✓ Excellent compensation"
+          ],
+          "redFlags": [
+            "✗ Prolonged sitting & screen glare",
+            "✗ Sudden server bug emergencies",
+            "✗ Jargon heavy language"
+          ]
+        }
+      ],
+      "opener": "Hello world! Are you fascinated or intimidated by coding and technology?",
+      "icebreakers": [
+        "Fascinated by tech!",
+        "Intimidated by code!",
+        "I write code too!"
+      ],
+      "prompt": "Discuss the advantages and drawbacks of a career in software engineering."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Professions 💼",
+      "title": "Environmental Journalist (Clara)",
+      "age": "6 yrs exp",
+      "location": "📍 2 miles away • Press Building",
+      "verified": true,
+      "avatar": "👩‍💻",
+      "gradient": "linear-gradient(135deg, #047857 0%, #10b981 100%)",
+      "visualDescription": "Journalist holding a recording microphone and notebook, conducting an interview outdoors with wind turbines in background.",
+      "interests": [
+        "#ClimateAction",
+        "#Investigative",
+        "#Storytelling"
+      ],
+      "anthem": "🎵 'Blowin' in the Wind' - Folk",
+      "pages": [
+        {
+          "tag": "💼 Profession Overview",
+          "bio": "I'm Clara, an investigative environmental journalist. I research renewable energy trends and write articles on climate conservation."
+        },
+        {
+          "tag": "✨ Daily Responsibilities",
+          "bio": "Interviewing scientists, traveling to nature reserves, verifying data sources, and editing impactful news features."
+        },
+        {
+          "tag": "🚩 Career Pros & Cons",
+          "greenFlags": [
+            "✓ Meaningful societal impact",
+            "✓ Travel & fieldwork opportunities",
+            "✓ Continuous learning"
+          ],
+          "redFlags": [
+            "✗ Strict publication deadlines",
+            "✗ Dealing with misinformation",
+            "✗ Irregular work hours"
+          ]
+        }
+      ],
+      "opener": "Hi! What environmental or social issue do you feel most passionate about?",
+      "icebreakers": [
+        "Renewable energy!",
+        "Wildlife conservation!",
+        "Reducing plastic waste!"
+      ],
+      "prompt": "What skills are required to be an effective investigative journalist?"
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Professions 💼",
+      "title": "AI Ethics Researcher (Dr. Aris)",
+      "age": "7 yrs exp",
+      "location": "📍 1.2 miles away • Innovation Campus",
+      "verified": true,
+      "avatar": "🧠",
+      "gradient": "linear-gradient(135deg, #4338ca 0%, #6366f1 100%)",
+      "visualDescription": "Researcher reviewing algorithmic bias data on transparent holographic displays in a high-tech university research lab.",
+      "interests": [
+        "#AIEthics",
+        "#AlgorithmicJustice",
+        "#TechPolicy"
+      ],
+      "anthem": "🎵 'Computer World' - Electro Synth",
+      "pages": [
+        {
+          "tag": "💼 Profession Overview",
+          "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher. I evaluate machine learning models for algorithmic bias, data privacy compliance, and societal safety."
+        },
+        {
+          "tag": "✨ Responsibilities & Expertise",
+          "bio": "Publishing peer-reviewed policy frameworks, advising tech executives, and auditing large language models to prevent discrimination in automated decisions."
+        },
+        {
+          "tag": "🚩 Career Pros & Cons",
+          "greenFlags": [
+            "✓ Pioneering the frontier of tech safety",
+            "✓ High intellectual stimulation",
+            "✓ Shaping global policy guidelines"
+          ],
+          "redFlags": [
+            "✗ Complex ethical dilemmas without clear answers",
+            "✗ Corporate resistance to regulation",
+            "✗ Constant rapid tech shifts"
+          ]
+        }
+      ],
+      "opener": "Greetings! In your opinion, should artificial intelligence development be strictly regulated by international law?",
+      "icebreakers": [
+        "Strict international regulation essential!",
+        "Innovation needs freedom first!",
+        "Balanced adaptive oversight!"
+      ],
+      "prompt": "Evaluate the ethical implications and societal responsibilities of AI ethics researchers."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Professions 💼",
+      "title": "Architectural Conservationist (Soren)",
+      "age": "8 yrs exp",
+      "location": "📍 0.9 miles away • Heritage Bureau",
+      "verified": true,
+      "avatar": "🏛️",
+      "gradient": "linear-gradient(135deg, #854d0e 0%, #a16207 100%)",
+      "visualDescription": "Architect in hardhat examining intricate stonework details of a historic cathedral restoration project using laser scanning tools.",
+      "interests": [
+        "#HeritageRestoration",
+        "#SustainableUrbanism",
+        "#AdaptiveReuse"
+      ],
+      "anthem": "🎵 'Symphony No. 5' - Orchestral",
+      "pages": [
+        {
+          "tag": "💼 Profession Overview",
+          "bio": "I'm Soren, an Architectural Conservationist. I specialize in adaptive reuse—restoring landmark historic structures while adapting them for sustainable modern utility."
+        },
+        {
+          "tag": "✨ Responsibilities & Expertise",
+          "bio": "3D laser scanning ancient masonry, sourcing period-accurate ecological materials, and preventing historical landmarks from demolition."
+        },
+        {
+          "tag": "🚩 Career Pros & Cons",
+          "greenFlags": [
+            "✓ Preserving cultural heritage for future generations",
+            "✓ Tangible lasting artistic legacy",
+            "✓ Blending history with sustainability"
+          ],
+          "redFlags": [
+            "✗ Lengthy bureaucratic approval permits",
+            "✗ Unforeseen structural decay costs",
+            "✗ Budget constraints"
+          ]
+        }
+      ],
+      "opener": "Hello! How can cities balance preserving historical architecture with building modern housing infrastructure?",
+      "icebreakers": [
+        "Prioritize historic preservation!",
+        "Prioritize modern housing needs!",
+        "Adaptive reuse is the solution!"
+      ],
+      "prompt": "Debate the balance between historical architectural preservation and urban modernization."
+    }
+  ]
+}

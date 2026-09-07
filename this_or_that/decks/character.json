@@ -1,0 +1,202 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Character Traits 🧠",
+      "title": "Kind & Friendly Friend",
+      "age": "20",
+      "location": "📍 1 mile away • Neighborhood",
+      "verified": true,
+      "avatar": "😊",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%)",
+      "visualDescription": "Smiling young person holding a warm cup of cocoa, wearing a yellow beanie and soft scarf, exuding friendliness.",
+      "interests": [
+        "#Friendly",
+        "#KindHeart",
+        "#GoodListener"
+      ],
+      "anthem": "🎵 'Count on Me' - Warm Pop",
+      "pages": [
+        {
+          "tag": "🧠 Personality Traits",
+          "bio": "I am kind, polite, and friendly! I say 'please' and 'thank you' and I love helping my neighbors."
+        },
+        {
+          "tag": "✨ Daily Attitude",
+          "bio": "I smile at everyone I see on the street. I remember birthdays and bring cookies to my friends!"
+        },
+        {
+          "tag": "🚩 Pros & Cons",
+          "greenFlags": [
+            "✓ Always polite & patient",
+            "✓ Helps with heavy bags",
+            "✓ Great listener"
+          ],
+          "redFlags": [
+            "✗ Says 'yes' to everything",
+            "✗ Gets sad if people argue",
+            "✗ Too generous"
+          ]
+        }
+      ],
+      "opener": "Hello my friend! How can I make your day happier today?",
+      "icebreakers": [
+        "You are so nice!",
+        "Let us drink coffee together",
+        "Have a great day too!"
+      ],
+      "prompt": "What does a kind person do? Name 2 kind actions."
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Character Traits 🧠",
+      "title": "Organized & Reliable (Sophia)",
+      "age": "26",
+      "location": "📍 2 miles away • West End",
+      "verified": true,
+      "avatar": "📅",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
+      "visualDescription": "Focused young woman checking off tasks on a colorful paper planner, smiling calmly in a neat organized desk setup.",
+      "interests": [
+        "#Punctual",
+        "#PlannerGeek",
+        "#ReliableFriend"
+      ],
+      "anthem": "🎵 'Clockwork' - Smooth Rhythms",
+      "pages": [
+        {
+          "tag": "🧠 Personality Traits",
+          "bio": "I am Sophia! Very organized, punctual, and reliable. I never arrive late and I always keep my promises."
+        },
+        {
+          "tag": "✨ Daily Routine",
+          "bio": "I keep a daily color-coded planner, prepare my outfits the night before, and keep my living space spotless."
+        },
+        {
+          "tag": "🚩 Pros & Cons",
+          "greenFlags": [
+            "✓ Never cancels plans last minute",
+            "✓ Super dependable in emergencies",
+            "✓ Always punctual"
+          ],
+          "redFlags": [
+            "✗ Stressed when plans change unexpectedly",
+            "✗ Too strict with schedules",
+            "✗ Dislikes messy places"
+          ]
+        }
+      ],
+      "opener": "Hi! Are you someone who plans ahead or makes last-minute spontaneous decisions?",
+      "icebreakers": [
+        "I plan everything ahead!",
+        "I am spontaneous!",
+        "A bit of both!"
+      ],
+      "prompt": "Why is reliability an important trait in friendship?"
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Character Traits 🧠",
+      "title": "Empathetic & Intuitive (Daniel)",
+      "age": "28",
+      "location": "📍 1.8 miles away • Maple Heights",
+      "verified": true,
+      "avatar": "🤝",
+      "gradient": "linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)",
+      "visualDescription": "Warm-hearted man listening intently during coffee conversation, leaning forward with genuine care and active body language.",
+      "interests": [
+        "#EmotionalIntelligence",
+        "#ActiveListener",
+        "#Empathetic"
+      ],
+      "anthem": "🎵 'Lean on Me' - Soul Classic",
+      "pages": [
+        {
+          "tag": "🧠 Personality Character",
+          "bio": "I'm Daniel. I pride myself on high emotional intelligence, deep empathy, and the ability to truly listen without judging."
+        },
+        {
+          "tag": "✨ Interpersonal Style",
+          "bio": "Friends come to me when they need thoughtful advice or a safe space to vent. I value authentic connections over small talk."
+        },
+        {
+          "tag": "🚩 Pros & Cons",
+          "greenFlags": [
+            "✓ Deeply supportive & trustworthy",
+            "✓ Highly perceptive of feelings",
+            "✓ Outstanding conflict resolver"
+          ],
+          "redFlags": [
+            "✗ Absorbs other people's stress easily",
+            "✗ Avoids aggressive confrontation",
+            "✗ Emotionally drained at times"
+          ]
+        }
+      ],
+      "opener": "Hello! Do you consider yourself more guided by rational logic or emotional intuition?",
+      "icebreakers": [
+        "Rational logic!",
+        "Emotional intuition!",
+        "Equal balance of both!"
+      ],
+      "prompt": "How does high emotional intelligence improve interpersonal relationships?"
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Character Traits 🧠",
+      "title": "Visionary & Resilient (Helena)",
+      "age": "32",
+      "location": "📍 1.5 miles away • Enterprise Square",
+      "verified": true,
+      "avatar": "🦁",
+      "gradient": "linear-gradient(135deg, #b91c1c 0%, #dc2626 100%)",
+      "visualDescription": "Determined female leader standing atop a conference hall terrace, looking strategically toward the city skyline with confidence and poise.",
+      "interests": [
+        "#StrategicVision",
+        "#Resilience",
+        "#EmpoweringLeader"
+      ],
+      "anthem": "🎵 'Unstoppable' - Anthem",
+      "pages": [
+        {
+          "tag": "🧠 Personality Character",
+          "bio": "I'm Helena, 32. Characterized by strategic foresight, formidable resilience under pressure, and an unwavering commitment to empowering those around me."
+        },
+        {
+          "tag": "✨ Leadership Philosophy",
+          "bio": "I view setbacks as crucial data points for growth. I lead with transparency, encourage bold calculated risk-taking, and foster accountability."
+        },
+        {
+          "tag": "🚩 Pros & Cons",
+          "greenFlags": [
+            "✓ Inspires high performance in others",
+            "✓ Unshakable under severe crisis",
+            "✓ Decisive and visionary"
+          ],
+          "redFlags": [
+            "✗ High expectations can intimidate",
+            "✗ Workaholic tendencies",
+            "✗ Impatient with slowness"
+          ]
+        }
+      ],
+      "opener": "Greetings! What key quality distinguishes a true leader from a boss?",
+      "icebreakers": [
+        "Empathy & vision!",
+        "Resilience under crisis!",
+        "Lead by example!"
+      ],
+      "prompt": "Differentiate between transactional management and transformative resilient leadership."
+    }
+  ]
+}

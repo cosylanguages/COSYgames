@@ -1,0 +1,394 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Physical Appearance 👁️",
+      "title": "Anna",
+      "age": "22",
+      "location": "📍 1 mile away • City Center",
+      "verified": true,
+      "avatar": "👩",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+      "visualDescription": "Young woman with short straight black hair, big brown eyes, wearing a bright red sweater and white sneakers. Friendly, warm smile.",
+      "interests": [
+        "#Tall",
+        "#ShortBlackHair",
+        "#RedSweater"
+      ],
+      "anthem": "🎵 'Simple Song' - Basic Pop",
+      "pages": [
+        {
+          "tag": "🖼️ Basic Look",
+          "bio": "Hi! I am Anna. I am 22 years old. I am tall with short black hair and brown eyes. I like bright clothes!"
+        },
+        {
+          "tag": "✨ Daily Clothes",
+          "bio": "I usually wear a comfortable red sweater, blue jeans, and clean white sneakers. I always wear a happy smile!"
+        },
+        {
+          "tag": "🚩 Quick Details",
+          "greenFlags": [
+            "✓ Friendly big smile",
+            "✓ Easy to recognize in a crowd",
+            "✓ Tall and slim"
+          ],
+          "redFlags": [
+            "✗ Always late because of picking shoes",
+            "✗ Only wears red sweaters",
+            "✗ Speaks very fast"
+          ]
+        }
+      ],
+      "opener": "Hello! I am Anna. Do you like red or blue sweaters?",
+      "icebreakers": [
+        "I like red sweaters!",
+        "I prefer blue jeans!",
+        "You have a nice smile!"
+      ],
+      "prompt": "Describe Anna using 3 simple words (hair, clothes, height)."
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Physical Appearance 👁️",
+      "title": "Marco",
+      "age": "25",
+      "location": "📍 3 miles away • Near Park",
+      "verified": true,
+      "avatar": "🧔",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+      "visualDescription": "Tall young man with curly brown hair, dark beard, green eyes, wearing a green t-shirt, denim jacket, and black glasses.",
+      "interests": [
+        "#CurlyHair",
+        "#Beard",
+        "#Glasses"
+      ],
+      "anthem": "🎵 'Happy Days' - Upbeat Acoustic",
+      "pages": [
+        {
+          "tag": "🖼️ Basic Look",
+          "bio": "Hello! My name is Marco. I am 25. I have curly brown hair, green eyes, and a short beard. I wear black glasses."
+        },
+        {
+          "tag": "✨ Fashion Style",
+          "bio": "My style is simple: a dark green t-shirt, blue denim jacket, and black glasses. Very casual and clean."
+        },
+        {
+          "tag": "🚩 Quick Details",
+          "greenFlags": [
+            "✓ Cute curly hair",
+            "✓ Nice green eyes",
+            "✓ Cool black glasses"
+          ],
+          "redFlags": [
+            "✗ Loses glasses every morning",
+            "✗ Takes 30 minutes to brush beard",
+            "✗ Always wears denim"
+          ]
+        }
+      ],
+      "opener": "Hi there! Do you wear glasses or have curly hair?",
+      "icebreakers": [
+        "I wear glasses too!",
+        "I love green eyes!",
+        "Cool denim jacket!"
+      ],
+      "prompt": "What color are Marco's eyes and hair?"
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Physical Appearance 👁️",
+      "title": "Elena (Athletic & Wavy Auburn Hair)",
+      "age": "24",
+      "location": "📍 2 miles away • Marina Bay",
+      "verified": true,
+      "avatar": "👩‍🦰",
+      "gradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
+      "visualDescription": "Athletic woman with medium shoulder-length wavy auburn hair, hazel eyes, light freckles on her nose, wearing a navy blue striped nautical shirt.",
+      "interests": [
+        "#WavyAuburnHair",
+        "#HazelEyes",
+        "#AthleticBuild"
+      ],
+      "anthem": "🎵 'Ocean Waves' - Summer Vibe",
+      "pages": [
+        {
+          "tag": "🖼️ Physical Look",
+          "bio": "I am Elena, 24. I am medium height with an athletic build. I have wavy auburn hair, hazel eyes, and cute freckles."
+        },
+        {
+          "tag": "✨ Fashion Style",
+          "bio": "I love casual nautical style—navy striped tops, beige shorts, and leather sandals. Ready for beach walks!"
+        },
+        {
+          "tag": "🚩 Appearance Detail",
+          "greenFlags": [
+            "✓ Warm hazel eyes that shine in the sun",
+            "✓ Natural freckles",
+            "✓ Active athletic posture"
+          ],
+          "redFlags": [
+            "✗ Sunburns very easily",
+            "✗ Hair gets messy in wind",
+            "✗ Wears sandals even in winter"
+          ]
+        }
+      ],
+      "opener": "Hi! What is your favorite season for outdoor fashion?",
+      "icebreakers": [
+        "Summer fashion!",
+        "Autumn coats and boots!",
+        "Love the nautical style!"
+      ],
+      "prompt": "Describe Elena's build, hair color, and clothing style."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Physical Appearance 👁️",
+      "title": "Liam (Tall & Tailored Suit Style)",
+      "age": "27",
+      "location": "📍 1.5 miles away • Financial District",
+      "verified": true,
+      "avatar": "👨‍💼",
+      "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
+      "visualDescription": "Tall 6'2\" man with neat dark blonde side-part hair, sharp jawline, wearing a tailored navy blazer and crisp white collar shirt.",
+      "interests": [
+        "#Tall6ft2",
+        "#SmartBlazer",
+        "#SharpLook"
+      ],
+      "anthem": "🎵 'Smooth Operator' - Jazzy Pop",
+      "pages": [
+        {
+          "tag": "🖼️ Physical Look",
+          "bio": "I am Liam! 27 years old, tall (6'2\"), slim frame with broad shoulders. Short dark blonde hair and a clean-shaven face."
+        },
+        {
+          "tag": "✨ Fashion Vibe",
+          "bio": "Smart-casual elegance: tailored navy blazers, white oxford shirts, leather watch, and polished brown shoes."
+        },
+        {
+          "tag": "🚩 Appearance Detail",
+          "greenFlags": [
+            "✓ Sharp polished appearance",
+            "✓ Great posture & height",
+            "✓ Neat tidy hairstyle"
+          ],
+          "redFlags": [
+            "✗ Overly picky about shirt creases",
+            "✗ Spends too much on dry cleaning",
+            "✗ Refuses to wear hoodies"
+          ]
+        }
+      ],
+      "opener": "Hello! Do you prefer dressing up formally or wearing cozy hoodies?",
+      "icebreakers": [
+        "Cozy hoodies all day!",
+        "I love smart suits!",
+        "Mix of both!"
+      ],
+      "prompt": "How tall is Liam and what clothing does he wear?"
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Physical Appearance 👁️",
+      "title": "Maya (Boho-Chic & Shoulder-Length Curls)",
+      "age": "26",
+      "location": "📍 3 miles away • Cultural District",
+      "verified": true,
+      "avatar": "👩‍🦱",
+      "gradient": "linear-gradient(135deg, #7c2d12 0%, #d97706 100%)",
+      "visualDescription": "Artistic woman with voluminous dark brown curly hair, expressive dark eyes, wearing an embroidered bohemian kimono, layered silver rings, and turquoise earrings.",
+      "interests": [
+        "#BohoStyle",
+        "#VoluminousCurls",
+        "#LayeredAccessories"
+      ],
+      "anthem": "🎵 'Gypsy Heart' - Indie Folk",
+      "pages": [
+        {
+          "tag": "🖼️ Physical Appearance",
+          "bio": "I'm Maya, 26. Distinctive for my expressive dark eyes, sun-kissed tan complexion, and shoulder-length dark brown curly hair."
+        },
+        {
+          "tag": "✨ Fashion Aesthetic",
+          "bio": "Bohemian aesthetic: flowing embroidered cardigans, vintage silver jewelry, suede ankle boots, and artistic earthy tones."
+        },
+        {
+          "tag": "🚩 Appearance Detail",
+          "greenFlags": [
+            "✓ Striking expressive facial features",
+            "✓ Unique artistic personal style",
+            "✓ Warm inviting smile"
+          ],
+          "redFlags": [
+            "✗ Takes 45 minutes to define curls",
+            "✗ Overloaded with handmade bracelets",
+            "✗ Thrifting addiction"
+          ]
+        }
+      ],
+      "opener": "Hey! How would you describe your personal aesthetic and fashion philosophy?",
+      "icebreakers": [
+        "Minimalist modern!",
+        "Boho vintage artistic!",
+        "Streetwear sneakers!"
+      ],
+      "prompt": "Describe Maya's hairstyle, accessories, and overall aesthetic using descriptive adjectives."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Physical Appearance 👁️",
+      "title": "Julian (Broad-Shouldered & Rugged Style)",
+      "age": "29",
+      "location": "📍 2.5 miles away • Timber Ridge",
+      "verified": true,
+      "avatar": "🧔",
+      "gradient": "linear-gradient(135deg, #15803d 0%, #166534 100%)",
+      "visualDescription": "Broad-shouldered man with a trimmed dark beard, sharp jawline, short undercut brown hair, wearing a flannel plaid shirt and leather boots.",
+      "interests": [
+        "#BroadShouldered",
+        "#TrimmedBeard",
+        "#FlannelShirt"
+      ],
+      "anthem": "🎵 'Wilderness' - Folk Rock",
+      "pages": [
+        {
+          "tag": "🖼️ Physical Appearance",
+          "bio": "I'm Julian, 29. Tall (6'1\") with a rugged broad-shouldered frame, well-groomed beard, sharp jawline, and warm brown hazel eyes."
+        },
+        {
+          "tag": "✨ Outdoor Outfit Vibe",
+          "bio": "Outdoor lumberjack aesthetic: heavy-duty flannel plaid shirts, dark selvedge denim jeans, and durable leather hiking boots."
+        },
+        {
+          "tag": "🚩 Appearance Detail",
+          "greenFlags": [
+            "✓ Athletic broad-shouldered posture",
+            "✓ Neatly trimmed beard",
+            "✓ Durable outdoor wardrobe"
+          ],
+          "redFlags": [
+            "✗ Beard oil everywhere",
+            "✗ Refuses to wear formal ties",
+            "✗ Flannel shirt in every color"
+          ]
+        }
+      ],
+      "opener": "Greetings! Do you favor a clean-cut corporate look or an outdoor rugged style?",
+      "icebreakers": [
+        "Outdoor rugged style!",
+        "Clean-cut corporate!",
+        "Casual streetwear!"
+      ],
+      "prompt": "Analyze Julian's physical frame, grooming habits, and clothing choices."
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Physical Appearance 👁️",
+      "title": "Victoria (Statuesque Elegance & Platinum Bob)",
+      "age": "29",
+      "location": "📍 1 mile away • Metropolitan Plaza",
+      "verified": true,
+      "avatar": "👩‍🦳",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #475569 100%)",
+      "visualDescription": "Statuesque 5'10\" woman with a razor-sharp platinum blonde bob, piercing ice-blue eyes, high cheekbones, wearing an asymmetrical black blazer and understated gold hoop earrings.",
+      "interests": [
+        "#StatuesqueElegance",
+        "#PlatinumBlondeBob",
+        "#HighCheekbones"
+      ],
+      "anthem": "🎵 'Vogue' - Chic Fashion",
+      "pages": [
+        {
+          "tag": "🖼️ Physical Appearance",
+          "bio": "I'm Victoria, 29. Statuesque frame (5'10\") featuring prominent high cheekbones, striking ice-blue eyes, and a precision-cut platinum blonde bob."
+        },
+        {
+          "tag": "✨ Fashion Aesthetics",
+          "bio": "High-fashion minimalist tailoring: monochromatic suits, structured blazers, sleek leather boots, and subtle designer accents."
+        },
+        {
+          "tag": "🚩 Appearance Detail",
+          "greenFlags": [
+            "✓ Uncompromising sartorial poise",
+            "✓ Commanding presence & posture",
+            "✓ Impeccable grooming standard"
+          ],
+          "redFlags": [
+            "✗ Intimidating initial impression",
+            "✗ High maintenance hair bleaching routine",
+            "✗ Strict dress code standards"
+          ]
+        }
+      ],
+      "opener": "Welcome! How significantly does first impression and sartorial elegance influence your personal perception?",
+      "icebreakers": [
+        "First impressions are crucial!",
+        "Authenticity matters more than clothes!",
+        "Appreciate refined tailoring!"
+      ],
+      "prompt": "Examine the stylistic impact of Victoria's minimalist wardrobe, hair structure, and demeanor."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Physical Appearance 👁️",
+      "title": "Gabriel (Charismatic & Silver-Templed Style)",
+      "age": "34",
+      "location": "📍 2 miles away • Old Town District",
+      "verified": true,
+      "avatar": "👨‍🦱",
+      "gradient": "linear-gradient(135deg, #334155 0%, #64748b 100%)",
+      "visualDescription": "Charismatic 34-year-old man with distinguished silver-templed dark hair, captivating dimples, wearing a tailored charcoal wool coat and silk scarf.",
+      "interests": [
+        "#SilverTemples",
+        "#DistinguishedLook",
+        "#TailoredWoolCoat"
+      ],
+      "anthem": "🎵 'Feeling Good' - Orchestral Jazz",
+      "pages": [
+        {
+          "tag": "🖼️ Physical Appearance",
+          "bio": "I'm Gabriel, 34. Athletic height (6'0\"), distinguished silver-templed wavy dark hair, warm hazel eyes, and expressive dimples when laughing."
+        },
+        {
+          "tag": "✨ Fashion Aesthetics",
+          "bio": "Classic European sophistication: charcoal wool overcoats, tailored cashmere turtlenecks, antique leather loafers, and vintage timepiece."
+        },
+        {
+          "tag": "🚩 Appearance Detail",
+          "greenFlags": [
+            "✓ Distinguished, mature aesthetic",
+            "✓ Warm disarming smile with dimples",
+            "✓ Timeless fashion choices"
+          ],
+          "redFlags": [
+            "✗ Takes vintage timepiece care too seriously",
+            "✗ Refuses casual sportswear",
+            "✗ Meticulous hair silvering care"
+          ]
+        }
+      ],
+      "opener": "Greetings! Do you believe personal style should evolve continuously or anchor to timeless classicism?",
+      "icebreakers": [
+        "Evolve with current trends!",
+        "Anchor to timeless classicism!",
+        "Blend modern & vintage!"
+      ],
+      "prompt": "Analyze how Gabriel's physical attributes convey maturity, charisma, and sophistication."
+    }
+  ]
+}
