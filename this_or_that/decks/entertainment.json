@@ -1,0 +1,570 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Books, Films & Music 🎬",
+      "title": "Maya",
+      "age": "21",
+      "location": "📍 1 mile away • Cinema District",
+      "verified": true,
+      "avatar": "🍿",
+      "gradient": "linear-gradient(135deg, #dc2626 0%, #f87171 100%)",
+      "visualDescription": "Happy movie fan holding a large bucket of popcorn inside a brightly lit movie theater.",
+      "interests": [
+        "#AnimatedFilms",
+        "#PopcornSnacks",
+        "#CinemaNights"
+      ],
+      "anthem": "🎵 'Can't Stop the Feeling!' by Justin Timberlake",
+      "film": "🎬 'Toy Story' (John Lasseter)",
+      "pages": [
+        {
+          "tag": "🍿 Movie Nights",
+          "bio": "Hi! I am Maya. I love watching movies at the cinema! Animated films and funny comedies make me laugh. Popcorn is my favorite movie snack.",
+          "greenFlags": [
+            "✓ Loves movie theaters",
+            "✓ Shares her big popcorn",
+            "✓ Always happy and laughing"
+          ],
+          "redFlags": [
+            "✗ Talks during the movie",
+            "✗ Eats popcorn loudly",
+            "✗ Prefers short cartoons"
+          ]
+        },
+        {
+          "tag": "🎶 Happy Music",
+          "bio": "I listen to pop music on my headphones every day. I sing sweet songs while I clean my room or walk to school.",
+          "greenFlags": [
+            "✓ Positive musical taste",
+            "✓ Sings with joy",
+            "✓ Enjoys cheerful tunes"
+          ],
+          "redFlags": [
+            "✗ Sings out of tune",
+            "✗ Music playing too loud",
+            "✗ Plays the same song 10 times"
+          ]
+        },
+        {
+          "tag": "📚 Picture Books",
+          "bio": "In the evening, I read colorful comic books and graphic novels. The big pictures help me learn new stories easily.",
+          "greenFlags": [
+            "✓ Loves visual stories",
+            "✓ Fun book collection",
+            "✓ Relaxing evening habit"
+          ],
+          "redFlags": [
+            "✗ Only reads comic books",
+            "✗ Leaves books on the floor",
+            "✗ Finishes books in 10 minutes"
+          ]
+        }
+      ],
+      "opener": "Hello! Do you like watching animated movies or reading comic books?",
+      "icebreakers": [
+        "Animated movies at the cinema!",
+        "Reading comic books!",
+        "Listening to cheerful pop songs!"
+      ],
+      "prompt": "Describe Maya's entertainment habits, favorite movie snacks, and musical taste."
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Books, Films & Music 🎬",
+      "title": "Leo",
+      "age": "23",
+      "location": "📍 2 miles away • Music Hall",
+      "verified": true,
+      "avatar": "🎸",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
+      "visualDescription": "Young musician smiling while playing an acoustic guitar on a wooden bench.",
+      "interests": [
+        "#AcousticGuitar",
+        "#RockMusic",
+        "#LiveConcerts"
+      ],
+      "anthem": "🎵 'Three Little Birds' by Bob Marley",
+      "film": "🎬 'School of Rock' (Richard Linklater)",
+      "pages": [
+        {
+          "tag": "🎸 Acoustic Guitar",
+          "bio": "Hello! I am Leo. I play the acoustic guitar. I know many simple songs. Playing music for my friends makes me very happy!",
+          "greenFlags": [
+            "✓ Plays nice guitar music",
+            "✓ Friendly song leader",
+            "✓ Enjoys sharing tunes"
+          ],
+          "redFlags": [
+            "✗ Practises guitar late at night",
+            "✗ Plays only 3 chords",
+            "✗ Sings loudly in public"
+          ]
+        },
+        {
+          "tag": "📻 Radio Hits",
+          "bio": "I turn on the radio every morning. I like listening to old rock music and catchy pop radio hits while drinking tea.",
+          "greenFlags": [
+            "✓ Enjoys classic rock music",
+            "✓ Upbeat radio listener",
+            "✓ Good music energy"
+          ],
+          "redFlags": [
+            "✗ Dislikes modern hip-hop",
+            "✗ Changes radio channels often",
+            "✗ Hums radio songs loudly"
+          ]
+        },
+        {
+          "tag": "🎬 Action Movies",
+          "bio": "On Sunday afternoons, I watch fun action movies on TV. Fast cars, superheroes, and big explosions are exciting!",
+          "greenFlags": [
+            "✓ Easy entertainment choice",
+            "✓ Fun movie partner",
+            "✓ Enjoys superhero films"
+          ],
+          "redFlags": [
+            "✗ Gets scared by dark scenes",
+            "✗ Spoilers the movie end",
+            "✗ Watches TV for 4 hours"
+          ]
+        }
+      ],
+      "opener": "Hi! Do you play a musical instrument or listen to the radio?",
+      "icebreakers": [
+        "I play guitar!",
+        "I listen to radio hits!",
+        "I love action movies!"
+      ],
+      "prompt": "Talk about Leo's guitar playing, musical preferences, and Sunday movie choices."
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Books, Films & Music 🎬",
+      "title": "Oliver",
+      "age": "25",
+      "location": "📍 1.5 miles away • Arts District",
+      "verified": true,
+      "avatar": "🎧",
+      "gradient": "linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)",
+      "visualDescription": "Thoughtful young man wearing large over-ear headphones and holding a vinyl record album in a record shop.",
+      "interests": [
+        "#VinylRecords",
+        "#IndieMusic",
+        "#FantasyNovels"
+      ],
+      "anthem": "🎵 'Dreams' by Fleetwood Mac",
+      "film": "🎬 'Lord of the Rings' (Peter Jackson)",
+      "pages": [
+        {
+          "tag": "🎧 Vinyl Collector",
+          "bio": "Hi! I'm Oliver, 25. I collect classic vinyl records from vintage music stores. Warm analog sound on a turntable is much better than digital streaming.",
+          "greenFlags": [
+            "✓ Impressive record collection",
+            "✓ Deep music appreciation",
+            "✓ Cool vintage aesthetic"
+          ],
+          "redFlags": [
+            "✗ Vinyl records are expensive",
+            "✗ Cleans records obsessively",
+            "✗ Refuses Bluetooth speakers"
+          ]
+        },
+        {
+          "tag": "📚 Fantasy Novels",
+          "bio": "I spend cozy rainy evenings reading epic fantasy book series. Immersing myself in magical worlds with dragons and wizards helps me relax.",
+          "greenFlags": [
+            "✓ Avid imaginative reader",
+            "✓ Great book recommendations",
+            "✓ Creative mind"
+          ],
+          "redFlags": [
+            "✗ Reads 800-page heavy books",
+            "✗ Compares real life to fantasy",
+            "✗ Ignores texts while reading"
+          ]
+        },
+        {
+          "tag": "🎥 Sci-Fi Cinema",
+          "bio": "I love watching science fiction films with space travel and time loops. Discussing movie theories with friends after the film is the best part.",
+          "greenFlags": [
+            "✓ Enjoys deep movie debates",
+            "✓ Great sci-fi film taste",
+            "✓ Thoughtful discussions"
+          ],
+          "redFlags": [
+            "✗ Analyzes plot holes forever",
+            "✗ Pauses movies to explain lore",
+            "✗ Dislikes romantic comedies"
+          ]
+        }
+      ],
+      "opener": "Hey! Do you prefer listening to vinyl records or reading fantasy novels?",
+      "icebreakers": [
+        "Vintage vinyl records!",
+        "Epic fantasy novels!",
+        "Sci-fi movie nights!"
+      ],
+      "prompt": "Write about Oliver's vinyl record collection, reading habits, and sci-fi film discussions."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Books, Films & Music 🎬",
+      "title": "Zara",
+      "age": "24",
+      "location": "📍 2 miles away • Theater Row",
+      "verified": true,
+      "avatar": "🎭",
+      "gradient": "linear-gradient(135deg, #e11d48 0%, #fda4af 100%)",
+      "visualDescription": "Energetic drama fan holding ticket stubs outside a bustling downtown theater.",
+      "interests": [
+        "#StageMusicals",
+        "#MysteryNovels",
+        "#PopConcerts"
+      ],
+      "anthem": "🎵 'Don't Stop Believin'' by Journey",
+      "film": "🎬 'La La Land' (Damien Chazelle)",
+      "pages": [
+        {
+          "tag": "🎭 Stage Musicals",
+          "bio": "Hello! I'm Zara. I love live theater and Broadway musicals! Singing along to dramatic soundtrack albums brings so much joy and energy.",
+          "greenFlags": [
+            "✓ Enthusiastic theater lover",
+            "✓ High positive energy",
+            "✓ Know all musical lyrics"
+          ],
+          "redFlags": [
+            "✗ Sings musical songs constantly",
+            "✗ Expensive theater tickets",
+            "✗ Dramatic personality"
+          ]
+        },
+        {
+          "tag": "🔍 Mystery Novels",
+          "bio": "I read suspenseful detective mystery books before sleeping. Trying to guess the secret murderer before the final chapter is exciting!",
+          "greenFlags": [
+            "✓ Sharp observant mind",
+            "✓ Loves clever puzzle stories",
+            "✓ Fast reading speed"
+          ],
+          "redFlags": [
+            "✗ Accuses everyone of secrets",
+            "✗ Reads spoilers in advance",
+            "✗ Stays up till 2 AM reading"
+          ]
+        },
+        {
+          "tag": "🎤 Live Concerts",
+          "bio": "Going to stadium pop concerts with colorful light shows and thousands of cheering fans is my favorite weekend activity.",
+          "greenFlags": [
+            "✓ Fun energetic concert buddy",
+            "✓ Loves memorable live shows",
+            "✓ Great dance moves"
+          ],
+          "redFlags": [
+            "✗ Loses her voice after concerts",
+            "✗ Takes 50 concert videos",
+            "✗ Buys expensive band t-shirts"
+          ]
+        }
+      ],
+      "opener": "Hi! Do you like live stage musicals or solving detective mystery books?",
+      "icebreakers": [
+        "Live stage musicals!",
+        "Detective mystery books!",
+        "Stadium pop concerts!"
+      ],
+      "prompt": "Describe Zara's passion for theater musicals, mystery novels, and live pop concerts."
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Books, Films & Music 🎬",
+      "title": "Felix",
+      "age": "27",
+      "location": "📍 1.2 miles away • Indie Cinema",
+      "verified": true,
+      "avatar": "🎞️",
+      "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
+      "visualDescription": "Film student holding a classic 35mm film camera in front of an independent arthouse cinema marquee.",
+      "interests": [
+        "#ArthouseCinema",
+        "#FilmAnalysis",
+        "#ClassicLiterature"
+      ],
+      "anthem": "🎵 'Heroes' by David Bowie",
+      "film": "🎬 'Cinema Paradiso' (Giuseppe Tornatore)",
+      "pages": [
+        {
+          "tag": "🎞️ Arthouse Cinema",
+          "bio": "I'm Felix, 27. I'm deeply passionate about independent cinema and classic European director retrospectives. Subtitled foreign films offer profound glimpses into diverse human conditions.",
+          "greenFlags": [
+            "✓ Cultured cinematic knowledge",
+            "✓ Appreciates artistic storytelling",
+            "✓ Thoughtful film discussions"
+          ],
+          "redFlags": [
+            "✗ Refuses mainstream blockbusters",
+            "✗ Over-analyzes simple scenes",
+            "✗ Prefers 3-hour black-and-white films"
+          ]
+        },
+        {
+          "tag": "📖 Classic Literature",
+          "bio": "My bookshelf is filled with 19th-century literature and philosophical essays. Analyzing character motivations and thematic symbolism enriches my worldview.",
+          "greenFlags": [
+            "✓ Well-read intellectual mind",
+            "✓ Articulate vocabulary",
+            "✓ Deep analytical capacity"
+          ],
+          "redFlags": [
+            "✗ Uses overly complex words",
+            "✗ Judges people by their reading list",
+            "✗ Quiet and introverted at parties"
+          ]
+        },
+        {
+          "tag": "🎷 Jazz & Soundtrack",
+          "bio": "I listen to instrumental jazz and orchestral film scores while writing script analyses. Music should evoke subtle mood atmospheres rather than loud repetitive hooks.",
+          "greenFlags": [
+            "✓ Sophisticated musical taste",
+            "✓ Great background music playlists",
+            "✓ Creative writing passion"
+          ],
+          "redFlags": [
+            "✗ Finds pop radio songs annoying",
+            "✗ Plays somber jazz endlessly",
+            "✗ Strict noise requirements"
+          ]
+        }
+      ],
+      "opener": "Hello! Do you prefer independent foreign cinema or mainstream Hollywood movies?",
+      "icebreakers": [
+        "Independent arthouse films!",
+        "Exciting Hollywood blockbusters!",
+        "Classic literature books!"
+      ],
+      "prompt": "Discuss Felix's appreciation for arthouse cinema, classic literature, and film score music."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Books, Films & Music 🎬",
+      "title": "Nadia",
+      "age": "26",
+      "location": "📍 2.2 miles away • Podcast Studio",
+      "verified": true,
+      "avatar": "🎙️",
+      "gradient": "linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)",
+      "visualDescription": "Podcast host wearing studio headphones speaking into a professional microphone.",
+      "interests": [
+        "#TrueCrimePodcasts",
+        "#Audiobooks",
+        "#IndieFolk"
+      ],
+      "anthem": "🎵 'Skinny Love' by Bon Iver",
+      "film": "🎬 'Knives Out' (Rian Johnson)",
+      "pages": [
+        {
+          "tag": "🎙️ True Crime Podcasts",
+          "bio": "I'm Nadia, 26. I produce an investigative crime podcast. Unraveling real-life mysteries, psychological motives, and historical cold cases completely fascinates me.",
+          "greenFlags": [
+            "✓ Great storytelling voice",
+            "✓ Sharp investigative curiosity",
+            "✓ Engaging conversationalist"
+          ],
+          "redFlags": [
+            "✗ Listens to crime stories while falling asleep",
+            "✗ Suspects plot twists in real life",
+            "✗ Talks about morbid cases"
+          ]
+        },
+        {
+          "tag": "🎧 Audiobook Enthusiast",
+          "bio": "I consume audiobooks during daily commutes and long walks. Listening to professional voice actors narrate gripping biographies turns mundane travel into immersive journeys.",
+          "greenFlags": [
+            "✓ Always learning new facts",
+            "✓ Efficient multitasking reader",
+            "✓ Recommends great audiobooks"
+          ],
+          "redFlags": [
+            "✗ Wears earbuds constantly",
+            "✗ Misses people calling her name",
+            "✗ Talks back to audiobook narrators"
+          ]
+        },
+        {
+          "tag": "🪕 Indie Folk Music",
+          "bio": "Acoustic indie folk with poetic lyrics and harmonious vocals is my comfort genre. Attending intimate acoustic house shows is my favorite weekend outing.",
+          "greenFlags": [
+            "✓ Appreciates meaningful lyrics",
+            "✓ Supports independent artists",
+            "✓ Cozy musical taste"
+          ],
+          "redFlags": [
+            "✗ Songs are sometimes melancholic",
+            "✗ Dislikes electronic dance music",
+            "✗ Cries during acoustic ballads"
+          ]
+        }
+      ],
+      "opener": "Hi! Are you hooked on true crime podcasts or do you prefer fiction audiobooks?",
+      "icebreakers": [
+        "True crime mystery podcasts!",
+        "Gripping fiction audiobooks!",
+        "Acoustic indie folk music!"
+      ],
+      "prompt": "Explain Nadia's podcasting interests, audiobook consumption habits, and indie folk musical taste."
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Books, Films & Music 🎬",
+      "title": "Julian",
+      "age": "31",
+      "location": "📍 0.9 miles away • Symphony Hall",
+      "verified": true,
+      "avatar": "🎼",
+      "gradient": "linear-gradient(135deg, #312e81 0%, #4338ca 100%)",
+      "visualDescription": "Orchestral conductor studying a complex musical score with a baton in hand.",
+      "interests": [
+        "#SymphonicComposition",
+        "#ComparativeLiterature",
+        "#AuteurCinema"
+      ],
+      "anthem": "🎵 'Symphony No. 5' by Ludwig van Beethoven",
+      "film": "🎬 'TÁR' (Todd Field)",
+      "pages": [
+        {
+          "tag": "🎼 Symphonic Mastery",
+          "bio": "I'm Julian, 31, an assistant conductor and musicologist. Analyzing polyphonic counterpoint and orchestrating complex harmonic movements requires rigorous intellectual precision and emotional sensitivity.",
+          "greenFlags": [
+            "✓ Extraordinary musical erudition",
+            "✓ Exceptional acoustic discipline",
+            "✓ Profound artistic passion"
+          ],
+          "redFlags": [
+            "✗ Highly critical of minor pitch errors",
+            "✗ Intense perfectionist tendencies",
+            "✗ Intimidating academic knowledge"
+          ]
+        },
+        {
+          "tag": "📖 Comparative Literature",
+          "bio": "I study comparative literature, exploring narrative structural parallels between 20th-century modernist novels and symphonic movement forms.",
+          "greenFlags": [
+            "✓ Deep interdisciplinary intellect",
+            "✓ Rich cultural perspectives",
+            "✓ Fascinating philosophical conversation"
+          ],
+          "redFlags": [
+            "✗ Rejects superficial pop culture",
+            "✗ Complex abstract explanations",
+            "✗ High expectations of conversation"
+          ]
+        },
+        {
+          "tag": "🎬 Auteur Cinema",
+          "bio": "I revere auteur filmmakers who utilize minimalist soundscapes and long unedited takes to examine psychological isolation and moral ambiguity.",
+          "greenFlags": [
+            "✓ Nuanced cinematic appreciation",
+            "✓ Rejects formulaic commercial film",
+            "✓ Eloquent critique skills"
+          ],
+          "redFlags": [
+            "✗ Finds popular comedies tedious",
+            "✗ Strict silence rules during viewing",
+            "✗ Opinionated film debates"
+          ]
+        }
+      ],
+      "opener": "Greetings! Does classical symphonic structure feel transcendent or overly formal to you?",
+      "icebreakers": [
+        "Transcendent emotional power!",
+        "A bit too formal for me!",
+        "Auteur cinema and soundscapes!"
+      ],
+      "prompt": "Critique Julian's musical philosophy, literature comparative studies, and auteur film tastes."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Books, Films & Music 🎬",
+      "title": "Sienna",
+      "age": "29",
+      "location": "📍 1.4 miles away • Media Lab",
+      "verified": true,
+      "avatar": "🎮",
+      "gradient": "linear-gradient(135deg, #be185d 0%, #db2777 100%)",
+      "visualDescription": "Interactive narrative designer sitting before multi-screen game development software and concept art.",
+      "interests": [
+        "#InteractiveNarratives",
+        "#SpeculativeFiction",
+        "#ElectronicSoundscapes"
+      ],
+      "anthem": "🎵 'Midnight City' by M83",
+      "film": "🎬 'Blade Runner 2049' (Denis Villeneuve)",
+      "pages": [
+        {
+          "tag": "🎮 Interactive Storytelling",
+          "bio": "I'm Sienna, 29, a narrative designer for story-driven video games. I craft branching plotlines where player agency shapes complex ethical dilemmas and emotional character arcs.",
+          "greenFlags": [
+            "✓ Innovative storytelling vision",
+            "✓ Blends art and technology",
+            "✓ Deep psychological character crafting"
+          ],
+          "redFlags": [
+            "✗ Works intense game launch hours",
+            "✗ Tests choice trees on friends",
+            "✗ Over-analyzes game mechanics"
+          ]
+        },
+        {
+          "tag": "🚀 Speculative Fiction",
+          "bio": "I devour cyberpunk, dystopian, and speculative fiction literature. World-building that examines technological ethics and human identity inspires my creative projects.",
+          "greenFlags": [
+            "✓ Imaginative speculative thinker",
+            "✓ Sharp ethical awareness",
+            "✓ Visionary world builder"
+          ],
+          "redFlags": [
+            "✗ Pessimistic about AI future",
+            "✗ Unrealistic sci-fi comparisons",
+            "✗ Endless lore discussions"
+          ]
+        },
+        {
+          "tag": "🎹 Electronic Ambient Sound",
+          "bio": "Synthesizer soundscapes and ambient electronic beats form the soundtrack to my creative design sessions, evoking futuristic urban atmospheres.",
+          "greenFlags": [
+            "✓ Modern atmospheric music taste",
+            "✓ Great focus playlist curator",
+            "✓ Creative ambient sound lover"
+          ],
+          "redFlags": [
+            "✗ Listens to repetitive synth loops",
+            "✗ Rejects acoustic folk music",
+            "✗ Wears glowing LED headsets"
+          ]
+        }
+      ],
+      "opener": "Hello! Do you believe interactive video games can achieve the same narrative depth as classic novels?",
+      "icebreakers": [
+        "Interactive games are true art!",
+        "Novels remain unmatched!",
+        "Speculative world-building!"
+      ],
+      "prompt": "Evaluate Sienna's role as an interactive narrative designer and speculative fiction enthusiast."
+    }
+  ]
+}
