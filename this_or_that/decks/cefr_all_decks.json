@@ -11,43 +11,43 @@
         "verified": true,
         "avatar": "👩",
         "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
-        "visualDescription": "Young woman with short straight black hair, big brown eyes, wearing a bright red sweater and white sneakers. Friendly, warm smile.",
+        "visualDescription": "Young woman with short black hair and brown eyes. She wears a bright red sweater and white sneakers.",
         "interests": [
           "#Tall",
-          "#ShortBlackHair",
+          "#BlackHair",
           "#RedSweater"
         ],
         "anthem": "🎵 'Simple Song' - Basic Pop",
         "pages": [
           {
             "tag": "🖼️ Basic Look",
-            "bio": "Hi! I am Anna. I am 22 years old. I am tall with short black hair and brown eyes. I like bright clothes!"
+            "bio": "Hi! I am Anna. I am 22 years old. I am tall. I have short black hair and brown eyes. I like bright red clothes!"
           },
           {
             "tag": "✨ Daily Clothes",
-            "bio": "I usually wear a comfortable red sweater, blue jeans, and clean white sneakers. I always wear a happy smile!"
+            "bio": "I wear a red sweater, blue jeans, and white shoes. I have a big happy smile every day!"
           },
           {
             "tag": "🚩 Quick Details",
             "greenFlags": [
-              "✓ Friendly big smile",
-              "✓ Easy to recognize in a crowd",
-              "✓ Tall and slim"
+              "✓ Big friendly smile",
+              "✓ Tall and slim",
+              "✓ Easy to see"
             ],
             "redFlags": [
-              "✗ Always late because of picking shoes",
-              "✗ Only wears red sweaters",
+              "✗ Always late for shoes",
+              "✗ Wears only red",
               "✗ Speaks very fast"
             ]
           }
         ],
-        "opener": "Hello! I am Anna. Do you like red or blue sweaters?",
+        "opener": "Hello! I am Anna. Do you like red sweaters or blue jeans?",
         "icebreakers": [
           "I like red sweaters!",
           "I prefer blue jeans!",
           "You have a nice smile!"
         ],
-        "prompt": "Describe Anna using 3 simple words (hair, clothes, height)."
+        "prompt": "Describe Anna. What color is her hair? What clothes does she wear?"
       },
       {
         "type": "profile",
@@ -59,7 +59,7 @@
         "verified": true,
         "avatar": "🧔",
         "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
-        "visualDescription": "Tall young man with curly brown hair, dark beard, green eyes, wearing a green t-shirt, denim jacket, and black glasses.",
+        "visualDescription": "Tall young man with curly brown hair, green eyes, and black glasses. He wears a green t-shirt and blue denim jacket.",
         "interests": [
           "#CurlyHair",
           "#Beard",
@@ -69,11 +69,11 @@
         "pages": [
           {
             "tag": "🖼️ Basic Look",
-            "bio": "Hello! My name is Marco. I am 25. I have curly brown hair, green eyes, and a short beard. I wear black glasses."
+            "bio": "Hello! My name is Marco. I am 25 years old. I am tall. I have curly brown hair and green eyes."
           },
           {
             "tag": "✨ Fashion Style",
-            "bio": "My style is simple: a dark green t-shirt, blue denim jacket, and black glasses. Very casual and clean."
+            "bio": "I wear black glasses and a short beard. My clothes are simple: a green t-shirt and a blue jacket."
           },
           {
             "tag": "🚩 Quick Details",
@@ -83,19 +83,19 @@
               "✓ Cool black glasses"
             ],
             "redFlags": [
-              "✗ Loses glasses every morning",
-              "✗ Takes 30 minutes to brush beard",
+              "✗ Loses glasses daily",
+              "✗ Long beard cleaning",
               "✗ Always wears denim"
             ]
           }
         ],
-        "opener": "Hi there! Do you wear glasses or have curly hair?",
+        "opener": "Hi! Do you wear glasses or have curly hair?",
         "icebreakers": [
           "I wear glasses too!",
           "I love green eyes!",
           "Cool denim jacket!"
         ],
-        "prompt": "What color are Marco's eyes and hair?"
+        "prompt": "What color are Marco's eyes and hair? Does he wear glasses?"
       }
     ],
     "professions": [
@@ -109,43 +109,43 @@
         "verified": true,
         "avatar": "👨‍🍳",
         "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
-        "visualDescription": "Middle-aged man in a chef hat and white baker uniform dusting flour on fresh bread loaves in a warm bakery.",
+        "visualDescription": "Man in a white hat and apron. He makes fresh bread and cakes in a bakery.",
         "interests": [
           "#FreshBread",
-          "#EarlyMorning",
-          "#DeliciousCakes"
+          "#Bakery",
+          "#Cakes"
         ],
         "anthem": "🎵 'Sweet Caroline' - Classic Oldie",
         "pages": [
           {
             "tag": "💼 Job Overview",
-            "bio": "I am a baker! I wake up at 4:00 AM every morning. I bake fresh bread, croissants, and delicious chocolate cakes."
+            "bio": "I am a baker. I wake up at 4:00 AM every morning. I make fresh bread, warm croissants, and cakes."
           },
           {
             "tag": "✨ Daily Work",
-            "bio": "Work is fun! My kitchen smells like warm sugar and fresh flour. I sell delicious breakfast to happy people."
+            "bio": "I work in a big kitchen. It smells like warm bread and sugar. I sell food to happy customers."
           },
           {
             "tag": "🚩 Job Pros & Cons",
             "greenFlags": [
-              "✓ Free fresh bread every day",
-              "✓ Smells like warm cinnamon",
-              "✓ Smiles from customers"
+              "✓ Fresh bread every day",
+              "✓ Warm sweet smell",
+              "✓ Happy customers"
             ],
             "redFlags": [
-              "✗ Waking up at 4:00 AM",
-              "✗ Flour on all clothes",
-              "✗ Hot ovens all day"
+              "✗ Wake up at 4:00 AM",
+              "✗ White flour everywhere",
+              "✗ Very hot oven"
             ]
           }
         ],
-        "opener": "Good morning! Do you want fresh bread or chocolate cake today?",
+        "opener": "Good morning! Do you like fresh bread or sweet cake?",
         "icebreakers": [
           "Fresh bread please!",
           "Chocolate cake for me!",
           "I love croissants!"
         ],
-        "prompt": "What does a baker do every morning? Would you like this job?"
+        "prompt": "What does Chef John make every morning? Is his job early or late?"
       },
       {
         "type": "profile",
@@ -157,43 +157,43 @@
         "verified": true,
         "avatar": "👩‍⚕️",
         "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
-        "visualDescription": "Female doctor with blonde ponytail, wearing a white coat and blue stethoscope around her neck, standing in a bright clinic.",
+        "visualDescription": "Doctor wearing a white coat and blue stethoscope in a bright clinic.",
         "interests": [
-          "#HelpPeople",
+          "#Doctor",
           "#WhiteCoat",
-          "#HealthyLife"
+          "#Health"
         ],
         "anthem": "🎵 'Healing Hands' - Calm Melodic",
         "pages": [
           {
             "tag": "💼 Job Overview",
-            "bio": "I am a doctor in a hospital. I help sick people feel better. I listen to their hearts and give good medicine."
+            "bio": "I am a doctor. I work in a hospital. I help sick people feel better and stay healthy."
           },
           {
             "tag": "✨ Daily Work",
-            "bio": "I wear a white coat and a blue stethoscope. I talk to children and adults to keep everybody healthy and happy."
+            "bio": "I wear a white coat. I talk to children and adults every day. I give good medicine."
           },
           {
             "tag": "🚩 Job Pros & Cons",
             "greenFlags": [
-              "✓ Helps save lives",
-              "✓ Very respected job",
-              "✓ Makes people healthy"
+              "✓ Helps sick people",
+              "✓ Important job",
+              "✓ Makes people happy"
             ],
             "redFlags": [
-              "✗ Long night shifts",
-              "✗ Very busy schedule",
-              "✗ Hard examinations"
+              "✗ Long night hours",
+              "✗ Very busy day",
+              "✗ Hard work"
             ]
           }
         ],
-        "opener": "Hello! How are you feeling today? Are you healthy?",
+        "opener": "Hello! How are you today? Do you feel good?",
         "icebreakers": [
           "I feel great!",
           "I have a headache",
-          "Thank you for helping people!"
+          "Thank you doctor!"
         ],
-        "prompt": "Why is a doctor's job important? Describe Dr. Sarah's uniform."
+        "prompt": "Where does Dr. Sarah work? What clothes does she wear?"
       }
     ],
     "properties": [
@@ -207,43 +207,43 @@
         "verified": true,
         "avatar": "🏙️",
         "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
-        "visualDescription": "Modern bright studio apartment with large window, wooden floor, yellow small sofa, kitchen counter, and indoor green plant.",
+        "visualDescription": "Small studio flat with a big sunny window, yellow sofa, and small kitchen.",
         "interests": [
           "#StudioFlat",
-          "#BrightWindow",
-          "#WoodenFloor"
+          "#SunnyWindow",
+          "#YellowSofa"
         ],
         "anthem": "🎵 'Home Sweet Home' - Cozy Acoustic",
         "pages": [
           {
             "tag": "🏡 Home Details",
-            "bio": "I am a small, cozy studio flat! 1 big room with a yellow sofa, modern kitchen, clean bathroom, and sunny window."
+            "bio": "I am a small studio flat. I have one room, a yellow sofa, a small kitchen, and a clean bathroom."
           },
           {
             "tag": "✨ Location & Vibe",
-            "bio": "Located near the bus stop and market. Perfect for 1 person or a student. Rent is $500/month."
+            "bio": "I am near the bus stop and the supermarket. I am cheap and cozy for one student."
           },
           {
             "tag": "🚩 Home Pros & Cons",
             "greenFlags": [
-              "✓ Very easy to clean",
-              "✓ Warm sunlight all day",
-              "✓ Low monthly cost"
+              "✓ Easy to clean",
+              "✓ Sunny big window",
+              "✓ Low price"
             ],
             "redFlags": [
-              "✗ No space for big parties",
-              "✗ Small kitchen table",
+              "✗ No big table",
+              "✗ Small room",
               "✗ No balcony"
             ]
           }
         ],
-        "opener": "Welcome inside! Do you like small cozy flats or big houses?",
+        "opener": "Welcome! Do you like small cozy flats or big houses?",
         "icebreakers": [
           "I love cozy studio flats!",
           "I need a big garden!",
           "Great price!"
         ],
-        "prompt": "Name 3 things inside this studio flat."
+        "prompt": "Name 3 things inside this studio flat using simple words."
       },
       {
         "type": "profile",
@@ -255,43 +255,43 @@
         "verified": true,
         "avatar": "🏡",
         "gradient": "linear-gradient(135deg, #15803d 0%, #4ade80 100%)",
-        "visualDescription": "Two-story red brick house with white fence, green grass front lawn, red roof, and garage.",
+        "visualDescription": "Two-story red brick house with a green lawn and white fence.",
         "interests": [
-          "#Garden",
-          "#2Bedrooms",
+          "#RedBrick",
+          "#GreenGarden",
           "#QuietStreet"
         ],
         "anthem": "🎵 'Our House' - Happy Classic",
         "pages": [
           {
             "tag": "🏡 Home Details",
-            "bio": "I am a lovely red brick house! 2 bedrooms, 1 big living room, garage for 1 car, and a green garden."
+            "bio": "I am a red brick house. I have two bedrooms, one living room, a garage, and a green garden."
           },
           {
             "tag": "✨ Location & Vibe",
-            "bio": "Quiet green street with friendly neighbors. Safe garden for pets and kids to play fetch!"
+            "bio": "I am on a quiet green street. My garden is good for dogs and children."
           },
           {
             "tag": "🚩 Home Pros & Cons",
             "greenFlags": [
-              "✓ Beautiful green garden",
-              "✓ Private garage for car",
-              "✓ Quiet peaceful area"
+              "✓ Nice green garden",
+              "✓ Garage for car",
+              "✓ Quiet place"
             ],
             "redFlags": [
-              "✗ 25 minutes to downtown",
-              "✗ Cutting lawn every week",
-              "✗ Higher heating cost"
+              "✗ Far from city center",
+              "✗ Cutting green grass",
+              "✗ Big heating bill"
             ]
           }
         ],
-        "opener": "Hi! Would you like to sit in my green garden with tea?",
+        "opener": "Hello! Do you like a green garden or a city flat?",
         "icebreakers": [
-          "Yes, tea in the garden!",
-          "I prefer living downtown",
-          "Beautiful red bricks!"
+          "I love green gardens!",
+          "I prefer living in the city!",
+          "Nice red bricks!"
         ],
-        "prompt": "Is this house in the city or in a quiet village? What do you like about it?"
+        "prompt": "Is this house in a city or a quiet village? How many bedrooms does it have?"
       }
     ],
     "character": [
@@ -305,43 +305,43 @@
         "verified": true,
         "avatar": "😊",
         "gradient": "linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%)",
-        "visualDescription": "Smiling young person holding a warm cup of cocoa, wearing a yellow beanie and soft scarf, exuding friendliness.",
+        "visualDescription": "Smiling young person holding a warm cup of cocoa.",
         "interests": [
           "#Friendly",
           "#KindHeart",
-          "#GoodListener"
+          "#GoodFriend"
         ],
         "anthem": "🎵 'Count on Me' - Warm Pop",
         "pages": [
           {
             "tag": "🧠 Personality Traits",
-            "bio": "I am kind, polite, and friendly! I say 'please' and 'thank you' and I love helping my neighbors."
+            "bio": "I am kind and polite. I say 'please' and 'thank you'. I like helping my friends and neighbors."
           },
           {
             "tag": "✨ Daily Attitude",
-            "bio": "I smile at everyone I see on the street. I remember birthdays and bring cookies to my friends!"
+            "bio": "I smile at people on the street. I remember birthdays and bring sweet cookies to my friends."
           },
           {
             "tag": "🚩 Pros & Cons",
             "greenFlags": [
-              "✓ Always polite & patient",
-              "✓ Helps with heavy bags",
-              "✓ Great listener"
+              "✓ Always polite",
+              "✓ Helps carry bags",
+              "✓ Good listener"
             ],
             "redFlags": [
-              "✗ Says 'yes' to everything",
-              "✗ Gets sad if people argue",
+              "✗ Says 'yes' to all",
+              "✗ Sad when people fight",
               "✗ Too generous"
             ]
           }
         ],
-        "opener": "Hello my friend! How can I make your day happier today?",
+        "opener": "Hello my friend! How are you today?",
         "icebreakers": [
           "You are so nice!",
-          "Let us drink coffee together",
-          "Have a great day too!"
+          "Let us drink tea together!",
+          "Have a great day!"
         ],
-        "prompt": "What does a kind person do? Name 2 kind actions."
+        "prompt": "What does a kind person do? Describe 2 simple actions."
       }
     ],
     "hobbies": [
@@ -355,43 +355,43 @@
         "verified": true,
         "avatar": "🚴",
         "gradient": "linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%)",
-        "visualDescription": "Bright red bicycle parked under a sunny tree next to a paved park pathway.",
+        "visualDescription": "Red bicycle parked near a green tree in a park.",
         "interests": [
           "#Bicycle",
-          "#FreshAir",
-          "#ParkRide"
+          "#Park",
+          "#Exercise"
         ],
         "anthem": "🎵 'Bicycle Race' - Classic Rock",
         "pages": [
           {
             "tag": "🎨 Hobby Overview",
-            "bio": "Riding a red bicycle in the green park every weekend! Easy, healthy, and fun."
+            "bio": "I ride a red bicycle in the park every weekend. It is easy, cheap, and fun!"
           },
           {
             "tag": "✨ Vibe & Fun",
-            "bio": "Feeling the cool wind in my hair while listening to music. Stopping for ice cream at the park cafe!"
+            "bio": "I feel the cool wind. I listen to music and eat delicious ice cream at the park cafe."
           },
           {
             "tag": "🚩 Hobby Pros & Cons",
             "greenFlags": [
-              "✓ Fresh air & exercise",
-              "✓ Free transport",
+              "✓ Good exercise for legs",
+              "✓ Fresh air outside",
               "✓ Fun with friends"
             ],
             "redFlags": [
-              "✗ Rainy day difficulty",
-              "✗ Flat tire trouble",
-              "✗ Helmet hair"
+              "✗ Rain on clothes",
+              "✗ Flat bike tire",
+              "✗ Messy hair"
             ]
           }
         ],
-        "opener": "Hey! Do you know how to ride a bicycle?",
+        "opener": "Hello! Can you ride a bicycle? Do you ride in the park?",
         "icebreakers": [
           "Yes, I ride every week!",
           "No, but I want to learn!",
           "I prefer walking!"
         ],
-        "prompt": "Where do you like to ride a bicycle or walk?"
+        "prompt": "Where do you like to ride a bicycle or walk? What do you see in the park?"
       }
     ],
     "nationalities": [
@@ -405,7 +405,7 @@
         "verified": true,
         "avatar": "🇯🇵",
         "gradient": "linear-gradient(135deg, #dc2626 0%, #f87171 100%)",
-        "visualDescription": "Young Japanese man with neat dark hair, friendly smile, wearing a traditional yukata robe during summer festival.",
+        "visualDescription": "Young Japanese man with neat short dark hair, wearing a traditional summer yukata robe.",
         "interests": [
           "#Japanese",
           "#Tokyo",
@@ -415,33 +415,33 @@
         "pages": [
           {
             "tag": "🖼️ Nationality & Country",
-            "bio": "Konnichiwa! I am Kenji. I am Japanese. I live in Tokyo, Japan. My native language is Japanese."
+            "bio": "Konnichiwa! I am Kenji. I am Japanese. I live in Tokyo, Japan. My language is Japanese."
           },
           {
             "tag": "✨ Food & Culture",
-            "bio": "In Japan, we eat delicious sushi and hot ramen! I love green tea and cherry blossom season."
+            "bio": "In Japan, we eat fresh sushi and hot ramen. I drink green tea every day!"
           },
           {
             "tag": "🚩 Quick Details",
             "greenFlags": [
-              "✓ Very polite and punctual",
-              "✓ Makes authentic miso soup",
-              "✓ Loves sharing Japanese culture"
+              "✓ Polite and friendly",
+              "✓ Makes hot miso soup",
+              "✓ Shares Japanese culture"
             ],
             "redFlags": [
-              "✗ Bows 10 times when saying goodbye",
-              "✗ Slurps noodles very loudly",
-              "✗ Obsessed with train schedules"
+              "✗ Bows many times",
+              "✗ Slurps noodles loudly",
+              "✗ Talks about train times"
             ]
           }
         ],
-        "opener": "Konnichiwa! What is your nationality and native language?",
+        "opener": "Konnichiwa! What is your nationality? Where are you from?",
         "icebreakers": [
           "I am from Spain!",
           "I love Japanese food!",
-          "Tokyo is amazing!"
+          "Tokyo is a big city!"
         ],
-        "prompt": "Say Kenji's nationality, home country, and favorite food in simple sentences."
+        "prompt": "What is Kenji's nationality and home country? What food does he eat?"
       },
       {
         "type": "profile",
@@ -453,43 +453,43 @@
         "verified": true,
         "avatar": "🇮🇹",
         "gradient": "linear-gradient(135deg, #16a34a 0%, #facc15 100%)",
-        "visualDescription": "Cheerful Italian woman with brown wavy hair, wearing a sun dress near the Trevi Fountain in Rome.",
+        "visualDescription": "Italian woman with brown wavy hair in Rome.",
         "interests": [
           "#Italian",
           "#Rome",
-          "#FreshPasta"
+          "#Pasta"
         ],
         "anthem": "🎵 'O Sole Mio' - Classic Italian",
         "pages": [
           {
             "tag": "🖼️ Nationality & Country",
-            "bio": "Ciao! I am Sofia. I am Italian. I come from Rome, Italy. I speak Italian and basic English."
+            "bio": "Ciao! I am Sofia. I am Italian. I come from Rome in Italy. I speak Italian."
           },
           {
             "tag": "✨ Food & Culture",
-            "bio": "Italy is famous for pizza, pasta, and gelato! I love cooking homemade pasta with fresh basil."
+            "bio": "Italy is famous for pizza, pasta, and sweet gelato. I cook fresh pasta at home!"
           },
           {
             "tag": "🚩 Quick Details",
             "greenFlags": [
-              "✓ Cooks secret family pasta recipe",
-              "✓ Passionate and expressive",
-              "✓ Warm welcoming smile"
+              "✓ Cooks fresh pasta",
+              "✓ Warm friendly smile",
+              "✓ Loves coffee"
             ],
             "redFlags": [
-              "✗ Gets furious if you break spaghetti",
-              "✗ Talks with big hand gestures constantly",
-              "✗ Drinks 5 espressos a day"
+              "✗ Angry if pasta breaks",
+              "✗ Talks with hands constantly",
+              "✗ Drinks 5 espressos"
             ]
           }
         ],
-        "opener": "Ciao! Have you ever visited Italy or tried Italian gelato?",
+        "opener": "Ciao! Do you like Italian pizza or sweet gelato?",
         "icebreakers": [
           "I love pizza and gelato!",
           "I want to visit Rome!",
           "Ciao Sofia!"
         ],
-        "prompt": "What country is Sofia from and what is her nationality?"
+        "prompt": "Where is Sofia from? What is her nationality and native food?"
       }
     ]
   },
@@ -505,7 +505,7 @@
         "verified": true,
         "avatar": "👩‍🦰",
         "gradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
-        "visualDescription": "Athletic woman with medium shoulder-length wavy auburn hair, hazel eyes, light freckles on her nose, wearing a navy blue striped nautical shirt.",
+        "visualDescription": "Athletic woman with medium shoulder-length wavy auburn hair, hazel eyes, light freckles, wearing a navy blue striped shirt.",
         "interests": [
           "#WavyAuburnHair",
           "#HazelEyes",
@@ -515,33 +515,33 @@
         "pages": [
           {
             "tag": "🖼️ Physical Look",
-            "bio": "I am Elena, 24. I am medium height with an athletic build. I have wavy auburn hair, hazel eyes, and cute freckles."
+            "bio": "I am Elena, 24 years old. I am medium height and athletic because I exercise every day. I have wavy auburn hair and hazel eyes with cute freckles."
           },
           {
             "tag": "✨ Fashion Style",
-            "bio": "I love casual nautical style—navy striped tops, beige shorts, and leather sandals. Ready for beach walks!"
+            "bio": "I love casual nautical clothes like navy striped shirts and leather sandals because they are comfortable for beach walks in summer."
           },
           {
             "tag": "🚩 Appearance Detail",
             "greenFlags": [
-              "✓ Warm hazel eyes that shine in the sun",
-              "✓ Natural freckles",
+              "✓ Warm hazel eyes in sunlight",
+              "✓ Cute natural freckles",
               "✓ Active athletic posture"
             ],
             "redFlags": [
               "✗ Sunburns very easily",
               "✗ Hair gets messy in wind",
-              "✗ Wears sandals even in winter"
+              "✗ Wears sandals in winter"
             ]
           }
         ],
-        "opener": "Hi! What is your favorite season for outdoor fashion?",
+        "opener": "Hi! What is your favorite season for casual fashion?",
         "icebreakers": [
           "Summer fashion!",
           "Autumn coats and boots!",
-          "Love the nautical style!"
+          "Love nautical style!"
         ],
-        "prompt": "Describe Elena's build, hair color, and clothing style."
+        "prompt": "Describe Elena's build, hair color, and clothing style using A2 connector words."
       },
       {
         "type": "profile",
@@ -553,7 +553,7 @@
         "verified": true,
         "avatar": "👨‍💼",
         "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
-        "visualDescription": "Tall 6'2\" man with neat dark blonde side-part hair, sharp jawline, wearing a tailored navy blazer and crisp white collar shirt.",
+        "visualDescription": "Tall 6'2\" man with neat dark blonde side-part hair and sharp jawline, wearing a tailored navy blazer and clean white shirt.",
         "interests": [
           "#Tall6ft2",
           "#SmartBlazer",
@@ -563,33 +563,33 @@
         "pages": [
           {
             "tag": "🖼️ Physical Look",
-            "bio": "I am Liam! 27 years old, tall (6'2\"), slim frame with broad shoulders. Short dark blonde hair and a clean-shaven face."
+            "bio": "I am Liam, 27 years old. I am tall (6'2\") with a slim frame and broad shoulders. I have short dark blonde hair and a clean-shaven face."
           },
           {
             "tag": "✨ Fashion Vibe",
-            "bio": "Smart-casual elegance: tailored navy blazers, white oxford shirts, leather watch, and polished brown shoes."
+            "bio": "I prefer smart-casual elegance because I work in an office. I usually wear navy blazers, white shirts, a leather watch, and brown shoes."
           },
           {
             "tag": "🚩 Appearance Detail",
             "greenFlags": [
-              "✓ Sharp polished appearance",
-              "✓ Great posture & height",
-              "✓ Neat tidy hairstyle"
+              "✓ Polished smart look",
+              "✓ Great posture and height",
+              "✓ Tidy short hairstyle"
             ],
             "redFlags": [
-              "✗ Overly picky about shirt creases",
-              "✗ Spends too much on dry cleaning",
-              "✗ Refuses to wear hoodies"
+              "✗ Too picky about shirt creases",
+              "✗ Expensive dry cleaning",
+              "✗ Refuses cozy hoodies"
             ]
           }
         ],
-        "opener": "Hello! Do you prefer dressing up formally or wearing cozy hoodies?",
+        "opener": "Hello! Do you prefer dressing up formally or wearing cozy casual hoodies?",
         "icebreakers": [
           "Cozy hoodies all day!",
           "I love smart suits!",
-          "Mix of both!"
+          "A mix of both!"
         ],
-        "prompt": "How tall is Liam and what clothing does he wear?"
+        "prompt": "How tall is Liam? What does he wear for work and why?"
       }
     ],
     "professions": [
@@ -603,7 +603,7 @@
         "verified": true,
         "avatar": "👩‍🎨",
         "gradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
-        "visualDescription": "Creative woman sitting with a digital drawing tablet, stylus pen, colorful posters on wall, wearing round glasses and stylish sweater.",
+        "visualDescription": "Creative designer sitting with a drawing tablet, stylus pen, and colorful art posters.",
         "interests": [
           "#DigitalArt",
           "#ColorPalette",
@@ -613,33 +613,33 @@
         "pages": [
           {
             "tag": "💼 Job Overview",
-            "bio": "I am Nina, a graphic designer! I create beautiful logos, website banners, and colorful posters for local businesses."
+            "bio": "I am Nina, a graphic designer! I create colorful logos, website banners, and advertisements for local companies because I love art."
           },
           {
             "tag": "✨ Daily Tasks",
-            "bio": "I work on my laptop and drawing tablet. I choose nice fonts, harmonize color palettes, and draw digital art."
+            "bio": "I work on my laptop and drawing tablet. I choose beautiful fonts, combine matching colors, and draw digital illustrations."
           },
           {
             "tag": "🚩 Job Pros & Cons",
             "greenFlags": [
-              "✓ Highly creative & fun job",
-              "✓ Work from cafes or home",
-              "✓ Seeing your art on billboards"
+              "✓ Highly creative and fun work",
+              "✓ Flexible work from home or cafes",
+              "✓ See your posters in city streets"
             ],
             "redFlags": [
               "✗ Staring at screens for 8 hours",
               "✗ Clients changing their minds",
-              "✗ Eye fatigue"
+              "✗ Tired eyes after work"
             ]
           }
         ],
-        "opener": "Hey! What is your absolute favorite color combination?",
+        "opener": "Hey! What color combination do you like for a website?",
         "icebreakers": [
-          "Black & Gold!",
-          "Blue & Pastel Pink!",
-          "Green & Earthy Brown!"
+          "Black and gold!",
+          "Blue and pastel pink!",
+          "Green and earthy brown!"
         ],
-        "prompt": "What tools does a graphic designer use? Would you enjoy this job?"
+        "prompt": "What tools does Nina use for her work? Why does she enjoy her job?"
       },
       {
         "type": "profile",
@@ -651,7 +651,7 @@
         "verified": true,
         "avatar": "🏋️‍♂️",
         "gradient": "linear-gradient(135deg, #16a34a 0%, #22c55e 100%)",
-        "visualDescription": "Muscular trainer in black gym tank top, stopwatch around neck, pointing encouragingly at gym equipment.",
+        "visualDescription": "Fit trainer wearing a black gym shirt and stopwatch, guiding a client in the gym.",
         "interests": [
           "#PersonalTrainer",
           "#WorkoutRoutine",
@@ -661,33 +661,33 @@
         "pages": [
           {
             "tag": "💼 Job Overview",
-            "bio": "I am Alex, a certified personal fitness trainer! I design exercise routines and teach people how to stay fit and strong."
+            "bio": "I am Alex, a fitness trainer. I design exercise programs and teach people how to stay strong and healthy every day."
           },
           {
             "tag": "✨ Daily Tasks",
-            "bio": "I guide gym members with weights, cardio workouts, and healthy eating plans. High motivation every day!"
+            "bio": "I help clients with gym weights, running workouts, and meal plans so they can achieve their physical goals."
           },
           {
             "tag": "🚩 Job Pros & Cons",
             "greenFlags": [
-              "✓ Active healthy lifestyle",
-              "✓ Inspiring people to reach goals",
-              "✓ Great energy"
+              "✓ Active and energetic lifestyle",
+              "✓ Helping people achieve health goals",
+              "✓ Fun supportive gym environment"
             ],
             "redFlags": [
-              "✗ Waking up at 5:30 AM for clients",
-              "✗ Sore muscles constantly",
-              "✗ Loud gym music all day"
+              "✗ Early 5:30 AM starts",
+              "✗ Sore muscles after training",
+              "✗ Loud music in gym"
             ]
           }
         ],
-        "opener": "Hey! Do you prefer morning workouts or evening relaxation?",
+        "opener": "Hey! Do you prefer morning gym sessions or evening relaxing walks?",
         "icebreakers": [
-          "Morning workouts!",
-          "Evening relaxation on couch!",
+          "Morning gym sessions!",
+          "Evening relaxing walks!",
           "Weekend sports!"
         ],
-        "prompt": "What are the benefits and challenges of being a personal trainer?"
+        "prompt": "What does Alex do to help his clients? Would you like a personal trainer?"
       }
     ],
     "properties": [
@@ -701,7 +701,7 @@
         "verified": true,
         "avatar": "🏢",
         "gradient": "linear-gradient(135deg, #4f46e5 0%, #6366f1 100%)",
-        "visualDescription": "Industrial loft with high exposed concrete ceiling, big floor-to-ceiling glass windows, leather couch, and open kitchen island.",
+        "visualDescription": "Industrial loft with high concrete ceilings, large glass windows, leather couch, and kitchen island.",
         "interests": [
           "#HighCeilings",
           "#IndustrialLoft",
@@ -711,33 +711,33 @@
         "pages": [
           {
             "tag": "🏡 Home Details",
-            "bio": "Spacious 1-bedroom industrial loft apartment! Features high exposed ceilings, big glass windows, and open kitchen island."
+            "bio": "This is a spacious one-bedroom industrial loft. It has high ceilings, large glass windows, and a modern open kitchen island."
           },
           {
             "tag": "✨ Location & Vibe",
-            "bio": "Located in the trendy Arts District with art galleries, coffee shops, and rooftop bars right downstairs. $1,200/month."
+            "bio": "It is located in the Arts District near art galleries and coffee shops, so you can walk everywhere easily."
           },
           {
             "tag": "🚩 Home Pros & Cons",
             "greenFlags": [
-              "✓ Stunning skyline city views",
-              "✓ Abundant natural sunlight",
-              "✓ Modern kitchen island"
+              "✓ Great city skyline views",
+              "✓ Lots of natural sunlight",
+              "✓ Modern open kitchen"
             ],
             "redFlags": [
-              "✗ Higher utility heating bills",
+              "✗ Higher heating bills in winter",
               "✗ Street noise at night",
-              "✗ No underground parking"
+              "✗ No private garage"
             ]
           }
         ],
-        "opener": "Hi! Do you like big open industrial lofts with city views?",
+        "opener": "Hi! Do you like big industrial lofts with city views?",
         "icebreakers": [
           "I love industrial loft design!",
           "Too noisy for me!",
           "Awesome big windows!"
         ],
-        "prompt": "Describe the main features of this loft apartment."
+        "prompt": "Describe the main features of this loft apartment and its location."
       },
       {
         "type": "profile",
@@ -749,7 +749,7 @@
         "verified": true,
         "avatar": "🏡",
         "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
-        "visualDescription": "Cozy stone cottage with flower boxes under windows, wooden porch swing, green lawn, and stone chimney.",
+        "visualDescription": "Cozy stone cottage with flower boxes, wooden porch swing, lawn, and chimney.",
         "interests": [
           "#FlowerGarden",
           "#PorchSwing",
@@ -759,11 +759,11 @@
         "pages": [
           {
             "tag": "🏡 Home Details",
-            "bio": "Charming 3-bedroom suburban cottage! Features a stone fireplace, sunny kitchen porch, and colorful flower garden."
+            "bio": "This is a charming three-bedroom suburban cottage. It features a cozy stone fireplace, a sunny porch, and a flower garden."
           },
           {
             "tag": "✨ Location & Vibe",
-            "bio": "Peaceful family neighborhood near top elementary schools and bike trails. Perfect for relaxing weekend BBQs!"
+            "bio": "It is in a peaceful neighborhood near primary schools and bicycle paths, which makes it perfect for families."
           },
           {
             "tag": "🚩 Home Pros & Cons",
@@ -773,19 +773,19 @@
               "✓ Safe quiet neighborhood"
             ],
             "redFlags": [
-              "✗ Requires lawn mowing and garden care",
-              "✗ Commute into city takes 35 mins",
-              "✗ Needs roof maintenance"
+              "✗ Requires regular garden care",
+              "✗ Commute to city takes 35 minutes",
+              "✗ Roof maintenance needed"
             ]
           }
         ],
-        "opener": "Hello! Would you like to sit on the porch swing and read a book?",
+        "opener": "Hello! Would you like to sit on the porch swing and enjoy the garden?",
         "icebreakers": [
           "Sounds peaceful!",
           "I prefer apartment living",
           "I love stone fireplaces!"
         ],
-        "prompt": "Compare this suburban cottage with the city loft apartment."
+        "prompt": "Compare this suburban cottage with the city loft apartment using A2 vocabulary."
       }
     ],
     "character": [
@@ -799,43 +799,43 @@
         "verified": true,
         "avatar": "📅",
         "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
-        "visualDescription": "Focused young woman checking off tasks on a colorful paper planner, smiling calmly in a neat organized desk setup.",
+        "visualDescription": "Focused young woman checking off tasks in a paper planner at her clean desk.",
         "interests": [
           "#Punctual",
-          "#PlannerGeek",
+          "#Planner",
           "#ReliableFriend"
         ],
         "anthem": "🎵 'Clockwork' - Smooth Rhythms",
         "pages": [
           {
             "tag": "🧠 Personality Traits",
-            "bio": "I am Sophia! Very organized, punctual, and reliable. I never arrive late and I always keep my promises."
+            "bio": "I am Sophia. I am very organized, punctual, and reliable. I never arrive late because I respect time."
           },
           {
             "tag": "✨ Daily Routine",
-            "bio": "I keep a daily color-coded planner, prepare my outfits the night before, and keep my living space spotless."
+            "bio": "I use a daily planner to write my tasks, prepare my clothes the night before, and keep my desk clean."
           },
           {
             "tag": "🚩 Pros & Cons",
             "greenFlags": [
               "✓ Never cancels plans last minute",
-              "✓ Super dependable in emergencies",
+              "✓ Dependable when friends need help",
               "✓ Always punctual"
             ],
             "redFlags": [
-              "✗ Stressed when plans change unexpectedly",
-              "✗ Too strict with schedules",
-              "✗ Dislikes messy places"
+              "✗ Stressed when plans change",
+              "✗ Strict about schedules",
+              "✗ Dislikes messy rooms"
             ]
           }
         ],
-        "opener": "Hi! Are you someone who plans ahead or makes last-minute spontaneous decisions?",
+        "opener": "Hi! Do you like to plan your week ahead or do you make spontaneous decisions?",
         "icebreakers": [
           "I plan everything ahead!",
           "I am spontaneous!",
           "A bit of both!"
         ],
-        "prompt": "Why is reliability an important trait in friendship?"
+        "prompt": "Why is reliability an important trait in friendship? Give an example."
       }
     ],
     "hobbies": [
@@ -849,7 +849,7 @@
         "verified": true,
         "avatar": "🍞",
         "gradient": "linear-gradient(135deg, #b45309 0%, #f59e0b 100%)",
-        "visualDescription": "Crispy golden crusty loaf of sourdough bread dusted with flour sitting on a wooden cutting board with butter knife.",
+        "visualDescription": "Golden loaf of sourdough bread on a wooden cutting board with a knife.",
         "interests": [
           "#BakingBread",
           "#CrispyCrust",
@@ -859,33 +859,33 @@
         "pages": [
           {
             "tag": "🎨 Hobby Overview",
-            "bio": "Baking artisanal sourdough bread from scratch! Mixing flour, water, and wild starter, then baking in a Dutch oven."
+            "bio": "I love baking artisanal sourdough bread at home. I mix simple flour, water, and starter, then bake it in a hot oven."
           },
           {
             "tag": "✨ Vibe & Joy",
-            "bio": "The amazing smell filling the apartment and hearing the crust crackle as it cools. Tastes incredible with salted butter!"
+            "bio": "My kitchen smells wonderful when the bread bakes. The warm crust crackles when it cools down, and it tastes delicious with butter!"
           },
           {
             "tag": "🚩 Hobby Pros & Cons",
             "greenFlags": [
-              "✓ Delicious fresh warm bread",
-              "✓ Therapeutic slow process",
-              "✓ No artificial ingredients"
+              "✓ Fresh warm delicious bread",
+              "✓ Relaxing cooking hobby",
+              "✓ Healthy natural ingredients"
             ],
             "redFlags": [
-              "✗ Takes 24 hours of patience",
-              "✗ Flour dusting everywhere",
-              "✗ Starter needs daily feeding"
+              "✗ Takes 24 hours of waiting",
+              "✗ White flour everywhere",
+              "✗ Feeding sourdough starter daily"
             ]
           }
         ],
-        "opener": "Fresh sourdough right out of the oven! Butter or olive oil with balsamic vinegar?",
+        "opener": "Fresh sourdough bread from the oven! Do you prefer butter or olive oil?",
         "icebreakers": [
           "Salted butter please!",
           "Olive oil and balsamic!",
           "Garlic butter!"
         ],
-        "prompt": "Explain the step-by-step process of sourdough baking in simple sentences."
+        "prompt": "Explain the basic steps of sourdough baking using simple present tenses."
       }
     ],
     "nationalities": [
@@ -899,43 +899,43 @@
         "verified": true,
         "avatar": "🇲🇽",
         "gradient": "linear-gradient(135deg, #059669 0%, #dc2626 100%)",
-        "visualDescription": "Smiley Mexican man in a colorful embroidered shirt, holding street tacos in a vibrant Oaxaca town square.",
+        "visualDescription": "Mexican man in an embroidered shirt holding corn tacos in a town square.",
         "interests": [
           "#Mexican",
           "#Oaxaca",
-          "#StreetTacos"
+          "#Tacos"
         ],
         "anthem": "🎵 'Cielito Lindo' - Mariachi Vibe",
         "pages": [
           {
             "tag": "🖼️ Nationality & Heritage",
-            "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my Mexican heritage and rich indigenous culture!"
+            "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my Mexican nationality and rich cultural heritage."
           },
           {
             "tag": "✨ Traditions & Flavors",
-            "bio": "We celebrate Day of the Dead with marigold flowers and enjoy spicy mole and fresh hand-pressed corn tacos."
+            "bio": "We celebrate Day of the Dead with yellow marigold flowers, and we eat spicy mole sauce with fresh corn tacos."
           },
           {
             "tag": "🚩 Cultural Details",
             "greenFlags": [
               "✓ Teaches salsa dancing on weekends",
               "✓ Prepares homemade guacamole",
-              "✓ Energetic and hospitable"
+              "✓ Welcoming and hospitable"
             ],
             "redFlags": [
-              "✗ Claims salsa is 'not spicy' when it burns",
-              "✗ Arrives 30 minutes late to everything",
-              "✗ Plays mariachi at 7 AM"
+              "✗ Says salsa is not spicy when it burns",
+              "✗ Arrives 30 minutes late to events",
+              "✗ Plays loud mariachi music"
             ]
           }
         ],
-        "opener": "Hola! Do you enjoy spicy food and vibrant cultural festivals?",
+        "opener": "Hola! Do you like spicy Mexican food or traditional cultural festivals?",
         "icebreakers": [
           "I love spicy food!",
           "Day of the Dead looks beautiful!",
           "Teach me salsa dancing!"
         ],
-        "prompt": "Describe Mateo's nationality, cultural traditions, and traditional dishes."
+        "prompt": "Describe Mateo's nationality, traditions, and traditional dishes using A2 connectors."
       },
       {
         "type": "profile",
@@ -947,43 +947,43 @@
         "verified": true,
         "avatar": "🇩🇰",
         "gradient": "linear-gradient(135deg, #2563eb 0%, #38bdf8 100%)",
-        "visualDescription": "Blonde Danish woman riding a bicycle along Nyhavn harbor, wearing a cozy knit sweater.",
+        "visualDescription": "Danish woman riding a bicycle along Copenhagen harbor in a sweater.",
         "interests": [
           "#Danish",
           "#Copenhagen",
-          "#HyggeLife"
+          "#Hygge"
         ],
         "anthem": "🎵 'Nordic Lights' - Cozy Acoustic",
         "pages": [
           {
             "tag": "🖼️ Nationality & Heritage",
-            "bio": "Hej! My name is Freja. I am Danish, living in Copenhagen, Denmark. Danish culture values comfort and 'hygge'."
+            "bio": "Hej! My name is Freja. I am Danish and I live in Copenhagen, Denmark. Danish culture values comfort and 'hygge'."
           },
           {
             "tag": "✨ Nordic Lifestyle",
-            "bio": "We ride bicycles everywhere in rain or snow! We love smørrebrød (open rye sandwiches) and candlelight evenings."
+            "bio": "We ride bicycles everywhere in rain or sunny weather. We enjoy open rye bread sandwiches and candlelit evenings."
           },
           {
             "tag": "🚩 Cultural Details",
             "greenFlags": [
               "✓ Creates cozy candlelit dinners",
-              "✓ Environmentally friendly bike commuter",
-              "✓ Honest and direct communicator"
+              "✓ Eco-friendly bike commuter",
+              "✓ Honest direct speaker"
             ],
             "redFlags": [
-              "✗ Refuses to ride in cars under 5 miles",
+              "✗ Refuses short car rides",
               "✗ Lights 20 candles in small room",
-              "✗ Severe rye bread snob"
+              "✗ Strict rye bread preferences"
             ]
           }
         ],
-        "opener": "Hej! Do you prefer cycling around cities or taking cozy café breaks?",
+        "opener": "Hej! Do you prefer cycling around city streets or taking café breaks?",
         "icebreakers": [
           "I love riding bicycles!",
           "Tell me more about hygge!",
           "Copenhagen is beautiful!"
         ],
-        "prompt": "Explain what country Freja is from and describe two key aspects of Danish lifestyle."
+        "prompt": "What country is Freja from? Describe two aspects of Danish lifestyle."
       }
     ]
   },
@@ -999,7 +999,7 @@
         "verified": true,
         "avatar": "👩‍🦱",
         "gradient": "linear-gradient(135deg, #7c2d12 0%, #d97706 100%)",
-        "visualDescription": "Artistic woman with voluminous dark brown curly hair, expressive dark eyes, wearing an embroidered bohemian kimono, layered silver rings, and turquoise earrings.",
+        "visualDescription": "Artistic woman with voluminous dark brown curly hair and expressive dark eyes, wearing an embroidered bohemian kimono and silver rings.",
         "interests": [
           "#BohoStyle",
           "#VoluminousCurls",
@@ -1009,33 +1009,33 @@
         "pages": [
           {
             "tag": "🖼️ Physical Appearance",
-            "bio": "I'm Maya, 26. Distinctive for my expressive dark eyes, sun-kissed tan complexion, and shoulder-length dark brown curly hair."
+            "bio": "I'm Maya, a 26-year-old artist who is recognized by her expressive dark eyes, sun-kissed complexion, and voluminous shoulder-length dark brown curls."
           },
           {
             "tag": "✨ Fashion Aesthetic",
-            "bio": "Bohemian aesthetic: flowing embroidered cardigans, vintage silver jewelry, suede ankle boots, and artistic earthy tones."
+            "bio": "I express my artistic identity through bohemian fashion, which includes flowing embroidered cardigans, vintage silver jewelry, and suede boots."
           },
           {
             "tag": "🚩 Appearance Detail",
             "greenFlags": [
-              "✓ Striking expressive facial features",
-              "✓ Unique artistic personal style",
-              "✓ Warm inviting smile"
+              "✓ Expressive facial features that reflect emotion",
+              "✓ Unique personal style that stands out",
+              "✓ Warm and inviting smile"
             ],
             "redFlags": [
               "✗ Takes 45 minutes to define curls",
               "✗ Overloaded with handmade bracelets",
-              "✗ Thrifting addiction"
+              "✗ Obsessive thrift shopping"
             ]
           }
         ],
-        "opener": "Hey! How would you describe your personal aesthetic and fashion philosophy?",
+        "opener": "Hey! How would you describe the relationship between your fashion choices and your personal identity?",
         "icebreakers": [
           "Minimalist modern!",
           "Boho vintage artistic!",
           "Streetwear sneakers!"
         ],
-        "prompt": "Describe Maya's hairstyle, accessories, and overall aesthetic using descriptive adjectives."
+        "prompt": "Describe Maya's appearance using relative clauses (who, which) and descriptive vocabulary."
       },
       {
         "type": "profile",
@@ -1047,7 +1047,7 @@
         "verified": true,
         "avatar": "🧔",
         "gradient": "linear-gradient(135deg, #15803d 0%, #166534 100%)",
-        "visualDescription": "Broad-shouldered man with a trimmed dark beard, sharp jawline, short undercut brown hair, wearing a flannel plaid shirt and leather boots.",
+        "visualDescription": "Broad-shouldered man with a trimmed dark beard and short undercut hair, wearing a heavy flannel plaid shirt and durable leather boots.",
         "interests": [
           "#BroadShouldered",
           "#TrimmedBeard",
@@ -1057,33 +1057,33 @@
         "pages": [
           {
             "tag": "🖼️ Physical Appearance",
-            "bio": "I'm Julian, 29. Tall (6'1\") with a rugged broad-shouldered frame, well-groomed beard, sharp jawline, and warm brown hazel eyes."
+            "bio": "I'm Julian, a 29-year-old outdoor enthusiast who stands 6'1\" tall with a broad-shouldered frame, a neatly trimmed beard, and hazel eyes."
           },
           {
             "tag": "✨ Outdoor Outfit Vibe",
-            "bio": "Outdoor lumberjack aesthetic: heavy-duty flannel plaid shirts, dark selvedge denim jeans, and durable leather hiking boots."
+            "bio": "My wardrobe centers around functional outdoor aesthetic, featuring heavy flannel plaid shirts, dark selvedge denim, and sturdy leather hiking boots."
           },
           {
             "tag": "🚩 Appearance Detail",
             "greenFlags": [
-              "✓ Athletic broad-shouldered posture",
-              "✓ Neatly trimmed beard",
-              "✓ Durable outdoor wardrobe"
+              "✓ Strong broad-shouldered posture",
+              "✓ Meticulously groomed beard",
+              "✓ Durable outdoor-ready wardrobe"
             ],
             "redFlags": [
-              "✗ Beard oil everywhere",
-              "✗ Refuses to wear formal ties",
-              "✗ Flannel shirt in every color"
+              "✗ Beard oil residue on collar",
+              "✗ Refuses formal ties",
+              "✗ Owns flannel in every shade"
             ]
           }
         ],
-        "opener": "Greetings! Do you favor a clean-cut corporate look or an outdoor rugged style?",
+        "opener": "Greetings! Do you favor a clean-cut corporate style or an outdoor rugged aesthetic?",
         "icebreakers": [
           "Outdoor rugged style!",
           "Clean-cut corporate!",
           "Casual streetwear!"
         ],
-        "prompt": "Analyze Julian's physical frame, grooming habits, and clothing choices."
+        "prompt": "Analyze Julian's physical appearance and explain how his wardrobe reflects his lifestyle."
       }
     ],
     "professions": [
@@ -1097,7 +1097,7 @@
         "verified": true,
         "avatar": "👨‍💻",
         "gradient": "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
-        "visualDescription": "Software engineer working at a dual-monitor standing desk, wearing headphones, coding on IDE software with dark theme.",
+        "visualDescription": "Software engineer working at a dual-monitor standing desk, wearing noise-canceling headphones.",
         "interests": [
           "#FullStackCode",
           "#DualMonitors",
@@ -1107,33 +1107,33 @@
         "pages": [
           {
             "tag": "💼 Profession Overview",
-            "bio": "I'm Marcus, a Full-Stack Software Engineer building web apps and cloud algorithms. I turn complex logic into smooth user experiences."
+            "bio": "I'm Marcus, a Full-Stack Software Engineer who develops web applications and cloud algorithms that transform complex data into user-friendly software."
           },
           {
             "tag": "✨ Daily Responsibilities",
-            "bio": "Writing scalable code, reviewing pull requests, solving algorithmic puzzles, and collaborating with UI designers remotely."
+            "bio": "My main responsibilities include writing clean code, reviewing pull requests, solving logical bugs, and collaborating with designers remotely."
           },
           {
             "tag": "🚩 Career Pros & Cons",
             "greenFlags": [
               "✓ High remote work flexibility",
               "✓ Strong analytical problem solving",
-              "✓ Excellent compensation"
+              "✓ Excellent salary and growth"
             ],
             "redFlags": [
-              "✗ Prolonged sitting & screen glare",
-              "✗ Sudden server bug emergencies",
-              "✗ Jargon heavy language"
+              "✗ Prolonged sitting and screen strain",
+              "✗ Unexpected server emergencies",
+              "✗ Jargon-heavy technical language"
             ]
           }
         ],
-        "opener": "Hello world! Are you fascinated or intimidated by coding and technology?",
+        "opener": "Hello world! Are you fascinated or intimidated by software development and modern technology?",
         "icebreakers": [
           "Fascinated by tech!",
           "Intimidated by code!",
           "I write code too!"
         ],
-        "prompt": "Discuss the advantages and drawbacks of a career in software engineering."
+        "prompt": "Explain the responsibilities of a software engineer using intermediate career vocabulary."
       },
       {
         "type": "profile",
@@ -1145,7 +1145,7 @@
         "verified": true,
         "avatar": "👩‍💻",
         "gradient": "linear-gradient(135deg, #047857 0%, #10b981 100%)",
-        "visualDescription": "Journalist holding a recording microphone and notebook, conducting an interview outdoors with wind turbines in background.",
+        "visualDescription": "Journalist holding a recording microphone, interviewing an engineer near wind turbines.",
         "interests": [
           "#ClimateAction",
           "#Investigative",
@@ -1155,33 +1155,33 @@
         "pages": [
           {
             "tag": "💼 Profession Overview",
-            "bio": "I'm Clara, an investigative environmental journalist. I research renewable energy trends and write articles on climate conservation."
+            "bio": "I'm Clara, an investigative environmental journalist who investigates climate change solutions and reports on clean energy initiatives across the globe."
           },
           {
             "tag": "✨ Daily Responsibilities",
-            "bio": "Interviewing scientists, traveling to nature reserves, verifying data sources, and editing impactful news features."
+            "bio": "My work involves interviewing climate scientists, conducting field research, verifying facts, and publishing news features that inform the public."
           },
           {
             "tag": "🚩 Career Pros & Cons",
             "greenFlags": [
-              "✓ Meaningful societal impact",
-              "✓ Travel & fieldwork opportunities",
-              "✓ Continuous learning"
+              "✓ Meaningful contribution to environmental awareness",
+              "✓ Opportunities for fieldwork travel",
+              "✓ Continuous intellectual learning"
             ],
             "redFlags": [
-              "✗ Strict publication deadlines",
-              "✗ Dealing with misinformation",
-              "✗ Irregular work hours"
+              "✗ High pressure from publication deadlines",
+              "✗ Combating misleading information",
+              "✗ Irregular working hours"
             ]
           }
         ],
-        "opener": "Hi! What environmental or social issue do you feel most passionate about?",
+        "opener": "Hi! What environmental topic or social cause do you feel most passionate about discussing?",
         "icebreakers": [
           "Renewable energy!",
           "Wildlife conservation!",
           "Reducing plastic waste!"
         ],
-        "prompt": "What skills are required to be an effective investigative journalist?"
+        "prompt": "What key skills and ethical duties are necessary for an environmental journalist?"
       }
     ],
     "properties": [
@@ -1195,7 +1195,7 @@
         "verified": true,
         "avatar": "🏭",
         "gradient": "linear-gradient(135deg, #475569 0%, #334155 100%)",
-        "visualDescription": "Historic brick mill converted into luxury loft with red exposed brick walls, timber beams, polished concrete floor, and river view.",
+        "visualDescription": "Historic paper mill converted into a luxury loft with exposed red brick, heavy timber beams, and river views.",
         "interests": [
           "#HistoricBrick",
           "#RiverfrontView",
@@ -1205,33 +1205,33 @@
         "pages": [
           {
             "tag": "🏡 Property Architectural Details",
-            "bio": "A stunning 2-bedroom loft inside a converted 19th-century paper mill. Merges original exposed brickwork and heavy timber beams with ultra-modern fixtures."
+            "bio": "This 2-bedroom loft is located inside a converted 19th-century paper mill that successfully combines original exposed brickwork and timber beams with contemporary interior design."
           },
           {
             "tag": "✨ Amenities & Surroundings",
-            "bio": "Private balcony overlooking the riverfront promenade, smart home lighting, underground garage, and private gym access. $1,850/month."
+            "bio": "Residents enjoy a private balcony overlooking the riverfront promenade, integrated smart lighting, an underground garage, and exclusive fitness center access."
           },
           {
             "tag": "🚩 Property Evaluation",
             "greenFlags": [
-              "✓ Architectural character & heritage",
-              "✓ Breathtaking river views",
-              "✓ Soundproof double glazing"
+              "✓ Authentic architectural character and heritage",
+              "✓ Breathtaking riverfront views",
+              "✓ Soundproof double-glazed windows"
             ],
             "redFlags": [
-              "✗ Higher monthly HOA fees",
-              "✗ High ceiling acoustic echoes",
-              "✗ Strict historic building rules"
+              "✗ Higher monthly HOA maintenance fees",
+              "✗ High ceiling acoustic reverberation",
+              "✗ Strict historical preservation regulations"
             ]
           }
         ],
-        "opener": "Welcome! Do you prefer historic renovated properties or brand-new modern architecture?",
+        "opener": "Welcome! Do you prefer historic renovated properties or brand-new minimalist architecture?",
         "icebreakers": [
           "Historic renovated character!",
           "Brand-new sleek modern!",
           "A cozy country home!"
         ],
-        "prompt": "Evaluate the architectural contrast between historic industrial brickwork and modern amenities."
+        "prompt": "Evaluate the architectural contrast between historic industrial brickwork and modern fixtures."
       },
       {
         "type": "profile",
@@ -1243,7 +1243,7 @@
         "verified": true,
         "avatar": "☀️",
         "gradient": "linear-gradient(135deg, #65a30d 0%, #84cc16 100%)",
-        "visualDescription": "Sustainable two-story villa with rooftop solar panels, rainwater collection barrel, vertical plant wall, and large timber deck.",
+        "visualDescription": "Sustainable two-story villa with rooftop solar panels, rainwater harvesting, vertical plant wall, and timber deck.",
         "interests": [
           "#ZeroEmission",
           "#SolarPower",
@@ -1253,27 +1253,27 @@
         "pages": [
           {
             "tag": "🏡 Eco Property Details",
-            "bio": "A state-of-the-art 3-bedroom zero-emission villa powered by rooftop solar panels, triple-pane insulation, and rainwater harvesting systems."
+            "bio": "This innovative 3-bedroom zero-emission villa is powered by rooftop solar panels and relies on triple-pane insulation and rainwater collection to minimize environmental impact."
           },
           {
             "tag": "✨ Sustainable Living Vibe",
-            "bio": "Organic garden patch, electric vehicle charging dock, vertical indoor plant wall, and minimal monthly electricity bills."
+            "bio": "Key features include an organic vegetable garden patch, an electric vehicle charging dock, an indoor vertical plant wall, and negligible energy bills."
           },
           {
             "tag": "🚩 Property Evaluation",
             "greenFlags": [
-              "✓ Near zero energy bills",
-              "✓ Sustainable carbon footprint",
-              "✓ EV charging station included"
+              "✓ Exceptionally low monthly utility costs",
+              "✓ Sustainable ecological carbon footprint",
+              "✓ EV charging infrastructure included"
             ],
             "redFlags": [
-              "✗ High initial purchase investment",
-              "✗ Solar battery maintenance",
-              "✗ Distance from city center"
+              "✗ Significant initial capital investment",
+              "✗ Solar battery system maintenance",
+              "✗ Moderate distance from downtown"
             ]
           }
         ],
-        "opener": "Greetings! How important is sustainable eco-friendly design when choosing a place to live?",
+        "opener": "Greetings! How important is sustainable eco-friendly engineering when selecting a residence?",
         "icebreakers": [
           "Crucial priority for me!",
           "Nice bonus but location first!",
@@ -1293,7 +1293,7 @@
         "verified": true,
         "avatar": "🤝",
         "gradient": "linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)",
-        "visualDescription": "Warm-hearted man listening intently during coffee conversation, leaning forward with genuine care and active body language.",
+        "visualDescription": "Warm-hearted man listening intently during a conversation at a quiet coffee shop.",
         "interests": [
           "#EmotionalIntelligence",
           "#ActiveListener",
@@ -1303,33 +1303,33 @@
         "pages": [
           {
             "tag": "🧠 Personality Character",
-            "bio": "I'm Daniel. I pride myself on high emotional intelligence, deep empathy, and the ability to truly listen without judging."
+            "bio": "I'm Daniel, a 28-year-old counselor who values high emotional intelligence, active listening, and sincere empathy in personal relationships."
           },
           {
             "tag": "✨ Interpersonal Style",
-            "bio": "Friends come to me when they need thoughtful advice or a safe space to vent. I value authentic connections over small talk."
+            "bio": "Friends frequently seek my advice when they encounter difficult challenges because I offer non-judgmental support and honest feedback."
           },
           {
             "tag": "🚩 Pros & Cons",
             "greenFlags": [
-              "✓ Deeply supportive & trustworthy",
-              "✓ Highly perceptive of feelings",
-              "✓ Outstanding conflict resolver"
+              "✓ Deeply supportive and trustworthy companion",
+              "✓ Perceptive of unspoken emotions",
+              "✓ Skilled conflict mediator"
             ],
             "redFlags": [
-              "✗ Absorbs other people's stress easily",
-              "✗ Avoids aggressive confrontation",
-              "✗ Emotionally drained at times"
+              "✗ Absorbs emotional stress easily",
+              "✗ Avoids direct personal confrontation",
+              "✗ Needs quiet recovery time"
             ]
           }
         ],
-        "opener": "Hello! Do you consider yourself more guided by rational logic or emotional intuition?",
+        "opener": "Hello! Do you consider yourself more guided by logical analysis or emotional intuition when making choices?",
         "icebreakers": [
-          "Rational logic!",
+          "Logical analysis!",
           "Emotional intuition!",
-          "Equal balance of both!"
+          "An equal balance of both!"
         ],
-        "prompt": "How does high emotional intelligence improve interpersonal relationships?"
+        "prompt": "Explain how emotional intelligence helps resolve interpersonal conflicts between friends."
       }
     ],
     "hobbies": [
@@ -1343,7 +1343,7 @@
         "verified": true,
         "avatar": "🧗‍♂️",
         "gradient": "linear-gradient(135deg, #15803d 0%, #22c55e 100%)",
-        "visualDescription": "Climber wearing chalk bag, gripping brightly colored indoor bouldering holds on an angled overhang wall.",
+        "visualDescription": "Climber wearing chalk bag, gripping indoor bouldering holds on an overhang wall.",
         "interests": [
           "#Bouldering",
           "#ProblemSolving",
@@ -1353,21 +1353,21 @@
         "pages": [
           {
             "tag": "🎨 Hobby Overview",
-            "bio": "Solving vertical body puzzles on indoor climbing walls and outdoor crags using chalked hands, core power, and mental focus."
+            "bio": "Bouldering is an engaging physical hobby where climbers solve vertical routes on climbing walls using chalked hands and core strength."
           },
           {
             "tag": "✨ Physical & Mental Vibe",
-            "bio": "Bouldering requires strategy like chess, combined with full-body functional strength. The feeling when completing a tough V5 route is unbeatable!"
+            "bio": "This sport combines tactical problem solving similar to chess with full-body functional endurance, offering a rewarding sense of achievement."
           },
           {
             "tag": "🚩 Hobby Evaluation",
             "greenFlags": [
-              "✓ Exceptional core and upper body strength",
-              "✓ Highly social community",
-              "✓ Mindful focus on the present"
+              "✓ Develops core physical strength",
+              "✓ Supportive social climbing community",
+              "✓ Encourages intense mental concentration"
             ],
             "redFlags": [
-              "✗ Chalk dust covering all gear",
+              "✗ Chalk dust on clothes and gear",
               "✗ Calloused worn fingers",
               "✗ Obsessively analyzing climbing routes"
             ]
@@ -1379,7 +1379,7 @@
           "Terrified of heights! 😅",
           "Eager to try it out!"
         ],
-        "prompt": "In what ways does bouldering combine physical endurance with mental problem solving?"
+        "prompt": "Describe how rock climbing combines physical conditioning with mental focus."
       }
     ],
     "nationalities": [
@@ -1393,7 +1393,7 @@
         "verified": true,
         "avatar": "🇳🇬",
         "gradient": "linear-gradient(135deg, #15803d 0%, #22c55e 100%)",
-        "visualDescription": "Radiant Nigerian woman wearing a vibrant patterned Ankara print headwrap and dress in bustling Lagos.",
+        "visualDescription": "Nigerian woman wearing a patterned Ankara headwrap and traditional attire in Lagos.",
         "interests": [
           "#Nigerian",
           "#Afrobeats",
@@ -1403,33 +1403,33 @@
         "pages": [
           {
             "tag": "🖼️ Cultural Background",
-            "bio": "Kedu! I'm Amara, a proud Nigerian from Lagos. Nigeria is a diverse nation with over 250 ethnic groups, rich folklore, and Afrobeats rhythm."
+            "bio": "Kedu! I'm Amara, a proud Nigerian from Lagos. Nigeria is a multicultural nation with over 250 distinct ethnic groups, rich oral traditions, and energetic Afrobeats music."
           },
           {
             "tag": "✨ Gastronomy & Festivities",
-            "bio": "Our celebratory gatherings feature spicy Jollof rice, plantains, and vibrant traditional attire with elaborate Gele headwraps."
+            "bio": "Our celebratory gatherings feature spicy smoky Jollof rice, fried plantains, and vibrant traditional clothing with elaborate Gele headwraps."
           },
           {
             "tag": "🚩 Cultural Traits",
             "greenFlags": [
-              "✓ Host legendary dinner parties with Afrobeats playlist",
-              "✓ Master of authentic smoky Jollof rice",
-              "✓ Warm, resilient, and charismatic spirit"
+              "✓ Hosts festive dinner parties with Afrobeats playlists",
+              "✓ Prepares authentic spicy Jollof rice",
+              "✓ Warm, resilient, and charismatic personality"
             ],
             "redFlags": [
-              "✗ Will debate Jollof rice superiority for 3 hours",
-              "✗ Loud phone conversations at all times",
-              "✗ Expects formal respect for elders"
+              "✗ Debates Jollof rice culinary origins for hours",
+              "✗ Speakerphone calls in public spaces",
+              "✗ Expects strict formal deference to elders"
             ]
           }
         ],
-        "opener": "Kedu! How familiar are you with West African gastronomy and global Afrobeats music?",
+        "opener": "Kedu! How familiar are you with West African culinary traditions and global Afrobeats music?",
         "icebreakers": [
           "Afrobeats is my favorite genre!",
           "I've heard about the Jollof debate!",
           "Love the colorful attire!"
         ],
-        "prompt": "Discuss Amara's Nigerian cultural background, traditions, and musical influence."
+        "prompt": "Discuss Amara's Nigerian cultural identity, gastronomy, and musical heritage using intermediate language."
       },
       {
         "type": "profile",
@@ -1441,7 +1441,7 @@
         "verified": true,
         "avatar": "🇮🇳",
         "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
-        "visualDescription": "Indian man in a royal blue kurta near Hawa Mahal in Jaipur, holding steaming masala chai.",
+        "visualDescription": "Indian man in a blue kurta near Jaipur monuments holding cardamom chai.",
         "interests": [
           "#Indian",
           "#Jaipur",
@@ -1451,33 +1451,33 @@
         "pages": [
           {
             "tag": "🖼️ Cultural Heritage",
-            "bio": "Namaste! I'm Aarav from Jaipur, India. India is renowned for its pluralistic heritage, architectural marvels, and millennia of history."
+            "bio": "Namaste! I'm Aarav from Jaipur, India. Indian nationality encompasses a pluralistic heritage, architectural wonders, and centuries of diverse regional customs."
           },
           {
             "tag": "✨ Hospitality & Cuisine",
-            "bio": "Indian hospitality rests on 'Atithi Devo Bhava' (Guest is God). I brew authentic aromatic cardamom masala chai and cook fragrant biryani."
+            "bio": "Our cultural ethos prioritizes 'Atithi Devo Bhava' (The Guest is God). I enjoy brewing authentic cardamom masala chai and preparing fragrant spiced biryani."
           },
           {
             "tag": "🚩 Cultural Details",
             "greenFlags": [
-              "✓ Generous hospitality for guests",
-              "✓ Secret aromatic spice blending techniques",
-              "✓ Passionate about traditional architecture"
+              "✓ Generous hospitality for all guests",
+              "✓ Expert knowledge of spice combinations",
+              "✓ Passionate about historic architecture"
             ],
             "redFlags": [
-              "✗ Insists masala chai in tea bags isn't real tea",
-              "✗ Head-wobble agreement confuses newcomers",
-              "✗ Spontaneous cricket match commentary"
+              "✗ Insists tea bag chai is unacceptable",
+              "✗ Non-verbal head-wobbles confuse visitors",
+              "✗ Spontaneous cricket match debates"
             ]
           }
         ],
-        "opener": "Namaste! Have you experienced Indian culinary spice blends or historical monuments?",
+        "opener": "Namaste! Have you experienced Indian spice gastronomy or historical architectural monuments?",
         "icebreakers": [
           "I drink masala chai every day!",
           "Jaipur looks breathtaking!",
           "Tell me about Indian architecture!"
         ],
-        "prompt": "Examine Aarav's Indian nationality, cultural ethos of hospitality, and cuisine."
+        "prompt": "Examine Aarav's Indian nationality, cultural ethos of hospitality, and gastronomy."
       }
     ]
   },
@@ -1493,7 +1493,7 @@
         "verified": true,
         "avatar": "👩‍🦳",
         "gradient": "linear-gradient(135deg, #0284c7 0%, #475569 100%)",
-        "visualDescription": "Statuesque 5'10\" woman with a razor-sharp platinum blonde bob, piercing ice-blue eyes, high cheekbones, wearing an asymmetrical black blazer and understated gold hoop earrings.",
+        "visualDescription": "Statuesque 5'10\" woman with a razor-sharp platinum blonde bob, piercing ice-blue eyes, high cheekbones, wearing an asymmetrical black blazer.",
         "interests": [
           "#StatuesqueElegance",
           "#PlatinumBlondeBob",
@@ -1503,33 +1503,33 @@
         "pages": [
           {
             "tag": "🖼️ Physical Appearance",
-            "bio": "I'm Victoria, 29. Statuesque frame (5'10\") featuring prominent high cheekbones, striking ice-blue eyes, and a precision-cut platinum blonde bob."
+            "bio": "I'm Victoria, 29. My statuesque 5'10\" silhouette is defined by prominent high cheekbones, piercing ice-blue eyes, and a precision-cut platinum blonde bob."
           },
           {
             "tag": "✨ Fashion Aesthetics",
-            "bio": "High-fashion minimalist tailoring: monochromatic suits, structured blazers, sleek leather boots, and subtle designer accents."
+            "bio": "My sartorial philosophy embodies high-fashion minimalist tailoring, incorporating structured monochromatic blazers, sleek leather boots, and subtle gold accents."
           },
           {
             "tag": "🚩 Appearance Detail",
             "greenFlags": [
-              "✓ Uncompromising sartorial poise",
-              "✓ Commanding presence & posture",
-              "✓ Impeccable grooming standard"
+              "✓ Uncompromising sartorial poise and confidence",
+              "✓ Commanding physical posture and presence",
+              "✓ Impeccable grooming and aesthetic standards"
             ],
             "redFlags": [
               "✗ Intimidating initial impression",
-              "✗ High maintenance hair bleaching routine",
-              "✗ Strict dress code standards"
+              "✗ High-maintenance platinum bleach regimen",
+              "✗ Rigid dress code expectations"
             ]
           }
         ],
-        "opener": "Welcome! How significantly does first impression and sartorial elegance influence your personal perception?",
+        "opener": "Welcome! How significantly does sartorial elegance and visual poise influence your interpersonal perception?",
         "icebreakers": [
           "First impressions are crucial!",
-          "Authenticity matters more than clothes!",
+          "Authenticity surpasses attire!",
           "Appreciate refined tailoring!"
         ],
-        "prompt": "Examine the stylistic impact of Victoria's minimalist wardrobe, hair structure, and demeanor."
+        "prompt": "Examine the stylistic impact of Victoria's minimalist wardrobe, hair structure, and commanding demeanor."
       },
       {
         "type": "profile",
@@ -1541,7 +1541,7 @@
         "verified": true,
         "avatar": "👨‍🦱",
         "gradient": "linear-gradient(135deg, #334155 0%, #64748b 100%)",
-        "visualDescription": "Charismatic 34-year-old man with distinguished silver-templed dark hair, captivating dimples, wearing a tailored charcoal wool coat and silk scarf.",
+        "visualDescription": "Charismatic 34-year-old man with distinguished silver-templed dark hair and captivating dimples, wearing a tailored charcoal wool coat and silk scarf.",
         "interests": [
           "#SilverTemples",
           "#DistinguishedLook",
@@ -1551,33 +1551,33 @@
         "pages": [
           {
             "tag": "🖼️ Physical Appearance",
-            "bio": "I'm Gabriel, 34. Athletic height (6'0\"), distinguished silver-templed wavy dark hair, warm hazel eyes, and expressive dimples when laughing."
+            "bio": "I'm Gabriel, 34. Standing at an athletic 6'0\", my appearance balances distinguished silver-templed dark hair, warm hazel eyes, and expressive dimples when laughing."
           },
           {
             "tag": "✨ Fashion Aesthetics",
-            "bio": "Classic European sophistication: charcoal wool overcoats, tailored cashmere turtlenecks, antique leather loafers, and vintage timepiece."
+            "bio": "I favor classic European sophistication: tailored charcoal wool overcoats, cashmere turtlenecks, antique leather loafers, and a vintage timepiece."
           },
           {
             "tag": "🚩 Appearance Detail",
             "greenFlags": [
-              "✓ Distinguished, mature aesthetic",
-              "✓ Warm disarming smile with dimples",
-              "✓ Timeless fashion choices"
+              "✓ Distinguished and mature aesthetic poise",
+              "✓ Warm disarming smile with natural dimples",
+              "✓ Timeless classic fashion choices"
             ],
             "redFlags": [
-              "✗ Takes vintage timepiece care too seriously",
-              "✗ Refuses casual sportswear",
-              "✗ Meticulous hair silvering care"
+              "✗ Overly fastidious about vintage timepieces",
+              "✗ Total aversion to sportswear",
+              "✗ Meticulous silvering hair care"
             ]
           }
         ],
-        "opener": "Greetings! Do you believe personal style should evolve continuously or anchor to timeless classicism?",
+        "opener": "Greetings! Do you believe personal style should evolve dynamically or anchor to timeless classicism?",
         "icebreakers": [
           "Evolve with current trends!",
           "Anchor to timeless classicism!",
           "Blend modern & vintage!"
         ],
-        "prompt": "Analyze how Gabriel's physical attributes convey maturity, charisma, and sophistication."
+        "prompt": "Analyze how Gabriel's physical attributes convey maturity, charisma, and European sophistication."
       }
     ],
     "professions": [
@@ -1591,7 +1591,7 @@
         "verified": true,
         "avatar": "🧠",
         "gradient": "linear-gradient(135deg, #4338ca 0%, #6366f1 100%)",
-        "visualDescription": "Researcher reviewing algorithmic bias data on transparent holographic displays in a high-tech university research lab.",
+        "visualDescription": "Researcher auditing algorithmic bias charts on transparent displays in a university research laboratory.",
         "interests": [
           "#AIEthics",
           "#AlgorithmicJustice",
@@ -1601,33 +1601,33 @@
         "pages": [
           {
             "tag": "💼 Profession Overview",
-            "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher. I evaluate machine learning models for algorithmic bias, data privacy compliance, and societal safety."
+            "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher evaluating autonomous algorithms to mitigate systemic bias, ensure data privacy, and enforce accountability."
           },
           {
             "tag": "✨ Responsibilities & Expertise",
-            "bio": "Publishing peer-reviewed policy frameworks, advising tech executives, and auditing large language models to prevent discrimination in automated decisions."
+            "bio": "My duties encompass drafting policy governance frameworks, advising corporate executives, and auditing machine learning models to prevent discriminatory automated decisions."
           },
           {
             "tag": "🚩 Career Pros & Cons",
             "greenFlags": [
-              "✓ Pioneering the frontier of tech safety",
-              "✓ High intellectual stimulation",
-              "✓ Shaping global policy guidelines"
+              "✓ Pioneering crucial safeguards at the frontier of technology",
+              "✓ Intellectual rigor and high-level policy advocacy",
+              "✓ Shaping global regulatory standards"
             ],
             "redFlags": [
-              "✗ Complex ethical dilemmas without clear answers",
-              "✗ Corporate resistance to regulation",
-              "✗ Constant rapid tech shifts"
+              "✗ Complex moral ambiguities lacking consensus",
+              "✗ Corporate pushback against compliance",
+              "✗ Rapidly evolving technological paradigms"
             ]
           }
         ],
-        "opener": "Greetings! In your opinion, should artificial intelligence development be strictly regulated by international law?",
+        "opener": "Greetings! In your assessment, should artificial intelligence development be governed by binding international regulatory frameworks?",
         "icebreakers": [
-          "Strict international regulation essential!",
-          "Innovation needs freedom first!",
-          "Balanced adaptive oversight!"
+          "Binding regulation is imperative!",
+          "Innovation requires market autonomy!",
+          "Adaptive risk-proportionate oversight!"
         ],
-        "prompt": "Evaluate the ethical implications and societal responsibilities of AI ethics researchers."
+        "prompt": "Evaluate the moral dilemmas, policy challenges, and societal impact of AI ethics research."
       },
       {
         "type": "profile",
@@ -1639,7 +1639,7 @@
         "verified": true,
         "avatar": "🏛️",
         "gradient": "linear-gradient(135deg, #854d0e 0%, #a16207 100%)",
-        "visualDescription": "Architect in hardhat examining intricate stonework details of a historic cathedral restoration project using laser scanning tools.",
+        "visualDescription": "Architect examining intricate stonework details of a historic cathedral during a restoration project.",
         "interests": [
           "#HeritageRestoration",
           "#SustainableUrbanism",
@@ -1649,33 +1649,33 @@
         "pages": [
           {
             "tag": "💼 Profession Overview",
-            "bio": "I'm Soren, an Architectural Conservationist. I specialize in adaptive reuse—restoring landmark historic structures while adapting them for sustainable modern utility."
+            "bio": "I'm Soren, an Architectural Conservationist specializing in adaptive reuse—restoring landmark heritage edifices while modernizing their structural utility sustainably."
           },
           {
             "tag": "✨ Responsibilities & Expertise",
-            "bio": "3D laser scanning ancient masonry, sourcing period-accurate ecological materials, and preventing historical landmarks from demolition."
+            "bio": "My work entails conducting 3D laser diagnostics on masonry, procuring period-accurate sustainable materials, and preventing historical landmarks from urban demolition."
           },
           {
             "tag": "🚩 Career Pros & Cons",
             "greenFlags": [
-              "✓ Preserving cultural heritage for future generations",
-              "✓ Tangible lasting artistic legacy",
-              "✓ Blending history with sustainability"
+              "✓ Safeguarding architectural heritage for posterity",
+              "✓ Tangible cultural legacy and artistic preservation",
+              "✓ Harmonizing historical aesthetic with eco-sustainability"
             ],
             "redFlags": [
-              "✗ Lengthy bureaucratic approval permits",
-              "✗ Unforeseen structural decay costs",
-              "✗ Budget constraints"
+              "✗ Protracted municipal approval bureaucracy",
+              "✗ Unforeseen structural deterioration costs",
+              "✗ Persistent budgetary constraints"
             ]
           }
         ],
-        "opener": "Hello! How can cities balance preserving historical architecture with building modern housing infrastructure?",
+        "opener": "Hello! How can municipal planners effectively balance historic preservation with expanding urban infrastructure demands?",
         "icebreakers": [
-          "Prioritize historic preservation!",
-          "Prioritize modern housing needs!",
-          "Adaptive reuse is the solution!"
+          "Prioritize heritage preservation!",
+          "Prioritize modern infrastructure!",
+          "Adaptive reuse is the bridge!"
         ],
-        "prompt": "Debate the balance between historical architectural preservation and urban modernization."
+        "prompt": "Analyze the ideological debate between historical architectural conservation and contemporary urban development."
       }
     ],
     "properties": [
@@ -1689,7 +1689,7 @@
         "verified": true,
         "avatar": "🏙️",
         "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-        "visualDescription": "Luxury penthouse terrace with private infinity glass pool, panoramic 360-degree skyline views, fire pit, and floor-to-ceiling glass walls.",
+        "visualDescription": "Luxury penthouse terrace featuring a private glass-edge infinity pool, 360-degree skyline panoramas, and smart automation.",
         "interests": [
           "#360SkylineView",
           "#InfinityPool",
@@ -1699,33 +1699,33 @@
         "pages": [
           {
             "tag": "🏡 Property Architecture & Luxury",
-            "bio": "Exquisite 4,500 sq ft top-floor Sky Villa featuring a private glass-edge infinity pool, 360-degree city skyline panoramas, and full biometric smart automation."
+            "bio": "This exquisite 4,500 sq ft top-floor Sky Villa features a private cantilevered glass-edge infinity pool, 360-degree panoramic skyline vistas, and biometric smart automation."
           },
           {
             "tag": "✨ Premium Amenities",
-            "bio": "Private elevator entry, climate-controlled wine cellar, motorized glass curtain walls, and rooftop helipad access. $6,500/month."
+            "bio": "The residence offers keyless direct elevator access, a climate-controlled sommelier wine cellar, motorized curtain glass facades, and rooftop helipad privileges."
           },
           {
             "tag": "🚩 Property Evaluation",
             "greenFlags": [
-              "✓ Peerless panoramic city vistas",
-              "✓ Maximum security & privacy",
-              "✓ State-of-the-art smart home integration"
+              "✓ Unrivaled panoramic cityscape vistas",
+              "✓ Uncompromised security and seclusion",
+              "✓ Cutting-edge domotic automation"
             ],
             "redFlags": [
-              "✗ Exorbitant maintenance expenditure",
-              "✗ High altitude sway during strong storms",
-              "✗ Detached from ground neighborhood feel"
+              "✗ Substantial ongoing maintenance overhead",
+              "✗ Slight high-altitude structural sway in severe storms",
+              "✗ Detached from street-level community vibe"
             ]
           }
         ],
-        "opener": "Welcome to the sky! Does extreme luxury housing justify its social and environmental footprint?",
+        "opener": "Welcome to the sky! To what degree does high-end architectural luxury justify its ecological and socio-urban footprint?",
         "icebreakers": [
           "Breathtaking pinnacle living!",
           "Excessive luxury is problematic!",
           "Impressive engineering achievement!"
         ],
-        "prompt": "Analyze the architectural engineering and lifestyle dynamics of luxury high-rise penthouse living."
+        "prompt": "Analyze the architectural engineering, structural dynamics, and urban exclusivity of high-rise penthouse living."
       },
       {
         "type": "profile",
@@ -1737,7 +1737,7 @@
         "verified": true,
         "avatar": "🏔️",
         "gradient": "linear-gradient(135deg, #78350f 0%, #92400e 100%)",
-        "visualDescription": "Rustic luxurious timber chalet nestled in snow-covered pine mountains, featuring cathedral glass facade, outdoor cedar sauna, and roaring stone hearth.",
+        "visualDescription": "Rustic timber chalet set in alpine pine forests, featuring cathedral glass windows, cedar sauna, and stone hearth.",
         "interests": [
           "#AlpineChalet",
           "#CathedralWindows",
@@ -1747,33 +1747,33 @@
         "pages": [
           {
             "tag": "🏡 Property Architecture & Ambience",
-            "bio": "A magnificent 4-bedroom timber chalet carved into alpine peaks. Showcases floor-to-ceiling cathedral windows framing snowy mountain vistas and a massive stone hearth."
+            "bio": "Nestled into alpine slopes, this magnificent 4-bedroom timber chalet showcases double-height cathedral windows framing snow-draped pine valleys and a massive granite fireplace."
           },
           {
             "tag": "✨ Alpine Lifestyle Amenities",
-            "bio": "Ski-in ski-out access, outdoor cedar wood sauna, geothermal floor heating, and custom oak furniture crafted by local artisans."
+            "bio": "The estate provides ski-in/ski-out convenience, an outdoor cedar wood sauna, geothermal radiant floor heating, and handcrafted oak joinery by local artisans."
           },
           {
             "tag": "🚩 Property Evaluation",
             "greenFlags": [
-              "✓ Unrivaled mountain tranquility",
-              "✓ Eco geothermal heating system",
-              "✓ Ski resort proximity"
+              "✓ Unsurpassed mountain tranquility and seclusion",
+              "✓ Sustainable geothermal heating infrastructure",
+              "✓ Immediate proximity to alpine ski resorts"
             ],
             "redFlags": [
-              "✗ Snowplowing road access in heavy blizzards",
-              "✗ Seasonal isolation",
-              "✗ High timber maintenance requirement"
+              "✗ Intermittent road blockages during severe blizzards",
+              "✗ Seasonal isolation during off-peak months",
+              "✗ Rigorous timber sealant upkeep"
             ]
           }
         ],
-        "opener": "Greetings! Would you thrive living surrounded by alpine wilderness, or do you require urban velocity?",
+        "opener": "Greetings! Would you thrive immersed in mountain isolation, or do you require urban velocity to stay stimulated?",
         "icebreakers": [
           "Alpine wilderness sanctuary!",
           "Urban velocity always!",
           "Seasonal balance between both!"
         ],
-        "prompt": "Evaluate how living in isolated natural terrain affects psychological well-being and daily routine."
+        "prompt": "Evaluate how residing in isolated natural topography influences psychological well-being and daily routine."
       }
     ],
     "character": [
@@ -1787,7 +1787,7 @@
         "verified": true,
         "avatar": "🦁",
         "gradient": "linear-gradient(135deg, #b91c1c 0%, #dc2626 100%)",
-        "visualDescription": "Determined female leader standing atop a conference hall terrace, looking strategically toward the city skyline with confidence and poise.",
+        "visualDescription": "Determined female executive standing on a terrace overlooking the city skyline.",
         "interests": [
           "#StrategicVision",
           "#Resilience",
@@ -1797,33 +1797,33 @@
         "pages": [
           {
             "tag": "🧠 Personality Character",
-            "bio": "I'm Helena, 32. Characterized by strategic foresight, formidable resilience under pressure, and an unwavering commitment to empowering those around me."
+            "bio": "I'm Helena, 32. My character is anchored by strategic foresight, unflinching resilience during crises, and an unwavering commitment to empowering my team."
           },
           {
             "tag": "✨ Leadership Philosophy",
-            "bio": "I view setbacks as crucial data points for growth. I lead with transparency, encourage bold calculated risk-taking, and foster accountability."
+            "bio": "I view setbacks not as failures, but as invaluable empirical data for growth, driving innovation through calculated risk-taking and radical transparency."
           },
           {
             "tag": "🚩 Pros & Cons",
             "greenFlags": [
-              "✓ Inspires high performance in others",
-              "✓ Unshakable under severe crisis",
-              "✓ Decisive and visionary"
+              "✓ Inspires high performance and ambition",
+              "✓ Unshakable poise during corporate turbulence",
+              "✓ Decisive and forward-thinking vision"
             ],
             "redFlags": [
-              "✗ High expectations can intimidate",
-              "✗ Workaholic tendencies",
-              "✗ Impatient with slowness"
+              "✗ Uncompromising standards can intimidate",
+              "✗ Pronounced workaholic tendencies",
+              "✗ Low tolerance for operational inertia"
             ]
           }
         ],
-        "opener": "Greetings! What key quality distinguishes a true leader from a boss?",
+        "opener": "Greetings! What fundamental leadership qualities distinguish transformational visionaries from conventional managers?",
         "icebreakers": [
-          "Empathy & vision!",
-          "Resilience under crisis!",
-          "Lead by example!"
+          "Empathy and strategic vision!",
+          "Resilience under severe crisis!",
+          "Leading by moral example!"
         ],
-        "prompt": "Differentiate between transactional management and transformative resilient leadership."
+        "prompt": "Differentiate between transactional management and transformative resilient leadership in modern organizations."
       }
     ],
     "hobbies": [
@@ -1837,7 +1837,7 @@
         "verified": true,
         "avatar": "📷",
         "gradient": "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
-        "visualDescription": "Vintage Leica film camera resting on a darkroom wooden bench next to developed negatives, amber safelight glowing in background.",
+        "visualDescription": "Vintage 35mm film camera resting on a darkroom wooden bench next to developed negatives.",
         "interests": [
           "#FilmIsNotDead",
           "#35mmAnalog",
@@ -1847,33 +1847,33 @@
         "pages": [
           {
             "tag": "🎨 Hobby Overview & Craft",
-            "bio": "Capturing urban moments on 35mm silver halide film with deliberate composition—limiting oneself to 36 exposures per roll without instant digital previews."
+            "bio": "35mm film photography requires deliberate artistic composition and patience, restricting the photographer to 36 exposures per roll without instantaneous digital previews."
           },
           {
             "tag": "✨ Artistic Philosophy",
-            "bio": "Developing negatives manually in chemical darkrooms, embracing grain textures, subtle light leaks, and authentic unedited candid humanity."
+            "bio": "Developing chemical negatives in darkrooms allows photographers to embrace grain textures, light leaks, and unedited candid human authenticity."
           },
           {
             "tag": "🚩 Hobby Evaluation",
             "greenFlags": [
-              "✓ Teaches mindfulness and patience",
-              "✓ Tangible physical prints and negatives",
-              "✓ Unrivaled aesthetic depth"
+              "✓ Cultivates artistic mindfulness and patience",
+              "✓ Tangible physical medium and archival prints",
+              "✓ Unrivaled aesthetic organic depth"
             ],
             "redFlags": [
-              "✗ Escalating chemical & film roll costs",
-              "✗ Accidental light leaks ruining shots",
-              "✗ No instant gratification"
+              "✗ Escalating chemical and film canister expenses",
+              "✗ Accidental light leaks ruining exposures",
+              "✗ Complete absence of instant gratification"
             ]
           }
         ],
-        "opener": "Greetings! How does the deliberate constraint of analog media alter human creative expression compared to digital abundance?",
+        "opener": "Greetings! How does the deliberate artistic constraint of analog film alter creative expression compared to digital photographic abundance?",
         "icebreakers": [
-          "Constraints force deeper focus!",
+          "Constraints force deeper artistic focus!",
           "Digital abundance enables speed!",
           "Analog preserves authentic soul!"
         ],
-        "prompt": "Critique the psychological and artistic differences between digital smartphone photography and 35mm film photography."
+        "prompt": "Critique the psychological and aesthetic divergences between digital smartphone photography and traditional 35mm analog film."
       }
     ],
     "nationalities": [
@@ -1887,7 +1887,7 @@
         "verified": true,
         "avatar": "🇫🇷",
         "gradient": "linear-gradient(135deg, #1d4ed8 0%, #ef4444 100%)",
-        "visualDescription": "Sophisticated French woman wearing a trench coat and beret, seated at a Parisian pavement café with a glass of red wine.",
+        "visualDescription": "French woman in a trench coat seated at a Parisian pavement café with wine.",
         "interests": [
           "#French",
           "#Parisian",
@@ -1897,33 +1897,33 @@
         "pages": [
           {
             "tag": "🖼️ Heritage & Identity",
-            "bio": "Bonjour. I am Camille from Paris. French identity embodies 'art de vivre'—the subtle intellectual art of living well through literature, philosophy, and culinary mastery."
+            "bio": "Bonjour. I am Camille from Paris. French identity is fundamentally defined by 'art de vivre'—the intellectual art of living refinedly through literature, philosophy, and culinary mastery."
           },
           {
             "tag": "✨ Art de Vivre",
-            "bio": "Our gastronomic meal of the French is UNESCO-recognized heritage, celebrating wine terroir pairings, artisanal cheeses, and philosophical debate."
+            "bio": "Our gastronomic meal is UNESCO-recognized intangible cultural heritage, celebrating wine terroir pairings, artisanal raw milk cheeses, and animated philosophical debate."
           },
           {
             "tag": "🚩 Cultural Nuances",
             "greenFlags": [
-              "✓ Refined palate for wine & cheese terroir",
-              "✓ Engaging intellectual conversationalist",
-              "✓ Effortless chic sartorial style"
+              "✓ Refined palate for wine and artisanal cheese terroir",
+              "✓ Engaging, intellectually rigorous conversationalist",
+              "✓ Effortless sartorial chic aesthetic"
             ],
             "redFlags": [
-              "✗ Uncompromising stance on baguette crust crispness",
-              "✗ Sighs dramatically when asked for tap water",
-              "✗ Critique of non-French wine varieties"
+              "✗ Uncompromising stance on baguette crust density",
+              "✗ Dramatic sighs when served tap water",
+              "✗ Scurrilous critique of non-French viniculture"
             ]
           }
         ],
-        "opener": "Bonjour! To what extent does cultural heritage shape your daily philosophical outlook and culinary preferences?",
+        "opener": "Bonjour! To what extent does national heritage shape your daily philosophical outlook and culinary discernment?",
         "icebreakers": [
           "French gastronomy is world-class!",
           "I admire the Parisian art de vivre!",
           "Debating philosophy sounds great!"
         ],
-        "prompt": "Analyze Camille's representation of French cultural heritage, 'art de vivre', and gastronomic philosophy."
+        "prompt": "Analyze Camille's expression of French cultural heritage, 'art de vivre', and gastronomic philosophy."
       },
       {
         "type": "profile",
@@ -1935,7 +1935,7 @@
         "verified": true,
         "avatar": "🇧🇷",
         "gradient": "linear-gradient(135deg, #16a34a 0%, #eab308 100%)",
-        "visualDescription": "Sun-kissed Brazilian man playing beach volleyball on Ipanema Beach in Rio de Janeiro.",
+        "visualDescription": "Brazilian man playing beach volleyball on Ipanema Beach in Rio de Janeiro.",
         "interests": [
           "#Brazilian",
           "#RioDeJaneiro",
@@ -1945,33 +1945,33 @@
         "pages": [
           {
             "tag": "🖼️ Heritage & Identity",
-            "bio": "Olá! I'm Leandro from Rio de Janeiro. Brazilian nationality represents a vibrant melting pot of Indigenous, African, and European cultural influences."
+            "bio": "Olá! I'm Leandro from Rio de Janeiro. Brazilian nationality represents a vibrant demographic melting pot harmonizing Indigenous, African, and European cultural lineage."
           },
           {
             "tag": "✨ Warmth & Celebration",
-            "bio": "From Carnival rhythms to Bossa Nova nostalgia and Sunday feijoada feasts, our culture thrives on spontaneous warmth, optimism, and communal joy."
+            "bio": "From syncopated Carnival rhythms to Bossa Nova nostalgia and communal feijoada banquets, our culture thrives on uninhibited warmth, optimism, and social cohesion."
           },
           {
             "tag": "🚩 Cultural Nuances",
             "greenFlags": [
-              "✓ Infectious warmth and open-hearted social energy",
-              "✓ Plays guitar and sings bossa nova by the bonfire",
-              "✓ Expert in traditional feijoada cooking"
+              "✓ Infectious warmth and disarming social energy",
+              "✓ Acoustic guitar proficiency playing bossa nova",
+              "✓ Master of slow-simmered traditional feijoada"
             ],
             "redFlags": [
-              "✗ Time is an abstract construct (always late)",
-              "✗ Hugs and double-cheek kisses strangers immediately",
-              "✗ Plays samba percussion at 2 AM"
+              "✗ Punctuality viewed as a flexible social suggestion",
+              "✗ Effusive physical cheek-kisses for new acquaintances",
+              "✗ Nocturnal samba percussion practice"
             ]
           }
         ],
-        "opener": "Olá! How do you view the relationship between cultural diversity, musical expression, and national identity?",
+        "opener": "Olá! How do you conceptualize the interplay between cultural syncretism, musical heritage, and national identity?",
         "icebreakers": [
           "Brazilian music is so soul-stirring!",
           "Rio de Janeiro looks paradise-like!",
           "Tell me about Carnival traditions!"
         ],
-        "prompt": "Evaluate Leandro's description of Brazilian multicultural identity, musical heritage, and social ethos."
+        "prompt": "Evaluate Leandro's articulation of Brazilian multicultural syncretism, musical heritage, and communal social ethos."
       }
     ]
   }

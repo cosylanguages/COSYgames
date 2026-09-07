@@ -10,43 +10,43 @@
       "verified": true,
       "avatar": "🚴",
       "gradient": "linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%)",
-      "visualDescription": "Bright red bicycle parked under a sunny tree next to a paved park pathway.",
+      "visualDescription": "Red bicycle parked near a green tree in a park.",
       "interests": [
         "#Bicycle",
-        "#FreshAir",
-        "#ParkRide"
+        "#Park",
+        "#Exercise"
       ],
       "anthem": "🎵 'Bicycle Race' - Classic Rock",
       "pages": [
         {
           "tag": "🎨 Hobby Overview",
-          "bio": "Riding a red bicycle in the green park every weekend! Easy, healthy, and fun."
+          "bio": "I ride a red bicycle in the park every weekend. It is easy, cheap, and fun!"
         },
         {
           "tag": "✨ Vibe & Fun",
-          "bio": "Feeling the cool wind in my hair while listening to music. Stopping for ice cream at the park cafe!"
+          "bio": "I feel the cool wind. I listen to music and eat delicious ice cream at the park cafe."
         },
         {
           "tag": "🚩 Hobby Pros & Cons",
           "greenFlags": [
-            "✓ Fresh air & exercise",
-            "✓ Free transport",
+            "✓ Good exercise for legs",
+            "✓ Fresh air outside",
             "✓ Fun with friends"
           ],
           "redFlags": [
-            "✗ Rainy day difficulty",
-            "✗ Flat tire trouble",
-            "✗ Helmet hair"
+            "✗ Rain on clothes",
+            "✗ Flat bike tire",
+            "✗ Messy hair"
           ]
         }
       ],
-      "opener": "Hey! Do you know how to ride a bicycle?",
+      "opener": "Hello! Can you ride a bicycle? Do you ride in the park?",
       "icebreakers": [
         "Yes, I ride every week!",
         "No, but I want to learn!",
         "I prefer walking!"
       ],
-      "prompt": "Where do you like to ride a bicycle or walk?"
+      "prompt": "Where do you like to ride a bicycle or walk? What do you see in the park?"
     }
   ],
   "A2": [
@@ -60,7 +60,7 @@
       "verified": true,
       "avatar": "🍞",
       "gradient": "linear-gradient(135deg, #b45309 0%, #f59e0b 100%)",
-      "visualDescription": "Crispy golden crusty loaf of sourdough bread dusted with flour sitting on a wooden cutting board with butter knife.",
+      "visualDescription": "Golden loaf of sourdough bread on a wooden cutting board with a knife.",
       "interests": [
         "#BakingBread",
         "#CrispyCrust",
@@ -70,33 +70,33 @@
       "pages": [
         {
           "tag": "🎨 Hobby Overview",
-          "bio": "Baking artisanal sourdough bread from scratch! Mixing flour, water, and wild starter, then baking in a Dutch oven."
+          "bio": "I love baking artisanal sourdough bread at home. I mix simple flour, water, and starter, then bake it in a hot oven."
         },
         {
           "tag": "✨ Vibe & Joy",
-          "bio": "The amazing smell filling the apartment and hearing the crust crackle as it cools. Tastes incredible with salted butter!"
+          "bio": "My kitchen smells wonderful when the bread bakes. The warm crust crackles when it cools down, and it tastes delicious with butter!"
         },
         {
           "tag": "🚩 Hobby Pros & Cons",
           "greenFlags": [
-            "✓ Delicious fresh warm bread",
-            "✓ Therapeutic slow process",
-            "✓ No artificial ingredients"
+            "✓ Fresh warm delicious bread",
+            "✓ Relaxing cooking hobby",
+            "✓ Healthy natural ingredients"
           ],
           "redFlags": [
-            "✗ Takes 24 hours of patience",
-            "✗ Flour dusting everywhere",
-            "✗ Starter needs daily feeding"
+            "✗ Takes 24 hours of waiting",
+            "✗ White flour everywhere",
+            "✗ Feeding sourdough starter daily"
           ]
         }
       ],
-      "opener": "Fresh sourdough right out of the oven! Butter or olive oil with balsamic vinegar?",
+      "opener": "Fresh sourdough bread from the oven! Do you prefer butter or olive oil?",
       "icebreakers": [
         "Salted butter please!",
         "Olive oil and balsamic!",
         "Garlic butter!"
       ],
-      "prompt": "Explain the step-by-step process of sourdough baking in simple sentences."
+      "prompt": "Explain the basic steps of sourdough baking using simple present tenses."
     }
   ],
   "B1": [
@@ -110,7 +110,7 @@
       "verified": true,
       "avatar": "🧗‍♂️",
       "gradient": "linear-gradient(135deg, #15803d 0%, #22c55e 100%)",
-      "visualDescription": "Climber wearing chalk bag, gripping brightly colored indoor bouldering holds on an angled overhang wall.",
+      "visualDescription": "Climber wearing chalk bag, gripping indoor bouldering holds on an overhang wall.",
       "interests": [
         "#Bouldering",
         "#ProblemSolving",
@@ -120,21 +120,21 @@
       "pages": [
         {
           "tag": "🎨 Hobby Overview",
-          "bio": "Solving vertical body puzzles on indoor climbing walls and outdoor crags using chalked hands, core power, and mental focus."
+          "bio": "Bouldering is an engaging physical hobby where climbers solve vertical routes on climbing walls using chalked hands and core strength."
         },
         {
           "tag": "✨ Physical & Mental Vibe",
-          "bio": "Bouldering requires strategy like chess, combined with full-body functional strength. The feeling when completing a tough V5 route is unbeatable!"
+          "bio": "This sport combines tactical problem solving similar to chess with full-body functional endurance, offering a rewarding sense of achievement."
         },
         {
           "tag": "🚩 Hobby Evaluation",
           "greenFlags": [
-            "✓ Exceptional core and upper body strength",
-            "✓ Highly social community",
-            "✓ Mindful focus on the present"
+            "✓ Develops core physical strength",
+            "✓ Supportive social climbing community",
+            "✓ Encourages intense mental concentration"
           ],
           "redFlags": [
-            "✗ Chalk dust covering all gear",
+            "✗ Chalk dust on clothes and gear",
             "✗ Calloused worn fingers",
             "✗ Obsessively analyzing climbing routes"
           ]
@@ -146,7 +146,7 @@
         "Terrified of heights! 😅",
         "Eager to try it out!"
       ],
-      "prompt": "In what ways does bouldering combine physical endurance with mental problem solving?"
+      "prompt": "Describe how rock climbing combines physical conditioning with mental focus."
     }
   ],
   "B2": [
@@ -160,7 +160,7 @@
       "verified": true,
       "avatar": "📷",
       "gradient": "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
-      "visualDescription": "Vintage Leica film camera resting on a darkroom wooden bench next to developed negatives, amber safelight glowing in background.",
+      "visualDescription": "Vintage 35mm film camera resting on a darkroom wooden bench next to developed negatives.",
       "interests": [
         "#FilmIsNotDead",
         "#35mmAnalog",
@@ -170,33 +170,33 @@
       "pages": [
         {
           "tag": "🎨 Hobby Overview & Craft",
-          "bio": "Capturing urban moments on 35mm silver halide film with deliberate composition—limiting oneself to 36 exposures per roll without instant digital previews."
+          "bio": "35mm film photography requires deliberate artistic composition and patience, restricting the photographer to 36 exposures per roll without instantaneous digital previews."
         },
         {
           "tag": "✨ Artistic Philosophy",
-          "bio": "Developing negatives manually in chemical darkrooms, embracing grain textures, subtle light leaks, and authentic unedited candid humanity."
+          "bio": "Developing chemical negatives in darkrooms allows photographers to embrace grain textures, light leaks, and unedited candid human authenticity."
         },
         {
           "tag": "🚩 Hobby Evaluation",
           "greenFlags": [
-            "✓ Teaches mindfulness and patience",
-            "✓ Tangible physical prints and negatives",
-            "✓ Unrivaled aesthetic depth"
+            "✓ Cultivates artistic mindfulness and patience",
+            "✓ Tangible physical medium and archival prints",
+            "✓ Unrivaled aesthetic organic depth"
           ],
           "redFlags": [
-            "✗ Escalating chemical & film roll costs",
-            "✗ Accidental light leaks ruining shots",
-            "✗ No instant gratification"
+            "✗ Escalating chemical and film canister expenses",
+            "✗ Accidental light leaks ruining exposures",
+            "✗ Complete absence of instant gratification"
           ]
         }
       ],
-      "opener": "Greetings! How does the deliberate constraint of analog media alter human creative expression compared to digital abundance?",
+      "opener": "Greetings! How does the deliberate artistic constraint of analog film alter creative expression compared to digital photographic abundance?",
       "icebreakers": [
-        "Constraints force deeper focus!",
+        "Constraints force deeper artistic focus!",
         "Digital abundance enables speed!",
         "Analog preserves authentic soul!"
       ],
-      "prompt": "Critique the psychological and artistic differences between digital smartphone photography and 35mm film photography."
+      "prompt": "Critique the psychological and aesthetic divergences between digital smartphone photography and traditional 35mm analog film."
     }
   ]
 }
