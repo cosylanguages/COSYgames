@@ -13,7 +13,8 @@
         "gradient": "linear-gradient(135deg, #16a34a 0%, #facc15 100%)",
         "visualDescription": "Giovane donna con lunghi capelli castani e occhi verdi, con un vestito giallo.",
         "interests": ["#CapelliCastani", "#OcchiVerdi", "#VestitoGiallo"],
-        "anthem": "🎵 'O Sole Mio' - Popolare",
+        "anthem": "🎵 'Nel blu dipinto di blu (Volare)' - Domenico Modugno",
+        "film": "🎬 'La vita è bella' (Roberto Benigni)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
@@ -32,19 +33,20 @@
         "type": "profile",
         "level": "A0-A1",
         "category": "Professioni 💼",
-        "title": "Pizzaiolo (Chef Matteo)",
-        "age": "10 anni esp",
+        "title": "Chef Matteo",
+        "age": "32 anni",
         "location": "📍 Napoli, Italia",
         "verified": true,
         "avatar": "👨‍🍳",
         "gradient": "linear-gradient(135deg, #dc2626 0%, #f87171 100%)",
         "visualDescription": "Pizzaiolo napoletano che prepara pizza Margherita nel forno a legna.",
         "interests": ["#PizzaNapoletana", "#FornoALegna", "#Mozzarella"],
-        "anthem": "🎵 'Funiculì Funiculà' - Classico",
+        "anthem": "🎵 'O Sole Mio' - Luciano Pavarotti",
+        "film": "🎬 'L'oro di Napoli' (Vittorio De Sica)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
-            "bio": "Sono un pizzaiolo napoletano. Faccio la pizza Margherita con pomodoro fresco, mozzarella e basilico. Cucino nel forno a legna molto caldo. La mia pizza è buona e profumata!",
+            "bio": "Sono Matteo, un pizzaiolo napoletano. Faccio la pizza Margherita con pomodoro fresco, mozzarella e basilico. Cucino nel forno a legna molto caldo. La mia pizza è buona e profumata!",
             "greenFlags": ["✓ Pizza calda ogni giorno", "✓ Ingredienti freschi", "✓ Sempre allegro"],
             "redFlags": ["✗ Farina sui vestiti", "✗ Lavora fino a tarda notte", "✗ Forno molto caldo"]
           }
@@ -61,26 +63,27 @@
         "type": "profile",
         "level": "A2",
         "category": "Proprietà 🏠",
-        "title": "Appartamento con Terrazza",
-        "age": "Costruito 2018",
+        "title": "Lorenzo",
+        "age": "27 anni",
         "location": "📍 Firenze, Italia",
         "verified": true,
-        "avatar": "🏢",
+        "avatar": "👨‍💼",
         "gradient": "linear-gradient(135deg, #ea580c 0%, #f97316 100%)",
-        "visualDescription": "Luminoso appartamento con terrazza fiorita e vista sui tetti di Firenze.",
+        "visualDescription": "Proprietario di un luminoso appartamento con terrazza fiorita a Firenze.",
         "interests": ["#TerrazzaFiorita", "#VistaPanoramica", "#CentroStorico"],
-        "anthem": "🎵 'Azzurro' - Classico Italiano",
+        "anthem": "🎵 'Azzurro' - Adriano Celentano",
+        "film": "🎬 'A Room with a View' (James Ivory)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
-            "bio": "Questo è un grazioso appartamento situato nel centro storico di Firenze. Ha due camere da letto, un soggiorno luminoso e una grande terrazza con piante e fiori. È perfetto per fare colazione all'aperto nelle mattine d'estate.",
+            "bio": "Sono Lorenzo. Ho un grazioso appartamento situato nel centro storico di Firenze. Ha due camere da letto, un soggiorno luminoso e una grande terrazza con piante e fiori. È perfetto per fare colazione all'aperto nelle mattine d'estate.",
             "greenFlags": ["✓ Splendida vista sui tetti", "✓ Spazio aperto per colazione", "✓ Vicino ai musei"],
             "redFlags": ["✗ Molte scale senza ascensore", "✗ Rumore del traffico serale", "✗ Terrazza da innaffiare ogni giorno"]
           }
         ],
         "opener": "Ciao! Ti piacerebbe fare colazione su una terrazza fiorita a Firenze?",
         "icebreakers": ["Sarebbe bellissimo!", "Preferisco una casa con giardino!", "Amo Firenze!"],
-        "prompt": "Descrivi le caratteristiche principali di questo appartamento a Firenze."
+        "prompt": "Descrivi le caratteristiche principali dell'appartamento di Lorenzo."
       }
     ]
   },
@@ -90,26 +93,27 @@
         "type": "profile",
         "level": "B1",
         "category": "Hobby e Passioni 🎨",
-        "title": "Cucina Tradizionale e Pastificazione",
-        "age": "Tradizione Viva",
+        "title": "Francesca",
+        "age": "26 anni",
         "location": "📍 Bologna, Italia",
         "verified": true,
-        "avatar": "🍝",
+        "avatar": "👩‍🍳",
         "gradient": "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
         "visualDescription": "Preparazione artigianale di tagliatelle fresche al mattarello su tagliere di legno.",
         "interests": ["#PastaFresca", "#Mattarello", "#TradizioneEmiliana"],
-        "anthem": "🎵 'Volare' - Popolare",
+        "anthem": "🎵 'Caruso' - Andrea Bocelli",
+        "film": "🎬 'Big Night' (Campbell Scott)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
-            "bio": "La pastificazione artigianale è un'arte culinaria che richiede pazienza, farina di grano tenero e uova fresche. Stendere la sfoglia con il mattarello di legno permette di ottenere una consistenza porosa ideale per trattenere il tradizionale ragù alla bolognese.",
+            "bio": "Sono Francesca. La pastificazione artigianale è per me un'arte culinaria che richiede pazienza, farina di grano tenero e uova fresche. Stendere la sfoglia con il mattarello di legno permette di ottenere una consistenza porosa ideale per trattenere il tradizionale ragù alla bolognese.",
             "greenFlags": ["✓ Pasta fresca fatta in casa", "✓ Conservazione delle tradizioni familiari", "✓ Sapore autentico"],
             "redFlags": ["✗ Richiede ore di preparazione", "✗ Farina ovunque in cucina", "✗ Porzioni abbondanti irrinunciabili"]
           }
         ],
         "opener": "Ciao! Preferisci la pasta fresca fatta in casa o i piatti pronti veloci?",
         "icebreakers": ["La pasta fresca fatta in casa!", "Amo il ragù bolognese!", "Vorrei imparare ad usare il mattarello!"],
-        "prompt": "Spiega il processo di preparazione della pasta fresca artigianale."
+        "prompt": "Spiega il processo di preparazione della pasta fresca artigianale secondo Francesca."
       }
     ]
   },
@@ -119,7 +123,7 @@
         "type": "profile",
         "level": "B2",
         "category": "Nazionalità e Culture 🌍",
-        "title": "Marco (Italiano 🇮🇹)",
+        "title": "Marco",
         "age": "28 anni",
         "location": "📍 Milano, Italia",
         "verified": true,
@@ -127,11 +131,12 @@
         "gradient": "linear-gradient(135deg, #059669 0%, #dc2626 100%)",
         "visualDescription": "Uomo italiano raffinato mentre gusta un espresso in un caffè milanese.",
         "interests": ["#Italiano", "#DesignMilano", "#CulturaCaffè"],
-        "anthem": "🎵 'Nel Blu Dipinto Di Blu' - Classico",
+        "anthem": "🎵 'Via con me' - Paolo Conte",
+        "film": "🎬 'La grande bellezza' (Paolo Sorrentino)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
-            "bio": "Buongiorno. Sono Marco. La nazionalità italiana si distingue per un connubio inscindibile tra patrimonio artistico millenario, eccellenza nel design e una cultura enogastronomica di rilievo mondiale. Dal rituale quotidiano del caffè espresso al dibattito sulla conservazione delle tradizioni architettoniche, l'italianità è una passione per la bellezza in ogni sua forma.",
+            "bio": "Buongiorno. Sono Marco. La nazionalità italiana si distingue per un connubio inscindibile tra patrimonio artistico millenario, eccellenza nel design e una cultura enogastronomica di rilievo mondiale. Dal rituale quotidiano del caffè espresso al dibattito sulla conservazione delle tradizioni architettoniche.",
             "greenFlags": ["✓ Profonda conoscenza del design e dell'arte", "✓ Gusto raffinato per l'alta sartoria", "✓ Passione per la convivialità"],
             "redFlags": ["✗ Reazione drammatica se la pasta è scotta", "✗ Gestualità espressiva travolgente", "✗ Intransigenza sulla qualità dell'espresso"]
           }
