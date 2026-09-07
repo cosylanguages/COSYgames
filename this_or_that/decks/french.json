@@ -1,0 +1,172 @@
+{
+  "A0_A1": {
+    "appearance": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Apparence physique 👁️",
+        "title": "Chloé",
+        "age": "21 ans",
+        "location": "📍 Paris, France",
+        "verified": true,
+        "avatar": "👩",
+        "gradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
+        "visualDescription": "Jeune femme aux cheveux blonds longs et yeux bleus, portant une robe rouge.",
+        "interests": ["#Grande", "#CheveuxBlonds", "#RobeRouge"],
+        "anthem": "🎵 'Champs-Élysées' - Pop Douce",
+        "pages": [
+          {
+            "tag": "🖼️ Profil",
+            "bio": "Bonjour ! Je m'appelle Chloé. J'ai 21 ans. Je suis grande. J'ai les cheveux blonds et les yeux bleus. J'aime les vêtements rouges. Je porte une robe rouge et des chaussures blanches. Je suis toujours souriante !",
+            "greenFlags": ["✓ Grand sourire amical", "✓ Style élégant", "✓ Très polie"],
+            "redFlags": ["✗ Arrive toujours en retard", "✗ Ne porte que du rouge", "✗ Parle très vite"]
+          }
+        ],
+        "opener": "Bonjour ! Tu préfères les robes rouges ou les vêtements bleus ?",
+        "icebreakers": ["J'aime le rouge !", "Je préfère le bleu !", "Tu as un joli sourire !"],
+        "prompt": "Décris Chloé. Quelle est la couleur de ses cheveux et de ses yeux ?"
+      }
+    ],
+    "professions": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Professions 💼",
+        "title": "Boulanger (Chef Luc)",
+        "age": "15 ans d'exp",
+        "location": "📍 Lyon, France",
+        "verified": true,
+        "avatar": "👨‍🍳",
+        "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+        "visualDescription": "Boulanger en tablier blanc préparant du pain frais et des croissants.",
+        "interests": ["#PainFrais", "#Croissant", "#Boulangerie"],
+        "anthem": "🎵 'Le Bon Pain' - Musette",
+        "pages": [
+          {
+            "tag": "🖼️ Profil",
+            "bio": "Je suis boulanger. Je me réveille à 4h00 du matin. Je fais du pain frais, des croissants et des gâteaux. Ma boulangerie sent bon le pain chaud. J'aime offrir du bon pain chaud le matin.",
+            "greenFlags": ["✓ Croissants chauds tous les matins", "✓ Bonne odeur de pain", "✓ Toujours accueillant"],
+            "redFlags": ["✗ Réveil à 4h00 du matin", "✗ Farine blanche partout", "✗ Travaille le dimanche"]
+          }
+        ],
+        "opener": "Bonjour ! Tu manges du pain frais ou un croissant le matin ?",
+        "icebreakers": ["Un croissant chaud s'il vous plaît !", "Du pain frais !", "J'adore les gâteaux !"],
+        "prompt": "Que fait le boulanger le matin à 4h00 ?"
+      }
+    ]
+  },
+  "A2": {
+    "appearance": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Apparence physique 👁️",
+        "title": "Thomas (Sportif aux cheveux châtains)",
+        "age": "26 ans",
+        "location": "📍 Bordeaux, France",
+        "verified": true,
+        "avatar": "👨",
+        "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+        "visualDescription": "Homme sportif de taille moyenne aux cheveux châtains courts et yeux marron, portant une veste en jean.",
+        "interests": ["#CheveuxChâtains", "#RegardMarron", "#StyleDécontracté"],
+        "anthem": "🎵 'L'Aventurier' - Pop Rock",
+        "pages": [
+          {
+            "tag": "🖼️ Profil",
+            "bio": "Je m'appelle Thomas et j'ai 26 ans. Je suis de taille moyenne et plutôt sportif parce que je fais du vélo chaque week-end. J'ai les cheveux châtains courts et les yeux marron. Je préfère les vêtements décontractés comme les vestes en jean et les baskets blanches parce que c'est très confortable.",
+            "greenFlags": ["✓ Regard chaleureux", "✓ Style décontracté et propre", "✓ Posture dynamique"],
+            "redFlags": ["✗ Oublie souvent sa veste", "✗ Baskets toujours sales", "✗ Coiffure décoiffée par le vent"]
+          }
+        ],
+        "opener": "Salut ! Tu préfères le style sportif décontracté ou les tenues très élégantes ?",
+        "icebreakers": ["Le style décontracté !", "J'aime les tenues élégantes !", "Un mélange des deux !"],
+        "prompt": "Décris le style vestimentaire de Thomas et explique pourquoi il le trouve confortable."
+      }
+    ],
+    "professions": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Professions 💼",
+        "title": "Guide Touristique (Manon)",
+        "age": "5 ans d'exp",
+        "location": "📍 Paris, France",
+        "verified": true,
+        "avatar": "👩‍💼",
+        "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+        "visualDescription": "Guide dynamique avec un microphone à la main devant le musée du Louvre.",
+        "interests": ["#Histoire", "#Musées", "#Monuments"],
+        "anthem": "🎵 'Paris S'éveille' - Classic",
+        "pages": [
+          {
+            "tag": "🖼️ Profil",
+            "bio": "Je m'appelle Manon et je suis guide touristique à Paris. J'accompagne des visiteurs du monde entier pour leur faire découvrir les monuments historiques comme la Tour Eiffel et le Louvre. J'aime raconter des histoires passionnantes et partager la culture française.",
+            "greenFlags": ["✓ Connaît toutes les histoires de la ville", "✓ Parle trois langues", "✓ Très enthousiaste"],
+            "redFlags": ["✗ Marche 15 kilomètres par jour", "✗ Parle sans s'arrêter", "✗ Déteste les embouteillages"]
+          }
+        ],
+        "opener": "Coucou ! Quel monument parisien aimerais-tu visiter avec moi ?",
+        "icebreakers": ["La Tour Eiffel !", "Le Musée du Louvre !", "Notre-Dame de Paris !"],
+        "prompt": "Quel est le métier de Manon ? Quels monuments fait-elle découvrir ?"
+      }
+    ]
+  },
+  "B1": {
+    "properties": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Immobilier 🏠",
+        "title": "Appartement Haussmannien",
+        "age": "Rénové en 2021",
+        "location": "📍 Paris (6ème)",
+        "verified": true,
+        "avatar": "🏢",
+        "gradient": "linear-gradient(135deg, #475569 0%, #334155 100%)",
+        "visualDescription": "Appartement lumineux avec parquet en point de Hongrie, moulures au plafond et cheminée en marbre.",
+        "interests": ["#ParquetAncien", "#Moulures", "#CheminéeMarbre"],
+        "anthem": "🎵 'Sous le Ciel de Paris' - Accordéon",
+        "pages": [
+          {
+            "tag": "🖼️ Profil",
+            "bio": "Cet appartement haussmannien de trois pièces allie le charme de l'ancien au confort moderne. Situé au troisième étage d'un immeuble en pierre de taille, il offre un parquet d'origine en point de Hongrie, de magnifiques moulures et une cheminée en marbre fonctionnelle, ainsi qu'une cuisine entièrement équipée.",
+            "greenFlags": ["✓ Charme architectural historique", "✓ Grande hauteur sous plafond", "✓ Balcon filant avec vue"],
+            "redFlags": ["✗ Isolation phonique ancienne", "✗ Pas d'ascenseur", "✗ Charges de copropriété élevées"]
+          }
+        ],
+        "opener": "Bonjour ! Préférez-vous le charme historique du style haussmannien ou la modernité d'un loft ?",
+        "icebreakers": ["Le style haussmannien sans hésiter !", "Je préfère les lofts modernes !", "J'adore les cheminées en marbre !"],
+        "prompt": "Analyse les éléments architecturaux de cet appartement haussmannien."
+      }
+    ]
+  },
+  "B2": {
+    "nationalities": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Nationalités et Cultures 🌍",
+        "title": "Alexandre (Français 🇫🇷)",
+        "age": "30 ans",
+        "location": "📍 Lyon, France",
+        "verified": true,
+        "avatar": "🇫🇷",
+        "gradient": "linear-gradient(135deg, #1d4ed8 0%, #ef4444 100%)",
+        "visualDescription": "Homme français élégant dans un café lyonnais dégustant un vin de terroir.",
+        "interests": ["#Gastronomie", "#ArtDeVivre", "#Patrimoine"],
+        "anthem": "🎵 'La Vie en Rose' - Jazz Français",
+        "pages": [
+          {
+            "tag": "🖼️ Profil",
+            "bio": "Bonjour. Je m'appelle Alexandre. La nationalité française s'incarne à travers un art de vivre séculaire où la gastronomie, la philosophie et le patrimoine occupent une place prépondérante. Passionné par l'œnologie et les traditions culinaires régionales, je considère le repas gastronomique comme un moment privilégié d'échange intellectuel et de convivialité.",
+            "greenFlags": ["✓ Érudition culturelle et gastronomique", "✓ Maîtrise des accords mets et vins", "✓ Esprit critique et débattement raffiné"],
+            "redFlags": ["✗ Exigence absolue sur la cuisson du pain", "✗ Soupire face au vin servi à mauvaise température", "✗ Débats philosophiques interminables"]
+          }
+        ],
+        "opener": "Bonjour ! Dans quelle mesure la gastronomie et le patrimoine façonnent-ils l'identité culturelle d'une nation ?",
+        "icebreakers": ["La gastronomie est essentielle !", "C'est une tradition séculaire passionnante !", "Parlons d'art de vivre !"],
+        "prompt": "Analyse l'expression de la culture française et de l'art de vivre d'après le portrait d'Alexandre."
+      }
+    ]
+  }
+}

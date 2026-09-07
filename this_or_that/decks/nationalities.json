@@ -19,15 +19,8 @@
       "anthem": "🎵 'Sakura Dreams' - J-Pop Acoustic",
       "pages": [
         {
-          "tag": "🖼️ Nationality & Country",
-          "bio": "Konnichiwa! I am Kenji. I am Japanese. I live in Tokyo, Japan. My language is Japanese."
-        },
-        {
-          "tag": "✨ Food & Culture",
-          "bio": "In Japan, we eat fresh sushi and hot ramen. I drink green tea every day!"
-        },
-        {
-          "tag": "🚩 Quick Details",
+          "tag": "🖼️ Profile",
+          "bio": "Konnichiwa! I am Kenji. I am Japanese. I live in Tokyo, Japan. My language is Japanese. In Japan, we eat fresh sushi and hot ramen. I drink green tea every day!",
           "greenFlags": [
             "✓ Polite and friendly",
             "✓ Makes hot miso soup",
@@ -67,15 +60,8 @@
       "anthem": "🎵 'O Sole Mio' - Classic Italian",
       "pages": [
         {
-          "tag": "🖼️ Nationality & Country",
-          "bio": "Ciao! I am Sofia. I am Italian. I come from Rome in Italy. I speak Italian."
-        },
-        {
-          "tag": "✨ Food & Culture",
-          "bio": "Italy is famous for pizza, pasta, and sweet gelato. I cook fresh pasta at home!"
-        },
-        {
-          "tag": "🚩 Quick Details",
+          "tag": "🖼️ Profile",
+          "bio": "Ciao! I am Sofia. I am Italian. I come from Rome in Italy. I speak Italian. Italy is famous for pizza, pasta, and sweet gelato. I cook fresh pasta at home!",
           "greenFlags": [
             "✓ Cooks fresh pasta",
             "✓ Warm friendly smile",
@@ -117,15 +103,8 @@
       "anthem": "🎵 'Cielito Lindo' - Mariachi Vibe",
       "pages": [
         {
-          "tag": "🖼️ Nationality & Heritage",
-          "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my Mexican nationality and rich cultural heritage."
-        },
-        {
-          "tag": "✨ Traditions & Flavors",
-          "bio": "We celebrate Day of the Dead with yellow marigold flowers, and we eat spicy mole sauce with fresh corn tacos."
-        },
-        {
-          "tag": "🚩 Cultural Details",
+          "tag": "🖼️ Profile",
+          "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my Mexican nationality and rich cultural heritage. We celebrate Day of the Dead with yellow marigold flowers, and we eat spicy mole sauce with fresh corn tacos.",
           "greenFlags": [
             "✓ Teaches salsa dancing on weekends",
             "✓ Prepares homemade guacamole",
@@ -165,15 +144,8 @@
       "anthem": "🎵 'Nordic Lights' - Cozy Acoustic",
       "pages": [
         {
-          "tag": "🖼️ Nationality & Heritage",
-          "bio": "Hej! My name is Freja. I am Danish and I live in Copenhagen, Denmark. Danish culture values comfort and 'hygge'."
-        },
-        {
-          "tag": "✨ Nordic Lifestyle",
-          "bio": "We ride bicycles everywhere in rain or sunny weather. We enjoy open rye bread sandwiches and candlelit evenings."
-        },
-        {
-          "tag": "🚩 Cultural Details",
+          "tag": "🖼️ Profile",
+          "bio": "Hej! My name is Freja. I am Danish and I live in Copenhagen, Denmark. Danish culture values comfort and 'hygge'. We ride bicycles everywhere in rain or sunny weather. We enjoy open rye bread sandwiches and candlelit evenings.",
           "greenFlags": [
             "✓ Creates cozy candlelit dinners",
             "✓ Eco-friendly bike commuter",
@@ -215,15 +187,8 @@
       "anthem": "🎵 'Lagos Heat' - Afrobeats Anthem",
       "pages": [
         {
-          "tag": "🖼️ Cultural Background",
-          "bio": "Kedu! I'm Amara, a proud Nigerian from Lagos. Nigeria is a multicultural nation with over 250 distinct ethnic groups, rich oral traditions, and energetic Afrobeats music."
-        },
-        {
-          "tag": "✨ Gastronomy & Festivities",
-          "bio": "Our celebratory gatherings feature spicy smoky Jollof rice, fried plantains, and vibrant traditional clothing with elaborate Gele headwraps."
-        },
-        {
-          "tag": "🚩 Cultural Traits",
+          "tag": "🖼️ Profile",
+          "bio": "Kedu! I'm Amara, a proud Nigerian from Lagos. Nigeria is a multicultural nation with over 250 distinct ethnic groups, rich oral traditions, and energetic Afrobeats music. Our celebratory gatherings feature spicy smoky Jollof rice, fried plantains, and vibrant traditional clothing with elaborate Gele headwraps.",
           "greenFlags": [
             "✓ Hosts festive dinner parties with Afrobeats playlists",
             "✓ Prepares authentic spicy Jollof rice",
@@ -263,15 +228,8 @@
       "anthem": "🎵 'Raga Beats' - Fusion Sitar",
       "pages": [
         {
-          "tag": "🖼️ Cultural Heritage",
-          "bio": "Namaste! I'm Aarav from Jaipur, India. Indian nationality encompasses a pluralistic heritage, architectural wonders, and centuries of diverse regional customs."
-        },
-        {
-          "tag": "✨ Hospitality & Cuisine",
-          "bio": "Our cultural ethos prioritizes 'Atithi Devo Bhava' (The Guest is God). I enjoy brewing authentic cardamom masala chai and preparing fragrant spiced biryani."
-        },
-        {
-          "tag": "🚩 Cultural Details",
+          "tag": "🖼️ Profile",
+          "bio": "Namaste! I'm Aarav from Jaipur, India. Indian nationality encompasses a pluralistic heritage, architectural wonders, and centuries of diverse regional customs. Our cultural ethos prioritizes 'Atithi Devo Bhava' (The Guest is God). I enjoy brewing authentic cardamom masala chai and preparing fragrant spiced biryani.",
           "greenFlags": [
             "✓ Generous hospitality for all guests",
             "✓ Expert knowledge of spice combinations",
@@ -313,15 +271,8 @@
       "anthem": "🎵 'La Vie En Rose' - Chanson Moderne",
       "pages": [
         {
-          "tag": "🖼️ Heritage & Identity",
-          "bio": "Bonjour. I am Camille from Paris. French identity is fundamentally defined by 'art de vivre'—the intellectual art of living refinedly through literature, philosophy, and culinary mastery."
-        },
-        {
-          "tag": "✨ Art de Vivre",
-          "bio": "Our gastronomic meal is UNESCO-recognized intangible cultural heritage, celebrating wine terroir pairings, artisanal raw milk cheeses, and animated philosophical debate."
-        },
-        {
-          "tag": "🚩 Cultural Nuances",
+          "tag": "🖼️ Profile",
+          "bio": "Bonjour. I am Camille from Paris. French identity is fundamentally defined by 'art de vivre'—the intellectual art of living refinedly through literature, philosophy, and culinary mastery. Our gastronomic meal is UNESCO-recognized intangible cultural heritage, celebrating wine terroir pairings, artisanal raw milk cheeses, and animated philosophical debate.",
           "greenFlags": [
             "✓ Refined palate for wine and artisanal cheese terroir",
             "✓ Engaging, intellectually rigorous conversationalist",
@@ -361,15 +312,8 @@
       "anthem": "🎵 'Girl From Ipanema' - Bossa Nova Classic",
       "pages": [
         {
-          "tag": "🖼️ Heritage & Identity",
-          "bio": "Olá! I'm Leandro from Rio de Janeiro. Brazilian nationality represents a vibrant demographic melting pot harmonizing Indigenous, African, and European cultural lineage."
-        },
-        {
-          "tag": "✨ Warmth & Celebration",
-          "bio": "From syncopated Carnival rhythms to Bossa Nova nostalgia and communal feijoada banquets, our culture thrives on uninhibited warmth, optimism, and social cohesion."
-        },
-        {
-          "tag": "🚩 Cultural Nuances",
+          "tag": "🖼️ Profile",
+          "bio": "Olá! I'm Leandro from Rio de Janeiro. Brazilian nationality represents a vibrant demographic melting pot harmonizing Indigenous, African, and European cultural lineage. From syncopated Carnival rhythms to Bossa Nova nostalgia and communal feijoada banquets, our culture thrives on uninhibited warmth, optimism, and social cohesion.",
           "greenFlags": [
             "✓ Infectious warmth and disarming social energy",
             "✓ Acoustic guitar proficiency playing bossa nova",

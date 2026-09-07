@@ -19,15 +19,8 @@
       "anthem": "🎵 'Sweet Caroline' - Classic Oldie",
       "pages": [
         {
-          "tag": "💼 Job Overview",
-          "bio": "I am a baker. I wake up at 4:00 AM every morning. I make fresh bread, warm croissants, and cakes."
-        },
-        {
-          "tag": "✨ Daily Work",
-          "bio": "I work in a big kitchen. It smells like warm bread and sugar. I sell food to happy customers."
-        },
-        {
-          "tag": "🚩 Job Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I am a baker. I wake up at 4:00 AM every morning. I make fresh bread, warm croissants, and cakes. I work in a big kitchen. It smells like warm bread and sugar. I sell food to happy customers.",
           "greenFlags": [
             "✓ Fresh bread every day",
             "✓ Warm sweet smell",
@@ -67,15 +60,8 @@
       "anthem": "🎵 'Healing Hands' - Calm Melodic",
       "pages": [
         {
-          "tag": "💼 Job Overview",
-          "bio": "I am a doctor. I work in a hospital. I help sick people feel better and stay healthy."
-        },
-        {
-          "tag": "✨ Daily Work",
-          "bio": "I wear a white coat. I talk to children and adults every day. I give good medicine."
-        },
-        {
-          "tag": "🚩 Job Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I am a doctor. I work in a hospital. I help sick people feel better and stay healthy. I wear a white coat. I talk to children and adults every day. I give good medicine.",
           "greenFlags": [
             "✓ Helps sick people",
             "✓ Important job",
@@ -117,15 +103,8 @@
       "anthem": "🎵 'Colors of the Wind' - Pop Cover",
       "pages": [
         {
-          "tag": "💼 Job Overview",
-          "bio": "I am Nina, a graphic designer! I create colorful logos, website banners, and advertisements for local companies because I love art."
-        },
-        {
-          "tag": "✨ Daily Tasks",
-          "bio": "I work on my laptop and drawing tablet. I choose beautiful fonts, combine matching colors, and draw digital illustrations."
-        },
-        {
-          "tag": "🚩 Job Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I am Nina, a graphic designer! I create colorful logos, website banners, and advertisements for local companies because I love art. I work on my laptop and drawing tablet. I choose beautiful fonts, combine matching colors, and draw digital illustrations.",
           "greenFlags": [
             "✓ Highly creative and fun work",
             "✓ Flexible work from home or cafes",
@@ -165,15 +144,8 @@
       "anthem": "🎵 'Eye of the Tiger' - Gym Anthem",
       "pages": [
         {
-          "tag": "💼 Job Overview",
-          "bio": "I am Alex, a fitness trainer. I design exercise programs and teach people how to stay strong and healthy every day."
-        },
-        {
-          "tag": "✨ Daily Tasks",
-          "bio": "I help clients with gym weights, running workouts, and meal plans so they can achieve their physical goals."
-        },
-        {
-          "tag": "🚩 Job Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I am Alex, a fitness trainer. I design exercise programs and teach people how to stay strong and healthy every day. I help clients with gym weights, running workouts, and meal plans so they can achieve their physical goals.",
           "greenFlags": [
             "✓ Active and energetic lifestyle",
             "✓ Helping people achieve health goals",
@@ -215,15 +187,8 @@
       "anthem": "🎵 'Digital Love' - Electronic Synth",
       "pages": [
         {
-          "tag": "💼 Profession Overview",
-          "bio": "I'm Marcus, a Full-Stack Software Engineer who develops web applications and cloud algorithms that transform complex data into user-friendly software."
-        },
-        {
-          "tag": "✨ Daily Responsibilities",
-          "bio": "My main responsibilities include writing clean code, reviewing pull requests, solving logical bugs, and collaborating with designers remotely."
-        },
-        {
-          "tag": "🚩 Career Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I'm Marcus, a Full-Stack Software Engineer who develops web applications and cloud algorithms that transform complex data into user-friendly software. My main responsibilities include writing clean code, reviewing pull requests, solving logical bugs, and collaborating with designers remotely.",
           "greenFlags": [
             "✓ High remote work flexibility",
             "✓ Strong analytical problem solving",
@@ -263,15 +228,8 @@
       "anthem": "🎵 'Blowin' in the Wind' - Folk",
       "pages": [
         {
-          "tag": "💼 Profession Overview",
-          "bio": "I'm Clara, an investigative environmental journalist who investigates climate change solutions and reports on clean energy initiatives across the globe."
-        },
-        {
-          "tag": "✨ Daily Responsibilities",
-          "bio": "My work involves interviewing climate scientists, conducting field research, verifying facts, and publishing news features that inform the public."
-        },
-        {
-          "tag": "🚩 Career Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I'm Clara, an investigative environmental journalist who investigates climate change solutions and reports on clean energy initiatives across the globe. My work involves interviewing climate scientists, conducting field research, verifying facts, and publishing news features that inform the public.",
           "greenFlags": [
             "✓ Meaningful contribution to environmental awareness",
             "✓ Opportunities for fieldwork travel",
@@ -313,15 +271,8 @@
       "anthem": "🎵 'Computer World' - Electro Synth",
       "pages": [
         {
-          "tag": "💼 Profession Overview",
-          "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher evaluating autonomous algorithms to mitigate systemic bias, ensure data privacy, and enforce accountability."
-        },
-        {
-          "tag": "✨ Responsibilities & Expertise",
-          "bio": "My duties encompass drafting policy governance frameworks, advising corporate executives, and auditing machine learning models to prevent discriminatory automated decisions."
-        },
-        {
-          "tag": "🚩 Career Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher evaluating autonomous algorithms to mitigate systemic bias, ensure data privacy, and enforce accountability. My duties encompass drafting policy governance frameworks, advising corporate executives, and auditing machine learning models to prevent discriminatory automated decisions.",
           "greenFlags": [
             "✓ Pioneering crucial safeguards at the frontier of technology",
             "✓ Intellectual rigor and high-level policy advocacy",
@@ -361,15 +312,8 @@
       "anthem": "🎵 'Symphony No. 5' - Orchestral",
       "pages": [
         {
-          "tag": "💼 Profession Overview",
-          "bio": "I'm Soren, an Architectural Conservationist specializing in adaptive reuse—restoring landmark heritage edifices while modernizing their structural utility sustainably."
-        },
-        {
-          "tag": "✨ Responsibilities & Expertise",
-          "bio": "My work entails conducting 3D laser diagnostics on masonry, procuring period-accurate sustainable materials, and preventing historical landmarks from urban demolition."
-        },
-        {
-          "tag": "🚩 Career Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I'm Soren, an Architectural Conservationist specializing in adaptive reuse—restoring landmark heritage edifices while modernizing their structural utility sustainably. My work entails conducting 3D laser diagnostics on masonry, procuring period-accurate sustainable materials, and preventing historical landmarks from urban demolition.",
           "greenFlags": [
             "✓ Safeguarding architectural heritage for posterity",
             "✓ Tangible cultural legacy and artistic preservation",
