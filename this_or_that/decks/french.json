@@ -12,20 +12,37 @@
         "avatar": "👩",
         "gradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
         "visualDescription": "Jeune femme aux cheveux blonds longs et yeux bleus, portant une robe rouge.",
-        "interests": ["#Grande", "#CheveuxBlonds", "#RobeRouge"],
+        "interests": [
+          "#Grande",
+          "#CheveuxBlonds",
+          "#RobeRouge"
+        ],
         "anthem": "🎵 'La Vie en rose' - Édith Piaf",
         "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
         "pages": [
           {
             "tag": "🖼️ Profil",
             "bio": "Bonjour ! Je m'appelle Chloé. J'ai 21 ans. Je suis grande. J'ai les cheveux blonds et les yeux bleus. J'aime les vêtements rouges. Je porte une robe rouge et des chaussures blanches. Je suis toujours souriante !",
-            "greenFlags": ["✓ Grand sourire amical", "✓ Style élégant", "✓ Très polie"],
-            "redFlags": ["✗ Arrive toujours en retard", "✗ Ne porte que du rouge", "✗ Parle très vite"]
+            "greenFlags": [
+              "✓ Grand sourire amical",
+              "✓ Style élégant",
+              "✓ Très polie"
+            ],
+            "redFlags": [
+              "✗ Arrive toujours en retard",
+              "✗ Ne porte que du rouge",
+              "✗ Parle très vite"
+            ]
           }
         ],
         "opener": "Bonjour ! Tu préfères les robes rouges ou les vêtements bleus ?",
-        "icebreakers": ["J'aime le rouge !", "Je préfère le bleu !", "Tu as un joli sourire !"],
-        "prompt": "Décris Chloé. Quelle est la couleur de ses cheveux et de ses yeux ?"
+        "icebreakers": [
+          "J'aime le rouge !",
+          "Je préfère le bleu !",
+          "Tu as un joli sourire !"
+        ],
+        "prompt": "Décris Chloé. Quelle est la couleur de ses cheveux et de ses yeux ?",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Chloé, 21 ans, located in Paris, France. Jeune femme aux cheveux blonds longs et yeux bleus, portant une robe rouge. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ],
     "professions": [
@@ -40,20 +57,37 @@
         "avatar": "👨‍🍳",
         "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
         "visualDescription": "Boulanger en tablier blanc préparant du pain frais et des croissants.",
-        "interests": ["#PainFrais", "#Croissant", "#Boulangerie"],
+        "interests": [
+          "#PainFrais",
+          "#Croissant",
+          "#Boulangerie"
+        ],
         "anthem": "🎵 'Les Champs-Élysées' - Joe Dassin",
         "film": "🎬 'Ratatouille' (Pixar)",
         "pages": [
           {
             "tag": "🖼️ Profil",
             "bio": "Je suis Luc, artisan boulanger. Je me réveille à 4h00 du matin. Je fais du pain frais, des croissants et des gâteaux. Ma boulangerie sent bon le pain chaud. J'aime offrir du bon pain chaud le matin.",
-            "greenFlags": ["✓ Croissants chauds tous les matins", "✓ Bonne odeur de pain", "✓ Toujours accueillant"],
-            "redFlags": ["✗ Réveil à 4h00 du matin", "✗ Farine blanche partout", "✗ Travaille le dimanche"]
+            "greenFlags": [
+              "✓ Croissants chauds tous les matins",
+              "✓ Bonne odeur de pain",
+              "✓ Toujours accueillant"
+            ],
+            "redFlags": [
+              "✗ Réveil à 4h00 du matin",
+              "✗ Farine blanche partout",
+              "✗ Travaille le dimanche"
+            ]
           }
         ],
         "opener": "Bonjour ! Tu manges du pain frais ou un croissant le matin ?",
-        "icebreakers": ["Un croissant chaud s'il vous plaît !", "Du pain frais !", "J'adore les gâteaux !"],
-        "prompt": "Que fait le boulanger Luc le matin à 4h00 ?"
+        "icebreakers": [
+          "Un croissant chaud s'il vous plaît !",
+          "Du pain frais !",
+          "J'adore les gâteaux !"
+        ],
+        "prompt": "Que fait le boulanger Luc le matin à 4h00 ?",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Chef Luc, 35 ans, located in Lyon, France. Boulanger en tablier blanc préparant du pain frais et des croissants. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ]
   },
@@ -70,20 +104,37 @@
         "avatar": "👨",
         "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
         "visualDescription": "Homme sportif de taille moyenne aux cheveux châtains courts et yeux marron, portant une veste en jean.",
-        "interests": ["#CheveuxChâtains", "#RegardMarron", "#StyleDécontracté"],
+        "interests": [
+          "#CheveuxChâtains",
+          "#RegardMarron",
+          "#StyleDécontracté"
+        ],
         "anthem": "🎵 'Je l'aime à mourir' - Francis Cabrel",
         "film": "🎬 'Intouchables' (Olivier Nakache & Éric Toledano)",
         "pages": [
           {
             "tag": "🖼️ Profil",
             "bio": "Je m'appelle Thomas et j'ai 26 ans. Je suis de taille moyenne et plutôt sportif parce que je fais du vélo chaque week-end. J'ai les cheveux châtains courts et les yeux marron. Je préfère les vêtements décontractés comme les vestes en jean et les baskets blanches parce que c'est très confortable.",
-            "greenFlags": ["✓ Regard chaleureux", "✓ Style décontracté et propre", "✓ Posture dynamique"],
-            "redFlags": ["✗ Oublie souvent sa veste", "✗ Baskets toujours sales", "✗ Coiffure décoiffée par le vent"]
+            "greenFlags": [
+              "✓ Regard chaleureux",
+              "✓ Style décontracté et propre",
+              "✓ Posture dynamique"
+            ],
+            "redFlags": [
+              "✗ Oublie souvent sa veste",
+              "✗ Baskets toujours sales",
+              "✗ Coiffure décoiffée par le vent"
+            ]
           }
         ],
         "opener": "Salut ! Tu préfères le style sportif décontracté ou les tenues très élégantes ?",
-        "icebreakers": ["Le style décontracté !", "J'aime les tenues élégantes !", "Un mélange des deux !"],
-        "prompt": "Décris le style vestimentaire de Thomas et explique pourquoi il le trouve confortable."
+        "icebreakers": [
+          "Le style décontracté !",
+          "J'aime les tenues élégantes !",
+          "Un mélange des deux !"
+        ],
+        "prompt": "Décris le style vestimentaire de Thomas et explique pourquoi il le trouve confortable.",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Thomas, 26 ans, located in Bordeaux, France. Homme sportif de taille moyenne aux cheveux châtains courts et yeux marron, portant une veste en jean. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ],
     "professions": [
@@ -98,20 +149,37 @@
         "avatar": "👩‍💼",
         "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
         "visualDescription": "Guide dynamique avec un microphone à la main devant le musée du Louvre.",
-        "interests": ["#Histoire", "#Musées", "#Monuments"],
+        "interests": [
+          "#Histoire",
+          "#Musées",
+          "#Monuments"
+        ],
         "anthem": "🎵 'Désenchantée' - Mylène Farmer",
         "film": "🎬 'Midnight in Paris' (Woody Allen)",
         "pages": [
           {
             "tag": "🖼️ Profil",
             "bio": "Je m'appelle Manon et je suis guide touristique à Paris. J'accompagne des visiteurs du monde entier pour leur faire découvrir les monuments historiques comme la Tour Eiffel et le Louvre. J'aime raconter des histoires passionnantes et partager la culture française.",
-            "greenFlags": ["✓ Connaît toutes les histoires de la ville", "✓ Parle trois langues", "✓ Très enthousiaste"],
-            "redFlags": ["✗ Marche 15 kilomètres par jour", "✗ Parle sans s'arrêter", "✗ Déteste les embouteillages"]
+            "greenFlags": [
+              "✓ Connaît toutes les histoires de la ville",
+              "✓ Parle trois langues",
+              "✓ Très enthousiaste"
+            ],
+            "redFlags": [
+              "✗ Marche 15 kilomètres par jour",
+              "✗ Parle sans s'arrêter",
+              "✗ Déteste les embouteillages"
+            ]
           }
         ],
         "opener": "Coucou ! Quel monument parisien aimerais-tu visiter avec moi ?",
-        "icebreakers": ["La Tour Eiffel !", "Le Musée du Louvre !", "Notre-Dame de Paris !"],
-        "prompt": "Quel est le métier de Manon ? Quels monuments fait-elle découvrir ?"
+        "icebreakers": [
+          "La Tour Eiffel !",
+          "Le Musée du Louvre !",
+          "Notre-Dame de Paris !"
+        ],
+        "prompt": "Quel est le métier de Manon ? Quels monuments fait-elle découvrir ?",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Manon, 27 ans, located in Paris, France. Guide dynamique avec un microphone à la main devant le musée du Louvre. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ]
   },
@@ -128,19 +196,36 @@
         "avatar": "👨‍💼",
         "gradient": "linear-gradient(135deg, #475569 0%, #334155 100%)",
         "visualDescription": "Propriétaire d'un appartement haussmannien lumineux avec parquet en point de Hongrie et cheminée.",
-        "interests": ["#ParquetAncien", "#Moulures", "#CheminéeMarbre"],
+        "interests": [
+          "#ParquetAncien",
+          "#Moulures",
+          "#CheminéeMarbre"
+        ],
         "anthem": "🎵 'Ne me quitte pas' - Jacques Brel",
         "pages": [
           {
             "tag": "🖼️ Profil",
             "bio": "Je suis Antoine. Mon appartement haussmannien de trois pièces allie le charme de l'ancien au confort moderne. Situé au troisième étage d'un immeuble en pierre de taille, il offre un parquet d'origine en point de Hongrie, de magnifiques moulures et une cheminée en marbre fonctionnelle.",
-            "greenFlags": ["✓ Charme architectural historique", "✓ Grande hauteur sous plafond", "✓ Balcon filant avec vue"],
-            "redFlags": ["✗ Isolation phonique ancienne", "✗ Pas d'ascenseur", "✗ Charges de copropriété élevées"]
+            "greenFlags": [
+              "✓ Charme architectural historique",
+              "✓ Grande hauteur sous plafond",
+              "✓ Balcon filant avec vue"
+            ],
+            "redFlags": [
+              "✗ Isolation phonique ancienne",
+              "✗ Pas d'ascenseur",
+              "✗ Charges de copropriété élevées"
+            ]
           }
         ],
         "opener": "Bonjour ! Préférez-vous le charme historique du style haussmannien ou la modernité d'un loft ?",
-        "icebreakers": ["Le style haussmannien sans hésiter !", "Je préfère les lofts modernes !", "J'adore les cheminées en marbre !"],
-        "prompt": "Analyse les éléments architecturaux de l'appartement d'Antoine."
+        "icebreakers": [
+          "Le style haussmannien sans hésiter !",
+          "Je préfère les lofts modernes !",
+          "J'adore les cheminées en marbre !"
+        ],
+        "prompt": "Analyse les éléments architecturaux de l'appartement d'Antoine.",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Antoine, 29 ans, located in Paris (6ème). Propriétaire d'un appartement haussmannien lumineux avec parquet en point de Hongrie et cheminée. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ]
   },
@@ -157,20 +242,37 @@
         "avatar": "🇫🇷",
         "gradient": "linear-gradient(135deg, #1d4ed8 0%, #ef4444 100%)",
         "visualDescription": "Homme français élégant dans un café lyonnais dégustant un vin de terroir.",
-        "interests": ["#Gastronomie", "#ArtDeVivre", "#Patrimoine"],
+        "interests": [
+          "#Gastronomie",
+          "#ArtDeVivre",
+          "#Patrimoine"
+        ],
         "anthem": "🎵 'L'Hymne à l'amour' - Édith Piaf",
         "film": "🎬 'La Grande Illusion' (Jean Renoir)",
         "pages": [
           {
             "tag": "🖼️ Profil",
             "bio": "Bonjour. Je m'appelle Alexandre. La nationalité française s'incarne à travers un art de vivre séculaire où la gastronomie, la philosophie et le patrimoine occupent une place prépondérante. Passionné par l'œnologie et les traditions culinaires régionales, je considère le repas gastronomique comme un moment privilégié d'échange intellectuel.",
-            "greenFlags": ["✓ Érudition culturelle et gastronomique", "✓ Maîtrise des accords mets et vins", "✓ Esprit critique et débattement raffiné"],
-            "redFlags": ["✗ Exigence absolue sur la cuisson du pain", "✗ Soupire face au vin servi à mauvaise température", "✗ Débats philosophiques interminables"]
+            "greenFlags": [
+              "✓ Érudition culturelle et gastronomique",
+              "✓ Maîtrise des accords mets et vins",
+              "✓ Esprit critique et débattement raffiné"
+            ],
+            "redFlags": [
+              "✗ Exigence absolue sur la cuisson du pain",
+              "✗ Soupire face au vin servi à mauvaise température",
+              "✗ Débats philosophiques interminables"
+            ]
           }
         ],
         "opener": "Bonjour ! Dans quelle mesure la gastronomie et le patrimoine façonnent-ils l'identité culturelle d'une nation ?",
-        "icebreakers": ["La gastronomie est essentielle !", "C'est une tradition séculaire passionnante !", "Parlons d'art de vivre !"],
-        "prompt": "Analyse l'expression de la culture française et de l'art de vivre d'après le portrait d'Alexandre."
+        "icebreakers": [
+          "La gastronomie est essentielle !",
+          "C'est une tradition séculaire passionnante !",
+          "Parlons d'art de vivre !"
+        ],
+        "prompt": "Analyse l'expression de la culture française et de l'art de vivre d'après le portrait d'Alexandre.",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Alexandre, 30 ans, located in Lyon, France. Homme français élégant dans un café lyonnais dégustant un vin de terroir. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ]
   }

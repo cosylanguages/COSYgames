@@ -39,7 +39,8 @@
         "No, but I want to learn!",
         "I prefer walking!"
       ],
-      "prompt": "Where do you like to ride a bicycle or walk? What do you see in the park?"
+      "prompt": "Where do you like to ride a bicycle or walk? What do you see in the park?",
+      "imagePrompt": "Authentic lifestyle candid photograph illustrating Cycling in the Park at 0.3 miles away , River Park. Red bicycle parked near a green tree in a park. Shallow depth of field, warm golden-hour lighting, cinematic color grading, hyper-detailed 35mm camera portrait."
     }
   ],
   "A2": [
@@ -82,7 +83,8 @@
         "Olive oil and balsamic!",
         "Garlic butter!"
       ],
-      "prompt": "Explain the basic steps of sourdough baking using simple present tenses."
+      "prompt": "Explain the basic steps of sourdough baking using simple present tenses.",
+      "imagePrompt": "Authentic lifestyle candid photograph illustrating Sourdough Bread Baking at Kitchen Bench. Golden loaf of sourdough bread on a wooden cutting board with a knife. Shallow depth of field, warm golden-hour lighting, cinematic color grading, hyper-detailed 35mm camera portrait."
     }
   ],
   "B1": [
@@ -125,7 +127,8 @@
         "Terrified of heights! 😅",
         "Eager to try it out!"
       ],
-      "prompt": "Describe how rock climbing combines physical conditioning with mental focus."
+      "prompt": "Describe how rock climbing combines physical conditioning with mental focus.",
+      "imagePrompt": "Authentic lifestyle candid photograph illustrating Bouldering & Rock Climbing at Peak Climbing Gym. Climber wearing chalk bag, gripping indoor bouldering holds on an overhang wall. Shallow depth of field, warm golden-hour lighting, cinematic color grading, hyper-detailed 35mm camera portrait."
     }
   ],
   "B2": [
@@ -168,7 +171,8 @@
         "Digital abundance enables speed!",
         "Analog preserves authentic soul!"
       ],
-      "prompt": "Critique the psychological and aesthetic divergences between digital smartphone photography and traditional 35mm analog film."
+      "prompt": "Critique the psychological and aesthetic divergences between digital smartphone photography and traditional 35mm analog film.",
+      "imagePrompt": "Authentic lifestyle candid photograph illustrating 35mm Analog Film Photography at Darkroom & City Streets. Vintage 35mm film camera resting on a darkroom wooden bench next to developed negatives. Shallow depth of field, warm golden-hour lighting, cinematic color grading, hyper-detailed 35mm camera portrait."
     }
   ]
 }

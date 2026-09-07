@@ -39,7 +39,8 @@
         "Let us drink tea together!",
         "Have a great day!"
       ],
-      "prompt": "What does a kind person do? Describe 2 simple actions."
+      "prompt": "What does a kind person do? Describe 2 simple actions.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Kind & Friendly Friend, 20, located in 1 mile away , Neighborhood. Smiling young person holding a warm cup of cocoa. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ],
   "A2": [
@@ -82,7 +83,8 @@
         "I am spontaneous!",
         "A bit of both!"
       ],
-      "prompt": "Why is reliability an important trait in friendship? Give an example."
+      "prompt": "Why is reliability an important trait in friendship? Give an example.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Organized & Reliable (Sophia), 26, located in 2 miles away , West End. Focused young woman checking off tasks in a paper planner at her clean desk. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ],
   "B1": [
@@ -125,7 +127,8 @@
         "Emotional intuition!",
         "An equal balance of both!"
       ],
-      "prompt": "Explain how emotional intelligence helps resolve interpersonal conflicts between friends."
+      "prompt": "Explain how emotional intelligence helps resolve interpersonal conflicts between friends.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Empathetic & Intuitive (Daniel), 28, located in 1.8 miles away , Maple Heights. Warm-hearted man listening intently during a conversation at a quiet coffee shop. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ],
   "B2": [
@@ -168,7 +171,8 @@
         "Resilience under severe crisis!",
         "Leading by moral example!"
       ],
-      "prompt": "Differentiate between transactional management and transformative resilient leadership in modern organizations."
+      "prompt": "Differentiate between transactional management and transformative resilient leadership in modern organizations.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Visionary & Resilient (Helena), 32, located in 1.5 miles away , Enterprise Square. Determined female executive standing on a terrace overlooking the city skyline. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ]
 }

@@ -39,7 +39,8 @@
         "I need a big garden!",
         "Great price!"
       ],
-      "prompt": "Name 3 things inside this studio flat using simple words."
+      "prompt": "Name 3 things inside this studio flat using simple words.",
+      "imagePrompt": "High-end architectural and interior photography of Cozy Studio Flat in 0.8 miles away , Sunny Avenue. Small studio flat with a big sunny window, yellow sofa, and small kitchen. Natural daylight streaming through windows, cozy inviting atmosphere, 35mm lens, photorealistic 8k detail, ultra-high quality."
     },
     {
       "type": "profile",
@@ -80,7 +81,8 @@
         "I prefer living in the city!",
         "Nice red bricks!"
       ],
-      "prompt": "Is this house in a city or a quiet village? How many bedrooms does it have?"
+      "prompt": "Is this house in a city or a quiet village? How many bedrooms does it have?",
+      "imagePrompt": "High-end architectural and interior photography of Red Brick House in 4 miles away , Green Village. Two-story red brick house with a green lawn and white fence. Natural daylight streaming through windows, cozy inviting atmosphere, 35mm lens, photorealistic 8k detail, ultra-high quality."
     }
   ],
   "A2": [
@@ -123,7 +125,8 @@
         "Too noisy for me!",
         "Awesome big windows!"
       ],
-      "prompt": "Describe the main features of this loft apartment and its location."
+      "prompt": "Describe the main features of this loft apartment and its location.",
+      "imagePrompt": "High-end architectural and interior photography of Modern Loft Apartment in 1.2 miles away , Arts District. Industrial loft with high concrete ceilings, large glass windows, leather couch, and kitchen island. Natural daylight streaming through windows, cozy inviting atmosphere, 35mm lens, photorealistic 8k detail, ultra-high quality."
     },
     {
       "type": "profile",
@@ -164,7 +167,8 @@
         "I prefer apartment living",
         "I love stone fireplaces!"
       ],
-      "prompt": "Compare this suburban cottage with the city loft apartment using A2 vocabulary."
+      "prompt": "Compare this suburban cottage with the city loft apartment using A2 vocabulary.",
+      "imagePrompt": "High-end architectural and interior photography of Suburban Cottage with Garden in 5 miles away , Oak Hill. Cozy stone cottage with flower boxes, wooden porch swing, lawn, and chimney. Natural daylight streaming through windows, cozy inviting atmosphere, 35mm lens, photorealistic 8k detail, ultra-high quality."
     }
   ],
   "B1": [
@@ -207,7 +211,8 @@
         "Brand-new sleek modern!",
         "A cozy country home!"
       ],
-      "prompt": "Evaluate the architectural contrast between historic industrial brickwork and modern fixtures."
+      "prompt": "Evaluate the architectural contrast between historic industrial brickwork and modern fixtures.",
+      "imagePrompt": "High-end architectural and interior photography of Converted Paper Mill Loft in 1 mile away , Riverfront District. Historic paper mill converted into a luxury loft with exposed red brick, heavy timber beams, and river views. Natural daylight streaming through windows, cozy inviting atmosphere, 35mm lens, photorealistic 8k detail, ultra-high quality."
     },
     {
       "type": "profile",
@@ -248,7 +253,8 @@
         "Nice bonus but location first!",
         "Interested in solar tech!"
       ],
-      "prompt": "Describe the sustainable technologies integrated into this eco-friendly villa."
+      "prompt": "Describe the sustainable technologies integrated into this eco-friendly villa.",
+      "imagePrompt": "High-end architectural and interior photography of Eco-Friendly Solar Villa in 6 miles away , Sun Valley. Sustainable two-story villa with rooftop solar panels, rainwater harvesting, vertical plant wall, and timber deck. Natural daylight streaming through windows, cozy inviting atmosphere, 35mm lens, photorealistic 8k detail, ultra-high quality."
     }
   ],
   "B2": [
@@ -291,7 +297,8 @@
         "Excessive luxury is problematic!",
         "Impressive engineering achievement!"
       ],
-      "prompt": "Analyze the architectural engineering, structural dynamics, and urban exclusivity of high-rise penthouse living."
+      "prompt": "Analyze the architectural engineering, structural dynamics, and urban exclusivity of high-rise penthouse living.",
+      "imagePrompt": "High-end architectural and interior photography of Penthouse Sky Villa in 0.5 miles away , Pinnacle Tower. Luxury penthouse terrace featuring a private glass-edge infinity pool, 360-degree skyline panoramas, and smart automation. Natural daylight streaming through windows, cozy inviting atmosphere, 35mm lens, photorealistic 8k detail, ultra-high quality."
     },
     {
       "type": "profile",
@@ -332,7 +339,8 @@
         "Urban velocity always!",
         "Seasonal balance between both!"
       ],
-      "prompt": "Evaluate how residing in isolated natural topography influences psychological well-being and daily routine."
+      "prompt": "Evaluate how residing in isolated natural topography influences psychological well-being and daily routine.",
+      "imagePrompt": "High-end architectural and interior photography of Alpine Timber Chalet in 12 miles away , Summit Crest. Rustic timber chalet set in alpine pine forests, featuring cathedral glass windows, cedar sauna, and stone hearth. Natural daylight streaming through windows, cozy inviting atmosphere, 35mm lens, photorealistic 8k detail, ultra-high quality."
     }
   ]
 }

@@ -39,7 +39,8 @@
         "Chocolate cake for me!",
         "I love croissants!"
       ],
-      "prompt": "What does Chef John make every morning? Is his job early or late?"
+      "prompt": "What does Chef John make every morning? Is his job early or late?",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Baker (Chef John), 30 yrs exp, located in 0.5 miles away , Sunrise Bakery. Man in a white hat and apron. He makes fresh bread and cakes in a bakery. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     },
     {
       "type": "profile",
@@ -80,7 +81,8 @@
         "I have a headache",
         "Thank you doctor!"
       ],
-      "prompt": "Where does Dr. Sarah work? What clothes does she wear?"
+      "prompt": "Where does Dr. Sarah work? What clothes does she wear?",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Doctor (Dr. Sarah), 8 yrs exp, located in 2 miles away , City Hospital. Doctor wearing a white coat and blue stethoscope in a bright clinic. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ],
   "A2": [
@@ -123,7 +125,8 @@
         "Blue and pastel pink!",
         "Green and earthy brown!"
       ],
-      "prompt": "What tools does Nina use for her work? Why does she enjoy her job?"
+      "prompt": "What tools does Nina use for her work? Why does she enjoy her job?",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Graphic Designer (Nina), 4 yrs exp, located in 1 mile away , Creative Loft. Creative designer sitting with a drawing tablet, stylus pen, and colorful art posters. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     },
     {
       "type": "profile",
@@ -164,7 +167,8 @@
         "Evening relaxing walks!",
         "Weekend sports!"
       ],
-      "prompt": "What does Alex do to help his clients? Would you like a personal trainer?"
+      "prompt": "What does Alex do to help his clients? Would you like a personal trainer?",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Fitness Trainer (Alex), 6 yrs exp, located in 0.5 miles away , Metro Gym. Fit trainer wearing a black gym shirt and stopwatch, guiding a client in the gym. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ],
   "B1": [
@@ -207,7 +211,8 @@
         "Intimidated by code!",
         "I write code too!"
       ],
-      "prompt": "Explain the responsibilities of a software engineer using intermediate career vocabulary."
+      "prompt": "Explain the responsibilities of a software engineer using intermediate career vocabulary.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Software Engineer (Marcus), 5 yrs exp, located in 1.5 miles away , Tech Hub. Software engineer working at a dual-monitor standing desk, wearing noise-canceling headphones. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     },
     {
       "type": "profile",
@@ -248,7 +253,8 @@
         "Wildlife conservation!",
         "Reducing plastic waste!"
       ],
-      "prompt": "What key skills and ethical duties are necessary for an environmental journalist?"
+      "prompt": "What key skills and ethical duties are necessary for an environmental journalist?",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Environmental Journalist (Clara), 6 yrs exp, located in 2 miles away , Press Building. Journalist holding a recording microphone, interviewing an engineer near wind turbines. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ],
   "B2": [
@@ -291,7 +297,8 @@
         "Innovation requires market autonomy!",
         "Adaptive risk-proportionate oversight!"
       ],
-      "prompt": "Evaluate the moral dilemmas, policy challenges, and societal impact of AI ethics research."
+      "prompt": "Evaluate the moral dilemmas, policy challenges, and societal impact of AI ethics research.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of AI Ethics Researcher (Dr. Aris), 7 yrs exp, located in 1.2 miles away , Innovation Campus. Researcher auditing algorithmic bias charts on transparent displays in a university research laboratory. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     },
     {
       "type": "profile",
@@ -332,7 +339,8 @@
         "Prioritize modern infrastructure!",
         "Adaptive reuse is the bridge!"
       ],
-      "prompt": "Analyze the ideological debate between historical architectural conservation and contemporary urban development."
+      "prompt": "Analyze the ideological debate between historical architectural conservation and contemporary urban development.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Architectural Conservationist (Soren), 8 yrs exp, located in 0.9 miles away , Heritage Bureau. Architect examining intricate stonework details of a historic cathedral during a restoration project. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ]
 }

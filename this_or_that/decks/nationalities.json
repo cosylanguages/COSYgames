@@ -39,7 +39,8 @@
         "I love Japanese food!",
         "Tokyo is a big city!"
       ],
-      "prompt": "What is Kenji's nationality and home country? What food does he eat?"
+      "prompt": "What is Kenji's nationality and home country? What food does he eat?",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Kenji (Japanese 🇯🇵), 24, located in Tokyo, Japan , 🇯🇵 Japanese. Young Japanese man with neat short dark hair, wearing a traditional summer yukata robe. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     },
     {
       "type": "profile",
@@ -80,7 +81,8 @@
         "I want to visit Rome!",
         "Ciao Sofia!"
       ],
-      "prompt": "Where is Sofia from? What is her nationality and native food?"
+      "prompt": "Where is Sofia from? What is her nationality and native food?",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Sofia (Italian 🇮🇹), 23, located in Rome, Italy , 🇮🇹 Italian. Italian woman with brown wavy hair in Rome. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ],
   "A2": [
@@ -123,7 +125,8 @@
         "Day of the Dead looks beautiful!",
         "Teach me salsa dancing!"
       ],
-      "prompt": "Describe Mateo's nationality, traditions, and traditional dishes using A2 connectors."
+      "prompt": "Describe Mateo's nationality, traditions, and traditional dishes using A2 connectors.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Mateo (Mexican 🇲🇽), 26, located in Oaxaca, Mexico , 🇲🇽 Spanish. Mexican man in an embroidered shirt holding corn tacos in a town square. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     },
     {
       "type": "profile",
@@ -164,7 +167,8 @@
         "Tell me more about hygge!",
         "Copenhagen is beautiful!"
       ],
-      "prompt": "What country is Freja from? Describe two aspects of Danish lifestyle."
+      "prompt": "What country is Freja from? Describe two aspects of Danish lifestyle.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Freja (Danish 🇩🇰), 25, located in Copenhagen, Denmark , 🇩🇰 Danish. Danish woman riding a bicycle along Copenhagen harbor in a sweater. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ],
   "B1": [
@@ -207,7 +211,8 @@
         "I've heard about the Jollof debate!",
         "Love the colorful attire!"
       ],
-      "prompt": "Discuss Amara's Nigerian cultural identity, gastronomy, and musical heritage using intermediate language."
+      "prompt": "Discuss Amara's Nigerian cultural identity, gastronomy, and musical heritage using intermediate language.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Amara (Nigerian 🇳🇬), 28, located in Lagos, Nigeria , 🇳🇬 Igbo & English. Nigerian woman wearing a patterned Ankara headwrap and traditional attire in Lagos. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     },
     {
       "type": "profile",
@@ -248,7 +253,8 @@
         "Jaipur looks breathtaking!",
         "Tell me about Indian architecture!"
       ],
-      "prompt": "Examine Aarav's Indian nationality, cultural ethos of hospitality, and gastronomy."
+      "prompt": "Examine Aarav's Indian nationality, cultural ethos of hospitality, and gastronomy.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Aarav (Indian 🇮🇳), 27, located in Jaipur, India , 🇮🇳 Hindi & English. Indian man in a blue kurta near Jaipur monuments holding cardamom chai. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ],
   "B2": [
@@ -291,7 +297,8 @@
         "I admire the Parisian art de vivre!",
         "Debating philosophy sounds great!"
       ],
-      "prompt": "Analyze Camille's expression of French cultural heritage, 'art de vivre', and gastronomic philosophy."
+      "prompt": "Analyze Camille's expression of French cultural heritage, 'art de vivre', and gastronomic philosophy.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Camille (French 🇫🇷), 29, located in Paris, France , 🇫🇷 French. French woman in a trench coat seated at a Parisian pavement café with wine. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     },
     {
       "type": "profile",
@@ -332,7 +339,8 @@
         "Rio de Janeiro looks paradise-like!",
         "Tell me about Carnival traditions!"
       ],
-      "prompt": "Evaluate Leandro's articulation of Brazilian multicultural syncretism, musical heritage, and communal social ethos."
+      "prompt": "Evaluate Leandro's articulation of Brazilian multicultural syncretism, musical heritage, and communal social ethos.",
+      "imagePrompt": "Modern candid portrait photograph for a profile of Leandro (Brazilian 🇧🇷), 30, located in Rio de Janeiro, Brazil , 🇧🇷 Portuguese. Brazilian man playing beach volleyball on Ipanema Beach in Rio de Janeiro. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
     }
   ]
 }

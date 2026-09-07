@@ -12,20 +12,37 @@
         "avatar": "👩",
         "gradient": "linear-gradient(135deg, #16a34a 0%, #facc15 100%)",
         "visualDescription": "Giovane donna con lunghi capelli castani e occhi verdi, con un vestito giallo.",
-        "interests": ["#CapelliCastani", "#OcchiVerdi", "#VestitoGiallo"],
+        "interests": [
+          "#CapelliCastani",
+          "#OcchiVerdi",
+          "#VestitoGiallo"
+        ],
         "anthem": "🎵 'Nel blu dipinto di blu (Volare)' - Domenico Modugno",
         "film": "🎬 'La vita è bella' (Roberto Benigni)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
             "bio": "Ciao! Mi chiamo Giulia. Ho 22 anni. Sono alta e magra. Ho i capelli castani e gli occhi verdi. Mi piacciono i vestiti luminosi. Indosso un vestito giallo e scarpe bianche. Ho sempre un grande sorriso!",
-            "greenFlags": ["✓ Sorriso simpatico", "✓ Molto gentile", "✓ Capelli curati"],
-            "redFlags": ["✗ Parla a voce alta", "✗ Arriva sempre in ritardo", "✗ Beve troppo caffè"]
+            "greenFlags": [
+              "✓ Sorriso simpatico",
+              "✓ Molto gentile",
+              "✓ Capelli curati"
+            ],
+            "redFlags": [
+              "✗ Parla a voce alta",
+              "✗ Arriva sempre in ritardo",
+              "✗ Beve troppo caffè"
+            ]
           }
         ],
         "opener": "Ciao! Ti piacciono i vestiti gialli o le scarpe bianche?",
-        "icebreakers": ["Mi piace il giallo!", "Preferisco il bianco!", "Hai un bel sorriso!"],
-        "prompt": "Descrivi Giulia. Che colore hanno i suoi capelli e i suoi occhi?"
+        "icebreakers": [
+          "Mi piace il giallo!",
+          "Preferisco il bianco!",
+          "Hai un bel sorriso!"
+        ],
+        "prompt": "Descrivi Giulia. Che colore hanno i suoi capelli e i suoi occhi?",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Giulia, 22 anni, located in Roma, Italia. Giovane donna con lunghi capelli castani e occhi verdi, con un vestito giallo. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ],
     "professions": [
@@ -40,20 +57,37 @@
         "avatar": "👨‍🍳",
         "gradient": "linear-gradient(135deg, #dc2626 0%, #f87171 100%)",
         "visualDescription": "Pizzaiolo napoletano che prepara pizza Margherita nel forno a legna.",
-        "interests": ["#PizzaNapoletana", "#FornoALegna", "#Mozzarella"],
+        "interests": [
+          "#PizzaNapoletana",
+          "#FornoALegna",
+          "#Mozzarella"
+        ],
         "anthem": "🎵 'O Sole Mio' - Luciano Pavarotti",
         "film": "🎬 'L'oro di Napoli' (Vittorio De Sica)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
             "bio": "Sono Matteo, un pizzaiolo napoletano. Faccio la pizza Margherita con pomodoro fresco, mozzarella e basilico. Cucino nel forno a legna molto caldo. La mia pizza è buona e profumata!",
-            "greenFlags": ["✓ Pizza calda ogni giorno", "✓ Ingredienti freschi", "✓ Sempre allegro"],
-            "redFlags": ["✗ Farina sui vestiti", "✗ Lavora fino a tarda notte", "✗ Forno molto caldo"]
+            "greenFlags": [
+              "✓ Pizza calda ogni giorno",
+              "✓ Ingredienti freschi",
+              "✓ Sempre allegro"
+            ],
+            "redFlags": [
+              "✗ Farina sui vestiti",
+              "✗ Lavora fino a tarda notte",
+              "✗ Forno molto caldo"
+            ]
           }
         ],
         "opener": "Ciao! Ti piace la pizza Margherita o la pizza ai formaggi?",
-        "icebreakers": ["Pizza Margherita per me!", "Amo i formaggi!", "La pizza napoletana è la migliore!"],
-        "prompt": "Cosa prepara lo chef Matteo nel suo forno a legna?"
+        "icebreakers": [
+          "Pizza Margherita per me!",
+          "Amo i formaggi!",
+          "La pizza napoletana è la migliore!"
+        ],
+        "prompt": "Cosa prepara lo chef Matteo nel suo forno a legna?",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Chef Matteo, 32 anni, located in Napoli, Italia. Pizzaiolo napoletano che prepara pizza Margherita nel forno a legna. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ]
   },
@@ -70,20 +104,37 @@
         "avatar": "👨‍💼",
         "gradient": "linear-gradient(135deg, #ea580c 0%, #f97316 100%)",
         "visualDescription": "Proprietario di un luminoso appartamento con terrazza fiorita a Firenze.",
-        "interests": ["#TerrazzaFiorita", "#VistaPanoramica", "#CentroStorico"],
+        "interests": [
+          "#TerrazzaFiorita",
+          "#VistaPanoramica",
+          "#CentroStorico"
+        ],
         "anthem": "🎵 'Azzurro' - Adriano Celentano",
         "film": "🎬 'A Room with a View' (James Ivory)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
             "bio": "Sono Lorenzo. Ho un grazioso appartamento situato nel centro storico di Firenze. Ha due camere da letto, un soggiorno luminoso e una grande terrazza con piante e fiori. È perfetto per fare colazione all'aperto nelle mattine d'estate.",
-            "greenFlags": ["✓ Splendida vista sui tetti", "✓ Spazio aperto per colazione", "✓ Vicino ai musei"],
-            "redFlags": ["✗ Molte scale senza ascensore", "✗ Rumore del traffico serale", "✗ Terrazza da innaffiare ogni giorno"]
+            "greenFlags": [
+              "✓ Splendida vista sui tetti",
+              "✓ Spazio aperto per colazione",
+              "✓ Vicino ai musei"
+            ],
+            "redFlags": [
+              "✗ Molte scale senza ascensore",
+              "✗ Rumore del traffico serale",
+              "✗ Terrazza da innaffiare ogni giorno"
+            ]
           }
         ],
         "opener": "Ciao! Ti piacerebbe fare colazione su una terrazza fiorita a Firenze?",
-        "icebreakers": ["Sarebbe bellissimo!", "Preferisco una casa con giardino!", "Amo Firenze!"],
-        "prompt": "Descrivi le caratteristiche principali dell'appartamento di Lorenzo."
+        "icebreakers": [
+          "Sarebbe bellissimo!",
+          "Preferisco una casa con giardino!",
+          "Amo Firenze!"
+        ],
+        "prompt": "Descrivi le caratteristiche principali dell'appartamento di Lorenzo.",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Lorenzo, 27 anni, located in Firenze, Italia. Proprietario di un luminoso appartamento con terrazza fiorita a Firenze. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ]
   },
@@ -100,20 +151,37 @@
         "avatar": "👩‍🍳",
         "gradient": "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
         "visualDescription": "Preparazione artigianale di tagliatelle fresche al mattarello su tagliere di legno.",
-        "interests": ["#PastaFresca", "#Mattarello", "#TradizioneEmiliana"],
+        "interests": [
+          "#PastaFresca",
+          "#Mattarello",
+          "#TradizioneEmiliana"
+        ],
         "anthem": "🎵 'Caruso' - Andrea Bocelli",
         "film": "🎬 'Big Night' (Campbell Scott)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
             "bio": "Sono Francesca. La pastificazione artigianale è per me un'arte culinaria che richiede pazienza, farina di grano tenero e uova fresche. Stendere la sfoglia con il mattarello di legno permette di ottenere una consistenza porosa ideale per trattenere il tradizionale ragù alla bolognese.",
-            "greenFlags": ["✓ Pasta fresca fatta in casa", "✓ Conservazione delle tradizioni familiari", "✓ Sapore autentico"],
-            "redFlags": ["✗ Richiede ore di preparazione", "✗ Farina ovunque in cucina", "✗ Porzioni abbondanti irrinunciabili"]
+            "greenFlags": [
+              "✓ Pasta fresca fatta in casa",
+              "✓ Conservazione delle tradizioni familiari",
+              "✓ Sapore autentico"
+            ],
+            "redFlags": [
+              "✗ Richiede ore di preparazione",
+              "✗ Farina ovunque in cucina",
+              "✗ Porzioni abbondanti irrinunciabili"
+            ]
           }
         ],
         "opener": "Ciao! Preferisci la pasta fresca fatta in casa o i piatti pronti veloci?",
-        "icebreakers": ["La pasta fresca fatta in casa!", "Amo il ragù bolognese!", "Vorrei imparare ad usare il mattarello!"],
-        "prompt": "Spiega il processo di preparazione della pasta fresca artigianale secondo Francesca."
+        "icebreakers": [
+          "La pasta fresca fatta in casa!",
+          "Amo il ragù bolognese!",
+          "Vorrei imparare ad usare il mattarello!"
+        ],
+        "prompt": "Spiega il processo di preparazione della pasta fresca artigianale secondo Francesca.",
+        "imagePrompt": "Authentic lifestyle candid photograph illustrating Francesca at Bologna, Italia. Preparazione artigianale di tagliatelle fresche al mattarello su tagliere di legno. Shallow depth of field, warm golden-hour lighting, cinematic color grading, hyper-detailed 35mm camera portrait."
       }
     ]
   },
@@ -130,20 +198,37 @@
         "avatar": "🇮🇹",
         "gradient": "linear-gradient(135deg, #059669 0%, #dc2626 100%)",
         "visualDescription": "Uomo italiano raffinato mentre gusta un espresso in un caffè milanese.",
-        "interests": ["#Italiano", "#DesignMilano", "#CulturaCaffè"],
+        "interests": [
+          "#Italiano",
+          "#DesignMilano",
+          "#CulturaCaffè"
+        ],
         "anthem": "🎵 'Via con me' - Paolo Conte",
         "film": "🎬 'La grande bellezza' (Paolo Sorrentino)",
         "pages": [
           {
             "tag": "🖼️ Profilo",
             "bio": "Buongiorno. Sono Marco. La nazionalità italiana si distingue per un connubio inscindibile tra patrimonio artistico millenario, eccellenza nel design e una cultura enogastronomica di rilievo mondiale. Dal rituale quotidiano del caffè espresso al dibattito sulla conservazione delle tradizioni architettoniche.",
-            "greenFlags": ["✓ Profonda conoscenza del design e dell'arte", "✓ Gusto raffinato per l'alta sartoria", "✓ Passione per la convivialità"],
-            "redFlags": ["✗ Reazione drammatica se la pasta è scotta", "✗ Gestualità espressiva travolgente", "✗ Intransigenza sulla qualità dell'espresso"]
+            "greenFlags": [
+              "✓ Profonda conoscenza del design e dell'arte",
+              "✓ Gusto raffinato per l'alta sartoria",
+              "✓ Passione per la convivialità"
+            ],
+            "redFlags": [
+              "✗ Reazione drammatica se la pasta è scotta",
+              "✗ Gestualità espressiva travolgente",
+              "✗ Intransigenza sulla qualità dell'espresso"
+            ]
           }
         ],
         "opener": "Buongiorno! In che modo il patrimonio artistico e il design influenzano l'identità culturale italiana?",
-        "icebreakers": ["L'arte e il design sono fondamentali!", "L'espresso italiano è inimitabile!", "Splendida cultura della bellezza!"],
-        "prompt": "Analizza i tratti distintivi dell'identità culturale italiana espressi da Marco."
+        "icebreakers": [
+          "L'arte e il design sono fondamentali!",
+          "L'espresso italiano è inimitabile!",
+          "Splendida cultura della bellezza!"
+        ],
+        "prompt": "Analizza i tratti distintivi dell'identità culturale italiana espressi da Marco.",
+        "imagePrompt": "Modern candid portrait photograph for a profile of Marco, 28 anni, located in Milano, Italia. Uomo italiano raffinato mentre gusta un espresso in un caffè milanese. Soft natural cinematic lighting, shot on 85mm portrait lens at f/1.8, high detail skin texture, shallow bokeh background, highly aesthetic."
       }
     ]
   }
