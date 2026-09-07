@@ -7,6 +7,2684 @@
     const GAME_TITLE = 'This or That? 🔥';
     const GAME_META = 'Tinder Profiles & Speaking Drills';
 
+    // Decks for Physical Appearance (50 profiles), Character & Hobbies
+    const SPECIAL_DECKS = {
+        "appearance": [
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Slim & Tall",
+                        "age": "21 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #1",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(27, 70%, 45%) 0%, hsl(87, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#PlatinumBlondeBob",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #1'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a slim & tall frame (6'1\"). Has deep dimples and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with a warm welcoming smile.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating deep dimples"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Slim & Tall",
+                        "age": "22 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #2",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(54, 70%, 45%) 0%, hsl(114, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#PlatinumBlondeBob",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #2'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a slim & tall frame (6'1\"). Has prominent jawline and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with defined cheekbones.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating prominent jawline"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Slim & Tall",
+                        "age": "23 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #3",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(81, 70%, 45%) 0%, hsl(141, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#PlatinumBlondeBob",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #3'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a slim & tall frame (6'1\"). Has charming freckles and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with striking blue eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating charming freckles"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Slim & Tall",
+                        "age": "24 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #4",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(108, 70%, 45%) 0%, hsl(168, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#PlatinumBlondeBob",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #4'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a slim & tall frame (6'1\"). Has a warm welcoming smile and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with sparkling green eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating a warm welcoming smile"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Slim & Tall",
+                        "age": "25 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #5",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(135, 70%, 45%) 0%, hsl(195, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#PlatinumBlondeBob",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #5'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a slim & tall frame (6'1\"). Has defined cheekbones and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with deep dimples.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating defined cheekbones"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Curvy & Radiant",
+                        "age": "26 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #6",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(162, 70%, 45%) 0%, hsl(222, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#PlatinumBlondeBob",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #6'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a curvy & radiant frame (5'6\"). Has striking blue eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with prominent jawline.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating striking blue eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Curvy & Radiant",
+                        "age": "27 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #7",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(189, 70%, 45%) 0%, hsl(249, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#PlatinumBlondeBob",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #7'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a curvy & radiant frame (5'6\"). Has sparkling green eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with charming freckles.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating sparkling green eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Curvy & Radiant",
+                        "age": "28 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #8",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(216, 70%, 45%) 0%, hsl(276, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#PlatinumBlondeBob",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #8'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a curvy & radiant frame (5'6\"). Has deep dimples and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with a warm welcoming smile.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating deep dimples"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Curvy & Radiant",
+                        "age": "29 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #9",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(243, 70%, 45%) 0%, hsl(303, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#PlatinumBlondeBob",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #9'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a curvy & radiant frame (5'6\"). Has prominent jawline and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with defined cheekbones.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating prominent jawline"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Curvy & Radiant",
+                        "age": "30 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #10",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(270, 70%, 45%) 0%, hsl(330, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#PlatinumBlondeBob",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #10'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a curvy & radiant frame (5'6\"). Has charming freckles and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with striking blue eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating charming freckles"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Muscular & Toned",
+                        "age": "31 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #11",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(297, 70%, 45%) 0%, hsl(357, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#PlatinumBlondeBob",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #11'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a muscular & toned frame (5'11\"). Has a warm welcoming smile and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with sparkling green eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating a warm welcoming smile"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Muscular & Toned",
+                        "age": "32 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #12",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(324, 70%, 45%) 0%, hsl(24, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#PlatinumBlondeBob",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #12'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a muscular & toned frame (5'11\"). Has defined cheekbones and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with deep dimples.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating defined cheekbones"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Muscular & Toned",
+                        "age": "33 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #13",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(351, 70%, 45%) 0%, hsl(51, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#PlatinumBlondeBob",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #13'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a muscular & toned frame (5'11\"). Has striking blue eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with prominent jawline.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating striking blue eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Muscular & Toned",
+                        "age": "34 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #14",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(18, 70%, 45%) 0%, hsl(78, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#PlatinumBlondeBob",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #14'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a muscular & toned frame (5'11\"). Has sparkling green eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with charming freckles.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating sparkling green eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Muscular & Toned",
+                        "age": "35 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #15",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(45, 70%, 45%) 0%, hsl(105, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#PlatinumBlondeBob",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #15'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a muscular & toned frame (5'11\"). Has deep dimples and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with a warm welcoming smile.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating deep dimples"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Petite & Expressive",
+                        "age": "36 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #16",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(72, 70%, 45%) 0%, hsl(132, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#PlatinumBlondeBob",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #16'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a petite & expressive frame (5'2\"). Has prominent jawline and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with defined cheekbones.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating prominent jawline"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Petite & Expressive",
+                        "age": "37 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #17",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(99, 70%, 45%) 0%, hsl(159, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#PlatinumBlondeBob",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #17'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a petite & expressive frame (5'2\"). Has charming freckles and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with striking blue eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating charming freckles"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Petite & Expressive",
+                        "age": "20 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #18",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(126, 70%, 45%) 0%, hsl(186, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#PlatinumBlondeBob",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #18'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a petite & expressive frame (5'2\"). Has a warm welcoming smile and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with sparkling green eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating a warm welcoming smile"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Petite & Expressive",
+                        "age": "21 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #19",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(153, 70%, 45%) 0%, hsl(213, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#PlatinumBlondeBob",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #19'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a petite & expressive frame (5'2\"). Has defined cheekbones and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with deep dimples.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating defined cheekbones"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Petite & Expressive",
+                        "age": "22 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #20",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(180, 70%, 45%) 0%, hsl(240, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#PlatinumBlondeBob",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #20'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a petite & expressive frame (5'2\"). Has striking blue eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with prominent jawline.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating striking blue eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Broad-Shouldered",
+                        "age": "23 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #21",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(207, 70%, 45%) 0%, hsl(267, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#PlatinumBlondeBob",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #21'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a broad-shouldered frame (6'3\"). Has sparkling green eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with charming freckles.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating sparkling green eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Broad-Shouldered",
+                        "age": "24 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #22",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(234, 70%, 45%) 0%, hsl(294, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#PlatinumBlondeBob",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #22'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a broad-shouldered frame (6'3\"). Has deep dimples and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with a warm welcoming smile.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating deep dimples"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Broad-Shouldered",
+                        "age": "25 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #23",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(261, 70%, 45%) 0%, hsl(321, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#PlatinumBlondeBob",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #23'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a broad-shouldered frame (6'3\"). Has prominent jawline and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with defined cheekbones.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating prominent jawline"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Broad-Shouldered",
+                        "age": "26 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #24",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(288, 70%, 45%) 0%, hsl(348, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#PlatinumBlondeBob",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #24'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a broad-shouldered frame (6'3\"). Has charming freckles and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with striking blue eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating charming freckles"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Platinum Blonde Bob & Broad-Shouldered",
+                        "age": "27 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #25",
+                        "verified": true,
+                        "avatar": "\ud83d\udc71\u200d\u2640\ufe0f",
+                        "gradient": "linear-gradient(135deg, hsl(315, 70%, 45%) 0%, hsl(15, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#PlatinumBlondeBob",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #25'",
+                        "pages": [
+                                {
+                                        "bio": "Features platinum blonde bob paired with a broad-shouldered frame (6'3\"). Has a warm welcoming smile and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with sparkling green eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive platinum blonde bob",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating a warm welcoming smile"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my platinum blonde bob and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Slim & Tall",
+                        "age": "28 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #26",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(342, 70%, 45%) 0%, hsl(42, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#WavyBrunetteLocks",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #26'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a slim & tall frame (6'1\"). Has defined cheekbones and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with deep dimples.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating defined cheekbones"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Slim & Tall",
+                        "age": "29 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #27",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(9, 70%, 45%) 0%, hsl(69, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#WavyBrunetteLocks",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #27'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a slim & tall frame (6'1\"). Has striking blue eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with prominent jawline.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating striking blue eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Slim & Tall",
+                        "age": "30 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #28",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(36, 70%, 45%) 0%, hsl(96, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#WavyBrunetteLocks",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #28'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a slim & tall frame (6'1\"). Has sparkling green eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with charming freckles.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating sparkling green eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Slim & Tall",
+                        "age": "31 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #29",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(63, 70%, 45%) 0%, hsl(123, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#WavyBrunetteLocks",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #29'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a slim & tall frame (6'1\"). Has deep dimples and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with a warm welcoming smile.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating deep dimples"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Slim & Tall",
+                        "age": "32 yrs",
+                        "location": "\ud83d\udccd 6'1\" \u2022 Appearance Profile #30",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(90, 70%, 45%) 0%, hsl(150, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#WavyBrunetteLocks",
+                                "#SlimTall"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #30'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a slim & tall frame (6'1\"). Has prominent jawline and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with defined cheekbones.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating prominent jawline"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Curvy & Radiant",
+                        "age": "33 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #31",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(117, 70%, 45%) 0%, hsl(177, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#WavyBrunetteLocks",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #31'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a curvy & radiant frame (5'6\"). Has charming freckles and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with striking blue eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating charming freckles"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Curvy & Radiant",
+                        "age": "34 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #32",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(144, 70%, 45%) 0%, hsl(204, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#WavyBrunetteLocks",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #32'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a curvy & radiant frame (5'6\"). Has a warm welcoming smile and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with sparkling green eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating a warm welcoming smile"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Curvy & Radiant",
+                        "age": "35 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #33",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(171, 70%, 45%) 0%, hsl(231, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#WavyBrunetteLocks",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #33'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a curvy & radiant frame (5'6\"). Has defined cheekbones and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with deep dimples.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating defined cheekbones"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Curvy & Radiant",
+                        "age": "36 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #34",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(198, 70%, 45%) 0%, hsl(258, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#WavyBrunetteLocks",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #34'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a curvy & radiant frame (5'6\"). Has striking blue eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with prominent jawline.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating striking blue eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Curvy & Radiant",
+                        "age": "37 yrs",
+                        "location": "\ud83d\udccd 5'6\" \u2022 Appearance Profile #35",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(225, 70%, 45%) 0%, hsl(285, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#WavyBrunetteLocks",
+                                "#CurvyRadiant"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #35'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a curvy & radiant frame (5'6\"). Has sparkling green eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with charming freckles.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating sparkling green eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Muscular & Toned",
+                        "age": "20 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #36",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(252, 70%, 45%) 0%, hsl(312, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#WavyBrunetteLocks",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #36'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a muscular & toned frame (5'11\"). Has deep dimples and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with a warm welcoming smile.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating deep dimples"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Muscular & Toned",
+                        "age": "21 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #37",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(279, 70%, 45%) 0%, hsl(339, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#WavyBrunetteLocks",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #37'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a muscular & toned frame (5'11\"). Has prominent jawline and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with defined cheekbones.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating prominent jawline"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Muscular & Toned",
+                        "age": "22 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #38",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(306, 70%, 45%) 0%, hsl(6, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#WavyBrunetteLocks",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #38'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a muscular & toned frame (5'11\"). Has charming freckles and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with striking blue eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating charming freckles"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Muscular & Toned",
+                        "age": "23 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #39",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(333, 70%, 45%) 0%, hsl(33, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#WavyBrunetteLocks",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #39'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a muscular & toned frame (5'11\"). Has a warm welcoming smile and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with sparkling green eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating a warm welcoming smile"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Muscular & Toned",
+                        "age": "24 yrs",
+                        "location": "\ud83d\udccd 5'11\" \u2022 Appearance Profile #40",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(0, 70%, 45%) 0%, hsl(60, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#WavyBrunetteLocks",
+                                "#MuscularToned"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #40'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a muscular & toned frame (5'11\"). Has defined cheekbones and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with deep dimples.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating defined cheekbones"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Petite & Expressive",
+                        "age": "25 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #41",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(27, 70%, 45%) 0%, hsl(87, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#WavyBrunetteLocks",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #41'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a petite & expressive frame (5'2\"). Has striking blue eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with prominent jawline.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating striking blue eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Petite & Expressive",
+                        "age": "26 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #42",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(54, 70%, 45%) 0%, hsl(114, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#WavyBrunetteLocks",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #42'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a petite & expressive frame (5'2\"). Has sparkling green eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with charming freckles.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating sparkling green eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Petite & Expressive",
+                        "age": "27 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #43",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(81, 70%, 45%) 0%, hsl(141, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#WavyBrunetteLocks",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #43'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a petite & expressive frame (5'2\"). Has deep dimples and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with a warm welcoming smile.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating deep dimples"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Petite & Expressive",
+                        "age": "28 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #44",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(108, 70%, 45%) 0%, hsl(168, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#WavyBrunetteLocks",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #44'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a petite & expressive frame (5'2\"). Has prominent jawline and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with defined cheekbones.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating prominent jawline"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Petite & Expressive",
+                        "age": "29 yrs",
+                        "location": "\ud83d\udccd 5'2\" \u2022 Appearance Profile #45",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(135, 70%, 45%) 0%, hsl(195, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#WavyBrunetteLocks",
+                                "#PetiteExpressive"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #45'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a petite & expressive frame (5'2\"). Has charming freckles and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with striking blue eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating charming freckles"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Broad-Shouldered",
+                        "age": "30 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #46",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(162, 70%, 45%) 0%, hsl(222, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Vintage",
+                                "#WavyBrunetteLocks",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #46'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a broad-shouldered frame (6'3\"). Has a warm welcoming smile and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Casual Vintage Denim. Frequently seen wearing retro jackets & high-waisted jeans. Stands out with sparkling green eyes.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish casual vintage denim outfit",
+                                                "\u2713 Captivating a warm welcoming smile"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and casual vintage denim look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Broad-Shouldered",
+                        "age": "31 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #47",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(189, 70%, 45%) 0%, hsl(249, 80%, 60%) 100%)",
+                        "interests": [
+                                "#SmartCasual",
+                                "#WavyBrunetteLocks",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #47'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a broad-shouldered frame (6'3\"). Has defined cheekbones and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Smart Casual Blazer. Frequently seen wearing tailored blazer over plain tee & chinos. Stands out with deep dimples.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish smart casual blazer outfit",
+                                                "\u2713 Captivating defined cheekbones"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and smart casual blazer look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Broad-Shouldered",
+                        "age": "32 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #48",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(216, 70%, 45%) 0%, hsl(276, 80%, 60%) 100%)",
+                        "interests": [
+                                "#EdgyGoth",
+                                "#WavyBrunetteLocks",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #48'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a broad-shouldered frame (6'3\"). Has striking blue eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Edgy Leather & Boots. Frequently seen wearing black leather jacket & Combat boots. Stands out with prominent jawline.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish edgy leather & boots outfit",
+                                                "\u2713 Captivating striking blue eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and edgy leather & boots look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Broad-Shouldered",
+                        "age": "33 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #49",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(243, 70%, 45%) 0%, hsl(303, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Preppy",
+                                "#WavyBrunetteLocks",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #49'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a broad-shouldered frame (6'3\"). Has sparkling green eyes and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Preppy Polo & Glasses. Frequently seen wearing pastel polo shirts & tortoiseshell frames. Stands out with charming freckles.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish preppy polo & glasses outfit",
+                                                "\u2713 Captivating sparkling green eyes"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and preppy polo & glasses look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                },
+                {
+                        "type": "profile",
+                        "category": "Physical Appearance \ud83d\udc41\ufe0f",
+                        "title": "Wavy Brunette Locks & Broad-Shouldered",
+                        "age": "34 yrs",
+                        "location": "\ud83d\udccd 6'3\" \u2022 Appearance Profile #50",
+                        "verified": true,
+                        "avatar": "\ud83d\udc69\u200d\ud83e\uddb1",
+                        "gradient": "linear-gradient(135deg, hsl(270, 70%, 45%) 0%, hsl(330, 80%, 60%) 100%)",
+                        "interests": [
+                                "#Athleisure",
+                                "#WavyBrunetteLocks",
+                                "#Broad-Shouldered"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Style & Elegance #50'",
+                        "pages": [
+                                {
+                                        "bio": "Features wavy brunette locks paired with a broad-shouldered frame (6'3\"). Has deep dimples and a distinct style.",
+                                        "tag": "\ud83d\uddbc\ufe0f Physical Look"
+                                },
+                                {
+                                        "bio": "Fashion vibe: Sporty Athleisure. Frequently seen wearing breathable hoodies & running shoes. Stands out with a warm welcoming smile.",
+                                        "tag": "\u2728 Clothing & Style"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Distinctive wavy brunette locks",
+                                                "\u2713 Stylish sporty athleisure outfit",
+                                                "\u2713 Captivating deep dimples"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Takes long time to choose outfits",
+                                                "\u2717 Mirror selfie enthusiast",
+                                                "\u2717 Hair product dependent"
+                                        ],
+                                        "tag": "\ud83d\udea9 Appearance Detail"
+                                }
+                        ],
+                        "opener": "Hi! How would you describe my wavy brunette locks and sporty athleisure look?",
+                        "icebreakers": [
+                                "You look very stylish!",
+                                "I love the hairstyle!",
+                                "Great fashion sense!"
+                        ],
+                        "prompt": "Describe this person's physical appearance using 4 adjectives (hair, height, build, fashion)."
+                }
+        ],
+        "character": [
+                {
+                        "type": "profile",
+                        "category": "Character & Personality \ud83e\udde0",
+                        "title": "Charismatic Optimist",
+                        "age": "28 yrs",
+                        "location": "\ud83d\udccd Social Catalyst",
+                        "verified": true,
+                        "avatar": "\ud83c\udf1f",
+                        "gradient": "linear-gradient(135deg, #f59e0b 0%, #ec4899 100%)",
+                        "interests": [
+                                "#Extrovert",
+                                "#Optimism",
+                                "#SocialButterfly"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Walking on Sunshine'",
+                        "pages": [
+                                {
+                                        "bio": "Warm, enthusiastic, and highly articulate. I can spark a engaging conversation with anyone in under two minutes!",
+                                        "tag": "\ud83d\uddbc\ufe0f Personality Traits"
+                                },
+                                {
+                                        "bio": "Strengths: Empathetic listener, boundless positive energy, natural leader who brings people together.",
+                                        "tag": "\u2728 Character Strengths"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Radiates positive energy",
+                                                "\u2713 High emotional intelligence",
+                                                "\u2713 Unstoppable confidence"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Can be overwhelming for introverts",
+                                                "\u2717 Hates spending time alone",
+                                                "\u2717 Promises too much"
+                                        ],
+                                        "tag": "\ud83d\udea9 Personality Balance"
+                                }
+                        ],
+                        "opener": "Hey friend! What was the absolute best part of your week so far?",
+                        "icebreakers": [
+                                "Meeting new people!",
+                                "Achieving my goals!",
+                                "Staying positive everyday!"
+                        ],
+                        "prompt": "How would you describe an optimist vs a pessimist? Which personality type are you?"
+                },
+                {
+                        "type": "profile",
+                        "category": "Character & Personality \ud83e\udde0",
+                        "title": "Meticulous Perfectionist",
+                        "age": "31 yrs",
+                        "location": "\ud83d\udccd Organization Hub",
+                        "verified": true,
+                        "avatar": "\ud83d\udcca",
+                        "gradient": "linear-gradient(135deg, #0284c7 0%, #0f172a 100%)",
+                        "interests": [
+                                "#DetailOriented",
+                                "#Organized",
+                                "#HighStandards"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Masterpiece'",
+                        "pages": [
+                                {
+                                        "bio": "Analytical, precise, and deeply methodical. Color-coded calendars, zero unread emails, and flawless execution.",
+                                        "tag": "\ud83d\uddbc\ufe0f Personality Traits"
+                                },
+                                {
+                                        "bio": "I notice the smallest details that others miss. Deeply reliable and dedicated to excellence in everything.",
+                                        "tag": "\u2728 Character Strengths"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Extremely reliable & punctual",
+                                                "\u2713 Flawless organization",
+                                                "\u2713 Thinks 5 steps ahead"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Stressed by last-minute plan changes",
+                                                "\u2717 Overthinks tiny mistakes",
+                                                "\u2717 Hard on self"
+                                        ],
+                                        "tag": "\ud83d\udea9 Personality Balance"
+                                }
+                        ],
+                        "opener": "Everything is organized alphabetically and by timestamp. What is your planning style?",
+                        "icebreakers": [
+                                "I am super organized too!",
+                                "I prefer spontaneous chaos",
+                                "Somewhere in between"
+                        ],
+                        "prompt": "Is perfectionism a positive trait or a burden? Explain your opinion."
+                },
+                {
+                        "type": "profile",
+                        "category": "Character & Personality \ud83e\udde0",
+                        "title": "Introverted Bookworm",
+                        "age": "26 yrs",
+                        "location": "\ud83d\udccd Cozy Reading Nook",
+                        "verified": true,
+                        "avatar": "\ud83d\udcda",
+                        "gradient": "linear-gradient(135deg, #854d0e 0%, #166534 100%)",
+                        "interests": [
+                                "#QuietThought",
+                                "#DeepConversations",
+                                "#BookLover"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Sound of Silence'",
+                        "pages": [
+                                {
+                                        "bio": "Thoughtful, observant, and deeply imaginative. Recharges in quiet places with a good cup of tea and a thick novel.",
+                                        "tag": "\ud83d\uddbc\ufe0f Personality Traits"
+                                },
+                                {
+                                        "bio": "Prefers meaningful 1-on-1 conversations over loud crowded parties. Highly intuitive and trustworthy.",
+                                        "tag": "\u2728 Character Strengths"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Deep listener & loyal friend",
+                                                "\u2713 Calm, peaceful presence",
+                                                "\u2713 Rich inner intellectual world"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Social battery drains fast",
+                                                "\u2717 Cancels plans to stay home",
+                                                "\u2717 Takes time to open up"
+                                        ],
+                                        "tag": "\ud83d\udea9 Personality Balance"
+                                }
+                        ],
+                        "opener": "Shh... what is the most profound book or idea you've discovered recently?",
+                        "icebreakers": [
+                                "I love quiet reading time",
+                                "I prefer big parties!",
+                                "I love deep 1-on-1 chats"
+                        ],
+                        "prompt": "What are the advantages of being an introvert or an extrovert?"
+                },
+                {
+                        "type": "profile",
+                        "category": "Character & Personality \ud83e\udde0",
+                        "title": "Adventurous Free Spirit",
+                        "age": "25 yrs",
+                        "location": "\ud83d\udccd Spontaneous Horizon",
+                        "verified": true,
+                        "avatar": "\ud83e\udded",
+                        "gradient": "linear-gradient(135deg, #e11d48 0%, #fb923c 100%)",
+                        "interests": [
+                                "#Spontaneous",
+                                "#Wanderlust",
+                                "#RiskTaker"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Born to be Wild'",
+                        "pages": [
+                                {
+                                        "bio": "Bold, adaptable, and endlessly curious. No fixed itineraries\u2014just packing a bag and seeing where the day leads!",
+                                        "tag": "\ud83d\uddbc\ufe0f Personality Traits"
+                                },
+                                {
+                                        "bio": "Thrives on novelty and adrenaline. Always ready to try new foods, learn new languages, and leap outside comfort zones.",
+                                        "tag": "\u2728 Character Strengths"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Never a dull moment",
+                                                "\u2713 Fearless attitude to life",
+                                                "\u2713 Highly adaptable under pressure"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Hard to pin down for long-term plans",
+                                                "\u2717 Easily bored by routine",
+                                                "\u2717 Impulsive decisions"
+                                        ],
+                                        "tag": "\ud83d\udea9 Personality Balance"
+                                }
+                        ],
+                        "opener": "Road trip tomorrow, no destination planned. Are you hopping in?",
+                        "icebreakers": [
+                                "Count me in right now! \ud83d\ude97",
+                                "I need a full itinerary first",
+                                "Sounds terrifying but fun!"
+                        ],
+                        "prompt": "Do you prefer predictability or spontaneous adventure in your life?"
+                }
+        ],
+        "hobbies": [
+                {
+                        "type": "profile",
+                        "category": "Hobbies & Passions \ud83c\udfa8",
+                        "title": "Bouldering & Rock Climbing",
+                        "age": "All Ages",
+                        "location": "\ud83d\udccd Climbing Gym & Crag",
+                        "verified": true,
+                        "avatar": "\ud83e\uddd7",
+                        "gradient": "linear-gradient(135deg, #15803d 0%, #84cc16 100%)",
+                        "interests": [
+                                "#Bouldering",
+                                "#ProblemSolving",
+                                "#GripStrength"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Climb Every Mountain'",
+                        "pages": [
+                                {
+                                        "bio": "Solving vertical body puzzles using chalked hands, core stability, and sheer willpower. V6 climber and outdoor adventurer!",
+                                        "tag": "\ud83d\uddbc\ufe0f Hobby Overview"
+                                },
+                                {
+                                        "bio": "Chalky hands, calloused fingers, and spending hours figuring out the exact body positioning for a difficult overhang route.",
+                                        "tag": "\u2728 Passion & Vibe"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Functional full-body fitness",
+                                                "\u2713 Great supportive community",
+                                                "\u2713 Mindful physical problem solving"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Chalk dust on all clothes",
+                                                "\u2717 Sore forearms & calluses",
+                                                "\u2717 Obsessively talks about routes"
+                                        ],
+                                        "tag": "\ud83d\udea9 Hobby Pros & Cons"
+                                }
+                        ],
+                        "opener": "Hey! Have you ever tried indoor bouldering or outdoor rock climbing?",
+                        "icebreakers": [
+                                "I love climbing gyms!",
+                                "Scared of heights! \ud83d\ude31",
+                                "I want to try it!"
+                        ],
+                        "prompt": "What hobbies test both physical strength and mental focus? Explain."
+                },
+                {
+                        "type": "profile",
+                        "category": "Hobbies & Passions \ud83c\udfa8",
+                        "title": "Vinyl Record Collecting",
+                        "age": "Classic & Modern",
+                        "location": "\ud83d\udccd Analog Haven",
+                        "verified": true,
+                        "avatar": "\ud83d\udcfb",
+                        "gradient": "linear-gradient(135deg, #7c2d12 0%, #f59e0b 100%)",
+                        "interests": [
+                                "#VinylJunkie",
+                                "#AnalogSound",
+                                "#CrateDigging"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Spin Me Round'",
+                        "pages": [
+                                {
+                                        "bio": "There is nothing like the warm crackle of needle meeting wax. Hunting through crate stacks for rare 1970s jazz pressings.",
+                                        "tag": "\ud83d\uddbc\ufe0f Hobby Overview"
+                                },
+                                {
+                                        "bio": "Appreciating full album experiences from start to finish without skipping tracks. Collecting tangible album cover art.",
+                                        "tag": "\u2728 Passion & Vibe"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Rich warm audio quality",
+                                                "\u2713 Mindful listening ritual",
+                                                "\u2713 Tangible music collection"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Vinyl records take up wall space",
+                                                "\u2717 Expensive hobby",
+                                                "\u2717 Heavy to move houses"
+                                        ],
+                                        "tag": "\ud83d\udea9 Hobby Pros & Cons"
+                                }
+                        ],
+                        "opener": "Drop the needle! What album would you play first on vinyl?",
+                        "icebreakers": [
+                                "Classic Rock album!",
+                                "Jazz & Soul!",
+                                "Modern Indie vinyl!"
+                        ],
+                        "prompt": "Do you prefer physical media (vinyl, printed books) or digital streaming? Why?"
+                },
+                {
+                        "type": "profile",
+                        "category": "Hobbies & Passions \ud83c\udfa8",
+                        "title": "Artisanal Sourdough Baking",
+                        "age": "Ancient Craft",
+                        "location": "\ud83d\udccd Warm Kitchen",
+                        "verified": true,
+                        "avatar": "\ud83c\udf5e",
+                        "gradient": "linear-gradient(135deg, #d97706 0%, #fbbf24 100%)",
+                        "interests": [
+                                "#SourdoughStarter",
+                                "#Fermentation",
+                                "#CrustyLoaf"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Bread & Butter'",
+                        "pages": [
+                                {
+                                        "bio": "Nurturing a wild yeast starter named 'Doughbert' for 3 years. High-hydration dough, Dutch oven baking, and blistered crusts!",
+                                        "tag": "\ud83d\uddbc\ufe0f Hobby Overview"
+                                },
+                                {
+                                        "bio": "The sensory joy of scoring dough with a razor blade and hearing the crust crackle as it cools down.",
+                                        "tag": "\u2728 Passion & Vibe"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Fresh warm delicious bread daily",
+                                                "\u2713 Zero artificial preservatives",
+                                                "\u2713 Therapeutic ritual"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Must feed starter daily",
+                                                "\u2717 Flour dusting everywhere",
+                                                "\u2717 24-hour fermentation waiting time"
+                                        ],
+                                        "tag": "\ud83d\udea9 Hobby Pros & Cons"
+                                }
+                        ],
+                        "opener": "Fresh sourdough right out of the oven! Butter or olive oil with balsamic?",
+                        "icebreakers": [
+                                "Salted butter all day! \ud83e\uddc8",
+                                "Extra virgin olive oil \ud83e\uded2",
+                                "Garllic butter spread!"
+                        ],
+                        "prompt": "Describe a culinary hobby you enjoy or would love to master."
+                },
+                {
+                        "type": "profile",
+                        "category": "Hobbies & Passions \ud83c\udfa8",
+                        "title": "35mm Film Photography",
+                        "age": "Retro Art",
+                        "location": "\ud83d\udccd Darkroom & Streets",
+                        "verified": true,
+                        "avatar": "\ud83d\udcf7",
+                        "gradient": "linear-gradient(135deg, #475569 0%, #94a3b8 100%)",
+                        "interests": [
+                                "#FilmIsNotDead",
+                                "#35mmFilm",
+                                "#StreetPhotography"
+                        ],
+                        "anthem": "\ud83c\udfb5 'Kodachrome' - Paul Simon",
+                        "pages": [
+                                {
+                                        "bio": "Capturing moments with intentionality. Only 36 exposures per roll\u2014no instant previews, just chemical magic in the darkroom.",
+                                        "tag": "\ud83d\uddbc\ufe0f Hobby Overview"
+                                },
+                                {
+                                        "bio": "Cherishing grainy textures, light leaks, and authentic unedited candid shots of city streets and friends.",
+                                        "tag": "\u2728 Passion & Vibe"
+                                },
+                                {
+                                        "greenFlags": [
+                                                "\u2713 Unmatchable nostalgic aesthetic",
+                                                "\u2713 Teaches patience & composition",
+                                                "\u2713 Cherished physical prints"
+                                        ],
+                                        "redFlags": [
+                                                "\u2717 Film rolls & developing are pricey",
+                                                "\u2717 Can't see if photo worked immediately",
+                                                "\u2717 Accidental light exposure"
+                                        ],
+                                        "tag": "\ud83d\udea9 Hobby Pros & Cons"
+                                }
+                        ],
+                        "opener": "Click! \ud83d\udcf8 You only get 1 shot left on this roll. What are we taking a photo of?",
+                        "icebreakers": [
+                                "A sunset portrait!",
+                                "City skyline!",
+                                "Spontaneous candid smile!"
+                        ],
+                        "prompt": "How does digital smartphone photography compare to film photography?"
+                }
+        ]
+};
+
     // Rich Tinder Profile Decks with multi-card story tabs across levels
     const DECKS = {
         starter: [
@@ -336,10 +3014,13 @@
               </div>
 
               <div class="setup-field" style="margin-bottom: 2rem; text-align: left;">
-                <label style="font-weight:700; display:block; margin-bottom:0.5rem;">Card Deck Filter</label>
+                <label style="font-weight:700; display:block; margin-bottom:0.5rem;">Vocabulary Topic & Deck Focus</label>
                 <select class="styled-sel" id="tot-deck-type" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid #e5e7eb;">
-                  <option value="mixed" selected>🔥 Mixed Tinder Deck</option>
-                  <option value="profiles">🖼️ Profile Cards Only</option>
+                  <option value="appearance" selected>👁️ Physical Appearance (50 Profiles)</option>
+                  <option value="character">🧠 Character Traits & Personality</option>
+                  <option value="hobbies">🎨 Hobbies, Passions & Lifestyle</option>
+                  <option value="mixed">🔥 Mixed General Deck</option>
+                  <option value="profiles">🖼️ General Profiles Only</option>
                   <option value="dilemmas">⚖️ "This or That" Dilemmas Only</option>
                 </select>
               </div>
@@ -356,17 +3037,22 @@
 
         async start() {
             const level = document.getElementById('tot-level')?.value || 'intermediate';
-            const deckType = document.getElementById('tot-deck-type')?.value || 'mixed';
+            const deckType = document.getElementById('tot-deck-type')?.value || 'appearance';
             const body = document.getElementById('go-body');
 
             if (body) body.innerHTML = '<div style="text-align:center;padding:4rem;font-weight:700;color:var(--tinder-pink);">Shuffling Tinder deck... 🔥</div>';
             await new Promise(res => setTimeout(res, 200));
 
-            let rawCards = DECKS[level] || DECKS.intermediate;
-            if (deckType === 'profiles') {
-                rawCards = rawCards.filter(c => c.type === 'profile');
-            } else if (deckType === 'dilemmas') {
-                rawCards = rawCards.filter(c => c.type === 'dilemma');
+            let rawCards = [];
+            if (SPECIAL_DECKS && SPECIAL_DECKS[deckType]) {
+                rawCards = SPECIAL_DECKS[deckType];
+            } else {
+                rawCards = DECKS[level] || DECKS.intermediate;
+                if (deckType === 'profiles') {
+                    rawCards = rawCards.filter(c => c.type === 'profile');
+                } else if (deckType === 'dilemmas') {
+                    rawCards = rawCards.filter(c => c.type === 'dilemma');
+                }
             }
 
             this.deck = [...rawCards].sort(() => Math.random() - 0.5);
