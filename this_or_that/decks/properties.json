@@ -1,0 +1,394 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Properties 🏠",
+      "title": "Cozy Studio Flat",
+      "age": "Built 2020",
+      "location": "📍 0.8 miles away • Sunny Avenue",
+      "verified": true,
+      "avatar": "🏙️",
+      "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+      "visualDescription": "Modern bright studio apartment with large window, wooden floor, yellow small sofa, kitchen counter, and indoor green plant.",
+      "interests": [
+        "#StudioFlat",
+        "#BrightWindow",
+        "#WoodenFloor"
+      ],
+      "anthem": "🎵 'Home Sweet Home' - Cozy Acoustic",
+      "pages": [
+        {
+          "tag": "🏡 Home Details",
+          "bio": "I am a small, cozy studio flat! 1 big room with a yellow sofa, modern kitchen, clean bathroom, and sunny window."
+        },
+        {
+          "tag": "✨ Location & Vibe",
+          "bio": "Located near the bus stop and market. Perfect for 1 person or a student. Rent is $500/month."
+        },
+        {
+          "tag": "🚩 Home Pros & Cons",
+          "greenFlags": [
+            "✓ Very easy to clean",
+            "✓ Warm sunlight all day",
+            "✓ Low monthly cost"
+          ],
+          "redFlags": [
+            "✗ No space for big parties",
+            "✗ Small kitchen table",
+            "✗ No balcony"
+          ]
+        }
+      ],
+      "opener": "Welcome inside! Do you like small cozy flats or big houses?",
+      "icebreakers": [
+        "I love cozy studio flats!",
+        "I need a big garden!",
+        "Great price!"
+      ],
+      "prompt": "Name 3 things inside this studio flat."
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Properties 🏠",
+      "title": "Red Brick House",
+      "age": "Built 2015",
+      "location": "📍 4 miles away • Green Village",
+      "verified": true,
+      "avatar": "🏡",
+      "gradient": "linear-gradient(135deg, #15803d 0%, #4ade80 100%)",
+      "visualDescription": "Two-story red brick house with white fence, green grass front lawn, red roof, and garage.",
+      "interests": [
+        "#Garden",
+        "#2Bedrooms",
+        "#QuietStreet"
+      ],
+      "anthem": "🎵 'Our House' - Happy Classic",
+      "pages": [
+        {
+          "tag": "🏡 Home Details",
+          "bio": "I am a lovely red brick house! 2 bedrooms, 1 big living room, garage for 1 car, and a green garden."
+        },
+        {
+          "tag": "✨ Location & Vibe",
+          "bio": "Quiet green street with friendly neighbors. Safe garden for pets and kids to play fetch!"
+        },
+        {
+          "tag": "🚩 Home Pros & Cons",
+          "greenFlags": [
+            "✓ Beautiful green garden",
+            "✓ Private garage for car",
+            "✓ Quiet peaceful area"
+          ],
+          "redFlags": [
+            "✗ 25 minutes to downtown",
+            "✗ Cutting lawn every week",
+            "✗ Higher heating cost"
+          ]
+        }
+      ],
+      "opener": "Hi! Would you like to sit in my green garden with tea?",
+      "icebreakers": [
+        "Yes, tea in the garden!",
+        "I prefer living downtown",
+        "Beautiful red bricks!"
+      ],
+      "prompt": "Is this house in the city or in a quiet village? What do you like about it?"
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Properties 🏠",
+      "title": "Modern Loft Apartment",
+      "age": "Built 2021",
+      "location": "📍 1.2 miles away • Arts District",
+      "verified": true,
+      "avatar": "🏢",
+      "gradient": "linear-gradient(135deg, #4f46e5 0%, #6366f1 100%)",
+      "visualDescription": "Industrial loft with high exposed concrete ceiling, big floor-to-ceiling glass windows, leather couch, and open kitchen island.",
+      "interests": [
+        "#HighCeilings",
+        "#IndustrialLoft",
+        "#CityView"
+      ],
+      "anthem": "🎵 'City Lights' - Chill Beats",
+      "pages": [
+        {
+          "tag": "🏡 Home Details",
+          "bio": "Spacious 1-bedroom industrial loft apartment! Features high exposed ceilings, big glass windows, and open kitchen island."
+        },
+        {
+          "tag": "✨ Location & Vibe",
+          "bio": "Located in the trendy Arts District with art galleries, coffee shops, and rooftop bars right downstairs. $1,200/month."
+        },
+        {
+          "tag": "🚩 Home Pros & Cons",
+          "greenFlags": [
+            "✓ Stunning skyline city views",
+            "✓ Abundant natural sunlight",
+            "✓ Modern kitchen island"
+          ],
+          "redFlags": [
+            "✗ Higher utility heating bills",
+            "✗ Street noise at night",
+            "✗ No underground parking"
+          ]
+        }
+      ],
+      "opener": "Hi! Do you like big open industrial lofts with city views?",
+      "icebreakers": [
+        "I love industrial loft design!",
+        "Too noisy for me!",
+        "Awesome big windows!"
+      ],
+      "prompt": "Describe the main features of this loft apartment."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Properties 🏠",
+      "title": "Suburban Cottage with Garden",
+      "age": "Built 2018",
+      "location": "📍 5 miles away • Oak Hill",
+      "verified": true,
+      "avatar": "🏡",
+      "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+      "visualDescription": "Cozy stone cottage with flower boxes under windows, wooden porch swing, green lawn, and stone chimney.",
+      "interests": [
+        "#FlowerGarden",
+        "#PorchSwing",
+        "#QuietSuburbs"
+      ],
+      "anthem": "🎵 'Country Roads' - Acoustic Cover",
+      "pages": [
+        {
+          "tag": "🏡 Home Details",
+          "bio": "Charming 3-bedroom suburban cottage! Features a stone fireplace, sunny kitchen porch, and colorful flower garden."
+        },
+        {
+          "tag": "✨ Location & Vibe",
+          "bio": "Peaceful family neighborhood near top elementary schools and bike trails. Perfect for relaxing weekend BBQs!"
+        },
+        {
+          "tag": "🚩 Home Pros & Cons",
+          "greenFlags": [
+            "✓ Spacious private backyard",
+            "✓ Cozy stone fireplace",
+            "✓ Safe quiet neighborhood"
+          ],
+          "redFlags": [
+            "✗ Requires lawn mowing and garden care",
+            "✗ Commute into city takes 35 mins",
+            "✗ Needs roof maintenance"
+          ]
+        }
+      ],
+      "opener": "Hello! Would you like to sit on the porch swing and read a book?",
+      "icebreakers": [
+        "Sounds peaceful!",
+        "I prefer apartment living",
+        "I love stone fireplaces!"
+      ],
+      "prompt": "Compare this suburban cottage with the city loft apartment."
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Properties 🏠",
+      "title": "Converted Paper Mill Loft",
+      "age": "Renovated 2022",
+      "location": "📍 1 mile away • Riverfront District",
+      "verified": true,
+      "avatar": "🏭",
+      "gradient": "linear-gradient(135deg, #475569 0%, #334155 100%)",
+      "visualDescription": "Historic brick mill converted into luxury loft with red exposed brick walls, timber beams, polished concrete floor, and river view.",
+      "interests": [
+        "#HistoricBrick",
+        "#RiverfrontView",
+        "#TimberBeams"
+      ],
+      "anthem": "🎵 'Riverside' - Ambient Indie",
+      "pages": [
+        {
+          "tag": "🏡 Property Architectural Details",
+          "bio": "A stunning 2-bedroom loft inside a converted 19th-century paper mill. Merges original exposed brickwork and heavy timber beams with ultra-modern fixtures."
+        },
+        {
+          "tag": "✨ Amenities & Surroundings",
+          "bio": "Private balcony overlooking the riverfront promenade, smart home lighting, underground garage, and private gym access. $1,850/month."
+        },
+        {
+          "tag": "🚩 Property Evaluation",
+          "greenFlags": [
+            "✓ Architectural character & heritage",
+            "✓ Breathtaking river views",
+            "✓ Soundproof double glazing"
+          ],
+          "redFlags": [
+            "✗ Higher monthly HOA fees",
+            "✗ High ceiling acoustic echoes",
+            "✗ Strict historic building rules"
+          ]
+        }
+      ],
+      "opener": "Welcome! Do you prefer historic renovated properties or brand-new modern architecture?",
+      "icebreakers": [
+        "Historic renovated character!",
+        "Brand-new sleek modern!",
+        "A cozy country home!"
+      ],
+      "prompt": "Evaluate the architectural contrast between historic industrial brickwork and modern amenities."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Properties 🏠",
+      "title": "Eco-Friendly Solar Villa",
+      "age": "Built 2023",
+      "location": "📍 6 miles away • Sun Valley",
+      "verified": true,
+      "avatar": "☀️",
+      "gradient": "linear-gradient(135deg, #65a30d 0%, #84cc16 100%)",
+      "visualDescription": "Sustainable two-story villa with rooftop solar panels, rainwater collection barrel, vertical plant wall, and large timber deck.",
+      "interests": [
+        "#ZeroEmission",
+        "#SolarPower",
+        "#RainwaterHarvest"
+      ],
+      "anthem": "🎵 'Here Comes the Sun' - Acoustic",
+      "pages": [
+        {
+          "tag": "🏡 Eco Property Details",
+          "bio": "A state-of-the-art 3-bedroom zero-emission villa powered by rooftop solar panels, triple-pane insulation, and rainwater harvesting systems."
+        },
+        {
+          "tag": "✨ Sustainable Living Vibe",
+          "bio": "Organic garden patch, electric vehicle charging dock, vertical indoor plant wall, and minimal monthly electricity bills."
+        },
+        {
+          "tag": "🚩 Property Evaluation",
+          "greenFlags": [
+            "✓ Near zero energy bills",
+            "✓ Sustainable carbon footprint",
+            "✓ EV charging station included"
+          ],
+          "redFlags": [
+            "✗ High initial purchase investment",
+            "✗ Solar battery maintenance",
+            "✗ Distance from city center"
+          ]
+        }
+      ],
+      "opener": "Greetings! How important is sustainable eco-friendly design when choosing a place to live?",
+      "icebreakers": [
+        "Crucial priority for me!",
+        "Nice bonus but location first!",
+        "Interested in solar tech!"
+      ],
+      "prompt": "Describe the sustainable technologies integrated into this eco-friendly villa."
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Properties 🏠",
+      "title": "Penthouse Sky Villa",
+      "age": "Built 2024",
+      "location": "📍 0.5 miles away • Pinnacle Tower",
+      "verified": true,
+      "avatar": "🏙️",
+      "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+      "visualDescription": "Luxury penthouse terrace with private infinity glass pool, panoramic 360-degree skyline views, fire pit, and floor-to-ceiling glass walls.",
+      "interests": [
+        "#360SkylineView",
+        "#InfinityPool",
+        "#SmartAutomation"
+      ],
+      "anthem": "🎵 'Skyfall' - Cinematic Elegance",
+      "pages": [
+        {
+          "tag": "🏡 Property Architecture & Luxury",
+          "bio": "Exquisite 4,500 sq ft top-floor Sky Villa featuring a private glass-edge infinity pool, 360-degree city skyline panoramas, and full biometric smart automation."
+        },
+        {
+          "tag": "✨ Premium Amenities",
+          "bio": "Private elevator entry, climate-controlled wine cellar, motorized glass curtain walls, and rooftop helipad access. $6,500/month."
+        },
+        {
+          "tag": "🚩 Property Evaluation",
+          "greenFlags": [
+            "✓ Peerless panoramic city vistas",
+            "✓ Maximum security & privacy",
+            "✓ State-of-the-art smart home integration"
+          ],
+          "redFlags": [
+            "✗ Exorbitant maintenance expenditure",
+            "✗ High altitude sway during strong storms",
+            "✗ Detached from ground neighborhood feel"
+          ]
+        }
+      ],
+      "opener": "Welcome to the sky! Does extreme luxury housing justify its social and environmental footprint?",
+      "icebreakers": [
+        "Breathtaking pinnacle living!",
+        "Excessive luxury is problematic!",
+        "Impressive engineering achievement!"
+      ],
+      "prompt": "Analyze the architectural engineering and lifestyle dynamics of luxury high-rise penthouse living."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Properties 🏠",
+      "title": "Alpine Timber Chalet",
+      "age": "Built 2021",
+      "location": "📍 12 miles away • Summit Crest",
+      "verified": true,
+      "avatar": "🏔️",
+      "gradient": "linear-gradient(135deg, #78350f 0%, #92400e 100%)",
+      "visualDescription": "Rustic luxurious timber chalet nestled in snow-covered pine mountains, featuring cathedral glass facade, outdoor cedar sauna, and roaring stone hearth.",
+      "interests": [
+        "#AlpineChalet",
+        "#CathedralWindows",
+        "#CedarSauna"
+      ],
+      "anthem": "🎵 'Winter Song' - Atmospheric Folk",
+      "pages": [
+        {
+          "tag": "🏡 Property Architecture & Ambience",
+          "bio": "A magnificent 4-bedroom timber chalet carved into alpine peaks. Showcases floor-to-ceiling cathedral windows framing snowy mountain vistas and a massive stone hearth."
+        },
+        {
+          "tag": "✨ Alpine Lifestyle Amenities",
+          "bio": "Ski-in ski-out access, outdoor cedar wood sauna, geothermal floor heating, and custom oak furniture crafted by local artisans."
+        },
+        {
+          "tag": "🚩 Property Evaluation",
+          "greenFlags": [
+            "✓ Unrivaled mountain tranquility",
+            "✓ Eco geothermal heating system",
+            "✓ Ski resort proximity"
+          ],
+          "redFlags": [
+            "✗ Snowplowing road access in heavy blizzards",
+            "✗ Seasonal isolation",
+            "✗ High timber maintenance requirement"
+          ]
+        }
+      ],
+      "opener": "Greetings! Would you thrive living surrounded by alpine wilderness, or do you require urban velocity?",
+      "icebreakers": [
+        "Alpine wilderness sanctuary!",
+        "Urban velocity always!",
+        "Seasonal balance between both!"
+      ],
+      "prompt": "Evaluate how living in isolated natural terrain affects psychological well-being and daily routine."
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Hobbies 🎨",
+      "title": "Cycling in the Park",
+      "age": "All Ages",
+      "location": "📍 0.3 miles away • River Park",
+      "verified": true,
+      "avatar": "🚴",
+      "gradient": "linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%)",
+      "visualDescription": "Bright red bicycle parked under a sunny tree next to a paved park pathway.",
+      "interests": [
+        "#Bicycle",
+        "#FreshAir",
+        "#ParkRide"
+      ],
+      "anthem": "🎵 'Bicycle Race' - Classic Rock",
+      "pages": [
+        {
+          "tag": "🎨 Hobby Overview",
+          "bio": "Riding a red bicycle in the green park every weekend! Easy, healthy, and fun."
+        },
+        {
+          "tag": "✨ Vibe & Fun",
+          "bio": "Feeling the cool wind in my hair while listening to music. Stopping for ice cream at the park cafe!"
+        },
+        {
+          "tag": "🚩 Hobby Pros & Cons",
+          "greenFlags": [
+            "✓ Fresh air & exercise",
+            "✓ Free transport",
+            "✓ Fun with friends"
+          ],
+          "redFlags": [
+            "✗ Rainy day difficulty",
+            "✗ Flat tire trouble",
+            "✗ Helmet hair"
+          ]
+        }
+      ],
+      "opener": "Hey! Do you know how to ride a bicycle?",
+      "icebreakers": [
+        "Yes, I ride every week!",
+        "No, but I want to learn!",
+        "I prefer walking!"
+      ],
+      "prompt": "Where do you like to ride a bicycle or walk?"
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Hobbies 🎨",
+      "title": "Sourdough Bread Baking",
+      "age": "Popular Craft",
+      "location": "📍 Kitchen Bench",
+      "verified": true,
+      "avatar": "🍞",
+      "gradient": "linear-gradient(135deg, #b45309 0%, #f59e0b 100%)",
+      "visualDescription": "Crispy golden crusty loaf of sourdough bread dusted with flour sitting on a wooden cutting board with butter knife.",
+      "interests": [
+        "#BakingBread",
+        "#CrispyCrust",
+        "#Homemade"
+      ],
+      "anthem": "🎵 'Bread and Butter' - Upbeat Oldie",
+      "pages": [
+        {
+          "tag": "🎨 Hobby Overview",
+          "bio": "Baking artisanal sourdough bread from scratch! Mixing flour, water, and wild starter, then baking in a Dutch oven."
+        },
+        {
+          "tag": "✨ Vibe & Joy",
+          "bio": "The amazing smell filling the apartment and hearing the crust crackle as it cools. Tastes incredible with salted butter!"
+        },
+        {
+          "tag": "🚩 Hobby Pros & Cons",
+          "greenFlags": [
+            "✓ Delicious fresh warm bread",
+            "✓ Therapeutic slow process",
+            "✓ No artificial ingredients"
+          ],
+          "redFlags": [
+            "✗ Takes 24 hours of patience",
+            "✗ Flour dusting everywhere",
+            "✗ Starter needs daily feeding"
+          ]
+        }
+      ],
+      "opener": "Fresh sourdough right out of the oven! Butter or olive oil with balsamic vinegar?",
+      "icebreakers": [
+        "Salted butter please!",
+        "Olive oil and balsamic!",
+        "Garlic butter!"
+      ],
+      "prompt": "Explain the step-by-step process of sourdough baking in simple sentences."
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Hobbies 🎨",
+      "title": "Bouldering & Rock Climbing",
+      "age": "Active Pursuit",
+      "location": "📍 Peak Climbing Gym",
+      "verified": true,
+      "avatar": "🧗‍♂️",
+      "gradient": "linear-gradient(135deg, #15803d 0%, #22c55e 100%)",
+      "visualDescription": "Climber wearing chalk bag, gripping brightly colored indoor bouldering holds on an angled overhang wall.",
+      "interests": [
+        "#Bouldering",
+        "#ProblemSolving",
+        "#FitnessAndFocus"
+      ],
+      "anthem": "🎵 'Climb Every Mountain' - Rock Vibe",
+      "pages": [
+        {
+          "tag": "🎨 Hobby Overview",
+          "bio": "Solving vertical body puzzles on indoor climbing walls and outdoor crags using chalked hands, core power, and mental focus."
+        },
+        {
+          "tag": "✨ Physical & Mental Vibe",
+          "bio": "Bouldering requires strategy like chess, combined with full-body functional strength. The feeling when completing a tough V5 route is unbeatable!"
+        },
+        {
+          "tag": "🚩 Hobby Evaluation",
+          "greenFlags": [
+            "✓ Exceptional core and upper body strength",
+            "✓ Highly social community",
+            "✓ Mindful focus on the present"
+          ],
+          "redFlags": [
+            "✗ Chalk dust covering all gear",
+            "✗ Calloused worn fingers",
+            "✗ Obsessively analyzing climbing routes"
+          ]
+        }
+      ],
+      "opener": "Hey! Have you ever attempted indoor bouldering or rock climbing?",
+      "icebreakers": [
+        "I love bouldering gyms!",
+        "Terrified of heights! 😅",
+        "Eager to try it out!"
+      ],
+      "prompt": "In what ways does bouldering combine physical endurance with mental problem solving?"
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Hobbies 🎨",
+      "title": "35mm Analog Film Photography",
+      "age": "Analog Craft",
+      "location": "📍 Darkroom & City Streets",
+      "verified": true,
+      "avatar": "📷",
+      "gradient": "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
+      "visualDescription": "Vintage Leica film camera resting on a darkroom wooden bench next to developed negatives, amber safelight glowing in background.",
+      "interests": [
+        "#FilmIsNotDead",
+        "#35mmAnalog",
+        "#DarkroomProcess"
+      ],
+      "anthem": "🎵 'Kodachrome' - Nostalgic Classic",
+      "pages": [
+        {
+          "tag": "🎨 Hobby Overview & Craft",
+          "bio": "Capturing urban moments on 35mm silver halide film with deliberate composition—limiting oneself to 36 exposures per roll without instant digital previews."
+        },
+        {
+          "tag": "✨ Artistic Philosophy",
+          "bio": "Developing negatives manually in chemical darkrooms, embracing grain textures, subtle light leaks, and authentic unedited candid humanity."
+        },
+        {
+          "tag": "🚩 Hobby Evaluation",
+          "greenFlags": [
+            "✓ Teaches mindfulness and patience",
+            "✓ Tangible physical prints and negatives",
+            "✓ Unrivaled aesthetic depth"
+          ],
+          "redFlags": [
+            "✗ Escalating chemical & film roll costs",
+            "✗ Accidental light leaks ruining shots",
+            "✗ No instant gratification"
+          ]
+        }
+      ],
+      "opener": "Greetings! How does the deliberate constraint of analog media alter human creative expression compared to digital abundance?",
+      "icebreakers": [
+        "Constraints force deeper focus!",
+        "Digital abundance enables speed!",
+        "Analog preserves authentic soul!"
+      ],
+      "prompt": "Critique the psychological and artistic differences between digital smartphone photography and 35mm film photography."
+    }
+  ]
+}

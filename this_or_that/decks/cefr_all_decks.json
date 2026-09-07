@@ -1,0 +1,1586 @@
+{
+  "A0_A1": {
+    "appearance": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Physical Appearance 👁️",
+        "title": "Anna",
+        "age": "22",
+        "location": "📍 1 mile away • City Center",
+        "verified": true,
+        "avatar": "👩",
+        "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+        "visualDescription": "Young woman with short straight black hair, big brown eyes, wearing a bright red sweater and white sneakers. Friendly, warm smile.",
+        "interests": [
+          "#Tall",
+          "#ShortBlackHair",
+          "#RedSweater"
+        ],
+        "anthem": "🎵 'Simple Song' - Basic Pop",
+        "pages": [
+          {
+            "tag": "🖼️ Basic Look",
+            "bio": "Hi! I am Anna. I am 22 years old. I am tall with short black hair and brown eyes. I like bright clothes!"
+          },
+          {
+            "tag": "✨ Daily Clothes",
+            "bio": "I usually wear a comfortable red sweater, blue jeans, and clean white sneakers. I always wear a happy smile!"
+          },
+          {
+            "tag": "🚩 Quick Details",
+            "greenFlags": [
+              "✓ Friendly big smile",
+              "✓ Easy to recognize in a crowd",
+              "✓ Tall and slim"
+            ],
+            "redFlags": [
+              "✗ Always late because of picking shoes",
+              "✗ Only wears red sweaters",
+              "✗ Speaks very fast"
+            ]
+          }
+        ],
+        "opener": "Hello! I am Anna. Do you like red or blue sweaters?",
+        "icebreakers": [
+          "I like red sweaters!",
+          "I prefer blue jeans!",
+          "You have a nice smile!"
+        ],
+        "prompt": "Describe Anna using 3 simple words (hair, clothes, height)."
+      },
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Physical Appearance 👁️",
+        "title": "Marco",
+        "age": "25",
+        "location": "📍 3 miles away • Near Park",
+        "verified": true,
+        "avatar": "🧔",
+        "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+        "visualDescription": "Tall young man with curly brown hair, dark beard, green eyes, wearing a green t-shirt, denim jacket, and black glasses.",
+        "interests": [
+          "#CurlyHair",
+          "#Beard",
+          "#Glasses"
+        ],
+        "anthem": "🎵 'Happy Days' - Upbeat Acoustic",
+        "pages": [
+          {
+            "tag": "🖼️ Basic Look",
+            "bio": "Hello! My name is Marco. I am 25. I have curly brown hair, green eyes, and a short beard. I wear black glasses."
+          },
+          {
+            "tag": "✨ Fashion Style",
+            "bio": "My style is simple: a dark green t-shirt, blue denim jacket, and black glasses. Very casual and clean."
+          },
+          {
+            "tag": "🚩 Quick Details",
+            "greenFlags": [
+              "✓ Cute curly hair",
+              "✓ Nice green eyes",
+              "✓ Cool black glasses"
+            ],
+            "redFlags": [
+              "✗ Loses glasses every morning",
+              "✗ Takes 30 minutes to brush beard",
+              "✗ Always wears denim"
+            ]
+          }
+        ],
+        "opener": "Hi there! Do you wear glasses or have curly hair?",
+        "icebreakers": [
+          "I wear glasses too!",
+          "I love green eyes!",
+          "Cool denim jacket!"
+        ],
+        "prompt": "What color are Marco's eyes and hair?"
+      }
+    ],
+    "professions": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Professions 💼",
+        "title": "Baker (Chef John)",
+        "age": "30 yrs exp",
+        "location": "📍 0.5 miles away • Sunrise Bakery",
+        "verified": true,
+        "avatar": "👨‍🍳",
+        "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+        "visualDescription": "Middle-aged man in a chef hat and white baker uniform dusting flour on fresh bread loaves in a warm bakery.",
+        "interests": [
+          "#FreshBread",
+          "#EarlyMorning",
+          "#DeliciousCakes"
+        ],
+        "anthem": "🎵 'Sweet Caroline' - Classic Oldie",
+        "pages": [
+          {
+            "tag": "💼 Job Overview",
+            "bio": "I am a baker! I wake up at 4:00 AM every morning. I bake fresh bread, croissants, and delicious chocolate cakes."
+          },
+          {
+            "tag": "✨ Daily Work",
+            "bio": "Work is fun! My kitchen smells like warm sugar and fresh flour. I sell delicious breakfast to happy people."
+          },
+          {
+            "tag": "🚩 Job Pros & Cons",
+            "greenFlags": [
+              "✓ Free fresh bread every day",
+              "✓ Smells like warm cinnamon",
+              "✓ Smiles from customers"
+            ],
+            "redFlags": [
+              "✗ Waking up at 4:00 AM",
+              "✗ Flour on all clothes",
+              "✗ Hot ovens all day"
+            ]
+          }
+        ],
+        "opener": "Good morning! Do you want fresh bread or chocolate cake today?",
+        "icebreakers": [
+          "Fresh bread please!",
+          "Chocolate cake for me!",
+          "I love croissants!"
+        ],
+        "prompt": "What does a baker do every morning? Would you like this job?"
+      },
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Professions 💼",
+        "title": "Doctor (Dr. Sarah)",
+        "age": "8 yrs exp",
+        "location": "📍 2 miles away • City Hospital",
+        "verified": true,
+        "avatar": "👩‍⚕️",
+        "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+        "visualDescription": "Female doctor with blonde ponytail, wearing a white coat and blue stethoscope around her neck, standing in a bright clinic.",
+        "interests": [
+          "#HelpPeople",
+          "#WhiteCoat",
+          "#HealthyLife"
+        ],
+        "anthem": "🎵 'Healing Hands' - Calm Melodic",
+        "pages": [
+          {
+            "tag": "💼 Job Overview",
+            "bio": "I am a doctor in a hospital. I help sick people feel better. I listen to their hearts and give good medicine."
+          },
+          {
+            "tag": "✨ Daily Work",
+            "bio": "I wear a white coat and a blue stethoscope. I talk to children and adults to keep everybody healthy and happy."
+          },
+          {
+            "tag": "🚩 Job Pros & Cons",
+            "greenFlags": [
+              "✓ Helps save lives",
+              "✓ Very respected job",
+              "✓ Makes people healthy"
+            ],
+            "redFlags": [
+              "✗ Long night shifts",
+              "✗ Very busy schedule",
+              "✗ Hard examinations"
+            ]
+          }
+        ],
+        "opener": "Hello! How are you feeling today? Are you healthy?",
+        "icebreakers": [
+          "I feel great!",
+          "I have a headache",
+          "Thank you for helping people!"
+        ],
+        "prompt": "Why is a doctor's job important? Describe Dr. Sarah's uniform."
+      }
+    ],
+    "properties": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Properties 🏠",
+        "title": "Cozy Studio Flat",
+        "age": "Built 2020",
+        "location": "📍 0.8 miles away • Sunny Avenue",
+        "verified": true,
+        "avatar": "🏙️",
+        "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+        "visualDescription": "Modern bright studio apartment with large window, wooden floor, yellow small sofa, kitchen counter, and indoor green plant.",
+        "interests": [
+          "#StudioFlat",
+          "#BrightWindow",
+          "#WoodenFloor"
+        ],
+        "anthem": "🎵 'Home Sweet Home' - Cozy Acoustic",
+        "pages": [
+          {
+            "tag": "🏡 Home Details",
+            "bio": "I am a small, cozy studio flat! 1 big room with a yellow sofa, modern kitchen, clean bathroom, and sunny window."
+          },
+          {
+            "tag": "✨ Location & Vibe",
+            "bio": "Located near the bus stop and market. Perfect for 1 person or a student. Rent is $500/month."
+          },
+          {
+            "tag": "🚩 Home Pros & Cons",
+            "greenFlags": [
+              "✓ Very easy to clean",
+              "✓ Warm sunlight all day",
+              "✓ Low monthly cost"
+            ],
+            "redFlags": [
+              "✗ No space for big parties",
+              "✗ Small kitchen table",
+              "✗ No balcony"
+            ]
+          }
+        ],
+        "opener": "Welcome inside! Do you like small cozy flats or big houses?",
+        "icebreakers": [
+          "I love cozy studio flats!",
+          "I need a big garden!",
+          "Great price!"
+        ],
+        "prompt": "Name 3 things inside this studio flat."
+      },
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Properties 🏠",
+        "title": "Red Brick House",
+        "age": "Built 2015",
+        "location": "📍 4 miles away • Green Village",
+        "verified": true,
+        "avatar": "🏡",
+        "gradient": "linear-gradient(135deg, #15803d 0%, #4ade80 100%)",
+        "visualDescription": "Two-story red brick house with white fence, green grass front lawn, red roof, and garage.",
+        "interests": [
+          "#Garden",
+          "#2Bedrooms",
+          "#QuietStreet"
+        ],
+        "anthem": "🎵 'Our House' - Happy Classic",
+        "pages": [
+          {
+            "tag": "🏡 Home Details",
+            "bio": "I am a lovely red brick house! 2 bedrooms, 1 big living room, garage for 1 car, and a green garden."
+          },
+          {
+            "tag": "✨ Location & Vibe",
+            "bio": "Quiet green street with friendly neighbors. Safe garden for pets and kids to play fetch!"
+          },
+          {
+            "tag": "🚩 Home Pros & Cons",
+            "greenFlags": [
+              "✓ Beautiful green garden",
+              "✓ Private garage for car",
+              "✓ Quiet peaceful area"
+            ],
+            "redFlags": [
+              "✗ 25 minutes to downtown",
+              "✗ Cutting lawn every week",
+              "✗ Higher heating cost"
+            ]
+          }
+        ],
+        "opener": "Hi! Would you like to sit in my green garden with tea?",
+        "icebreakers": [
+          "Yes, tea in the garden!",
+          "I prefer living downtown",
+          "Beautiful red bricks!"
+        ],
+        "prompt": "Is this house in the city or in a quiet village? What do you like about it?"
+      }
+    ],
+    "character": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Character Traits 🧠",
+        "title": "Kind & Friendly Friend",
+        "age": "20",
+        "location": "📍 1 mile away • Neighborhood",
+        "verified": true,
+        "avatar": "😊",
+        "gradient": "linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%)",
+        "visualDescription": "Smiling young person holding a warm cup of cocoa, wearing a yellow beanie and soft scarf, exuding friendliness.",
+        "interests": [
+          "#Friendly",
+          "#KindHeart",
+          "#GoodListener"
+        ],
+        "anthem": "🎵 'Count on Me' - Warm Pop",
+        "pages": [
+          {
+            "tag": "🧠 Personality Traits",
+            "bio": "I am kind, polite, and friendly! I say 'please' and 'thank you' and I love helping my neighbors."
+          },
+          {
+            "tag": "✨ Daily Attitude",
+            "bio": "I smile at everyone I see on the street. I remember birthdays and bring cookies to my friends!"
+          },
+          {
+            "tag": "🚩 Pros & Cons",
+            "greenFlags": [
+              "✓ Always polite & patient",
+              "✓ Helps with heavy bags",
+              "✓ Great listener"
+            ],
+            "redFlags": [
+              "✗ Says 'yes' to everything",
+              "✗ Gets sad if people argue",
+              "✗ Too generous"
+            ]
+          }
+        ],
+        "opener": "Hello my friend! How can I make your day happier today?",
+        "icebreakers": [
+          "You are so nice!",
+          "Let us drink coffee together",
+          "Have a great day too!"
+        ],
+        "prompt": "What does a kind person do? Name 2 kind actions."
+      }
+    ],
+    "hobbies": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Hobbies 🎨",
+        "title": "Cycling in the Park",
+        "age": "All Ages",
+        "location": "📍 0.3 miles away • River Park",
+        "verified": true,
+        "avatar": "🚴",
+        "gradient": "linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%)",
+        "visualDescription": "Bright red bicycle parked under a sunny tree next to a paved park pathway.",
+        "interests": [
+          "#Bicycle",
+          "#FreshAir",
+          "#ParkRide"
+        ],
+        "anthem": "🎵 'Bicycle Race' - Classic Rock",
+        "pages": [
+          {
+            "tag": "🎨 Hobby Overview",
+            "bio": "Riding a red bicycle in the green park every weekend! Easy, healthy, and fun."
+          },
+          {
+            "tag": "✨ Vibe & Fun",
+            "bio": "Feeling the cool wind in my hair while listening to music. Stopping for ice cream at the park cafe!"
+          },
+          {
+            "tag": "🚩 Hobby Pros & Cons",
+            "greenFlags": [
+              "✓ Fresh air & exercise",
+              "✓ Free transport",
+              "✓ Fun with friends"
+            ],
+            "redFlags": [
+              "✗ Rainy day difficulty",
+              "✗ Flat tire trouble",
+              "✗ Helmet hair"
+            ]
+          }
+        ],
+        "opener": "Hey! Do you know how to ride a bicycle?",
+        "icebreakers": [
+          "Yes, I ride every week!",
+          "No, but I want to learn!",
+          "I prefer walking!"
+        ],
+        "prompt": "Where do you like to ride a bicycle or walk?"
+      }
+    ]
+  },
+  "A2": {
+    "appearance": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Physical Appearance 👁️",
+        "title": "Elena (Athletic & Wavy Auburn Hair)",
+        "age": "24",
+        "location": "📍 2 miles away • Marina Bay",
+        "verified": true,
+        "avatar": "👩‍🦰",
+        "gradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
+        "visualDescription": "Athletic woman with medium shoulder-length wavy auburn hair, hazel eyes, light freckles on her nose, wearing a navy blue striped nautical shirt.",
+        "interests": [
+          "#WavyAuburnHair",
+          "#HazelEyes",
+          "#AthleticBuild"
+        ],
+        "anthem": "🎵 'Ocean Waves' - Summer Vibe",
+        "pages": [
+          {
+            "tag": "🖼️ Physical Look",
+            "bio": "I am Elena, 24. I am medium height with an athletic build. I have wavy auburn hair, hazel eyes, and cute freckles."
+          },
+          {
+            "tag": "✨ Fashion Style",
+            "bio": "I love casual nautical style—navy striped tops, beige shorts, and leather sandals. Ready for beach walks!"
+          },
+          {
+            "tag": "🚩 Appearance Detail",
+            "greenFlags": [
+              "✓ Warm hazel eyes that shine in the sun",
+              "✓ Natural freckles",
+              "✓ Active athletic posture"
+            ],
+            "redFlags": [
+              "✗ Sunburns very easily",
+              "✗ Hair gets messy in wind",
+              "✗ Wears sandals even in winter"
+            ]
+          }
+        ],
+        "opener": "Hi! What is your favorite season for outdoor fashion?",
+        "icebreakers": [
+          "Summer fashion!",
+          "Autumn coats and boots!",
+          "Love the nautical style!"
+        ],
+        "prompt": "Describe Elena's build, hair color, and clothing style."
+      },
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Physical Appearance 👁️",
+        "title": "Liam (Tall & Tailored Suit Style)",
+        "age": "27",
+        "location": "📍 1.5 miles away • Financial District",
+        "verified": true,
+        "avatar": "👨‍💼",
+        "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
+        "visualDescription": "Tall 6'2\" man with neat dark blonde side-part hair, sharp jawline, wearing a tailored navy blazer and crisp white collar shirt.",
+        "interests": [
+          "#Tall6ft2",
+          "#SmartBlazer",
+          "#SharpLook"
+        ],
+        "anthem": "🎵 'Smooth Operator' - Jazzy Pop",
+        "pages": [
+          {
+            "tag": "🖼️ Physical Look",
+            "bio": "I am Liam! 27 years old, tall (6'2\"), slim frame with broad shoulders. Short dark blonde hair and a clean-shaven face."
+          },
+          {
+            "tag": "✨ Fashion Vibe",
+            "bio": "Smart-casual elegance: tailored navy blazers, white oxford shirts, leather watch, and polished brown shoes."
+          },
+          {
+            "tag": "🚩 Appearance Detail",
+            "greenFlags": [
+              "✓ Sharp polished appearance",
+              "✓ Great posture & height",
+              "✓ Neat tidy hairstyle"
+            ],
+            "redFlags": [
+              "✗ Overly picky about shirt creases",
+              "✗ Spends too much on dry cleaning",
+              "✗ Refuses to wear hoodies"
+            ]
+          }
+        ],
+        "opener": "Hello! Do you prefer dressing up formally or wearing cozy hoodies?",
+        "icebreakers": [
+          "Cozy hoodies all day!",
+          "I love smart suits!",
+          "Mix of both!"
+        ],
+        "prompt": "How tall is Liam and what clothing does he wear?"
+      }
+    ],
+    "professions": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Professions 💼",
+        "title": "Graphic Designer (Nina)",
+        "age": "4 yrs exp",
+        "location": "📍 1 mile away • Creative Loft",
+        "verified": true,
+        "avatar": "👩‍🎨",
+        "gradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
+        "visualDescription": "Creative woman sitting with a digital drawing tablet, stylus pen, colorful posters on wall, wearing round glasses and stylish sweater.",
+        "interests": [
+          "#DigitalArt",
+          "#ColorPalette",
+          "#LogosAndPosters"
+        ],
+        "anthem": "🎵 'Colors of the Wind' - Pop Cover",
+        "pages": [
+          {
+            "tag": "💼 Job Overview",
+            "bio": "I am Nina, a graphic designer! I create beautiful logos, website banners, and colorful posters for local businesses."
+          },
+          {
+            "tag": "✨ Daily Tasks",
+            "bio": "I work on my laptop and drawing tablet. I choose nice fonts, harmonize color palettes, and draw digital art."
+          },
+          {
+            "tag": "🚩 Job Pros & Cons",
+            "greenFlags": [
+              "✓ Highly creative & fun job",
+              "✓ Work from cafes or home",
+              "✓ Seeing your art on billboards"
+            ],
+            "redFlags": [
+              "✗ Staring at screens for 8 hours",
+              "✗ Clients changing their minds",
+              "✗ Eye fatigue"
+            ]
+          }
+        ],
+        "opener": "Hey! What is your absolute favorite color combination?",
+        "icebreakers": [
+          "Black & Gold!",
+          "Blue & Pastel Pink!",
+          "Green & Earthy Brown!"
+        ],
+        "prompt": "What tools does a graphic designer use? Would you enjoy this job?"
+      },
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Professions 💼",
+        "title": "Fitness Trainer (Alex)",
+        "age": "6 yrs exp",
+        "location": "📍 0.5 miles away • Metro Gym",
+        "verified": true,
+        "avatar": "🏋️‍♂️",
+        "gradient": "linear-gradient(135deg, #16a34a 0%, #22c55e 100%)",
+        "visualDescription": "Muscular trainer in black gym tank top, stopwatch around neck, pointing encouragingly at gym equipment.",
+        "interests": [
+          "#PersonalTrainer",
+          "#WorkoutRoutine",
+          "#HealthyNutrition"
+        ],
+        "anthem": "🎵 'Eye of the Tiger' - Gym Anthem",
+        "pages": [
+          {
+            "tag": "💼 Job Overview",
+            "bio": "I am Alex, a certified personal fitness trainer! I design exercise routines and teach people how to stay fit and strong."
+          },
+          {
+            "tag": "✨ Daily Tasks",
+            "bio": "I guide gym members with weights, cardio workouts, and healthy eating plans. High motivation every day!"
+          },
+          {
+            "tag": "🚩 Job Pros & Cons",
+            "greenFlags": [
+              "✓ Active healthy lifestyle",
+              "✓ Inspiring people to reach goals",
+              "✓ Great energy"
+            ],
+            "redFlags": [
+              "✗ Waking up at 5:30 AM for clients",
+              "✗ Sore muscles constantly",
+              "✗ Loud gym music all day"
+            ]
+          }
+        ],
+        "opener": "Hey! Do you prefer morning workouts or evening relaxation?",
+        "icebreakers": [
+          "Morning workouts!",
+          "Evening relaxation on couch!",
+          "Weekend sports!"
+        ],
+        "prompt": "What are the benefits and challenges of being a personal trainer?"
+      }
+    ],
+    "properties": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Properties 🏠",
+        "title": "Modern Loft Apartment",
+        "age": "Built 2021",
+        "location": "📍 1.2 miles away • Arts District",
+        "verified": true,
+        "avatar": "🏢",
+        "gradient": "linear-gradient(135deg, #4f46e5 0%, #6366f1 100%)",
+        "visualDescription": "Industrial loft with high exposed concrete ceiling, big floor-to-ceiling glass windows, leather couch, and open kitchen island.",
+        "interests": [
+          "#HighCeilings",
+          "#IndustrialLoft",
+          "#CityView"
+        ],
+        "anthem": "🎵 'City Lights' - Chill Beats",
+        "pages": [
+          {
+            "tag": "🏡 Home Details",
+            "bio": "Spacious 1-bedroom industrial loft apartment! Features high exposed ceilings, big glass windows, and open kitchen island."
+          },
+          {
+            "tag": "✨ Location & Vibe",
+            "bio": "Located in the trendy Arts District with art galleries, coffee shops, and rooftop bars right downstairs. $1,200/month."
+          },
+          {
+            "tag": "🚩 Home Pros & Cons",
+            "greenFlags": [
+              "✓ Stunning skyline city views",
+              "✓ Abundant natural sunlight",
+              "✓ Modern kitchen island"
+            ],
+            "redFlags": [
+              "✗ Higher utility heating bills",
+              "✗ Street noise at night",
+              "✗ No underground parking"
+            ]
+          }
+        ],
+        "opener": "Hi! Do you like big open industrial lofts with city views?",
+        "icebreakers": [
+          "I love industrial loft design!",
+          "Too noisy for me!",
+          "Awesome big windows!"
+        ],
+        "prompt": "Describe the main features of this loft apartment."
+      },
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Properties 🏠",
+        "title": "Suburban Cottage with Garden",
+        "age": "Built 2018",
+        "location": "📍 5 miles away • Oak Hill",
+        "verified": true,
+        "avatar": "🏡",
+        "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+        "visualDescription": "Cozy stone cottage with flower boxes under windows, wooden porch swing, green lawn, and stone chimney.",
+        "interests": [
+          "#FlowerGarden",
+          "#PorchSwing",
+          "#QuietSuburbs"
+        ],
+        "anthem": "🎵 'Country Roads' - Acoustic Cover",
+        "pages": [
+          {
+            "tag": "🏡 Home Details",
+            "bio": "Charming 3-bedroom suburban cottage! Features a stone fireplace, sunny kitchen porch, and colorful flower garden."
+          },
+          {
+            "tag": "✨ Location & Vibe",
+            "bio": "Peaceful family neighborhood near top elementary schools and bike trails. Perfect for relaxing weekend BBQs!"
+          },
+          {
+            "tag": "🚩 Home Pros & Cons",
+            "greenFlags": [
+              "✓ Spacious private backyard",
+              "✓ Cozy stone fireplace",
+              "✓ Safe quiet neighborhood"
+            ],
+            "redFlags": [
+              "✗ Requires lawn mowing and garden care",
+              "✗ Commute into city takes 35 mins",
+              "✗ Needs roof maintenance"
+            ]
+          }
+        ],
+        "opener": "Hello! Would you like to sit on the porch swing and read a book?",
+        "icebreakers": [
+          "Sounds peaceful!",
+          "I prefer apartment living",
+          "I love stone fireplaces!"
+        ],
+        "prompt": "Compare this suburban cottage with the city loft apartment."
+      }
+    ],
+    "character": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Character Traits 🧠",
+        "title": "Organized & Reliable (Sophia)",
+        "age": "26",
+        "location": "📍 2 miles away • West End",
+        "verified": true,
+        "avatar": "📅",
+        "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
+        "visualDescription": "Focused young woman checking off tasks on a colorful paper planner, smiling calmly in a neat organized desk setup.",
+        "interests": [
+          "#Punctual",
+          "#PlannerGeek",
+          "#ReliableFriend"
+        ],
+        "anthem": "🎵 'Clockwork' - Smooth Rhythms",
+        "pages": [
+          {
+            "tag": "🧠 Personality Traits",
+            "bio": "I am Sophia! Very organized, punctual, and reliable. I never arrive late and I always keep my promises."
+          },
+          {
+            "tag": "✨ Daily Routine",
+            "bio": "I keep a daily color-coded planner, prepare my outfits the night before, and keep my living space spotless."
+          },
+          {
+            "tag": "🚩 Pros & Cons",
+            "greenFlags": [
+              "✓ Never cancels plans last minute",
+              "✓ Super dependable in emergencies",
+              "✓ Always punctual"
+            ],
+            "redFlags": [
+              "✗ Stressed when plans change unexpectedly",
+              "✗ Too strict with schedules",
+              "✗ Dislikes messy places"
+            ]
+          }
+        ],
+        "opener": "Hi! Are you someone who plans ahead or makes last-minute spontaneous decisions?",
+        "icebreakers": [
+          "I plan everything ahead!",
+          "I am spontaneous!",
+          "A bit of both!"
+        ],
+        "prompt": "Why is reliability an important trait in friendship?"
+      }
+    ],
+    "hobbies": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Hobbies 🎨",
+        "title": "Sourdough Bread Baking",
+        "age": "Popular Craft",
+        "location": "📍 Kitchen Bench",
+        "verified": true,
+        "avatar": "🍞",
+        "gradient": "linear-gradient(135deg, #b45309 0%, #f59e0b 100%)",
+        "visualDescription": "Crispy golden crusty loaf of sourdough bread dusted with flour sitting on a wooden cutting board with butter knife.",
+        "interests": [
+          "#BakingBread",
+          "#CrispyCrust",
+          "#Homemade"
+        ],
+        "anthem": "🎵 'Bread and Butter' - Upbeat Oldie",
+        "pages": [
+          {
+            "tag": "🎨 Hobby Overview",
+            "bio": "Baking artisanal sourdough bread from scratch! Mixing flour, water, and wild starter, then baking in a Dutch oven."
+          },
+          {
+            "tag": "✨ Vibe & Joy",
+            "bio": "The amazing smell filling the apartment and hearing the crust crackle as it cools. Tastes incredible with salted butter!"
+          },
+          {
+            "tag": "🚩 Hobby Pros & Cons",
+            "greenFlags": [
+              "✓ Delicious fresh warm bread",
+              "✓ Therapeutic slow process",
+              "✓ No artificial ingredients"
+            ],
+            "redFlags": [
+              "✗ Takes 24 hours of patience",
+              "✗ Flour dusting everywhere",
+              "✗ Starter needs daily feeding"
+            ]
+          }
+        ],
+        "opener": "Fresh sourdough right out of the oven! Butter or olive oil with balsamic vinegar?",
+        "icebreakers": [
+          "Salted butter please!",
+          "Olive oil and balsamic!",
+          "Garlic butter!"
+        ],
+        "prompt": "Explain the step-by-step process of sourdough baking in simple sentences."
+      }
+    ]
+  },
+  "B1": {
+    "appearance": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Physical Appearance 👁️",
+        "title": "Maya (Boho-Chic & Shoulder-Length Curls)",
+        "age": "26",
+        "location": "📍 3 miles away • Cultural District",
+        "verified": true,
+        "avatar": "👩‍🦱",
+        "gradient": "linear-gradient(135deg, #7c2d12 0%, #d97706 100%)",
+        "visualDescription": "Artistic woman with voluminous dark brown curly hair, expressive dark eyes, wearing an embroidered bohemian kimono, layered silver rings, and turquoise earrings.",
+        "interests": [
+          "#BohoStyle",
+          "#VoluminousCurls",
+          "#LayeredAccessories"
+        ],
+        "anthem": "🎵 'Gypsy Heart' - Indie Folk",
+        "pages": [
+          {
+            "tag": "🖼️ Physical Appearance",
+            "bio": "I'm Maya, 26. Distinctive for my expressive dark eyes, sun-kissed tan complexion, and shoulder-length dark brown curly hair."
+          },
+          {
+            "tag": "✨ Fashion Aesthetic",
+            "bio": "Bohemian aesthetic: flowing embroidered cardigans, vintage silver jewelry, suede ankle boots, and artistic earthy tones."
+          },
+          {
+            "tag": "🚩 Appearance Detail",
+            "greenFlags": [
+              "✓ Striking expressive facial features",
+              "✓ Unique artistic personal style",
+              "✓ Warm inviting smile"
+            ],
+            "redFlags": [
+              "✗ Takes 45 minutes to define curls",
+              "✗ Overloaded with handmade bracelets",
+              "✗ Thrifting addiction"
+            ]
+          }
+        ],
+        "opener": "Hey! How would you describe your personal aesthetic and fashion philosophy?",
+        "icebreakers": [
+          "Minimalist modern!",
+          "Boho vintage artistic!",
+          "Streetwear sneakers!"
+        ],
+        "prompt": "Describe Maya's hairstyle, accessories, and overall aesthetic using descriptive adjectives."
+      },
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Physical Appearance 👁️",
+        "title": "Julian (Broad-Shouldered & Rugged Style)",
+        "age": "29",
+        "location": "📍 2.5 miles away • Timber Ridge",
+        "verified": true,
+        "avatar": "🧔",
+        "gradient": "linear-gradient(135deg, #15803d 0%, #166534 100%)",
+        "visualDescription": "Broad-shouldered man with a trimmed dark beard, sharp jawline, short undercut brown hair, wearing a flannel plaid shirt and leather boots.",
+        "interests": [
+          "#BroadShouldered",
+          "#TrimmedBeard",
+          "#FlannelShirt"
+        ],
+        "anthem": "🎵 'Wilderness' - Folk Rock",
+        "pages": [
+          {
+            "tag": "🖼️ Physical Appearance",
+            "bio": "I'm Julian, 29. Tall (6'1\") with a rugged broad-shouldered frame, well-groomed beard, sharp jawline, and warm brown hazel eyes."
+          },
+          {
+            "tag": "✨ Outdoor Outfit Vibe",
+            "bio": "Outdoor lumberjack aesthetic: heavy-duty flannel plaid shirts, dark selvedge denim jeans, and durable leather hiking boots."
+          },
+          {
+            "tag": "🚩 Appearance Detail",
+            "greenFlags": [
+              "✓ Athletic broad-shouldered posture",
+              "✓ Neatly trimmed beard",
+              "✓ Durable outdoor wardrobe"
+            ],
+            "redFlags": [
+              "✗ Beard oil everywhere",
+              "✗ Refuses to wear formal ties",
+              "✗ Flannel shirt in every color"
+            ]
+          }
+        ],
+        "opener": "Greetings! Do you favor a clean-cut corporate look or an outdoor rugged style?",
+        "icebreakers": [
+          "Outdoor rugged style!",
+          "Clean-cut corporate!",
+          "Casual streetwear!"
+        ],
+        "prompt": "Analyze Julian's physical frame, grooming habits, and clothing choices."
+      }
+    ],
+    "professions": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Professions 💼",
+        "title": "Software Engineer (Marcus)",
+        "age": "5 yrs exp",
+        "location": "📍 1.5 miles away • Tech Hub",
+        "verified": true,
+        "avatar": "👨‍💻",
+        "gradient": "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
+        "visualDescription": "Software engineer working at a dual-monitor standing desk, wearing headphones, coding on IDE software with dark theme.",
+        "interests": [
+          "#FullStackCode",
+          "#DualMonitors",
+          "#ProblemSolving"
+        ],
+        "anthem": "🎵 'Digital Love' - Electronic Synth",
+        "pages": [
+          {
+            "tag": "💼 Profession Overview",
+            "bio": "I'm Marcus, a Full-Stack Software Engineer building web apps and cloud algorithms. I turn complex logic into smooth user experiences."
+          },
+          {
+            "tag": "✨ Daily Responsibilities",
+            "bio": "Writing scalable code, reviewing pull requests, solving algorithmic puzzles, and collaborating with UI designers remotely."
+          },
+          {
+            "tag": "🚩 Career Pros & Cons",
+            "greenFlags": [
+              "✓ High remote work flexibility",
+              "✓ Strong analytical problem solving",
+              "✓ Excellent compensation"
+            ],
+            "redFlags": [
+              "✗ Prolonged sitting & screen glare",
+              "✗ Sudden server bug emergencies",
+              "✗ Jargon heavy language"
+            ]
+          }
+        ],
+        "opener": "Hello world! Are you fascinated or intimidated by coding and technology?",
+        "icebreakers": [
+          "Fascinated by tech!",
+          "Intimidated by code!",
+          "I write code too!"
+        ],
+        "prompt": "Discuss the advantages and drawbacks of a career in software engineering."
+      },
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Professions 💼",
+        "title": "Environmental Journalist (Clara)",
+        "age": "6 yrs exp",
+        "location": "📍 2 miles away • Press Building",
+        "verified": true,
+        "avatar": "👩‍💻",
+        "gradient": "linear-gradient(135deg, #047857 0%, #10b981 100%)",
+        "visualDescription": "Journalist holding a recording microphone and notebook, conducting an interview outdoors with wind turbines in background.",
+        "interests": [
+          "#ClimateAction",
+          "#Investigative",
+          "#Storytelling"
+        ],
+        "anthem": "🎵 'Blowin' in the Wind' - Folk",
+        "pages": [
+          {
+            "tag": "💼 Profession Overview",
+            "bio": "I'm Clara, an investigative environmental journalist. I research renewable energy trends and write articles on climate conservation."
+          },
+          {
+            "tag": "✨ Daily Responsibilities",
+            "bio": "Interviewing scientists, traveling to nature reserves, verifying data sources, and editing impactful news features."
+          },
+          {
+            "tag": "🚩 Career Pros & Cons",
+            "greenFlags": [
+              "✓ Meaningful societal impact",
+              "✓ Travel & fieldwork opportunities",
+              "✓ Continuous learning"
+            ],
+            "redFlags": [
+              "✗ Strict publication deadlines",
+              "✗ Dealing with misinformation",
+              "✗ Irregular work hours"
+            ]
+          }
+        ],
+        "opener": "Hi! What environmental or social issue do you feel most passionate about?",
+        "icebreakers": [
+          "Renewable energy!",
+          "Wildlife conservation!",
+          "Reducing plastic waste!"
+        ],
+        "prompt": "What skills are required to be an effective investigative journalist?"
+      }
+    ],
+    "properties": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Properties 🏠",
+        "title": "Converted Paper Mill Loft",
+        "age": "Renovated 2022",
+        "location": "📍 1 mile away • Riverfront District",
+        "verified": true,
+        "avatar": "🏭",
+        "gradient": "linear-gradient(135deg, #475569 0%, #334155 100%)",
+        "visualDescription": "Historic brick mill converted into luxury loft with red exposed brick walls, timber beams, polished concrete floor, and river view.",
+        "interests": [
+          "#HistoricBrick",
+          "#RiverfrontView",
+          "#TimberBeams"
+        ],
+        "anthem": "🎵 'Riverside' - Ambient Indie",
+        "pages": [
+          {
+            "tag": "🏡 Property Architectural Details",
+            "bio": "A stunning 2-bedroom loft inside a converted 19th-century paper mill. Merges original exposed brickwork and heavy timber beams with ultra-modern fixtures."
+          },
+          {
+            "tag": "✨ Amenities & Surroundings",
+            "bio": "Private balcony overlooking the riverfront promenade, smart home lighting, underground garage, and private gym access. $1,850/month."
+          },
+          {
+            "tag": "🚩 Property Evaluation",
+            "greenFlags": [
+              "✓ Architectural character & heritage",
+              "✓ Breathtaking river views",
+              "✓ Soundproof double glazing"
+            ],
+            "redFlags": [
+              "✗ Higher monthly HOA fees",
+              "✗ High ceiling acoustic echoes",
+              "✗ Strict historic building rules"
+            ]
+          }
+        ],
+        "opener": "Welcome! Do you prefer historic renovated properties or brand-new modern architecture?",
+        "icebreakers": [
+          "Historic renovated character!",
+          "Brand-new sleek modern!",
+          "A cozy country home!"
+        ],
+        "prompt": "Evaluate the architectural contrast between historic industrial brickwork and modern amenities."
+      },
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Properties 🏠",
+        "title": "Eco-Friendly Solar Villa",
+        "age": "Built 2023",
+        "location": "📍 6 miles away • Sun Valley",
+        "verified": true,
+        "avatar": "☀️",
+        "gradient": "linear-gradient(135deg, #65a30d 0%, #84cc16 100%)",
+        "visualDescription": "Sustainable two-story villa with rooftop solar panels, rainwater collection barrel, vertical plant wall, and large timber deck.",
+        "interests": [
+          "#ZeroEmission",
+          "#SolarPower",
+          "#RainwaterHarvest"
+        ],
+        "anthem": "🎵 'Here Comes the Sun' - Acoustic",
+        "pages": [
+          {
+            "tag": "🏡 Eco Property Details",
+            "bio": "A state-of-the-art 3-bedroom zero-emission villa powered by rooftop solar panels, triple-pane insulation, and rainwater harvesting systems."
+          },
+          {
+            "tag": "✨ Sustainable Living Vibe",
+            "bio": "Organic garden patch, electric vehicle charging dock, vertical indoor plant wall, and minimal monthly electricity bills."
+          },
+          {
+            "tag": "🚩 Property Evaluation",
+            "greenFlags": [
+              "✓ Near zero energy bills",
+              "✓ Sustainable carbon footprint",
+              "✓ EV charging station included"
+            ],
+            "redFlags": [
+              "✗ High initial purchase investment",
+              "✗ Solar battery maintenance",
+              "✗ Distance from city center"
+            ]
+          }
+        ],
+        "opener": "Greetings! How important is sustainable eco-friendly design when choosing a place to live?",
+        "icebreakers": [
+          "Crucial priority for me!",
+          "Nice bonus but location first!",
+          "Interested in solar tech!"
+        ],
+        "prompt": "Describe the sustainable technologies integrated into this eco-friendly villa."
+      }
+    ],
+    "character": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Character Traits 🧠",
+        "title": "Empathetic & Intuitive (Daniel)",
+        "age": "28",
+        "location": "📍 1.8 miles away • Maple Heights",
+        "verified": true,
+        "avatar": "🤝",
+        "gradient": "linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)",
+        "visualDescription": "Warm-hearted man listening intently during coffee conversation, leaning forward with genuine care and active body language.",
+        "interests": [
+          "#EmotionalIntelligence",
+          "#ActiveListener",
+          "#Empathetic"
+        ],
+        "anthem": "🎵 'Lean on Me' - Soul Classic",
+        "pages": [
+          {
+            "tag": "🧠 Personality Character",
+            "bio": "I'm Daniel. I pride myself on high emotional intelligence, deep empathy, and the ability to truly listen without judging."
+          },
+          {
+            "tag": "✨ Interpersonal Style",
+            "bio": "Friends come to me when they need thoughtful advice or a safe space to vent. I value authentic connections over small talk."
+          },
+          {
+            "tag": "🚩 Pros & Cons",
+            "greenFlags": [
+              "✓ Deeply supportive & trustworthy",
+              "✓ Highly perceptive of feelings",
+              "✓ Outstanding conflict resolver"
+            ],
+            "redFlags": [
+              "✗ Absorbs other people's stress easily",
+              "✗ Avoids aggressive confrontation",
+              "✗ Emotionally drained at times"
+            ]
+          }
+        ],
+        "opener": "Hello! Do you consider yourself more guided by rational logic or emotional intuition?",
+        "icebreakers": [
+          "Rational logic!",
+          "Emotional intuition!",
+          "Equal balance of both!"
+        ],
+        "prompt": "How does high emotional intelligence improve interpersonal relationships?"
+      }
+    ],
+    "hobbies": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Hobbies 🎨",
+        "title": "Bouldering & Rock Climbing",
+        "age": "Active Pursuit",
+        "location": "📍 Peak Climbing Gym",
+        "verified": true,
+        "avatar": "🧗‍♂️",
+        "gradient": "linear-gradient(135deg, #15803d 0%, #22c55e 100%)",
+        "visualDescription": "Climber wearing chalk bag, gripping brightly colored indoor bouldering holds on an angled overhang wall.",
+        "interests": [
+          "#Bouldering",
+          "#ProblemSolving",
+          "#FitnessAndFocus"
+        ],
+        "anthem": "🎵 'Climb Every Mountain' - Rock Vibe",
+        "pages": [
+          {
+            "tag": "🎨 Hobby Overview",
+            "bio": "Solving vertical body puzzles on indoor climbing walls and outdoor crags using chalked hands, core power, and mental focus."
+          },
+          {
+            "tag": "✨ Physical & Mental Vibe",
+            "bio": "Bouldering requires strategy like chess, combined with full-body functional strength. The feeling when completing a tough V5 route is unbeatable!"
+          },
+          {
+            "tag": "🚩 Hobby Evaluation",
+            "greenFlags": [
+              "✓ Exceptional core and upper body strength",
+              "✓ Highly social community",
+              "✓ Mindful focus on the present"
+            ],
+            "redFlags": [
+              "✗ Chalk dust covering all gear",
+              "✗ Calloused worn fingers",
+              "✗ Obsessively analyzing climbing routes"
+            ]
+          }
+        ],
+        "opener": "Hey! Have you ever attempted indoor bouldering or rock climbing?",
+        "icebreakers": [
+          "I love bouldering gyms!",
+          "Terrified of heights! 😅",
+          "Eager to try it out!"
+        ],
+        "prompt": "In what ways does bouldering combine physical endurance with mental problem solving?"
+      }
+    ]
+  },
+  "B2": {
+    "appearance": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Physical Appearance 👁️",
+        "title": "Victoria (Statuesque Elegance & Platinum Bob)",
+        "age": "29",
+        "location": "📍 1 mile away • Metropolitan Plaza",
+        "verified": true,
+        "avatar": "👩‍🦳",
+        "gradient": "linear-gradient(135deg, #0284c7 0%, #475569 100%)",
+        "visualDescription": "Statuesque 5'10\" woman with a razor-sharp platinum blonde bob, piercing ice-blue eyes, high cheekbones, wearing an asymmetrical black blazer and understated gold hoop earrings.",
+        "interests": [
+          "#StatuesqueElegance",
+          "#PlatinumBlondeBob",
+          "#HighCheekbones"
+        ],
+        "anthem": "🎵 'Vogue' - Chic Fashion",
+        "pages": [
+          {
+            "tag": "🖼️ Physical Appearance",
+            "bio": "I'm Victoria, 29. Statuesque frame (5'10\") featuring prominent high cheekbones, striking ice-blue eyes, and a precision-cut platinum blonde bob."
+          },
+          {
+            "tag": "✨ Fashion Aesthetics",
+            "bio": "High-fashion minimalist tailoring: monochromatic suits, structured blazers, sleek leather boots, and subtle designer accents."
+          },
+          {
+            "tag": "🚩 Appearance Detail",
+            "greenFlags": [
+              "✓ Uncompromising sartorial poise",
+              "✓ Commanding presence & posture",
+              "✓ Impeccable grooming standard"
+            ],
+            "redFlags": [
+              "✗ Intimidating initial impression",
+              "✗ High maintenance hair bleaching routine",
+              "✗ Strict dress code standards"
+            ]
+          }
+        ],
+        "opener": "Welcome! How significantly does first impression and sartorial elegance influence your personal perception?",
+        "icebreakers": [
+          "First impressions are crucial!",
+          "Authenticity matters more than clothes!",
+          "Appreciate refined tailoring!"
+        ],
+        "prompt": "Examine the stylistic impact of Victoria's minimalist wardrobe, hair structure, and demeanor."
+      },
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Physical Appearance 👁️",
+        "title": "Gabriel (Charismatic & Silver-Templed Style)",
+        "age": "34",
+        "location": "📍 2 miles away • Old Town District",
+        "verified": true,
+        "avatar": "👨‍🦱",
+        "gradient": "linear-gradient(135deg, #334155 0%, #64748b 100%)",
+        "visualDescription": "Charismatic 34-year-old man with distinguished silver-templed dark hair, captivating dimples, wearing a tailored charcoal wool coat and silk scarf.",
+        "interests": [
+          "#SilverTemples",
+          "#DistinguishedLook",
+          "#TailoredWoolCoat"
+        ],
+        "anthem": "🎵 'Feeling Good' - Orchestral Jazz",
+        "pages": [
+          {
+            "tag": "🖼️ Physical Appearance",
+            "bio": "I'm Gabriel, 34. Athletic height (6'0\"), distinguished silver-templed wavy dark hair, warm hazel eyes, and expressive dimples when laughing."
+          },
+          {
+            "tag": "✨ Fashion Aesthetics",
+            "bio": "Classic European sophistication: charcoal wool overcoats, tailored cashmere turtlenecks, antique leather loafers, and vintage timepiece."
+          },
+          {
+            "tag": "🚩 Appearance Detail",
+            "greenFlags": [
+              "✓ Distinguished, mature aesthetic",
+              "✓ Warm disarming smile with dimples",
+              "✓ Timeless fashion choices"
+            ],
+            "redFlags": [
+              "✗ Takes vintage timepiece care too seriously",
+              "✗ Refuses casual sportswear",
+              "✗ Meticulous hair silvering care"
+            ]
+          }
+        ],
+        "opener": "Greetings! Do you believe personal style should evolve continuously or anchor to timeless classicism?",
+        "icebreakers": [
+          "Evolve with current trends!",
+          "Anchor to timeless classicism!",
+          "Blend modern & vintage!"
+        ],
+        "prompt": "Analyze how Gabriel's physical attributes convey maturity, charisma, and sophistication."
+      }
+    ],
+    "professions": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Professions 💼",
+        "title": "AI Ethics Researcher (Dr. Aris)",
+        "age": "7 yrs exp",
+        "location": "📍 1.2 miles away • Innovation Campus",
+        "verified": true,
+        "avatar": "🧠",
+        "gradient": "linear-gradient(135deg, #4338ca 0%, #6366f1 100%)",
+        "visualDescription": "Researcher reviewing algorithmic bias data on transparent holographic displays in a high-tech university research lab.",
+        "interests": [
+          "#AIEthics",
+          "#AlgorithmicJustice",
+          "#TechPolicy"
+        ],
+        "anthem": "🎵 'Computer World' - Electro Synth",
+        "pages": [
+          {
+            "tag": "💼 Profession Overview",
+            "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher. I evaluate machine learning models for algorithmic bias, data privacy compliance, and societal safety."
+          },
+          {
+            "tag": "✨ Responsibilities & Expertise",
+            "bio": "Publishing peer-reviewed policy frameworks, advising tech executives, and auditing large language models to prevent discrimination in automated decisions."
+          },
+          {
+            "tag": "🚩 Career Pros & Cons",
+            "greenFlags": [
+              "✓ Pioneering the frontier of tech safety",
+              "✓ High intellectual stimulation",
+              "✓ Shaping global policy guidelines"
+            ],
+            "redFlags": [
+              "✗ Complex ethical dilemmas without clear answers",
+              "✗ Corporate resistance to regulation",
+              "✗ Constant rapid tech shifts"
+            ]
+          }
+        ],
+        "opener": "Greetings! In your opinion, should artificial intelligence development be strictly regulated by international law?",
+        "icebreakers": [
+          "Strict international regulation essential!",
+          "Innovation needs freedom first!",
+          "Balanced adaptive oversight!"
+        ],
+        "prompt": "Evaluate the ethical implications and societal responsibilities of AI ethics researchers."
+      },
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Professions 💼",
+        "title": "Architectural Conservationist (Soren)",
+        "age": "8 yrs exp",
+        "location": "📍 0.9 miles away • Heritage Bureau",
+        "verified": true,
+        "avatar": "🏛️",
+        "gradient": "linear-gradient(135deg, #854d0e 0%, #a16207 100%)",
+        "visualDescription": "Architect in hardhat examining intricate stonework details of a historic cathedral restoration project using laser scanning tools.",
+        "interests": [
+          "#HeritageRestoration",
+          "#SustainableUrbanism",
+          "#AdaptiveReuse"
+        ],
+        "anthem": "🎵 'Symphony No. 5' - Orchestral",
+        "pages": [
+          {
+            "tag": "💼 Profession Overview",
+            "bio": "I'm Soren, an Architectural Conservationist. I specialize in adaptive reuse—restoring landmark historic structures while adapting them for sustainable modern utility."
+          },
+          {
+            "tag": "✨ Responsibilities & Expertise",
+            "bio": "3D laser scanning ancient masonry, sourcing period-accurate ecological materials, and preventing historical landmarks from demolition."
+          },
+          {
+            "tag": "🚩 Career Pros & Cons",
+            "greenFlags": [
+              "✓ Preserving cultural heritage for future generations",
+              "✓ Tangible lasting artistic legacy",
+              "✓ Blending history with sustainability"
+            ],
+            "redFlags": [
+              "✗ Lengthy bureaucratic approval permits",
+              "✗ Unforeseen structural decay costs",
+              "✗ Budget constraints"
+            ]
+          }
+        ],
+        "opener": "Hello! How can cities balance preserving historical architecture with building modern housing infrastructure?",
+        "icebreakers": [
+          "Prioritize historic preservation!",
+          "Prioritize modern housing needs!",
+          "Adaptive reuse is the solution!"
+        ],
+        "prompt": "Debate the balance between historical architectural preservation and urban modernization."
+      }
+    ],
+    "properties": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Properties 🏠",
+        "title": "Penthouse Sky Villa",
+        "age": "Built 2024",
+        "location": "📍 0.5 miles away • Pinnacle Tower",
+        "verified": true,
+        "avatar": "🏙️",
+        "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+        "visualDescription": "Luxury penthouse terrace with private infinity glass pool, panoramic 360-degree skyline views, fire pit, and floor-to-ceiling glass walls.",
+        "interests": [
+          "#360SkylineView",
+          "#InfinityPool",
+          "#SmartAutomation"
+        ],
+        "anthem": "🎵 'Skyfall' - Cinematic Elegance",
+        "pages": [
+          {
+            "tag": "🏡 Property Architecture & Luxury",
+            "bio": "Exquisite 4,500 sq ft top-floor Sky Villa featuring a private glass-edge infinity pool, 360-degree city skyline panoramas, and full biometric smart automation."
+          },
+          {
+            "tag": "✨ Premium Amenities",
+            "bio": "Private elevator entry, climate-controlled wine cellar, motorized glass curtain walls, and rooftop helipad access. $6,500/month."
+          },
+          {
+            "tag": "🚩 Property Evaluation",
+            "greenFlags": [
+              "✓ Peerless panoramic city vistas",
+              "✓ Maximum security & privacy",
+              "✓ State-of-the-art smart home integration"
+            ],
+            "redFlags": [
+              "✗ Exorbitant maintenance expenditure",
+              "✗ High altitude sway during strong storms",
+              "✗ Detached from ground neighborhood feel"
+            ]
+          }
+        ],
+        "opener": "Welcome to the sky! Does extreme luxury housing justify its social and environmental footprint?",
+        "icebreakers": [
+          "Breathtaking pinnacle living!",
+          "Excessive luxury is problematic!",
+          "Impressive engineering achievement!"
+        ],
+        "prompt": "Analyze the architectural engineering and lifestyle dynamics of luxury high-rise penthouse living."
+      },
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Properties 🏠",
+        "title": "Alpine Timber Chalet",
+        "age": "Built 2021",
+        "location": "📍 12 miles away • Summit Crest",
+        "verified": true,
+        "avatar": "🏔️",
+        "gradient": "linear-gradient(135deg, #78350f 0%, #92400e 100%)",
+        "visualDescription": "Rustic luxurious timber chalet nestled in snow-covered pine mountains, featuring cathedral glass facade, outdoor cedar sauna, and roaring stone hearth.",
+        "interests": [
+          "#AlpineChalet",
+          "#CathedralWindows",
+          "#CedarSauna"
+        ],
+        "anthem": "🎵 'Winter Song' - Atmospheric Folk",
+        "pages": [
+          {
+            "tag": "🏡 Property Architecture & Ambience",
+            "bio": "A magnificent 4-bedroom timber chalet carved into alpine peaks. Showcases floor-to-ceiling cathedral windows framing snowy mountain vistas and a massive stone hearth."
+          },
+          {
+            "tag": "✨ Alpine Lifestyle Amenities",
+            "bio": "Ski-in ski-out access, outdoor cedar wood sauna, geothermal floor heating, and custom oak furniture crafted by local artisans."
+          },
+          {
+            "tag": "🚩 Property Evaluation",
+            "greenFlags": [
+              "✓ Unrivaled mountain tranquility",
+              "✓ Eco geothermal heating system",
+              "✓ Ski resort proximity"
+            ],
+            "redFlags": [
+              "✗ Snowplowing road access in heavy blizzards",
+              "✗ Seasonal isolation",
+              "✗ High timber maintenance requirement"
+            ]
+          }
+        ],
+        "opener": "Greetings! Would you thrive living surrounded by alpine wilderness, or do you require urban velocity?",
+        "icebreakers": [
+          "Alpine wilderness sanctuary!",
+          "Urban velocity always!",
+          "Seasonal balance between both!"
+        ],
+        "prompt": "Evaluate how living in isolated natural terrain affects psychological well-being and daily routine."
+      }
+    ],
+    "character": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Character Traits 🧠",
+        "title": "Visionary & Resilient (Helena)",
+        "age": "32",
+        "location": "📍 1.5 miles away • Enterprise Square",
+        "verified": true,
+        "avatar": "🦁",
+        "gradient": "linear-gradient(135deg, #b91c1c 0%, #dc2626 100%)",
+        "visualDescription": "Determined female leader standing atop a conference hall terrace, looking strategically toward the city skyline with confidence and poise.",
+        "interests": [
+          "#StrategicVision",
+          "#Resilience",
+          "#EmpoweringLeader"
+        ],
+        "anthem": "🎵 'Unstoppable' - Anthem",
+        "pages": [
+          {
+            "tag": "🧠 Personality Character",
+            "bio": "I'm Helena, 32. Characterized by strategic foresight, formidable resilience under pressure, and an unwavering commitment to empowering those around me."
+          },
+          {
+            "tag": "✨ Leadership Philosophy",
+            "bio": "I view setbacks as crucial data points for growth. I lead with transparency, encourage bold calculated risk-taking, and foster accountability."
+          },
+          {
+            "tag": "🚩 Pros & Cons",
+            "greenFlags": [
+              "✓ Inspires high performance in others",
+              "✓ Unshakable under severe crisis",
+              "✓ Decisive and visionary"
+            ],
+            "redFlags": [
+              "✗ High expectations can intimidate",
+              "✗ Workaholic tendencies",
+              "✗ Impatient with slowness"
+            ]
+          }
+        ],
+        "opener": "Greetings! What key quality distinguishes a true leader from a boss?",
+        "icebreakers": [
+          "Empathy & vision!",
+          "Resilience under crisis!",
+          "Lead by example!"
+        ],
+        "prompt": "Differentiate between transactional management and transformative resilient leadership."
+      }
+    ],
+    "hobbies": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Hobbies 🎨",
+        "title": "35mm Analog Film Photography",
+        "age": "Analog Craft",
+        "location": "📍 Darkroom & City Streets",
+        "verified": true,
+        "avatar": "📷",
+        "gradient": "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
+        "visualDescription": "Vintage Leica film camera resting on a darkroom wooden bench next to developed negatives, amber safelight glowing in background.",
+        "interests": [
+          "#FilmIsNotDead",
+          "#35mmAnalog",
+          "#DarkroomProcess"
+        ],
+        "anthem": "🎵 'Kodachrome' - Nostalgic Classic",
+        "pages": [
+          {
+            "tag": "🎨 Hobby Overview & Craft",
+            "bio": "Capturing urban moments on 35mm silver halide film with deliberate composition—limiting oneself to 36 exposures per roll without instant digital previews."
+          },
+          {
+            "tag": "✨ Artistic Philosophy",
+            "bio": "Developing negatives manually in chemical darkrooms, embracing grain textures, subtle light leaks, and authentic unedited candid humanity."
+          },
+          {
+            "tag": "🚩 Hobby Evaluation",
+            "greenFlags": [
+              "✓ Teaches mindfulness and patience",
+              "✓ Tangible physical prints and negatives",
+              "✓ Unrivaled aesthetic depth"
+            ],
+            "redFlags": [
+              "✗ Escalating chemical & film roll costs",
+              "✗ Accidental light leaks ruining shots",
+              "✗ No instant gratification"
+            ]
+          }
+        ],
+        "opener": "Greetings! How does the deliberate constraint of analog media alter human creative expression compared to digital abundance?",
+        "icebreakers": [
+          "Constraints force deeper focus!",
+          "Digital abundance enables speed!",
+          "Analog preserves authentic soul!"
+        ],
+        "prompt": "Critique the psychological and artistic differences between digital smartphone photography and 35mm film photography."
+      }
+    ]
+  }
+}
