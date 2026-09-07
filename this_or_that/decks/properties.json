@@ -19,15 +19,8 @@
       "anthem": "🎵 'Home Sweet Home' - Cozy Acoustic",
       "pages": [
         {
-          "tag": "🏡 Home Details",
-          "bio": "I am a small studio flat. I have one room, a yellow sofa, a small kitchen, and a clean bathroom."
-        },
-        {
-          "tag": "✨ Location & Vibe",
-          "bio": "I am near the bus stop and the supermarket. I am cheap and cozy for one student."
-        },
-        {
-          "tag": "🚩 Home Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I am a small studio flat. I have one room, a yellow sofa, a small kitchen, and a clean bathroom. I am near the bus stop and the supermarket. I am cheap and cozy for one student.",
           "greenFlags": [
             "✓ Easy to clean",
             "✓ Sunny big window",
@@ -67,15 +60,8 @@
       "anthem": "🎵 'Our House' - Happy Classic",
       "pages": [
         {
-          "tag": "🏡 Home Details",
-          "bio": "I am a red brick house. I have two bedrooms, one living room, a garage, and a green garden."
-        },
-        {
-          "tag": "✨ Location & Vibe",
-          "bio": "I am on a quiet green street. My garden is good for dogs and children."
-        },
-        {
-          "tag": "🚩 Home Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I am a red brick house. I have two bedrooms, one living room, a garage, and a green garden. I am on a quiet green street. My garden is good for dogs and children.",
           "greenFlags": [
             "✓ Nice green garden",
             "✓ Garage for car",
@@ -117,15 +103,8 @@
       "anthem": "🎵 'City Lights' - Chill Beats",
       "pages": [
         {
-          "tag": "🏡 Home Details",
-          "bio": "This is a spacious one-bedroom industrial loft. It has high ceilings, large glass windows, and a modern open kitchen island."
-        },
-        {
-          "tag": "✨ Location & Vibe",
-          "bio": "It is located in the Arts District near art galleries and coffee shops, so you can walk everywhere easily."
-        },
-        {
-          "tag": "🚩 Home Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "This is a spacious one-bedroom industrial loft. It has high ceilings, large glass windows, and a modern open kitchen island. It is located in the Arts District near art galleries and coffee shops, so you can walk everywhere easily.",
           "greenFlags": [
             "✓ Great city skyline views",
             "✓ Lots of natural sunlight",
@@ -165,15 +144,8 @@
       "anthem": "🎵 'Country Roads' - Acoustic Cover",
       "pages": [
         {
-          "tag": "🏡 Home Details",
-          "bio": "This is a charming three-bedroom suburban cottage. It features a cozy stone fireplace, a sunny porch, and a flower garden."
-        },
-        {
-          "tag": "✨ Location & Vibe",
-          "bio": "It is in a peaceful neighborhood near primary schools and bicycle paths, which makes it perfect for families."
-        },
-        {
-          "tag": "🚩 Home Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "This is a charming three-bedroom suburban cottage. It features a cozy stone fireplace, a sunny porch, and a flower garden. It is in a peaceful neighborhood near primary schools and bicycle paths, which makes it perfect for families.",
           "greenFlags": [
             "✓ Spacious private backyard",
             "✓ Cozy stone fireplace",
@@ -215,15 +187,8 @@
       "anthem": "🎵 'Riverside' - Ambient Indie",
       "pages": [
         {
-          "tag": "🏡 Property Architectural Details",
-          "bio": "This 2-bedroom loft is located inside a converted 19th-century paper mill that successfully combines original exposed brickwork and timber beams with contemporary interior design."
-        },
-        {
-          "tag": "✨ Amenities & Surroundings",
-          "bio": "Residents enjoy a private balcony overlooking the riverfront promenade, integrated smart lighting, an underground garage, and exclusive fitness center access."
-        },
-        {
-          "tag": "🚩 Property Evaluation",
+          "tag": "🖼️ Profile",
+          "bio": "This 2-bedroom loft is located inside a converted 19th-century paper mill that successfully combines original exposed brickwork and timber beams with contemporary interior design. Residents enjoy a private balcony overlooking the riverfront promenade, integrated smart lighting, an underground garage, and exclusive fitness center access.",
           "greenFlags": [
             "✓ Authentic architectural character and heritage",
             "✓ Breathtaking riverfront views",
@@ -263,15 +228,8 @@
       "anthem": "🎵 'Here Comes the Sun' - Acoustic",
       "pages": [
         {
-          "tag": "🏡 Eco Property Details",
-          "bio": "This innovative 3-bedroom zero-emission villa is powered by rooftop solar panels and relies on triple-pane insulation and rainwater collection to minimize environmental impact."
-        },
-        {
-          "tag": "✨ Sustainable Living Vibe",
-          "bio": "Key features include an organic vegetable garden patch, an electric vehicle charging dock, an indoor vertical plant wall, and negligible energy bills."
-        },
-        {
-          "tag": "🚩 Property Evaluation",
+          "tag": "🖼️ Profile",
+          "bio": "This innovative 3-bedroom zero-emission villa is powered by rooftop solar panels and relies on triple-pane insulation and rainwater collection to minimize environmental impact. Key features include an organic vegetable garden patch, an electric vehicle charging dock, an indoor vertical plant wall, and negligible energy bills.",
           "greenFlags": [
             "✓ Exceptionally low monthly utility costs",
             "✓ Sustainable ecological carbon footprint",
@@ -313,15 +271,8 @@
       "anthem": "🎵 'Skyfall' - Cinematic Elegance",
       "pages": [
         {
-          "tag": "🏡 Property Architecture & Luxury",
-          "bio": "This exquisite 4,500 sq ft top-floor Sky Villa features a private cantilevered glass-edge infinity pool, 360-degree panoramic skyline vistas, and biometric smart automation."
-        },
-        {
-          "tag": "✨ Premium Amenities",
-          "bio": "The residence offers keyless direct elevator access, a climate-controlled sommelier wine cellar, motorized curtain glass facades, and rooftop helipad privileges."
-        },
-        {
-          "tag": "🚩 Property Evaluation",
+          "tag": "🖼️ Profile",
+          "bio": "This exquisite 4,500 sq ft top-floor Sky Villa features a private cantilevered glass-edge infinity pool, 360-degree panoramic skyline vistas, and biometric smart automation. The residence offers keyless direct elevator access, a climate-controlled sommelier wine cellar, motorized curtain glass facades, and rooftop helipad privileges.",
           "greenFlags": [
             "✓ Unrivaled panoramic cityscape vistas",
             "✓ Uncompromised security and seclusion",
@@ -361,15 +312,8 @@
       "anthem": "🎵 'Winter Song' - Atmospheric Folk",
       "pages": [
         {
-          "tag": "🏡 Property Architecture & Ambience",
-          "bio": "Nestled into alpine slopes, this magnificent 4-bedroom timber chalet showcases double-height cathedral windows framing snow-draped pine valleys and a massive granite fireplace."
-        },
-        {
-          "tag": "✨ Alpine Lifestyle Amenities",
-          "bio": "The estate provides ski-in/ski-out convenience, an outdoor cedar wood sauna, geothermal radiant floor heating, and handcrafted oak joinery by local artisans."
-        },
-        {
-          "tag": "🚩 Property Evaluation",
+          "tag": "🖼️ Profile",
+          "bio": "Nestled into alpine slopes, this magnificent 4-bedroom timber chalet showcases double-height cathedral windows framing snow-draped pine valleys and a massive granite fireplace. The estate provides ski-in/ski-out convenience, an outdoor cedar wood sauna, geothermal radiant floor heating, and handcrafted oak joinery by local artisans.",
           "greenFlags": [
             "✓ Unsurpassed mountain tranquility and seclusion",
             "✓ Sustainable geothermal heating infrastructure",

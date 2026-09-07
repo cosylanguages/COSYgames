@@ -19,15 +19,8 @@
       "anthem": "🎵 'Bicycle Race' - Classic Rock",
       "pages": [
         {
-          "tag": "🎨 Hobby Overview",
-          "bio": "I ride a red bicycle in the park every weekend. It is easy, cheap, and fun!"
-        },
-        {
-          "tag": "✨ Vibe & Fun",
-          "bio": "I feel the cool wind. I listen to music and eat delicious ice cream at the park cafe."
-        },
-        {
-          "tag": "🚩 Hobby Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I ride a red bicycle in the park every weekend. It is easy, cheap, and fun! I feel the cool wind. I listen to music and eat delicious ice cream at the park cafe.",
           "greenFlags": [
             "✓ Good exercise for legs",
             "✓ Fresh air outside",
@@ -69,15 +62,8 @@
       "anthem": "🎵 'Bread and Butter' - Upbeat Oldie",
       "pages": [
         {
-          "tag": "🎨 Hobby Overview",
-          "bio": "I love baking artisanal sourdough bread at home. I mix simple flour, water, and starter, then bake it in a hot oven."
-        },
-        {
-          "tag": "✨ Vibe & Joy",
-          "bio": "My kitchen smells wonderful when the bread bakes. The warm crust crackles when it cools down, and it tastes delicious with butter!"
-        },
-        {
-          "tag": "🚩 Hobby Pros & Cons",
+          "tag": "🖼️ Profile",
+          "bio": "I love baking artisanal sourdough bread at home. I mix simple flour, water, and starter, then bake it in a hot oven. My kitchen smells wonderful when the bread bakes. The warm crust crackles when it cools down, and it tastes delicious with butter!",
           "greenFlags": [
             "✓ Fresh warm delicious bread",
             "✓ Relaxing cooking hobby",
@@ -119,15 +105,8 @@
       "anthem": "🎵 'Climb Every Mountain' - Rock Vibe",
       "pages": [
         {
-          "tag": "🎨 Hobby Overview",
-          "bio": "Bouldering is an engaging physical hobby where climbers solve vertical routes on climbing walls using chalked hands and core strength."
-        },
-        {
-          "tag": "✨ Physical & Mental Vibe",
-          "bio": "This sport combines tactical problem solving similar to chess with full-body functional endurance, offering a rewarding sense of achievement."
-        },
-        {
-          "tag": "🚩 Hobby Evaluation",
+          "tag": "🖼️ Profile",
+          "bio": "Bouldering is an engaging physical hobby where climbers solve vertical routes on climbing walls using chalked hands and core strength. This sport combines tactical problem solving similar to chess with full-body functional endurance, offering a rewarding sense of achievement.",
           "greenFlags": [
             "✓ Develops core physical strength",
             "✓ Supportive social climbing community",
@@ -169,15 +148,8 @@
       "anthem": "🎵 'Kodachrome' - Nostalgic Classic",
       "pages": [
         {
-          "tag": "🎨 Hobby Overview & Craft",
-          "bio": "35mm film photography requires deliberate artistic composition and patience, restricting the photographer to 36 exposures per roll without instantaneous digital previews."
-        },
-        {
-          "tag": "✨ Artistic Philosophy",
-          "bio": "Developing chemical negatives in darkrooms allows photographers to embrace grain textures, light leaks, and unedited candid human authenticity."
-        },
-        {
-          "tag": "🚩 Hobby Evaluation",
+          "tag": "🖼️ Profile",
+          "bio": "35mm film photography requires deliberate artistic composition and patience, restricting the photographer to 36 exposures per roll without instantaneous digital previews. Developing chemical negatives in darkrooms allows photographers to embrace grain textures, light leaks, and unedited candid human authenticity.",
           "greenFlags": [
             "✓ Cultivates artistic mindfulness and patience",
             "✓ Tangible physical medium and archival prints",
