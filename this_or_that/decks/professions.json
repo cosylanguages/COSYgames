@@ -10,43 +10,43 @@
       "verified": true,
       "avatar": "👨‍🍳",
       "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
-      "visualDescription": "Middle-aged man in a chef hat and white baker uniform dusting flour on fresh bread loaves in a warm bakery.",
+      "visualDescription": "Man in a white hat and apron. He makes fresh bread and cakes in a bakery.",
       "interests": [
         "#FreshBread",
-        "#EarlyMorning",
-        "#DeliciousCakes"
+        "#Bakery",
+        "#Cakes"
       ],
       "anthem": "🎵 'Sweet Caroline' - Classic Oldie",
       "pages": [
         {
           "tag": "💼 Job Overview",
-          "bio": "I am a baker! I wake up at 4:00 AM every morning. I bake fresh bread, croissants, and delicious chocolate cakes."
+          "bio": "I am a baker. I wake up at 4:00 AM every morning. I make fresh bread, warm croissants, and cakes."
         },
         {
           "tag": "✨ Daily Work",
-          "bio": "Work is fun! My kitchen smells like warm sugar and fresh flour. I sell delicious breakfast to happy people."
+          "bio": "I work in a big kitchen. It smells like warm bread and sugar. I sell food to happy customers."
         },
         {
           "tag": "🚩 Job Pros & Cons",
           "greenFlags": [
-            "✓ Free fresh bread every day",
-            "✓ Smells like warm cinnamon",
-            "✓ Smiles from customers"
+            "✓ Fresh bread every day",
+            "✓ Warm sweet smell",
+            "✓ Happy customers"
           ],
           "redFlags": [
-            "✗ Waking up at 4:00 AM",
-            "✗ Flour on all clothes",
-            "✗ Hot ovens all day"
+            "✗ Wake up at 4:00 AM",
+            "✗ White flour everywhere",
+            "✗ Very hot oven"
           ]
         }
       ],
-      "opener": "Good morning! Do you want fresh bread or chocolate cake today?",
+      "opener": "Good morning! Do you like fresh bread or sweet cake?",
       "icebreakers": [
         "Fresh bread please!",
         "Chocolate cake for me!",
         "I love croissants!"
       ],
-      "prompt": "What does a baker do every morning? Would you like this job?"
+      "prompt": "What does Chef John make every morning? Is his job early or late?"
     },
     {
       "type": "profile",
@@ -58,43 +58,43 @@
       "verified": true,
       "avatar": "👩‍⚕️",
       "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
-      "visualDescription": "Female doctor with blonde ponytail, wearing a white coat and blue stethoscope around her neck, standing in a bright clinic.",
+      "visualDescription": "Doctor wearing a white coat and blue stethoscope in a bright clinic.",
       "interests": [
-        "#HelpPeople",
+        "#Doctor",
         "#WhiteCoat",
-        "#HealthyLife"
+        "#Health"
       ],
       "anthem": "🎵 'Healing Hands' - Calm Melodic",
       "pages": [
         {
           "tag": "💼 Job Overview",
-          "bio": "I am a doctor in a hospital. I help sick people feel better. I listen to their hearts and give good medicine."
+          "bio": "I am a doctor. I work in a hospital. I help sick people feel better and stay healthy."
         },
         {
           "tag": "✨ Daily Work",
-          "bio": "I wear a white coat and a blue stethoscope. I talk to children and adults to keep everybody healthy and happy."
+          "bio": "I wear a white coat. I talk to children and adults every day. I give good medicine."
         },
         {
           "tag": "🚩 Job Pros & Cons",
           "greenFlags": [
-            "✓ Helps save lives",
-            "✓ Very respected job",
-            "✓ Makes people healthy"
+            "✓ Helps sick people",
+            "✓ Important job",
+            "✓ Makes people happy"
           ],
           "redFlags": [
-            "✗ Long night shifts",
-            "✗ Very busy schedule",
-            "✗ Hard examinations"
+            "✗ Long night hours",
+            "✗ Very busy day",
+            "✗ Hard work"
           ]
         }
       ],
-      "opener": "Hello! How are you feeling today? Are you healthy?",
+      "opener": "Hello! How are you today? Do you feel good?",
       "icebreakers": [
         "I feel great!",
         "I have a headache",
-        "Thank you for helping people!"
+        "Thank you doctor!"
       ],
-      "prompt": "Why is a doctor's job important? Describe Dr. Sarah's uniform."
+      "prompt": "Where does Dr. Sarah work? What clothes does she wear?"
     }
   ],
   "A2": [
@@ -108,7 +108,7 @@
       "verified": true,
       "avatar": "👩‍🎨",
       "gradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
-      "visualDescription": "Creative woman sitting with a digital drawing tablet, stylus pen, colorful posters on wall, wearing round glasses and stylish sweater.",
+      "visualDescription": "Creative designer sitting with a drawing tablet, stylus pen, and colorful art posters.",
       "interests": [
         "#DigitalArt",
         "#ColorPalette",
@@ -118,33 +118,33 @@
       "pages": [
         {
           "tag": "💼 Job Overview",
-          "bio": "I am Nina, a graphic designer! I create beautiful logos, website banners, and colorful posters for local businesses."
+          "bio": "I am Nina, a graphic designer! I create colorful logos, website banners, and advertisements for local companies because I love art."
         },
         {
           "tag": "✨ Daily Tasks",
-          "bio": "I work on my laptop and drawing tablet. I choose nice fonts, harmonize color palettes, and draw digital art."
+          "bio": "I work on my laptop and drawing tablet. I choose beautiful fonts, combine matching colors, and draw digital illustrations."
         },
         {
           "tag": "🚩 Job Pros & Cons",
           "greenFlags": [
-            "✓ Highly creative & fun job",
-            "✓ Work from cafes or home",
-            "✓ Seeing your art on billboards"
+            "✓ Highly creative and fun work",
+            "✓ Flexible work from home or cafes",
+            "✓ See your posters in city streets"
           ],
           "redFlags": [
             "✗ Staring at screens for 8 hours",
             "✗ Clients changing their minds",
-            "✗ Eye fatigue"
+            "✗ Tired eyes after work"
           ]
         }
       ],
-      "opener": "Hey! What is your absolute favorite color combination?",
+      "opener": "Hey! What color combination do you like for a website?",
       "icebreakers": [
-        "Black & Gold!",
-        "Blue & Pastel Pink!",
-        "Green & Earthy Brown!"
+        "Black and gold!",
+        "Blue and pastel pink!",
+        "Green and earthy brown!"
       ],
-      "prompt": "What tools does a graphic designer use? Would you enjoy this job?"
+      "prompt": "What tools does Nina use for her work? Why does she enjoy her job?"
     },
     {
       "type": "profile",
@@ -156,7 +156,7 @@
       "verified": true,
       "avatar": "🏋️‍♂️",
       "gradient": "linear-gradient(135deg, #16a34a 0%, #22c55e 100%)",
-      "visualDescription": "Muscular trainer in black gym tank top, stopwatch around neck, pointing encouragingly at gym equipment.",
+      "visualDescription": "Fit trainer wearing a black gym shirt and stopwatch, guiding a client in the gym.",
       "interests": [
         "#PersonalTrainer",
         "#WorkoutRoutine",
@@ -166,33 +166,33 @@
       "pages": [
         {
           "tag": "💼 Job Overview",
-          "bio": "I am Alex, a certified personal fitness trainer! I design exercise routines and teach people how to stay fit and strong."
+          "bio": "I am Alex, a fitness trainer. I design exercise programs and teach people how to stay strong and healthy every day."
         },
         {
           "tag": "✨ Daily Tasks",
-          "bio": "I guide gym members with weights, cardio workouts, and healthy eating plans. High motivation every day!"
+          "bio": "I help clients with gym weights, running workouts, and meal plans so they can achieve their physical goals."
         },
         {
           "tag": "🚩 Job Pros & Cons",
           "greenFlags": [
-            "✓ Active healthy lifestyle",
-            "✓ Inspiring people to reach goals",
-            "✓ Great energy"
+            "✓ Active and energetic lifestyle",
+            "✓ Helping people achieve health goals",
+            "✓ Fun supportive gym environment"
           ],
           "redFlags": [
-            "✗ Waking up at 5:30 AM for clients",
-            "✗ Sore muscles constantly",
-            "✗ Loud gym music all day"
+            "✗ Early 5:30 AM starts",
+            "✗ Sore muscles after training",
+            "✗ Loud music in gym"
           ]
         }
       ],
-      "opener": "Hey! Do you prefer morning workouts or evening relaxation?",
+      "opener": "Hey! Do you prefer morning gym sessions or evening relaxing walks?",
       "icebreakers": [
-        "Morning workouts!",
-        "Evening relaxation on couch!",
+        "Morning gym sessions!",
+        "Evening relaxing walks!",
         "Weekend sports!"
       ],
-      "prompt": "What are the benefits and challenges of being a personal trainer?"
+      "prompt": "What does Alex do to help his clients? Would you like a personal trainer?"
     }
   ],
   "B1": [
@@ -206,7 +206,7 @@
       "verified": true,
       "avatar": "👨‍💻",
       "gradient": "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
-      "visualDescription": "Software engineer working at a dual-monitor standing desk, wearing headphones, coding on IDE software with dark theme.",
+      "visualDescription": "Software engineer working at a dual-monitor standing desk, wearing noise-canceling headphones.",
       "interests": [
         "#FullStackCode",
         "#DualMonitors",
@@ -216,33 +216,33 @@
       "pages": [
         {
           "tag": "💼 Profession Overview",
-          "bio": "I'm Marcus, a Full-Stack Software Engineer building web apps and cloud algorithms. I turn complex logic into smooth user experiences."
+          "bio": "I'm Marcus, a Full-Stack Software Engineer who develops web applications and cloud algorithms that transform complex data into user-friendly software."
         },
         {
           "tag": "✨ Daily Responsibilities",
-          "bio": "Writing scalable code, reviewing pull requests, solving algorithmic puzzles, and collaborating with UI designers remotely."
+          "bio": "My main responsibilities include writing clean code, reviewing pull requests, solving logical bugs, and collaborating with designers remotely."
         },
         {
           "tag": "🚩 Career Pros & Cons",
           "greenFlags": [
             "✓ High remote work flexibility",
             "✓ Strong analytical problem solving",
-            "✓ Excellent compensation"
+            "✓ Excellent salary and growth"
           ],
           "redFlags": [
-            "✗ Prolonged sitting & screen glare",
-            "✗ Sudden server bug emergencies",
-            "✗ Jargon heavy language"
+            "✗ Prolonged sitting and screen strain",
+            "✗ Unexpected server emergencies",
+            "✗ Jargon-heavy technical language"
           ]
         }
       ],
-      "opener": "Hello world! Are you fascinated or intimidated by coding and technology?",
+      "opener": "Hello world! Are you fascinated or intimidated by software development and modern technology?",
       "icebreakers": [
         "Fascinated by tech!",
         "Intimidated by code!",
         "I write code too!"
       ],
-      "prompt": "Discuss the advantages and drawbacks of a career in software engineering."
+      "prompt": "Explain the responsibilities of a software engineer using intermediate career vocabulary."
     },
     {
       "type": "profile",
@@ -254,7 +254,7 @@
       "verified": true,
       "avatar": "👩‍💻",
       "gradient": "linear-gradient(135deg, #047857 0%, #10b981 100%)",
-      "visualDescription": "Journalist holding a recording microphone and notebook, conducting an interview outdoors with wind turbines in background.",
+      "visualDescription": "Journalist holding a recording microphone, interviewing an engineer near wind turbines.",
       "interests": [
         "#ClimateAction",
         "#Investigative",
@@ -264,33 +264,33 @@
       "pages": [
         {
           "tag": "💼 Profession Overview",
-          "bio": "I'm Clara, an investigative environmental journalist. I research renewable energy trends and write articles on climate conservation."
+          "bio": "I'm Clara, an investigative environmental journalist who investigates climate change solutions and reports on clean energy initiatives across the globe."
         },
         {
           "tag": "✨ Daily Responsibilities",
-          "bio": "Interviewing scientists, traveling to nature reserves, verifying data sources, and editing impactful news features."
+          "bio": "My work involves interviewing climate scientists, conducting field research, verifying facts, and publishing news features that inform the public."
         },
         {
           "tag": "🚩 Career Pros & Cons",
           "greenFlags": [
-            "✓ Meaningful societal impact",
-            "✓ Travel & fieldwork opportunities",
-            "✓ Continuous learning"
+            "✓ Meaningful contribution to environmental awareness",
+            "✓ Opportunities for fieldwork travel",
+            "✓ Continuous intellectual learning"
           ],
           "redFlags": [
-            "✗ Strict publication deadlines",
-            "✗ Dealing with misinformation",
-            "✗ Irregular work hours"
+            "✗ High pressure from publication deadlines",
+            "✗ Combating misleading information",
+            "✗ Irregular working hours"
           ]
         }
       ],
-      "opener": "Hi! What environmental or social issue do you feel most passionate about?",
+      "opener": "Hi! What environmental topic or social cause do you feel most passionate about discussing?",
       "icebreakers": [
         "Renewable energy!",
         "Wildlife conservation!",
         "Reducing plastic waste!"
       ],
-      "prompt": "What skills are required to be an effective investigative journalist?"
+      "prompt": "What key skills and ethical duties are necessary for an environmental journalist?"
     }
   ],
   "B2": [
@@ -304,7 +304,7 @@
       "verified": true,
       "avatar": "🧠",
       "gradient": "linear-gradient(135deg, #4338ca 0%, #6366f1 100%)",
-      "visualDescription": "Researcher reviewing algorithmic bias data on transparent holographic displays in a high-tech university research lab.",
+      "visualDescription": "Researcher auditing algorithmic bias charts on transparent displays in a university research laboratory.",
       "interests": [
         "#AIEthics",
         "#AlgorithmicJustice",
@@ -314,33 +314,33 @@
       "pages": [
         {
           "tag": "💼 Profession Overview",
-          "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher. I evaluate machine learning models for algorithmic bias, data privacy compliance, and societal safety."
+          "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher evaluating autonomous algorithms to mitigate systemic bias, ensure data privacy, and enforce accountability."
         },
         {
           "tag": "✨ Responsibilities & Expertise",
-          "bio": "Publishing peer-reviewed policy frameworks, advising tech executives, and auditing large language models to prevent discrimination in automated decisions."
+          "bio": "My duties encompass drafting policy governance frameworks, advising corporate executives, and auditing machine learning models to prevent discriminatory automated decisions."
         },
         {
           "tag": "🚩 Career Pros & Cons",
           "greenFlags": [
-            "✓ Pioneering the frontier of tech safety",
-            "✓ High intellectual stimulation",
-            "✓ Shaping global policy guidelines"
+            "✓ Pioneering crucial safeguards at the frontier of technology",
+            "✓ Intellectual rigor and high-level policy advocacy",
+            "✓ Shaping global regulatory standards"
           ],
           "redFlags": [
-            "✗ Complex ethical dilemmas without clear answers",
-            "✗ Corporate resistance to regulation",
-            "✗ Constant rapid tech shifts"
+            "✗ Complex moral ambiguities lacking consensus",
+            "✗ Corporate pushback against compliance",
+            "✗ Rapidly evolving technological paradigms"
           ]
         }
       ],
-      "opener": "Greetings! In your opinion, should artificial intelligence development be strictly regulated by international law?",
+      "opener": "Greetings! In your assessment, should artificial intelligence development be governed by binding international regulatory frameworks?",
       "icebreakers": [
-        "Strict international regulation essential!",
-        "Innovation needs freedom first!",
-        "Balanced adaptive oversight!"
+        "Binding regulation is imperative!",
+        "Innovation requires market autonomy!",
+        "Adaptive risk-proportionate oversight!"
       ],
-      "prompt": "Evaluate the ethical implications and societal responsibilities of AI ethics researchers."
+      "prompt": "Evaluate the moral dilemmas, policy challenges, and societal impact of AI ethics research."
     },
     {
       "type": "profile",
@@ -352,7 +352,7 @@
       "verified": true,
       "avatar": "🏛️",
       "gradient": "linear-gradient(135deg, #854d0e 0%, #a16207 100%)",
-      "visualDescription": "Architect in hardhat examining intricate stonework details of a historic cathedral restoration project using laser scanning tools.",
+      "visualDescription": "Architect examining intricate stonework details of a historic cathedral during a restoration project.",
       "interests": [
         "#HeritageRestoration",
         "#SustainableUrbanism",
@@ -362,33 +362,33 @@
       "pages": [
         {
           "tag": "💼 Profession Overview",
-          "bio": "I'm Soren, an Architectural Conservationist. I specialize in adaptive reuse—restoring landmark historic structures while adapting them for sustainable modern utility."
+          "bio": "I'm Soren, an Architectural Conservationist specializing in adaptive reuse—restoring landmark heritage edifices while modernizing their structural utility sustainably."
         },
         {
           "tag": "✨ Responsibilities & Expertise",
-          "bio": "3D laser scanning ancient masonry, sourcing period-accurate ecological materials, and preventing historical landmarks from demolition."
+          "bio": "My work entails conducting 3D laser diagnostics on masonry, procuring period-accurate sustainable materials, and preventing historical landmarks from urban demolition."
         },
         {
           "tag": "🚩 Career Pros & Cons",
           "greenFlags": [
-            "✓ Preserving cultural heritage for future generations",
-            "✓ Tangible lasting artistic legacy",
-            "✓ Blending history with sustainability"
+            "✓ Safeguarding architectural heritage for posterity",
+            "✓ Tangible cultural legacy and artistic preservation",
+            "✓ Harmonizing historical aesthetic with eco-sustainability"
           ],
           "redFlags": [
-            "✗ Lengthy bureaucratic approval permits",
-            "✗ Unforeseen structural decay costs",
-            "✗ Budget constraints"
+            "✗ Protracted municipal approval bureaucracy",
+            "✗ Unforeseen structural deterioration costs",
+            "✗ Persistent budgetary constraints"
           ]
         }
       ],
-      "opener": "Hello! How can cities balance preserving historical architecture with building modern housing infrastructure?",
+      "opener": "Hello! How can municipal planners effectively balance historic preservation with expanding urban infrastructure demands?",
       "icebreakers": [
-        "Prioritize historic preservation!",
-        "Prioritize modern housing needs!",
-        "Adaptive reuse is the solution!"
+        "Prioritize heritage preservation!",
+        "Prioritize modern infrastructure!",
+        "Adaptive reuse is the bridge!"
       ],
-      "prompt": "Debate the balance between historical architectural preservation and urban modernization."
+      "prompt": "Analyze the ideological debate between historical architectural conservation and contemporary urban development."
     }
   ]
 }

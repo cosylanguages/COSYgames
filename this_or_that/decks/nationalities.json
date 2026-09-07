@@ -1,0 +1,394 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Kenji (Japanese 🇯🇵)",
+      "age": "24",
+      "location": "📍 Tokyo, Japan • 🇯🇵 Japanese",
+      "verified": true,
+      "avatar": "🇯🇵",
+      "gradient": "linear-gradient(135deg, #dc2626 0%, #f87171 100%)",
+      "visualDescription": "Young Japanese man with neat short dark hair, wearing a traditional summer yukata robe.",
+      "interests": [
+        "#Japanese",
+        "#Tokyo",
+        "#Ramen"
+      ],
+      "anthem": "🎵 'Sakura Dreams' - J-Pop Acoustic",
+      "pages": [
+        {
+          "tag": "🖼️ Nationality & Country",
+          "bio": "Konnichiwa! I am Kenji. I am Japanese. I live in Tokyo, Japan. My language is Japanese."
+        },
+        {
+          "tag": "✨ Food & Culture",
+          "bio": "In Japan, we eat fresh sushi and hot ramen. I drink green tea every day!"
+        },
+        {
+          "tag": "🚩 Quick Details",
+          "greenFlags": [
+            "✓ Polite and friendly",
+            "✓ Makes hot miso soup",
+            "✓ Shares Japanese culture"
+          ],
+          "redFlags": [
+            "✗ Bows many times",
+            "✗ Slurps noodles loudly",
+            "✗ Talks about train times"
+          ]
+        }
+      ],
+      "opener": "Konnichiwa! What is your nationality? Where are you from?",
+      "icebreakers": [
+        "I am from Spain!",
+        "I love Japanese food!",
+        "Tokyo is a big city!"
+      ],
+      "prompt": "What is Kenji's nationality and home country? What food does he eat?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Sofia (Italian 🇮🇹)",
+      "age": "23",
+      "location": "📍 Rome, Italy • 🇮🇹 Italian",
+      "verified": true,
+      "avatar": "🇮🇹",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #facc15 100%)",
+      "visualDescription": "Italian woman with brown wavy hair in Rome.",
+      "interests": [
+        "#Italian",
+        "#Rome",
+        "#Pasta"
+      ],
+      "anthem": "🎵 'O Sole Mio' - Classic Italian",
+      "pages": [
+        {
+          "tag": "🖼️ Nationality & Country",
+          "bio": "Ciao! I am Sofia. I am Italian. I come from Rome in Italy. I speak Italian."
+        },
+        {
+          "tag": "✨ Food & Culture",
+          "bio": "Italy is famous for pizza, pasta, and sweet gelato. I cook fresh pasta at home!"
+        },
+        {
+          "tag": "🚩 Quick Details",
+          "greenFlags": [
+            "✓ Cooks fresh pasta",
+            "✓ Warm friendly smile",
+            "✓ Loves coffee"
+          ],
+          "redFlags": [
+            "✗ Angry if pasta breaks",
+            "✗ Talks with hands constantly",
+            "✗ Drinks 5 espressos"
+          ]
+        }
+      ],
+      "opener": "Ciao! Do you like Italian pizza or sweet gelato?",
+      "icebreakers": [
+        "I love pizza and gelato!",
+        "I want to visit Rome!",
+        "Ciao Sofia!"
+      ],
+      "prompt": "Where is Sofia from? What is her nationality and native food?"
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Mateo (Mexican 🇲🇽)",
+      "age": "26",
+      "location": "📍 Oaxaca, Mexico • 🇲🇽 Spanish",
+      "verified": true,
+      "avatar": "🇲🇽",
+      "gradient": "linear-gradient(135deg, #059669 0%, #dc2626 100%)",
+      "visualDescription": "Mexican man in an embroidered shirt holding corn tacos in a town square.",
+      "interests": [
+        "#Mexican",
+        "#Oaxaca",
+        "#Tacos"
+      ],
+      "anthem": "🎵 'Cielito Lindo' - Mariachi Vibe",
+      "pages": [
+        {
+          "tag": "🖼️ Nationality & Heritage",
+          "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my Mexican nationality and rich cultural heritage."
+        },
+        {
+          "tag": "✨ Traditions & Flavors",
+          "bio": "We celebrate Day of the Dead with yellow marigold flowers, and we eat spicy mole sauce with fresh corn tacos."
+        },
+        {
+          "tag": "🚩 Cultural Details",
+          "greenFlags": [
+            "✓ Teaches salsa dancing on weekends",
+            "✓ Prepares homemade guacamole",
+            "✓ Welcoming and hospitable"
+          ],
+          "redFlags": [
+            "✗ Says salsa is not spicy when it burns",
+            "✗ Arrives 30 minutes late to events",
+            "✗ Plays loud mariachi music"
+          ]
+        }
+      ],
+      "opener": "Hola! Do you like spicy Mexican food or traditional cultural festivals?",
+      "icebreakers": [
+        "I love spicy food!",
+        "Day of the Dead looks beautiful!",
+        "Teach me salsa dancing!"
+      ],
+      "prompt": "Describe Mateo's nationality, traditions, and traditional dishes using A2 connectors."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Freja (Danish 🇩🇰)",
+      "age": "25",
+      "location": "📍 Copenhagen, Denmark • 🇩🇰 Danish",
+      "verified": true,
+      "avatar": "🇩🇰",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #38bdf8 100%)",
+      "visualDescription": "Danish woman riding a bicycle along Copenhagen harbor in a sweater.",
+      "interests": [
+        "#Danish",
+        "#Copenhagen",
+        "#Hygge"
+      ],
+      "anthem": "🎵 'Nordic Lights' - Cozy Acoustic",
+      "pages": [
+        {
+          "tag": "🖼️ Nationality & Heritage",
+          "bio": "Hej! My name is Freja. I am Danish and I live in Copenhagen, Denmark. Danish culture values comfort and 'hygge'."
+        },
+        {
+          "tag": "✨ Nordic Lifestyle",
+          "bio": "We ride bicycles everywhere in rain or sunny weather. We enjoy open rye bread sandwiches and candlelit evenings."
+        },
+        {
+          "tag": "🚩 Cultural Details",
+          "greenFlags": [
+            "✓ Creates cozy candlelit dinners",
+            "✓ Eco-friendly bike commuter",
+            "✓ Honest direct speaker"
+          ],
+          "redFlags": [
+            "✗ Refuses short car rides",
+            "✗ Lights 20 candles in small room",
+            "✗ Strict rye bread preferences"
+          ]
+        }
+      ],
+      "opener": "Hej! Do you prefer cycling around city streets or taking café breaks?",
+      "icebreakers": [
+        "I love riding bicycles!",
+        "Tell me more about hygge!",
+        "Copenhagen is beautiful!"
+      ],
+      "prompt": "What country is Freja from? Describe two aspects of Danish lifestyle."
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Amara (Nigerian 🇳🇬)",
+      "age": "28",
+      "location": "📍 Lagos, Nigeria • 🇳🇬 Igbo & English",
+      "verified": true,
+      "avatar": "🇳🇬",
+      "gradient": "linear-gradient(135deg, #15803d 0%, #22c55e 100%)",
+      "visualDescription": "Nigerian woman wearing a patterned Ankara headwrap and traditional attire in Lagos.",
+      "interests": [
+        "#Nigerian",
+        "#Afrobeats",
+        "#JollofRice"
+      ],
+      "anthem": "🎵 'Lagos Heat' - Afrobeats Anthem",
+      "pages": [
+        {
+          "tag": "🖼️ Cultural Background",
+          "bio": "Kedu! I'm Amara, a proud Nigerian from Lagos. Nigeria is a multicultural nation with over 250 distinct ethnic groups, rich oral traditions, and energetic Afrobeats music."
+        },
+        {
+          "tag": "✨ Gastronomy & Festivities",
+          "bio": "Our celebratory gatherings feature spicy smoky Jollof rice, fried plantains, and vibrant traditional clothing with elaborate Gele headwraps."
+        },
+        {
+          "tag": "🚩 Cultural Traits",
+          "greenFlags": [
+            "✓ Hosts festive dinner parties with Afrobeats playlists",
+            "✓ Prepares authentic spicy Jollof rice",
+            "✓ Warm, resilient, and charismatic personality"
+          ],
+          "redFlags": [
+            "✗ Debates Jollof rice culinary origins for hours",
+            "✗ Speakerphone calls in public spaces",
+            "✗ Expects strict formal deference to elders"
+          ]
+        }
+      ],
+      "opener": "Kedu! How familiar are you with West African culinary traditions and global Afrobeats music?",
+      "icebreakers": [
+        "Afrobeats is my favorite genre!",
+        "I've heard about the Jollof debate!",
+        "Love the colorful attire!"
+      ],
+      "prompt": "Discuss Amara's Nigerian cultural identity, gastronomy, and musical heritage using intermediate language."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Aarav (Indian 🇮🇳)",
+      "age": "27",
+      "location": "📍 Jaipur, India • 🇮🇳 Hindi & English",
+      "verified": true,
+      "avatar": "🇮🇳",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "visualDescription": "Indian man in a blue kurta near Jaipur monuments holding cardamom chai.",
+      "interests": [
+        "#Indian",
+        "#Jaipur",
+        "#MasalaChai"
+      ],
+      "anthem": "🎵 'Raga Beats' - Fusion Sitar",
+      "pages": [
+        {
+          "tag": "🖼️ Cultural Heritage",
+          "bio": "Namaste! I'm Aarav from Jaipur, India. Indian nationality encompasses a pluralistic heritage, architectural wonders, and centuries of diverse regional customs."
+        },
+        {
+          "tag": "✨ Hospitality & Cuisine",
+          "bio": "Our cultural ethos prioritizes 'Atithi Devo Bhava' (The Guest is God). I enjoy brewing authentic cardamom masala chai and preparing fragrant spiced biryani."
+        },
+        {
+          "tag": "🚩 Cultural Details",
+          "greenFlags": [
+            "✓ Generous hospitality for all guests",
+            "✓ Expert knowledge of spice combinations",
+            "✓ Passionate about historic architecture"
+          ],
+          "redFlags": [
+            "✗ Insists tea bag chai is unacceptable",
+            "✗ Non-verbal head-wobbles confuse visitors",
+            "✗ Spontaneous cricket match debates"
+          ]
+        }
+      ],
+      "opener": "Namaste! Have you experienced Indian spice gastronomy or historical architectural monuments?",
+      "icebreakers": [
+        "I drink masala chai every day!",
+        "Jaipur looks breathtaking!",
+        "Tell me about Indian architecture!"
+      ],
+      "prompt": "Examine Aarav's Indian nationality, cultural ethos of hospitality, and gastronomy."
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Camille (French 🇫🇷)",
+      "age": "29",
+      "location": "📍 Paris, France • 🇫🇷 French",
+      "verified": true,
+      "avatar": "🇫🇷",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #ef4444 100%)",
+      "visualDescription": "French woman in a trench coat seated at a Parisian pavement café with wine.",
+      "interests": [
+        "#French",
+        "#Parisian",
+        "#Gastronomy"
+      ],
+      "anthem": "🎵 'La Vie En Rose' - Chanson Moderne",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage & Identity",
+          "bio": "Bonjour. I am Camille from Paris. French identity is fundamentally defined by 'art de vivre'—the intellectual art of living refinedly through literature, philosophy, and culinary mastery."
+        },
+        {
+          "tag": "✨ Art de Vivre",
+          "bio": "Our gastronomic meal is UNESCO-recognized intangible cultural heritage, celebrating wine terroir pairings, artisanal raw milk cheeses, and animated philosophical debate."
+        },
+        {
+          "tag": "🚩 Cultural Nuances",
+          "greenFlags": [
+            "✓ Refined palate for wine and artisanal cheese terroir",
+            "✓ Engaging, intellectually rigorous conversationalist",
+            "✓ Effortless sartorial chic aesthetic"
+          ],
+          "redFlags": [
+            "✗ Uncompromising stance on baguette crust density",
+            "✗ Dramatic sighs when served tap water",
+            "✗ Scurrilous critique of non-French viniculture"
+          ]
+        }
+      ],
+      "opener": "Bonjour! To what extent does national heritage shape your daily philosophical outlook and culinary discernment?",
+      "icebreakers": [
+        "French gastronomy is world-class!",
+        "I admire the Parisian art de vivre!",
+        "Debating philosophy sounds great!"
+      ],
+      "prompt": "Analyze Camille's expression of French cultural heritage, 'art de vivre', and gastronomic philosophy."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Leandro (Brazilian 🇧🇷)",
+      "age": "30",
+      "location": "📍 Rio de Janeiro, Brazil • 🇧🇷 Portuguese",
+      "verified": true,
+      "avatar": "🇧🇷",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #eab308 100%)",
+      "visualDescription": "Brazilian man playing beach volleyball on Ipanema Beach in Rio de Janeiro.",
+      "interests": [
+        "#Brazilian",
+        "#RioDeJaneiro",
+        "#BossaNova"
+      ],
+      "anthem": "🎵 'Girl From Ipanema' - Bossa Nova Classic",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage & Identity",
+          "bio": "Olá! I'm Leandro from Rio de Janeiro. Brazilian nationality represents a vibrant demographic melting pot harmonizing Indigenous, African, and European cultural lineage."
+        },
+        {
+          "tag": "✨ Warmth & Celebration",
+          "bio": "From syncopated Carnival rhythms to Bossa Nova nostalgia and communal feijoada banquets, our culture thrives on uninhibited warmth, optimism, and social cohesion."
+        },
+        {
+          "tag": "🚩 Cultural Nuances",
+          "greenFlags": [
+            "✓ Infectious warmth and disarming social energy",
+            "✓ Acoustic guitar proficiency playing bossa nova",
+            "✓ Master of slow-simmered traditional feijoada"
+          ],
+          "redFlags": [
+            "✗ Punctuality viewed as a flexible social suggestion",
+            "✗ Effusive physical cheek-kisses for new acquaintances",
+            "✗ Nocturnal samba percussion practice"
+          ]
+        }
+      ],
+      "opener": "Olá! How do you conceptualize the interplay between cultural syncretism, musical heritage, and national identity?",
+      "icebreakers": [
+        "Brazilian music is so soul-stirring!",
+        "Rio de Janeiro looks paradise-like!",
+        "Tell me about Carnival traditions!"
+      ],
+      "prompt": "Evaluate Leandro's articulation of Brazilian multicultural syncretism, musical heritage, and communal social ethos."
+    }
+  ]
+}

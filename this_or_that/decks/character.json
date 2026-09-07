@@ -10,43 +10,43 @@
       "verified": true,
       "avatar": "😊",
       "gradient": "linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%)",
-      "visualDescription": "Smiling young person holding a warm cup of cocoa, wearing a yellow beanie and soft scarf, exuding friendliness.",
+      "visualDescription": "Smiling young person holding a warm cup of cocoa.",
       "interests": [
         "#Friendly",
         "#KindHeart",
-        "#GoodListener"
+        "#GoodFriend"
       ],
       "anthem": "🎵 'Count on Me' - Warm Pop",
       "pages": [
         {
           "tag": "🧠 Personality Traits",
-          "bio": "I am kind, polite, and friendly! I say 'please' and 'thank you' and I love helping my neighbors."
+          "bio": "I am kind and polite. I say 'please' and 'thank you'. I like helping my friends and neighbors."
         },
         {
           "tag": "✨ Daily Attitude",
-          "bio": "I smile at everyone I see on the street. I remember birthdays and bring cookies to my friends!"
+          "bio": "I smile at people on the street. I remember birthdays and bring sweet cookies to my friends."
         },
         {
           "tag": "🚩 Pros & Cons",
           "greenFlags": [
-            "✓ Always polite & patient",
-            "✓ Helps with heavy bags",
-            "✓ Great listener"
+            "✓ Always polite",
+            "✓ Helps carry bags",
+            "✓ Good listener"
           ],
           "redFlags": [
-            "✗ Says 'yes' to everything",
-            "✗ Gets sad if people argue",
+            "✗ Says 'yes' to all",
+            "✗ Sad when people fight",
             "✗ Too generous"
           ]
         }
       ],
-      "opener": "Hello my friend! How can I make your day happier today?",
+      "opener": "Hello my friend! How are you today?",
       "icebreakers": [
         "You are so nice!",
-        "Let us drink coffee together",
-        "Have a great day too!"
+        "Let us drink tea together!",
+        "Have a great day!"
       ],
-      "prompt": "What does a kind person do? Name 2 kind actions."
+      "prompt": "What does a kind person do? Describe 2 simple actions."
     }
   ],
   "A2": [
@@ -60,43 +60,43 @@
       "verified": true,
       "avatar": "📅",
       "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
-      "visualDescription": "Focused young woman checking off tasks on a colorful paper planner, smiling calmly in a neat organized desk setup.",
+      "visualDescription": "Focused young woman checking off tasks in a paper planner at her clean desk.",
       "interests": [
         "#Punctual",
-        "#PlannerGeek",
+        "#Planner",
         "#ReliableFriend"
       ],
       "anthem": "🎵 'Clockwork' - Smooth Rhythms",
       "pages": [
         {
           "tag": "🧠 Personality Traits",
-          "bio": "I am Sophia! Very organized, punctual, and reliable. I never arrive late and I always keep my promises."
+          "bio": "I am Sophia. I am very organized, punctual, and reliable. I never arrive late because I respect time."
         },
         {
           "tag": "✨ Daily Routine",
-          "bio": "I keep a daily color-coded planner, prepare my outfits the night before, and keep my living space spotless."
+          "bio": "I use a daily planner to write my tasks, prepare my clothes the night before, and keep my desk clean."
         },
         {
           "tag": "🚩 Pros & Cons",
           "greenFlags": [
             "✓ Never cancels plans last minute",
-            "✓ Super dependable in emergencies",
+            "✓ Dependable when friends need help",
             "✓ Always punctual"
           ],
           "redFlags": [
-            "✗ Stressed when plans change unexpectedly",
-            "✗ Too strict with schedules",
-            "✗ Dislikes messy places"
+            "✗ Stressed when plans change",
+            "✗ Strict about schedules",
+            "✗ Dislikes messy rooms"
           ]
         }
       ],
-      "opener": "Hi! Are you someone who plans ahead or makes last-minute spontaneous decisions?",
+      "opener": "Hi! Do you like to plan your week ahead or do you make spontaneous decisions?",
       "icebreakers": [
         "I plan everything ahead!",
         "I am spontaneous!",
         "A bit of both!"
       ],
-      "prompt": "Why is reliability an important trait in friendship?"
+      "prompt": "Why is reliability an important trait in friendship? Give an example."
     }
   ],
   "B1": [
@@ -110,7 +110,7 @@
       "verified": true,
       "avatar": "🤝",
       "gradient": "linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)",
-      "visualDescription": "Warm-hearted man listening intently during coffee conversation, leaning forward with genuine care and active body language.",
+      "visualDescription": "Warm-hearted man listening intently during a conversation at a quiet coffee shop.",
       "interests": [
         "#EmotionalIntelligence",
         "#ActiveListener",
@@ -120,33 +120,33 @@
       "pages": [
         {
           "tag": "🧠 Personality Character",
-          "bio": "I'm Daniel. I pride myself on high emotional intelligence, deep empathy, and the ability to truly listen without judging."
+          "bio": "I'm Daniel, a 28-year-old counselor who values high emotional intelligence, active listening, and sincere empathy in personal relationships."
         },
         {
           "tag": "✨ Interpersonal Style",
-          "bio": "Friends come to me when they need thoughtful advice or a safe space to vent. I value authentic connections over small talk."
+          "bio": "Friends frequently seek my advice when they encounter difficult challenges because I offer non-judgmental support and honest feedback."
         },
         {
           "tag": "🚩 Pros & Cons",
           "greenFlags": [
-            "✓ Deeply supportive & trustworthy",
-            "✓ Highly perceptive of feelings",
-            "✓ Outstanding conflict resolver"
+            "✓ Deeply supportive and trustworthy companion",
+            "✓ Perceptive of unspoken emotions",
+            "✓ Skilled conflict mediator"
           ],
           "redFlags": [
-            "✗ Absorbs other people's stress easily",
-            "✗ Avoids aggressive confrontation",
-            "✗ Emotionally drained at times"
+            "✗ Absorbs emotional stress easily",
+            "✗ Avoids direct personal confrontation",
+            "✗ Needs quiet recovery time"
           ]
         }
       ],
-      "opener": "Hello! Do you consider yourself more guided by rational logic or emotional intuition?",
+      "opener": "Hello! Do you consider yourself more guided by logical analysis or emotional intuition when making choices?",
       "icebreakers": [
-        "Rational logic!",
+        "Logical analysis!",
         "Emotional intuition!",
-        "Equal balance of both!"
+        "An equal balance of both!"
       ],
-      "prompt": "How does high emotional intelligence improve interpersonal relationships?"
+      "prompt": "Explain how emotional intelligence helps resolve interpersonal conflicts between friends."
     }
   ],
   "B2": [
@@ -160,7 +160,7 @@
       "verified": true,
       "avatar": "🦁",
       "gradient": "linear-gradient(135deg, #b91c1c 0%, #dc2626 100%)",
-      "visualDescription": "Determined female leader standing atop a conference hall terrace, looking strategically toward the city skyline with confidence and poise.",
+      "visualDescription": "Determined female executive standing on a terrace overlooking the city skyline.",
       "interests": [
         "#StrategicVision",
         "#Resilience",
@@ -170,33 +170,33 @@
       "pages": [
         {
           "tag": "🧠 Personality Character",
-          "bio": "I'm Helena, 32. Characterized by strategic foresight, formidable resilience under pressure, and an unwavering commitment to empowering those around me."
+          "bio": "I'm Helena, 32. My character is anchored by strategic foresight, unflinching resilience during crises, and an unwavering commitment to empowering my team."
         },
         {
           "tag": "✨ Leadership Philosophy",
-          "bio": "I view setbacks as crucial data points for growth. I lead with transparency, encourage bold calculated risk-taking, and foster accountability."
+          "bio": "I view setbacks not as failures, but as invaluable empirical data for growth, driving innovation through calculated risk-taking and radical transparency."
         },
         {
           "tag": "🚩 Pros & Cons",
           "greenFlags": [
-            "✓ Inspires high performance in others",
-            "✓ Unshakable under severe crisis",
-            "✓ Decisive and visionary"
+            "✓ Inspires high performance and ambition",
+            "✓ Unshakable poise during corporate turbulence",
+            "✓ Decisive and forward-thinking vision"
           ],
           "redFlags": [
-            "✗ High expectations can intimidate",
-            "✗ Workaholic tendencies",
-            "✗ Impatient with slowness"
+            "✗ Uncompromising standards can intimidate",
+            "✗ Pronounced workaholic tendencies",
+            "✗ Low tolerance for operational inertia"
           ]
         }
       ],
-      "opener": "Greetings! What key quality distinguishes a true leader from a boss?",
+      "opener": "Greetings! What fundamental leadership qualities distinguish transformational visionaries from conventional managers?",
       "icebreakers": [
-        "Empathy & vision!",
-        "Resilience under crisis!",
-        "Lead by example!"
+        "Empathy and strategic vision!",
+        "Resilience under severe crisis!",
+        "Leading by moral example!"
       ],
-      "prompt": "Differentiate between transactional management and transformative resilient leadership."
+      "prompt": "Differentiate between transactional management and transformative resilient leadership in modern organizations."
     }
   ]
 }
