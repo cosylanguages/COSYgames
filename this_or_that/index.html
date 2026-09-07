@@ -3,238 +3,384 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This or That? (Swipe Profiles & Preferences): COSYlanguages</title>
+    <title>This or That? (Tinder for Things & Concepts): COSYlanguages</title>
     <link rel="icon" href="../images/logos/cosylanguages.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../shared/css/tokens.css">
     <link rel="stylesheet" href="../shared/css/games.css">
     <link rel="stylesheet" href="../shared/css/nav.css">
     <style>
       #go-body {
-        padding-top: 1rem;
+        padding-top: 0.5rem;
       }
-      /* Dedicated Swipe Deck & Card CSS */
-      .swipe-container {
+
+      /* Tinder Theme Variables */
+      :root {
+        --tinder-pink: #fd267d;
+        --tinder-orange: #ff6036;
+        --tinder-gradient: linear-gradient(135deg, #fd267d 0%, #ff6036 100%);
+        --tinder-bg: #f5f7fa;
+      }
+
+      /* Swipe Container & Stack */
+      .tinder-app {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        max-width: 520px;
+        max-width: 440px;
         margin: 0 auto;
         position: relative;
         touch-action: pan-y;
       }
+
+      .tinder-top-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 0.5rem;
+      }
+      .tinder-brand {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 800;
+        font-size: 1.25rem;
+        background: var(--tinder-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
       .card-stack {
         position: relative;
         width: 100%;
-        min-height: 360px;
+        min-height: 480px;
+        perspective: 1000px;
       }
-      .swipe-card {
+
+      /* Authentic Tinder Card Design */
+      .tinder-card {
         position: relative;
         width: 100%;
-        min-height: 360px;
+        min-height: 480px;
         background: var(--warm-white, #ffffff);
-        border: 2px solid var(--sage-pale, #e8f0e9);
         border-radius: 20px;
-        padding: 1.25rem;
-        box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+        box-shadow: 0 14px 30px rgba(0,0,0,0.12);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        overflow: hidden;
         user-select: none;
         cursor: grab;
         transition: transform 0.25s ease, opacity 0.25s ease;
-        will-change: transform, opacity;
+        border: 1px solid rgba(0,0,0,0.06);
       }
-      .swipe-card:active {
+      .tinder-card:active {
         cursor: grabbing;
       }
-      .swipe-card.dragging {
+      .tinder-card.dragging {
         transition: none;
       }
+
+      /* Photo / Avatar Box Header */
+      .card-hero-box {
+        position: relative;
+        height: 220px;
+        background: var(--tinder-gradient);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        padding: 1rem;
+      }
+      .card-avatar-emoji {
+        font-size: 5rem;
+        filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+        transition: transform 0.2s ease;
+      }
+      .tinder-card:hover .card-avatar-emoji {
+        transform: scale(1.08);
+      }
+
+      /* Badges */
       .badge-indicator {
         position: absolute;
-        top: 20px;
-        padding: 6px 16px;
+        top: 24px;
+        padding: 6px 18px;
         border-radius: 12px;
         font-weight: 800;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.15s ease;
-        z-index: 10;
+        z-index: 20;
       }
       .badge-like {
         right: 20px;
-        border: 3px solid #10b981;
+        border: 4px solid #10b981;
         color: #10b981;
-        transform: rotate(12deg);
+        transform: rotate(15deg);
+        background: rgba(255,255,255,0.85);
       }
       .badge-pass {
         left: 20px;
-        border: 3px solid #ef4444;
+        border: 4px solid #ef4444;
         color: #ef4444;
-        transform: rotate(-12deg);
+        transform: rotate(-15deg);
+        background: rgba(255,255,255,0.85);
       }
-      .badge-this {
-        left: 20px;
-        border: 3px solid #3b82f6;
+      .badge-super {
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-5deg);
+        border: 4px solid #3b82f6;
         color: #3b82f6;
-        transform: rotate(-8deg);
+        background: rgba(255,255,255,0.85);
       }
-      .badge-that {
-        right: 20px;
-        border: 3px solid #8b5cf6;
-        color: #8b5cf6;
-        transform: rotate(8deg);
+
+      /* Card Content Body */
+      .card-body {
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+        background: #ffffff;
       }
-      .card-header-tag {
-        display: inline-flex;
+
+      .profile-title-row {
+        display: flex;
         align-items: center;
-        gap: 6px;
-        padding: 4px 12px;
-        border-radius: 20px;
+        gap: 8px;
+        margin-bottom: 0.2rem;
+      }
+      .profile-name {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: #111827;
+      }
+      .profile-age {
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: #6b7280;
+      }
+      .verified-icon {
+        color: #2563eb;
+        font-size: 1.1rem;
+      }
+
+      .profile-meta-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
         font-size: 0.85rem;
+        color: #6b7280;
+        margin-bottom: 0.8rem;
+      }
+
+      .interest-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 0.8rem;
+      }
+      .tag-pill {
+        padding: 4px 10px;
+        border-radius: 16px;
+        font-size: 0.78rem;
         font-weight: 700;
-        background: var(--sage-pale, #e8f0e9);
-        color: var(--sage-dark, #375742);
-        align-self: flex-start;
+        background: #f3f4f6;
+        color: #374151;
+        border: 1px solid #e5e7eb;
       }
-      .card-avatar {
-        font-size: 2.75rem;
-        text-align: center;
-        margin: 0.25rem 0;
-      }
-      .card-title {
-        font-family: 'Fraunces', serif;
-        font-size: 1.6rem;
-        font-weight: 700;
-        text-align: center;
-        color: var(--ink, #2a2a2a);
-        margin-bottom: 0.25rem;
-      }
-      .card-subtitle {
-        text-align: center;
-        color: var(--ink-muted, #5c5957);
-        font-size: 0.95rem;
-        margin-bottom: 0.75rem;
-      }
-      .card-bio {
-        background: var(--cream-dark, #f5ede0);
+
+      .profile-bio-box {
+        background: #f9fafb;
         padding: 0.85rem;
         border-radius: 12px;
-        font-size: 0.92rem;
+        font-size: 0.9rem;
         line-height: 1.45;
-        color: var(--ink, #2a2a2a);
-        margin-bottom: 0.75rem;
+        color: #374151;
+        margin-bottom: 0.8rem;
+        border-left: 3px solid var(--tinder-pink);
       }
-      .card-details-grid {
+
+      /* Expanded Details & Green/Red Flags */
+      .flag-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 8px;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.8rem;
       }
-      .detail-pill {
+      .flag-card {
         padding: 6px 10px;
-        border-radius: 8px;
-        font-size: 0.82rem;
+        border-radius: 10px;
+        font-size: 0.8rem;
         font-weight: 600;
       }
-      .detail-pill.green {
-        background: rgba(16, 185, 129, 0.15);
+      .flag-card.green {
+        background: rgba(16, 185, 129, 0.12);
         color: #065f46;
       }
-      .detail-pill.red {
-        background: rgba(239, 68, 68, 0.15);
+      .flag-card.red {
+        background: rgba(239, 68, 68, 0.12);
         color: #991b1b;
       }
+
       .prompt-box {
-        border-left: 4px solid var(--sage, #416b49);
-        padding: 8px 12px;
-        background: var(--sage-pale, #e8f0e9);
-        border-radius: 0 8px 8px 0;
-        font-size: 0.9rem;
+        background: linear-gradient(135deg, rgba(253, 38, 125, 0.08) 0%, rgba(255, 96, 54, 0.08) 100%);
+        padding: 0.75rem;
+        border-radius: 12px;
+        font-size: 0.88rem;
         font-weight: 600;
-        color: var(--ink, #2a2a2a);
+        color: #1f2937;
+        border: 1px solid rgba(253, 38, 125, 0.2);
       }
 
-      /* Dilemma "This vs That" Card layout */
-      .dilemma-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        margin: 1rem 0;
-      }
-      .dilemma-opt {
-        border: 2px solid var(--sage-pale, #e8f0e9);
-        border-radius: 14px;
-        padding: 1rem 0.75rem;
-        text-align: center;
-        background: var(--cream-dark, #f5ede0);
-      }
-      .dilemma-opt-emoji {
-        font-size: 2.5rem;
-        margin-bottom: 0.4rem;
-      }
-      .dilemma-opt-title {
-        font-family: 'Fraunces', serif;
-        font-weight: 700;
-        font-size: 1.1rem;
-        margin-bottom: 0.25rem;
-      }
-      .dilemma-opt-desc {
-        font-size: 0.8rem;
-        color: var(--ink-muted, #5c5957);
-      }
-
-      /* Control Buttons */
-      .swipe-actions {
+      /* Tinder Action Bar */
+      .tinder-actions {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
-        margin-top: 1.25rem;
+        gap: 14px;
+        margin-top: 1rem;
         width: 100%;
       }
-      .action-btn {
-        width: 64px;
-        height: 64px;
+      .t-btn {
+        width: 58px;
+        height: 58px;
         border-radius: 50%;
         border: none;
         outline: none;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-        transition: transform 0.15s ease, background 0.2s ease;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        background: #ffffff;
+        transition: transform 0.15s ease, box-shadow 0.2s ease;
       }
-      .action-btn:hover {
-        transform: scale(1.08);
+      .t-btn:hover {
+        transform: scale(1.12);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       }
-      .action-btn:active {
-        transform: scale(0.95);
+      .t-btn:active {
+        transform: scale(0.92);
       }
-      .action-btn.btn-no {
-        background: #fee2e2;
+      .t-btn.btn-rewind {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        color: #f59e0b;
+        border: 2px solid #fef3c7;
+      }
+      .t-btn.btn-pass {
         color: #ef4444;
+        border: 2px solid #fee2e2;
       }
-      .action-btn.btn-yes {
-        background: #d1fae5;
+      .t-btn.btn-super {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        color: #3b82f6;
+        border: 2px solid #dbeafe;
+      }
+      .t-btn.btn-like {
         color: #10b981;
+        border: 2px solid #d1fae5;
       }
-      .action-btn.btn-this {
-        background: #dbeafe;
-        color: #2563eb;
+
+      /* "IT'S A MATCH!" Overlay Modal */
+      .match-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.85);
+        z-index: 3000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        animation: fadeIn 0.25s ease;
       }
-      .action-btn.btn-that {
-        background: #ede9fe;
-        color: #7c3aed;
+      .match-modal-overlay.open {
+        display: flex;
+      }
+      .match-card {
+        background: var(--tinder-gradient);
+        border-radius: 24px;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        color: #ffffff;
+        max-width: 380px;
+        width: 100%;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        animation: popUp 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      @keyframes popUp {
+        from { transform: scale(0.7); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      .match-title {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 900;
+        font-size: 2.2rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      }
+      .match-avatars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin: 1.25rem 0;
+      }
+      .match-avatar-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        border: 4px solid #ffffff;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      }
+      .match-prompt-box {
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(8px);
+        padding: 1rem;
+        border-radius: 16px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(255,255,255,0.3);
+      }
+      .match-btn {
+        width: 100%;
+        padding: 0.9rem;
+        border-radius: 30px;
+        border: none;
+        font-weight: 800;
+        font-size: 1rem;
+        cursor: pointer;
+        background: #ffffff;
+        color: var(--tinder-pink);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        transition: transform 0.15s ease;
+      }
+      .match-btn:hover {
+        transform: scale(1.04);
       }
     </style>
 </head>
@@ -251,13 +397,31 @@
       <div class="go-topbar">
         <button class="go-back" onclick="location.href='../index.html'">← Back to games</button>
         <div>
-          <div class="go-title" id="go-title">This or That? 👈👉</div>
-          <div class="go-meta" id="go-meta">Tinder for Things & Dilemmas · Speaking & Preferences</div>
+          <div class="go-title" id="go-title">This or That? 🔥</div>
+          <div class="go-meta" id="go-meta">Tinder Profiles & Speaking Drills</div>
         </div>
         <div id="go-topbar-right"></div>
       </div>
       <div class="go-body" id="go-body">
-          <div id="game-loader" class="game-loader">Loading Tinder decks...</div>
+          <div id="game-loader" class="game-loader">Loading Tinder profiles...</div>
+      </div>
+    </div>
+
+    <!-- Match Celebration Modal -->
+    <div class="match-modal-overlay" id="match-modal">
+      <div class="match-card">
+        <div class="match-title">IT'S A MATCH! 🔥</div>
+        <p style="opacity: 0.95; font-size: 0.95rem;">You and <strong id="match-item-name">this card</strong> liked each other!</p>
+        <div class="match-avatars">
+          <div class="match-avatar-circle">🗣️</div>
+          <div style="font-size: 1.5rem; color: #fff;">❤️</div>
+          <div class="match-avatar-circle" id="match-item-emoji">☕</div>
+        </div>
+        <div class="match-prompt-box">
+          💬 <strong>Speaking Challenge:</strong>
+          <div id="match-prompt-text" style="margin-top: 6px;">Explain why you matched with this profile in your target language!</div>
+        </div>
+        <button class="match-btn" onclick="COSY_GAME.closeMatchModal()">Keep Swiping 🔥</button>
       </div>
     </div>
 
