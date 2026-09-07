@@ -37,8 +37,8 @@
         "film": "🎬 'Paddington 2' (Paul King)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "Hi! I am Anna. I am 22 years old. I am tall. I have short black hair and brown eyes. I like bright red clothes! I wear a red sweater, blue jeans, and white shoes. I have a big happy smile every day!",
+            "tag": "🖼️ Physical Look",
+            "bio": "Hi! I am Anna. I am 22 years old. I am tall. I have short black hair and brown eyes. I wear a bright red sweater, blue jeans, and white shoes.",
             "greenFlags": [
               "✓ Big friendly smile",
               "✓ Tall and slim",
@@ -48,6 +48,34 @@
               "✗ Always late for shoes",
               "✗ Wears only red",
               "✗ Speaks very fast"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Routine",
+            "bio": "I wake up early every morning. I drink milk and eat fresh apples. I walk in the park with my dog. I like happy music!",
+            "greenFlags": [
+              "✓ Loves walking outdoors",
+              "✓ Kind to pets",
+              "✓ Early riser"
+            ],
+            "redFlags": [
+              "✗ Dog barks loudly",
+              "✗ Sings early in the morning",
+              "✗ Leaves shoes everywhere"
+            ]
+          },
+          {
+            "tag": "💭 Favorites",
+            "bio": "I love sunny summer days and fruit ice cream. I do not like rainy days or cold tea. I want to meet friendly people!",
+            "greenFlags": [
+              "✓ Very positive mood",
+              "✓ Enjoys simple food",
+              "✓ Easy to talk to"
+            ],
+            "redFlags": [
+              "✗ Hates cold weather",
+              "✗ Avoids rainy walks",
+              "✗ Picky about drinks"
             ]
           }
         ],
@@ -79,17 +107,31 @@
         "film": "🎬 'Finding Nemo' (Pixar)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "Hello! My name is Marco. I am 25 years old. I am tall. I have curly brown hair and green eyes. I wear black glasses and a short beard. My clothes are simple: a green t-shirt and a blue jacket.",
+            "tag": "🖼️ Physical Look",
+            "bio": "Hello! I am Marco, 25 years old. I am short and active. I have brown curly hair and green eyes. I wear a navy jacket and dark blue jeans.",
             "greenFlags": [
-              "✓ Cute curly hair",
-              "✓ Nice green eyes",
-              "✓ Cool black glasses"
+              "✓ Warm green eyes",
+              "✓ Nice dark jacket",
+              "✓ Energetic look"
             ],
             "redFlags": [
-              "✗ Loses glasses daily",
-              "✗ Long beard cleaning",
-              "✗ Always wears denim"
+              "✗ Messy curly hair",
+              "✗ Always wears sneakers",
+              "✗ Forgets his jacket"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Life",
+            "bio": "I work in a small shop. I ride my yellow bicycle to work. I play soccer with my friends on Saturdays. I am very fast!",
+            "greenFlags": [
+              "✓ Rides bike every day",
+              "✓ Plays team sports",
+              "✓ Hard worker"
+            ],
+            "redFlags": [
+              "✗ Only talks about soccer",
+              "✗ Rides bike very fast",
+              "✗ Tired on Saturday nights"
             ]
           }
         ],
@@ -123,17 +165,45 @@
         "film": "🎬 'Chef' (Jon Favreau)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I am John, a baker. I wake up at 4:00 AM every morning. I make fresh bread, warm croissants, and cakes. I work in a big kitchen. It smells like warm bread and sugar. I sell food to happy customers.",
+            "tag": "🖼️ Kitchen Look",
+            "bio": "I am Chef John. I wear a clean white chef coat and a tall white hat. I work in a busy kitchen. I have short brown hair and a friendly face.",
             "greenFlags": [
-              "✓ Fresh bread every day",
-              "✓ Warm sweet smell",
-              "✓ Happy customers"
+              "✓ Clean white uniform",
+              "✓ Friendly smile",
+              "✓ Experienced cook"
             ],
             "redFlags": [
-              "✗ Wake up at 4:00 AM",
-              "✗ White flour everywhere",
-              "✗ Very hot oven"
+              "✗ Smells like garlic",
+              "✗ Messy apron after work",
+              "✗ Wears chef hat indoors"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Work",
+            "bio": "I cook hot soup and fresh bread every morning. I love good food! I make sweet cakes for birthday parties.",
+            "greenFlags": [
+              "✓ Bakes fresh bread",
+              "✓ Makes delicious soup",
+              "✓ Loves sweet desserts"
+            ],
+            "redFlags": [
+              "✗ Tastes food while cooking",
+              "✗ Kitchen gets very hot",
+              "✗ Works late hours"
+            ]
+          },
+          {
+            "tag": "💭 Food Values",
+            "bio": "Good food makes people happy. I use fresh vegetables and clean water. I like eating meals with good friends!",
+            "greenFlags": [
+              "✓ Uses fresh ingredients",
+              "✓ Shares meals with friends",
+              "✓ Passionate about cooking"
+            ],
+            "redFlags": [
+              "✗ Criticizes fast food",
+              "✗ Eats dinner very late",
+              "✗ Chooses menu for everyone"
             ]
           }
         ],
@@ -165,17 +235,31 @@
         "film": "🎬 'Patch Adams' (Tom Shadyac)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I am Dr. Sarah. I work in a hospital. I help sick people feel better and stay healthy. I wear a white coat. I talk to children and adults every day. I give good medicine.",
+            "tag": "🖼️ Doctor Profile",
+            "bio": "I am Dr. Sarah, 29 years old. I wear a white doctor coat and carry a stethoscope. I have long brown hair tied in a pony tail.",
             "greenFlags": [
-              "✓ Helps sick people",
-              "✓ Important job",
-              "✓ Makes people happy"
+              "✓ Calm and gentle voice",
+              "✓ Clean professional coat",
+              "✓ Good listener"
             ],
             "redFlags": [
-              "✗ Long night hours",
-              "✗ Very busy day",
-              "✗ Hard work"
+              "✗ Phone rings constantly",
+              "✗ Wears clinical shoes",
+              "✗ Always checking the clock"
+            ]
+          },
+          {
+            "tag": "⚡ Hospital Life",
+            "bio": "I help sick people get healthy. I check heartbeats and give helpful advice. I work at a big city hospital every day.",
+            "greenFlags": [
+              "✓ Helps people every day",
+              "✓ Patient and caring",
+              "✓ Works in city center"
+            ],
+            "redFlags": [
+              "✗ Night shifts on weekends",
+              "✗ Quick rushed lunches",
+              "✗ Very busy schedule"
             ]
           }
         ],
@@ -209,17 +293,45 @@
         "film": "🎬 '500 Days of Summer' (Marc Webb)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "Hi, I am Leo! I live in a cozy studio flat. It has one room, a yellow sofa, a small kitchen, and a clean bathroom. It is near the bus stop and the supermarket.",
+            "tag": "🖼️ Flat Overview",
+            "bio": "Hi, I am Leo! I live in a cozy studio flat. It has one bright room, a red sofa, a small wooden table, and a big window.",
             "greenFlags": [
-              "✓ Easy to clean",
-              "✓ Sunny big window",
-              "✓ Low price"
+              "✓ Cozy red sofa",
+              "✓ Big sunny window",
+              "✓ Clean wooden floor"
             ],
             "redFlags": [
-              "✗ No big table",
-              "✗ Small room",
-              "✗ No balcony"
+              "✗ Very small space",
+              "✗ No private balcony",
+              "✗ Tiny kitchen sink"
+            ]
+          },
+          {
+            "tag": "⚡ Living Routine",
+            "bio": "I read books on my red sofa. I cook simple pasta in my small kitchen. My flat is quiet and near a metro station.",
+            "greenFlags": [
+              "✓ Near metro station",
+              "✓ Quiet living area",
+              "✓ Perfect for reading"
+            ],
+            "redFlags": [
+              "✗ No space for big parties",
+              "✗ Cooking smell stays inside",
+              "✗ Only two chairs"
+            ]
+          },
+          {
+            "tag": "💭 Home Ideas",
+            "bio": "A good home is warm and simple. I like green plants and soft lights. I want a peaceful place to rest after work.",
+            "greenFlags": [
+              "✓ Nice house plants",
+              "✓ Warm soft lighting",
+              "✓ Relaxing atmosphere"
+            ],
+            "redFlags": [
+              "✗ Dislikes loud visitors",
+              "✗ Strict about shoes inside",
+              "✗ Early bedtime routine"
             ]
           }
         ],
@@ -253,17 +365,31 @@
         "film": "🎬 'Inside Out' (Pixar)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I am Mia. I am kind and polite. I say 'please' and 'thank you'. I like helping my friends and neighbors. I smile at people on the street.",
+            "tag": "🖼️ Mia's Profile",
+            "bio": "Hi, I am Mia! I am a kind and friendly person. I have short blonde hair, blue eyes, and a warm smile for everyone.",
             "greenFlags": [
-              "✓ Always polite",
-              "✓ Helps carry bags",
-              "✓ Good listener"
+              "✓ Always smiling",
+              "✓ Kind personality",
+              "✓ Easy to talk to"
             ],
             "redFlags": [
-              "✗ Says 'yes' to all",
-              "✗ Sad when people fight",
-              "✗ Too generous"
+              "✗ Talks a lot",
+              "✗ Laughs very loudly",
+              "✗ Forgets names easily"
+            ]
+          },
+          {
+            "tag": "⚡ How I Help",
+            "bio": "I love helping my friends. I help my neighbors carry heavy groceries. I share my umbrellas when it rains.",
+            "greenFlags": [
+              "✓ Helps neighbors",
+              "✓ Shares umbrellas",
+              "✓ Generous heart"
+            ],
+            "redFlags": [
+              "✗ Too trusting of strangers",
+              "✗ Says yes to everything",
+              "✗ Gets tired helping everyone"
             ]
           }
         ],
@@ -297,17 +423,45 @@
         "film": "🎬 'E.T. the Extra-Terrestrial' (Steven Spielberg)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I am Oliver. I ride a red bicycle in the park every weekend. It is easy, cheap, and fun! I feel the cool wind. I listen to music and eat delicious ice cream.",
+            "tag": "🖼️ Hobby Look",
+            "bio": "I am Oliver, 26. My favorite hobby is cycling in the park! I wear a blue bicycle helmet and bright sports shoes.",
             "greenFlags": [
-              "✓ Good exercise for legs",
-              "✓ Fresh air outside",
-              "✓ Fun with friends"
+              "✓ Healthy active hobby",
+              "✓ Safe helmet user",
+              "✓ Loves fresh air"
             ],
             "redFlags": [
-              "✗ Rain on clothes",
-              "✗ Flat bike tire",
-              "✗ Messy hair"
+              "✗ Bike dirty from mud",
+              "✗ Always wears sports shoes",
+              "✗ Leaves helmet on table"
+            ]
+          },
+          {
+            "tag": "⚡ Park Rides",
+            "bio": "I ride my bike for one hour every evening. I see green trees and birds in the park. It makes me feel happy and strong.",
+            "greenFlags": [
+              "✓ Daily exercise habit",
+              "✓ Enjoys green parks",
+              "✓ Great physical energy"
+            ],
+            "redFlags": [
+              "✗ Rides in light rain",
+              "✗ Talks about bikes constantly",
+              "✗ Skips movie nights for cycling"
+            ]
+          },
+          {
+            "tag": "💭 Fitness Dreams",
+            "bio": "I want to ride my bike near the ocean one day. I like fresh air, sunshine, and active weekends with good friends!",
+            "greenFlags": [
+              "✓ Loves ocean trips",
+              "✓ Active weekend plans",
+              "✓ Inspiring outdoor energy"
+            ],
+            "redFlags": [
+              "✗ Dislikes sitting inside",
+              "✗ Wakes up at 6 AM on Sundays",
+              "✗ Only plans bicycle trips"
             ]
           }
         ],
@@ -341,17 +495,31 @@
         "film": "🎬 'Spirited Away' (Hayao Miyazaki)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "Konnichiwa! I am Kenji. I am Japanese. I live in Tokyo, Japan. My language is Japanese. In Japan, we eat fresh sushi and hot ramen. I drink green tea every day!",
+            "tag": "🖼️ Tokyo Profile",
+            "bio": "Konnichiwa! I am Kenji from Tokyo, Japan. I have short straight dark hair and brown eyes. I wear dark blue clothes and clean white sneakers.",
             "greenFlags": [
-              "✓ Polite and friendly",
-              "✓ Makes hot miso soup",
-              "✓ Shares Japanese culture"
+              "✓ Very polite and neat",
+              "✓ Stylish blue clothes",
+              "✓ Respectful greeting"
             ],
             "redFlags": [
-              "✗ Bows many times",
-              "✗ Slurps noodles loudly",
-              "✗ Talks about train times"
+              "✗ Bows repeatedly",
+              "✗ Very quiet at first",
+              "✗ Wears slippers everywhere"
+            ]
+          },
+          {
+            "tag": "⚡ Tokyo Life",
+            "bio": "I live near Shibuya in Tokyo. I ride fast trains to work. I eat hot ramen noodles and green tea ice cream.",
+            "greenFlags": [
+              "✓ Knows Tokyo spots",
+              "✓ Loves ramen soup",
+              "✓ Punctual train rider"
+            ],
+            "redFlags": [
+              "✗ Eats noodles very fast",
+              "✗ Drinks green tea all day",
+              "✗ Walks very quickly"
             ]
           }
         ],
@@ -383,17 +551,45 @@
         "film": "🎬 'La Dolce Vita' (Federico Fellini)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "Ciao! I am Sofia. I am Italian. I come from Rome in Italy. I speak Italian. Italy is famous for pizza, pasta, and sweet gelato. I cook fresh pasta at home!",
+            "tag": "🖼️ Rome Profile",
+            "bio": "Ciao! I am Sofia from Rome, Italy. I have long dark wavy hair and brown eyes. I love colorful summer dresses and sunglasses.",
             "greenFlags": [
-              "✓ Cooks fresh pasta",
-              "✓ Warm friendly smile",
-              "✓ Loves coffee"
+              "✓ Stylish Italian dress",
+              "✓ Warm friendly personality",
+              "✓ Expressive eyes"
             ],
             "redFlags": [
-              "✗ Angry if pasta breaks",
-              "✗ Talks with hands constantly",
-              "✗ Drinks 5 espressos"
+              "✗ Speaks with hands constantly",
+              "✗ Always wearing dark sunglasses",
+              "✗ Late for lunch"
+            ]
+          },
+          {
+            "tag": "⚡ Italian Daily Life",
+            "bio": "In Rome, I drink espresso coffee at small cafes. I walk near historical fountains and talk with my family every evening.",
+            "greenFlags": [
+              "✓ Loves Italian coffee",
+              "✓ Family person",
+              "✓ Knows historic Rome"
+            ],
+            "redFlags": [
+              "✗ Drinks 4 espressos daily",
+              "✗ Talks loud on phone",
+              "✗ Refuses instant coffee"
+            ]
+          },
+          {
+            "tag": "💭 Food & Traditions",
+            "bio": "My grandmother teaches me how to cook fresh pasta. I love hot pizza with basil and cheese. Eating together is important!",
+            "greenFlags": [
+              "✓ Bakes fresh pizza",
+              "✓ Family recipe traditions",
+              "✓ Welcoming host"
+            ],
+            "redFlags": [
+              "✗ Strict about pasta recipes",
+              "✗ No pineapple on pizza",
+              "✗ Long 3-hour dinners"
             ]
           }
         ],
@@ -429,7 +625,7 @@
         "film": "🎬 'La La Land' (Damien Chazelle)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Physical Look",
             "bio": "I am Elena, 24 years old. I am medium height and active because I exercise every day. I have wavy auburn hair and hazel eyes with light freckles. I like wearing simple striped shirts and jeans.",
             "greenFlags": [
               "✓ Friendly hazel eyes",
@@ -440,6 +636,34 @@
               "✗ Gets sunburned easily",
               "✗ Hair gets messy in the wind",
               "✗ Wears sandals in cold weather"
+            ]
+          },
+          {
+            "tag": "⚡ Outdoor Routine",
+            "bio": "Every morning I go jogging along the river path. I drink fresh orange juice and eat oats. Staying moving helps me feel happy and productive all afternoon.",
+            "greenFlags": [
+              "✓ Regular morning runner",
+              "✓ Healthy breakfast habits",
+              "✓ High afternoon energy"
+            ],
+            "redFlags": [
+              "✗ Wakes up at 5:30 AM",
+              "✗ Forces friends to jog",
+              "✗ Talks about fitness stats"
+            ]
+          },
+          {
+            "tag": "💭 Style & Feelings",
+            "bio": "I prefer natural looks over heavy makeup. Comfortable clothes make me feel confident. I love bright sunny days when I can spend hours outside!",
+            "greenFlags": [
+              "✓ Natural confidence",
+              "✓ Loves bright weather",
+              "✓ Practical clothing choices"
+            ],
+            "redFlags": [
+              "✗ Avoids formal indoor events",
+              "✗ Dislikes high heels",
+              "✗ Complains when stuck inside"
             ]
           }
         ],
@@ -471,8 +695,8 @@
         "film": "🎬 'The Devil Wears Prada' (David Frankel)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I am Liam, 27 years old. I am tall with short blonde hair and a clean-shaven face. I wear a smart navy blazer and dark trousers for my office job.",
+            "tag": "🖼️ Tailored Style",
+            "bio": "I am Liam, 27 years old. I am tall with short blonde hair and blue eyes. I usually wear well-fitted jackets, dark trousers, and clean leather shoes.",
             "greenFlags": [
               "✓ Polished and neat look",
               "✓ Good posture",
@@ -482,6 +706,20 @@
               "✗ Picky about shirt wrinkles",
               "✗ Spends money on dry cleaning",
               "✗ Dislikes cozy hoodies"
+            ]
+          },
+          {
+            "tag": "⚡ Office & Evenings",
+            "bio": "I work in a city bank during the week. In the evening, I enjoy visiting quiet coffee shops with a good newspaper or meeting colleagues for dinner.",
+            "greenFlags": [
+              "✓ Responsible career",
+              "✓ Enjoys quiet cafes",
+              "✓ Courteous dinner guest"
+            ],
+            "redFlags": [
+              "✗ Talks about finances often",
+              "✗ Reads news at dinner table",
+              "✗ Checks work emails late"
             ]
           }
         ],
@@ -515,8 +753,8 @@
         "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I am Nina, a graphic designer. I make colorful logos, website pictures, and posters for local businesses. I use my laptop and drawing tablet to draw every day.",
+            "tag": "🖼️ Designer Look",
+            "bio": "I am Nina, a graphic designer. I make colorful logos, posters, and websites on my computer. I have dark hair, round glasses, and a creative style.",
             "greenFlags": [
               "✓ Creative and fun work",
               "✓ Can work from home or cafes",
@@ -526,6 +764,34 @@
               "✗ Sits near screens for 8 hours",
               "✗ Clients change their minds",
               "✗ Tired eyes after work"
+            ]
+          },
+          {
+            "tag": "⚡ Creative Process",
+            "bio": "I start my workday with a notebook and sketchpens. I try different color schemes and fonts until the design looks balanced and clear.",
+            "greenFlags": [
+              "✓ Thoughtful design planning",
+              "✓ Attention to detail",
+              "✓ Great eye for colors"
+            ],
+            "redFlags": [
+              "✗ Paper sketches everywhere",
+              "✗ Changes font 20 times",
+              "✗ Obsesses over color shades"
+            ]
+          },
+          {
+            "tag": "💭 Artistic Views",
+            "bio": "Design should be simple, colorful, and helpful for people. I love art galleries, clean typography, and modern city architecture.",
+            "greenFlags": [
+              "✓ Enjoys museum visits",
+              "✓ Appreciates clean design",
+              "✓ Inspiring creative ideas"
+            ],
+            "redFlags": [
+              "✗ Judges ugly billboards",
+              "✗ Criticizes website fonts",
+              "✗ Too picky about poster art"
             ]
           }
         ],
@@ -559,8 +825,8 @@
         "film": "🎬 'Inception' (Christopher Nolan)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I am Lucas! My flat is a bright one-bedroom loft apartment. It has high concrete ceilings, large glass windows, and an open kitchen. It is near art shops and cafes.",
+            "tag": "🖼️ Loft Spaces",
+            "bio": "I am Lucas! My flat is a bright one-bedroom loft apartment. It has high ceilings, big industrial windows, and modern white furniture.",
             "greenFlags": [
               "✓ Nice city views",
               "✓ Lots of sunlight",
@@ -570,6 +836,20 @@
               "✗ Higher heating bills in winter",
               "✗ Street noise at night",
               "✗ No private garage"
+            ]
+          },
+          {
+            "tag": "⚡ Living Environment",
+            "bio": "I enjoy cooking dinner in the open kitchen while listening to jazz music. Sunlight fills the main room all morning, making it great for plants.",
+            "greenFlags": [
+              "✓ Great for indoor plants",
+              "✓ Open kitchen layout",
+              "✓ Relaxing jazz atmosphere"
+            ],
+            "redFlags": [
+              "✗ Echoes when people talk",
+              "✗ Kitchen smells fill whole loft",
+              "✗ Needs frequent dusting"
             ]
           }
         ],
@@ -603,8 +883,8 @@
         "film": "🎬 'The Social Network' (David Fincher)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I am Sophia. I am organized and always arrive on time because I respect other people's schedules. I use a paper planner to write my daily tasks and prepare my clothes early.",
+            "tag": "🖼️ Organized Profile",
+            "bio": "I am Sophia. I am organized and always arrive on time because I plan my days with a digital calendar. I like clean spaces and clear rules.",
             "greenFlags": [
               "✓ Never late for meetings",
               "✓ Helps friends when needed",
@@ -614,6 +894,34 @@
               "✗ Gets nervous if plans change",
               "✗ Very strict schedule",
               "✗ Dislikes messy rooms"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Habits",
+            "bio": "Every Sunday I make a plan for my week. I organize my tasks, prepare healthy meals, and list all my appointments in color-coded files.",
+            "greenFlags": [
+              "✓ Prepares meals in advance",
+              "✓ Highly reliable person",
+              "✓ Systematic problem solver"
+            ],
+            "redFlags": [
+              "✗ Color-codes everything",
+              "✗ Panics if missing a pen",
+              "✗ Uncomfortable with surprises"
+            ]
+          },
+          {
+            "tag": "💭 Mindset & Life",
+            "bio": "Order brings peace to life. When everything is organized, I feel calm and ready to help my family and friends with their goals.",
+            "greenFlags": [
+              "✓ Calm under structure",
+              "✓ Supportive friend",
+              "✓ Dependable family member"
+            ],
+            "redFlags": [
+              "✗ Re-arranges other people's desks",
+              "✗ Expects total order from others",
+              "✗ Cannot relax in messy places"
             ]
           }
         ],
@@ -647,8 +955,8 @@
         "film": "🎬 'Julie & Julia' (Nora Ephron)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I am Hannah and I love baking bread at home. I mix simple flour, water, and yeast, then bake it in a hot oven. My kitchen smells wonderful when bread is baking.",
+            "tag": "🖼️ Baking Passion",
+            "bio": "I am Hannah and I love baking bread at home. I mix simple flour, water, and yeast, then bake it in a hot oven until the crust is golden.",
             "greenFlags": [
               "✓ Fresh warm bread",
               "✓ Relaxing kitchen hobby",
@@ -658,6 +966,20 @@
               "✗ Needs hours of waiting time",
               "✗ Flour on kitchen counter",
               "✗ Oven gets very hot"
+            ]
+          },
+          {
+            "tag": "⚡ Kitchen Routine",
+            "bio": "Baking requires patience. I knead the dough by hand for ten minutes and let it rise twice. My kitchen smells wonderful when bread is baking.",
+            "greenFlags": [
+              "✓ Wonderful bread smell",
+              "✓ Patient baking routine",
+              "✓ Delicious homemade crust"
+            ],
+            "redFlags": [
+              "✗ Wakes up early to knead dough",
+              "✗ Flour dust on dark clothes",
+              "✗ Eats too much warm bread"
             ]
           }
         ],
@@ -691,8 +1013,8 @@
         "film": "🎬 'Coco' (Pixar)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my country and traditions. We celebrate festivals with flowers, music, and fresh corn tacos.",
+            "tag": "🖼️ Oaxaca Roots",
+            "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my country and traditions. We celebrate festivals with colorful flowers, music, and fresh corn tacos.",
             "greenFlags": [
               "✓ Makes homemade guacamole",
               "✓ Friendly and welcoming",
@@ -702,6 +1024,34 @@
               "✗ Says spicy food is mild",
               "✗ Arrives late to events",
               "✗ Plays loud music"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Culture",
+            "bio": "I work in a local craft market. During breaks, I chat with neighbors and drink traditional chocolate drinks made with cinnamon and hot milk.",
+            "greenFlags": [
+              "✓ Loves local craft markets",
+              "✓ Shares traditional drinks",
+              "✓ Friendly community ties"
+            ],
+            "redFlags": [
+              "✗ Spends hours chatting",
+              "✗ Takes very long coffee breaks",
+              "✗ Over-spices lunch dishes"
+            ]
+          },
+          {
+            "tag": "💭 Family & Joy",
+            "bio": "Family gatherings are the center of life in Oaxaca. We play guitars, share home-cooked meals, and celebrate life with lots of laughter and dancing.",
+            "greenFlags": [
+              "✓ Great family host",
+              "✓ Plays acoustic guitar",
+              "✓ Joyful social energy"
+            ],
+            "redFlags": [
+              "✗ Parties go past midnight",
+              "✗ Invites 20 cousins over",
+              "✗ Plays guitar during nap time"
             ]
           }
         ],
@@ -733,8 +1083,8 @@
         "film": "🎬 'Another Round' (Thomas Vinterberg)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "Hej! My name is Freja. I am Danish and I live in Copenhagen, Denmark. In Denmark, we like cozy indoor spaces with candles and warm drinks. We ride bicycles to work every day.",
+            "tag": "🖼️ Danish Profile",
+            "bio": "Hej! My name is Freja. I am Danish and I live in Copenhagen, Denmark. In Denmark, we like cozy indoor spaces with candles, soft blankets, and warm drinks.",
             "greenFlags": [
               "✓ Cozy candlelit dinners",
               "✓ Rides bike every day",
@@ -744,6 +1094,20 @@
               "✗ Dislikes taking short car rides",
               "✗ Lights many candles at home",
               "✗ Very strict about rye bread"
+            ]
+          },
+          {
+            "tag": "⚡ Copenhagen Life",
+            "bio": "I ride my bicycle to my university every morning, even when rain or cold wind arrives. We wear warm waterproof coats and ride everywhere together.",
+            "greenFlags": [
+              "✓ Strong weather resilience",
+              "✓ Eco-friendly lifestyle",
+              "✓ Active commuting habit"
+            ],
+            "redFlags": [
+              "✗ Refuses taxi rides",
+              "✗ Clothes always smell like rain",
+              "✗ Insists on cycling in snow"
             ]
           }
         ],
@@ -779,7 +1143,7 @@
         "film": "🎬 'Frida' (Julie Taymor)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Artistic Style",
             "bio": "I'm Maya, a 26-year-old artist. I have dark brown curly hair, dark eyes, and a warm smile. I like wearing bohemian clothes, long skirts, and handmade bracelets because they match my creative personality.",
             "greenFlags": [
               "✓ Friendly and warm expression",
@@ -790,6 +1154,34 @@
               "✗ Takes a long time to style her hair",
               "✗ Wears too many bracelets",
               "✗ Spends hours in vintage shops"
+            ]
+          },
+          {
+            "tag": "⚡ Studio Routine",
+            "bio": "I spend my afternoons in a sunlit art studio, mixing watercolor paints and listening to indie music. My clothes often have small paint spots, which I consider badges of honor.",
+            "greenFlags": [
+              "✓ Dedicated to artistic craft",
+              "✓ Enjoys peaceful creative spaces",
+              "✓ Expressive personality"
+            ],
+            "redFlags": [
+              "✗ Paint smudges on sofa cushions",
+              "✗ Loses track of time while painting",
+              "✗ Leaves paintbrushes in coffee mugs"
+            ]
+          },
+          {
+            "tag": "💭 Creative Outlook",
+            "bio": "I believe art should express authentic emotions rather than perfect technical rules. I enjoy exploring flea markets for vintage clothes and old picture frames that tell stories.",
+            "greenFlags": [
+              "✓ Values authentic self-expression",
+              "✓ Appreciates vintage aesthetics",
+              "✓ Imaginative storyteller"
+            ],
+            "redFlags": [
+              "✗ Accumulates too many vintage knick-knacks",
+              "✗ Rejects strict schedules",
+              "✗ Over-interprets simple art pieces"
             ]
           }
         ],
@@ -821,8 +1213,8 @@
         "film": "🎬 'Into the Wild' (Sean Penn)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
-            "bio": "I'm Julian, a 29-year-old who loves spending time outdoors. I'm tall with a short dark beard and hazel eyes. I usually wear comfortable flannel shirts and boots because I like hiking on weekends.",
+            "tag": "🖼️ Outdoor Look",
+            "bio": "I'm Julian, a 29-year-old who loves spending time outdoors. I'm tall with a short dark beard and hazel eyes. I usually wear comfortable flannel shirts and sturdy boots because I like hiking on weekends.",
             "greenFlags": [
               "✓ Neat and tidy beard",
               "✓ Tall and confident posture",
@@ -832,6 +1224,20 @@
               "✗ Beard oil on shirt collars",
               "✗ Dislikes wearing formal ties",
               "✗ Owns too many flannel shirts"
+            ]
+          },
+          {
+            "tag": "⚡ Mountain Hikes",
+            "bio": "On Saturday mornings, I pack my backpack with trail mix and a compass to explore national park trails. I enjoy fresh pine air and camping under starry night skies.",
+            "greenFlags": [
+              "✓ Experienced outdoor navigator",
+              "✓ Healthy active lifestyle",
+              "✓ Enjoys natural scenery"
+            ],
+            "redFlags": [
+              "✗ Wakes up at 4:30 AM for sunrise hikes",
+              "✗ No phone signal on mountain trails",
+              "✗ Muddy boots near the front door"
             ]
           }
         ],
@@ -865,7 +1271,7 @@
         "film": "🎬 'The Matrix' (The Wachowskis)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Tech Life",
             "bio": "I'm Marcus, a software developer. I build websites and phone apps that help people organize their work. My job includes writing code, fixing computer bugs, and working in a team with other programmers.",
             "greenFlags": [
               "✓ Flexible work-from-home hours",
@@ -876,6 +1282,34 @@
               "✗ Sitting at a desk for long hours",
               "✗ Looking at screens all day",
               "✗ Uses technical computer words"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Workflow",
+            "bio": "My workday revolves around daily team standup meetings, writing clean code, and testing software features. When a difficult bug appears, solving it feels like winning a puzzle game.",
+            "greenFlags": [
+              "✓ Logical problem solver",
+              "✓ Good team communicator",
+              "✓ Persistent under pressure"
+            ],
+            "redFlags": [
+              "✗ Drinks 4 cups of coffee per day",
+              "✗ Gets engrossed in coding problems",
+              "✗ Explains code at parties"
+            ]
+          },
+          {
+            "tag": "💭 Future Tech",
+            "bio": "Technology should make human lives simpler rather than more complicated. I prefer open-source software projects and apps that respect user privacy.",
+            "greenFlags": [
+              "✓ Advocates for user privacy",
+              "✓ Supports open-source tech",
+              "✓ Thoughtful about digital balance"
+            ],
+            "redFlags": [
+              "✗ Debates operating systems",
+              "✗ Refuses popular privacy-invading apps",
+              "✗ Overanalyzes app interface designs"
             ]
           }
         ],
@@ -907,7 +1341,7 @@
         "film": "🎬 'Spotlight' (Tom McCarthy)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Reporter Profile",
             "bio": "I'm Clara, a news reporter who writes articles about the environment. I travel to interview scientists and report on solar power and clean energy projects. I love my job because I share important news with the public.",
             "greenFlags": [
               "✓ Helps people understand environmental issues",
@@ -918,6 +1352,20 @@
               "✗ Tight deadlines for news articles",
               "✗ Long and unpredictable work hours",
               "✗ Stressful newsroom environment"
+            ]
+          },
+          {
+            "tag": "⚡ Fieldwork Routine",
+            "bio": "One day I'm interviewing marine biologists on a coastal boat, and the next day I'm writing articles in a noisy newsroom. I always carry two audio recorders and a waterproof notebook.",
+            "greenFlags": [
+              "✓ Adaptable to field environments",
+              "✓ Well-prepared interviewer",
+              "✓ Energetic investigation skills"
+            ],
+            "redFlags": [
+              "✗ Phone constantly buzzing with news alerts",
+              "✗ Irregular travel schedules",
+              "✗ Quick rushed meals on assignment"
             ]
           }
         ],
@@ -951,7 +1399,7 @@
         "film": "🎬 'The Grand Budapest Hotel' (Wes Anderson)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Industrial Loft",
             "bio": "I'm Arthur. I live in a two-bedroom apartment inside an old restored paper factory. It has exposed red brick walls, large wooden beams, and big windows looking over the river.",
             "greenFlags": [
               "✓ Beautiful historical character",
@@ -962,6 +1410,34 @@
               "✗ High monthly building fees",
               "✗ High ceilings are hard to heat",
               "✗ Strict rules about making changes"
+            ]
+          },
+          {
+            "tag": "⚡ Living Environment",
+            "bio": "The open space is decorated with industrial metal lamps and vintage wooden furniture. In the evening, river currents reflect soft city lights across the ceiling.",
+            "greenFlags": [
+              "✓ Warm ambient lighting",
+              "✓ Stylish industrial decor",
+              "✓ Peaceful river reflection"
+            ],
+            "redFlags": [
+              "✗ Metal furniture can feel cold",
+              "✗ Echoes if music is turned up loud",
+              "✗ Requires frequent window dusting"
+            ]
+          },
+          {
+            "tag": "💭 Architectural Character",
+            "bio": "I value buildings that preserve their history instead of tearing down old walls. Living in a space with character makes daily life feel grounded and inspiring.",
+            "greenFlags": [
+              "✓ Respects heritage architecture",
+              "✓ Inspiring living space",
+              "✓ Passionate about restoration"
+            ],
+            "redFlags": [
+              "✗ Dislikes modern cookie-cutter flats",
+              "✗ Complains about poor building restoration",
+              "✗ Overcharges for loft aesthetic"
             ]
           }
         ],
@@ -995,7 +1471,7 @@
         "film": "🎬 'Good Will Hunting' (Gus Van Sant)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Supportive Friend",
             "bio": "I'm Daniel, 28. I am a helpful person who listens carefully when friends have problems. I try to understand people's feelings and give thoughtful advice when they ask for help.",
             "greenFlags": [
               "✓ Very supportive and trustworthy",
@@ -1006,6 +1482,20 @@
               "✗ Takes on other people's worries",
               "✗ Avoids conflicts and arguments",
               "✗ Needs quiet time alone after long chats"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Connections",
+            "bio": "I prefer deep one-on-one conversations over loud group parties. I regularly call old friends to check on them and remember small details about their lives.",
+            "greenFlags": [
+              "✓ Excellent active listener",
+              "✓ Remembers birthdays and details",
+              "✓ Deep meaningful relationships"
+            ],
+            "redFlags": [
+              "✗ Gets exhausted by large social gatherings",
+              "✗ Hesitant to express personal anger",
+              "✗ Overthinks text messages"
             ]
           }
         ],
@@ -1039,7 +1529,7 @@
         "film": "🎬 'Free Solo' (Jimmy Chin & Elizabeth Chai Vasarhelyi)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Bouldering Focus",
             "bio": "I'm Ethan. Bouldering is my main hobby. I climb short indoor walls without ropes, using chalk on my hands to grip the holds. It gives me a great workout and helps me practice focus and problem solving.",
             "greenFlags": [
               "✓ Builds good physical strength",
@@ -1050,6 +1540,34 @@
               "✗ White chalk dust on clothes",
               "✗ Sore fingers and hands",
               "✗ Spends hours practicing climbing moves"
+            ]
+          },
+          {
+            "tag": "⚡ Gym & Community",
+            "bio": "I spend three evenings a week at the local climbing gym analyzing route angles with gym buddies. Working out a difficult climbing sequence feels like solving a physical riddle.",
+            "greenFlags": [
+              "✓ Great problem-solving mindset",
+              "✓ Supportive climbing partners",
+              "✓ High determination and stamina"
+            ],
+            "redFlags": [
+              "✗ Calloused palms and fingers",
+              "✗ Talks endlessly about climb grades",
+              "✗ Buys expensive climbing shoes"
+            ]
+          },
+          {
+            "tag": "💭 Outdoor Ambitions",
+            "bio": "My goal for next summer is outdoor bouldering in granite canyons. Being outdoors surrounded by rock faces and nature tests your physical limits in the best way.",
+            "greenFlags": [
+              "✓ Ambitious outdoor goals",
+              "✓ Respect for nature and safety",
+              "✓ Athletic drive"
+            ],
+            "redFlags": [
+              "✗ Weekend trips revolve only around rocks",
+              "✗ Risks minor finger sprains",
+              "✗ Obsesses over weather forecasts"
             ]
           }
         ],
@@ -1083,7 +1601,7 @@
         "film": "🎬 'The Wedding Party' (Kemi Adetiba)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Lagos Roots",
             "bio": "Kedu! I'm Amara from Lagos, Nigeria. Nigeria has many cultural groups, lively Afrobeats music, and great food. We love getting together with family to eat spicy Jollof rice and listen to music.",
             "greenFlags": [
               "✓ Hosts fun dinners with great music",
@@ -1094,6 +1612,20 @@
               "✗ Long debates about who cooks the best rice",
               "✗ Loud phone conversations",
               "✗ Expects traditional politeness"
+            ]
+          },
+          {
+            "tag": "⚡ Lagos Energy",
+            "bio": "Lagos is an energetic city that never sleeps. I love visiting colorful fabric markets, dancing to Afrobeats at weekend celebrations, and cooking rich stews for friends.",
+            "greenFlags": [
+              "✓ Vibrant social host",
+              "✓ Great music playlists",
+              "✓ Generous cooking portions"
+            ],
+            "redFlags": [
+              "✗ Music always turned to maximum volume",
+              "✗ Debates Jollof rice recipes for hours",
+              "✗ Generous portions cause food comas"
             ]
           }
         ],
@@ -1125,7 +1657,7 @@
         "film": "🎬 '3 Idiots' (Rajkumar Hirani)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Jaipur Heritage",
             "bio": "Namaste! I'm Aarav from Jaipur, India. India is famous for colorful festivals, ancient palaces, and delicious spices. In Indian culture, welcoming guests is very important. I drink warm cardamom tea every morning.",
             "greenFlags": [
               "✓ Very welcoming to guests",
@@ -1136,6 +1668,34 @@
               "✗ Dislikes instant tea bags",
               "✗ Talks for hours about cricket",
               "✗ Wiggles head while talking"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Rhythms",
+            "bio": "I work in textile design, preserving traditional block-printing patterns passed down through generations. Every morning starts with fresh spiced chai brewed with real ginger and cardamom.",
+            "greenFlags": [
+              "✓ Preserves cultural craftsmanship",
+              "✓ Master of authentic spiced chai",
+              "✓ Artistic attention to detail"
+            ],
+            "redFlags": [
+              "✗ Rejects microwave tea heating",
+              "✗ Gets passionate about cricket match umpire decisions",
+              "✗ Fills home with patterned fabrics"
+            ]
+          },
+          {
+            "tag": "💭 Hospitality Values",
+            "bio": "'Atithi Devo Bhava' means the guest is like God in our culture. Hosting friends for home-cooked thali dinners with aromatic spices brings me immense satisfaction.",
+            "greenFlags": [
+              "✓ Exceptional guest hospitality",
+              "✓ Authentic Indian home cooking",
+              "✓ Warm cultural pride"
+            ],
+            "redFlags": [
+              "✗ Insists guests eat third helpings",
+              "✗ Disapproves of bland unspiced food",
+              "✗ Long elaborate dinner preparation"
             ]
           }
         ],
@@ -1171,7 +1731,7 @@
         "film": "🎬 'The Grand Budapest Hotel' (Wes Anderson)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ High Fashion",
             "bio": "I'm Victoria, 29. I'm 5'10\" with ice-blue eyes and a short platinum blonde bob. I love clean, simple high-fashion outfits that look modern and stylish.",
             "greenFlags": [
               "✓ Confident personal style",
@@ -1182,6 +1742,34 @@
               "✗ Looks intimidating at first",
               "✗ High-maintenance hair bleaching",
               "✗ Strict outfit expectations"
+            ]
+          },
+          {
+            "tag": "⚡ Fashion & Work",
+            "bio": "Working as a luxury brand coordinator requires impeccable presentation. I curate structured monochromatic wardrobes that project authority and elegance in executive boardrooms.",
+            "greenFlags": [
+              "✓ Impeccable professional presence",
+              "✓ Sharp eye for design quality",
+              "✓ Highly organized wardrobe"
+            ],
+            "redFlags": [
+              "✗ Refuses casual sweatpants in public",
+              "✗ Spends heavily on designer tailoring",
+              "✗ Expects polished attire from dates"
+            ]
+          },
+          {
+            "tag": "💭 Style Philosophy",
+            "bio": "True style isn't about chasing transient trends, but rather discovering timeless silhouettes that reflect inner discipline and refined artistic taste.",
+            "greenFlags": [
+              "✓ Deep aesthetic philosophy",
+              "✓ Rejects fast-fashion waste",
+              "✓ Articulate cultural knowledge"
+            ],
+            "redFlags": [
+              "✗ Can come across as overly critical",
+              "✗ Uncompromising aesthetic standards",
+              "✗ Dismissive of casual wear"
             ]
           }
         ],
@@ -1213,7 +1801,7 @@
         "film": "🎬 'La Grande Bellezza' (Paolo Sorrentino)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Sartorial Style",
             "bio": "I'm Gabriel, 34. I'm 6'0\" tall with silver-templed dark hair, hazel eyes, and a friendly smile. I prefer classic, tailored coats and timeless European style over fast fashion.",
             "greenFlags": [
               "✓ Elegant and mature style",
@@ -1224,6 +1812,20 @@
               "✗ Too picky about vintage watches",
               "✗ Never wears sports clothes",
               "✗ Takes a long time styling silver hair"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Routine",
+            "bio": "I begin mornings with espresso while reading international architectural journals. My wardrobe consists of handmade wool coats, polished leather loafers, and vintage mechanical watches.",
+            "greenFlags": [
+              "✓ Cultured daily habits",
+              "✓ Appreciates vintage craftsmanship",
+              "✓ Sophisticated conversationalist"
+            ],
+            "redFlags": [
+              "✗ Takes 20 minutes inspecting vintage watches",
+              "✗ Refuses to wear athletic hoodies",
+              "✗ Fastidious about shoe care"
             ]
           }
         ],
@@ -1257,7 +1859,7 @@
         "film": "🎬 'Ex Machina' (Alex Garland)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ AI Ethics Research",
             "bio": "I'm Dr. Aris, a technology ethics researcher. I test artificial intelligence programs to prevent bias, protect user privacy, and make sure new tech is fair. I also help write clear policy guidelines for tech companies.",
             "greenFlags": [
               "✓ Working on important modern tech issues",
@@ -1268,6 +1870,34 @@
               "✗ Complicated rules with no easy answers",
               "✗ Tech companies resist new regulations",
               "✗ Technology changes faster than policy"
+            ]
+          },
+          {
+            "tag": "⚡ Research & Debates",
+            "bio": "My daily schedule involves reviewing algorithmic fairness metrics, speaking at academic conferences, and consulting with legal committees on digital rights and automated decision-making.",
+            "greenFlags": [
+              "✓ High intellectual rigor",
+              "✓ Articulate public speaker",
+              "✓ Committed to digital justice"
+            ],
+            "redFlags": [
+              "✗ Over-analyzes everyday decisions",
+              "✗ Uses dense academic jargon",
+              "✗ Working late analyzing dataset bias"
+            ]
+          },
+          {
+            "tag": "💭 Vision for Tech",
+            "bio": "Artificial intelligence should serve humanity with accountability and transparency. Technology without ethical boundaries risks compounding societal inequality.",
+            "greenFlags": [
+              "✓ Principled ethical conviction",
+              "✓ Visionary approach to technology",
+              "✓ Protects human dignity"
+            ],
+            "redFlags": [
+              "✗ Cynical about Silicon Valley hype",
+              "✗ Debates moral dilemmas at dinner",
+              "✗ Intense philosophical focus"
             ]
           }
         ],
@@ -1299,7 +1929,7 @@
         "film": "🎬 'Metropolis' (Fritz Lang)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Architectural Conservation",
             "bio": "I'm Soren, an architect who specializes in restoring old buildings. I renovate historical structures so they can be used as modern apartments or offices without losing their original character.",
             "greenFlags": [
               "✓ Protects historical architecture for the community",
@@ -1310,6 +1940,20 @@
               "✗ Slow approval processes with local councils",
               "✗ Unexpected repair costs",
               "✗ Strict budget limits"
+            ]
+          },
+          {
+            "tag": "⚡ Restoration Projects",
+            "bio": "I spend half my week on dusty construction sites inspecting century-old masonry and timber, and the other half drafting sustainable retrofitting plans using modern insulation.",
+            "greenFlags": [
+              "✓ Hands-on site experience",
+              "✓ Blends heritage with sustainability",
+              "✓ Meticulous structural planning"
+            ],
+            "redFlags": [
+              "✗ Comes home with brick dust on shoes",
+              "✗ Frustrated by bureaucratic delays",
+              "✗ Obsesses over historic tile patterns"
             ]
           }
         ],
@@ -1343,7 +1987,7 @@
         "film": "🎬 'Casino Royale' (Martin Campbell)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Penthouse Sky Villa",
             "bio": "I'm Xavier. My penthouse apartment sits on the top floor of Pinnacle Tower. It features a private glass-edge pool, 360-degree city views, and smart home controls for lights and security.",
             "greenFlags": [
               "✓ Amazing panoramic views of the city",
@@ -1354,6 +1998,34 @@
               "✗ Very expensive maintenance fees",
               "✗ Slightly sways during heavy windstorms",
               "✗ Feels separated from street life"
+            ]
+          },
+          {
+            "tag": "⚡ High-Altitude Living",
+            "bio": "Living 50 floors above the metropolis offers breathtaking sunsets and serene quietness above urban traffic. Automated climate controls and minimalist floor-to-ceiling glass define the space.",
+            "greenFlags": [
+              "✓ Unmatched skyline views",
+              "✓ Quiet elevated retreat",
+              "✓ Cutting-edge automation"
+            ],
+            "redFlags": [
+              "✗ High wind noise during winter storms",
+              "✗ Elevator delays during rush hour",
+              "✗ High energy consumption"
+            ]
+          },
+          {
+            "tag": "💭 Modern Luxury",
+            "bio": "I view architecture as elevated sanctuary. Having a peaceful refuge high above the bustle allows me to recharge, host intimate gatherings, and maintain strategic focus.",
+            "greenFlags": [
+              "✓ Refined hosting environment",
+              "✓ Peaceful personal sanctuary",
+              "✓ High aesthetic appreciation"
+            ],
+            "redFlags": [
+              "✗ Detached from neighborhood street vibe",
+              "✗ Intimidating high-tech interfaces",
+              "✗ High financial maintenance demands"
             ]
           }
         ],
@@ -1387,7 +2059,7 @@
         "film": "🎬 'Iron Lady' (Phyllida Lloyd)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Executive Leadership",
             "bio": "I'm Helena, 32. I'm a business manager focused on long-term strategy, staying calm under pressure, and supporting my team. I treat mistakes as useful lessons to help us improve next time.",
             "greenFlags": [
               "✓ Inspires high motivation and ambition",
@@ -1398,6 +2070,20 @@
               "✗ High standards can feel intimidating",
               "✗ Works late hours regularly",
               "✗ Impatient with slow progress"
+            ]
+          },
+          {
+            "tag": "⚡ Executive Operations",
+            "bio": "I lead cross-functional teams through complex corporate turnarounds. My management style combines empathetic listening with rigorous performance accountability.",
+            "greenFlags": [
+              "✓ Empathetic yet accountable",
+              "✓ Strong crisis navigation",
+              "✓ Mentors rising talent"
+            ],
+            "redFlags": [
+              "✗ Expects prompt responses to emails",
+              "✗ High-intensity calendar schedule",
+              "✗ Hard time switching off work mode"
             ]
           }
         ],
@@ -1431,7 +2117,7 @@
         "film": "🎬 'Blow-Up' (Michelangelo Antonioni)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Analog Photography",
             "bio": "I'm Felix. I shoot analog photos with a 35mm film camera. You only get 36 shots per roll and cannot check the photo immediately, so you have to be patient and focus on lighting and composition before developing negatives in the darkroom.",
             "greenFlags": [
               "✓ Encourages focus and patience",
@@ -1442,6 +2128,34 @@
               "✗ Expensive film rolls and chemicals",
               "✗ Accidental light leaks can ruin photos",
               "✗ No instant preview"
+            ]
+          },
+          {
+            "tag": "⚡ Darkroom Craft",
+            "bio": "I convert my bathroom into a makeshift darkroom on Sunday afternoons. Mixing developer chemicals and watching silver-halide images emerge on photographic paper under red light is pure magic.",
+            "greenFlags": [
+              "✓ Master of classic analog darkroom chemistry",
+              "✓ Tangible physical craftsmanship",
+              "✓ Deep artistic dedication"
+            ],
+            "redFlags": [
+              "✗ Chemical smell during darkroom sessions",
+              "✗ Bathroom unavailable for hours",
+              "✗ Dislikes digital smartphone snapshots"
+            ]
+          },
+          {
+            "tag": "💭 Visual Philosophy",
+            "bio": "In an era of disposable digital media where people take thousands of forgotten smartphone photos, analog film forces you to slow down, respect light, and cherish single moments.",
+            "greenFlags": [
+              "✓ Mindful approach to photography",
+              "✓ Artistic depth and intentionality",
+              "✓ Enjoys tangible physical memories"
+            ],
+            "redFlags": [
+              "✗ Preachy about digital camera shortcuts",
+              "✗ Refuses to take quick selfie photos",
+              "✗ Hoards rolls of expired film"
             ]
           }
         ],
@@ -1475,7 +2189,7 @@
         "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Parisian Lifestyle",
             "bio": "Bonjour! I'm Camille from Paris. In France, we value enjoying life through good food, art, and long discussions over dinner. I love exploring Parisian cafes, fresh pastries, and local markets.",
             "greenFlags": [
               "✓ Great knowledge of food and cheese",
@@ -1486,6 +2200,20 @@
               "✗ Very particular about fresh bread",
               "✗ Sighs if the coffee isn't hot enough",
               "✗ Always compares food to French cuisine"
+            ]
+          },
+          {
+            "tag": "⚡ Daily Parisian Rhythms",
+            "bio": "My morning starts with a fresh crispy baguette from the neighborhood boulangerie. On weekends, I browse contemporary art exhibits at the Palais de Tokyo before enjoying wine with friends.",
+            "greenFlags": [
+              "✓ Connoisseur of artisanal bakeries",
+              "✓ Passionate art commentator",
+              "✓ Cultured weekend itinerary"
+            ],
+            "redFlags": [
+              "✗ Refuses day-old bread under any condition",
+              "✗ Debates art theory for hours",
+              "✗ Critical of non-espresso coffee"
             ]
           }
         ],
@@ -1517,7 +2245,7 @@
         "film": "🎬 'City of God' (Fernando Meirelles)",
         "pages": [
           {
-            "tag": "🖼️ Profile",
+            "tag": "🖼️ Rio Spirit",
             "bio": "Olá! I'm Leandro from Rio de Janeiro. Brazil is a vibrant country rich in music, beach sports, and outdoor gatherings. From bossa nova melodies to lively weekend barbecues, community and music are at the heart of daily life.",
             "greenFlags": [
               "✓ Warm and welcoming personality",
@@ -1528,6 +2256,34 @@
               "✗ Flexible idea of arrival times",
               "✗ Very loud social gatherings",
               "✗ Plays music late into the night"
+            ]
+          },
+          {
+            "tag": "⚡ Carioca Life",
+            "bio": "I spend weekends playing footvolley on Ipanema beach, strumming samba chords on my nylon-string guitar, and preparing slow-cooked feijoada for big gatherings of family and friends.",
+            "greenFlags": [
+              "✓ Athletic beach lifestyle",
+              "✓ Musical bossa nova talent",
+              "✓ Master of slow-cooked Brazilian feast"
+            ],
+            "redFlags": [
+              "✗ Sand everywhere in the apartment",
+              "✗ Operates on relaxed 'Carioca time'",
+              "✗ Jam sessions extend past 1 AM"
+            ]
+          },
+          {
+            "tag": "💭 Musical Connections",
+            "bio": "Music in Brazil isn't just entertainment; it's our collective language for processing joy and saudade. Gathering people around rhythm and good food creates lifelong bonds.",
+            "greenFlags": [
+              "✓ Expressive emotional depth",
+              "✓ Unifies people through music",
+              "✓ Welcoming heart"
+            ],
+            "redFlags": [
+              "✗ Cannot stand quiet solitary silence for long",
+              "✗ Spontaneous samba circles anywhere",
+              "✗ Invites entire neighborhood to dinner"
             ]
           }
         ],
@@ -1543,7 +2299,6 @@
   }
 };
 
-    // Legacy dilemmas deck for quick general rounds
     const GENERAL_DILEMMAS = [
         {
             type: 'dilemma',
