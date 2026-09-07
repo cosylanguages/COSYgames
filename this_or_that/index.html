@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This or That? (Swipe Profiles & Preferences): COSYlanguages</title>
+    <link rel="icon" href="../images/logos/cosylanguages.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../shared/css/tokens.css">
+    <link rel="stylesheet" href="../shared/css/games.css">
+    <link rel="stylesheet" href="../shared/css/nav.css">
+    <style>
+      #go-body {
+        padding-top: 1rem;
+      }
+      /* Dedicated Swipe Deck & Card CSS */
+      .swipe-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 520px;
+        margin: 0 auto;
+        position: relative;
+        touch-action: pan-y;
+      }
+      .card-stack {
+        position: relative;
+        width: 100%;
+        min-height: 360px;
+      }
+      .swipe-card {
+        position: relative;
+        width: 100%;
+        min-height: 360px;
+        background: var(--warm-white, #ffffff);
+        border: 2px solid var(--sage-pale, #e8f0e9);
+        border-radius: 20px;
+        padding: 1.25rem;
+        box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        user-select: none;
+        cursor: grab;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+        will-change: transform, opacity;
+      }
+      .swipe-card:active {
+        cursor: grabbing;
+      }
+      .swipe-card.dragging {
+        transition: none;
+      }
+      .badge-indicator {
+        position: absolute;
+        top: 20px;
+        padding: 6px 16px;
+        border-radius: 12px;
+        font-weight: 800;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.15s ease;
+        z-index: 10;
+      }
+      .badge-like {
+        right: 20px;
+        border: 3px solid #10b981;
+        color: #10b981;
+        transform: rotate(12deg);
+      }
+      .badge-pass {
+        left: 20px;
+        border: 3px solid #ef4444;
+        color: #ef4444;
+        transform: rotate(-12deg);
+      }
+      .badge-this {
+        left: 20px;
+        border: 3px solid #3b82f6;
+        color: #3b82f6;
+        transform: rotate(-8deg);
+      }
+      .badge-that {
+        right: 20px;
+        border: 3px solid #8b5cf6;
+        color: #8b5cf6;
+        transform: rotate(8deg);
+      }
+      .card-header-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        background: var(--sage-pale, #e8f0e9);
+        color: var(--sage-dark, #375742);
+        align-self: flex-start;
+      }
+      .card-avatar {
+        font-size: 2.75rem;
+        text-align: center;
+        margin: 0.25rem 0;
+      }
+      .card-title {
+        font-family: 'Fraunces', serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+        color: var(--ink, #2a2a2a);
+        margin-bottom: 0.25rem;
+      }
+      .card-subtitle {
+        text-align: center;
+        color: var(--ink-muted, #5c5957);
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+      }
+      .card-bio {
+        background: var(--cream-dark, #f5ede0);
+        padding: 0.85rem;
+        border-radius: 12px;
+        font-size: 0.92rem;
+        line-height: 1.45;
+        color: var(--ink, #2a2a2a);
+        margin-bottom: 0.75rem;
+      }
+      .card-details-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 0.75rem;
+      }
+      .detail-pill {
+        padding: 6px 10px;
+        border-radius: 8px;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+      .detail-pill.green {
+        background: rgba(16, 185, 129, 0.15);
+        color: #065f46;
+      }
+      .detail-pill.red {
+        background: rgba(239, 68, 68, 0.15);
+        color: #991b1b;
+      }
+      .prompt-box {
+        border-left: 4px solid var(--sage, #416b49);
+        padding: 8px 12px;
+        background: var(--sage-pale, #e8f0e9);
+        border-radius: 0 8px 8px 0;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--ink, #2a2a2a);
+      }
+
+      /* Dilemma "This vs That" Card layout */
+      .dilemma-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 1rem 0;
+      }
+      .dilemma-opt {
+        border: 2px solid var(--sage-pale, #e8f0e9);
+        border-radius: 14px;
+        padding: 1rem 0.75rem;
+        text-align: center;
+        background: var(--cream-dark, #f5ede0);
+      }
+      .dilemma-opt-emoji {
+        font-size: 2.5rem;
+        margin-bottom: 0.4rem;
+      }
+      .dilemma-opt-title {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+      }
+      .dilemma-opt-desc {
+        font-size: 0.8rem;
+        color: var(--ink-muted, #5c5957);
+      }
+
+      /* Control Buttons */
+      .swipe-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 1.25rem;
+        width: 100%;
+      }
+      .action-btn {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        font-size: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        transition: transform 0.15s ease, background 0.2s ease;
+      }
+      .action-btn:hover {
+        transform: scale(1.08);
+      }
+      .action-btn:active {
+        transform: scale(0.95);
+      }
+      .action-btn.btn-no {
+        background: #fee2e2;
+        color: #ef4444;
+      }
+      .action-btn.btn-yes {
+        background: #d1fae5;
+        color: #10b981;
+      }
+      .action-btn.btn-this {
+        background: #dbeafe;
+        color: #2563eb;
+      }
+      .action-btn.btn-that {
+        background: #ede9fe;
+        color: #7c3aed;
+      }
+    </style>
+</head>
+<body class="game-standalone">
+    <nav class="cg-nav">
+  <a href="../index.html" class="cg-nav-brand">🎮 COSY Games</a>
+  <div class="cg-nav-right">
+    <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSYlanguages ↗</a>
+    <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+  </div>
+</nav>
+
+    <div class="game-overlay open game-overlay-standalone" id="game-overlay">
+      <div class="go-topbar">
+        <button class="go-back" onclick="location.href='../index.html'">← Back to games</button>
+        <div>
+          <div class="go-title" id="go-title">This or That? 👈👉</div>
+          <div class="go-meta" id="go-meta">Tinder for Things & Dilemmas · Speaking & Preferences</div>
+        </div>
+        <div id="go-topbar-right"></div>
+      </div>
+      <div class="go-body" id="go-body">
+          <div id="game-loader" class="game-loader">Loading Tinder decks...</div>
+      </div>
+    </div>
+
+    <!-- Game Engine -->
+    <script src="../_engine/game_session.js"></script>
+    <script src="../_engine/scores.js"></script>
+    <script src="../_engine/loader.js"></script>
+
+    <!-- Game Logic -->
+    <script src="game.js"></script>
+
+    <div id="toast" class="toast-notification"></div>
+    <script src="../shared/js/nav.js"></script>
+</body>
+</html>

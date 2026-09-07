@@ -78,8 +78,13 @@
         </div>
 
         <!-- SPEAKING -->
-        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span>Speaking & Fluency <span>8 games</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span>Speaking & Fluency <span>9 games</span></div>
         <div class="game-grid fi" id="grid-speaking">
+          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('thisorthat')">
+            <div class="gc-top"><div class="gc-icon">👈👉</div><div class="gc-name">This or That?</div></div>
+            <div class="gc-desc">Tinder-style profile swiping & preference dilemmas. Swipe right on your choices and defend your opinion.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">A1–C2</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('thisorthat')">▶ Play</button></div>
+          </div>
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('fluency')">
             <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name">Fluency Flow</div></div>
             <div class="gc-desc">Spin for a random topic and speak for 1–5 minutes without stopping. Flow, not perfection.</div>
@@ -254,6 +259,7 @@
           questions: 'hundred_questions/index.html',
           storytelling: 'storytelling/index.html',
           scenematch: 'scene_match/index.html',
+          thisorthat: 'this_or_that/index.html',
           cosyworld: 'https://cosylanguages.github.io/COSYworld/'
         };
 

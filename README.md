@@ -25,6 +25,7 @@ Standalone interactive language games repository for the **COSYlanguages** ecosy
 - 🎰 **Lucky Numbers** (`lucky_numbers/`): Number and counting practice drills.
 - 🔍 **Object Quest** (`object_quest/`): Object searching and spatial vocabulary game.
 - ⚖️ **Opinion Arena** (`opinion_arena/`): Expressing opinions and debate phrase games.
+- 👈👉 **This or That** (`this_or_that/`): Tinder-style profile swiping & preference dilemma debate game.
 - 🔗 **Story Chain** (`story_chain/`): Sequential storytelling card game.
 - 📚 **Storytelling** (`storytelling/`): Narrative building and creative writing prompt engine.
 - ♀️♂️ **What Gender Is It?** (`what_gender_is_it/`): Noun gender identification game for gendered languages.
