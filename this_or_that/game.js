@@ -33,7 +33,8 @@
           "#BlackHair",
           "#RedSweater"
         ],
-        "anthem": "🎵 'Simple Song' - Basic Pop",
+        "anthem": "🎵 'Shake It Off' by Taylor Swift",
+        "film": "🎬 'Paddington 2' (Paul King)",
         "pages": [
           {
             "tag": "🖼️ Profile",
@@ -74,7 +75,8 @@
           "#Beard",
           "#Glasses"
         ],
-        "anthem": "🎵 'Happy Days' - Upbeat Acoustic",
+        "anthem": "🎵 'Happy' by Pharrell Williams",
+        "film": "🎬 'Finding Nemo' (Pixar)",
         "pages": [
           {
             "tag": "🖼️ Profile",
@@ -105,8 +107,8 @@
         "type": "profile",
         "level": "A0-A1",
         "category": "Professions 💼",
-        "title": "Baker (Chef John)",
-        "age": "30 yrs exp",
+        "title": "Chef John",
+        "age": "30",
         "location": "📍 0.5 miles away • Sunrise Bakery",
         "verified": true,
         "avatar": "👨‍🍳",
@@ -117,11 +119,12 @@
           "#Bakery",
           "#Cakes"
         ],
-        "anthem": "🎵 'Sweet Caroline' - Classic Oldie",
+        "anthem": "🎵 'Sweet Caroline' by Neil Diamond",
+        "film": "🎬 'Chef' (Jon Favreau)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I am a baker. I wake up at 4:00 AM every morning. I make fresh bread, warm croissants, and cakes. I work in a big kitchen. It smells like warm bread and sugar. I sell food to happy customers.",
+            "bio": "I am John, a baker. I wake up at 4:00 AM every morning. I make fresh bread, warm croissants, and cakes. I work in a big kitchen. It smells like warm bread and sugar. I sell food to happy customers.",
             "greenFlags": [
               "✓ Fresh bread every day",
               "✓ Warm sweet smell",
@@ -146,8 +149,8 @@
         "type": "profile",
         "level": "A0-A1",
         "category": "Professions 💼",
-        "title": "Doctor (Dr. Sarah)",
-        "age": "8 yrs exp",
+        "title": "Dr. Sarah",
+        "age": "31",
         "location": "📍 2 miles away • City Hospital",
         "verified": true,
         "avatar": "👩‍⚕️",
@@ -158,11 +161,12 @@
           "#WhiteCoat",
           "#Health"
         ],
-        "anthem": "🎵 'Healing Hands' - Calm Melodic",
+        "anthem": "🎵 'Fix You' by Coldplay",
+        "film": "🎬 'Patch Adams' (Tom Shadyac)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I am a doctor. I work in a hospital. I help sick people feel better and stay healthy. I wear a white coat. I talk to children and adults every day. I give good medicine.",
+            "bio": "I am Dr. Sarah. I work in a hospital. I help sick people feel better and stay healthy. I wear a white coat. I talk to children and adults every day. I give good medicine.",
             "greenFlags": [
               "✓ Helps sick people",
               "✓ Important job",
@@ -189,23 +193,24 @@
         "type": "profile",
         "level": "A0-A1",
         "category": "Properties 🏠",
-        "title": "Cozy Studio Flat",
-        "age": "Built 2020",
+        "title": "Leo",
+        "age": "24",
         "location": "📍 0.8 miles away • Sunny Avenue",
         "verified": true,
         "avatar": "🏙️",
         "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
-        "visualDescription": "Small studio flat with a big sunny window, yellow sofa, and small kitchen.",
+        "visualDescription": "Owner of a cozy studio flat with a big sunny window, yellow sofa, and small kitchen.",
         "interests": [
           "#StudioFlat",
           "#SunnyWindow",
           "#YellowSofa"
         ],
-        "anthem": "🎵 'Home Sweet Home' - Cozy Acoustic",
+        "anthem": "🎵 'Home' by Edward Sharpe",
+        "film": "🎬 '500 Days of Summer' (Marc Webb)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I am a small studio flat. I have one room, a yellow sofa, a small kitchen, and a clean bathroom. I am near the bus stop and the supermarket. I am cheap and cozy for one student.",
+            "bio": "Hi, I am Leo! I live in a cozy studio flat. It has one room, a yellow sofa, a small kitchen, and a clean bathroom. It is near the bus stop and the supermarket.",
             "greenFlags": [
               "✓ Easy to clean",
               "✓ Sunny big window",
@@ -224,48 +229,7 @@
           "I need a big garden!",
           "Great price!"
         ],
-        "prompt": "Name 3 things inside this studio flat using simple words."
-      },
-      {
-        "type": "profile",
-        "level": "A0-A1",
-        "category": "Properties 🏠",
-        "title": "Red Brick House",
-        "age": "Built 2015",
-        "location": "📍 4 miles away • Green Village",
-        "verified": true,
-        "avatar": "🏡",
-        "gradient": "linear-gradient(135deg, #15803d 0%, #4ade80 100%)",
-        "visualDescription": "Two-story red brick house with a green lawn and white fence.",
-        "interests": [
-          "#RedBrick",
-          "#GreenGarden",
-          "#QuietStreet"
-        ],
-        "anthem": "🎵 'Our House' - Happy Classic",
-        "pages": [
-          {
-            "tag": "🖼️ Profile",
-            "bio": "I am a red brick house. I have two bedrooms, one living room, a garage, and a green garden. I am on a quiet green street. My garden is good for dogs and children.",
-            "greenFlags": [
-              "✓ Nice green garden",
-              "✓ Garage for car",
-              "✓ Quiet place"
-            ],
-            "redFlags": [
-              "✗ Far from city center",
-              "✗ Cutting green grass",
-              "✗ Big heating bill"
-            ]
-          }
-        ],
-        "opener": "Hello! Do you like a green garden or a city flat?",
-        "icebreakers": [
-          "I love green gardens!",
-          "I prefer living in the city!",
-          "Nice red bricks!"
-        ],
-        "prompt": "Is this house in a city or a quiet village? How many bedrooms does it have?"
+        "prompt": "Name 3 things inside Leo's studio flat using simple words."
       }
     ],
     "character": [
@@ -273,7 +237,7 @@
         "type": "profile",
         "level": "A0-A1",
         "category": "Character Traits 🧠",
-        "title": "Kind & Friendly Friend",
+        "title": "Mia",
         "age": "20",
         "location": "📍 1 mile away • Neighborhood",
         "verified": true,
@@ -285,11 +249,12 @@
           "#KindHeart",
           "#GoodFriend"
         ],
-        "anthem": "🎵 'Count on Me' - Warm Pop",
+        "anthem": "🎵 'Count on Me' by Bruno Mars",
+        "film": "🎬 'Inside Out' (Pixar)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I am kind and polite. I say 'please' and 'thank you'. I like helping my friends and neighbors. I smile at people on the street. I remember birthdays and bring sweet cookies to my friends.",
+            "bio": "I am Mia. I am kind and polite. I say 'please' and 'thank you'. I like helping my friends and neighbors. I smile at people on the street.",
             "greenFlags": [
               "✓ Always polite",
               "✓ Helps carry bags",
@@ -308,7 +273,7 @@
           "Let us drink tea together!",
           "Have a great day!"
         ],
-        "prompt": "What does a kind person do? Describe 2 simple actions."
+        "prompt": "What does Mia do as a kind person? Describe 2 simple actions."
       }
     ],
     "hobbies": [
@@ -316,8 +281,8 @@
         "type": "profile",
         "level": "A0-A1",
         "category": "Hobbies 🎨",
-        "title": "Cycling in the Park",
-        "age": "All Ages",
+        "title": "Oliver",
+        "age": "23",
         "location": "📍 0.3 miles away • River Park",
         "verified": true,
         "avatar": "🚴",
@@ -328,11 +293,12 @@
           "#Park",
           "#Exercise"
         ],
-        "anthem": "🎵 'Bicycle Race' - Classic Rock",
+        "anthem": "🎵 'Bicycle Race' by Queen",
+        "film": "🎬 'E.T. the Extra-Terrestrial' (Steven Spielberg)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I ride a red bicycle in the park every weekend. It is easy, cheap, and fun! I feel the cool wind. I listen to music and eat delicious ice cream at the park cafe.",
+            "bio": "I am Oliver. I ride a red bicycle in the park every weekend. It is easy, cheap, and fun! I feel the cool wind. I listen to music and eat delicious ice cream.",
             "greenFlags": [
               "✓ Good exercise for legs",
               "✓ Fresh air outside",
@@ -351,7 +317,7 @@
           "No, but I want to learn!",
           "I prefer walking!"
         ],
-        "prompt": "Where do you like to ride a bicycle or walk? What do you see in the park?"
+        "prompt": "Where does Oliver like to ride his bicycle?"
       }
     ],
     "nationalities": [
@@ -359,19 +325,20 @@
         "type": "profile",
         "level": "A0-A1",
         "category": "Nationalities & Cultures 🌍",
-        "title": "Kenji (Japanese 🇯🇵)",
+        "title": "Kenji",
         "age": "24",
         "location": "📍 Tokyo, Japan • 🇯🇵 Japanese",
         "verified": true,
         "avatar": "🇯🇵",
         "gradient": "linear-gradient(135deg, #dc2626 0%, #f87171 100%)",
-        "visualDescription": "Young Japanese man with neat short dark hair, wearing a traditional summer yukata robe.",
+        "visualDescription": "Young Japanese man with neat short dark hair, wearing a traditional yukata.",
         "interests": [
           "#Japanese",
           "#Tokyo",
           "#Ramen"
         ],
-        "anthem": "🎵 'Sakura Dreams' - J-Pop Acoustic",
+        "anthem": "🎵 'Sukiyaki' by Kyu Sakamoto",
+        "film": "🎬 'Spirited Away' (Hayao Miyazaki)",
         "pages": [
           {
             "tag": "🖼️ Profile",
@@ -400,7 +367,7 @@
         "type": "profile",
         "level": "A0-A1",
         "category": "Nationalities & Cultures 🌍",
-        "title": "Sofia (Italian 🇮🇹)",
+        "title": "Sofia",
         "age": "23",
         "location": "📍 Rome, Italy • 🇮🇹 Italian",
         "verified": true,
@@ -412,7 +379,8 @@
           "#Rome",
           "#Pasta"
         ],
-        "anthem": "🎵 'O Sole Mio' - Classic Italian",
+        "anthem": "🎵 'Volare' by Domenico Modugno",
+        "film": "🎬 'La Dolce Vita' (Federico Fellini)",
         "pages": [
           {
             "tag": "🖼️ Profile",
@@ -445,23 +413,24 @@
         "type": "profile",
         "level": "A2",
         "category": "Physical Appearance 👁️",
-        "title": "Elena (Athletic & Wavy Auburn Hair)",
+        "title": "Elena",
         "age": "24",
         "location": "📍 2 miles away • Marina Bay",
         "verified": true,
         "avatar": "👩‍🦰",
         "gradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
-        "visualDescription": "Athletic woman with medium shoulder-length wavy auburn hair, hazel eyes, light freckles, wearing a navy blue striped shirt.",
+        "visualDescription": "Athletic woman with shoulder-length wavy auburn hair, hazel eyes, light freckles, wearing a navy blue striped shirt.",
         "interests": [
           "#WavyAuburnHair",
           "#HazelEyes",
           "#AthleticBuild"
         ],
-        "anthem": "🎵 'Ocean Waves' - Summer Vibe",
+        "anthem": "🎵 'Levitating' by Dua Lipa",
+        "film": "🎬 'La La Land' (Damien Chazelle)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I am Elena, 24 years old. I am medium height and athletic because I exercise every day. I have wavy auburn hair and hazel eyes with cute freckles. I love casual nautical clothes like navy striped shirts and leather sandals because they are comfortable for beach walks in summer.",
+            "bio": "I am Elena, 24 years old. I am medium height and athletic because I exercise every day. I have wavy auburn hair and hazel eyes with cute freckles. I love casual nautical clothes like navy striped shirts.",
             "greenFlags": [
               "✓ Warm hazel eyes in sunlight",
               "✓ Cute natural freckles",
@@ -486,23 +455,24 @@
         "type": "profile",
         "level": "A2",
         "category": "Physical Appearance 👁️",
-        "title": "Liam (Tall & Tailored Suit Style)",
+        "title": "Liam",
         "age": "27",
         "location": "📍 1.5 miles away • Financial District",
         "verified": true,
         "avatar": "👨‍💼",
         "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
-        "visualDescription": "Tall 6'2\" man with neat dark blonde side-part hair and sharp jawline, wearing a tailored navy blazer and clean white shirt.",
+        "visualDescription": "Tall 6'2\" man with neat dark blonde side-part hair and sharp jawline, wearing a tailored navy blazer.",
         "interests": [
           "#Tall6ft2",
           "#SmartBlazer",
           "#SharpLook"
         ],
-        "anthem": "🎵 'Smooth Operator' - Jazzy Pop",
+        "anthem": "🎵 'Smooth Operator' by Sade",
+        "film": "🎬 'The Devil Wears Prada' (David Frankel)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I am Liam, 27 years old. I am tall (6'2\") with a slim frame and broad shoulders. I have short dark blonde hair and a clean-shaven face. I prefer smart-casual elegance because I work in an office. I usually wear navy blazers, white shirts, a leather watch, and brown shoes.",
+            "bio": "I am Liam, 27 years old. I am tall (6'2\") with a slim frame and broad shoulders. I have short dark blonde hair and a clean-shaven face. I prefer smart-casual elegance because I work in an office.",
             "greenFlags": [
               "✓ Polished smart look",
               "✓ Great posture and height",
@@ -529,8 +499,8 @@
         "type": "profile",
         "level": "A2",
         "category": "Professions 💼",
-        "title": "Graphic Designer (Nina)",
-        "age": "4 yrs exp",
+        "title": "Nina",
+        "age": "26",
         "location": "📍 1 mile away • Creative Loft",
         "verified": true,
         "avatar": "👩‍🎨",
@@ -541,11 +511,12 @@
           "#ColorPalette",
           "#LogosAndPosters"
         ],
-        "anthem": "🎵 'Colors of the Wind' - Pop Cover",
+        "anthem": "🎵 'Colors' by Halsey",
+        "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I am Nina, a graphic designer! I create colorful logos, website banners, and advertisements for local companies because I love art. I work on my laptop and drawing tablet. I choose beautiful fonts, combine matching colors, and draw digital illustrations.",
+            "bio": "I am Nina, a graphic designer! I create colorful logos, website banners, and advertisements for local companies because I love art. I work on my laptop and drawing tablet.",
             "greenFlags": [
               "✓ Highly creative and fun work",
               "✓ Flexible work from home or cafes",
@@ -565,47 +536,6 @@
           "Green and earthy brown!"
         ],
         "prompt": "What tools does Nina use for her work? Why does she enjoy her job?"
-      },
-      {
-        "type": "profile",
-        "level": "A2",
-        "category": "Professions 💼",
-        "title": "Fitness Trainer (Alex)",
-        "age": "6 yrs exp",
-        "location": "📍 0.5 miles away • Metro Gym",
-        "verified": true,
-        "avatar": "🏋️‍♂️",
-        "gradient": "linear-gradient(135deg, #16a34a 0%, #22c55e 100%)",
-        "visualDescription": "Fit trainer wearing a black gym shirt and stopwatch, guiding a client in the gym.",
-        "interests": [
-          "#PersonalTrainer",
-          "#WorkoutRoutine",
-          "#HealthyNutrition"
-        ],
-        "anthem": "🎵 'Eye of the Tiger' - Gym Anthem",
-        "pages": [
-          {
-            "tag": "🖼️ Profile",
-            "bio": "I am Alex, a fitness trainer. I design exercise programs and teach people how to stay strong and healthy every day. I help clients with gym weights, running workouts, and meal plans so they can achieve their physical goals.",
-            "greenFlags": [
-              "✓ Active and energetic lifestyle",
-              "✓ Helping people achieve health goals",
-              "✓ Fun supportive gym environment"
-            ],
-            "redFlags": [
-              "✗ Early 5:30 AM starts",
-              "✗ Sore muscles after training",
-              "✗ Loud music in gym"
-            ]
-          }
-        ],
-        "opener": "Hey! Do you prefer morning gym sessions or evening relaxing walks?",
-        "icebreakers": [
-          "Morning gym sessions!",
-          "Evening relaxing walks!",
-          "Weekend sports!"
-        ],
-        "prompt": "What does Alex do to help his clients? Would you like a personal trainer?"
       }
     ],
     "properties": [
@@ -613,23 +543,24 @@
         "type": "profile",
         "level": "A2",
         "category": "Properties 🏠",
-        "title": "Modern Loft Apartment",
-        "age": "Built 2021",
+        "title": "Lucas",
+        "age": "28",
         "location": "📍 1.2 miles away • Arts District",
         "verified": true,
         "avatar": "🏢",
         "gradient": "linear-gradient(135deg, #4f46e5 0%, #6366f1 100%)",
-        "visualDescription": "Industrial loft with high concrete ceilings, large glass windows, leather couch, and kitchen island.",
+        "visualDescription": "Owner of an industrial loft with high concrete ceilings, large glass windows, and kitchen island.",
         "interests": [
           "#HighCeilings",
           "#IndustrialLoft",
           "#CityView"
         ],
-        "anthem": "🎵 'City Lights' - Chill Beats",
+        "anthem": "🎵 'Midnight City' by M83",
+        "film": "🎬 'Inception' (Christopher Nolan)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "This is a spacious one-bedroom industrial loft. It has high ceilings, large glass windows, and a modern open kitchen island. It is located in the Arts District near art galleries and coffee shops, so you can walk everywhere easily.",
+            "bio": "I am Lucas! My apartment is a spacious one-bedroom industrial loft with high ceilings and large glass windows. It is located in the Arts District near art galleries.",
             "greenFlags": [
               "✓ Great city skyline views",
               "✓ Lots of natural sunlight",
@@ -648,48 +579,7 @@
           "Too noisy for me!",
           "Awesome big windows!"
         ],
-        "prompt": "Describe the main features of this loft apartment and its location."
-      },
-      {
-        "type": "profile",
-        "level": "A2",
-        "category": "Properties 🏠",
-        "title": "Suburban Cottage with Garden",
-        "age": "Built 2018",
-        "location": "📍 5 miles away • Oak Hill",
-        "verified": true,
-        "avatar": "🏡",
-        "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
-        "visualDescription": "Cozy stone cottage with flower boxes, wooden porch swing, lawn, and chimney.",
-        "interests": [
-          "#FlowerGarden",
-          "#PorchSwing",
-          "#QuietSuburbs"
-        ],
-        "anthem": "🎵 'Country Roads' - Acoustic Cover",
-        "pages": [
-          {
-            "tag": "🖼️ Profile",
-            "bio": "This is a charming three-bedroom suburban cottage. It features a cozy stone fireplace, a sunny porch, and a flower garden. It is in a peaceful neighborhood near primary schools and bicycle paths, which makes it perfect for families.",
-            "greenFlags": [
-              "✓ Spacious private backyard",
-              "✓ Cozy stone fireplace",
-              "✓ Safe quiet neighborhood"
-            ],
-            "redFlags": [
-              "✗ Requires regular garden care",
-              "✗ Commute to city takes 35 minutes",
-              "✗ Roof maintenance needed"
-            ]
-          }
-        ],
-        "opener": "Hello! Would you like to sit on the porch swing and enjoy the garden?",
-        "icebreakers": [
-          "Sounds peaceful!",
-          "I prefer apartment living",
-          "I love stone fireplaces!"
-        ],
-        "prompt": "Compare this suburban cottage with the city loft apartment using A2 vocabulary."
+        "prompt": "Describe the main features of Lucas's loft apartment."
       }
     ],
     "character": [
@@ -697,7 +587,7 @@
         "type": "profile",
         "level": "A2",
         "category": "Character Traits 🧠",
-        "title": "Organized & Reliable (Sophia)",
+        "title": "Sophia",
         "age": "26",
         "location": "📍 2 miles away • West End",
         "verified": true,
@@ -709,11 +599,12 @@
           "#Planner",
           "#ReliableFriend"
         ],
-        "anthem": "🎵 'Clockwork' - Smooth Rhythms",
+        "anthem": "🎵 'Unstoppable' by Sia",
+        "film": "🎬 'The Social Network' (David Fincher)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I am Sophia. I am very organized, punctual, and reliable. I never arrive late because I respect time. I use a daily planner to write my tasks, prepare my clothes the night before, and keep my desk clean.",
+            "bio": "I am Sophia. I am very organized, punctual, and reliable. I never arrive late because I respect time. I use a daily planner to write my tasks and prepare clothes the night before.",
             "greenFlags": [
               "✓ Never cancels plans last minute",
               "✓ Dependable when friends need help",
@@ -732,7 +623,7 @@
           "I am spontaneous!",
           "A bit of both!"
         ],
-        "prompt": "Why is reliability an important trait in friendship? Give an example."
+        "prompt": "Why is reliability an important trait in friendship according to Sophia?"
       }
     ],
     "hobbies": [
@@ -740,8 +631,8 @@
         "type": "profile",
         "level": "A2",
         "category": "Hobbies 🎨",
-        "title": "Sourdough Bread Baking",
-        "age": "Popular Craft",
+        "title": "Hannah",
+        "age": "25",
         "location": "📍 Kitchen Bench",
         "verified": true,
         "avatar": "🍞",
@@ -752,11 +643,12 @@
           "#CrispyCrust",
           "#Homemade"
         ],
-        "anthem": "🎵 'Bread and Butter' - Upbeat Oldie",
+        "anthem": "🎵 'Banana Pancakes' by Jack Johnson",
+        "film": "🎬 'Julie & Julia' (Nora Ephron)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I love baking artisanal sourdough bread at home. I mix simple flour, water, and starter, then bake it in a hot oven. My kitchen smells wonderful when the bread bakes. The warm crust crackles when it cools down, and it tastes delicious with butter!",
+            "bio": "I am Hannah and I love baking artisanal sourdough bread at home. I mix simple flour, water, and starter, then bake it in a hot oven. My kitchen smells wonderful when bread bakes.",
             "greenFlags": [
               "✓ Fresh warm delicious bread",
               "✓ Relaxing cooking hobby",
@@ -775,7 +667,7 @@
           "Olive oil and balsamic!",
           "Garlic butter!"
         ],
-        "prompt": "Explain the basic steps of sourdough baking using simple present tenses."
+        "prompt": "Explain the basic steps of Hannah's sourdough baking hobby."
       }
     ],
     "nationalities": [
@@ -783,7 +675,7 @@
         "type": "profile",
         "level": "A2",
         "category": "Nationalities & Cultures 🌍",
-        "title": "Mateo (Mexican 🇲🇽)",
+        "title": "Mateo",
         "age": "26",
         "location": "📍 Oaxaca, Mexico • 🇲🇽 Spanish",
         "verified": true,
@@ -795,11 +687,12 @@
           "#Oaxaca",
           "#Tacos"
         ],
-        "anthem": "🎵 'Cielito Lindo' - Mariachi Vibe",
+        "anthem": "🎵 'Cielito Lindo' by Mariachi Vargas",
+        "film": "🎬 'Coco' (Pixar)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my Mexican nationality and rich cultural heritage. We celebrate Day of the Dead with yellow marigold flowers, and we eat spicy mole sauce with fresh corn tacos.",
+            "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my Mexican nationality and rich cultural heritage. We celebrate Day of the Dead with yellow marigold flowers and fresh corn tacos.",
             "greenFlags": [
               "✓ Teaches salsa dancing on weekends",
               "✓ Prepares homemade guacamole",
@@ -824,7 +717,7 @@
         "type": "profile",
         "level": "A2",
         "category": "Nationalities & Cultures 🌍",
-        "title": "Freja (Danish 🇩🇰)",
+        "title": "Freja",
         "age": "25",
         "location": "📍 Copenhagen, Denmark • 🇩🇰 Danish",
         "verified": true,
@@ -836,11 +729,12 @@
           "#Copenhagen",
           "#Hygge"
         ],
-        "anthem": "🎵 'Nordic Lights' - Cozy Acoustic",
+        "anthem": "🎵 '7 Years' by Lukas Graham",
+        "film": "🎬 'Another Round' (Thomas Vinterberg)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "Hej! My name is Freja. I am Danish and I live in Copenhagen, Denmark. Danish culture values comfort and 'hygge'. We ride bicycles everywhere in rain or sunny weather. We enjoy open rye bread sandwiches and candlelit evenings.",
+            "bio": "Hej! My name is Freja. I am Danish and I live in Copenhagen, Denmark. Danish culture values comfort and 'hygge'. We ride bicycles everywhere in rain or sunny weather.",
             "greenFlags": [
               "✓ Creates cozy candlelit dinners",
               "✓ Eco-friendly bike commuter",
@@ -869,23 +763,24 @@
         "type": "profile",
         "level": "B1",
         "category": "Physical Appearance 👁️",
-        "title": "Maya (Boho-Chic & Shoulder-Length Curls)",
+        "title": "Maya",
         "age": "26",
         "location": "📍 3 miles away • Cultural District",
         "verified": true,
         "avatar": "👩‍🦱",
         "gradient": "linear-gradient(135deg, #7c2d12 0%, #d97706 100%)",
-        "visualDescription": "Artistic woman with voluminous dark brown curly hair and expressive dark eyes, wearing an embroidered bohemian kimono and silver rings.",
+        "visualDescription": "Artistic woman with voluminous dark brown curly hair and expressive dark eyes, wearing an embroidered bohemian kimono.",
         "interests": [
           "#BohoStyle",
           "#VoluminousCurls",
           "#LayeredAccessories"
         ],
-        "anthem": "🎵 'Gypsy Heart' - Indie Folk",
+        "anthem": "🎵 'Dog Days Are Over' by Florence + The Machine",
+        "film": "🎬 'Frida' (Julie Taymor)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Maya, a 26-year-old artist who is recognized by her expressive dark eyes, sun-kissed complexion, and voluminous shoulder-length dark brown curls. I express my artistic identity through bohemian fashion, which includes flowing embroidered cardigans, vintage silver jewelry, and suede boots.",
+            "bio": "I'm Maya, a 26-year-old artist recognized by her expressive dark eyes, sun-kissed complexion, and voluminous shoulder-length dark brown curls. I express my artistic identity through bohemian fashion.",
             "greenFlags": [
               "✓ Expressive facial features that reflect emotion",
               "✓ Unique personal style that stands out",
@@ -910,23 +805,24 @@
         "type": "profile",
         "level": "B1",
         "category": "Physical Appearance 👁️",
-        "title": "Julian (Broad-Shouldered & Rugged Style)",
+        "title": "Julian",
         "age": "29",
         "location": "📍 2.5 miles away • Timber Ridge",
         "verified": true,
         "avatar": "🧔",
         "gradient": "linear-gradient(135deg, #15803d 0%, #166534 100%)",
-        "visualDescription": "Broad-shouldered man with a trimmed dark beard and short undercut hair, wearing a heavy flannel plaid shirt and durable leather boots.",
+        "visualDescription": "Broad-shouldered man with a trimmed dark beard and short undercut hair, wearing a heavy flannel plaid shirt.",
         "interests": [
           "#BroadShouldered",
           "#TrimmedBeard",
           "#FlannelShirt"
         ],
-        "anthem": "🎵 'Wilderness' - Folk Rock",
+        "anthem": "🎵 'Take Me Home, Country Roads' by John Denver",
+        "film": "🎬 'Into the Wild' (Sean Penn)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Julian, a 29-year-old outdoor enthusiast who stands 6'1\" tall with a broad-shouldered frame, a neatly trimmed beard, and hazel eyes. My wardrobe centers around functional outdoor aesthetic, featuring heavy flannel plaid shirts, dark selvedge denim, and sturdy leather hiking boots.",
+            "bio": "I'm Julian, a 29-year-old outdoor enthusiast who stands 6'1\" tall with a broad-shouldered frame, a neatly trimmed beard, and hazel eyes. My wardrobe centers around functional outdoor aesthetic.",
             "greenFlags": [
               "✓ Strong broad-shouldered posture",
               "✓ Meticulously groomed beard",
@@ -953,8 +849,8 @@
         "type": "profile",
         "level": "B1",
         "category": "Professions 💼",
-        "title": "Software Engineer (Marcus)",
-        "age": "5 yrs exp",
+        "title": "Marcus",
+        "age": "28",
         "location": "📍 1.5 miles away • Tech Hub",
         "verified": true,
         "avatar": "👨‍💻",
@@ -965,11 +861,12 @@
           "#DualMonitors",
           "#ProblemSolving"
         ],
-        "anthem": "🎵 'Digital Love' - Electronic Synth",
+        "anthem": "🎵 'Digital Love' by Daft Punk",
+        "film": "🎬 'The Matrix' (The Wachowskis)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Marcus, a Full-Stack Software Engineer who develops web applications and cloud algorithms that transform complex data into user-friendly software. My main responsibilities include writing clean code, reviewing pull requests, solving logical bugs, and collaborating with designers remotely.",
+            "bio": "I'm Marcus, a Full-Stack Software Engineer who develops web applications and cloud algorithms that transform complex data into user-friendly software. My main responsibilities include writing clean code and reviewing pull requests.",
             "greenFlags": [
               "✓ High remote work flexibility",
               "✓ Strong analytical problem solving",
@@ -988,14 +885,14 @@
           "Intimidated by code!",
           "I write code too!"
         ],
-        "prompt": "Explain the responsibilities of a software engineer using intermediate career vocabulary."
+        "prompt": "Explain the responsibilities of Marcus using intermediate career vocabulary."
       },
       {
         "type": "profile",
         "level": "B1",
         "category": "Professions 💼",
-        "title": "Environmental Journalist (Clara)",
-        "age": "6 yrs exp",
+        "title": "Clara",
+        "age": "29",
         "location": "📍 2 miles away • Press Building",
         "verified": true,
         "avatar": "👩‍💻",
@@ -1006,11 +903,12 @@
           "#Investigative",
           "#Storytelling"
         ],
-        "anthem": "🎵 'Blowin' in the Wind' - Folk",
+        "anthem": "🎵 'Blowin' in the Wind' by Bob Dylan",
+        "film": "🎬 'Spotlight' (Tom McCarthy)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Clara, an investigative environmental journalist who investigates climate change solutions and reports on clean energy initiatives across the globe. My work involves interviewing climate scientists, conducting field research, verifying facts, and publishing news features that inform the public.",
+            "bio": "I'm Clara, an investigative environmental journalist who investigates climate change solutions and reports on clean energy initiatives across the globe. My work involves interviewing scientists and conducting field research.",
             "greenFlags": [
               "✓ Meaningful contribution to environmental awareness",
               "✓ Opportunities for fieldwork travel",
@@ -1029,7 +927,7 @@
           "Wildlife conservation!",
           "Reducing plastic waste!"
         ],
-        "prompt": "What key skills and ethical duties are necessary for an environmental journalist?"
+        "prompt": "What key skills and ethical duties are necessary for Clara as an environmental journalist?"
       }
     ],
     "properties": [
@@ -1037,8 +935,8 @@
         "type": "profile",
         "level": "B1",
         "category": "Properties 🏠",
-        "title": "Converted Paper Mill Loft",
-        "age": "Renovated 2022",
+        "title": "Arthur",
+        "age": "31",
         "location": "📍 1 mile away • Riverfront District",
         "verified": true,
         "avatar": "🏭",
@@ -1049,11 +947,12 @@
           "#RiverfrontView",
           "#TimberBeams"
         ],
-        "anthem": "🎵 'Riverside' - Ambient Indie",
+        "anthem": "🎵 'Riverside' by Agnes Obel",
+        "film": "🎬 'The Grand Budapest Hotel' (Wes Anderson)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "This 2-bedroom loft is located inside a converted 19th-century paper mill that successfully combines original exposed brickwork and timber beams with contemporary interior design. Residents enjoy a private balcony overlooking the riverfront promenade, integrated smart lighting, an underground garage, and exclusive fitness center access.",
+            "bio": "I'm Arthur. My 2-bedroom loft is located inside a converted 19th-century paper mill that successfully combines original exposed brickwork and timber beams with contemporary interior design.",
             "greenFlags": [
               "✓ Authentic architectural character and heritage",
               "✓ Breathtaking riverfront views",
@@ -1072,48 +971,7 @@
           "Brand-new sleek modern!",
           "A cozy country home!"
         ],
-        "prompt": "Evaluate the architectural contrast between historic industrial brickwork and modern fixtures."
-      },
-      {
-        "type": "profile",
-        "level": "B1",
-        "category": "Properties 🏠",
-        "title": "Eco-Friendly Solar Villa",
-        "age": "Built 2023",
-        "location": "📍 6 miles away • Sun Valley",
-        "verified": true,
-        "avatar": "☀️",
-        "gradient": "linear-gradient(135deg, #65a30d 0%, #84cc16 100%)",
-        "visualDescription": "Sustainable two-story villa with rooftop solar panels, rainwater harvesting, vertical plant wall, and timber deck.",
-        "interests": [
-          "#ZeroEmission",
-          "#SolarPower",
-          "#RainwaterHarvest"
-        ],
-        "anthem": "🎵 'Here Comes the Sun' - Acoustic",
-        "pages": [
-          {
-            "tag": "🖼️ Profile",
-            "bio": "This innovative 3-bedroom zero-emission villa is powered by rooftop solar panels and relies on triple-pane insulation and rainwater collection to minimize environmental impact. Key features include an organic vegetable garden patch, an electric vehicle charging dock, an indoor vertical plant wall, and negligible energy bills.",
-            "greenFlags": [
-              "✓ Exceptionally low monthly utility costs",
-              "✓ Sustainable ecological carbon footprint",
-              "✓ EV charging infrastructure included"
-            ],
-            "redFlags": [
-              "✗ Significant initial capital investment",
-              "✗ Solar battery system maintenance",
-              "✗ Moderate distance from downtown"
-            ]
-          }
-        ],
-        "opener": "Greetings! How important is sustainable eco-friendly engineering when selecting a residence?",
-        "icebreakers": [
-          "Crucial priority for me!",
-          "Nice bonus but location first!",
-          "Interested in solar tech!"
-        ],
-        "prompt": "Describe the sustainable technologies integrated into this eco-friendly villa."
+        "prompt": "Evaluate the architectural contrast in Arthur's loft property."
       }
     ],
     "character": [
@@ -1121,7 +979,7 @@
         "type": "profile",
         "level": "B1",
         "category": "Character Traits 🧠",
-        "title": "Empathetic & Intuitive (Daniel)",
+        "title": "Daniel",
         "age": "28",
         "location": "📍 1.8 miles away • Maple Heights",
         "verified": true,
@@ -1133,11 +991,12 @@
           "#ActiveListener",
           "#Empathetic"
         ],
-        "anthem": "🎵 'Lean on Me' - Soul Classic",
+        "anthem": "🎵 'Lean on Me' by Bill Withers",
+        "film": "🎬 'Good Will Hunting' (Gus Van Sant)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Daniel, a 28-year-old counselor who values high emotional intelligence, active listening, and sincere empathy in personal relationships. Friends frequently seek my advice when they encounter difficult challenges because I offer non-judgmental support and honest feedback.",
+            "bio": "I'm Daniel, a 28-year-old counselor who values high emotional intelligence, active listening, and sincere empathy in personal relationships. Friends frequently seek my advice when they encounter difficult challenges.",
             "greenFlags": [
               "✓ Deeply supportive and trustworthy companion",
               "✓ Perceptive of unspoken emotions",
@@ -1156,7 +1015,7 @@
           "Emotional intuition!",
           "An equal balance of both!"
         ],
-        "prompt": "Explain how emotional intelligence helps resolve interpersonal conflicts between friends."
+        "prompt": "Explain how Daniel uses emotional intelligence to resolve interpersonal conflicts."
       }
     ],
     "hobbies": [
@@ -1164,8 +1023,8 @@
         "type": "profile",
         "level": "B1",
         "category": "Hobbies 🎨",
-        "title": "Bouldering & Rock Climbing",
-        "age": "Active Pursuit",
+        "title": "Ethan",
+        "age": "27",
         "location": "📍 Peak Climbing Gym",
         "verified": true,
         "avatar": "🧗‍♂️",
@@ -1176,11 +1035,12 @@
           "#ProblemSolving",
           "#FitnessAndFocus"
         ],
-        "anthem": "🎵 'Climb Every Mountain' - Rock Vibe",
+        "anthem": "🎵 'Eye of the Tiger' by Survivor",
+        "film": "🎬 'Free Solo' (Jimmy Chin & Elizabeth Chai Vasarhelyi)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "Bouldering is an engaging physical hobby where climbers solve vertical routes on climbing walls using chalked hands and core strength. This sport combines tactical problem solving similar to chess with full-body functional endurance, offering a rewarding sense of achievement.",
+            "bio": "I'm Ethan. Bouldering is my engaging physical hobby where climbers solve vertical routes on climbing walls using chalked hands and core strength. It combines tactical problem solving with endurance.",
             "greenFlags": [
               "✓ Develops core physical strength",
               "✓ Supportive social climbing community",
@@ -1199,7 +1059,7 @@
           "Terrified of heights! 😅",
           "Eager to try it out!"
         ],
-        "prompt": "Describe how rock climbing combines physical conditioning with mental focus."
+        "prompt": "Describe how rock climbing combines physical conditioning with mental focus for Ethan."
       }
     ],
     "nationalities": [
@@ -1207,7 +1067,7 @@
         "type": "profile",
         "level": "B1",
         "category": "Nationalities & Cultures 🌍",
-        "title": "Amara (Nigerian 🇳🇬)",
+        "title": "Amara",
         "age": "28",
         "location": "📍 Lagos, Nigeria • 🇳🇬 Igbo & English",
         "verified": true,
@@ -1219,11 +1079,12 @@
           "#Afrobeats",
           "#JollofRice"
         ],
-        "anthem": "🎵 'Lagos Heat' - Afrobeats Anthem",
+        "anthem": "🎵 'Last Last' by Burna Boy",
+        "film": "🎬 'The Wedding Party' (Kemi Adetiba)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "Kedu! I'm Amara, a proud Nigerian from Lagos. Nigeria is a multicultural nation with over 250 distinct ethnic groups, rich oral traditions, and energetic Afrobeats music. Our celebratory gatherings feature spicy smoky Jollof rice, fried plantains, and vibrant traditional clothing with elaborate Gele headwraps.",
+            "bio": "Kedu! I'm Amara, a proud Nigerian from Lagos. Nigeria is a multicultural nation with over 250 distinct ethnic groups, rich oral traditions, and energetic Afrobeats music. Our gatherings feature smoky Jollof rice and Gele headwraps.",
             "greenFlags": [
               "✓ Hosts festive dinner parties with Afrobeats playlists",
               "✓ Prepares authentic spicy Jollof rice",
@@ -1248,7 +1109,7 @@
         "type": "profile",
         "level": "B1",
         "category": "Nationalities & Cultures 🌍",
-        "title": "Aarav (Indian 🇮🇳)",
+        "title": "Aarav",
         "age": "27",
         "location": "📍 Jaipur, India • 🇮🇳 Hindi & English",
         "verified": true,
@@ -1260,11 +1121,12 @@
           "#Jaipur",
           "#MasalaChai"
         ],
-        "anthem": "🎵 'Raga Beats' - Fusion Sitar",
+        "anthem": "🎵 'Jai Ho' by A.R. Rahman",
+        "film": "🎬 '3 Idiots' (Rajkumar Hirani)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "Namaste! I'm Aarav from Jaipur, India. Indian nationality encompasses a pluralistic heritage, architectural wonders, and centuries of diverse regional customs. Our cultural ethos prioritizes 'Atithi Devo Bhava' (The Guest is God). I enjoy brewing authentic cardamom masala chai and preparing fragrant spiced biryani.",
+            "bio": "Namaste! I'm Aarav from Jaipur, India. Indian nationality encompasses a pluralistic heritage, architectural wonders, and centuries of diverse regional customs. Our ethos prioritizes 'Atithi Devo Bhava' (The Guest is God).",
             "greenFlags": [
               "✓ Generous hospitality for all guests",
               "✓ Expert knowledge of spice combinations",
@@ -1293,23 +1155,24 @@
         "type": "profile",
         "level": "B2",
         "category": "Physical Appearance 👁️",
-        "title": "Victoria (Statuesque Elegance & Platinum Bob)",
+        "title": "Victoria",
         "age": "29",
         "location": "📍 1 mile away • Metropolitan Plaza",
         "verified": true,
         "avatar": "👩‍🦳",
         "gradient": "linear-gradient(135deg, #0284c7 0%, #475569 100%)",
-        "visualDescription": "Statuesque 5'10\" woman with a razor-sharp platinum blonde bob, piercing ice-blue eyes, high cheekbones, wearing an asymmetrical black blazer.",
+        "visualDescription": "Statuesque 5'10\" woman with a razor-sharp platinum blonde bob, piercing ice-blue eyes, high cheekbones, wearing an asymmetrical blazer.",
         "interests": [
           "#StatuesqueElegance",
           "#PlatinumBlondeBob",
           "#HighCheekbones"
         ],
-        "anthem": "🎵 'Vogue' - Chic Fashion",
+        "anthem": "🎵 'Vogue' by Madonna",
+        "film": "🎬 'The Grand Budapest Hotel' (Wes Anderson)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Victoria, 29. My statuesque 5'10\" silhouette is defined by prominent high cheekbones, piercing ice-blue eyes, and a precision-cut platinum blonde bob. My sartorial philosophy embodies high-fashion minimalist tailoring, incorporating structured monochromatic blazers, sleek leather boots, and subtle gold accents.",
+            "bio": "I'm Victoria, 29. My statuesque 5'10\" silhouette is defined by prominent high cheekbones, piercing ice-blue eyes, and a precision-cut platinum blonde bob. My sartorial philosophy embodies high-fashion minimalist tailoring.",
             "greenFlags": [
               "✓ Uncompromising sartorial poise and confidence",
               "✓ Commanding physical posture and presence",
@@ -1334,23 +1197,24 @@
         "type": "profile",
         "level": "B2",
         "category": "Physical Appearance 👁️",
-        "title": "Gabriel (Charismatic & Silver-Templed Style)",
+        "title": "Gabriel",
         "age": "34",
         "location": "📍 2 miles away • Old Town District",
         "verified": true,
         "avatar": "👨‍🦱",
         "gradient": "linear-gradient(135deg, #334155 0%, #64748b 100%)",
-        "visualDescription": "Charismatic 34-year-old man with distinguished silver-templed dark hair and captivating dimples, wearing a tailored charcoal wool coat and silk scarf.",
+        "visualDescription": "Charismatic 34-year-old man with distinguished silver-templed dark hair and captivating dimples, wearing a tailored charcoal wool coat.",
         "interests": [
           "#SilverTemples",
           "#DistinguishedLook",
           "#TailoredWoolCoat"
         ],
-        "anthem": "🎵 'Feeling Good' - Orchestral Jazz",
+        "anthem": "🎵 'Feeling Good' by Nina Simone",
+        "film": "🎬 'La Grande Bellezza' (Paolo Sorrentino)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Gabriel, 34. Standing at an athletic 6'0\", my appearance balances distinguished silver-templed dark hair, warm hazel eyes, and expressive dimples when laughing. I favor classic European sophistication: tailored charcoal wool overcoats, cashmere turtlenecks, antique leather loafers, and a vintage timepiece.",
+            "bio": "I'm Gabriel, 34. Standing at an athletic 6'0\", my appearance balances distinguished silver-templed dark hair, warm hazel eyes, and expressive dimples when laughing. I favor classic European sophistication.",
             "greenFlags": [
               "✓ Distinguished and mature aesthetic poise",
               "✓ Warm disarming smile with natural dimples",
@@ -1377,8 +1241,8 @@
         "type": "profile",
         "level": "B2",
         "category": "Professions 💼",
-        "title": "AI Ethics Researcher (Dr. Aris)",
-        "age": "7 yrs exp",
+        "title": "Dr. Aris",
+        "age": "33",
         "location": "📍 1.2 miles away • Innovation Campus",
         "verified": true,
         "avatar": "🧠",
@@ -1389,11 +1253,12 @@
           "#AlgorithmicJustice",
           "#TechPolicy"
         ],
-        "anthem": "🎵 'Computer World' - Electro Synth",
+        "anthem": "🎵 'Computer World' by Kraftwerk",
+        "film": "🎬 'Ex Machina' (Alex Garland)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher evaluating autonomous algorithms to mitigate systemic bias, ensure data privacy, and enforce accountability. My duties encompass drafting policy governance frameworks, advising corporate executives, and auditing machine learning models to prevent discriminatory automated decisions.",
+            "bio": "I'm Dr. Aris, an Artificial Intelligence Ethics Researcher evaluating autonomous algorithms to mitigate systemic bias, ensure data privacy, and enforce accountability. My duties encompass drafting policy governance frameworks.",
             "greenFlags": [
               "✓ Pioneering crucial safeguards at the frontier of technology",
               "✓ Intellectual rigor and high-level policy advocacy",
@@ -1412,14 +1277,14 @@
           "Innovation requires market autonomy!",
           "Adaptive risk-proportionate oversight!"
         ],
-        "prompt": "Evaluate the moral dilemmas, policy challenges, and societal impact of AI ethics research."
+        "prompt": "Evaluate the moral dilemmas, policy challenges, and societal impact of Dr. Aris's AI ethics research."
       },
       {
         "type": "profile",
         "level": "B2",
         "category": "Professions 💼",
-        "title": "Architectural Conservationist (Soren)",
-        "age": "8 yrs exp",
+        "title": "Soren",
+        "age": "32",
         "location": "📍 0.9 miles away • Heritage Bureau",
         "verified": true,
         "avatar": "🏛️",
@@ -1430,11 +1295,12 @@
           "#SustainableUrbanism",
           "#AdaptiveReuse"
         ],
-        "anthem": "🎵 'Symphony No. 5' - Orchestral",
+        "anthem": "🎵 'Symphony No. 5' by Ludwig van Beethoven",
+        "film": "🎬 'Metropolis' (Fritz Lang)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Soren, an Architectural Conservationist specializing in adaptive reuse—restoring landmark heritage edifices while modernizing their structural utility sustainably. My work entails conducting 3D laser diagnostics on masonry, procuring period-accurate sustainable materials, and preventing historical landmarks from urban demolition.",
+            "bio": "I'm Soren, an Architectural Conservationist specializing in adaptive reuse—restoring landmark heritage edifices while modernizing their structural utility sustainably. My work entails conducting 3D laser diagnostics on masonry.",
             "greenFlags": [
               "✓ Safeguarding architectural heritage for posterity",
               "✓ Tangible cultural legacy and artistic preservation",
@@ -1453,7 +1319,7 @@
           "Prioritize modern infrastructure!",
           "Adaptive reuse is the bridge!"
         ],
-        "prompt": "Analyze the ideological debate between historical architectural conservation and contemporary urban development."
+        "prompt": "Analyze the ideological debate between historical architectural conservation and contemporary urban development with Soren."
       }
     ],
     "properties": [
@@ -1461,8 +1327,8 @@
         "type": "profile",
         "level": "B2",
         "category": "Properties 🏠",
-        "title": "Penthouse Sky Villa",
-        "age": "Built 2024",
+        "title": "Xavier",
+        "age": "35",
         "location": "📍 0.5 miles away • Pinnacle Tower",
         "verified": true,
         "avatar": "🏙️",
@@ -1473,11 +1339,12 @@
           "#InfinityPool",
           "#SmartAutomation"
         ],
-        "anthem": "🎵 'Skyfall' - Cinematic Elegance",
+        "anthem": "🎵 'Skyfall' by Adele",
+        "film": "🎬 'Casino Royale' (Martin Campbell)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "This exquisite 4,500 sq ft top-floor Sky Villa features a private cantilevered glass-edge infinity pool, 360-degree panoramic skyline vistas, and biometric smart automation. The residence offers keyless direct elevator access, a climate-controlled sommelier wine cellar, motorized curtain glass facades, and rooftop helipad privileges.",
+            "bio": "I'm Xavier. My exquisite 4,500 sq ft top-floor Sky Villa features a private cantilevered glass-edge infinity pool, 360-degree panoramic skyline vistas, and biometric smart automation. Keyless direct elevator access included.",
             "greenFlags": [
               "✓ Unrivaled panoramic cityscape vistas",
               "✓ Uncompromised security and seclusion",
@@ -1496,48 +1363,7 @@
           "Excessive luxury is problematic!",
           "Impressive engineering achievement!"
         ],
-        "prompt": "Analyze the architectural engineering, structural dynamics, and urban exclusivity of high-rise penthouse living."
-      },
-      {
-        "type": "profile",
-        "level": "B2",
-        "category": "Properties 🏠",
-        "title": "Alpine Timber Chalet",
-        "age": "Built 2021",
-        "location": "📍 12 miles away • Summit Crest",
-        "verified": true,
-        "avatar": "🏔️",
-        "gradient": "linear-gradient(135deg, #78350f 0%, #92400e 100%)",
-        "visualDescription": "Rustic timber chalet set in alpine pine forests, featuring cathedral glass windows, cedar sauna, and stone hearth.",
-        "interests": [
-          "#AlpineChalet",
-          "#CathedralWindows",
-          "#CedarSauna"
-        ],
-        "anthem": "🎵 'Winter Song' - Atmospheric Folk",
-        "pages": [
-          {
-            "tag": "🖼️ Profile",
-            "bio": "Nestled into alpine slopes, this magnificent 4-bedroom timber chalet showcases double-height cathedral windows framing snow-draped pine valleys and a massive granite fireplace. The estate provides ski-in/ski-out convenience, an outdoor cedar wood sauna, geothermal radiant floor heating, and handcrafted oak joinery by local artisans.",
-            "greenFlags": [
-              "✓ Unsurpassed mountain tranquility and seclusion",
-              "✓ Sustainable geothermal heating infrastructure",
-              "✓ Immediate proximity to alpine ski resorts"
-            ],
-            "redFlags": [
-              "✗ Intermittent road blockages during severe blizzards",
-              "✗ Seasonal isolation during off-peak months",
-              "✗ Rigorous timber sealant upkeep"
-            ]
-          }
-        ],
-        "opener": "Greetings! Would you thrive immersed in mountain isolation, or do you require urban velocity to stay stimulated?",
-        "icebreakers": [
-          "Alpine wilderness sanctuary!",
-          "Urban velocity always!",
-          "Seasonal balance between both!"
-        ],
-        "prompt": "Evaluate how residing in isolated natural topography influences psychological well-being and daily routine."
+        "prompt": "Analyze the architectural engineering and urban exclusivity of penthouse living with Xavier."
       }
     ],
     "character": [
@@ -1545,7 +1371,7 @@
         "type": "profile",
         "level": "B2",
         "category": "Character Traits 🧠",
-        "title": "Visionary & Resilient (Helena)",
+        "title": "Helena",
         "age": "32",
         "location": "📍 1.5 miles away • Enterprise Square",
         "verified": true,
@@ -1557,11 +1383,12 @@
           "#Resilience",
           "#EmpoweringLeader"
         ],
-        "anthem": "🎵 'Unstoppable' - Anthem",
+        "anthem": "🎵 'Unstoppable' by Sia",
+        "film": "🎬 'Iron Lady' (Phyllida Lloyd)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "I'm Helena, 32. My character is anchored by strategic foresight, unflinching resilience during crises, and an unwavering commitment to empowering my team. I view setbacks not as failures, but as invaluable empirical data for growth, driving innovation through calculated risk-taking and radical transparency.",
+            "bio": "I'm Helena, 32. My character is anchored by strategic foresight, unflinching resilience during crises, and an unwavering commitment to empowering my team. I view setbacks as invaluable empirical data for growth.",
             "greenFlags": [
               "✓ Inspires high performance and ambition",
               "✓ Unshakable poise during corporate turbulence",
@@ -1580,7 +1407,7 @@
           "Resilience under severe crisis!",
           "Leading by moral example!"
         ],
-        "prompt": "Differentiate between transactional management and transformative resilient leadership in modern organizations."
+        "prompt": "Differentiate between transactional management and transformative resilient leadership in modern organizations with Helena."
       }
     ],
     "hobbies": [
@@ -1588,8 +1415,8 @@
         "type": "profile",
         "level": "B2",
         "category": "Hobbies 🎨",
-        "title": "35mm Analog Film Photography",
-        "age": "Analog Craft",
+        "title": "Felix",
+        "age": "30",
         "location": "📍 Darkroom & City Streets",
         "verified": true,
         "avatar": "📷",
@@ -1600,11 +1427,12 @@
           "#35mmAnalog",
           "#DarkroomProcess"
         ],
-        "anthem": "🎵 'Kodachrome' - Nostalgic Classic",
+        "anthem": "🎵 'Kodachrome' by Paul Simon",
+        "film": "🎬 'Blow-Up' (Michelangelo Antonioni)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "35mm film photography requires deliberate artistic composition and patience, restricting the photographer to 36 exposures per roll without instantaneous digital previews. Developing chemical negatives in darkrooms allows photographers to embrace grain textures, light leaks, and unedited candid human authenticity.",
+            "bio": "I'm Felix. 35mm film photography requires deliberate artistic composition and patience, restricting the photographer to 36 exposures per roll without instantaneous digital previews. Developing chemical negatives in darkrooms brings authenticity.",
             "greenFlags": [
               "✓ Cultivates artistic mindfulness and patience",
               "✓ Tangible physical medium and archival prints",
@@ -1623,7 +1451,7 @@
           "Digital abundance enables speed!",
           "Analog preserves authentic soul!"
         ],
-        "prompt": "Critique the psychological and aesthetic divergences between digital smartphone photography and traditional 35mm analog film."
+        "prompt": "Critique the psychological and aesthetic divergences between digital smartphone photography and traditional 35mm analog film with Felix."
       }
     ],
     "nationalities": [
@@ -1631,7 +1459,7 @@
         "type": "profile",
         "level": "B2",
         "category": "Nationalities & Cultures 🌍",
-        "title": "Camille (French 🇫🇷)",
+        "title": "Camille",
         "age": "29",
         "location": "📍 Paris, France • 🇫🇷 French",
         "verified": true,
@@ -1643,11 +1471,12 @@
           "#Parisian",
           "#Gastronomy"
         ],
-        "anthem": "🎵 'La Vie En Rose' - Chanson Moderne",
+        "anthem": "🎵 'La Vie en rose' by Édith Piaf",
+        "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "Bonjour. I am Camille from Paris. French identity is fundamentally defined by 'art de vivre'—the intellectual art of living refinedly through literature, philosophy, and culinary mastery. Our gastronomic meal is UNESCO-recognized intangible cultural heritage, celebrating wine terroir pairings, artisanal raw milk cheeses, and animated philosophical debate.",
+            "bio": "Bonjour. I am Camille from Paris. French identity is fundamentally defined by 'art de vivre'—the intellectual art of living refinedly through literature, philosophy, and culinary mastery.",
             "greenFlags": [
               "✓ Refined palate for wine and artisanal cheese terroir",
               "✓ Engaging, intellectually rigorous conversationalist",
@@ -1672,7 +1501,7 @@
         "type": "profile",
         "level": "B2",
         "category": "Nationalities & Cultures 🌍",
-        "title": "Leandro (Brazilian 🇧🇷)",
+        "title": "Leandro",
         "age": "30",
         "location": "📍 Rio de Janeiro, Brazil • 🇧🇷 Portuguese",
         "verified": true,
@@ -1684,11 +1513,12 @@
           "#RioDeJaneiro",
           "#BossaNova"
         ],
-        "anthem": "🎵 'Girl From Ipanema' - Bossa Nova Classic",
+        "anthem": "🎵 'The Girl from Ipanema' by Stan Getz & Astrud Gilberto",
+        "film": "🎬 'City of God' (Fernando Meirelles)",
         "pages": [
           {
             "tag": "🖼️ Profile",
-            "bio": "Olá! I'm Leandro from Rio de Janeiro. Brazilian nationality represents a vibrant demographic melting pot harmonizing Indigenous, African, and European cultural lineage. From syncopated Carnival rhythms to Bossa Nova nostalgia and communal feijoada banquets, our culture thrives on uninhibited warmth, optimism, and social cohesion.",
+            "bio": "Olá! I'm Leandro from Rio de Janeiro. Brazilian nationality represents a vibrant demographic melting pot harmonizing Indigenous, African, and European cultural lineage. From syncopated Carnival rhythms to Bossa Nova nostalgia.",
             "greenFlags": [
               "✓ Infectious warmth and disarming social energy",
               "✓ Acoustic guitar proficiency playing bossa nova",
@@ -1987,11 +1817,18 @@
                             </div>
                           ` : ''}
 
-                          ${item.anthem ? `
-                            <div style="font-size:0.78rem; font-weight:700; color:#4b5563; margin-bottom:0.65rem; background:#f3f4f6; padding:5px 10px; border-radius:10px; display:inline-block;">
-                              ${item.anthem}
-                            </div>
-                          ` : ''}
+                          <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:0.65rem;">
+                            ${item.anthem ? `
+                              <div style="font-size:0.78rem; font-weight:700; color:#4b5563; background:#f3f4f6; padding:5px 10px; border-radius:10px; border:1px solid #e5e7eb;">
+                                ${item.anthem}
+                              </div>
+                            ` : ''}
+                            ${item.film ? `
+                              <div style="font-size:0.78rem; font-weight:700; color:#4b5563; background:#f0f9ff; padding:5px 10px; border-radius:10px; border:1px solid #bae6fd;">
+                                ${item.film}
+                              </div>
+                            ` : ''}
+                          </div>
                         ` : `
                           <div class="dilemma-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:0.8rem;">
                             <div class="dilemma-opt" style="background:#f9fafb; padding:10px; border-radius:12px; border:1px solid #e5e7eb; text-align:center;">
