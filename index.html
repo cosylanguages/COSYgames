@@ -15,15 +15,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/cosylanguages/COSYlanguages/2ba470ec7ca6da2a962a8f14277d8815e76317d9/css/cosy-tokens.css">
+    <link rel="stylesheet" href="./shared/css/cosy-tokens.css">
     <link rel="stylesheet" href="./shared/css/tokens.css">
     <link rel="stylesheet" href="./shared/css/games.css">
+    <link rel="stylesheet" href="./shared/css/cosy-icons.css">
     <link rel="stylesheet" href="./shared/css/nav.css">
 
 </head>
 <body class="games-hub-page">
     <nav class="cg-nav">
-  <a href="index.html" class="cg-nav-brand">🎮 COSY Games</a>
+  <a href="index.html" class="cg-nav-brand"><span class="cosy-icon icon-dice" aria-hidden="true" style="width:1.2rem;height:1.2rem;color:var(--teal)"></span> COSY Games</a>
   <div class="cg-nav-right">
     <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSYlanguages ↗</a>
     <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
@@ -67,7 +68,7 @@
         </div>
 
         <!-- FEATURED OPEN WORLD -->
-        <div class="sec-title fi">🌍 Open-World RPG <span>Featured Game</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-globe sec-title-icon" aria-hidden="true"></span>Open-World RPG <span>Featured Game</span></div>
         <div class="game-grid fi" style="margin-bottom:2rem;">
           <div class="gc gc-featured" data-tags="speaking vocab mystery solo group" onclick="openGame('cosyworld')">
             <div class="gc-top"><div class="gc-icon">🌍</div><div><div class="gc-name">COSY World</div><div style="font-size:0.9rem; opacity:0.9;">Open-World Language RPG · 14 Languages</div></div></div>
@@ -77,7 +78,7 @@
         </div>
 
         <!-- SPEAKING -->
-        <div class="sec-title fi">🗣️ Speaking & Fluency <span>8 games</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span>Speaking & Fluency <span>8 games</span></div>
         <div class="game-grid fi" id="grid-speaking">
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('fluency')">
             <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name">Fluency Flow</div></div>
@@ -122,7 +123,7 @@
         </div>
 
         <!-- MYSTERY -->
-        <div class="sec-title fi">🕵️ Mystery & Guesses <span>3 games</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-search sec-title-icon" aria-hidden="true"></span>Mystery & Guesses <span>3 games</span></div>
         <div class="game-grid fi" id="grid-mystery">
           <div class="gc gc-gold" data-tags="speaking group mystery" onclick="openGame('action')">
             <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name">Action Hero</div></div>
@@ -142,7 +143,7 @@
         </div>
 
         <!-- VOCAB -->
-        <div class="sec-title fi">🧩 Vocab & Puzzles <span>8 games</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-puzzle sec-title-icon" aria-hidden="true"></span>Vocab & Puzzles <span>8 games</span></div>
         <div class="game-grid fi" id="grid-vocab">
           <div class="gc gc-plum" data-tags="vocab solo" onclick="openGame('scenematch')">
             <div class="gc-top"><div class="gc-icon">🖼️</div><div class="gc-name">Scene Match</div></div>
