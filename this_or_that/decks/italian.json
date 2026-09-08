@@ -1279,6 +1279,51 @@
         ],
         "prompt": "Talk about Noah's night owl habits, evening gym workout, and daily notebook planning."
       }
+    ],
+    "grammar_present": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Grammatica: Presente Indicativo 🎯",
+        "grammarTarget": "Presente Indicativo",
+        "title": "Giulia (Routine quotidiana)",
+        "age": "22 anni",
+        "location": "📍 Roma • Centro Storico",
+        "verified": true,
+        "avatar": "👩‍🍳",
+        "gradient": "linear-gradient(135deg, #16a34a 0%, #facc15 100%)",
+        "visualDescription": "Giovane barista italiana che prepara il caffè espresso al bar la mattina.",
+        "interests": [
+          "#PresenteIndicativo",
+          "#RoutineMattutina",
+          "#Abitudini"
+        ],
+        "anthem": "🎵 'Nel blu dipinto di blu (Volare)' - Domenico Modugno",
+        "film": "🎬 'La vita è bella' (Roberto Benigni)",
+        "pages": [
+          {
+            "tag": "🎯 Presente Bio",
+            "bio": "Sono Giulia. Abito a Roma. Ogni mattina mi sveglio alle 7, bevo un buon caffè espresso e mangio un cornetto caldo.",
+            "greenFlags": [
+              "✓ Modello di presente indicativo (sono, abito, mi sveglio)",
+              "✓ Vocabolario A0-A1 chiaro",
+              "✓ Frasi brevi per principianti"
+            ],
+            "redFlags": [
+              "✗ Beve 4 caffè al giorno",
+              "✗ Si sveglia molto presto",
+              "✗ Parlare veloce"
+            ]
+          }
+        ],
+        "opener": "Ciao! Io mi sveglio alle 7 ogni mattina. A che ora ti svegli di solito?",
+        "icebreakers": [
+          "Mi sveglio alle 8!",
+          "Bevo un tè caldo la mattina!",
+          "Abito in una bella città!"
+        ],
+        "prompt": "Prompt (Presente indicativo): Descrivi la tua routine del mattino usando il presente indicativo."
+      }
     ]
   },
   "A2": {
@@ -2588,6 +2633,51 @@
           "Digital detox after 8 PM!"
         ],
         "prompt": "Write about Ethan's time management, weekly meal prep routine, and digital detox habits."
+      }
+    ],
+    "grammar_past": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Grammatica: Passato Prossimo vs Imperfetto 🎯",
+        "grammarTarget": "Passato Prossimo / Imperfetto",
+        "title": "Marco (Ricordo di vacanza)",
+        "age": "25 anni",
+        "location": "📍 Firenze • L'estate scorsa",
+        "verified": true,
+        "avatar": "🏛️",
+        "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+        "visualDescription": "Turista felice davanti a Ponte Vecchio a Firenze mentre mangia un gelato.",
+        "interests": [
+          "#PassatoProssimo",
+          "#Imperfetto",
+          "#RaccontoDiViaggio"
+        ],
+        "anthem": "🎵 'Azzurro' - Adriano Celentano",
+        "film": "🎬 'Il postino' (Massimo Troisi)",
+        "pages": [
+          {
+            "tag": "🎯 Passato vs Imperfetto Bio",
+            "bio": "L'estate scorsa sono andato a Firenze. Faceva molto caldo e c'era tanto sole. Ho visitato i musei e ho mangiato una fiorentina squisita.",
+            "greenFlags": [
+              "✓ Azione conclusa (Passato prossimo) vs Descrizione (Imperfetto)",
+              "✓ Riferimento temporale chiaro (l'estate scorsa)",
+              "✓ Coniugazioni A2 fondamentali"
+            ],
+            "redFlags": [
+              "✗ Ha perso il treno per Roma",
+              "✗ Ha dimenticato la mappa",
+              "✗ Ha speso troppo nei caffè"
+            ]
+          }
+        ],
+        "opener": "Ciao! L'estate scorsa sono andato a Firenze. Dove sei stato/a durante le tue ultime vacanze?",
+        "icebreakers": [
+          "Sono stato/a al mare!",
+          "Faceva molto caldo anche da me!",
+          "Ho visitato una città storica!"
+        ],
+        "prompt": "Prompt (Passato prossimo / Imperfetto): Raddoppia la tua storia di vacanza descrivendo com'era il tempo (imperfetto) e cosa hai fatto (passato prossimo)."
       }
     ]
   },
@@ -3913,6 +4003,51 @@
         ],
         "prompt": "Analyze Marcus's marathon training discipline, cold shower habit, and habit tracking."
       }
+    ],
+    "grammar_present": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Grammatica: Futuro Semplice & Condizionale 🎯",
+        "grammarTarget": "Futuro & Condizionale",
+        "title": "Elena (Progetti e Desideri)",
+        "age": "27 anni",
+        "location": "📍 Milano • Futuro",
+        "verified": true,
+        "avatar": "✈️",
+        "gradient": "linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)",
+        "visualDescription": "Designer che disegna i suoi prossimi viaggi su un taccuino di pelle.",
+        "interests": [
+          "#FuturoSemplice",
+          "#CondizionalePresente",
+          "#Progetti"
+        ],
+        "anthem": "🎵 'Che sarò' - Ricchi e Poveri",
+        "film": "🎬 'La grande bellezza' (Paolo Sorrentino)",
+        "pages": [
+          {
+            "tag": "🎯 Futuro e Condizionale Bio",
+            "bio": "L'anno prossimo visiterò la Sicilia e comprerò una piccola casa al mare. Se avessi più tempo libero, vorrei imparare a suonare il pianoforte.",
+            "greenFlags": [
+              "✓ Modello futuro (visiterò, comprerò) e desideri (vorrei)",
+              "✓ Struttura ipotetica B1",
+              "✓ Vocabolario di vita e progetti"
+            ],
+            "redFlags": [
+              "✗ Cambia idea spesso",
+              "✗ Ha troppi sogni nel cassetto",
+              "✗ Pianifica con largo anticipo"
+            ]
+          }
+        ],
+        "opener": "Ciao! L'anno prossimo visiterò la Sicilia. Vorresti venire anche tu o preferiresti la montagna?",
+        "icebreakers": [
+          "Vorrei visitare le isole greche!",
+          "L'anno prossimo andrò in Spagna!",
+          "Mi piacerebbe imparare una nuova lingua!"
+        ],
+        "prompt": "Prompt (Futuro & Condizionale): Esprimi un progetto per il futuro usando il futuro semplice e un desiderio usando 'vorrei / mi piacerebbe'."
+      }
     ]
   },
   "B2": {
@@ -5236,6 +5371,94 @@
           "Contemplative morning coffee!"
         ],
         "prompt": "Analyze Gabriel's slow living philosophy, polymorphic routines, and tactile evening rituals."
+      }
+    ],
+    "grammar_advanced": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Grammatica: Congiuntivo Presente 🎯",
+        "grammarTarget": "Congiuntivo Presente",
+        "title": "Dr. Aris (Opinioni e Dubbi)",
+        "age": "33 anni",
+        "location": "📍 Milano • Università",
+        "verified": true,
+        "avatar": "🧠",
+        "gradient": "linear-gradient(135deg, #4338ca 0%, #6366f1 100%)",
+        "visualDescription": "Ricercatore universitario in etica digitale durante un seminario scientifico.",
+        "interests": [
+          "#CongiuntivoPresente",
+          "#OpinioniEDubbi",
+          "#EticaDigitale"
+        ],
+        "anthem": "🎵 'Caruso' - Andrea Bocelli",
+        "film": "🎬 'Ex Machina' (Alex Garland)",
+        "pages": [
+          {
+            "tag": "🎯 Congiuntivo Bio",
+            "bio": "Penso che sia necessario regolamentare l'intelligenza artificiale. Dubito che le aziende possano fare da sole e spero che i cittadini conoscano i propri diritti digitali.",
+            "greenFlags": [
+              "✓ Uso corretto del congiuntivo dopo 'Penso che sia', 'Dubito che possano', 'Spero che conoscano'",
+              "✓ Registro di lingua formale B2",
+              "✓ Argomentazione complessa"
+            ],
+            "redFlags": [
+              "✗ Esige dibattiti etici a cena",
+              "✗ Molto critico sui social media",
+              "✗ Lavora fino a tardi"
+            ]
+          }
+        ],
+        "opener": "Penso che sia fondamentale tutelare la privacy online. Credi che la tecnologia migliori sempre la nostra vita?",
+        "icebreakers": [
+          "Penso che sia un'opportunità fantastica!",
+          "Credo che ci siano molti rischi per i giovani!",
+          "Spero che la legge protegga i nostri dati!"
+        ],
+        "prompt": "Prompt (Congiuntivo presente): Esprimi un'opinione e un dubbio usando verbi come 'Penso che...', 'Credo che...', 'Dubito che...' seguiti dal congiuntivo."
+      },
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Grammatica: Trapassato Prossimo 🎯",
+        "grammarTarget": "Trapassato Prossimo",
+        "title": "Gabriel (Sequenza Temporale)",
+        "age": "34 anni",
+        "location": "📍 Torino • Studio d'Architettura",
+        "verified": true,
+        "avatar": "🏛️",
+        "gradient": "linear-gradient(135deg, #334155 0%, #0f172a 100%)",
+        "visualDescription": "Architetto esperto che esamina vecchi progetti prima di una presentazione.",
+        "interests": [
+          "#TrapassatoProssimo",
+          "#SequenzaTemporale",
+          "#PrimaDAltro"
+        ],
+        "anthem": "🎵 'Feeling Good' - Nina Simone",
+        "film": "🎬 'La Grande Bellezza' (Paolo Sorrentino)",
+        "pages": [
+          {
+            "tag": "🎯 Trapassato Prossimo Bio",
+            "bio": "Prima di trasferirmi a Torino, avevo completato gli studi di architettura e avevo lavorato a Milano per tre anni. Quando è iniziato il restauro, avevamo già approvato i disegni.",
+            "greenFlags": [
+              "✓ Struttura 'avevo + participio passato' per un'azione anteriore a un'altra nel passato",
+              "✓ Narrazione temporale articolata B2",
+              "✓ Precisione linguistica"
+            ],
+            "redFlags": [
+              "✗ Pretende massima precisione",
+              "✗ Lavora sotto scadenze strette",
+              "✗ Perfezionista sui dettagli"
+            ]
+          }
+        ],
+        "opener": "Ciao! Prima di venire qui, avevo già completato la mia laurea. Cosa avevi fatto prima di iniziare il tuo lavoro attuale?",
+        "icebreakers": [
+          "Prima di quest'anno, avevo vissuto all'estero!",
+          "Avevo studiato economia prima di cambiare carriera!",
+          "Quando sono arrivato, avevo già prenotato l'hotel!"
+        ],
+        "prompt": "Prompt (Trapassato prossimo): Descrivi un evento passato avvenuto prima di un altro momento passato usando il trapassato prossimo."
       }
     ]
   }

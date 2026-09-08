@@ -1279,6 +1279,94 @@
         ],
         "prompt": "Talk about Noah's night owl habits, evening gym workout, and daily notebook planning."
       }
+    ],
+    "grammar_present": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Grammaire : Présent & Routine 🎯",
+        "grammarTarget": "Présent de l'indicatif",
+        "title": "Chloé (Routine quotidienne)",
+        "age": "21 ans",
+        "location": "📍 Paris • Centre-ville",
+        "verified": true,
+        "avatar": "👩‍🍳",
+        "gradient": "linear-gradient(135deg, #ec4899 0%, #f472b6 100%)",
+        "visualDescription": "Jeune boulangère préparant du pain frais et du café chaud dans une cuisine ensoleillée.",
+        "interests": [
+          "#PrésentDeLIndicatif",
+          "#RoutineDuMatin",
+          "#Habitudes"
+        ],
+        "anthem": "🎵 'La Vie en rose' par Édith Piaf",
+        "film": "🎬 'Le Fabuleux Destin d'Amélie Poulain' (Jean-Pierre Jeunet)",
+        "pages": [
+          {
+            "tag": "🎯 Présent Bio",
+            "bio": "Je suis boulangère. J'habite à Paris. Je me réveille à 6 heures du matin, je mange du pain chaud et je bois un café au lait.",
+            "greenFlags": [
+              "✓ Verbes au présent (je suis, j'habite, je me réveille)",
+              "✓ Vocabulaire simple A0-A1",
+              "✓ Modèle clair pour s'exprimer"
+            ],
+            "redFlags": [
+              "✗ Se réveille très tôt",
+              "✗ Boit trois cafés par jour",
+              "✗ Ne dort jamais tard"
+            ]
+          }
+        ],
+        "opener": "Bonjour ! Je me réveille à 6 heures chaque matin. À quelle heure te réveilles-tu ?",
+        "icebreakers": [
+          "Je me réveille à 7 heures !",
+          "Je bois du thé chaud le matin !",
+          "J'habite dans une grande ville !"
+        ],
+        "prompt": "Prompt (Présent) : Décris ta routine quotidienne au présent de l'indicatif (ce que tu fais le matin)."
+      },
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Grammaire : Futur Proche 🎯",
+        "grammarTarget": "Futur Proche",
+        "title": "Lucas (Projets immédiats)",
+        "age": "24 ans",
+        "location": "📍 Lyon • Cet après-midi",
+        "verified": true,
+        "avatar": "🚴",
+        "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+        "visualDescription": "Jeune homme préparant son vélo et un sac à dos pour une sortie au parc.",
+        "interests": [
+          "#FuturProche",
+          "#AllerPlusInfinitif",
+          "#ProjetsImmédiats"
+        ],
+        "anthem": "🎵 'Les Champs-Élysées' par Joe Dassin",
+        "film": "🎬 'Ratatouille' (Pixar)",
+        "pages": [
+          {
+            "tag": "🎯 Futur Proche Bio",
+            "bio": "Cet après-midi, je vais faire du vélo au parc. Je vais rencontrer mes amis et nous allons manger une glace au chocolat.",
+            "greenFlags": [
+              "✓ Modèle aller + infinitif (je vais faire, nous allons manger)",
+              "✓ Grammaire A0-A1 pratique",
+              "✓ Contexte quotidien"
+            ],
+            "redFlags": [
+              "✗ Oublie son casque de vélo",
+              "✗ Mange la glace trop vite",
+              "✗ Roule très vite"
+            ]
+          }
+        ],
+        "opener": "Salut ! Cet après-midi, je vais faire du vélo. Que vas-tu faire ce week-end ?",
+        "icebreakers": [
+          "Ce week-end, je vais me reposer !",
+          "Je vais cuisiner des pâtes ce soir !",
+          "Nous allons visiter un musée !"
+        ],
+        "prompt": "Prompt (Futur proche) : Utilise 'aller + infinitif' pour expliquer ce que tu vas faire plus tard aujourd'hui ou ce week-end."
+      }
     ]
   },
   "A2": {
@@ -2588,6 +2676,51 @@
           "Digital detox after 8 PM!"
         ],
         "prompt": "Write about Ethan's time management, weekly meal prep routine, and digital detox habits."
+      }
+    ],
+    "grammar_past": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Grammaire : Passé Composé vs Imparfait 🎯",
+        "grammarTarget": "Passé composé / Imparfait",
+        "title": "Éléna (Souvenirs de vacances)",
+        "age": "24 ans",
+        "location": "📍 Nice • L'été dernier",
+        "verified": true,
+        "avatar": "🏖️",
+        "gradient": "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
+        "visualDescription": "Jeune femme souriante au bord de la mer en Promenade des Anglais.",
+        "interests": [
+          "#PasséComposé",
+          "#Imparfait",
+          "#Souvenirs"
+        ],
+        "anthem": "🎵 'Savoir aimer' par Florent Pagny",
+        "film": "🎬 'Le Grand Bleu' (Luc Besson)",
+        "pages": [
+          {
+            "tag": "🎯 Passé composé & Imparfait Bio",
+            "bio": "L'été dernier, je suis allée à Nice. Il faisait très chaud et le ciel était bleu. J'ai nagé dans la mer et j'ai mangé de délicieuses glaces.",
+            "greenFlags": [
+              "✓ Différence action ponctuelle ( Passé composé) et description (Imparfait)",
+              "✓ Récit au passé adapté au niveau A2",
+              "✓ Verbes fréquents (être, avoir, aller, faire)"
+            ],
+            "redFlags": [
+              "✗ A perdu sa crème solaire",
+              "✗ A manqué le bus du retour",
+              "✗ A attrapé un coup de soleil"
+            ]
+          }
+        ],
+        "opener": "Salut ! L'été dernier, je suis allée à la mer. Où es-tu allé(e) pendant tes dernières vacances ?",
+        "icebreakers": [
+          "Je suis allé(e) à la montagne !",
+          "Il faisait très beau pendant mes vacances !",
+          "J'ai visité une jolie ville historique !"
+        ],
+        "prompt": "Prompt (Passé composé / Imparfait) : Raconte un petit souvenir de vacances en décrivant le temps qu'il faisait (imparfait) et ce que tu as fait (passé composé)."
       }
     ]
   },
@@ -3913,6 +4046,96 @@
         ],
         "prompt": "Analyze Marcus's marathon training discipline, cold shower habit, and habit tracking."
       }
+    ],
+    "grammar_present": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Grammaire : Futur Simple 🎯",
+        "grammarTarget": "Futur Simple",
+        "title": "Camille (Projets d'avenir)",
+        "age": "28 ans",
+        "location": "📍 Paris • Perspectives",
+        "verified": true,
+        "avatar": "🌍",
+        "gradient": "linear-gradient(135deg, #0d9488 0%, #14b8a6 100%)",
+        "visualDescription": "Journaliste écrivant ses objectifs de voyage et projets professionnels dans un carnet.",
+        "interests": [
+          "#FuturSimple",
+          "#ProjetsDAvenir",
+          "#Ambitions"
+        ],
+        "anthem": "🎵 'Emmenez-moi' par Charles Aznavour",
+        "film": "🎬 'Paris, je t'aime' (Collectif)",
+        "pages": [
+          {
+            "tag": "🎯 Futur Simple Bio",
+            "bio": "L'année prochaine, j'habiterai dans une nouvelle ville et je voyagerai en Amérique du Sud. J'apprendrai l'espagnol et j'écrirai un livre sur l'environnement.",
+            "greenFlags": [
+              "✓ Conjugaison régulière au futur simple",
+              "✓ Expression de projets lointains",
+              "✓ Niveau B1 bien calibré"
+            ],
+            "redFlags": [
+              "✗ Projets très ambitieux",
+              "✗ Ne sait pas quelle ville choisir",
+              "✗ Valises toujours prêtes"
+            ]
+          }
+        ],
+        "opener": "Bonjour ! L'année prochaine, je voyagerai à l'étranger. Quels seront tes projets pour l'année à venir ?",
+        "icebreakers": [
+          "J'apprendrai une nouvelle langue !",
+          "Je déménagerai dans un nouvel appartement !",
+          "Je voyagerai avec mes amis !"
+        ],
+        "prompt": "Prompt (Futur simple) : Utilise le futur simple pour exprimer deux projets ou prédictions pour ton avenir."
+      }
+    ],
+    "grammar_advanced": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Grammaire : Conditionnel Présent 🎯",
+        "grammarTarget": "Conditionnel Présent",
+        "title": "Julien (Souhaits & Hypothèses)",
+        "age": "29 ans",
+        "location": "📍 Grenoble • Massif alpin",
+        "verified": true,
+        "avatar": "🎻",
+        "gradient": "linear-gradient(135deg, #15803d 0%, #166534 100%)",
+        "visualDescription": "Randonneur contemplant les montagnes, rêvant de construire un refuge écoresponsable.",
+        "interests": [
+          "#ConditionnelPrésent",
+          "#Hypothèses",
+          "#PolitesseEtRêves"
+        ],
+        "anthem": "🎵 'C'est si bon' par Yves Montand",
+        "film": "🎬 'Into the Wild' (Sean Penn)",
+        "pages": [
+          {
+            "tag": "🎯 Conditionnel Bio",
+            "bio": "Si j'avais plus de temps libre, je ferais de la randonnée chaque week-end. Si je gagnais au loto, j'achèterais un grand chalet en bois dans les Alpes.",
+            "greenFlags": [
+              "✓ Structure 'Si + imparfait -> conditionnel présent'",
+              "✓ Expression d'hypothèses et de souhaits",
+              "✓ Richesse grammaticale B1"
+            ],
+            "redFlags": [
+              "✗ Rêve souvent pendant les réunions",
+              "✗ Veut habiter loin de tout",
+              "✗ Préfère la montagne aux soirées"
+            ]
+          }
+        ],
+        "opener": "Salut ! Si tu gagnais un billet d'avion gratuit, où irais-tu ?",
+        "icebreakers": [
+          "Si j'avais un billet, j'irais au Japon !",
+          "J'aimerais visiter le sud de l'Italie !",
+          "Je ferais le tour du monde !"
+        ],
+        "prompt": "Prompt (Conditionnel présent) : Complète ces phrases : 'Si j'avais plus de temps libre, je...' et 'J'aimerais...'."
+      }
     ]
   },
   "B2": {
@@ -5236,6 +5459,94 @@
           "Contemplative morning coffee!"
         ],
         "prompt": "Analyze Gabriel's slow living philosophy, polymorphic routines, and tactile evening rituals."
+      }
+    ],
+    "grammar_advanced": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Grammaire : Subjonctif Présent 🎯",
+        "grammarTarget": "Subjonctif Présent",
+        "title": "Dr. Aris (Exigences & Sentiments)",
+        "age": "33 ans",
+        "location": "📍 Paris • Campus Recherche",
+        "verified": true,
+        "avatar": "🧠",
+        "gradient": "linear-gradient(135deg, #4338ca 0%, #6366f1 100%)",
+        "visualDescription": "Chercheur en éthique numérique devant des tableaux d'analyse algorithmique.",
+        "interests": [
+          "#SubjonctifPrésent",
+          "#ObligationsEtDoutes",
+          "#ÉthiqueIA"
+        ],
+        "anthem": "🎵 'Computer World' par Kraftwerk",
+        "film": "🎬 'Ex Machina' (Alex Garland)",
+        "pages": [
+          {
+            "tag": "🎯 Subjonctif Bio",
+            "bio": "Il faut que nous soyons vigilants face aux biais de l'intelligence artificielle. Je doute que les entreprises puissent s'autoréguler sans lois claires, et je souhaite que chaque utilisateur comprenne ses droits.",
+            "greenFlags": [
+              "✓ Utilisation correcte du subjonctif après 'il faut que', 'je doute que', 'je souhaite que'",
+              "✓ Niveau de langue soutenu B2",
+              "✓ Thématique contemporaine"
+            ],
+            "redFlags": [
+              "✗ Exige des débats philosophiques au dîner",
+              "✗ Très critique envers les réseaux sociaux",
+              "✗ Travaille tard le soir"
+            ]
+          }
+        ],
+        "opener": "Bonjour ! Il faut que nous soyons conscients des enjeux du numérique. Penses-tu qu'il soit nécessaire de réguler l'IA ?",
+        "icebreakers": [
+          "Il est essentiel que la loi protège nos données !",
+          "Je doute que la technologie résolve tous nos problèmes !",
+          "Il faut que les jeunes apprennent l'esprit critique !"
+        ],
+        "prompt": "Prompt (Subjonctif) : Formule deux phrases complexes en utilisant 'Il faut que...' et 'Je doute que...'."
+      },
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Grammaire : Voix Passive 🎯",
+        "grammarTarget": "Voix Passive",
+        "title": "Soren (Rénovation du patrimoine)",
+        "age": "32 ans",
+        "location": "📍 Bordeaux • Bureau du Patrimoine",
+        "verified": true,
+        "avatar": "🏛️",
+        "gradient": "linear-gradient(135deg, #854d0e 0%, #a16207 100%)",
+        "visualDescription": "Architecte examinant les pierres taillées d'une cathédrale historique.",
+        "interests": [
+          "#VoixPassive",
+          "#Rénovation",
+          "#Patrimoine"
+        ],
+        "anthem": "🎵 'Symphonie No. 5' par Beethoven",
+        "film": "🎬 'Metropolis' (Fritz Lang)",
+        "pages": [
+          {
+            "tag": "🎯 Voix Passive Bio",
+            "bio": "Cette cathédrale historique a été construite en 1850. L'année dernière, la façade a été restaurée par des artisans qualifiés, et des contrôles de sécurité sont régulièrement effectués par notre équipe.",
+            "greenFlags": [
+              "✓ Structures passives au passé et au présent ('a été construite', 'sont effectués')",
+              "✓ Vocabulaire formel et précis B2",
+              "✓ Mise en valeur de l'action"
+            ],
+            "redFlags": [
+              "✗ Délais administratifs fréquents",
+              "✗ Poussière de pierre sur ses vêtements",
+              "✗ Très exigeant sur les détails"
+            ]
+          }
+        ],
+        "opener": "Bonjour ! Ce monument a été restauré avec soin. Quel bâtiment historique de ta région a été rénové récemment ?",
+        "icebreakers": [
+          "Notre théâtre municipal a été rénové l'an dernier !",
+          "Le château a été construit au XVIe siècle !",
+          "Des règles strictes sont appliquées dans le centre historique !"
+        ],
+        "prompt": "Prompt (Voix passive) : Décris un monument, une règle ou un objet en utilisant la voix passive ('a été fait', 'est utilisé')."
       }
     ]
   }
