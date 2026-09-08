@@ -1,0 +1,570 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Food & Cuisine 🍜",
+      "title": "Marco",
+      "age": "23",
+      "location": "📍 1 mile away • Little Italy",
+      "verified": true,
+      "avatar": "🍕",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f97316 100%)",
+      "visualDescription": "Friendly Italian chef wearing a crisp white apron and holding a freshly baked Margherita pizza.",
+      "interests": [
+        "#FreshPizza",
+        "#ItalianPasta",
+        "#HomemadeBread"
+      ],
+      "anthem": "🎵 'Volare' by Domenico Modugno",
+      "film": "🎬 'Ratatouille' (Brad Bird)",
+      "pages": [
+        {
+          "tag": "🍕 Pizza & Pasta",
+          "bio": "Hi! I am Marco. I love Italian food. I make fresh pizza and hot pasta every day. Tomato sauce and cheese are my favorite ingredients!",
+          "greenFlags": [
+            "✓ Makes fresh pizza",
+            "✓ Loves homemade sauce",
+            "✓ Friendly kitchen helper"
+          ],
+          "redFlags": [
+            "✗ Puts cheese on everything",
+            "✗ Eats pizza for breakfast",
+            "✗ Dislikes pineapple on pizza"
+          ]
+        },
+        {
+          "tag": "🥖 Baking Routine",
+          "bio": "Every morning I bake fresh bread. The kitchen smells wonderful. I drink hot espresso and eat bread with butter.",
+          "greenFlags": [
+            "✓ Fresh warm bread",
+            "✓ Early morning baker",
+            "✓ Loves good espresso"
+          ],
+          "redFlags": [
+            "✗ Flour everywhere in the room",
+            "✗ Bakes at 5 AM",
+            "✗ Burns crust sometimes"
+          ]
+        },
+        {
+          "tag": "🍷 Dinner Time",
+          "bio": "In the evening, I eat dinner with friends. We share big bowls of spaghetti. Cooking for people makes me very happy!",
+          "greenFlags": [
+            "✓ Enjoys big dinners",
+            "✓ Shares good food",
+            "✓ Generous cooking portions"
+          ],
+          "redFlags": [
+            "✗ Talks loudly while eating",
+            "✗ Takes long dinner breaks",
+            "✗ Insists on Italian recipes"
+          ]
+        }
+      ],
+      "opener": "Hello! Do you like pizza or pasta for dinner?",
+      "icebreakers": [
+        "I love fresh pizza!",
+        "Spaghetti is my favorite!",
+        "I like homemade bread!"
+      ],
+      "prompt": "Describe Marco's favorite foods and cooking routine using simple words."
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Food & Cuisine 🍜",
+      "title": "Kenji",
+      "age": "25",
+      "location": "📍 2 miles away • Asian Quarter",
+      "verified": true,
+      "avatar": "🍜",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #84cc16 100%)",
+      "visualDescription": "Young man at a noodle stall holding a bowl of steaming ramen with green onions and eggs.",
+      "interests": [
+        "#RamenNoodles",
+        "#GreenTea",
+        "#StreetFood"
+      ],
+      "anthem": "🎵 'Sukiyaki' by Kyu Sakamoto",
+      "film": "🎬 'Tampopo' (Juzo Itami)",
+      "pages": [
+        {
+          "tag": "🍜 Noodle Bowls",
+          "bio": "Hello! I am Kenji. I eat hot ramen noodles every week. I like warm soup, green onions, and fresh eggs in my bowl.",
+          "greenFlags": [
+            "✓ Delicious hot broth",
+            "✓ Loves fresh noodles",
+            "✓ Simple healthy eating"
+          ],
+          "redFlags": [
+            "✗ Eats noodles very fast",
+            "✗ Makes loud slurping sounds",
+            "✗ Only drinks green tea"
+          ]
+        },
+        {
+          "tag": "🍵 Tea Time",
+          "bio": "After lunch, I drink hot green tea. It is fresh and healthy. I do not add sugar or milk to my tea.",
+          "greenFlags": [
+            "✓ Healthy drink habits",
+            "✓ Enjoys quiet tea moments",
+            "✓ Simple natural tastes"
+          ],
+          "redFlags": [
+            "✗ Dislikes sweet drinks",
+            "✗ Drinks tea 6 times a day",
+            "✗ Very strict about water temperature"
+          ]
+        },
+        {
+          "tag": "🍣 Sushi Snacks",
+          "bio": "On weekends, I make simple rice rolls with cucumber and salmon. Fresh fish and rice make a great lunch snack!",
+          "greenFlags": [
+            "✓ Makes fresh sushi",
+            "✓ Clean cooking style",
+            "✓ Light healthy meals"
+          ],
+          "redFlags": [
+            "✗ Uses too much spicy wasabi",
+            "✗ Only buys fresh fish",
+            "✗ Dislikes cooked meat"
+          ]
+        }
+      ],
+      "opener": "Hi! Do you prefer hot ramen soup or fresh sushi rolls?",
+      "icebreakers": [
+        "Hot ramen soup!",
+        "Fresh sushi rolls!",
+        "Green tea with no sugar!"
+      ],
+      "prompt": "Talk about Kenji's favorite Japanese dishes and tea habits."
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Food & Cuisine 🍜",
+      "title": "Chloe",
+      "age": "26",
+      "location": "📍 1.5 miles away • French Quarter",
+      "verified": true,
+      "avatar": "🥐",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb923c 100%)",
+      "visualDescription": "Charming pastry enthusiast holding a plate of golden croissants and sweet macaroons outside a bakery.",
+      "interests": [
+        "#FrenchPastries",
+        "#Croissants",
+        "#CaféCulture"
+      ],
+      "anthem": "🎵 'La Vie en Rose' by Édith Piaf",
+      "film": "🎬 'Chocolat' (Lasse Hallström)",
+      "pages": [
+        {
+          "tag": "🥐 Pastry Lover",
+          "bio": "Hi, I'm Chloe! I work near a French bakery. I buy buttery croissants and fruit tarts every weekend. Baking sweet desserts is my passion.",
+          "greenFlags": [
+            "✓ Bakes delicious pastries",
+            "✓ Know best local bakeries",
+            "✓ Loves sweet fruit tarts"
+          ],
+          "redFlags": [
+            "✗ Eats pastry for every meal",
+            "✗ Spends too much money on cakes",
+            "✗ Refuses sugar-free desserts"
+          ]
+        },
+        {
+          "tag": "☕ Café Morning",
+          "bio": "In the morning, I sit at small outdoor cafés with a cappuccino and a warm croissant. I enjoy watching people walk by while eating.",
+          "greenFlags": [
+            "✓ Relaxing morning routine",
+            "✓ Appreciates café culture",
+            "✓ Great café recommendations"
+          ],
+          "redFlags": [
+            "✗ Sits in cafés for hours",
+            "✗ Gets upset if coffee is cold",
+            "✗ Dislikes fast food breakfasts"
+          ]
+        },
+        {
+          "tag": "🍫 Sweet Treats",
+          "bio": "I love dark chocolate and raspberry macarons. Cooking desserts for my friends brings everyone together on Sunday afternoons.",
+          "greenFlags": [
+            "✓ Generous dessert baker",
+            "✓ Creative chocolate recipes",
+            "✓ Host fun Sunday tea parties"
+          ],
+          "redFlags": [
+            "✗ Always offers extra sugar",
+            "✗ Gets flour on the furniture",
+            "✗ Only eats dark chocolate"
+          ]
+        }
+      ],
+      "opener": "Bonjour! Do you prefer sweet pastries or savory breakfasts in the morning?",
+      "icebreakers": [
+        "Sweet pastries and coffee!",
+        "Savory eggs and bacon!",
+        "Warm French croissants!"
+      ],
+      "prompt": "Describe Chloe's bakery visits and morning café preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Food & Cuisine 🍜",
+      "title": "Carlos",
+      "age": "27",
+      "location": "📍 3 miles away • Mission District",
+      "verified": true,
+      "avatar": "🌮",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #eab308 100%)",
+      "visualDescription": "Enthusiastic home cook squeezing fresh lime over spicy street tacos at an outdoor grill.",
+      "interests": [
+        "#StreetTacos",
+        "#SpicySalsa",
+        "#GrillMaster"
+      ],
+      "anthem": "🎵 'Oye Como Va' by Santana",
+      "film": "🎬 'Chef' (Jon Favreau)",
+      "pages": [
+        {
+          "tag": "🌮 Taco Saturday",
+          "bio": "I'm Carlos, 27. Every Saturday I host street taco nights. I grill marinated beef and chicken with fresh cilantro, onions, and lime juice.",
+          "greenFlags": [
+            "✓ Fantastic taco recipes",
+            "✓ Fresh homemade salsa",
+            "✓ Welcoming barbecue host"
+          ],
+          "redFlags": [
+            "✗ Salsa is extremely spicy",
+            "✗ Uses endless paper towels",
+            "✗ Plays loud music while grilling"
+          ]
+        },
+        {
+          "tag": "🥑 Fresh Guacamole",
+          "bio": "I make fresh guacamole with ripe avocados, tomatoes, and garlic. Eating chips and dip with friends while watching football is ideal.",
+          "greenFlags": [
+            "✓ Homemade fresh dip",
+            "✓ Uses fresh vegetables",
+            "✓ Great weekend social vibe"
+          ],
+          "redFlags": [
+            "✗ Eats all the guacamole first",
+            "✗ Complains about hard avocados",
+            "✗ Always double-dips chips"
+          ]
+        },
+        {
+          "tag": "🌶️ Spicy Flavors",
+          "bio": "I believe good food needs rich spices and bold flavors. I enjoy discovering food trucks in different neighborhoods across the city.",
+          "greenFlags": [
+            "✓ Adventurous street food seeker",
+            "✓ Bold culinary tastes",
+            "✓ Supports local food trucks"
+          ],
+          "redFlags": [
+            "✗ Adds hot sauce to everything",
+            "✗ Ignores mild non-spicy options",
+            "✗ Cooks with strong garlic smell"
+          ]
+        }
+      ],
+      "opener": "Hey there! How spicy do you like your salsa and tacos?",
+      "icebreakers": [
+        "Super spicy hot sauce!",
+        "Mild with fresh avocado!",
+        "Lots of fresh lime juice!"
+      ],
+      "prompt": "Write about Carlos's taco nights, fresh ingredients, and love for street food."
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Food & Cuisine 🍜",
+      "title": "Amina",
+      "age": "28",
+      "location": "📍 2.5 miles away • Spice Market",
+      "verified": true,
+      "avatar": "🍲",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
+      "visualDescription": "Warm home cook serving fragrant tagine stew seasoned with saffron and almonds from a clay vessel.",
+      "interests": [
+        "#MoroccanTagine",
+        "#AromaticSpices",
+        "#SlowCooking"
+      ],
+      "anthem": "🎵 'Desert Rose' by Sting & Cheb Mami",
+      "film": "🎬 'The Hundred-Foot Journey' (Lasse Hallström)",
+      "pages": [
+        {
+          "tag": "🍲 Slow-Cooked Stews",
+          "bio": "I'm Amina, 28. I specialize in slow-cooked Moroccan tagines with chickpeas, tender lamb, apricot, and cinnamon. Slow cooking brings out deep, comforting flavors that warm the soul.",
+          "greenFlags": [
+            "✓ Rich flavorful dishes",
+            "✓ Traditional spice blending",
+            "✓ Patient culinary artisan"
+          ],
+          "redFlags": [
+            "✗ Cooking takes 4 hours",
+            "✗ Uses obscure spice mixes",
+            "✗ Dislikes quick microwaved meals"
+          ]
+        },
+        {
+          "tag": "🌿 Spice Explorer",
+          "bio": "I frequently visit local spice markets to source authentic saffron, cumin, and cardamom. Combining unusual savory and sweet elements creates memorable dining experiences.",
+          "greenFlags": [
+            "✓ Deep knowledge of spices",
+            "✓ Buys high-quality ingredients",
+            "✓ Creative sweet-savory combinations"
+          ],
+          "redFlags": [
+            "✗ Kitchen cabinet overflowing with jars",
+            "✗ Overwhelms guests with spice history",
+            "✗ Strict about ingredient origins"
+          ]
+        },
+        {
+          "tag": "🫖 Mint Tea Tradition",
+          "bio": "After dinner, I serve sweet fresh mint tea poured high into decorative glasses. Food is meant to be a slow, shared celebration rather than a rushed daily chore.",
+          "greenFlags": [
+            "✓ Hospitable tea ceremony",
+            "✓ Values meaningful meal conversations",
+            "✓ Warm welcoming host"
+          ],
+          "redFlags": [
+            "✗ Tea has a lot of sugar",
+            "✗ Dinner lasts past midnight",
+            "✗ Dislikes eating on the go"
+          ]
+        }
+      ],
+      "opener": "Hello! Do you prefer quick 15-minute meals or slow-cooked dishes with complex spices?",
+      "icebreakers": [
+        "Slow-cooked flavorful meals!",
+        "Quick and easy dinners!",
+        "I love fragrant mint tea!"
+      ],
+      "prompt": "Discuss Amina's approach to slow cooking and how spices elevate meal experiences."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Food & Cuisine 🍜",
+      "title": "Liam",
+      "age": "29",
+      "location": "📍 1 mile away • Greenbelt District",
+      "verified": true,
+      "avatar": "🥗",
+      "gradient": "linear-gradient(135deg, #15803d 0%, #4ade80 100%)",
+      "visualDescription": "Health-conscious farm-to-table enthusiast preparing a colorful organic Buddha bowl with quinoa and avocado.",
+      "interests": [
+        "#FarmToTable",
+        "#PlantBased",
+        "#OrganicProduce"
+      ],
+      "anthem": "🎵 'Sunflower' by Post Malone & Swae Lee",
+      "film": "🎬 'Forks Over Knives' (Lee Fulkerson)",
+      "pages": [
+        {
+          "tag": "🥗 Plant-Based Bowls",
+          "bio": "I'm Liam, 29. I advocate for sustainable farm-to-table eating. My kitchen is filled with colorful bowls of quinoa, roasted sweet potatoes, kale, and homemade tahini dressing.",
+          "greenFlags": [
+            "✓ Healthy balanced nutrition",
+            "✓ Eco-conscious food choices",
+            "✓ Delicious homemade dressings"
+          ],
+          "redFlags": [
+            "✗ Inspects produce for organic labels",
+            "✗ Complains about processed food",
+            "✗ Talks endlessly about kale"
+          ]
+        },
+        {
+          "tag": "🌱 Community Garden",
+          "bio": "I grow my own heirloom tomatoes, basil, and microgreens in a community garden plot. Eating produce harvested just an hour prior completely changes your perspective on food.",
+          "greenFlags": [
+            "✓ Grows fresh vegetables",
+            "✓ Active community member",
+            "✓ Passionate about freshness"
+          ],
+          "redFlags": [
+            "✗ Dirt under fingernails from gardening",
+            "✗ Gives guests unwashed tomatoes",
+            "✗ Dislikes grocery supermarket chains"
+          ]
+        },
+        {
+          "tag": "🍹 Green Smoothies",
+          "bio": "My mornings start with a nutrient-dense spinach, ginger, and spirulina smoothie. Staying healthy gives me boundless energy for outdoor hiking weekend trips.",
+          "greenFlags": [
+            "✓ High energy lifestyle",
+            "✓ Clean eating habits",
+            "✓ Creative smoothie recipes"
+          ],
+          "redFlags": [
+            "✗ Smoothies taste very earthy",
+            "✗ Loud blender noise at 6 AM",
+            "✗ Rejects birthday cakes"
+          ]
+        }
+      ],
+      "opener": "Hi! Are you interested in plant-based organic food or traditional comfort meals?",
+      "icebreakers": [
+        "Plant-based organic bowls!",
+        "Hearty traditional comfort food!",
+        "Fresh home-grown vegetables!"
+      ],
+      "prompt": "Explain Liam's farm-to-table philosophy and the benefits of organic plant-based diets."
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Food & Cuisine 🍜",
+      "title": "Antoine",
+      "age": "31",
+      "location": "📍 0.8 miles away • Michelin District",
+      "verified": true,
+      "avatar": "🍷",
+      "gradient": "linear-gradient(135deg, #475569 0%, #1e1b4b 100%)",
+      "visualDescription": "Sophisticated sommelier swirling a glass of Burgundy wine in an elegant dimly-lit fine dining restaurant.",
+      "interests": [
+        "#Gastronomy",
+        "#SommelierSelection",
+        "#FineDining"
+      ],
+      "anthem": "🎵 'Autumn Leaves' by Cannonball Adderley",
+      "film": "🎬 'Burnt' (John Wells)",
+      "pages": [
+        {
+          "tag": "🍷 Gastronomic Pairings",
+          "bio": "I'm Antoine, 31, a certified sommelier and culinary critic. I view gastronomy as an intricate art form where delicate flavor profiles, wine pairings, and ambient aesthetics harmonize to evoke emotion.",
+          "greenFlags": [
+            "✓ Exquisite wine pairings",
+            "✓ Deep culinary knowledge",
+            "✓ Sophisticated dining taste"
+          ],
+          "redFlags": [
+            "✗ Pretentious about vintage years",
+            "✗ Criticizes casual restaurant menus",
+            "✗ Expensive tasting menu habits"
+          ]
+        },
+        {
+          "tag": "🔪 Precision Techniques",
+          "bio": "In my spare time, I experiment with molecular gastronomy, sous-vide precision temperature cooking, and artisanal emulsifications. Cooking requires meticulous discipline and respect for raw ingredients.",
+          "greenFlags": [
+            "✓ Professional culinary mastery",
+            "✓ Uncompromising quality standards",
+            "✓ Fascinating food science knowledge"
+          ],
+          "redFlags": [
+            "✗ Spends 3 hours plating a single dish",
+            "✗ Expects perfection in every meal",
+            "✗ Uses complex kitchen gadgets"
+          ]
+        },
+        {
+          "tag": "🧀 Artisanal Heritage",
+          "bio": "I frequent small regional producers in France and Italy to source unpasteurized raw-milk cheeses, truffle oils, and rare heritage grains that preserve authentic culinary heritage.",
+          "greenFlags": [
+            "✓ Supports small artisanal producers",
+            "✓ Rich cultural appreciation",
+            "✓ Impeccable palate"
+          ],
+          "redFlags": [
+            "✗ Refuses commercial grocery brands",
+            "✗ Snobbish about cheese origins",
+            "✗ Hard to please at dinner parties"
+          ]
+        }
+      ],
+      "opener": "Greetings! Do you evaluate meals based on nostalgic comfort or refined gastronomic technique?",
+      "icebreakers": [
+        "Nostalgic comfort food!",
+        "Refined gastronomic artistry!",
+        "A perfect wine pairing!"
+      ],
+      "prompt": "Evaluate Antoine's perspective on fine dining, wine pairing, and molecular gastronomy."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Food & Cuisine 🍜",
+      "title": "Siddharth",
+      "age": "30",
+      "location": "📍 2 miles away • Culinary Hub",
+      "verified": true,
+      "avatar": "🍛",
+      "gradient": "linear-gradient(135deg, #b45309 0%, #78350f 100%)",
+      "visualDescription": "Innovative fusion chef tossing aromatic spices in a flaming wok, combining Indian and pan-Asian flavors.",
+      "interests": [
+        "#ModernFusion",
+        "#SpiceChemistry",
+        "#CulinaryInnovation"
+      ],
+      "anthem": "🎵 'Jai Ho' by A.R. Rahman",
+      "film": "🎬 'The Lunchbox' (Ritesh Batra)",
+      "pages": [
+        {
+          "tag": "🍛 Modern Culinary Fusion",
+          "bio": "I'm Siddharth, 30. As a modern fusion chef, I synthesize traditional Indian spice layering with contemporary Japanese and Nordic culinary methodologies, reimagining classic recipes for modern palates.",
+          "greenFlags": [
+            "✓ Boundary-pushing flavor concepts",
+            "✓ Deep mastery of spice science",
+            "✓ Visually stunning dish presentation"
+          ],
+          "redFlags": [
+            "✗ Experimental dishes don't always work",
+            "✗ Overcomplicates simple recipes",
+            "✗ Uses hard-to-find ingredients"
+          ]
+        },
+        {
+          "tag": "🔥 Tandoor & Wok Mastery",
+          "bio": "My culinary philosophy centers on smoke, acidity, and umami balance. Utilizing high-heat tandoor ovens alongside wok-searing allows me to achieve extraordinary textural contrasts.",
+          "greenFlags": [
+            "✓ Masterful heat control",
+            "✓ Complex layered flavor profiles",
+            "✓ Passionate food innovator"
+          ],
+          "redFlags": [
+            "✗ Sets off kitchen smoke alarms",
+            "✗ Leaves scorched pans to clean",
+            "✗ Cooks with intense fiery chili"
+          ]
+        },
+        {
+          "tag": "📜 Culinary Heritage",
+          "bio": "While I embrace modern innovation, my foundation relies on ancient spice-roasting techniques passed down through generations. Honoring tradition while breaking rules defines true creativity.",
+          "greenFlags": [
+            "✓ Deep respect for ancestral recipes",
+            "✓ Creative culinary storytelling",
+            "✓ Inspiring food philosophy"
+          ],
+          "redFlags": [
+            "✗ Debates food authenticity for hours",
+            "✗ Highly critical of fast-food chains",
+            "✗ Rigid opinions on spice grinding"
+          ]
+        }
+      ],
+      "opener": "Hello! Do you prefer respecting traditional regional recipes or exploring bold culinary fusion?",
+      "icebreakers": [
+        "Bold fusion innovations!",
+        "Strict traditional recipes!",
+        "Complex spice chemistry!"
+      ],
+      "prompt": "Analyze Siddharth's fusion philosophy and how he balances tradition with culinary innovation."
+    }
+  ]
+}
