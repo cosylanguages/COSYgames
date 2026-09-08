@@ -1,0 +1,2754 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Emma",
+      "age": "22",
+      "location": "📍 1 mile away • Garden District",
+      "verified": true,
+      "avatar": "🌅",
+      "gradient": "linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%)",
+      "visualDescription": "Bright early riser smiling with a cup of morning tea beside an open sunlit window.",
+      "interests": [
+        "#EarlyRiser",
+        "#MorningTea",
+        "#DailyWalks"
+      ],
+      "anthem": "🎵 'Here Comes the Sun' by The Beatles",
+      "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
+      "pages": [
+        {
+          "tag": "🌅 Early Mornings",
+          "bio": "Hi! I am Emma. I wake up early at 6 AM every day. I drink hot green tea and open my windows to let in fresh morning air.",
+          "greenFlags": [
+            "✓ Early morning energy",
+            "✓ Clean fresh room",
+            "✓ Positive start to the day"
+          ],
+          "redFlags": [
+            "✗ Goes to sleep at 9 PM",
+            "✗ Makes noise early in the morning",
+            "✗ Dislikes sleeping in"
+          ]
+        },
+        {
+          "tag": "🚶‍♀️ Daily Park Walk",
+          "bio": "After breakfast, I walk in the green park for 30 minutes. I listen to birds sing and say hello to neighbor dogs.",
+          "greenFlags": [
+            "✓ Daily walking habit",
+            "✓ Friendly to neighbors",
+            "✓ Enjoys green nature"
+          ],
+          "redFlags": [
+            "✗ Walks even in heavy rain",
+            "✗ Stops to pet every dog",
+            "✗ Dislikes riding buses"
+          ]
+        },
+        {
+          "tag": "📖 Bedtime Reading",
+          "bio": "Before I go to sleep, I read a simple book for 15 minutes. I turn off my phone and sleep very peacefully.",
+          "greenFlags": [
+            "✓ Healthy sleep habits",
+            "✓ No phone before bed",
+            "✓ Calm quiet evening"
+          ],
+          "redFlags": [
+            "✗ Falls asleep while reading",
+            "✗ Turns off lights early",
+            "✗ Dislikes late night parties"
+          ]
+        }
+      ],
+      "opener": "Hello! Are you an early morning bird or a late night owl?",
+      "icebreakers": [
+        "Early morning bird!",
+        "Late night owl!",
+        "Daily park walks!"
+      ],
+      "prompt": "Describe Emma's morning routine, walking habits, and early sleep schedule."
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Noah",
+      "age": "24",
+      "location": "📍 2 miles away • Downtown Loft",
+      "verified": true,
+      "avatar": "🌙",
+      "gradient": "linear-gradient(135deg, #312e81 0%, #6366f1 100%)",
+      "visualDescription": "Night owl working on a laptop with soft desk lamp lighting and music headphones.",
+      "interests": [
+        "#NightOwl",
+        "#LateNightSnacks",
+        "#EveningGym"
+      ],
+      "anthem": "🎵 'Blinding Lights' by The Weeknd",
+      "film": "🎬 'Night at the Museum' (Shawn Levy)",
+      "pages": [
+        {
+          "tag": "🌙 Night Owl",
+          "bio": "Hello! I am Noah. I like the night! I stay awake until 1 AM reading or playing games. Quiet nights are peaceful for me.",
+          "greenFlags": [
+            "✓ Great night company",
+            "✓ Calm quiet energy",
+            "✓ Creative late hours"
+          ],
+          "redFlags": [
+            "✗ Sleeps until 10 AM",
+            "✗ Misses early breakfasts",
+            "✗ Hard to wake up"
+          ]
+        },
+        {
+          "tag": "🏋️‍♂️ Evening Gym",
+          "bio": "I go to the gym at 8 PM after dinner. Lifting weights and running on the treadmill keeps me strong and healthy.",
+          "greenFlags": [
+            "✓ Regular fitness habit",
+            "✓ Gym active routines",
+            "✓ High evening strength"
+          ],
+          "redFlags": [
+            "✗ Gym clothes in laundry basket",
+            "✗ Drinks energy shakes late",
+            "✗ Eats dinner at midnight"
+          ]
+        },
+        {
+          "tag": "🍎 Daily Planning",
+          "bio": "Every evening, I write my simple to-do list for tomorrow in a notebook. Organizing my day helps me stay calm.",
+          "greenFlags": [
+            "✓ Organized daily planner",
+            "✓ Keeps things orderly",
+            "✓ Calm organized mind"
+          ],
+          "redFlags": [
+            "✗ Over-plans simple tasks",
+            "✗ Upset if plans change",
+            "✗ Keeps too many sticky notes"
+          ]
+        }
+      ],
+      "opener": "Hi! Do you prefer going to the gym in the morning or in the evening?",
+      "icebreakers": [
+        "Evening gym workout!",
+        "Morning exercise!",
+        "Late night peaceful gaming!"
+      ],
+      "prompt": "Talk about Noah's night owl habits, evening gym workout, and daily notebook planning."
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Anna",
+      "age": "20",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A0-A1Level",
+        "#Lifestyle9"
+      ],
+      "anthem": "🎵 'Shake It Off' by Taylor Swift",
+      "film": "🎬 'Paddington 2' (Paul King)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hello! I am Anna. I am 20 years old. I like simple daily routines, happy music, and meeting friendly people!",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Describe Anna. What does Anna like to do every day?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "David",
+      "age": "21",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👨",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A0-A1Level",
+        "#Lifestyle11"
+      ],
+      "anthem": "🎵 'Happy' by Pharrell Williams",
+      "film": "🎬 'Finding Nemo' (Pixar)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hello! I am David. I am 21 years old. I like simple daily routines, happy music, and meeting friendly people!",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Describe David. What does David like to do every day?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Sophia",
+      "age": "22",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🦱",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A0-A1Level",
+        "#Lifestyle13"
+      ],
+      "anthem": "🎵 'Sweet Caroline' by Neil Diamond",
+      "film": "🎬 'Chef' (Jon Favreau)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hello! I am Sophia. I am 22 years old. I like simple daily routines, happy music, and meeting friendly people!",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Describe Sophia. What does Sophia like to do every day?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Alex",
+      "age": "23",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🍳",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A0-A1Level",
+        "#Lifestyle15"
+      ],
+      "anthem": "🎵 'Fix You' by Coldplay",
+      "film": "🎬 'Patch Adams' (Tom Shadyac)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hello! I am Alex. I am 23 years old. I like simple daily routines, happy music, and meeting friendly people!",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Describe Alex. What does Alex like to do every day?"
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Chloe",
+      "age": "25",
+      "location": "📍 1.5 miles away • Wellness District",
+      "verified": true,
+      "avatar": "🧘‍♀️",
+      "gradient": "linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%)",
+      "visualDescription": "Serene yoga practitioner sitting on a mat doing morning stretching in a bright room with houseplants.",
+      "interests": [
+        "#YogaRoutine",
+        "#Mindfulness",
+        "#HealthySmoothies"
+      ],
+      "anthem": "🎵 'Unwritten' by Natasha Bedingfield",
+      "film": "🎬 'Eat Pray Love' (Ryan Murphy)",
+      "pages": [
+        {
+          "tag": "🧘‍♀️ Morning Yoga",
+          "bio": "Hi, I'm Chloe! Every morning at 7 AM I do 20 minutes of yoga and gentle stretching on my mat. Starting the day with deep breathing keeps me calm and focused.",
+          "greenFlags": [
+            "✓ Healthy mindful routine",
+            "✓ Flexible and physically fit",
+            "✓ Positive calm presence"
+          ],
+          "redFlags": [
+            "✗ Insists on quiet during yoga",
+            "✗ Yoga mat takes up room space",
+            "✗ Talks about chakra energy"
+          ]
+        },
+        {
+          "tag": "🥤 Fruit Smoothies",
+          "bio": "For breakfast, I blend fresh spinach, banana, almond milk, and chia seeds. Eating healthy whole foods gives me lasting energy throughout my workday.",
+          "greenFlags": [
+            "✓ Nutritious food choices",
+            "✓ Great smoothie recipes",
+            "✓ High natural energy"
+          ],
+          "redFlags": [
+            "✗ Loud blender at 7:30 AM",
+            "✗ Dislikes fast food options",
+            "✗ Spends a lot on organic chia"
+          ]
+        },
+        {
+          "tag": "🌿 Journaling Habit",
+          "bio": "Before sleeping, I write three things I am grateful for in my gratitude journal. Focusing on positive moments helps me sleep peacefully.",
+          "greenFlags": [
+            "✓ Gratitude mindset",
+            "✓ Reflective personal habits",
+            "✓ Emotionally balanced"
+          ],
+          "redFlags": [
+            "✗ Leaves journals everywhere",
+            "✗ Analyzes daily feelings deeply",
+            "✗ Strict 10 PM bedtime"
+          ]
+        }
+      ],
+      "opener": "Bonjour! Do you practice daily morning stretching or do you prefer a hot cup of coffee first?",
+      "icebreakers": [
+        "Morning yoga and stretching!",
+        "Strong hot coffee first!",
+        "Daily gratitude journaling!"
+      ],
+      "prompt": "Describe Chloe's morning yoga routine, healthy smoothie habits, and nightly journaling."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Ethan",
+      "age": "26",
+      "location": "📍 2.5 miles away • Tech Hub",
+      "verified": true,
+      "avatar": "⏱️",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+      "visualDescription": "Organized young professional checking a smartwatch while preparing a meal-prep container.",
+      "interests": [
+        "#TimeManagement",
+        "#MealPrep",
+        "#DigitalDetox"
+      ],
+      "anthem": "🎵 'Higher Love' by Kygo & Whitney Houston",
+      "film": "🎬 'The Pursuit of Happyness' (Gabriele Muccino)",
+      "pages": [
+        {
+          "tag": "⏱️ Structured Days",
+          "bio": "Hello! I'm Ethan, 26. I love structure and time management! I schedule my daily tasks using calendar apps and set reminders to stay organized.",
+          "greenFlags": [
+            "✓ Punctual and reliable",
+            "✓ Never forgets appointments",
+            "✓ Highly efficient habits"
+          ],
+          "redFlags": [
+            "✗ Panics if schedule changes",
+            "✗ Checks calendar 20 times a day",
+            "✗ Rigid time blocks"
+          ]
+        },
+        {
+          "tag": "🍱 Sunday Meal Prep",
+          "bio": "On Sunday afternoons, I cook healthy meals for the entire work week. Storing portioned containers of chicken, rice, and vegetables saves time and money.",
+          "greenFlags": [
+            "✓ Smart budget planner",
+            "✓ Always has healthy lunch",
+            "✓ Efficient kitchen skills"
+          ],
+          "redFlags": [
+            "✗ Eats same lunch 5 days in a row",
+            "✗ Refrigerator full of plastic tubs",
+            "✗ Refuses spontaneous dining"
+          ]
+        },
+        {
+          "tag": "📵 Digital Detox",
+          "bio": "I turn off all phone notifications after 8 PM every evening. Spending two hours screen-free reading or walking helps me rest my mind.",
+          "greenFlags": [
+            "✓ Healthy tech boundaries",
+            "✓ Present in conversations",
+            "✓ Better quality sleep"
+          ],
+          "redFlags": [
+            "✗ Unreachable after 8 PM",
+            "✗ Puts phone in a lockbox",
+            "✗ Critiques people on social media"
+          ]
+        }
+      ],
+      "opener": "Hi! Do you like organizing your week with meal prep or eating spontaneously?",
+      "icebreakers": [
+        "Organized Sunday meal prep!",
+        "Spontaneous daily eating!",
+        "Digital detox after 8 PM!"
+      ],
+      "prompt": "Write about Ethan's time management, weekly meal prep routine, and digital detox habits."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Freja",
+      "age": "24",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍💼",
+      "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle17"
+      ],
+      "anthem": "🎵 'Home' by Edward Sharpe",
+      "film": "🎬 '500 Days of Summer' (Marc Webb)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Freja! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Freja's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Marcus",
+      "age": "25",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🔬",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle19"
+      ],
+      "anthem": "🎵 'Wildflowers' by Tom Petty",
+      "film": "🎬 'The Secret Garden' (Marc Munden)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Marcus! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Marcus's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Aria",
+      "age": "26",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🎨",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f97316 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle21"
+      ],
+      "anthem": "🎵 'Count on Me' by Bruno Mars",
+      "film": "🎬 'Inside Out' (Pixar)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Aria! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Aria's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Soren",
+      "age": "27",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🌾",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #84cc16 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle23"
+      ],
+      "anthem": "🎵 'You\\'ve Got a Friend' by Carole King",
+      "film": "🎬 'Paddington' (Paul King)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Soren! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Soren's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Sienna",
+      "age": "28",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍💻",
+      "gradient": "linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle25"
+      ],
+      "anthem": "🎵 'Bicycle Race' by Queen",
+      "film": "🎬 'E.T. the Extra-Terrestrial' (Steven Spielberg)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Sienna! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Sienna's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Sebastian",
+      "age": "29",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🏫",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle27"
+      ],
+      "anthem": "🎵 'Sunflower' by Post Malone",
+      "film": "🎬 'A Bug\\'s Life' (Pixar)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Sebastian! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Sebastian's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Carmen",
+      "age": "30",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🎤",
+      "gradient": "linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle29"
+      ],
+      "anthem": "🎵 'Sukiyaki' by Kyu Sakamoto",
+      "film": "🎬 'Spirited Away' (Hayao Miyazaki)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Carmen! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Carmen's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Lars",
+      "age": "31",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "🏃‍♂️",
+      "gradient": "linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle31"
+      ],
+      "anthem": "🎵 'Volare' by Domenico Modugno",
+      "film": "🎬 'La Dolce Vita' (Federico Fellini)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Lars! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Lars's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Manon",
+      "age": "32",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "🏋️‍♀️",
+      "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle33"
+      ],
+      "anthem": "🎵 'Island in the Sun' by Weezer",
+      "film": "🎬 'Moana' (Clements & Musker)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Manon! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Manon's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Bjorn",
+      "age": "33",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "🧗‍♂️",
+      "gradient": "linear-gradient(135deg, #78350f 0%, #b45309 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle35"
+      ],
+      "anthem": "🎵 'Postcards' by James Blunt",
+      "film": "🎬 'Roman Holiday' (William Wyler)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Bjorn! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Bjorn's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Yasmin",
+      "age": "34",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "💃",
+      "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle37"
+      ],
+      "anthem": "🎵 'Can\\'t Stop the Feeling!' by Justin Timberlake",
+      "film": "🎬 'Toy Story' (John Lasseter)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Yasmin! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Yasmin's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Gael",
+      "age": "20",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "🧔",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle39"
+      ],
+      "anthem": "🎵 'Three Little Birds' by Bob Marley",
+      "film": "🎬 'School of Rock' (Richard Linklater)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Gael! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Gael's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Evelyn",
+      "age": "21",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🦰",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#A2Level",
+        "#Lifestyle41"
+      ],
+      "anthem": "🎵 'Here Comes the Sun' by The Beatles",
+      "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "Hi, I'm Evelyn! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Evelyn's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Sora",
+      "age": "27",
+      "location": "📍 1 mile away • Eco Village",
+      "verified": true,
+      "avatar": "🌱",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #65a30d 100%)",
+      "visualDescription": "Minimalist carrying reusable cotton totes and glass jars at a zero-waste neighborhood bulk shop.",
+      "interests": [
+        "#ZeroWasteLiving",
+        "#Minimalism",
+        "#SustainableHabits"
+      ],
+      "anthem": "🎵 'Big Yellow Taxi' by Joni Mitchell",
+      "film": "🎬 'Minimalism: A Documentary' (Matt D'Avella)",
+      "pages": [
+        {
+          "tag": "🌱 Zero-Waste Lifestyle",
+          "bio": "I'm Sora, 27. I practice a zero-waste lifestyle by shopping with reusable cloth bags and glass jars at bulk stores. Small daily choices collectively make a massive environmental impact.",
+          "greenFlags": [
+            "✓ Highly eco-conscious lifestyle",
+            "✓ Inspiring sustainable habits",
+            "✓ Reduced household waste"
+          ],
+          "redFlags": [
+            "✗ Inspects friends' recycling bins",
+            "✗ Carries heavy glass jars everywhere",
+            "✗ Rejects plastic packaging strictly"
+          ]
+        },
+        {
+          "tag": "🧹 Minimalist Home",
+          "bio": "I follow minimalist principles in my home environment. Owning fewer possessions reduces mental clutter and allows me to focus on meaningful experiences rather than material things.",
+          "greenFlags": [
+            "✓ Clean clutter-free living space",
+            "✓ Values experiences over stuff",
+            "✓ Mindful consumer habits"
+          ],
+          "redFlags": [
+            "✗ Apartment feels almost empty",
+            "✗ Donates items too quickly",
+            "✗ Dislikes receiving physical gifts"
+          ]
+        },
+        {
+          "tag": "🚲 Cycling Commute",
+          "bio": "I commute to work by bicycle year-round regardless of weather. Pedaling through urban streets keeps me physically fit while eliminating my transportation carbon footprint.",
+          "greenFlags": [
+            "✓ Zero-emission transportation",
+            "✓ Great physical endurance",
+            "✓ Outdoor daily activity"
+          ],
+          "redFlags": [
+            "✗ Arrives sweaty from cycling",
+            "✗ Bicycle parked in living room",
+            "✗ Complains about car drivers"
+          ]
+        }
+      ],
+      "opener": "Hello! Have you ever attempted a zero-waste challenge or embraced minimalist living?",
+      "icebreakers": [
+        "Minimalist living appeal!",
+        "Zero-waste daily habits!",
+        "Cycling commute year-round!"
+      ],
+      "prompt": "Discuss Sora's commitment to zero-waste habits, minimalism, and eco-friendly commuting."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Marcus",
+      "age": "29",
+      "location": "📍 1.8 miles away • Fitness Quarter",
+      "verified": true,
+      "avatar": "🏃‍♂️",
+      "gradient": "linear-gradient(135deg, #ea580c 0%, #dc2626 100%)",
+      "visualDescription": "Marathon runner lacing up running shoes at dawn on a misty riverfront track.",
+      "interests": [
+        "#MarathonTraining",
+        "#ColdShowers",
+        "#HabitTracking"
+      ],
+      "anthem": "🎵 'Eye of the Tiger' by Survivor",
+      "film": "🎬 'Precant' (Steve Prefontaine bio)",
+      "pages": [
+        {
+          "tag": "🏃‍♂️ Marathon Discipline",
+          "bio": "I'm Marcus, 29. I train for long-distance marathons by running 15 kilometers every morning at 5:30 AM. Developing physical endurance builds mental resilience for life's challenges.",
+          "greenFlags": [
+            "✓ Extraordinary self-discipline",
+            "✓ High physical fitness",
+            "✓ Determined goal-oriented mindset"
+          ],
+          "redFlags": [
+            "✗ Wakes up at 5 AM every single day",
+            "✗ Talks constantly about marathon times",
+            "✗ In bed asleep by 9:00 PM"
+          ]
+        },
+        {
+          "tag": "🧊 Cold Shower Habit",
+          "bio": "I take a 2-minute ice-cold shower every morning after running. It boosts circulation, sharpens focus, and instantly dispels morning sluggishness.",
+          "greenFlags": [
+            "✓ High mental alertness",
+            "✓ Health-boosting discipline",
+            "✓ Ready for work early"
+          ],
+          "redFlags": [
+            "✗ Screams under cold water",
+            "✗ Tries to convince everyone to try cold showers",
+            "✗ Strict wellness rituals"
+          ]
+        },
+        {
+          "tag": "📊 Habit Tracking App",
+          "bio": "I log my daily water intake, sleep hours, and running mileage in a habit tracking app. Seeing unbroken consistency streaks motivates me to push further.",
+          "greenFlags": [
+            "✓ Data-driven goal progress",
+            "✓ Consistent daily habits",
+            "✓ Well-organized routine"
+          ],
+          "redFlags": [
+            "✗ Obsessed with app streaks",
+            "✗ Disrupted if a streak breaks",
+            "✗ Measures everything in numbers"
+          ]
+        }
+      ],
+      "opener": "Hi! Do you thrive on strict disciplined routines or prefer a flexible, spontaneous day?",
+      "icebreakers": [
+        "Strict disciplined routines!",
+        "Flexible spontaneous days!",
+        "Morning marathon running!"
+      ],
+      "prompt": "Analyze Marcus's marathon training discipline, cold shower habit, and habit tracking."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Andre",
+      "age": "22",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍💼",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle43"
+      ],
+      "anthem": "🎵 'Blinding Lights' by The Weeknd",
+      "film": "🎬 'Night at the Museum' (Shawn Levy)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Andre, 29 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Andre's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Alina",
+      "age": "23",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🦳",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle45"
+      ],
+      "anthem": "🎵 'Levitating' by Dua Lipa",
+      "film": "🎬 'La La Land' (Damien Chazelle)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Alina, 30 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Alina's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Emil",
+      "age": "24",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🎨",
+      "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle47"
+      ],
+      "anthem": "🎵 'Smooth Operator' by Sade",
+      "film": "🎬 'The Devil Wears Prada' (David Frankel)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Emil, 31 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Emil's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Sarah",
+      "age": "25",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🍳",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle49"
+      ],
+      "anthem": "🎵 'Colors' by Halsey",
+      "film": "🎬 'Inception' (Christopher Nolan)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Sarah, 32 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Sarah's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "David",
+      "age": "26",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍💻",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f97316 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle51"
+      ],
+      "anthem": "🎵 'Coffee & TV' by Blur",
+      "film": "🎬 'Father of the Bride' (Charles Shyer)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm David, 33 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss David's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Maya",
+      "age": "27",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🔬",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #84cc16 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle53"
+      ],
+      "anthem": "🎵 'Midnight City' by M83",
+      "film": "🎬 'The Social Network' (David Fincher)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Maya, 34 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Maya's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Alex",
+      "age": "28",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🎤",
+      "gradient": "linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle55"
+      ],
+      "anthem": "🎵 'Our House' by Madness",
+      "film": "🎬 'Ferris Bueller\\'s Day Off' (John Hughes)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Alex, 35 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Alex's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Chloe",
+      "age": "29",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🌾",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle57"
+      ],
+      "anthem": "🎵 'Unstoppable' by Sia",
+      "film": "🎬 'Julie & Julia' (Nora Ephron)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Chloe, 24 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Chloe's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Marcus",
+      "age": "30",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "🏋️‍♂️",
+      "gradient": "linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle59"
+      ],
+      "anthem": "🎵 'Best Day of My Life' by American Authors",
+      "film": "🎬 'The Secret Life of Walter Mitty' (Ben Stiller)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Marcus, 25 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Marcus's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Nora",
+      "age": "31",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🏫",
+      "gradient": "linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle61"
+      ],
+      "anthem": "🎵 'Banana Pancakes' by Jack Johnson",
+      "film": "🎬 'Coco' (Pixar)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Nora, 26 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Nora's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Soren",
+      "age": "32",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "🚴‍♂️",
+      "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle63"
+      ],
+      "anthem": "🎵 'Photograph' by Ed Sheeran",
+      "film": "🎬 'Another Round' (Thomas Vinterberg)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Soren, 27 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Soren's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Valerie",
+      "age": "33",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "🏃‍♀️",
+      "gradient": "linear-gradient(135deg, #78350f 0%, #b45309 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B1Level",
+        "#Lifestyle65"
+      ],
+      "anthem": "🎵 'Cielito Lindo' by Mariachi Vargas",
+      "film": "🎬 'Chocolat' (Lasse Hallström)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Valerie, 28 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Valerie's main interests and explain why this lifestyle appeals to them."
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Valerie",
+      "age": "30",
+      "location": "📍 0.7 miles away • Executive Suites",
+      "verified": true,
+      "avatar": "⏳",
+      "gradient": "linear-gradient(135deg, #334155 0%, #0f172a 100%)",
+      "visualDescription": "Focused executive practicing deep work techniques at a minimal wooden desk with an hourglass.",
+      "interests": [
+        "#DeepWorkFocus",
+        "#CircadianOptimization",
+        "#StoicPhilosophy"
+      ],
+      "anthem": "🎵 'Experience' by Ludovico Einaudi",
+      "film": "🎬 'Limitless' (Neil Burger)",
+      "pages": [
+        {
+          "tag": "⏳ Deep Work Blocks",
+          "bio": "I'm Valerie, 30. As a strategy consultant, I structure my workday around uninterrupted 90-minute 'deep work' blocks, eliminating notifications to maximize cognitive output and flow state.",
+          "greenFlags": [
+            "✓ Exceptional cognitive focus",
+            "✓ High professional productivity",
+            "✓ Respects time boundaries"
+          ],
+          "redFlags": [
+            "✗ Ignores messages during focus blocks",
+            "✗ Strict no-interruptions rule",
+            "✗ Intense work atmosphere"
+          ]
+        },
+        {
+          "tag": "☀️ Circadian Rhythm",
+          "bio": "I optimize my circadian rhythm by getting direct sunlight exposure within 15 minutes of waking, delaying caffeine intake by two hours, and using dim red light spectrums before sleep.",
+          "greenFlags": [
+            "✓ Science-backed health optimization",
+            "✓ High sustained energy levels",
+            "✓ Excellent sleep hygiene"
+          ],
+          "redFlags": [
+            "✗ Explains neurobiology behind coffee",
+            "✗ Wears blue-light blocking glasses",
+            "✗ Rigid evening light rules"
+          ]
+        },
+        {
+          "tag": "📜 Stoic Reflection",
+          "bio": "Every evening I practice Stoic journaling, reflecting on what was within my control and mentally rehearsing potential challenges for the upcoming day to cultivate emotional tranquility.",
+          "greenFlags": [
+            "✓ Emotional resilience and composure",
+            "✓ Deep philosophical maturity",
+            "✓ Calm under crisis"
+          ],
+          "redFlags": [
+            "✗ Stoic detachment can seem cold",
+            "✗ Overly rational problem solving",
+            "✗ High self-expectation standards"
+          ]
+        }
+      ],
+      "opener": "Greetings! Do you design your daily habits around scientific biohacking or intuitive flexibility?",
+      "icebreakers": [
+        "Scientific biohacking optimization!",
+        "Intuitive flexible living!",
+        "Deep work focus blocks!"
+      ],
+      "prompt": "Evaluate Valerie's deep work methodologies, circadian rhythm optimization, and Stoic philosophy."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Gabriel",
+      "age": "32",
+      "location": "📍 1.6 miles away • Creative Studio",
+      "verified": true,
+      "avatar": "🎨",
+      "gradient": "linear-gradient(135deg, #c026d3 0%, #7e22ce 100%)",
+      "visualDescription": "Artistic polymath sketching ideas in a leather journal at a sunlit wooden table surrounded by plants.",
+      "interests": [
+        "#SlowLiving",
+        "#PolymorphicRoutines",
+        "#ArtisanalCraft"
+      ],
+      "anthem": "🎵 'Rivers and Roads' by The Head and the Heart",
+      "film": "🎬 'Paterson' (Jim Jarmusch)",
+      "pages": [
+        {
+          "tag": "🌿 Slow Living Ethos",
+          "bio": "I'm Gabriel, 32. I embrace a slow-living lifestyle that intentionally resists hyper-productivity culture, choosing instead to savor contemplative morning espresso rituals and artisanal craftsmanship.",
+          "greenFlags": [
+            "✓ Mindful peaceful lifestyle",
+            "✓ Resists burnout pressure",
+            "✓ Deep appreciation for craftsmanship"
+          ],
+          "redFlags": [
+            "✗ Refuses to rush for deadlines",
+            "✗ Takes 45 minutes to brew coffee",
+            "✗ Dislikes fast-paced corporate life"
+          ]
+        },
+        {
+          "tag": "📚 Polymorphic Routines",
+          "bio": "Rather than rigid schedules, my routines adapt fluidly to seasonal cycles and creative moods—focusing on writing in autumn and outdoor woodworking during summer months.",
+          "greenFlags": [
+            "✓ Highly adaptable creative flow",
+            "✓ Harmonious seasonal living",
+            "✓ Diverse artistic pursuits"
+          ],
+          "redFlags": [
+            "✗ Hard to fix exact meeting times",
+            "✗ Unpredictable daily schedule",
+            "✗ Changes focus frequently"
+          ]
+        },
+        {
+          "tag": "🕯️ Evening Unplugging",
+          "bio": "My evenings involve candlelit dinners, vinyl listening sessions, and manual fountain pen journaling—fostering authentic tactile connections in an increasingly digitized society.",
+          "greenFlags": [
+            "✓ Warm tactile atmosphere",
+            "✓ Deep authentic connection",
+            "✓ Unique artistic lifestyle"
+          ],
+          "redFlags": [
+            "✗ Refuses smart home tech",
+            "✗ Candle wax on wooden tables",
+            "✗ Romanticizes old-fashioned ways"
+          ]
+        }
+      ],
+      "opener": "Hello! Do you lean toward optimizing daily efficiency or embracing the art of slow, seasonal living?",
+      "icebreakers": [
+        "Embracing slow seasonal living!",
+        "Optimizing daily efficiency!",
+        "Contemplative morning coffee!"
+      ],
+      "prompt": "Analyze Gabriel's slow living philosophy, polymorphic routines, and tactile evening rituals."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Sebastian",
+      "age": "34",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "🕺",
+      "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle67"
+      ],
+      "anthem": "🎵 '7 Years' by Lukas Graham",
+      "film": "🎬 'Into the Wild' (Sean Penn)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Sebastian. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Sebastian's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Astrid",
+      "age": "20",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle69"
+      ],
+      "anthem": "🎵 'La Vie en Rose' by Édith Piaf",
+      "film": "🎬 'Before Sunrise' (Richard Linklater)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Astrid. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Astrid's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Lars",
+      "age": "21",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👨",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle71"
+      ],
+      "anthem": "🎵 'Oye Como Va' by Santana",
+      "film": "🎬 'Lord of the Rings' (Peter Jackson)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Lars. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Lars's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Ingrid",
+      "age": "22",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🦱",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle73"
+      ],
+      "anthem": "🎵 'I\\'m Gonna Be (500 Miles)' by The Proclaimers",
+      "film": "🎬 'Eat Pray Love' (Ryan Murphy)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Ingrid. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Ingrid's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Bjorn",
+      "age": "23",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🍳",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle75"
+      ],
+      "anthem": "🎵 'Fast Car' by Tracy Chapman",
+      "film": "🎬 'The Pursuit of Happyness' (Gabriele Muccino)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Bjorn. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Bjorn's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Ines",
+      "age": "24",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍💼",
+      "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle77"
+      ],
+      "anthem": "🎵 'Dreams' by Fleetwood Mac",
+      "film": "🎬 'Frida' (Julie Taymor)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Ines. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Ines's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Gael",
+      "age": "25",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🔬",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle79"
+      ],
+      "anthem": "🎵 'Don\\'t Stop Believin\\'' by Journey",
+      "film": "🎬 'The Matrix' (The Wachowskis)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Gael. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Gael's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Flora",
+      "age": "26",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🎨",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f97316 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle81"
+      ],
+      "anthem": "🎵 'Unwritten' by Natasha Bedingfield",
+      "film": "🎬 'Spotlight' (Tom McCarthy)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Flora. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Flora's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Andre",
+      "age": "27",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🌾",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #84cc16 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle83"
+      ],
+      "anthem": "🎵 'Higher Love' by Kygo & Whitney Houston",
+      "film": "🎬 'The Grand Budapest Hotel' (Wes Anderson)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Andre. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Andre's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Lina",
+      "age": "28",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍💻",
+      "gradient": "linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle85"
+      ],
+      "anthem": "🎵 'Dog Days Are Over' by Florence + The Machine",
+      "film": "🎬 'Mary Poppins Returns' (Rob Marshall)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Lina. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Lina's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Emil",
+      "age": "29",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🏫",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle87"
+      ],
+      "anthem": "🎵 'Take Me Home, Country Roads' by John Denver",
+      "film": "🎬 'Good Will Hunting' (Gus Van Sant)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Emil. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Emil's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "Lily",
+      "age": "30",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🎤",
+      "gradient": "linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle89"
+      ],
+      "anthem": "🎵 'Digital Love' by Daft Punk",
+      "film": "🎬 'Wonder' (Stephen Chbosky)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm Lily. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Lily's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Daily Routines & Habits 🌅",
+      "title": "David",
+      "age": "31",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "🏃‍♂️",
+      "gradient": "linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Daily_habits",
+        "#B2Level",
+        "#Lifestyle91"
+      ],
+      "anthem": "🎵 'Blowin\\' in the Wind' by Bob Dylan",
+      "film": "🎬 'Free Solo' (Jimmy Chin)",
+      "pages": [
+        {
+          "tag": "🖼️ Morning Routine",
+          "bio": "I'm David. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daytime Habits",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze David's perspective and evaluate the trade-offs involved in their personal choices."
+    }
+  ]
+}
