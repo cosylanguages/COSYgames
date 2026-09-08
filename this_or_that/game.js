@@ -1337,6 +1337,137 @@
         ],
         "prompt": "Talk about Noah's night owl habits, evening gym workout, and daily notebook planning."
       }
+    ],
+    "grammar_present": [
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Grammar: Present Simple 🎯",
+        "grammarTarget": "Present Simple",
+        "title": "Emma (Daily Routine)",
+        "age": "22",
+        "location": "📍 London • City Center",
+        "verified": true,
+        "avatar": "👩‍🍳",
+        "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+        "visualDescription": "Friendly baker wearing a white apron holding fresh toast and hot coffee in a bright morning kitchen.",
+        "interests": [
+          "#PresentSimple",
+          "#DailyRoutine",
+          "#Habits"
+        ],
+        "anthem": "🎵 'Here Comes the Sun' by The Beatles",
+        "film": "🎬 'Chef' (Jon Favreau)",
+        "pages": [
+          {
+            "tag": "🎯 Present Simple Bio",
+            "bio": "I am a baker. I live in London. I wake up at 6 AM every day, eat fresh toast, and drink hot coffee. I love my morning routine!",
+            "greenFlags": [
+              "✓ Clear daily habit model",
+              "✓ Uses 'I wake up / I live'",
+              "✓ Easy A0-A1 vocabulary"
+            ],
+            "redFlags": [
+              "✗ Wakes up very early",
+              "✗ Drinks 3 coffees daily",
+              "✗ Never sleeps in"
+            ]
+          }
+        ],
+        "opener": "Hello! I wake up at 6 AM every day. What time do you wake up?",
+        "icebreakers": [
+          "I wake up at 7 AM!",
+          "I drink hot tea in the morning!",
+          "I live in a big city!"
+        ],
+        "prompt": "Prompt (Present Simple): Describe your daily routine. What do you do every morning?"
+      },
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Grammar: Present Continuous 🎯",
+        "grammarTarget": "Present Continuous",
+        "title": "Liam (Right Now)",
+        "age": "24",
+        "location": "📍 Park Avenue • Right Now",
+        "verified": true,
+        "avatar": "🧥",
+        "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+        "visualDescription": "Young man standing near a park in a red jacket holding a steaming mug under gentle rain.",
+        "interests": [
+          "#PresentContinuous",
+          "#CurrentActions",
+          "#RightNow"
+        ],
+        "anthem": "🎵 'Singin' in the Rain' by Gene Kelly",
+        "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
+        "pages": [
+          {
+            "tag": "🎯 Present Continuous Bio",
+            "bio": "Look at me! I am standing near the park right now. I am wearing a bright red jacket and I am drinking warm cocoa. Rain is falling gently.",
+            "greenFlags": [
+              "✓ Models 'I am -ing'",
+              "✓ Describes current visual state",
+              "✓ High situational clarity"
+            ],
+            "redFlags": [
+              "✗ Standing in the rain",
+              "✗ Cocoa gets cold quickly",
+              "✗ Forgot his umbrella"
+            ]
+          }
+        ],
+        "opener": "Hi! I am drinking warm cocoa right now. What are you doing at this moment?",
+        "icebreakers": [
+          "I am wearing blue jeans!",
+          "I am studying English right now!",
+          "I am sitting in a cafe!"
+        ],
+        "prompt": "Prompt (Present Continuous): What are you wearing right now? What is happening around you?"
+      },
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Grammar: Can & Cannot 🎯",
+        "grammarTarget": "Can / Cannot",
+        "title": "Alex (Abilities)",
+        "age": "21",
+        "location": "📍 Music Studio • River Park",
+        "verified": true,
+        "avatar": "🎸",
+        "gradient": "linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%)",
+        "visualDescription": "Enthusiastic musician with an acoustic guitar sitting in a sunny park.",
+        "interests": [
+          "#CanPlayGuitar",
+          "#CannotSwim",
+          "#Abilities"
+        ],
+        "anthem": "🎵 'You've Got a Friend' by Carole King",
+        "film": "🎬 'School of Rock' (Richard Linklater)",
+        "pages": [
+          {
+            "tag": "🎯 Can / Cannot Bio",
+            "bio": "I am Alex. I can play the acoustic guitar very well and I can sing simple songs, but I cannot swim fast or drive a car.",
+            "greenFlags": [
+              "✓ Models 'I can / I cannot'",
+              "✓ Clear ability expressions",
+              "✓ Simple A0-A1 structure"
+            ],
+            "redFlags": [
+              "✗ Cannot swim across the pool",
+              "✗ Cannot drive to rehearsals",
+              "✗ Plays guitar late"
+            ]
+          }
+        ],
+        "opener": "Hi! I can play the guitar, but I cannot swim fast. What can you do?",
+        "icebreakers": [
+          "I can speak two languages!",
+          "I can cook Italian pasta!",
+          "I cannot play guitar, but I can sing!"
+        ],
+        "prompt": "Prompt (Can / Cannot): Name two things you can do well and one thing you cannot do."
+      }
     ]
   },
   "A2": {
@@ -2646,6 +2777,139 @@
           "Digital detox after 8 PM!"
         ],
         "prompt": "Write about Ethan's time management, weekly meal prep routine, and digital detox habits."
+      }
+    ],
+    "grammar_past": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Grammar: Past Simple 🎯",
+        "grammarTarget": "Past Simple",
+        "title": "Marco (Rome Vacation)",
+        "age": "25",
+        "location": "📍 Rome, Italy • Last Summer",
+        "verified": true,
+        "avatar": "🏛️",
+        "gradient": "linear-gradient(135deg, #16a34a 0%, #facc15 100%)",
+        "visualDescription": "Smiling traveler holding a gelato near the Colosseum in Rome.",
+        "interests": [
+          "#PastSimple",
+          "#VisitedRome",
+          "#CompletedEvents"
+        ],
+        "anthem": "🎵 'Volare' by Domenico Modugno",
+        "film": "🎬 'Roman Holiday' (William Wyler)",
+        "pages": [
+          {
+            "tag": "🎯 Past Simple Bio",
+            "bio": "Last summer, I visited Rome. I walked near historic fountains, ate delicious gelato, and learned how to bake sourdough pizza.",
+            "greenFlags": [
+              "✓ Regular and irregular past verbs",
+              "✓ Models completed past events",
+              "✓ Clear A2 storytelling"
+            ],
+            "redFlags": [
+              "✗ Lost his map in Rome",
+              "✗ Ate gelato 3 times a day",
+              "✗ Missed his train home"
+            ]
+          }
+        ],
+        "opener": "Ciao! Last summer I visited Rome and learned to bake pizza. Where did you go on your last holiday?",
+        "icebreakers": [
+          "Last summer I traveled to the beach!",
+          "I stayed home and read great books!",
+          "I visited my grandparents in the countryside!"
+        ],
+        "prompt": "Prompt (Past Simple): Tell a short story about your last vacation. Where did you go and what did you do?"
+      }
+    ],
+    "grammar_present": [
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Grammar: Future 'Going to' vs 'Will' 🎯",
+        "grammarTarget": "Going to / Will",
+        "title": "Sofia (Future Plans)",
+        "age": "26",
+        "location": "📍 Barcelona • Upcoming Move",
+        "verified": true,
+        "avatar": "✈️",
+        "gradient": "linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)",
+        "visualDescription": "Optimistic woman packing a suitcase with travel maps of Spain on the table.",
+        "interests": [
+          "#FutureGoingTo",
+          "#WillPredictions",
+          "#FuturePlans"
+        ],
+        "anthem": "🎵 'Unstoppable' by Sia",
+        "film": "🎬 'Vicky Cristina Barcelona' (Woody Allen)",
+        "pages": [
+          {
+            "tag": "🎯 Going to / Will Bio",
+            "bio": "I am going to move to Barcelona next month! I have already rented an apartment. I think I will host a dinner party for my new neighbors when I arrive.",
+            "greenFlags": [
+              "✓ Distinguishes intention ('going to') vs prediction ('will')",
+              "✓ Practical future context",
+              "✓ Clear A2 grammar structure"
+            ],
+            "redFlags": [
+              "✗ Packed 4 heavy suitcases",
+              "✗ Spends money on moving",
+              "✗ Nervous about Spanish grammar"
+            ]
+          }
+        ],
+        "opener": "Hola! I am going to move to Barcelona next month. What are you going to do next weekend?",
+        "icebreakers": [
+          "I am going to visit a museum!",
+          "I will call my best friend tonight!",
+          "I am going to relax at home!"
+        ],
+        "prompt": "Prompt (Going to / Will): Share one definite plan you are going to do soon, and one prediction about your future."
+      },
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Grammar: Comparatives & Superlatives 🎯",
+        "grammarTarget": "Comparatives",
+        "title": "Leo (Flat Comparison)",
+        "age": "24",
+        "location": "📍 Downtown vs Suburbs",
+        "verified": true,
+        "avatar": "🏢",
+        "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+        "visualDescription": "Young architect comparing floor plans of city flats and suburban houses.",
+        "interests": [
+          "#Comparatives",
+          "#Superlatives",
+          "#ComparingOptions"
+        ],
+        "anthem": "🎵 'Our House' by Madness",
+        "film": "🎬 '500 Days of Summer' (Marc Webb)",
+        "pages": [
+          {
+            "tag": "🎯 Comparatives Bio",
+            "bio": "My new flat is quieter and brighter than my old downtown studio. It is also closer to the park, but it is slightly more expensive.",
+            "greenFlags": [
+              "✓ Models -er / more than",
+              "✓ Compares housing features clearly",
+              "✓ Daily life comparison"
+            ],
+            "redFlags": [
+              "✗ Slightly more expensive rent",
+              "✗ Farther from his office",
+              "✗ Smaller kitchen"
+            ]
+          }
+        ],
+        "opener": "Hi! My new flat is quieter and brighter than my old one. Is your home bigger or smaller than your work office?",
+        "icebreakers": [
+          "My home is much quieter than my office!",
+          "City flats are more convenient than suburban houses!",
+          "My town is sunnier in summer!"
+        ],
+        "prompt": "Prompt (Comparatives): Compare two places or options (e.g. your city vs another city, or coffee vs tea)."
       }
     ]
   },
@@ -3971,6 +4235,141 @@
         ],
         "prompt": "Analyze Marcus's marathon training discipline, cold shower habit, and habit tracking."
       }
+    ],
+    "grammar_perfect": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Grammar: Present Perfect 🎯",
+        "grammarTarget": "Present Perfect",
+        "title": "Aria (World Traveler)",
+        "age": "28",
+        "location": "📍 Tokyo • Kyoto • Global",
+        "verified": true,
+        "avatar": "🌍",
+        "gradient": "linear-gradient(135deg, #059669 0%, #10b981 100%)",
+        "visualDescription": "Travel writer holding a passport stamped with entry seals from around the world.",
+        "interests": [
+          "#PresentPerfect",
+          "#LifeExperiences",
+          "#Traveled"
+        ],
+        "anthem": "🎵 'Wonderwall' by Oasis",
+        "film": "🎬 'Lost in Translation' (Sofia Coppola)",
+        "pages": [
+          {
+            "tag": "🎯 Present Perfect Bio",
+            "bio": "I have traveled to 15 countries and I have lived in Tokyo for two years. I have never eaten raw sea urchin, but I have tried hot matcha tea!",
+            "greenFlags": [
+              "✓ Models 'have + past participle'",
+              "✓ Life experience expressions",
+              "✓ Perfect B1 grammar model"
+            ],
+            "redFlags": [
+              "✗ Lost her passport once in Tokyo",
+              "✗ Has forgotten her hotel address",
+              "✗ Has missed 2 flights"
+            ]
+          }
+        ],
+        "opener": "Hello! I have traveled to 15 countries. How many countries or new cities have you visited?",
+        "icebreakers": [
+          "I have visited 3 foreign countries!",
+          "I have lived in my city for ten years!",
+          "I have never tried raw sea urchin!"
+        ],
+        "prompt": "Prompt (Present Perfect): Mention three life experiences you have had and one thing you have never done."
+      }
+    ],
+    "grammar_past": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Grammar: Past Continuous vs Simple 🎯",
+        "grammarTarget": "Past Continuous",
+        "title": "Diego (Interrupted Story)",
+        "age": "27",
+        "location": "📍 Swiss Alps • Alpine Trail",
+        "verified": true,
+        "avatar": "🏔️",
+        "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+        "visualDescription": "Hiker in an orange jacket resting on a mountain pass after meeting a mountain guide.",
+        "interests": [
+          "#PastContinuous",
+          "#InterruptedPast",
+          "#Storytelling"
+        ],
+        "anthem": "🎵 'Take Me Home, Country Roads' by John Denver",
+        "film": "🎬 'Into the Wild' (Sean Penn)",
+        "pages": [
+          {
+            "tag": "🎯 Interrupted Past Bio",
+            "bio": "I was hiking in the Swiss Alps when I met a friendly local guide. Rain was starting to fall while we were sharing warm tea inside a mountain refuge.",
+            "greenFlags": [
+              "✓ Contrasts 'was -ing' with Past Simple 'met'",
+              "✓ Rich storytelling background",
+              "✓ Authentic B1 narrative"
+            ],
+            "redFlags": [
+              "✗ Thunderstorm started during hike",
+              "✗ Muddy boots",
+              "✗ Trail was slippery"
+            ]
+          }
+        ],
+        "opener": "Hi! I was hiking in the Alps when a sudden rainstorm started. What were you doing when you got your last surprise message?",
+        "icebreakers": [
+          "I was reading a book when my friend called!",
+          "I was walking home when it started raining!",
+          "I was cooking dinner when the lights went out!"
+        ],
+        "prompt": "Prompt (Past Continuous vs Past Simple): Describe an event where something unexpected happened while you were doing a routine action."
+      }
+    ],
+    "grammar_advanced": [
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Grammar: Conditionals 🎯",
+        "grammarTarget": "Conditionals",
+        "title": "Nora (Hypothetical Choices)",
+        "age": "26",
+        "location": "📍 Creative Studio",
+        "verified": true,
+        "avatar": "🎻",
+        "gradient": "linear-gradient(135deg, #7c3aed 0%, #c084fc 100%)",
+        "visualDescription": "Violinist looking thoughtfully at an acoustic sheet music score.",
+        "interests": [
+          "#FirstConditional",
+          "#SecondConditional",
+          "#Hypotheticals"
+        ],
+        "anthem": "🎵 'Viva La Vida' by Coldplay",
+        "film": "🎬 'La La Land' (Damien Chazelle)",
+        "pages": [
+          {
+            "tag": "🎯 Conditionals Bio",
+            "bio": "If I have more free time this weekend, I will practice classical violin. If I won the lottery tomorrow, I would buy a historic house near the sea and build a music hall.",
+            "greenFlags": [
+              "✓ Models 1st ('If + present, will') and 2nd ('If + past, would')",
+              "✓ Expresses real and hypothetical choices",
+              "✓ Clear B1 structure"
+            ],
+            "redFlags": [
+              "✗ Violin practice takes hours",
+              "✗ Dreams about lottery wins",
+              "✗ High noise during rehearsals"
+            ]
+          }
+        ],
+        "opener": "Hello! If you won a free plane ticket right now, where would you fly?",
+        "icebreakers": [
+          "If I won a ticket, I would fly to Tokyo!",
+          "If the weather is nice tomorrow, I will go to the park!",
+          "If I had more time, I would learn classical violin!"
+        ],
+        "prompt": "Prompt (First & Second Conditionals): What will you do if it rains tomorrow? What would you do if you had six months of paid leave?"
+      }
     ]
   },
   "B2": {
@@ -5295,6 +5694,184 @@
         ],
         "prompt": "Analyze Gabriel's slow living philosophy, polymorphic routines, and tactile evening rituals."
       }
+    ],
+    "grammar_perfect": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Grammar: Present Perfect Continuous 🎯",
+        "grammarTarget": "Present Perfect Cont.",
+        "title": "Dr. Aris (Ongoing Research)",
+        "age": "33",
+        "location": "📍 Innovation Campus • AI Lab",
+        "verified": true,
+        "avatar": "🤖",
+        "gradient": "linear-gradient(135deg, #4338ca 0%, #6366f1 100%)",
+        "visualDescription": "AI researcher working on ethics charts at a high-tech standing desk.",
+        "interests": [
+          "#PresentPerfectContinuous",
+          "#OngoingDuration",
+          "#TechEthics"
+        ],
+        "anthem": "🎵 'Computer World' by Kraftwerk",
+        "film": "🎬 'Ex Machina' (Alex Garland)",
+        "pages": [
+          {
+            "tag": "🎯 Present Perfect Cont. Bio",
+            "bio": "I have been researching artificial intelligence ethics for five years. Lately, I have been writing policy guidelines to ensure algorithms remain fair and transparent.",
+            "greenFlags": [
+              "✓ Models 'have been + -ing' for duration",
+              "✓ Focuses on ongoing long-term action",
+              "✓ Sophisticated B2 phrasing"
+            ],
+            "redFlags": [
+              "✗ Has been working late every night",
+              "✗ Over-analyzes simple software",
+              "✗ Debates ethical dilemmas at dinner"
+            ]
+          }
+        ],
+        "opener": "Greetings! I have been researching AI ethics for five years. What hobby or project have you been pursuing recently?",
+        "icebreakers": [
+          "I have been learning English for two years!",
+          "I have been practicing piano recently!",
+          "I have been researching sustainable design!"
+        ],
+        "prompt": "Prompt (Present Perfect Continuous): What skill, career path, or hobby have you been developing over the past few years?"
+      }
+    ],
+    "grammar_past": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Grammar: Past Perfect & Sequences 🎯",
+        "grammarTarget": "Past Perfect",
+        "title": "Victoria (Career Sequence)",
+        "age": "29",
+        "location": "📍 Paris • Metropolitan Bureau",
+        "verified": true,
+        "avatar": "🏛️",
+        "gradient": "linear-gradient(135deg, #0f172a 0%, #334155 100%)",
+        "visualDescription": "Architect reviewing historical blueprints before a boardroom restoration presentation.",
+        "interests": [
+          "#PastPerfect",
+          "#NarrativeSequence",
+          "#PriorEvents"
+        ],
+        "anthem": "🎵 'Vogue' by Madonna",
+        "film": "🎬 'The Grand Budapest Hotel' (Wes Anderson)",
+        "pages": [
+          {
+            "tag": "🎯 Past Perfect Bio",
+            "bio": "Before I moved to Paris, I had completed my degree in architecture and I had worked in Milan for three years. By the time the restoration project began, our team had already finalized the designs.",
+            "greenFlags": [
+              "✓ Models 'had + past participle' before another past event",
+              "✓ Structured narrative timeline",
+              "✓ Upper-intermediate B2 precision"
+            ],
+            "redFlags": [
+              "✗ Strict schedule expectations",
+              "✗ High workload before deadlines",
+              "✗ Demanding presentation style"
+            ]
+          }
+        ],
+        "opener": "Hello! Before I moved to Paris, I had completed my architecture degree. What had you accomplished before you started your current job?",
+        "icebreakers": [
+          "Before this year, I had lived in three different cities!",
+          "I had studied business before I switched to design!",
+          "By the time I graduated, I had already learned two languages!"
+        ],
+        "prompt": "Prompt (Past Perfect): Describe two past events in sequence using 'had + past participle' for the earlier event."
+      }
+    ],
+    "grammar_advanced": [
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Grammar: Mixed Conditionals & Regrets 🎯",
+        "grammarTarget": "Third Conditional",
+        "title": "Sebastian (Unreal Past)",
+        "age": "32",
+        "location": "📍 Maritime Marina • Aegean Sea",
+        "verified": true,
+        "avatar": "⛵",
+        "gradient": "linear-gradient(135deg, #0369a1 0%, #0284c7 100%)",
+        "visualDescription": "Skipper looking at weather forecasts before an open-sea sailing trip.",
+        "interests": [
+          "#ThirdConditional",
+          "#UnrealPast",
+          "#RegretFlags"
+        ],
+        "anthem": "🎵 'Sailing' by Christopher Cross",
+        "film": "🎬 'Master and Commander' (Peter Weir)",
+        "pages": [
+          {
+            "tag": "🎯 Third Conditional Bio",
+            "bio": "If I had checked the storm forecast earlier, I would not have set sail in heavy winds. If we had prepared better thermal gear, the crew would have been much warmer.",
+            "greenFlags": [
+              "✓ Models 3rd conditional ('If + had done, would have done')",
+              "✓ Reflects on past hypothetical outcomes",
+              "✓ Advanced B2 reasoning"
+            ],
+            "redFlags": [
+              "✗ Disregards minor weather alerts",
+              "✗ Demands strict onboard discipline",
+              "✗ Gets stuck in sea fog"
+            ]
+          }
+        ],
+        "opener": "Greetings! If I had known about the weather, I wouldn't have gone sailing. What is a past decision you would have changed if you had known better?",
+        "icebreakers": [
+          "If I had known about the traffic, I would have taken the train!",
+          "If I had studied harder, I would have passed the exam easily!",
+          "If we had left earlier, we would not have missed the start!"
+        ],
+        "prompt": "Prompt (Third Conditional): Refect on a past hypothetical situation. What would have happened if things had gone differently?"
+      },
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Grammar: Passive Voice & Impersonal 🎯",
+        "grammarTarget": "Passive Voice",
+        "title": "Soren (Architectural Audit)",
+        "age": "32",
+        "location": "📍 Heritage Bureau • Restoration Site",
+        "verified": true,
+        "avatar": "⚙️",
+        "gradient": "linear-gradient(135deg, #854d0e 0%, #a16207 100%)",
+        "visualDescription": "Historical architect examining restored stone masonry in an ancient cathedral.",
+        "interests": [
+          "#PassiveVoice",
+          "#ImpersonalStructures",
+          "#Restoration"
+        ],
+        "anthem": "🎵 'Symphony No. 5' by Beethoven",
+        "film": "🎬 'Metropolis' (Fritz Lang)",
+        "pages": [
+          {
+            "tag": "🎯 Passive Voice Bio",
+            "bio": "The historic cathedral was originally built in 1850. Last year, the masonry was restored by expert craftspeople, and algorithmic safety audits are regularly conducted to preserve the structure.",
+            "greenFlags": [
+              "✓ Models past & present passive voice ('was built', 'are conducted')",
+              "✓ Formal / professional focus",
+              "✓ Clear B2 objective tone"
+            ],
+            "redFlags": [
+              "✗ Slow bureaucratic approvals",
+              "✗ Strict preservation codes",
+              "✗ Dust on site"
+            ]
+          }
+        ],
+        "opener": "Hello! The cathedral was restored in 1850. What famous landmark in your country was built over 100 years ago?",
+        "icebreakers": [
+          "The Parthenon was constructed in ancient Greece!",
+          "Our city hall was renovated last year!",
+          "New policies are audited for fairness every month!"
+        ],
+        "prompt": "Prompt (Passive Voice): Describe a building, product, or rule focusing on what was done or is done rather than who did it."
+      }
     ]
   }
 };
@@ -5389,18 +5966,29 @@
               <div class="setup-field" style="margin-bottom: 1.75rem; text-align: left;">
                 <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem;">🎴 Vocabulary Deck & Topic</label>
                 <select class="styled-sel" id="tot-deck-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid #e5e7eb; font-weight:600;">
-                  <option value="appearance" selected>👁️ Physical Appearance (People)</option>
-                  <option value="professions">💼 Professions & Careers</option>
-                  <option value="properties">🏠 Properties & Real Estate (Flats/Houses)</option>
-                  <option value="character">🧠 Character Traits & Personality</option>
-                  <option value="hobbies">🎨 Hobbies, Passions & Lifestyle</option>
-                  <option value="nationalities">🌍 Nationalities & Cultural Heritage</option>
-                  <option value="food">🍜 Food & Cuisine</option>
-                  <option value="travel">✈️ Travel & Destinations</option>
-                  <option value="entertainment">🎬 Books, Films & Music</option>
-                  <option value="daily_habits">🌅 Daily Routines & Habits</option>
-                  <option value="mixed">🔥 Mixed Full Deck (All Categories)</option>
-                  <option value="dilemmas">⚖️ "This or That" Dilemmas</option>
+                  <optgroup label="💬 Vocabulary & Speaking Topics">
+                    <option value="appearance" selected>👁️ Physical Appearance (People)</option>
+                    <option value="professions">💼 Professions & Careers</option>
+                    <option value="properties">🏠 Properties & Real Estate (Flats/Houses)</option>
+                    <option value="character">🧠 Character Traits & Personality</option>
+                    <option value="hobbies">🎨 Hobbies, Passions & Lifestyle</option>
+                    <option value="nationalities">🌍 Nationalities & Cultural Heritage</option>
+                    <option value="food">🍜 Food & Cuisine</option>
+                    <option value="travel">✈️ Travel & Destinations</option>
+                    <option value="entertainment">🎬 Books, Films & Music</option>
+                    <option value="daily_habits">🌅 Daily Routines & Habits</option>
+                    <option value="mixed">🔥 Mixed Full Deck (All Categories)</option>
+                  </optgroup>
+                  <optgroup label="🎯 Grammar Practice Drills">
+                    <option value="grammar">🎯 All Grammar Drills (Combined)</option>
+                    <option value="grammar_present">🎯 Present Tenses (Simple & Continuous)</option>
+                    <option value="grammar_past">🎯 Past Tenses & Stories (Simple & Continuous)</option>
+                    <option value="grammar_perfect">🎯 Present Perfect & Life Experiences</option>
+                    <option value="grammar_advanced">🎯 Conditionals, Passive & Subjunctive</option>
+                  </optgroup>
+                  <optgroup label="⚖️ Dilemmas">
+                    <option value="dilemmas">⚖️ "This or That" Dilemmas</option>
+                  </optgroup>
                 </select>
               </div>
 
@@ -5455,6 +6043,10 @@
                         Object.keys(levelData).forEach(cat => {
                             rawCards.push(...levelData[cat]);
                         });
+                    } else if (deckSel === 'grammar') {
+                        Object.keys(levelData).filter(cat => cat.startsWith('grammar')).forEach(cat => {
+                            rawCards.push(...levelData[cat]);
+                        });
                     } else if (levelData[deckSel]) {
                         rawCards.push(...levelData[deckSel]);
                     }
@@ -5481,6 +6073,11 @@
                     travel: 'Travel & Destinations',
                     entertainment: 'Books, Films & Music',
                     daily_habits: 'Daily Routines',
+                    grammar: 'All Grammar Drills',
+                    grammar_present: 'Present Tenses Grammar',
+                    grammar_past: 'Past Tenses Grammar',
+                    grammar_perfect: 'Present Perfect Grammar',
+                    grammar_advanced: 'Conditionals & Advanced Grammar',
                     dilemmas: 'Dilemmas',
                     mixed: 'Mixed Deck'
                 };
@@ -5570,6 +6167,13 @@
                         </div>
                         <div class="tap-zone left" onclick="COSY_GAME.prevStory(event)"></div>
                         <div class="tap-zone right" onclick="COSY_GAME.nextStory(event)"></div>
+                      ` : ''}
+
+                      <!-- Grammar Target Badge Overlay if present -->
+                      ${item.grammarTarget ? `
+                        <div style="position:absolute; top:12px; left:12px; background:rgba(253,38,125,0.88); color:#fff; font-weight:800; font-size:0.75rem; padding:3px 9px; border-radius:12px; backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.3); z-index:26;">
+                          🎯 ${item.grammarTarget}
+                        </div>
                       ` : ''}
 
                       <!-- CEFR Level Badge Overlay -->
