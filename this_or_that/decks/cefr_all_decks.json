@@ -326,6 +326,62 @@
           "Great price!"
         ],
         "prompt": "Name 3 things inside Leo's studio flat using simple words."
+      },
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Properties 🏠",
+        "title": "Lily",
+        "age": "26",
+        "location": "📍 2 miles away • Green Village",
+        "verified": true,
+        "avatar": "🏡",
+        "gradient": "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
+        "visualDescription": "Small wooden cottage with a sunny front garden and blooming red roses.",
+        "interests": [
+          "#SmallCottage",
+          "#GreenGarden",
+          "#Flowers"
+        ],
+        "anthem": "🎵 'Wildflowers' by Tom Petty",
+        "film": "🎬 'The Secret Garden' (Marc Munden)",
+        "pages": [
+          {
+            "tag": "🖼️ Cottage Overview",
+            "bio": "Hi, I am Lily! I live in a sweet small house with a big garden. It has three rooms, white walls, and bright red flowers outside.",
+            "greenFlags": [
+              "✓ Pretty garden",
+              "✓ Fresh flowers",
+              "✓ Quiet neighborhood"
+            ],
+            "redFlags": [
+              "✗ Far from city center",
+              "✗ Requires daily garden watering",
+              "✗ Small kitchen"
+            ]
+          },
+          {
+            "tag": "⚡ Garden Life",
+            "bio": "I grow tomatoes and yellow sunflowers in my garden. I drink tea outside every afternoon when it is sunny.",
+            "greenFlags": [
+              "✓ Fresh vegetables",
+              "✓ Sunny outdoor tea spot",
+              "✓ Peaceful birdsong"
+            ],
+            "redFlags": [
+              "✗ Insects in summer",
+              "✗ Mowing grass on Saturdays",
+              "✗ Cold in winter"
+            ]
+          }
+        ],
+        "opener": "Hello! Do you like small houses with gardens or city flats?",
+        "icebreakers": [
+          "I love houses with gardens!",
+          "City flats are easier!",
+          "Pretty roses!"
+        ],
+        "prompt": "What does Lily grow in her garden? Describe her cottage."
       }
     ],
     "character": [
@@ -384,6 +440,62 @@
           "Have a great day!"
         ],
         "prompt": "What does Mia do as a kind person? Describe 2 simple actions."
+      },
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Character Traits 🧠",
+        "title": "David",
+        "age": "25",
+        "location": "📍 0.5 miles away • Maple Street",
+        "verified": true,
+        "avatar": "😇",
+        "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+        "visualDescription": "Quiet young man smiling kindly while holding open a door.",
+        "interests": [
+          "#Polite",
+          "#QuietAndKind",
+          "#HelpfulNeighbor"
+        ],
+        "anthem": "🎵 'You've Got a Friend' by Carole King",
+        "film": "🎬 'Paddington' (Paul King)",
+        "pages": [
+          {
+            "tag": "🖼️ David's Profile",
+            "bio": "Hello! I am David. I am a calm and polite neighbor. I have short brown hair and wear clean blue shirts.",
+            "greenFlags": [
+              "✓ Polite and gentle",
+              "✓ Quiet neighbor",
+              "✓ Always holds the door"
+            ],
+            "redFlags": [
+              "✗ Very shy at first",
+              "✗ Speaks quietly",
+              "✗ Rare party visitor"
+            ]
+          },
+          {
+            "tag": "⚡ Neighbor Life",
+            "bio": "I collect packages for my neighbors when they are at work. I water plants when friends travel.",
+            "greenFlags": [
+              "✓ Helps neighbors",
+              "✓ Trustworthy keyholder",
+              "✓ Very reliable"
+            ],
+            "redFlags": [
+              "✗ Never stays late",
+              "✗ Prefers quiet evenings",
+              "✗ Shy in large groups"
+            ]
+          }
+        ],
+        "opener": "Hi! Do you prefer quiet neighbors or energetic friends?",
+        "icebreakers": [
+          "Quiet neighbors are great!",
+          "Energetic friends!",
+          "Thank you David!"
+        ],
+        "prompt": "How does David help his neighbors on Maple Street?"
       }
     ],
     "hobbies": [
@@ -456,6 +568,62 @@
           "I prefer walking!"
         ],
         "prompt": "Where does Oliver like to ride his bicycle?"
+      },
+      {
+        "type": "profile",
+        "level": "A0-A1",
+        "category": "Hobbies 🎨",
+        "title": "Emma",
+        "age": "21",
+        "location": "📍 1 mile away • Rose Garden",
+        "verified": true,
+        "avatar": "🌻",
+        "gradient": "linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%)",
+        "visualDescription": "Young woman in a sunhat holding a wooden watering can near potted flowers.",
+        "interests": [
+          "#Gardening",
+          "#FreshFlowers",
+          "#NatureLover"
+        ],
+        "anthem": "🎵 'Sunflower' by Post Malone",
+        "film": "🎬 'A Bug's Life' (Pixar)",
+        "pages": [
+          {
+            "tag": "🖼️ Gardening Look",
+            "bio": "I am Emma! My favorite hobby is growing colorful plants and flowers on my balcony. I wear a big sunhat and yellow gloves.",
+            "greenFlags": [
+              "✓ Beautiful balcony flowers",
+              "✓ Calm outdoor hobby",
+              "✓ Loves nature"
+            ],
+            "redFlags": [
+              "✗ Dirt under nails",
+              "✗ Water drops on balcony below",
+              "✗ Talks to her plants"
+            ]
+          },
+          {
+            "tag": "⚡ Flower Care",
+            "bio": "I water my red tulips and green ferns every morning. Green plants make my home feel fresh and happy!",
+            "greenFlags": [
+              "✓ Daily watering routine",
+              "✓ Bright fresh home",
+              "✓ Loves green leaves"
+            ],
+            "redFlags": [
+              "✗ Balcony full of plant pots",
+              "✗ Wakes up early to water plants",
+              "✗ Dislikes plastic plants"
+            ]
+          }
+        ],
+        "opener": "Hello! Do you have plants or flowers at home?",
+        "icebreakers": [
+          "I have houseplants!",
+          "I love tulips!",
+          "Yellow sunhat is cute!"
+        ],
+        "prompt": "What plants does Emma water every morning?"
       }
     ],
     "nationalities": [
@@ -1354,6 +1522,62 @@
           "Green and brown!"
         ],
         "prompt": "What tools does Nina use for her work? Why does she like her job?"
+      },
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Professions 💼",
+        "title": "Sam",
+        "age": "25",
+        "location": "📍 0.4 miles away • Corner Café",
+        "verified": true,
+        "avatar": "☕",
+        "gradient": "linear-gradient(135deg, #78350f 0%, #b45309 100%)",
+        "visualDescription": "Smiling barista pouring artful milk foam into a hot cappuccino at a wooden coffee bar.",
+        "interests": [
+          "#Barista",
+          "#CoffeeArt",
+          "#Espresso"
+        ],
+        "anthem": "🎵 'Coffee & TV' by Blur",
+        "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
+        "pages": [
+          {
+            "tag": "🖼️ Barista Profile",
+            "bio": "I am Sam, a coffee barista at a popular neighborhood café. I prepare espresso drinks, roast coffee beans, and draw heart shapes in milk foam.",
+            "greenFlags": [
+              "✓ Makes perfect cappuccinos",
+              "✓ Welcoming coffee spot",
+              "✓ Great morning chats"
+            ],
+            "redFlags": [
+              "✗ Smells like coffee beans constantly",
+              "✗ Wakes up at 5:00 AM",
+              "✗ Critical of instant coffee"
+            ]
+          },
+          {
+            "tag": "⚡ Morning Service",
+            "bio": "My shift starts early. I greet regular customers by name and make their favorite drinks quickly before they travel to work.",
+            "greenFlags": [
+              "✓ Remembers drink orders",
+              "✓ Friendly community service",
+              "✓ Quick and efficient"
+            ],
+            "redFlags": [
+              "✗ Loud espresso machine",
+              "✗ Long morning queues",
+              "✗ Works on weekend mornings"
+            ]
+          }
+        ],
+        "opener": "Hi! Do you drink espresso coffee or herbal tea in the morning?",
+        "icebreakers": [
+          "Cappuccino with oat milk!",
+          "Herbal tea for me!",
+          "Coffee art looks cool!"
+        ],
+        "prompt": "What does Sam do as a barista in the morning?"
       }
     ],
     "properties": [
@@ -1412,6 +1636,62 @@
           "Big windows are great!"
         ],
         "prompt": "Describe 3 things inside Lucas's apartment."
+      },
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Properties 🏠",
+        "title": "Grace",
+        "age": "29",
+        "location": "📍 3 miles away • Oak Suburbs",
+        "verified": true,
+        "avatar": "🏡",
+        "gradient": "linear-gradient(135deg, #15803d 0%, #22c55e 100%)",
+        "visualDescription": "Two-story suburban family house with a green lawn, wooden porch, and garage.",
+        "interests": [
+          "#SuburbanHouse",
+          "#GreenLawn",
+          "#PrivateGarage"
+        ],
+        "anthem": "🎵 'Our House' by Madness",
+        "film": "🎬 'Father of the Bride' (Charles Shyer)",
+        "pages": [
+          {
+            "tag": "🖼️ House Overview",
+            "bio": "Hi! I am Grace. I live in a comfortable two-story house with three bedrooms, a large green lawn, and a private driveway.",
+            "greenFlags": [
+              "✓ Spacious three bedrooms",
+              "✓ Private green garden",
+              "✓ Quiet suburban street"
+            ],
+            "redFlags": [
+              "✗ Long commute to city center",
+              "✗ Grass mowing every week",
+              "✗ Requires a car for shopping"
+            ]
+          },
+          {
+            "tag": "⚡ Living Environment",
+            "bio": "I enjoy hosting weekend barbecues on the back porch. The neighborhood is safe and peaceful with wide streets and tall trees.",
+            "greenFlags": [
+              "✓ Great back porch for BBQs",
+              "✓ Safe and quiet neighborhood",
+              "✓ Plenty of parking"
+            ],
+            "redFlags": [
+              "✗ No metro station nearby",
+              "✗ Quiet evenings with few shops",
+              "✗ Suburban driving required"
+            ]
+          }
+        ],
+        "opener": "Hello! Would you prefer living in a quiet suburban house or a city flat?",
+        "icebreakers": [
+          "Suburban house with a lawn!",
+          "City flat near the metro!",
+          "Barbecues on the porch!"
+        ],
+        "prompt": "List 3 advantages of living in Grace's suburban house."
       }
     ],
     "character": [
@@ -1484,6 +1764,62 @@
           "A little of both!"
         ],
         "prompt": "Why is Sophia a reliable friend? Mention two habits she has."
+      },
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Character Traits 🧠",
+        "title": "Alex",
+        "age": "24",
+        "location": "📍 1 mile away • Central Square",
+        "verified": true,
+        "avatar": "🎉",
+        "gradient": "linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)",
+        "visualDescription": "Energetic friend laughing while inviting people to a spontaneous weekend road trip.",
+        "interests": [
+          "#Spontaneous",
+          "#FunLover",
+          "#Energetic"
+        ],
+        "anthem": "🎵 'Best Day of My Life' by American Authors",
+        "film": "🎬 'Ferris Bueller's Day Off' (John Hughes)",
+        "pages": [
+          {
+            "tag": "🖼️ Spontaneous Energy",
+            "bio": "I am Alex! I am cheerful, energetic, and spontaneous. I love planning surprise weekend trips, trying new street food, and making people laugh.",
+            "greenFlags": [
+              "✓ High cheerful energy",
+              "✓ Fun adventure organizer",
+              "✓ Great sense of humor"
+            ],
+            "redFlags": [
+              "✗ Changes plans last minute",
+              "✗ Forgetful with dates",
+              "✗ Rarely stays still"
+            ]
+          },
+          {
+            "tag": "⚡ Weekend Adventures",
+            "bio": "I often call my friends on Friday evening to suggest driving to the beach or visiting a food festival. Life is full of exciting moments!",
+            "greenFlags": [
+              "✓ Inspires fun experiences",
+              "✓ Always positive attitude",
+              "✓ Brings friends together"
+            ],
+            "redFlags": [
+              "✗ Unpredictable weekend schedule",
+              "✗ Calls late at night",
+              "✗ Dislikes strict routines"
+            ]
+          }
+        ],
+        "opener": "Hey! Do you like unexpected weekend trips or planned schedules?",
+        "icebreakers": [
+          "Spontaneous weekend trips!",
+          "Planned schedules for me!",
+          "Funny road trips!"
+        ],
+        "prompt": "Why is Alex a fun friend to hang out with? Give two examples."
       }
     ],
     "hobbies": [
@@ -1542,6 +1878,62 @@
           "Garlic butter!"
         ],
         "prompt": "What simple ingredients does Hannah use to bake bread?"
+      },
+      {
+        "type": "profile",
+        "level": "A2",
+        "category": "Hobbies 🎨",
+        "title": "Tom",
+        "age": "26",
+        "location": "📍 1.5 miles away • Arts Quarter",
+        "verified": true,
+        "avatar": "📷",
+        "gradient": "linear-gradient(135deg, #0284c7 0%, #6366f1 100%)",
+        "visualDescription": "Young photographer looking through a digital camera lens on a city bridge.",
+        "interests": [
+          "#Photography",
+          "#CityShots",
+          "#DigitalCamera"
+        ],
+        "anthem": "🎵 'Photograph' by Ed Sheeran",
+        "film": "🎬 'The Secret Life of Walter Mitty' (Ben Stiller)",
+        "pages": [
+          {
+            "tag": "🖼️ Camera Hobby",
+            "bio": "I am Tom and my hobby is urban photography. I walk through city streets with my camera to capture interesting buildings, reflections, and sunset lights.",
+            "greenFlags": [
+              "✓ Great creative eye",
+              "✓ Shares beautiful city pictures",
+              "✓ Patient observer"
+            ],
+            "redFlags": [
+              "✗ Stops every 10 meters for photos",
+              "✗ Heavy camera bag carrying",
+              "✗ Obsesses over camera lenses"
+            ]
+          },
+          {
+            "tag": "⚡ Street Photography",
+            "bio": "During golden hour in the evening, I take photos of historic bridges and busy street corners. Photography helps me appreciate daily city details.",
+            "greenFlags": [
+              "✓ Captures golden hour light",
+              "✓ Notices architectural details",
+              "✓ Inspiring artistic hobby"
+            ],
+            "redFlags": [
+              "✗ Camera battery dies during walks",
+              "✗ Asks friends to pose repeatedly",
+              "✗ Thousands of unedited photos"
+            ]
+          }
+        ],
+        "opener": "Hi! Do you take photos with a digital camera or your smartphone?",
+        "icebreakers": [
+          "Digital camera photos!",
+          "Smartphone is easier!",
+          "Golden hour pictures!"
+        ],
+        "prompt": "What does Tom capture with his camera during evening walks?"
       }
     ],
     "nationalities": [
@@ -2568,6 +2960,62 @@
           "A quiet house with a garden!"
         ],
         "prompt": "Describe Arthur's apartment and list two good things and two bad things about it."
+      },
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Properties 🏠",
+        "title": "Chloe",
+        "age": "30",
+        "location": "📍 1.5 miles away • Heritage Hill",
+        "verified": true,
+        "avatar": "🏛️",
+        "gradient": "linear-gradient(135deg, #7c3aed 0%, #c084fc 100%)",
+        "visualDescription": "Renovated three-story Victorian townhouse with high ceilings, bay windows, and private garden.",
+        "interests": [
+          "#VictorianTownhouse",
+          "#BayWindows",
+          "#PrivateGarden"
+        ],
+        "anthem": "🎵 'Our House' by Crosby, Stills, Nash & Young",
+        "film": "🎬 'Mary Poppins Returns' (Rob Marshall)",
+        "pages": [
+          {
+            "tag": "🖼️ Townhouse Character",
+            "bio": "I'm Chloe. I restored a three-story Victorian townhouse featuring original stained-glass doors, spacious bay windows, and a walled courtyard garden.",
+            "greenFlags": [
+              "✓ Elegant architectural heritage",
+              "✓ Private courtyard garden",
+              "✓ High ceilings and sunlight"
+            ],
+            "redFlags": [
+              "✗ Ongoing maintenance work",
+              "✗ Steep stairs between floors",
+              "✗ Drafty window frames in winter"
+            ]
+          },
+          {
+            "tag": "⚡ Living Space",
+            "bio": "The ground floor contains a warm library with built-in bookshelves and a wood-burning fireplace where I read on chilly autumn evenings.",
+            "greenFlags": [
+              "✓ Cozy wood-burning fireplace",
+              "✓ Built-in book collection",
+              "✓ Distinct functional floors"
+            ],
+            "redFlags": [
+              "✗ Firewood storage required",
+              "✗ Chimney cleaning costs",
+              "✗ Dusting endless bookshelves"
+            ]
+          }
+        ],
+        "opener": "Welcome! Would you enjoy living in a multi-story historic townhouse?",
+        "icebreakers": [
+          "Historic townhouses have charm!",
+          "Too many stairs for me!",
+          "I love bay windows!"
+        ],
+        "prompt": "Describe the features of Chloe's Victorian townhouse and list one drawback."
       }
     ],
     "character": [
@@ -2626,6 +3074,62 @@
           "A mix of both!"
         ],
         "prompt": "Why is Daniel a good friend? Describe his personality traits."
+      },
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Character Traits 🧠",
+        "title": "Olivia",
+        "age": "27",
+        "location": "📍 1 mile away • Community Center",
+        "verified": true,
+        "avatar": "🕊️",
+        "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+        "visualDescription": "Empathetic community mediator facilitating a peaceful discussion in a sunlit meeting room.",
+        "interests": [
+          "#Empathetic",
+          "#ConflictResolution",
+          "#GoodCommunicator"
+        ],
+        "anthem": "🎵 'Bridge Over Troubled Water' by Simon & Garfunkel",
+        "film": "🎬 'Wonder' (Stephen Chbosky)",
+        "pages": [
+          {
+            "tag": "🖼️ Empathetic Profile",
+            "bio": "I'm Olivia, 27. I am an empathetic and emotionally intelligent person who helps friends and colleagues resolve misunderstandings through active listening and constructive dialogue.",
+            "greenFlags": [
+              "✓ Calming empathetic presence",
+              "✓ Fair and objective mediator",
+              "✓ Excellent listening skills"
+            ],
+            "redFlags": [
+              "✗ Takes on emotional stress of others",
+              "✗ Avoids quick aggressive confrontations",
+              "✗ Over-analyzes tone of voice"
+            ]
+          },
+          {
+            "tag": "⚡ Community Work",
+            "bio": "I facilitate group workshops on effective communication and conflict resolution. Creating safe spaces where people feel heard is deeply rewarding.",
+            "greenFlags": [
+              "✓ Skilled facilitator",
+              "✓ Fosters group harmony",
+              "✓ Patient and compassionate"
+            ],
+            "redFlags": [
+              "✗ Exhausted after long group sessions",
+              "✗ Dislikes harsh arguments",
+              "✗ Spends hours mediating disputes"
+            ]
+          }
+        ],
+        "opener": "Hello! How do you usually handle misunderstandings with friends or colleagues?",
+        "icebreakers": [
+          "Calm open dialogue!",
+          "Give it time to cool down!",
+          "Ask a neutral friend for help!"
+        ],
+        "prompt": "Why is Olivia effective at resolving conflicts among friends?"
       }
     ],
     "hobbies": [
@@ -2698,6 +3202,62 @@
           "I want to try it!"
         ],
         "prompt": "Explain why Ethan likes bouldering and what equipment he uses."
+      },
+      {
+        "type": "profile",
+        "level": "B1",
+        "category": "Hobbies 🎨",
+        "title": "Nora",
+        "age": "26",
+        "location": "📍 Stargazing Ridge",
+        "verified": true,
+        "avatar": "🔭",
+        "gradient": "linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%)",
+        "visualDescription": "Amateur astronomer adjusting a telescope under a dark night sky dotted with constellations.",
+        "interests": [
+          "#Astronomy",
+          "#Stargazing",
+          "#Telescope"
+        ],
+        "anthem": "🎵 'A Sky Full of Stars' by Coldplay",
+        "film": "🎬 'Interstellar' (Christopher Nolan)",
+        "pages": [
+          {
+            "tag": "🖼️ Night Astronomy",
+            "bio": "I'm Nora. Amateur astronomy is my passion! On clear nights, I drive to dark sky reserves with my reflector telescope to observe planetary rings, nebulae, and star clusters.",
+            "greenFlags": [
+              "✓ Deep knowledge of constellations",
+              "✓ Fascinating night sky guide",
+              "✓ Patient observation habits"
+            ],
+            "redFlags": [
+              "✗ Stays up until 3 AM",
+              "✗ Dislikes urban light pollution",
+              "✗ Expensive telescope lenses"
+            ]
+          },
+          {
+            "tag": "⚡ Sky Observations",
+            "bio": "Tracking celestial movements teaches you patience and perspective. Seeing Saturn's rings clearly through your own lens is an awe-inspiring experience.",
+            "greenFlags": [
+              "✓ Inspiring scientific curiosity",
+              "✓ Great night photography skills",
+              "✓ Mindful cosmic perspective"
+            ],
+            "redFlags": [
+              "✗ Cold late-night trips",
+              "✗ Sleepy on workday mornings",
+              "✗ Frustrated by cloudy weather"
+            ]
+          }
+        ],
+        "opener": "Hey! Have you ever looked at planets or nebulae through a telescope?",
+        "icebreakers": [
+          "Yes, stargazing is amazing!",
+          "I want to see Saturn's rings!",
+          "Night sky photography!"
+        ],
+        "prompt": "Explain what equipment Nora uses and what she observes in the night sky."
       }
     ],
     "nationalities": [
@@ -3724,6 +4284,62 @@
           "Smart homes are awesome!"
         ],
         "prompt": "Describe what it would be like to live in Xavier's penthouse and discuss the pros and cons."
+      },
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Properties 🏠",
+        "title": "Eleanor",
+        "age": "34",
+        "location": "📍 2 miles away • Eco Valley",
+        "verified": true,
+        "avatar": "🌿",
+        "gradient": "linear-gradient(135deg, #047857 0%, #10b981 100%)",
+        "visualDescription": "Modern eco-sustainable villa with solar roof glass panels, rainwater collection system, and living plant walls.",
+        "interests": [
+          "#EcoVilla",
+          "#SolarPowered",
+          "#SustainableDesign"
+        ],
+        "anthem": "🎵 'Mercy Mercy Me' by Marvin Gaye",
+        "film": "🎬 'Captain Fantastic' (Matt Ross)",
+        "pages": [
+          {
+            "tag": "🖼️ Sustainable Villa",
+            "bio": "I'm Eleanor. My architectural passion culminated in designing an off-grid sustainable villa powered by photovoltaic solar arrays, geothermal heating, and passive rainwater filtration.",
+            "greenFlags": [
+              "✓ Zero-carbon footprint living",
+              "✓ Cutting-edge green technology",
+              "✓ Healthy indoor air quality"
+            ],
+            "redFlags": [
+              "✗ High initial construction investment",
+              "✗ Energy rationing during winter cloudy weeks",
+              "✗ Complex maintenance systems"
+            ]
+          },
+          {
+            "tag": "⚡ Green Innovation",
+            "bio": "Triple-glazed glass walls maximize natural illumination while living moss facades regulate interior temperature and humidity naturally without air conditioning.",
+            "greenFlags": [
+              "✓ Abundant natural sunlight",
+              "✓ Natural climate regulation",
+              "✓ Inspiring eco-architecture"
+            ],
+            "redFlags": [
+              "✗ Monitoring battery storage levels",
+              "✗ Strict waste sorting protocols",
+              "✗ Remote rural location"
+            ]
+          }
+        ],
+        "opener": "Welcome! Would you prefer living in a high-tech eco-villa or a conventional city apartment?",
+        "icebreakers": [
+          "Off-grid eco-villa!",
+          "Conventional city apartment!",
+          "Solar power technology!"
+        ],
+        "prompt": "Evaluate the ecological innovations and practical challenges of Eleanor's sustainable villa."
       }
     ],
     "character": [
@@ -3782,6 +4398,62 @@
           "Setting a strong example!"
         ],
         "prompt": "Discuss Helena's leadership style and explain what traits make a good team leader."
+      },
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Character Traits 🧠",
+        "title": "Julian",
+        "age": "35",
+        "location": "📍 0.8 miles away • Diplomatic Quarter",
+        "verified": true,
+        "avatar": "⚖️",
+        "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
+        "visualDescription": "Strategic diplomat reflecting calmly beside a glass boardroom table before international negotiations.",
+        "interests": [
+          "#StrategicDiplomacy",
+          "#CrisisManagement",
+          "#Negotiation"
+        ],
+        "anthem": "🎵 'Wind of Change' by Scorpions",
+        "film": "🎬 'Bridge of Spies' (Steven Spielberg)",
+        "pages": [
+          {
+            "tag": "🖼️ Strategic Diplomacy",
+            "bio": "I'm Julian, 35. As an international mediator, my character is characterized by stoic emotional composure, analytical tact, and an ability to reconcile conflicting stakeholder interests during high-stakes crises.",
+            "greenFlags": [
+              "✓ Unshakable emotional composure",
+              "✓ Strategic problem solver",
+              "✓ Respectful cross-cultural communicator"
+            ],
+            "redFlags": [
+              "✗ Keeps emotional guard up",
+              "✗ Calculates conversational outcomes",
+              "✗ Intense schedule demands"
+            ]
+          },
+          {
+            "tag": "⚡ High-Stakes Mediation",
+            "bio": "Navigating complex multilateral disputes requires active neutrality, cultural nuance, and de-escalating tension through precise linguistic phrasing.",
+            "greenFlags": [
+              "✓ Master of linguistic precision",
+              "✓ Calm under intense pressure",
+              "✓ Trustworthy impartial advisor"
+            ],
+            "redFlags": [
+              "✗ Analyzes motives endlessly",
+              "✗ Reluctant to make impulsive choices",
+              "✗ Work travels interrupt personal life"
+            ]
+          }
+        ],
+        "opener": "Greetings! What leadership attributes are essential when mediating high-stakes conflict?",
+        "icebreakers": [
+          "Stoic emotional composure!",
+          "Active neutrality and listening!",
+          "Strategic linguistic precision!"
+        ],
+        "prompt": "Analyze Julian's diplomatic approach and emotional composure during high-stakes negotiations."
       }
     ],
     "hobbies": [
@@ -3854,6 +4526,62 @@
           "I like a bit of both!"
         ],
         "prompt": "Compare smartphone photography with traditional film photography based on Felix's hobby."
+      },
+      {
+        "type": "profile",
+        "level": "B2",
+        "category": "Hobbies 🎨",
+        "title": "Maya",
+        "age": "28",
+        "location": "📍 Philharmonic Hall",
+        "verified": true,
+        "avatar": "🎻",
+        "gradient": "linear-gradient(135deg, #701a75 0%, #a21caf 100%)",
+        "visualDescription": "Classical violinist practicing a concert passage with focused expression inside a wooden acoustics hall.",
+        "interests": [
+          "#ClassicalViolin",
+          "#ChamberMusic",
+          "#OrchestralPerformance"
+        ],
+        "anthem": "🎵 'The Four Seasons (Summer)' by Antonio Vivaldi",
+        "film": "🎬 'The Red Violin' (François Girard)",
+        "pages": [
+          {
+            "tag": "🖼️ Violinist Craft",
+            "bio": "I'm Maya. Playing first violin in a chamber quartet is my life's passion. Interpreting complex polyphonic scores demands rigorous acoustic discipline, expressive phrasing, and seamless ensemble synergy.",
+            "greenFlags": [
+              "✓ Virtuosic musical dedication",
+              "✓ Deep artistic expressiveness",
+              "✓ Harmonic ensemble teamwork"
+            ],
+            "redFlags": [
+              "✗ Practises 4 hours daily",
+              "✗ Strict noise environment needed",
+              "✗ Calloused fingertips and neck marks"
+            ]
+          },
+          {
+            "tag": "⚡ Concert Rehearsals",
+            "bio": "Preparing for symphony hall performances involves dissecting subtle tempo rubatos and bowing dynamics until the collective sound resonates with emotional depth.",
+            "greenFlags": [
+              "✓ Meticulous attention to acoustic detail",
+              "✓ Inspiring musical mastery",
+              "✓ Passionate performance energy"
+            ],
+            "redFlags": [
+              "✗ Rehearsal anxiety before concerts",
+              "✗ Highly sensitive to pitch deviations",
+              "✗ Expensive instrument care"
+            ]
+          }
+        ],
+        "opener": "Hello! Do you find classical chamber music emotionally moving or overly technical?",
+        "icebreakers": [
+          "Profoundly moving acoustic art!",
+          "Technically impressive!",
+          "Violin concertos are beautiful!"
+        ],
+        "prompt": "Examine the artistic discipline and ensemble synergy required for Maya's violin performances."
       }
     ],
     "nationalities": [
