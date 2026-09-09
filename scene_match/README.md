@@ -8,23 +8,23 @@ Scene Match is a visual vocabulary learning game engine that renders interactive
 
 ### Hotspot Editor Tool (`tools/hotspot-editor.html`)
 
-An internal build-time web tool for content creators and developers to visually create or edit Scene Match dataset files (`games/data/scenes/*.js`).
+An internal build-time web tool for content creators and developers to visually create or edit Scene Match dataset files (`data/scenes/*.js`).
 
 #### Accessing the Editor:
 - **Location**: [`tools/hotspot-editor.html`](tools/hotspot-editor.html)
-- **Usage**: Open `games/scene_match/tools/hotspot-editor.html` directly in a browser (or via local web server at `http://localhost:8080/games/scene_match/tools/hotspot-editor.html`).
+- **Usage**: Open `scene_match/tools/hotspot-editor.html` directly in a browser (or via local web server at `http://localhost:8080/scene_match/tools/hotspot-editor.html`).
 
 #### Features:
 1. **Image Loading**: Upload a local background image (`.png`, `.jpg`, `.webp`) or supply a path/URL to an image artifact.
 2. **Interactive Bounding Box Drawing**: Click and drag on the image canvas to draw rectangular hotspot bounds.
 3. **Hotspot Inspector**: Assign `id`, coordinates (`x`, `y`, `width`, `height`, `labelX`, `labelY`), and multilingual translations (`en`, `fr`, `it`, `ru`, `el`, `es`, `de`).
-4. **Live Code Generator**: Generates formatted JavaScript conforming to `window.COSY_SCENE_DATA['scene_id']` schema. Copy code directly with the "📋 Copy JS" button and save into `games/data/scenes/<scene_id>.js`.
+4. **Live Code Generator**: Generates formatted JavaScript conforming to `window.COSY_SCENE_DATA['scene_id']` schema. Copy code directly with the "📋 Copy JS" button and save into `data/scenes/<scene_id>.js`.
 
 *Note: This editor is an internal developer tool and is not linked from player-facing navigation.*
 
 ---
 
-## 📐 Scene Data Schema (`games/data/scenes/`)
+## 📐 Scene Data Schema (`data/scenes/`)
 
 Scenes are IIFE JavaScript files attached to `window.COSY_SCENE_DATA`:
 
