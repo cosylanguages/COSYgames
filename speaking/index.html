@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking & Fluency Games 🗣️ - COSYgames</title>
+    <meta name="description" content="8 interactive speaking and fluency games to practice spontaneous conversation, debates, storytelling, and rapid vocabulary recall.">
+    <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../shared/css/cosy-tokens.css">
+    <link rel="stylesheet" href="../shared/css/tokens.css">
+    <link rel="stylesheet" href="../shared/css/games.css">
+    <link rel="stylesheet" href="../shared/css/cosy-icons.css">
+    <link rel="stylesheet" href="../shared/css/nav.css">
+    <link rel="stylesheet" href="../shared/styles/game-styles.css">
+</head>
+<body class="game-standalone cosy-game-theme">
+    <nav class="cg-nav">
+        <a href="../index.html" class="cg-nav-brand">
+            <span class="cosy-icon icon-dice" aria-hidden="true" style="width:1.2rem;height:1.2rem;color:var(--teal)"></span> COSY Games
+        </a>
+        <div class="cg-nav-right">
+            <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">Home</a>
+            <a href="../index.html" class="cg-nav-hub-link">All Games</a>
+            <a href="../index.html#sec-speaking" class="cg-nav-hub-link active">Speaking</a>
+            <a href="https://cosylanguages.github.io/COSYworld/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSY World</a>
+            <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+        </div>
+    </nav>
+
+    <header class="hero" style="background: linear-gradient(135deg, #CCFBF1 0%, #FAF7F2 100%);">
+        <div class="hero-inner-centered">
+            <div class="hero-tag">8 Interactive Games</div>
+            <h1>🗣️ Speaking & Fluency Games</h1>
+            <p class="hero-subtitle">Master spontaneous speech, debates, storytelling, and rapid oral drills without translation fallbacks.</p>
+        </div>
+    </header>
+
+    <main class="filter-container">
+        <div style="background: var(--cg-color-surface); padding: 1.25rem 1.5rem; border-radius: var(--cg-radius-md); border: 1px solid rgba(0,0,0,0.08); margin-bottom: 1.5rem;">
+            <h3 style="margin: 0 0 0.5rem; color: var(--cg-color-teal-dark);">💡 Fluency Tip for Learners & Teachers</h3>
+            <p style="margin: 0; color: var(--cg-color-muted); font-size: 0.95rem;">Prioritize continuous oral flow over grammatical perfection. The goal of these games is to eliminate hesitation and build confidence in real-time communication!</p>
+        </div>
+
+        <div class="game-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="gc" onclick="location.href='../fluency-flow/index.html'">
+                <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name">Fluency Flow</div></div>
+                <div class="gc-desc">Spin for a random topic and speak for 1–5 minutes without stopping.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../battle-of-wits/index.html'">
+                <div class="gc-top"><div class="gc-icon">⚖️</div><div class="gc-name">Battle of Wits</div></div>
+                <div class="gc-desc">Two opposing sides, one debate. Build arguments in your target language.</div>
+                <div class="gc-foot"><span class="gtag multi">Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../opinion-arena/index.html'">
+                <div class="gc-top"><div class="gc-icon">🏟️</div><div class="gc-name">Opinion Arena</div></div>
+                <div class="gc-desc">Agree or disagree with provocative statements and defend your view.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../critics-corner/index.html'">
+                <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name">Critic's Corner</div></div>
+                <div class="gc-desc">Analyze famous quotes, proverbs, and philosophical ideas in advanced oral discussions.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../100-questions/index.html'">
+                <div class="gc-top"><div class="gc-icon">💬</div><div class="gc-name">100 Questions</div></div>
+                <div class="gc-desc">Deep conversation prompts to spark authentic discussions.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../story-chain/index.html'">
+                <div class="gc-top"><div class="gc-icon">🃏</div><div class="gc-name">Story Chain</div></div>
+                <div class="gc-desc">Build a tale sentence by sentence with secret vocabulary targets.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 3rem; padding: 2rem 1.5rem; background: #1F2937; color: #F9FAFB; text-align: center;">
+        <p>© 2026 COSYlanguages: All rights reserved</p>
+    </footer>
+
+    <script src="../shared/utils/game-utils.js"></script>
+    <script src="../shared/js/nav.js"></script>
+</body>
+</html>
