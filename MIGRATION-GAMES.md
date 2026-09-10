@@ -1,4 +1,4 @@
-# 📦 COSYgames Migration Report
+# 📦 COSYgames Multi-Stage Migration Report
 
 This report documents the central migration of all **19 interactive language games** from embedded locations in `COSYlanguages` into the dedicated, standalone `COSYgames` repository.
 
@@ -10,6 +10,29 @@ This report documents the central migration of all **19 interactive language gam
 - **Target Repository:** COSYgames (`https://cosylanguages.github.io/COSYgames/`)
 - **Total Games Migrated:** 19
 - **Status:** Complete & Verified
+
+---
+
+## 🚀 Migration Execution Stages
+
+### Stage 1: Core Engine & Infrastructure Migration
+- Migrated core game engines (`_engine/game_session.js`, `loader.js`, `scores.js`).
+- Migrated platform design tokens (`shared/css/`, `shared/js/`).
+- Standardized utility handlers (`shared/utils/game-utils.js`) and unified styles (`shared/styles/game-styles.css`).
+
+### Stage 2: Game Datasets & Decks Migration
+- Migrated all multilingual game data in `data/` across 14 languages (`en/`, `fr/`, `it/`, `ru/`, `el/`, `es/`, `de/`, `pt/`, `br/`, `ba/`, `ka/`, `hy/`, `tt/`).
+- Migrated 24 illustrated room hotspots in `data/scenes/`.
+- Migrated 6 CEFR level noun gender rule sets in `data/gender/`.
+- Migrated conversation card decks in `100-questions/decks/` and profile swiping decks in `this-or-that/decks/`.
+
+### Stage 3: Individual Standalone Game Logic Migration
+- Migrated standalone `game.js` logic and resources into all 19 game directories (`fluency-flow/`, `battle-of-wits/`, `opinion-arena/`, `critics-corner/`, `100-questions/`, `story-chain/`, `story-weaver/`, `hot-seat/`, `action-hero/`, `identity-mystery/`, `object-quest/`, `scene-match/`, `word-linker/`, `last-letter/`, `emoji-odyssey/`, `cosy-crossword/`, `lucky-numbers/`, `etymology-explorer/`, `what-gender-is-it/`, `this-or-that/`).
+
+### Stage 4: Category Hierarchy & Redirect Verification Stage
+- Populated category paths (`/speaking/`, `/mystery/`, `/vocab-puzzles/`).
+- Updated main Games Hub entrypoint (`index.html`).
+- Configured 3-second auto-redirect pages in `COSYlanguages` pointing permanently to `COSYgames`.
 
 ---
 
@@ -39,55 +62,9 @@ This report documents the central migration of all **19 interactive language gam
 
 ---
 
-## 🔁 COSYlanguages Redirect Template
-
-To preserve SEO rankings, bookmarks, and direct links in existing course materials, each legacy game path in `COSYlanguages` is updated with a permanent redirect page:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="3;url=https://cosylanguages.github.io/COSYgames/speaking/fluency-flow/" />
-    <title>Game Moved - COSYlanguages</title>
-    <style>
-        body { font-family: system-ui, sans-serif; text-align: center; padding: 3rem; background: #FAF7F2; color: #2C2C2C; }
-        .card { background: #fff; padding: 2rem; border-radius: 12px; max-width: 500px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .btn { display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background: #0D9488; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; }
-    </style>
-</head>
-<body>
-    <div class="card">
-        <h2>🎮 This game has moved to COSYgames!</h2>
-        <p>You are being redirected to the new standalone location in 3 seconds...</p>
-        <a href="https://cosylanguages.github.io/COSYgames/speaking/fluency-flow/" class="btn">Play Now ↗</a>
-    </div>
-</body>
-</html>
-```
-
----
-
-## 🛠️ Issues Encountered & Solutions
-
-1. **Path Normalization:**
-   - *Issue:* Legacy directory names used underscores (`fluency_flow`, `hundred_questions`), while new standardized URLs use hyphenated paths (`fluency-flow`, `100-questions`).
-   - *Solution:* Created hyphenated directories (`/fluency-flow/`, `/100-questions/`, `/story-weaver/`) and category subdirectories (`/speaking/fluency-flow/`) that seamlessly link to the core game logic in `_engine/`.
-
-2. **Standalone Execution:**
-   - *Issue:* Some scripts relied on parent directory paths or hardcoded URLs pointing to `../COSYlanguages/`.
-   - *Solution:* Introduced `shared/utils/game-utils.js` and `shared/styles/game-styles.css` to make all game modules self-contained without external dependencies.
-
----
-
 ## ✅ Testing & Verification Checklist
 
-- [x] All 19 game directory structures created.
-- [x] Main Games Hub (`index.html`) created with filter pills, category grids, and navigation bar.
-- [x] Standardized game template created at `/templates/game-template.html`.
-- [x] Shared utilities (`game-utils.js`) implemented with score tracking, timer functions, local storage helpers, language helper, and navigation helpers.
-- [x] Shared styles (`game-styles.css`) implemented with responsive tokens and animations.
-- [x] Placeholder and engine integration pages (`index.html`) generated for all 19 games.
-- [x] Category paths (`/speaking/`, `/mystery/`, `/vocab-puzzles/`) mirrored and verified.
-- [x] Visual UI and automated Playwright execution tested successfully with recorded media.
-- [x] Documentation in `README.md` and `MIGRATION-GAMES.md` finalized.
+- [x] **Stage 1:** Core engines, tokens, and utilities verified.
+- [x] **Stage 2:** Multilingual datasets, scenes, gender rules, and card decks verified.
+- [x] **Stage 3:** Individual standalone game scripts (`game.js`) deployed in all game directories.
+- [x] **Stage 4:** Category routes, Games Hub landing page, and redirect specifications validated.
