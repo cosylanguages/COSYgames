@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
 
-    <link rel="icon" href="../shared/css/cosylanguages.png">
+    <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../shared/styles/game-styles.css">
 </head>
 <body class="game-standalone cosy-game-theme">
-    <!-- Navigation Bar -->
+    <!-- Top Navigation Header -->
     <nav class="cg-nav">
         <a href="../index.html" class="cg-nav-brand">
             <span class="cosy-icon icon-dice" aria-hidden="true" style="width:1.2rem;height:1.2rem;color:var(--teal)"></span> COSY Games
@@ -33,24 +33,26 @@
             <a href="https://cosylanguages.github.io/COSYworld/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSY World</a>
             <a href="https://cosylanguages.github.io/COSYtools/" class="cg-nav-hub-link" target="_blank" rel="noopener">Tools</a>
             <a href="https://cosylanguages.github.io/COSYevents/" class="cg-nav-hub-link" target="_blank" rel="noopener">Events</a>
+            <button class="cg-btn cg-btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;" onclick="COSYUtils.toggleTeacherMode()">👩‍🏫 Teacher Mode</button>
             <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
         </div>
     </nav>
 
-    <!-- Game Container & Overlay Header -->
-    <div class="game-overlay open game-overlay-standalone" id="game-overlay">
+    <!-- Game Overlay Container -->
+    <div class="game-overlay open game-overlay-standalone" id="game-overlay" style="max-width: 1100px; margin: 1.5rem auto; border-radius: 16px; overflow: hidden; box-shadow: var(--cg-shadow-lg);">
         <div class="go-topbar">
             <button class="go-back cg-btn cg-btn-secondary" onclick="COSYUtils.backToHub()">← Back to Games Hub</button>
             <div class="go-title-wrapper">
                 <div class="go-title" id="go-title">{{GAME_TITLE}}</div>
                 <div class="go-meta" id="go-meta">{{GAME_CATEGORY}} · {{GAME_LEVELS}}</div>
             </div>
-            <div id="go-topbar-right">
-                <a href="https://github.com/cosylanguages/COSYgames/issues" target="_blank" rel="noopener" class="report-issue-link">🚩 Report Issue</a>
+            <div id="go-topbar-right" style="display: flex; gap: 0.75rem; align-items: center;">
+                <button class="cg-btn cg-btn-outline" onclick="toggleFullscreen()" style="padding: 0.35rem 0.65rem; font-size: 0.8rem;">⛶ Fullscreen</button>
+                <a href="https://github.com/cosylanguages/COSYgames/issues" target="_blank" rel="noopener" class="report-issue-link" style="color: #6B7280; text-decoration: none; font-size: 0.85rem;">🚩 Report Issue</a>
             </div>
         </div>
 
-        <!-- Game Description & Info Section -->
+        <!-- Description & Instructions Header -->
         <div class="game-header-info" style="padding: 1.25rem 1.5rem; background: var(--cg-color-surface); border-bottom: 1px solid rgba(0,0,0,0.06);">
             <p class="game-description" style="margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--cg-color-text);">{{GAME_DESCRIPTION}}</p>
             <div class="migration-notice" style="display: inline-block; padding: 0.35rem 0.75rem; background: #FEF3C7; color: #92400E; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">
@@ -58,21 +60,25 @@
             </div>
         </div>
 
+        <!-- Teacher Mode Resources Box -->
+        <div class="teacher-panel" style="margin: 0; border-radius: 0; border-left: none; border-right: none;">
+            <strong>👩‍🏫 Classroom Guide:</strong> Target Group Size: 2–6 students · Level: {{GAME_LEVELS}} ·
+            <a href="https://cosylanguages.github.io/COSYmanuals/" target="_blank" rel="noopener" style="color: var(--cg-color-teacher); font-weight: bold;">View COSYmanuals Lesson Plan ↗</a>
+        </div>
+
         <!-- Game Canvas / Play Area -->
         <div class="go-body" id="go-body">
-            <div id="game-canvas" class="game-canvas-area" style="min-height: 320px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+            <div id="game-canvas" class="game-canvas-area" style="min-height: 360px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <div class="game-loader" id="game-loader">Loading game assets...</div>
-                <div id="game-content" class="game-content-placeholder" style="margin-top: 1rem;">
-                    <!-- Game specific UI renders here -->
-                </div>
             </div>
         </div>
 
-        <!-- Score & Tracking Section -->
+        <!-- Score & Progress Tracking -->
         <div class="score-tracking-section" style="padding: 1.25rem 1.5rem; background: #FAF7F2; border-top: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-            <div class="score-display" style="display: flex; align-items: center; gap: 1.5rem;">
-                <div><strong>Current Score:</strong> <span class="score-value" id="current-score">0</span></div>
-                <div><strong>High Score:</strong> <span class="high-score-value" id="high-score">0</span></div>
+            <div class="score-display" style="display: flex; align-items: center; gap: 1.5rem; font-weight: 700;">
+                <div>🏆 Current Score: <span class="score-value" id="current-score">0</span></div>
+                <div>⭐ Best Score: <span class="high-score-value" id="high-score">0</span></div>
+                <div>🔥 Daily Streak: <span id="streak-counter">1</span> day(s)</div>
             </div>
             <div class="related-tools-links" style="font-size: 0.9rem;">
                 <strong>Practice Tools:</strong>
@@ -83,12 +89,33 @@
         </div>
     </div>
 
+    <!-- Related Games Section -->
+    <section style="max-width: 1100px; margin: 2rem auto; padding: 0 1rem;">
+        <h3 style="font-family: var(--cg-font-heading); color: var(--cg-color-teal-dark); margin-bottom: 1rem;">You Might Also Like</h3>
+        <div class="game-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="gc" onclick="location.href='../fluency-flow/index.html'">
+                <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name">Fluency Flow</div></div>
+                <div class="gc-desc">Spin for a random topic and speak for 1–5 minutes without stopping.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../action-hero/index.html'">
+                <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name">Action Hero</div></div>
+                <div class="gc-desc">Forehead charades game describing verbs and actions.</div>
+                <div class="gc-foot"><span class="gtag multi">Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../scene-match/index.html'">
+                <div class="gc-top"><div class="gc-icon">🖼️</div><div class="gc-name">Scene Match</div></div>
+                <div class="gc-desc">Match vocabulary to hotspots in interactive illustrated scenes.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo</span><button class="gc-play">▶ Play</button></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer style="margin-top: 2rem; padding: 2rem 1.5rem; background: #1F2937; color: #F9FAFB; text-align: center;">
+    <footer style="margin-top: 3rem; padding: 2rem 1.5rem; background: #1F2937; color: #F9FAFB; text-align: center;">
         <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem; font-family: var(--cg-font-heading); font-size: 1.25rem;">
-                <img src="../shared/css/cosylanguages.png" alt="COSYlanguages logo" style="width: 24px; height: 24px;" onerror="this.style.display='none'">
-                <span>COSYlanguages</span>
+                <span>🎲 COSYlanguages</span>
             </div>
             <p style="margin: 0; color: #9CA3AF; font-size: 0.95rem;">Your friendly corner to master new languages and connect with the world. 🌍</p>
             <div style="display: flex; gap: 1.5rem; font-size: 0.9rem; margin-top: 0.5rem;">
@@ -107,6 +134,21 @@
     <script src="../_engine/game_session.js"></script>
     <script src="../_engine/scores.js"></script>
     <script src="../_engine/loader.js"></script>
-    <script src="game.js" onerror="console.log('No local game.js file found')"></script>
+    <script src="game.js" onerror="console.log('Engine game.js check')"></script>
+    <script>
+      function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().catch(e => {});
+        } else {
+          document.exitFullscreen().catch(e => {});
+        }
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof COSYUtils !== 'undefined') {
+          const streakEl = document.getElementById('streak-counter');
+          if (streakEl) streakEl.textContent = COSYUtils.getStreak();
+        }
+      });
+    </script>
 </body>
 </html>

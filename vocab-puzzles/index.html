@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary & Puzzles 🧩 - COSYgames</title>
+    <meta name="description" content="8 interactive vocabulary, crossword, scene hotspots, and word chain puzzle games.">
+    <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../shared/css/cosy-tokens.css">
+    <link rel="stylesheet" href="../shared/css/tokens.css">
+    <link rel="stylesheet" href="../shared/css/games.css">
+    <link rel="stylesheet" href="../shared/css/cosy-icons.css">
+    <link rel="stylesheet" href="../shared/css/nav.css">
+    <link rel="stylesheet" href="../shared/styles/game-styles.css">
+</head>
+<body class="game-standalone cosy-game-theme">
+    <nav class="cg-nav">
+        <a href="../index.html" class="cg-nav-brand">
+            <span class="cosy-icon icon-dice" aria-hidden="true" style="width:1.2rem;height:1.2rem;color:var(--teal)"></span> COSY Games
+        </a>
+        <div class="cg-nav-right">
+            <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">Home</a>
+            <a href="../index.html" class="cg-nav-hub-link">All Games</a>
+            <a href="../index.html#sec-vocab" class="cg-nav-hub-link active">Vocab & Puzzles</a>
+            <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+        </div>
+    </nav>
+
+    <header class="hero" style="background: linear-gradient(135deg, #F3E8FF 0%, #FAF7F2 100%);">
+        <div class="hero-inner-centered">
+            <div class="hero-tag">8 Interactive Games</div>
+            <h1>🧩 Vocabulary & Puzzles</h1>
+            <p class="hero-subtitle">Expand target vocabulary through spatial room matching, crosswords, word chains, and etymology exploration.</p>
+        </div>
+    </header>
+
+    <main class="filter-container">
+        <div class="game-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="gc" onclick="location.href='../scene-match/index.html'">
+                <div class="gc-top"><div class="gc-icon">🖼️</div><div class="gc-name">Scene Match</div></div>
+                <div class="gc-desc">Match words to labeled hotspots in interactive illustrated scenes.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../word-linker/index.html'">
+                <div class="gc-top"><div class="gc-icon">🔗</div><div class="gc-name">Word Linker</div></div>
+                <div class="gc-desc">Find connecting words, collocations, or spot the odd one out.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../cosy-crossword/index.html'">
+                <div class="gc-top"><div class="gc-icon">🧩</div><div class="gc-name">Cosy Crossword</div></div>
+                <div class="gc-desc">Classic crossword puzzles generated dynamically from vocabulary themes.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../last-letter/index.html'">
+                <div class="gc-top"><div class="gc-icon">🔤</div><div class="gc-name">Last Letter</div></div>
+                <div class="gc-desc">Classic word chain game where each new word begins with the last letter.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../emoji-odyssey/index.html'">
+                <div class="gc-top"><div class="gc-icon">📖</div><div class="gc-name">Emoji Odyssey</div></div>
+                <div class="gc-desc">Decipher common phrases and idioms hidden behind visual emoji sequences.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../etymology-explorer/index.html'">
+                <div class="gc-top"><div class="gc-icon">📜</div><div class="gc-name">Etymology Explorer</div></div>
+                <div class="gc-desc">Discover the historical origins and roots of everyday words.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo</span><button class="gc-play">▶ Play</button></div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 3rem; padding: 2rem 1.5rem; background: #1F2937; color: #F9FAFB; text-align: center;">
+        <p>© 2026 COSYlanguages: All rights reserved</p>
+    </footer>
+
+    <script src="../shared/utils/game-utils.js"></script>
+    <script src="../shared/js/nav.js"></script>
+</body>
+</html>

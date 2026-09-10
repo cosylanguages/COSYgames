@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery & Guesses Games 🕵️ - COSYgames</title>
+    <meta name="description" content="3 interactive mystery and charade games to practice yes/no questions, noun clues, and character deductions.">
+    <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../shared/css/cosy-tokens.css">
+    <link rel="stylesheet" href="../shared/css/tokens.css">
+    <link rel="stylesheet" href="../shared/css/games.css">
+    <link rel="stylesheet" href="../shared/css/cosy-icons.css">
+    <link rel="stylesheet" href="../shared/css/nav.css">
+    <link rel="stylesheet" href="../shared/styles/game-styles.css">
+</head>
+<body class="game-standalone cosy-game-theme">
+    <nav class="cg-nav">
+        <a href="../index.html" class="cg-nav-brand">
+            <span class="cosy-icon icon-dice" aria-hidden="true" style="width:1.2rem;height:1.2rem;color:var(--teal)"></span> COSY Games
+        </a>
+        <div class="cg-nav-right">
+            <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">Home</a>
+            <a href="../index.html" class="cg-nav-hub-link">All Games</a>
+            <a href="../index.html#sec-mystery" class="cg-nav-hub-link active">Mystery</a>
+            <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+        </div>
+    </nav>
+
+    <header class="hero" style="background: linear-gradient(135deg, #FEF3C7 0%, #FAF7F2 100%);">
+        <div class="hero-inner-centered">
+            <div class="hero-tag">3 Interactive Games</div>
+            <h1>🕵️ Mystery & Guesses Games</h1>
+            <p class="hero-subtitle">Uncover mystery items, hidden characters, and action verbs through deduction and strategic questioning.</p>
+        </div>
+    </header>
+
+    <main class="filter-container">
+        <div class="game-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="gc" onclick="location.href='../action-hero/index.html'">
+                <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name">Action Hero</div></div>
+                <div class="gc-desc">Forehead charades game describing verbs and actions.</div>
+                <div class="gc-foot"><span class="gtag multi">Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../identity-mystery/index.html'">
+                <div class="gc-top"><div class="gc-icon">👤</div><div class="gc-name">Identity Mystery</div></div>
+                <div class="gc-desc">Uncover hidden famous characters or professions through strategic yes/no questions.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+            <div class="gc" onclick="location.href='../object-quest/index.html'">
+                <div class="gc-top"><div class="gc-icon">📦</div><div class="gc-name">Object Quest</div></div>
+                <div class="gc-desc">Deduce mystery objects from contextual clues and descriptive noun hints.</div>
+                <div class="gc-foot"><span class="gtag solo">Solo or Group</span><button class="gc-play">▶ Play</button></div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 3rem; padding: 2rem 1.5rem; background: #1F2937; color: #F9FAFB; text-align: center;">
+        <p>© 2026 COSYlanguages: All rights reserved</p>
+    </footer>
+
+    <script src="../shared/utils/game-utils.js"></script>
+    <script src="../shared/js/nav.js"></script>
+</body>
+</html>

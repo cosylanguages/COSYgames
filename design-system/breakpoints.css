@@ -1,0 +1,18 @@
+/* COSYlanguages Ecosystem Design System - Breakpoints */
+
+/*
+Breakpoint ranges:
+- Mobile: 0 - 639px
+- Tablet: 640px - 1023px
+- Desktop: 1024px - 1439px
+- Large Desktop: 1440px+
+*/
+
+:root {
+  --breakpoint-mobile-max: 639px;
+  --breakpoint-tablet-min: 640px;
+  --breakpoint-tablet-max: 1023px;
+  --breakpoint-desktop-min: 1024px;
+  --breakpoint-desktop-max: 1439px;
+  --breakpoint-large-min: 1440px;
+}

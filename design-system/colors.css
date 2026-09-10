@@ -1,0 +1,63 @@
+/* COSYlanguages Ecosystem Design System - Color Palette */
+
+:root {
+  /* A. Primary Colors (Main COSYlanguages Brand) */
+  --color-primary: #0D9488;         /* Teal - primary brand */
+  --color-primary-dark: #0F766E;    /* Dark teal - headers & active states */
+  --color-primary-light: #CCFBF1;   /* Light teal - subtle backgrounds & highlights */
+
+  /* B. Secondary Colors (Accent & Coral) */
+  --color-secondary: #F43F5E;       /* Coral/Rose accent */
+  --color-secondary-dark: #E11D48;
+  --color-secondary-light: #FFE4E6;
+
+  /* C. Functional Colors (State feedback) */
+  --color-success: #10B981;        /* Hex: #10B981 - Correct answers, completions */
+  --color-success-light: #D1FAE5;
+  --color-warning: #F59E0B;        /* Hex: #F59E0B - Streak warnings, cautions */
+  --color-warning-light: #FEF3C7;
+  --color-error: #EF4444;          /* Hex: #EF4444 - Mistakes, validation errors */
+  --color-error-light: #FEE2E2;
+  --color-info: #3B82F6;           /* Hex: #3B82F6 - Tips, information */
+  --color-info-light: #DBEAFE;
+
+  /* D. Neutral Colors */
+  --color-text-primary: #1A1A1A;    /* Primary text */
+  --color-text-secondary: #666666;  /* Secondary text */
+  --color-text-muted: #999999;      /* Muted text */
+  --color-bg-primary: #FFFFFF;      /* Primary surface background */
+  --color-bg-secondary: #F5F5F5;    /* Secondary background */
+  --color-bg-tertiary: #E0E0E0;     /* Tertiary background */
+  --color-border-light: #E5E7EB;    /* Subtle borders */
+  --color-border-medium: #D1D5DB;   /* Medium borders */
+  --color-border-dark: #9CA3AF;     /* Strong borders */
+
+  /* E. Language-Specific Colors */
+  --color-lang-english: #3B82F6;    /* Blue for English */
+  --color-lang-french: #8B5CF6;     /* Purple for French */
+  --color-lang-italian: #F97316;    /* Orange for Italian */
+  --color-lang-russian: #EF4444;    /* Red for Russian */
+  --color-lang-greek: #0D9488;      /* Teal for Greek */
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #D1D5DB;
+  --color-text-muted: #9CA3AF;
+  --color-bg-primary: #111827;
+  --color-bg-secondary: #1F2937;
+  --color-bg-tertiary: #374151;
+  --color-border-light: #374151;
+  --color-border-medium: #4B5563;
+  --color-border-dark: #6B7280;
+}
+
+/* High Contrast Mode Overrides */
+html.high-contrast {
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #E5E7EB;
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #121212;
+  --color-primary: #14B8A6;
+}
