@@ -1,0 +1,52 @@
+/* COSYlanguages Ecosystem Design System - Typography */
+
+:root {
+  /* A. Font Families */
+  --font-family-primary: 'DM Sans', 'Nunito', system-ui, -apple-system, sans-serif;
+  --font-family-heading: 'Fraunces', Georgia, serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* B. Font Sizes (using rem units) */
+  --font-size-xs: 0.75rem;    /* 12px - Small captions & tags */
+  --font-size-sm: 0.875rem;   /* 14px - Subtitles & metadata */
+  --font-size-base: 1rem;     /* 16px - Body text */
+  --font-size-lg: 1.125rem;   /* 18px - Lead paragraphs */
+  --font-size-xl: 1.25rem;    /* 20px - Subheadings h4 */
+  --font-size-2xl: 1.5rem;    /* 24px - Headings h3 */
+  --font-size-3xl: 1.875rem;  /* 30px - Headings h2 */
+  --font-size-4xl: 2.25rem;   /* 36px - Headings h1 */
+  --font-size-5xl: 3rem;      /* 48px - Display Hero titles */
+
+  /* Fluid typography */
+  --font-size-fluid-hero: clamp(2rem, 5vw, 3.2rem);
+
+  /* C. Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* D. Line Heights */
+  --line-height-tight: 1.25;  /* Headings */
+  --line-height-normal: 1.5;  /* Body text */
+  --line-height-relaxed: 1.75;/* Large text blocks */
+
+  /* E. Letter Spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-top: 0;
+}
