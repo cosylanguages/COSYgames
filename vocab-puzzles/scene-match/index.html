@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scene Match - COSYgames Language Learning</title>
+    <meta name="description" content="Match words to labeled hotspots in interactive illustrated scenes.">
+    <meta name="keywords" content="scene match, visual vocabulary, illustrated scenes">
+    <meta property="og:title" content="Scene Match - COSYgames">
+    <meta property="og:description" content="Match words to labeled hotspots in interactive illustrated scenes.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+
+    <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../shared/css/cosy-tokens.css">
+    <link rel="stylesheet" href="../../shared/css/tokens.css">
+    <link rel="stylesheet" href="../../shared/css/games.css">
+    <link rel="stylesheet" href="../../shared/css/cosy-icons.css">
+    <link rel="stylesheet" href="../../shared/css/nav.css">
+    <link rel="stylesheet" href="../../shared/styles/game-styles.css">
+</head>
+<body class="game-standalone cosy-game-theme">
+    <nav class="cg-nav">
+        <a href="../../index.html" class="cg-nav-brand">
+            <span class="cosy-icon icon-dice" aria-hidden="true" style="width:1.2rem;height:1.2rem;color:var(--teal)"></span> COSY Games
+        </a>
+        <div class="cg-nav-right">
+            <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">Home</a>
+            <a href="../../index.html" class="cg-nav-hub-link">All Games</a>
+            <a href="https://cosylanguages.github.io/COSYworld/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSY World</a>
+            <a href="https://cosylanguages.github.io/COSYtools/" class="cg-nav-hub-link" target="_blank" rel="noopener">Tools</a>
+            <a href="https://cosylanguages.github.io/COSYevents/" class="cg-nav-hub-link" target="_blank" rel="noopener">Events</a>
+            <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+        </div>
+    </nav>
+
+    <div class="game-overlay open game-overlay-standalone" id="game-overlay">
+        <div class="go-topbar">
+            <button class="go-back cg-btn cg-btn-secondary" onclick="COSYUtils.backToHub()">← Back to Games Hub</button>
+            <div class="go-title-wrapper">
+                <div class="go-title" id="go-title">Scene Match</div>
+                <div class="go-meta" id="go-meta">Vocab & Puzzles · CEFR A1–C2</div>
+            </div>
+            <div id="go-topbar-right">
+                <a href="https://github.com/cosylanguages/COSYgames/issues" target="_blank" rel="noopener" class="report-issue-link" style="color: #6B7280; text-decoration: none; font-size: 0.9rem;">🚩 Report Issue</a>
+            </div>
+        </div>
+
+        <div class="game-header-info" style="padding: 1.25rem 1.5rem; background: var(--cg-color-surface); border-bottom: 1px solid rgba(0,0,0,0.06);">
+            <p class="game-description" style="margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--cg-color-text);">Match words to labeled hotspots in interactive illustrated scenes.</p>
+            <div class="migration-notice" style="display: inline-block; padding: 0.35rem 0.75rem; background: #FEF3C7; color: #92400E; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">
+                ℹ️ Game coming soon - migrating from COSYlanguages
+            </div>
+        </div>
+
+        <div class="go-body" id="go-body">
+            <div id="game-canvas" class="game-canvas-area">
+                <div class="game-loader" id="game-loader">Loading game assets...</div>
+            </div>
+        </div>
+
+        <div class="score-tracking-section" style="padding: 1.25rem 1.5rem; background: #FAF7F2; border-top: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div class="score-display" style="display: flex; align-items: center; gap: 1.5rem;">
+                <div><strong>Current Score:</strong> <span class="score-value" id="current-score">0</span></div>
+                <div><strong>High Score:</strong> <span class="high-score-value" id="high-score">0</span></div>
+            </div>
+            <div class="related-tools-links" style="font-size: 0.9rem;">
+                <strong>Practice Tools:</strong>
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">Grammar Checker</a> ·
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">Vocab Builder</a> ·
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">Pronunciation Trainer</a>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 2rem; padding: 2rem 1.5rem; background: #1F2937; color: #F9FAFB; text-align: center;">
+        <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; font-family: var(--cg-font-heading); font-size: 1.25rem;">
+                <img src="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png" alt="COSYlanguages logo" style="width: 24px; height: 24px;" onerror="this.style.display='none'">
+                <span>COSYlanguages</span>
+            </div>
+            <p style="margin: 0; color: #9CA3AF; font-size: 0.95rem;">Your friendly corner to master new languages and connect with the world. 🌍</p>
+            <div style="display: flex; gap: 1.5rem; font-size: 0.9rem; margin-top: 0.5rem;">
+                <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener" style="color: #6EE7B7; text-decoration: none;">COSYlanguages Home</a>
+                <a href="../../index.html" style="color: #6EE7B7; text-decoration: none;">Games Hub</a>
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" style="color: #6EE7B7; text-decoration: none;">COSYtools</a>
+                <a href="https://github.com/cosylanguages/COSYgames" target="_blank" rel="noopener" style="color: #6EE7B7; text-decoration: none;">GitHub Repository</a>
+            </div>
+            <div style="font-size: 0.85rem; color: #6B7280; margin-top: 1rem;">© 2026 COSYlanguages: All rights reserved</div>
+        </div>
+    </footer>
+
+    <script src="../../shared/utils/game-utils.js"></script>
+    <script src="../../shared/js/nav.js"></script>
+    <script src="../../_engine/game_session.js"></script>
+    <script src="../../_engine/scores.js"></script>
+    <script src="../../_engine/loader.js"></script>
+    <script src="../../scene_match/game.js" onerror="console.log('Engine script loaded')"></script>
+    <script src="game.js" onerror="console.log('Local game script checked')"></script>
+</body>
+</html>
