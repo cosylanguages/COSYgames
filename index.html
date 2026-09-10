@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate-key="nav_games">Games Hub 🎮: COSYlanguages</title>
-    <meta name="description" data-translate-key="how_it_works_events_p1" content="Interactive games and language clubs to practice your skills. English, French, Italian, Russian and Greek. All CEFR levels.">
-    <meta property="og:title" data-translate-key="nav_games" content="Games Hub 🎮: COSYlanguages">
-    <meta property="og:description" data-translate-key="how_it_works_events_p1" content="Language clubs and interactive games to practice your skills. English, French, Italian, Russian and Greek. All CEFR levels.">
+    <title data-translate-key="nav_games">19 Language Games That Actually Teach 🎮: COSYlanguages</title>
+    <meta name="description" content="19 interactive language games that actually teach speaking, vocabulary, mystery, and puzzles. Free, no account needed. Solo or with friends.">
+    <meta property="og:title" content="19 Language Games That Actually Teach 🎮: COSYlanguages">
+    <meta property="og:description" content="19 interactive language games that actually teach speaking, vocabulary, mystery, and puzzles. Free, no account needed. Solo or with friends.">
     <meta property="og:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
-    <link rel="icon" href="../images/logos/cosylanguages.png">
-    <link rel="manifest" href="../apps/free-portal/manifest.json">
+    <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
     <meta name="theme-color" content="#FAF7F2">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,22 +19,29 @@
     <link rel="stylesheet" href="./shared/css/games.css">
     <link rel="stylesheet" href="./shared/css/cosy-icons.css">
     <link rel="stylesheet" href="./shared/css/nav.css">
-
+    <link rel="stylesheet" href="./shared/styles/game-styles.css">
 </head>
-<body class="games-hub-page">
+<body class="games-hub-page cosy-game-theme">
+    <!-- Top Navigation Header -->
     <nav class="cg-nav">
-  <a href="index.html" class="cg-nav-brand"><span class="cosy-icon icon-dice" aria-hidden="true" style="width:1.2rem;height:1.2rem;color:var(--teal)"></span> COSY Games</a>
-  <div class="cg-nav-right">
-    <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSYlanguages ↗</a>
-    <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
-  </div>
-</nav>
+        <a href="index.html" class="cg-nav-brand">
+            <span class="cosy-icon icon-dice" aria-hidden="true" style="width:1.2rem;height:1.2rem;color:var(--teal)"></span> COSY Games
+        </a>
+        <div class="cg-nav-right">
+            <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">Home</a>
+            <a href="index.html" class="cg-nav-hub-link active">All Games</a>
+            <a href="https://cosylanguages.github.io/COSYworld/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSY World</a>
+            <a href="https://cosylanguages.github.io/COSYtools/" class="cg-nav-hub-link" target="_blank" rel="noopener">Tools</a>
+            <a href="https://cosylanguages.github.io/COSYevents/" class="cg-nav-hub-link" target="_blank" rel="noopener">Events</a>
+            <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+        </div>
+    </nav>
 
     <!-- Sticky Top Navigation Header -->
     <header class="sd-sticky-header">
       <div class="sd-header-inner">
         <div class="sd-breadcrumbs">
-          <a href="../index.html">Home</a>
+          <a href="https://cosylanguages.github.io/COSYlanguages/">Home</a>
           <span class="sep">/</span>
           <span class="current">Games Hub</span>
         </div>
@@ -48,86 +54,74 @@
     </header>
 
     <div id="hub">
+      <!-- Hero Section -->
       <div class="hero">
         <div class="hero-inner hero-inner-centered">
-            <div class="hero-tag">Free · No account needed</div>
-            <h1>19 Language games that <em>actually teach</em></h1>
-            <p>19 interactive games: speaking, vocabulary, mystery and puzzles. Solo or with friends.</p>
+            <div class="hero-tag">Free · No account needed · Solo or with friends</div>
+            <h1>19 Language Games That Actually Teach</h1>
+            <p>Free · No account needed · Solo or with friends</p>
         </div>
       </div>
 
       <div class="page">
+        <!-- Filter Bar -->
         <div class="filter-bar fi">
           <span class="fl">Filter:</span>
-          <button class="fpill active" data-f="all">All games</button>
+          <button class="fpill active" data-f="all">All Games</button>
           <button class="fpill" data-f="solo">Solo</button>
-          <button class="fpill" data-f="group">With friends</button>
+          <button class="fpill" data-f="group">With Friends</button>
           <button class="fpill" data-f="speaking">Speaking</button>
-          <button class="fpill" data-f="vocab">Vocab & Puzzles</button>
+          <button class="fpill" data-f="vocab">Vocabulary</button>
           <button class="fpill" data-f="mystery">Mystery</button>
+          <button class="fpill" data-f="puzzles">Puzzles</button>
         </div>
 
-        <!-- FEATURED OPEN WORLD -->
-        <div class="sec-title fi"><span class="cosy-icon icon-globe sec-title-icon" aria-hidden="true"></span>Open-World RPG <span>Featured Game</span></div>
-        <div class="game-grid fi" style="margin-bottom:2rem;">
-          <div class="gc gc-featured" data-tags="speaking vocab mystery solo group" onclick="openGame('cosyworld')">
-            <div class="gc-top"><div class="gc-icon">🌍</div><div><div class="gc-name">COSY World</div><div style="font-size:0.9rem; opacity:0.9;">Open-World Language RPG · 14 Languages</div></div></div>
-            <div class="gc-desc">Explore COSY Town without flashcards! Walk through districts, discover everyday objects, complete quests with James York & Ella Bronx, challenge Anna, and naturally learn language in a peaceful, realistic RPG world.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span><span class="gtag">A0–C2</span><span class="gtag">14 Languages</span><span class="gtag">Open World</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('cosyworld')">▶ Launch COSY World</button></div>
-          </div>
-        </div>
-
-        <!-- SPEAKING -->
-        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span>Speaking & Fluency <span>9 games</span></div>
+        <!-- SPEAKING & FLUENCY (8 Games) -->
+        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span>Speaking & Fluency <span>8 games</span></div>
         <div class="game-grid fi" id="grid-speaking">
-          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('thisorthat')">
-            <div class="gc-top"><div class="gc-icon">👈👉</div><div class="gc-name">This or That?</div></div>
-            <div class="gc-desc">Tinder-style profile swiping & preference dilemmas. Swipe right on your choices and defend your opinion.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">A1–C2</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('thisorthat')">▶ Play</button></div>
-          </div>
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('fluency')">
             <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name">Fluency Flow</div></div>
             <div class="gc-desc">Spin for a random topic and speak for 1–5 minutes without stopping. Flow, not perfection.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('fluency')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Speaking</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('fluency')">▶ Play</button></div>
           </div>
           <div class="gc gc-teal" data-tags="speaking group" onclick="openGame('battle')">
             <div class="gc-top"><div class="gc-icon">⚖️</div><div class="gc-name">Battle of Wits</div></div>
             <div class="gc-desc">Two topics, two sides. Build your arguments and debate in the language you're learning.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag multi">Group</span><span class="gtag">B1+</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('battle')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag multi">Group</span><span class="gtag">Speaking</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('battle')">▶ Play</button></div>
           </div>
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('opinion')">
             <div class="gc-top"><div class="gc-icon">🏟️</div><div class="gc-name">Opinion Arena</div></div>
             <div class="gc-desc">Agree or disagree with a statement, then defend your view. Real opinions, real language.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">A2+</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('opinion')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Speaking</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('opinion')">▶ Play</button></div>
           </div>
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('critic')">
             <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name">Critic's Corner</div></div>
             <div class="gc-desc">A famous quote appears. What does it mean to you? Deep discussion for advanced levels.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">B2+</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('critic')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Speaking</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('critic')">▶ Play</button></div>
           </div>
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('questions')">
             <div class="gc-top"><div class="gc-icon">💬</div><div class="gc-name">100 Questions</div></div>
             <div class="gc-desc">A game of deep conversations, genuine interest, and absolute honesty. Play with partners, students, or family.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">A2–C2</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('questions')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Speaking</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('questions')">▶ Play</button></div>
           </div>
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('storychain')">
             <div class="gc-top"><div class="gc-icon">🃏</div><div class="gc-name">Story Chain</div></div>
             <div class="gc-desc">Build a story together, one sentence at a time. Each player must use a secret word.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('storychain')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Speaking</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('storychain')">▶ Play</button></div>
           </div>
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('storytelling')">
             <div class="gc-top"><div class="gc-icon">📖</div><div class="gc-name">Story Weaver</div></div>
             <div class="gc-desc">Wield dynamic CEFR grammar rules and thematic vocabulary targets to compose epic, collaborative tales.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">A1–C2</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('storytelling')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Speaking</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('storytelling')">▶ Play</button></div>
           </div>
           <div class="gc gc-teal" data-tags="speaking solo" onclick="openGame('hotseat')">
             <div class="gc-top"><div class="gc-icon">🎯</div><div class="gc-name">Hot Seat</div></div>
             <div class="gc-desc">The pressure is on! Quick-fire vocabulary questions against the clock. How many can you get?</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('hotseat')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span><span class="gtag">Speaking</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('hotseat')">▶ Play</button></div>
           </div>
         </div>
 
-        <!-- MYSTERY -->
+        <!-- MYSTERY & GUESSES (3 Games) -->
         <div class="sec-title fi"><span class="cosy-icon icon-search sec-title-icon" aria-hidden="true"></span>Mystery & Guesses <span>3 games</span></div>
         <div class="game-grid fi" id="grid-mystery">
           <div class="gc gc-gold" data-tags="speaking group mystery" onclick="openGame('action')">
@@ -147,133 +141,117 @@
           </div>
         </div>
 
-        <!-- VOCAB -->
+        <!-- VOCAB & PUZZLES (8 Games) -->
         <div class="sec-title fi"><span class="cosy-icon icon-puzzle sec-title-icon" aria-hidden="true"></span>Vocab & Puzzles <span>8 games</span></div>
         <div class="game-grid fi" id="grid-vocab">
-          <div class="gc gc-plum" data-tags="vocab solo" onclick="openGame('scenematch')">
+          <div class="gc gc-plum" data-tags="vocab puzzles solo" onclick="openGame('scenematch')">
             <div class="gc-top"><div class="gc-icon">🖼️</div><div class="gc-name">Scene Match</div></div>
             <div class="gc-desc">Match words to labeled hotspots in interactive illustrated scenes. Explore rooms and furniture.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span><span class="gtag">A1+</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('scenematch')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span><span class="gtag">Vocabulary</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('scenematch')">▶ Play</button></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab solo group" onclick="openGame('wordlinker')">
+          <div class="gc gc-plum" data-tags="vocab puzzles solo group" onclick="openGame('wordlinker')">
             <div class="gc-top"><div class="gc-icon">🔗</div><div class="gc-name">Word Linker</div></div>
             <div class="gc-desc">Find the word that connects the group: or spot the odd one out. Vocabulary in context.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('wordlinker')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Puzzles</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('wordlinker')">▶ Play</button></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab solo group" onclick="openGame('lastletter')">
+          <div class="gc gc-plum" data-tags="vocab puzzles solo group" onclick="openGame('lastletter')">
             <div class="gc-top"><div class="gc-icon">🔤</div><div class="gc-name">Last Letter</div></div>
             <div class="gc-desc">Each new word must start with the last letter of the previous word. Keep the chain going!</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('lastletter')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Puzzles</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('lastletter')">▶ Play</button></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab solo group" onclick="openGame('emoji')">
+          <div class="gc gc-plum" data-tags="vocab puzzles solo group" onclick="openGame('emoji')">
             <div class="gc-top"><div class="gc-icon">📖</div><div class="gc-name">Emoji Odyssey</div></div>
             <div class="gc-desc">Decipher common phrases and words hidden behind emojis. Fun visual vocabulary.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('emoji')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Puzzles</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('emoji')">▶ Play</button></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab solo" onclick="openGame('crossword')">
+          <div class="gc gc-plum" data-tags="vocab puzzles solo" onclick="openGame('crossword')">
             <div class="gc-top"><div class="gc-icon">🧩</div><div class="gc-name">Cosy Crossword</div></div>
             <div class="gc-desc">Classic crossword puzzles generated dynamically from your current vocabulary.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('crossword')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span><span class="gtag">Puzzles</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('crossword')">▶ Play</button></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab solo group" onclick="openGame('bingo')">
+          <div class="gc gc-plum" data-tags="vocab puzzles solo group" onclick="openGame('bingo')">
             <div class="gc-top"><div class="gc-icon">🔢</div><div class="gc-name">Lucky Numbers</div></div>
             <div class="gc-desc">Classic Bingo! Perfect for practicing numbers and listening. Play solo or as a group caller.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('bingo')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo">Solo or Group</span><span class="gtag">Puzzles</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('bingo')">▶ Play</button></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab solo" onclick="openGame('etymology')">
+          <div class="gc gc-plum" data-tags="vocab puzzles solo" onclick="openGame('etymology')">
             <div class="gc-top"><div class="gc-icon">📜</div><div class="gc-name">Etymology Explorer</div></div>
             <div class="gc-desc">Trace the fascinating origins of everyday words. From Greek roots to modern loanwords.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span><span class="gtag">History</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('etymology')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span><span class="gtag">Vocabulary</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('etymology')">▶ Play</button></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab solo" onclick="openGame('gender')">
+          <div class="gc gc-plum" data-tags="vocab puzzles solo" onclick="openGame('gender')">
             <div class="gc-top"><div class="gc-icon">♀️♂️</div><div class="gc-name">What Gender Is It?</div></div>
             <div class="gc-desc">Guess the grammatical gender of words across languages and explore the historical reasons why they have them.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span><span class="gtag">History</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('gender')">▶ Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo">Solo</span><span class="gtag">Vocabulary</span></div><button class="gc-play" onclick="event.stopPropagation();openGame('gender')">▶ Play</button></div>
           </div>
         </div>
       </div>
 
+      <!-- Footer -->
       <footer>
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="fb-logo">
+              <img src="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png" alt="COSYlanguages logo" onerror="this.style.display='none'">
+              <span class="fb-name">COSYlanguages</span>
+            </div>
+            <p>Your friendly corner to master new languages and connect with the world. 🌍</p>
+          </div>
+          <div class="footer-links-col">
+            <h5>Games</h5>
+            <a href="index.html">All 19 Games 🎮</a>
+            <a href="https://cosylanguages.github.io/COSYworld/">COSY World RPG 🌍</a>
+            <a href="https://cosylanguages.github.io/COSYtools/">COSYtools 🛠️</a>
+            <a href="https://cosylanguages.github.io/COSYmanuals/">COSYmanuals 📚</a>
+          </div>
+          <div class="footer-links-col">
+            <h5>Explore</h5>
+            <a href="https://cosylanguages.github.io/COSYlanguages/#languages">Languages 🌍</a>
+            <a href="https://cosylanguages.github.io/COSYlanguages/practice/">Free Practice 💡</a>
+            <a href="https://cosylanguages.github.io/COSYevents/">Events 🎉</a>
+          </div>
+          <div class="footer-links-col">
+            <h5>Contact</h5>
+            <a href="https://wa.me/330766784195">WhatsApp 📱</a>
+            <a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+            <a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2026 COSYlanguages: All rights reserved</div>
+      </footer>
+    </div><!-- /hub -->
 
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="fb-logo">
-        <img src="../images/logos/cosylanguages.png" alt="COSYlanguages logo">
-        <span class="fb-name">COSYlanguages</span>
-      </div>
-      <p data-translate-key="footer_fb_p">Your friendly corner to master new languages and connect with the world. 🌍</p>
-    </div>
-    <div class="footer-links-col">
-      <h5 data-translate-key="footer_h5_courses">Courses</h5>
-      <a href="../apps/premium-courses/general/" data-translate-key="course_general">General Course 📖</a>
-      <a href="../apps/premium-courses/spoken/" data-translate-key="course_spoken">Spoken Course 🗣️</a>
-      <a href="../apps/premium-courses/exam/" data-translate-key="course_exam">Exam Preparation 📝</a>
-      <a href="../apps/premium-courses/travelling/" data-translate-key="course_travelling">Travelling Course ✈️</a>
-      <a href="../apps/premium-courses/professional/" data-translate-key="course_professional">Professional Course 💼</a>
-      <a href="../apps/premium-courses/relocation/" data-translate-key="course_relocation">Relocation Course 🏡</a>
-    </div>
-    <div class="footer-links-col">
-      <h5 data-translate-key="footer_h5_explore">Explore</h5>
-      <a href="../#languages" data-translate-key="nav_languages">Languages 🌍</a>
-      <a href="../practice/index.html" data-translate-key="nav_practice">Free Practice 💡</a>
-      <a href="../events/index.html" data-translate-key="nav_events">Events 🎉</a>
-      <a href="index.html" data-translate-key="nav_games">Games 🎮</a>
-    </div>
-    <div class="footer-links-col">
-      <h5>Project</h5>
-      <a href="../privacy.html">Privacy &amp; Safety 🛡️</a>
-    </div>
-    <div class="footer-links-col">
-      <h5 data-translate-key="footer_h5_contact">Contact</h5>
-      <a href="https://wa.me/330766784195">WhatsApp 📱</a>
-      <a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
-      <a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
-    </div>
-  </div>
-  <div class="footer-bottom" data-translate-key="footer_copy">© 2026 COSYlanguages: All rights reserved</div>
-
-</footer>
-  </div><!-- /hub -->
-
-  <!-- Scripts -->
+    <!-- Scripts -->
     <script>
       (function() {
         const GAME_PATH_MAP = {
-          fluency: 'fluency_flow/index.html',
-          battle: 'battle_of_wits/index.html',
-          opinion: 'opinion_arena/index.html',
-          critic: 'critics_corner/index.html',
-          storychain: 'story_chain/index.html',
-          hotseat: 'hot_seat/index.html',
-          action: 'action_hero/index.html',
-          identity: 'identity_mystery/index.html',
-          objectquest: 'object_quest/index.html',
-          wordlinker: 'word_linker/index.html',
-          lastletter: 'last_letter/index.html',
-          emoji: 'emoji_odyssey/index.html',
-          crossword: 'cosy_crossword/index.html',
-          bingo: 'lucky_numbers/index.html',
-          etymology: 'etymology_explorer/index.html',
-          gender: 'what_gender_is_it/index.html',
-          questions: 'hundred_questions/index.html',
-          storytelling: 'storytelling/index.html',
-          scenematch: 'scene_match/index.html',
-          thisorthat: 'this_or_that/index.html',
-          cosyworld: 'https://cosylanguages.github.io/COSYworld/'
+          fluency: 'fluency-flow/index.html',
+          battle: 'battle-of-wits/index.html',
+          opinion: 'opinion-arena/index.html',
+          critic: 'critics-corner/index.html',
+          questions: '100-questions/index.html',
+          storychain: 'story-chain/index.html',
+          storytelling: 'story-weaver/index.html',
+          hotseat: 'hot-seat/index.html',
+          action: 'action-hero/index.html',
+          identity: 'identity-mystery/index.html',
+          objectquest: 'object-quest/index.html',
+          scenematch: 'scene-match/index.html',
+          wordlinker: 'word-linker/index.html',
+          lastletter: 'last-letter/index.html',
+          emoji: 'emoji-odyssey/index.html',
+          crossword: 'cosy-crossword/index.html',
+          bingo: 'lucky-numbers/index.html',
+          etymology: 'etymology-explorer/index.html',
+          gender: 'what-gender-is-it/index.html'
         };
 
         const initialParams = new URLSearchParams(window.location.search);
         const rememberedLang = initialParams.get('lang');
 
-        const originalOpenGame = window.openGame;
         window.openGame = function(id) {
           let path = GAME_PATH_MAP[id];
-          if (!path) {
-            if (originalOpenGame) {
-              originalOpenGame(id);
-            }
-            return;
-          }
+          if (!path) return;
 
           const params = new URLSearchParams(window.location.search);
           const passParams = new URLSearchParams();
@@ -290,14 +268,31 @@
             path += (path.includes('?') ? '&' : '?') + queryString;
           }
 
-          if (id === 'cosyworld' && (location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
-            location.href = '../COSYworld/index.html' + (queryString ? '?' + queryString : '');
-          } else {
-            location.href = path;
-          }
+          location.href = path;
         };
 
+        // Filter Pills Handler
         document.addEventListener('DOMContentLoaded', () => {
+          const filterPills = document.querySelectorAll('.fpill');
+          const cards = document.querySelectorAll('.gc');
+
+          filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+              filterPills.forEach(p => p.classList.remove('active'));
+              pill.classList.add('active');
+
+              const filter = pill.getAttribute('data-f');
+              cards.forEach(card => {
+                const tags = (card.getAttribute('data-tags') || '').split(' ');
+                if (filter === 'all' || tags.includes(filter)) {
+                  card.style.display = 'flex';
+                } else {
+                  card.style.display = 'none';
+                }
+              });
+            });
+          });
+
           const params = new URLSearchParams(window.location.search);
           const gameParam = params.get('game');
           if (gameParam && GAME_PATH_MAP[gameParam]) {
@@ -308,6 +303,7 @@
     </script>
 
     <div id="toast" class="toast-notification"></div>
+    <script src="./shared/utils/game-utils.js"></script>
     <script src="./shared/js/nav.js"></script>
 </body>
 </html>
