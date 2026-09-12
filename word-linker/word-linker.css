@@ -1,0 +1,231 @@
+/* word-linker/word-linker.css - Magnetic Bridge Identity */
+:root {
+  --game-accent: #84cc16; /* Lime */
+  --game-accent-dim: rgba(132, 204, 22, 0.15);
+  --game-accent-contrast: #1a2e05;
+  --bridge-wood: #78350f;
+  --bridge-plank: #a16207;
+  --bridge-metal: #475569;
+}
+
+[data-theme="dark"] {
+  --game-accent: #a3e635;
+  --game-accent-dim: rgba(163, 230, 53, 0.2);
+  --game-accent-contrast: #0f1f02;
+  --bridge-wood: #451a03;
+  --bridge-plank: #854d0e;
+}
+
+/* Magnetic Bridge Canvas Area */
+.bridge-arena {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1rem 0;
+}
+
+/* Word Planks Grid */
+.word-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .word-options-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.word-plank {
+  position: relative;
+  background: var(--cg-color-surface, #ffffff);
+  border: 2px solid var(--border, #e2e8f0);
+  border-radius: 12px;
+  padding: 1rem 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink, #1e293b);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 3px 0 var(--border, #cbd5e1);
+  user-select: none;
+}
+
+.word-plank:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: var(--game-accent);
+  box-shadow: 0 5px 0 var(--game-accent);
+}
+
+.word-plank.selected {
+  border-color: var(--game-accent);
+  background: var(--game-accent-dim);
+  color: var(--game-accent-contrast);
+  box-shadow: 0 0 0 3px var(--game-accent);
+  transform: scale(1.03);
+}
+
+.word-plank.linked {
+  border-color: var(--game-accent);
+  background: linear-gradient(135deg, var(--game-accent-dim), rgba(132, 204, 22, 0.3));
+  color: var(--game-accent-contrast);
+  cursor: default;
+}
+
+.word-plank.odd-out {
+  border-color: var(--red, #ef4444);
+  background: rgba(239, 68, 68, 0.15);
+  color: #991b1b;
+}
+
+/* Magnetic Snap Animation */
+.motion-slide-chain.magnetic-snap {
+  animation: magneticSnap 0.42s cubic-bezier(0.7, 0, 0.84, 0) forwards;
+}
+
+@keyframes magneticSnap {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08) translateY(-6px);
+    box-shadow: 0 0 16px var(--game-accent);
+  }
+  85% {
+    transform: scale(0.96) translateY(2px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    box-shadow: 0 0 8px var(--game-accent);
+  }
+}
+
+/* Accumulated Bridge Deck Gallery */
+.bridge-deck {
+  background: rgba(0, 0, 0, 0.03);
+  border: 2px dashed var(--border, #cbd5e1);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-top: 1rem;
+  min-height: 90px;
+}
+
+.bridge-deck-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink-faint, #64748b);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bridge-segments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bridge-segment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--cg-color-surface, #ffffff);
+  border: 2px solid var(--game-accent);
+  border-radius: 10px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 6px rgba(132, 204, 22, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.bridge-segment::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  right: 20%;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--game-accent) 0,
+    var(--game-accent) 8px,
+    transparent 8px,
+    transparent 14px
+  );
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.bridge-word {
+  position: relative;
+  z-index: 2;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 4px 10px;
+  background: var(--game-accent-dim);
+  border-radius: 6px;
+  color: var(--game-accent-contrast);
+}
+
+.bridge-connection-label {
+  position: relative;
+  z-index: 2;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--game-accent-contrast);
+  background: #ffffff;
+  border: 1px solid var(--game-accent);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+/* Responsive View Context Rules */
+[data-context="phone"] .word-options-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+[data-context="phone"] .word-plank {
+  padding: 0.85rem 0.5rem;
+  font-size: 1rem;
+}
+
+[data-context="phone"] .phone-tap-instruction {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--game-accent-contrast);
+  background: var(--game-accent-dim);
+  border: 1px solid var(--game-accent);
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+[data-context="online"] .bridge-deck {
+  border: 2px solid var(--game-accent);
+  background: rgba(132, 204, 22, 0.05);
+}
+
+[data-context="online"] .bridge-deck-title::after {
+  content: '📡 LIVE SHARED BRIDGE';
+  margin-left: auto;
+  font-size: 0.7rem;
+  background: var(--game-accent);
+  color: var(--game-accent-contrast);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
