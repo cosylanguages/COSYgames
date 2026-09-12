@@ -1,0 +1,39 @@
+name: Validate Etymology Data
+
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'etymology_explorer/**'
+      - 'etymology-explorer/**'
+      - 'vocab-puzzles/etymology-explorer/**'
+      - 'scripts/validate-etymology-data.js'
+      - '.github/workflows/validate-etymology.yml'
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'etymology_explorer/**'
+      - 'etymology-explorer/**'
+      - 'vocab-puzzles/etymology-explorer/**'
+      - 'scripts/validate-etymology-data.js'
+      - '.github/workflows/validate-etymology.yml'
+
+jobs:
+  validate:
+    name: Validate Etymology Datasets
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Etymology Data Validation Script
+        run: node scripts/validate-etymology-data.js
+
+      - name: Run Etymology Schema Unit Tests
+        run: node tests/etymology-schema.test.js
