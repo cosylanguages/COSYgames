@@ -75,6 +75,21 @@
 
     function shuffle(arr) { return [...arr].sort(() => Math.random() - .5); }
 
+    function renderPathVisualization(pathStr) {
+        if (!pathStr) return '';
+        const steps = pathStr.split(/\s*→\s*/).filter(Boolean);
+        if (steps.length < 3) {
+            return `<div style="font-family: monospace; margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;">${gameUtils.escapeAttr(pathStr)}</div>`;
+        }
+
+        const htmlSteps = steps.map(step => {
+            const escaped = gameUtils.escapeAttr(step);
+            return `<span style="display: inline-flex; align-items: center; background: rgba(13, 148, 136, 0.12); color: var(--teal); border: 1px solid rgba(13, 148, 136, 0.3); padding: 0.3rem 0.65rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; white-space: nowrap;">${escaped}</span>`;
+        }).join('<span style="color: var(--teal); font-weight: bold; margin: 0 0.35rem; font-size: 1.1rem;">➔</span>');
+
+        return `<div class="path-chips-container" style="display: flex; align-items: center; gap: 0.2rem; flex-wrap: wrap; margin-top: 0.75rem; padding: 0.5rem; background: rgba(255, 255, 255, 0.6); border-radius: 10px; border: 1px solid rgba(0,0,0,0.05);">${htmlSteps}</div>`;
+    }
+
     function loadNetworkData() {
         return new Promise((resolve) => {
             if (window.etymologyNetworkData) {
@@ -250,6 +265,7 @@
 
                 const layer2 = document.getElementById('strata-layer-2');
                 const layer3 = document.getElementById('strata-layer-3');
+                const pathViz = renderPathVisualization(path);
 
                 if (selected === correct) {
                     el.classList.add('correct');
@@ -267,7 +283,7 @@
                     revealedHistoryLayers.push(`${word} ➔ ${correct}`);
 
                     fb.className = 'feedback-bar show ok';
-                    fb.innerHTML = `<div>✓ <strong>Unearthed!</strong> ${detail}</div>`;
+                    fb.innerHTML = `<div>✓ <strong>Unearthed!</strong> ${detail}</div>${pathViz}`;
                     COSYGame.addScore(10);
                     document.getElementById('et-score').textContent = COSYGame.score;
                 } else {
@@ -276,7 +292,7 @@
                         if (b.textContent === correct) b.classList.add('correct');
                     });
                     fb.className = 'feedback-bar show bad';
-                    fb.innerHTML = `<div>✗ <strong>Actually, it's ${correct}.</strong> ${detail}</div>`;
+                    fb.innerHTML = `<div>✗ <strong>Actually, it's ${correct}.</strong> ${detail}</div>${pathViz}`;
                 }
             };
 

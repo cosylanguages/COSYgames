@@ -5,8 +5,9 @@ const assert = require('assert');
 const langs = ['ba', 'br', 'de', 'el', 'en', 'es', 'fr', 'hy', 'it', 'ka', 'pt', 'ru', 'tt'];
 
 let totalTested = 0;
+let multiHopCount = 0;
 
-console.log('Running etymology schema verification tests...\n');
+console.log('Running etymology schema & multi-hop path verification tests...\n');
 
 langs.forEach(lang => {
     const filePath = path.join(__dirname, '..', 'data', lang, 'game_data.js');
@@ -44,6 +45,11 @@ langs.forEach(lang => {
         // Options must include answer exactly once
         const answerMatches = entry.options.filter(opt => opt === entry.answer);
         assert.strictEqual(answerMatches.length, 1, `${prefix}: answer '${entry.answer}' must be present in options exactly once, found in: ${JSON.stringify(entry.options)}`);
+
+        // Track 3+ hop paths
+        if (entry.path && (entry.path.match(/→/g) || []).length >= 2) {
+            multiHopCount++;
+        }
     });
 
     console.log(`✓ Lang '${lang}': ${etymology.length} etymology entries verified`);
@@ -68,6 +74,10 @@ if (fs.existsSync(universalPath)) {
             assert.ok(entry.options.length >= 3 && entry.options.length <= 4, `${prefix}: 'options' length must be 3 or 4`);
             assert.strictEqual(new Set(entry.options).size, entry.options.length, `${prefix}: options duplicates`);
             assert.strictEqual(entry.options.filter(o => o === entry.answer).length, 1, `${prefix}: answer match count`);
+
+            if (entry.path && (entry.path.match(/→/g) || []).length >= 2) {
+                multiHopCount++;
+            }
         });
         console.log(`✓ Universal: ${data.etymology.length} etymology entries verified`);
     }
@@ -96,5 +106,9 @@ networkData.forEach((entry, idx) => {
     });
 });
 console.log(`✓ Network: ${networkData.length} cross-language family entries verified`);
+
+// Verify at least 15 multi-hop 3+ step paths exist across the decks
+assert.ok(multiHopCount >= 15, `Expected at least 15 multi-hop 3+ step paths, found ${multiHopCount}`);
+console.log(`✓ Multi-hop Paths: ${multiHopCount} multi-hop 3+ step paths verified across decks.`);
 
 console.log(`\nALL TESTS PASSED! Successfully verified ${totalTested} etymology & network entries.`);
