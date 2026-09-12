@@ -95,9 +95,66 @@
     }
 
     window.COSYLoader = {
-        loadLevelData: (lang, level) => window.gameUtils ? window.gameUtils.loadLevelData(lang, level) : Promise.resolve(),
-        getGameData: (lang) => window.gameUtils ? window.gameUtils.getGameData(lang) : {},
-        getLangCode: (val) => window.getLangCode ? window.getLangCode(val) : val,
+        loadLevelData: (lang, level) => {
+            if (window.gameUtils && typeof window.gameUtils.loadLevelData === 'function') {
+                return window.gameUtils.loadLevelData(lang, level);
+            }
+            const promises = [];
+            if (typeof document !== 'undefined') {
+                if (lang && (!window.gameData || !window.gameData[lang])) {
+                    promises.push(new Promise((resolve) => {
+                        const script = document.createElement('script');
+                        script.src = `../data/${lang}/game_data.js`;
+                        script.onload = () => resolve();
+                        script.onerror = () => resolve();
+                        document.head.appendChild(script);
+                    }));
+                }
+                if (!window.gameData || !window.gameData['universal']) {
+                    promises.push(new Promise((resolve) => {
+                        const script = document.createElement('script');
+                        script.src = '../data/universal.js';
+                        script.onload = () => resolve();
+                        script.onerror = () => resolve();
+                        document.head.appendChild(script);
+                    }));
+                }
+            }
+            return Promise.all(promises);
+        },
+        getGameData: (lang) => {
+            if (window.gameUtils && typeof window.gameUtils.getGameData === 'function') {
+                return window.gameUtils.getGameData(lang);
+            }
+            return (window.gameData && window.gameData[lang]) || (window.gameData && window.gameData['universal']) || {};
+        },
+        getLangCode: (val) => {
+            if (window.getLangCode && typeof window.getLangCode === 'function') {
+                const res = window.getLangCode(val);
+                if (res && res !== val) return res;
+            }
+            if (!val) return 'en';
+            const str = String(val).toLowerCase().trim();
+            const langMap = {
+                'english': 'en', 'en': 'en',
+                'français': 'fr', 'francais': 'fr', 'fr': 'fr',
+                'italiano': 'it', 'it': 'it',
+                'deutsch': 'de', 'de': 'de',
+                'español': 'es', 'espanol': 'es', 'es': 'es',
+                'русский': 'ru', 'ru': 'ru',
+                'ελληνικά': 'el', 'el': 'el',
+                'português': 'pt', 'portugues': 'pt', 'pt': 'pt',
+                'հայերեն': 'hy', 'hy': 'hy',
+                'ქართული': 'ka', 'ka': 'ka',
+                'башҡорт': 'ba', 'ba': 'ba',
+                'татар': 'tt', 'tt': 'tt',
+                'brezhoneg': 'br', 'br': 'br'
+            };
+            for (const [key, code] of Object.entries(langMap)) {
+                if (str.includes(key)) return code;
+            }
+            return str.slice(0, 2) || 'en';
+        },
         getLevelCode: (val) => window.getLevelCode ? window.getLevelCode(val) : val,
         getHandoffParams: getHandoffParams,
         applyHandoffParams: applyHandoffParams

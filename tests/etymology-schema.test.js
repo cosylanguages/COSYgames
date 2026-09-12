@@ -1,0 +1,76 @@
+const fs = require('fs');
+const path = require('path');
+const assert = require('assert');
+
+const langs = ['ba', 'br', 'de', 'el', 'en', 'es', 'fr', 'hy', 'it', 'ka', 'pt', 'ru', 'tt'];
+
+let totalTested = 0;
+
+console.log('Running etymology schema verification tests...\n');
+
+langs.forEach(lang => {
+    const filePath = path.join(__dirname, '..', 'data', lang, 'game_data.js');
+    assert.strictEqual(fs.existsSync(filePath), true, `File missing for language: ${lang}`);
+
+    const content = fs.readFileSync(filePath, 'utf8');
+    const window = {};
+    eval(content);
+
+    const data = window.gameData ? window.gameData[lang] : null;
+    assert.ok(data, `gameData['${lang}'] should exist`);
+
+    const etymology = data.etymology;
+    assert.ok(Array.isArray(etymology), `data.etymology should be an array for ${lang}`);
+    assert.ok(etymology.length > 0, `data.etymology should not be empty for ${lang}`);
+
+    etymology.forEach((entry, idx) => {
+        totalTested++;
+        const prefix = `Lang '${lang}' entry #${idx + 1} (${entry.word})`;
+
+        // Required fields
+        assert.ok(typeof entry.word === 'string' && entry.word.trim().length > 0, `${prefix}: missing 'word'`);
+        assert.ok(typeof entry.level === 'string' && entry.level.trim().length > 0, `${prefix}: missing 'level'`);
+        assert.ok(typeof entry.answer === 'string' && entry.answer.trim().length > 0, `${prefix}: missing 'answer'`);
+        assert.ok(typeof entry.detail === 'string' && entry.detail.trim().length > 0, `${prefix}: missing 'detail'`);
+
+        // Options array constraints
+        assert.ok(Array.isArray(entry.options), `${prefix}: 'options' must be an array`);
+        assert.ok(entry.options.length >= 3 && entry.options.length <= 4, `${prefix}: 'options' length must be 3 or 4, got ${entry.options.length}`);
+
+        // All options must be unique
+        const uniqueOptions = new Set(entry.options);
+        assert.strictEqual(uniqueOptions.size, entry.options.length, `${prefix}: 'options' contains duplicates: ${JSON.stringify(entry.options)}`);
+
+        // Options must include answer exactly once
+        const answerMatches = entry.options.filter(opt => opt === entry.answer);
+        assert.strictEqual(answerMatches.length, 1, `${prefix}: answer '${entry.answer}' must be present in options exactly once, found in: ${JSON.stringify(entry.options)}`);
+    });
+
+    console.log(`✓ Lang '${lang}': ${etymology.length} etymology entries verified`);
+});
+
+// Also test data/universal.js
+const universalPath = path.join(__dirname, '..', 'data', 'universal.js');
+if (fs.existsSync(universalPath)) {
+    const content = fs.readFileSync(universalPath, 'utf8');
+    const window = {};
+    eval(content);
+    const data = window.gameData ? window.gameData['universal'] : null;
+    if (data && data.etymology) {
+        data.etymology.forEach((entry, idx) => {
+            totalTested++;
+            const prefix = `Universal entry #${idx + 1} (${entry.word})`;
+            assert.ok(typeof entry.word === 'string' && entry.word.trim().length > 0, `${prefix}: missing 'word'`);
+            assert.ok(typeof entry.level === 'string' && entry.level.trim().length > 0, `${prefix}: missing 'level'`);
+            assert.ok(typeof entry.answer === 'string' && entry.answer.trim().length > 0, `${prefix}: missing 'answer'`);
+            assert.ok(typeof entry.detail === 'string' && entry.detail.trim().length > 0, `${prefix}: missing 'detail'`);
+            assert.ok(Array.isArray(entry.options), `${prefix}: 'options' must be an array`);
+            assert.ok(entry.options.length >= 3 && entry.options.length <= 4, `${prefix}: 'options' length must be 3 or 4`);
+            assert.strictEqual(new Set(entry.options).size, entry.options.length, `${prefix}: options duplicates`);
+            assert.strictEqual(entry.options.filter(o => o === entry.answer).length, 1, `${prefix}: answer match count`);
+        });
+        console.log(`✓ Universal: ${data.etymology.length} etymology entries verified`);
+    }
+}
+
+console.log(`\nALL TESTS PASSED! Successfully verified ${totalTested} etymology entries across all languages.`);
