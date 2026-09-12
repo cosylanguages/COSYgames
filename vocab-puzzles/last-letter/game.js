@@ -1,5 +1,5 @@
 /**
- * games/last_letter/game.js
+ * games/last-letter/game.js
  * Standalone logic for Last Letter.
  */
 (function() {

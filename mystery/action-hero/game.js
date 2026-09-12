@@ -1,5 +1,5 @@
 /**
- * games/action_hero/game.js
+ * games/action-hero/game.js
  * Standalone logic for Action Hero.
  * Enhanced with Phase 3 (Sensory FX & Confetti) and Phase 4 (Mobile Tilt Gestures).
  */

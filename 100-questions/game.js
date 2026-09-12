@@ -1,5 +1,5 @@
 /**
- * games/hundred_questions/game.js
+ * games/100-questions/game.js
  * Standalone logic for 100 Questions game.
  * Acts solely as the UI and Game Controller.
  */

@@ -1,5 +1,5 @@
 /**
- * games/identity_mystery/game.js
+ * games/identity-mystery/game.js
  * Standalone logic for Identity Mystery.
  */
 (function() {

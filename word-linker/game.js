@@ -1,5 +1,5 @@
 /**
- * games/word_linker/game.js
+ * games/word-linker/game.js
  * Standalone logic for Word Linker.
  */
 (function() {

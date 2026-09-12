@@ -1,5 +1,5 @@
 /**
- * games/story_chain/game.js
+ * games/story-chain/game.js
  * Standalone logic for Story Chain.
  */
 (function() {

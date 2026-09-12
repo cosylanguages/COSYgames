@@ -1,0 +1,367 @@
+[
+  {
+    "id": "fluency-flow",
+    "folder_path": "fluency-flow/",
+    "display_name": "Fluency Flow",
+    "category": "Speaking & Fluency",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "fluency",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "battle-of-wits",
+    "folder_path": "battle-of-wits/",
+    "display_name": "Battle of Wits",
+    "category": "Speaking & Fluency",
+    "cefr_levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "speaking",
+    "mode": [
+      "group"
+    ]
+  },
+  {
+    "id": "opinion-arena",
+    "folder_path": "opinion-arena/",
+    "display_name": "Opinion Arena",
+    "category": "Speaking & Fluency",
+    "cefr_levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "speaking",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "critics-corner",
+    "folder_path": "critics-corner/",
+    "display_name": "Critic's Corner",
+    "category": "Speaking & Fluency",
+    "cefr_levels": [
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "speaking",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "100-questions",
+    "folder_path": "100-questions/",
+    "display_name": "100 Questions",
+    "category": "Speaking & Fluency",
+    "cefr_levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "speaking",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "story-chain",
+    "folder_path": "story-chain/",
+    "display_name": "Story Chain",
+    "category": "Speaking & Fluency",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "speaking",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "story-weaver",
+    "folder_path": "story-weaver/",
+    "display_name": "Story Weaver",
+    "category": "Speaking & Fluency",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "speaking",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "hot-seat",
+    "folder_path": "hot-seat/",
+    "display_name": "Hot Seat",
+    "category": "Speaking & Fluency",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "vocabulary",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "action-hero",
+    "folder_path": "action-hero/",
+    "display_name": "Action Hero",
+    "category": "Mystery & Guesses",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "vocabulary",
+    "mode": [
+      "group"
+    ]
+  },
+  {
+    "id": "identity-mystery",
+    "folder_path": "identity-mystery/",
+    "display_name": "Identity Mystery",
+    "category": "Mystery & Guesses",
+    "cefr_levels": [
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "speaking",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "object-quest",
+    "folder_path": "object-quest/",
+    "display_name": "Object Quest",
+    "category": "Mystery & Guesses",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "vocabulary",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "scene-match",
+    "folder_path": "scene-match/",
+    "display_name": "Scene Match",
+    "category": "Vocab & Puzzles",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "vocabulary",
+    "mode": [
+      "solo"
+    ]
+  },
+  {
+    "id": "word-linker",
+    "folder_path": "word-linker/",
+    "display_name": "Word Linker",
+    "category": "Vocab & Puzzles",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "vocabulary",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "last-letter",
+    "folder_path": "last-letter/",
+    "display_name": "Last Letter",
+    "category": "Vocab & Puzzles",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "vocabulary",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "emoji-odyssey",
+    "folder_path": "emoji-odyssey/",
+    "display_name": "Emoji Odyssey",
+    "category": "Vocab & Puzzles",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "vocabulary",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "cosy-crossword",
+    "folder_path": "cosy-crossword/",
+    "display_name": "Cosy Crossword",
+    "category": "Vocab & Puzzles",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "vocabulary",
+    "mode": [
+      "solo"
+    ]
+  },
+  {
+    "id": "lucky-numbers",
+    "folder_path": "lucky-numbers/",
+    "display_name": "Lucky Numbers",
+    "category": "Vocab & Puzzles",
+    "cefr_levels": [
+      "A0",
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "listening",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  },
+  {
+    "id": "etymology-explorer",
+    "folder_path": "etymology-explorer/",
+    "display_name": "Etymology Explorer",
+    "category": "Vocab & Puzzles",
+    "cefr_levels": [
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "vocabulary",
+    "mode": [
+      "solo"
+    ]
+  },
+  {
+    "id": "what-gender-is-it",
+    "folder_path": "what-gender-is-it/",
+    "display_name": "What Gender Is It?",
+    "category": "Vocab & Puzzles",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "grammar",
+    "mode": [
+      "solo"
+    ]
+  },
+  {
+    "id": "this-or-that",
+    "folder_path": "this-or-that/",
+    "display_name": "This or That?",
+    "category": "Speaking & Fluency",
+    "cefr_levels": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ],
+    "skill_focus": "speaking",
+    "mode": [
+      "solo",
+      "group"
+    ]
+  }
+]

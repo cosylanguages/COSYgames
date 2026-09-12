@@ -1,5 +1,5 @@
 /**
- * games/opinion_arena/game.js
+ * games/opinion-arena/game.js
  * Standalone logic for Opinion Arena.
  */
 (function() {

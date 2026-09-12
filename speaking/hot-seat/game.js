@@ -1,5 +1,5 @@
 /**
- * games/hot_seat/game.js
+ * games/hot-seat/game.js
  * Standalone logic for Hot Seat.
  */
 (function() {

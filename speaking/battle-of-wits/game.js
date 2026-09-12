@@ -1,5 +1,5 @@
 /**
- * games/battle_of_wits/game.js
+ * games/battle-of-wits/game.js
  * Standalone logic for Battle of Wits.
  */
 (function() {

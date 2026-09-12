@@ -1,4 +1,4 @@
-# 🎮 COSYgames: 19 Language Games That Actually Teach
+# 🎮 COSYgames: Interactive Language Games That Actually Teach
 
 Standalone interactive language games repository for the **COSYlanguages** ecosystem.
 
@@ -9,13 +9,13 @@ Standalone interactive language games repository for the **COSYlanguages** ecosy
 
 ## 🌟 Overview
 
-`COSYgames` is the official central hub hosting **19 interactive language learning minigames** designed for immersive self-study and active classroom practice. All games operate standalone without external dependencies, require no account, and support solo play as well as partner and group activities across multiple CEFR levels (A0–C2).
+`COSYgames` is the official central hub hosting **interactive language learning minigames** designed for immersive self-study and active classroom practice. All games operate standalone without external dependencies, require no account, and support solo play as well as partner and group activities across multiple CEFR levels (A0–C2).
 
 Whether you are a student building oral fluency or a teacher facilitating communicative drills, COSYgames offers engaging, pedagogical tools to make language acquisition natural and fun.
 
 ---
 
-## 🎲 All 19 Language Games
+## 🎲 Language Games Directory
 
 ### 🗣️ Speaking & Fluency
 1. **Fluency Flow** (`/fluency-flow/`)
@@ -50,49 +50,53 @@ Whether you are a student building oral fluency or a teacher facilitating commun
    - *Description:* High-pressure, quick-fire vocabulary explanation game against the clock.
    - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
 
-### 🕵️ Mystery & Guesses
-9. **Action Hero** (`/action-hero/`)
-   - *Description:* Hold your device to your forehead while teammates describe verbs and actions for you to guess.
-   - *CEFR Levels:* A1–C2 | *Mode:* Group
+9. **This or That?** (`/this-or-that/`)
+   - *Description:* Interactive profile swiping and decision cards to practice expressing preferences and justifying choices.
+   - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
 
-10. **Identity Mystery** (`/identity-mystery/`)
+### 🕵️ Mystery & Guesses
+10. **Action Hero** (`/action-hero/`)
+    - *Description:* Hold your device to your forehead while teammates describe verbs and actions for you to guess.
+    - *CEFR Levels:* A1–C2 | *Mode:* Group
+
+11. **Identity Mystery** (`/identity-mystery/`)
     - *Description:* Uncover hidden famous characters or professions through strategic yes/no questions.
     - *CEFR Levels:* A2–C2 | *Mode:* Solo or Group
 
-11. **Object Quest** (`/object-quest/`)
+12. **Object Quest** (`/object-quest/`)
     - *Description:* Deduce mystery objects from contextual clues and descriptive hints.
     - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
 
 ### 🧩 Vocab & Puzzles
-12. **Scene Match** (`/scene-match/`)
+13. **Scene Match** (`/scene-match/`)
     - *Description:* Interactive 2D visual rooms where learners match target vocabulary to labeled hotspots.
     - *CEFR Levels:* A1–C2 | *Mode:* Solo
 
-13. **Word Linker** (`/word-linker/`)
+14. **Word Linker** (`/word-linker/`)
     - *Description:* Identify collocations, word associations, or spot the odd word out in a set.
     - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
 
-14. **Last Letter** (`/last-letter/`)
+15. **Last Letter** (`/last-letter/`)
     - *Description:* Classic word chain game where each new word must begin with the final letter of the previous word.
     - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
 
-15. **Emoji Odyssey** (`/emoji-odyssey/`)
+16. **Emoji Odyssey** (`/emoji-odyssey/`)
     - *Description:* Decipher visual emoji sequences representing common phrases, idioms, and vocabulary.
     - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
 
-16. **Cosy Crossword** (`/cosy-crossword/`)
+17. **Cosy Crossword** (`/cosy-crossword/`)
     - *Description:* Dynamically generated crossword puzzles tailored to specific CEFR vocabulary themes.
     - *CEFR Levels:* A1–C2 | *Mode:* Solo
 
-17. **Lucky Numbers** (`/lucky-numbers/`)
+18. **Lucky Numbers** (`/lucky-numbers/`)
     - *Description:* Interactive language Bingo for numbers and listening comprehension practice.
     - *CEFR Levels:* A0–C2 | *Mode:* Solo or Group
 
-18. **Etymology Explorer** (`/etymology-explorer/`)
+19. **Etymology Explorer** (`/etymology-explorer/`)
     - *Description:* Discover the historical origins, Latin/Greek roots, and cognates of everyday vocabulary.
     - *CEFR Levels:* B1–C2 | *Mode:* Solo
 
-19. **What Gender Is It?** (`/what-gender-is-it/`)
+20. **What Gender Is It?** (`/what-gender-is-it/`)
     - *Description:* Master grammatical genders across gendered languages with historical memory rules.
     - *CEFR Levels:* A1–C2 | *Mode:* Solo
 
@@ -124,6 +128,10 @@ COSYgames are designed with flexibility for language educators:
 ```
 COSYgames/
 ├── index.html                   # Main Games Hub Entrypoint
+├── docs/
+│   └── DEDUP_AUDIT.md           # Deduplication audit documentation
+├── games/
+│   └── index.json               # Game metadata manifest
 ├── templates/
 │   └── game-template.html       # Standardized Game Page Template
 ├── shared/
@@ -145,6 +153,7 @@ COSYgames/
 ├── story-chain/                 # Game directory
 ├── story-weaver/                # Game directory
 ├── hot-seat/                    # Game directory
+├── this-or-that/                # Game directory
 ├── action-hero/                 # Game directory
 ├── identity-mystery/            # Game directory
 ├── object-quest/                # Game directory
