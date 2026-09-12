@@ -73,6 +73,9 @@
       }
       return determineContext();
     },
+    getMode: function () {
+      return this.getContext();
+    },
     setContext: function (context) {
       return applyContext(context);
     },

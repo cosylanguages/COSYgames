@@ -53,6 +53,10 @@
     }
   };
 
+  BuzzerButton.prototype.getElement = function () {
+    return this.element;
+  };
+
   BuzzerButton.prototype.trigger = function () {
     if (!this.element) return;
 

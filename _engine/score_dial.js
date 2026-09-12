@@ -37,6 +37,10 @@
     }
   };
 
+  ScoreDial.prototype.getElement = function () {
+    return this.element;
+  };
+
   ScoreDial.prototype.render = function () {
     if (!this.element) return;
     const score = this.options.score !== undefined ? this.options.score : 0;
