@@ -21,7 +21,7 @@ body.game-standalone.cosy-game-theme {
   position: relative;
   width: 100%;
   max-width: 960px;
-  margin: 0 auto;
+  margin: 1rem auto 0 auto;
   background: var(--im-corkboard-bg);
   border: 2px solid var(--im-corkboard-border);
   border-radius: 16px;
