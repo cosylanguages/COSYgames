@@ -100,6 +100,15 @@
     /* ── Typography Primitives ─────────────────────────── */
     --font-sans: 'Nunito', 'DM Sans', sans-serif;
     --font-serif: 'Fraunces', 'Lora', serif;
+
+    /* ── Visual Genome Primitives ──────────────────────── */
+    --game-accent:          #416b49;
+    --game-accent-dim:      rgba(65, 107, 73, 0.15);
+    --game-accent-contrast: #ffffff;
+
+    --motion-duration-fast: 150ms;
+    --motion-duration-med:  300ms;
+    --motion-duration-slow: 500ms;
 }
 
 html[data-theme="dark"], body.theme-dark {
@@ -145,4 +154,7 @@ html[data-theme="dark"], body.theme-dark {
     --surface-color:    #222b22;
     --text-color:       var(--ink);
     --light-gray:       var(--cream-dark);
+
+    /* Visual Genome Dark Mode Overrides */
+    --game-accent-dim:  rgba(107, 143, 113, 0.25);
 }

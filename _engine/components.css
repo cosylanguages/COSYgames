@@ -1,0 +1,189 @@
+/* Shared UI Components CSS - Visual Genome Engine */
+
+/* ── TurnBanner ────────────────────────────────────────── */
+.turn-banner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  background: var(--game-accent, #416b49);
+  color: var(--game-accent-contrast, #ffffff);
+  border-radius: var(--radius, 18px);
+  box-shadow: var(--shadow, 0 6px 28px rgba(0, 0, 0, 0.15));
+  text-align: center;
+  transition: all var(--motion-duration-med, 300ms) ease;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.turn-banner-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.turn-banner-current {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.turn-banner-next {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm, 10px);
+  display: inline-block;
+}
+
+/* ── ScoreDial ─────────────────────────────────────────── */
+.score-dial {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-color, #ffffff);
+  color: var(--text-color, #2a2a2a);
+  border: 2px solid var(--border, rgba(0, 0, 0, 0.12));
+  border-radius: var(--radius, 18px);
+  padding: 0.75rem 1.25rem;
+  box-shadow: var(--shadow-sm, 0 2px 12px rgba(0, 0, 0, 0.08));
+  transition: all var(--motion-duration-med, 300ms) cubic-bezier(0.16, 1, 0.3, 1);
+  min-width: 120px;
+  text-align: center;
+  user-select: none;
+}
+
+.score-dial-value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--game-accent, #416b49);
+}
+
+.score-dial-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted, #5c5957);
+  margin-top: 0.25rem;
+}
+
+/* Context-dependent styling for ScoreDial */
+html[data-context="projector"] .score-dial,
+[data-context="projector"] .score-dial {
+  padding: 1.5rem 2rem;
+  border-width: 4px;
+  border-color: var(--game-accent, #416b49);
+  box-shadow: var(--shadow, 0 8px 32px rgba(0, 0, 0, 0.2));
+  min-width: 180px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html[data-context="projector"] .score-dial-value,
+[data-context="projector"] .score-dial-value {
+  font-size: 3.5rem;
+}
+
+html[data-context="projector"] .score-dial-label,
+[data-context="projector"] .score-dial-label {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+}
+
+html[data-context="phone"] .score-dial,
+[data-context="phone"] .score-dial {
+  padding: 0.5rem 0.85rem;
+  min-width: 90px;
+  box-sizing: border-box;
+}
+
+html[data-context="phone"] .score-dial-value,
+[data-context="phone"] .score-dial-value {
+  font-size: 1.5rem;
+}
+
+html[data-context="phone"] .score-dial-label,
+[data-context="phone"] .score-dial-label {
+  font-size: 0.7rem;
+}
+
+html[data-context="online"] .score-dial,
+[data-context="online"] .score-dial {
+  padding: 0.75rem 1.5rem;
+  min-width: 130px;
+  box-sizing: border-box;
+}
+
+html[data-context="online"] .score-dial-value,
+[data-context="online"] .score-dial-value {
+  font-size: 2.25rem;
+}
+
+/* ── BuzzerButton ──────────────────────────────────────── */
+.buzzer-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ef4444, #dc2626 60%, #991b1b 100%);
+  color: #ffffff;
+  border: 6px solid #fecaca;
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  touch-action: manipulation;
+  transition: transform var(--motion-duration-fast, 150ms) cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow var(--motion-duration-fast, 150ms) ease;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.buzzer-button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 14px 32px rgba(220, 38, 38, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.buzzer-button:active,
+.buzzer-button.is-pressed {
+  transform: scale(0.92);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3), inset 0 4px 8px rgba(0, 0, 0, 0.5);
+  background: radial-gradient(circle at 35% 35%, #dc2626, #b91c1c 60%, #7f1d1d 100%);
+}
+
+.buzzer-button-bounce {
+  animation: buzzerHapticBounce var(--motion-duration-med, 300ms) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes buzzerHapticBounce {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.12); }
+  75% { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+/* Reduced motion for buzzer */
+@media (prefers-reduced-motion: reduce) {
+  .buzzer-button-bounce {
+    animation: none !important;
+  }
+}
