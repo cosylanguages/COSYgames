@@ -1,11 +1,11 @@
 /**
  * games/storytelling/game.js
- * Standalone logic for Story Weaver (Storytelling).
+ * Standalone logic for Story Weaver (Storytelling) - Illuminated Manuscript Identity.
  */
 (function() {
     const GAME_ID = 'storytelling';
     const GAME_TITLE = 'Story Weaver 📖';
-    const GAME_META = 'Speaking & Creativity · Solo or Group';
+    const GAME_META = 'Speaking & Creativity · Illuminated Manuscript · A1–C2';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
 
@@ -166,6 +166,78 @@
     let currentVocabItem = null;
     let activePlayer = 1;
 
+    function renderIlluminatedManuscript(beatCount) {
+        const isStage1 = beatCount >= 1;
+        const isStage2 = beatCount >= 2;
+        const isStage3 = beatCount >= 3;
+        const isStage4 = beatCount >= 4;
+        const isStage5 = beatCount >= 5;
+
+        return `
+          <div class="manuscript-art-container">
+            <div class="manuscript-title">✨ Illuminated Manuscript Illustration (${beatCount} beat${beatCount === 1 ? '' : 's'})</div>
+            <svg class="manuscript-svg-frame" viewBox="0 0 500 200" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#3a2e5a"/>
+                  <stop offset="60%" stop-color="#80546a"/>
+                  <stop offset="100%" stop-color="#fdf8f0"/>
+                </linearGradient>
+                <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fef08a"/>
+                  <stop offset="100%" stop-color="#eab308"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Stage 0: Sun/Sky & Ground -->
+              <rect x="0" y="0" width="500" height="200" fill="url(#skyGrad)"/>
+              <circle cx="250" cy="80" r="32" fill="url(#goldGlow)" opacity="0.95"/>
+              <path d="M 0,160 Q 250,140 500,160 L 500,200 L 0,200 Z" fill="#4a3b32"/>
+
+              <!-- Stage 1: Mountains -->
+              <g class="art-layer ${isStage1 ? 'active motion-unfurl' : ''}">
+                <polygon points="60,160 140,80 220,160" fill="#6b534b" opacity="0.9"/>
+                <polygon points="180,160 270,60 360,160" fill="#58423c" opacity="0.95"/>
+                <polygon points="310,160 400,90 490,160" fill="#6b534b" opacity="0.85"/>
+              </g>
+
+              <!-- Stage 2: Forest / Trees -->
+              <g class="art-layer ${isStage2 ? 'active motion-unfurl' : ''}">
+                <path d="M 90,160 C 90,120 70,100 80,80 C 100,100 110,120 110,160 Z" fill="#2d4a3e"/>
+                <path d="M 390,160 C 390,110 370,90 385,70 C 405,90 415,110 415,160 Z" fill="#233a30"/>
+                <circle cx="85" cy="85" r="24" fill="#385e4e"/>
+                <circle cx="390" cy="75" r="28" fill="#2d4a3e"/>
+              </g>
+
+              <!-- Stage 3: Ancient Castle / Tower -->
+              <g class="art-layer ${isStage3 ? 'active motion-unfurl' : ''}">
+                <rect x="225" y="70" width="50" height="90" fill="#2b232a"/>
+                <polygon points="220,70 250,35 280,70" fill="#7a5c3a"/>
+                <rect x="242" y="125" width="16" height="35" rx="8" fill="url(#goldGlow)"/>
+                <line x1="250" y1="35" x2="250" y2="15" stroke="#c59b27" stroke-width="2"/>
+                <polygon points="250,15 275,22 250,30" fill="#c59b27"/>
+              </g>
+
+              <!-- Stage 4: Hero / Traveler Character Silhouette -->
+              <g class="art-layer ${isStage4 ? 'active motion-unfurl' : ''}">
+                <circle cx="160" cy="138" r="6" fill="#1e1820"/>
+                <path d="M 154,144 Q 160,142 166,144 L 168,162 L 152,162 Z" fill="#7a5c3a"/>
+                <line x1="168" y1="142" x2="178" y2="162" stroke="#c59b27" stroke-width="2.5"/>
+              </g>
+
+              <!-- Stage 5+: Celestial Illumination & Flying Birds -->
+              <g class="art-layer ${isStage5 ? 'active motion-unfurl' : ''}">
+                <path d="M 40,40 Q 48,32 56,40 Q 64,32 72,40" stroke="#fef08a" stroke-width="2" fill="none"/>
+                <path d="M 110,30 Q 116,24 122,30 Q 128,24 134,30" stroke="#fef08a" stroke-width="1.8" fill="none"/>
+                <path d="M 340,45 Q 348,37 356,45 Q 364,37 372,45" stroke="#fef08a" stroke-width="2" fill="none"/>
+                <circle cx="120" cy="50" r="2.5" fill="#ffffff"/>
+                <circle cx="380" cy="35" r="3" fill="#ffffff"/>
+                <circle cx="440" cy="60" r="2" fill="#ffffff"/>
+              </g>
+            </svg>
+          </div>`;
+    }
+
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
         document.getElementById('go-meta').textContent = GAME_META;
@@ -174,7 +246,7 @@
         body.innerHTML = `
             <div class="setup-screen" style="max-width:600px; margin:0 auto;">
               <h2>Story Weaver 📖</h2>
-              <p>Build a cohesive narrative piece by piece, guided by randomly drawn grammatical constraints. Perfect for creative solo writers or pass-the-device group play!</p>
+              <p>Build a cohesive narrative piece by piece, guided by randomly drawn grammatical constraints. Watch the illuminated manuscript illustration reveal itself as your story grows!</p>
 
               <div class="setup-field">
                 <label>CEFR Difficulty Level</label>
@@ -222,11 +294,9 @@
         },
 
         drawConstraints() {
-            // Draw grammar element
             const grammarPool = GRAMMAR_DB[activeLevel] || GRAMMAR_DB['B1'];
             currentGrammarItem = grammarPool[Math.floor(Math.random() * grammarPool.length)];
 
-            // Draw vocabulary target if checked
             if (useVocabModifier) {
                 const themes = VOCAB_THEMES[activeLevel] || VOCAB_THEMES['B1'];
                 const selectedTheme = themes[Math.floor(Math.random() * themes.length)];
@@ -280,6 +350,8 @@
                     <div class="sb-item"><div class="sb-val" style="color:var(--indigo); font-family:'Fraunces',serif;">P${activePlayer}</div><div class="sb-lbl">Weaver</div></div>
                 </div>
 
+                ${renderIlluminatedManuscript(storyLines.length)}
+
                 <div class="constraint-cards">
                     <div class="constraint-card grammar">
                         <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -298,11 +370,11 @@
                     <div class="story-container" id="storyboard">
                         ${storyLines.length ? storyLines.map((line, idx) => `
                             <div class="story-line">
+                                <span class="author-chip p${line.author || 1}">P${line.author || 1}</span>
                                 <strong>${idx + 1}.</strong> ${line.text}
                                 <span class="story-badge badge-grammar">${line.grammar}</span>
                                 ${line.vocab ? `<span class="story-badge badge-vocab">${line.vocab}</span>` : ''}
                                 ${line.linkWord ? `<span class="story-badge badge-link">${line.linkWord}</span>` : ''}
-                                <span style="font-size:0.75rem; color:var(--ink-faint); margin-left:8px;">, Player ${line.author}</span>
                             </div>
                         `).join('') : '<div style="color:var(--ink-faint); text-align:center; padding: 2rem 0; font-style:italic;">No lines woven yet. Start the legend!</div>'}
                     </div>
@@ -345,26 +417,33 @@
                     input.value = word + ' ';
                 }
                 input.focus();
-                gameUtils.playGameSound('click');
+                if (window.gameUtils && typeof window.gameUtils.playGameSound === 'function') {
+                    window.gameUtils.playGameSound('click');
+                }
             }
         },
 
         switchPlayer() {
             activePlayer = activePlayer === 1 ? 2 : 1;
-            gameUtils.playGameSound('click');
+            if (window.gameUtils) {
+                if (typeof window.gameUtils.playGameSound === 'function') window.gameUtils.playGameSound('click');
+                if (typeof window.gameUtils.showGameMessage === 'function') window.gameUtils.showGameMessage('go-body', `Pass the device to Player ${activePlayer}! 👥`, 'info');
+            }
             COSY_GAME.renderArena();
-            gameUtils.showGameMessage('go-body', `Pass the device to Player ${activePlayer}! 👥`, 'info');
         },
 
         skipTurn() {
-            gameUtils.playGameSound('click');
-            // Give example as hints
+            if (window.gameUtils && typeof window.gameUtils.playGameSound === 'function') {
+                window.gameUtils.playGameSound('click');
+            }
             const hint = currentGrammarItem.ex;
             const input = document.getElementById('weaver-input');
             if (input) {
                 input.value = hint;
                 input.focus();
-                gameUtils.showGameMessage('go-body', "Suggested example injected!", 'info');
+                if (window.gameUtils && typeof window.gameUtils.showGameMessage === 'function') {
+                    window.gameUtils.showGameMessage('go-body', "Suggested example injected!", 'info');
+                }
             }
         },
 
@@ -374,30 +453,25 @@
 
             const text = input.value.trim();
 
-            // 1. Validate Vocabulary word if active
             if (currentVocabItem) {
                 const cleanWord = currentVocabItem.word.toLowerCase();
                 const cleanText = text.toLowerCase();
 
-                // Simple regex or word inclusion check
                 const isPresent = cleanText.includes(cleanWord);
                 if (!isPresent) {
-                    gameUtils.playGameSound('error');
-                    gameUtils.showGameMessage('go-body', `Required word "${currentVocabItem.word}" is missing! ❌`, 'error');
+                    if (window.gameUtils) {
+                        if (typeof window.gameUtils.playGameSound === 'function') window.gameUtils.playGameSound('error');
+                        if (typeof window.gameUtils.showGameMessage === 'function') window.gameUtils.showGameMessage('go-body', `Required word "${currentVocabItem.word}" is missing! ❌`, 'error');
+                    }
                     return;
                 }
             }
 
-            // 2. Open interactive Grammar Self-Check confirmation modal
-            // This is a beautiful pedagogical loop verifying grammar accuracy with user review!
-            const confirmMsg = `Confirming your Grammar Weaver:\n\nConstraint: "${currentGrammarItem.cat}"\nRule: "${currentGrammarItem.rule}"\n\nYour sentence:\n"${text}"\n\nDid you successfully weave this grammar into your sentence?`;
-
-            gameUtils.showGameConfirm(confirmMsg, () => {
+            const confirmHandler = () => {
                 let basePoints = 10;
                 let addedBonus = 0;
                 let usedLinkWord = null;
 
-                // Complexity checks (Check for discourse connectors)
                 const connectors = CONNECTORS_DB[activeLevel] || CONNECTORS_DB['B1'];
                 for (const c of connectors) {
                     const regex = new RegExp(`\\b${c}\\b`, 'i');
@@ -419,19 +493,25 @@
 
                 COSYGame.addScore(basePoints + addedBonus);
 
-                // Sound & Confetti feedback loops
-                if (addedBonus > 0) {
-                    gameUtils.playGameSound('success');
-                    gameUtils.showGameMessage('go-body', `✨ Complexity Bonus! +5 XP (used: "${usedLinkWord}")`, 'success');
-                } else {
-                    gameUtils.playGameSound('success');
+                if (window.gameUtils) {
+                    if (typeof window.gameUtils.playGameSound === 'function') window.gameUtils.playGameSound('success');
+                    if (addedBonus > 0 && typeof window.gameUtils.showGameMessage === 'function') {
+                        window.gameUtils.showGameMessage('go-body', `✨ Complexity Bonus! +5 XP (used: "${usedLinkWord}")`, 'success');
+                    }
                 }
 
-                // Switch player for group collaboration
                 activePlayer = activePlayer === 1 ? 2 : 1;
 
                 COSY_GAME.nextTurn();
-            });
+            };
+
+            const confirmMsg = `Confirming your Grammar Weaver:\n\nConstraint: "${currentGrammarItem.cat}"\nRule: "${currentGrammarItem.rule}"\n\nYour sentence:\n"${text}"\n\nDid you successfully weave this grammar into your sentence?`;
+
+            if (window.gameUtils && typeof window.gameUtils.showGameConfirm === 'function') {
+                window.gameUtils.showGameConfirm(confirmMsg, confirmHandler);
+            } else {
+                confirmHandler();
+            }
         },
 
         reset: renderSetup,
@@ -443,7 +523,6 @@
             const best = COSYScores.best(GAME_ID, lang);
             const body = document.getElementById('go-body');
 
-            // Construct full story text on scroll
             const fullStory = storyLines.map(s => s.text).join(' ');
 
             body.innerHTML = `
@@ -452,6 +531,8 @@
                     <div class="re-title">Story Complete!</div>
                     <div class="re-sub">Your narrative was woven with excellence. Total Score: <strong>${COSYGame.score}</strong> pts.</div>
                     ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
+
+                    ${renderIlluminatedManuscript(storyLines.length)}
 
                     <div style="font-weight:700; font-size:0.95rem; color:var(--ink); text-align:left; margin-top:2rem;">📖 Read Your Masterpiece:</div>
                     <div class="story-scroll-wrap" id="story-scroll">
@@ -465,18 +546,23 @@
                     </div>
                 </div>`;
 
-            // Play final victory fanfare and trigger confetti!
-            gameUtils.playGameSound('success');
-            gameUtils.createConfetti();
+            if (window.gameUtils) {
+                if (typeof window.gameUtils.playGameSound === 'function') window.gameUtils.playGameSound('success');
+                if (typeof window.gameUtils.createConfetti === 'function') window.gameUtils.createConfetti();
+            }
         },
 
         copyStory() {
             const text = storyLines.map(s => s.text).join(' ');
             navigator.clipboard.writeText(text).then(() => {
-                gameUtils.showGameMessage('go-body', "Story copied to clipboard! 📋", 'success');
-                gameUtils.playGameSound('success');
+                if (window.gameUtils) {
+                    if (typeof window.gameUtils.showGameMessage === 'function') window.gameUtils.showGameMessage('go-body', "Story copied to clipboard! 📋", 'success');
+                    if (typeof window.gameUtils.playGameSound === 'function') window.gameUtils.playGameSound('success');
+                }
             }).catch(() => {
-                gameUtils.showGameMessage('go-body', "Failed to copy.", 'error');
+                if (window.gameUtils && typeof window.gameUtils.showGameMessage === 'function') {
+                    window.gameUtils.showGameMessage('go-body', "Failed to copy.", 'error');
+                }
             });
         }
     };
