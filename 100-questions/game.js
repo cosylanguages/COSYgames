@@ -1,7 +1,7 @@
 /**
  * games/100-questions/game.js
- * Standalone logic for 100 Questions game.
- * Acts solely as the UI and Game Controller.
+ * Standalone logic for 100 Questions game with Rolodex / Card-index identity,
+ * touch-swipe deck navigation on phone, projector view, and remote follow-along sync.
  */
 (function() {
     const GAME_ID = 'hundred_questions';
@@ -19,8 +19,12 @@
         currentQuestionIdx: 0,
         passUsed: false,
         cardFlipped: false, // true if Adult-friendly back is revealed
-        selectedAnswerIdx: null // Tracks selected multiple-choice answer
+        selectedAnswerIdx: null, // Tracks selected multiple-choice answer
+        lastNavDir: 'next' // 'next' or 'prev' for slide animation direction
     };
+
+    let touchStartX = 0;
+    let touchStartY = 0;
 
     const UI_TEXTS = {
         en: {
@@ -61,7 +65,12 @@
             q_lbl: "Question",
             click_to_flip: "Click card to flip 🔄",
             front_badge: "Children-Friendly 👶",
-            back_badge: "Adult-Friendly 🔥"
+            back_badge: "Adult-Friendly 🔥",
+            swipe_hint: "👈 Swipe left / right to turn card 👉",
+            share_btn: "🔗 Share / Follow Along",
+            share_title: "Follow Along Link 📲",
+            share_desc: "Remote participants can scan this QR code or open the link below to follow along on their own screen:",
+            copy_link: "📋 Copy Sync Link"
         },
         ru: {
             setup_title: "100 Вопросов 💬",
@@ -101,7 +110,12 @@
             q_lbl: "Вопрос",
             click_to_flip: "Нажмите для переворота 🔄",
             front_badge: "Детская сторона 👶",
-            back_badge: "Взрослая сторона 🔥"
+            back_badge: "Взрослая сторона 🔥",
+            swipe_hint: "👈 Смахните влево / вправо для смены карты 👉",
+            share_btn: "🔗 Поделиться / Следить",
+            share_title: "Ссылка для участников 📲",
+            share_desc: "Удаленные участники могут отсканировать QR-код или открыть ссылку ниже:",
+            copy_link: "📋 Скопировать ссылку"
         },
         fr: {
             setup_title: "100 Questions 💬",
@@ -141,7 +155,12 @@
             q_lbl: "Question",
             click_to_flip: "Cliquez pour retourner 🔄",
             front_badge: "Version Enfant 👶",
-            back_badge: "Version Adulte 🔥"
+            back_badge: "Version Adulte 🔥",
+            swipe_hint: "👈 Glissez vers la gauche / droite 👉",
+            share_btn: "🔗 Partager / Suivre",
+            share_title: "Lien de suivi 📲",
+            share_desc: "Les participants à distance peuvent scanner ce QR code ou ouvrir le lien ci-dessous :",
+            copy_link: "📋 Copier le lien"
         }
     };
 
@@ -152,12 +171,11 @@
         return div.innerHTML;
     }
 
-    // Helper to dynamically adapt the question text based on active state parameters
+    // Helper to dynamically adapt question text
     function adaptText(rawText, lang) {
         if (!rawText) return '';
         let t = rawText;
 
-        // 1. Teacher & Student: Lesson Type replacements
         if (state.deckKey === 'teacher' || state.deckKey === 'student') {
             if (state.lessonType === 'individual') {
                 if (lang === 'en') {
@@ -176,7 +194,7 @@
                          .replace(/{companion}/g, 'moi')
                          .replace(/{classmates}/g, 'moi');
                 }
-            } else { // group
+            } else {
                 if (lang === 'en') {
                     t = t.replace(/{class_term}/g, 'our class')
                          .replace(/{classroom}/g, 'the classroom')
@@ -196,7 +214,6 @@
             }
         }
 
-        // 2. Family: Subgroups & Target adaptations
         if (state.deckKey === 'family') {
             let r_en = 'mother', r_ru = 'мама', r_fr = 'mère';
             let rp_en = "mother's", rp_ru = 'мамин', rp_fr = 'de maman';
@@ -241,7 +258,6 @@
             }
         }
 
-        // 3. Civic Deck Replacements
         if (state.deckKey === 'civic') {
             let c_name = 'the United States', l_title = 'President', motto_val = 'In God We Trust';
             if (state.subgroup === 'us') {
@@ -274,26 +290,45 @@
         return t;
     }
 
-    function applyHandoffState() {
-        if (window.COSYLoader && window.COSYLoader.getHandoffParams) {
-            const { lang, level, topic } = window.COSYLoader.getHandoffParams();
-            if (lang && ['en', 'fr', 'ru'].includes(lang)) {
-                state.lang = lang;
-            }
-            if (topic && window.HUNDRED_QUESTIONS_DECKS && window.HUNDRED_QUESTIONS_DECKS[topic]) {
-                state.deckKey = topic;
-            }
-            if (level) {
-                const levelIdxMap = { 'A2': 0, 'B1': 1, 'B2': 2, 'C1': 3, 'C2': 4 };
-                if (levelIdxMap[level] !== undefined) {
-                    state.currentLevelIdx = levelIdxMap[level];
-                }
-            }
+    function applyStateFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('lang')) {
+            const l = urlParams.get('lang');
+            if (['en', 'fr', 'ru'].includes(l)) state.lang = l;
         }
+        if (urlParams.has('deck') && window.HUNDRED_QUESTIONS_DECKS && window.HUNDRED_QUESTIONS_DECKS[urlParams.get('deck')]) {
+            state.deckKey = urlParams.get('deck');
+        }
+        if (urlParams.has('lvl')) {
+            state.currentLevelIdx = parseInt(urlParams.get('lvl'), 10) || 0;
+        }
+        if (urlParams.has('subgroup')) {
+            state.subgroup = urlParams.get('subgroup');
+        }
+        if (urlParams.has('q')) {
+            state.currentQuestionIdx = parseInt(urlParams.get('q'), 10) || 0;
+            return true; // Direct launch to question
+        }
+        return false;
     }
 
     function renderSetup() {
-        applyHandoffState();
+        if (window.COSYLoader && window.COSYLoader.getHandoffParams) {
+            const { lang, level, topic } = window.COSYLoader.getHandoffParams();
+            if (lang && ['en', 'fr', 'ru'].includes(lang)) state.lang = lang;
+            if (topic && window.HUNDRED_QUESTIONS_DECKS && window.HUNDRED_QUESTIONS_DECKS[topic]) state.deckKey = topic;
+            if (level) {
+                const levelIdxMap = { 'A2': 0, 'B1': 1, 'B2': 2, 'C1': 3, 'C2': 4 };
+                if (levelIdxMap[level] !== undefined) state.currentLevelIdx = levelIdxMap[level];
+            }
+        }
+
+        const isDirectToQ = applyStateFromURL();
+        if (isDirectToQ) {
+            COSY_GAME.renderQuestion();
+            return;
+        }
+
         document.getElementById('go-title').textContent = GAME_TITLE;
         document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');
@@ -301,7 +336,6 @@
         const label_deck = UI_TEXTS[state.lang].deck_lbl;
         const label_lang = UI_TEXTS[state.lang].lang_lbl;
 
-        // Render setup screen
         body.innerHTML = `
             <div class="setup-screen" style="max-width: 600px; margin: 0 auto; padding: 2rem 1rem;">
                 <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">💬</div>
@@ -326,7 +360,6 @@
                     </select>
                 </div>
 
-                <!-- Dynamic Subgroup and Option Toggles -->
                 <div id="dynamic-fields-container"></div>
 
                 <div class="setup-field" style="margin-bottom: 2rem;">
@@ -340,16 +373,14 @@
                     </select>
                 </div>
 
-                <button class="btn-start-game" onclick="COSY_GAME.goToRules()" style="width: 100%; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1.1rem; background: var(--teal); color: #fff; border: none; cursor: pointer; transition: transform 0.2s;">
+                <button class="btn-start-game" onclick="COSY_GAME.goToRules()" style="width: 100%; padding: 14px; border-radius: 12px; font-weight: 700; font-size: 1.1rem; background: var(--game-accent, #E05A47); color: #fff; border: none; cursor: pointer; transition: transform 0.2s;">
                     ${UI_TEXTS[state.lang].btn_continue}
                 </button>
             </div>
         `;
 
-        // Render dynamic options
         updateDynamicFields();
 
-        // Register event listeners
         const selectLang = document.getElementById('s-lang');
         const selectDeck = document.getElementById('s-deck');
         if (selectLang) {
@@ -370,7 +401,6 @@
         const selectDeck = document.getElementById('s-deck');
         if (selectDeck) state.deckKey = selectDeck.value;
 
-        // Reset default subgroups when shifting decks
         if (state.deckKey === 'myself') {
             if (state.subgroup !== 'current' && state.subgroup !== 'past' && state.subgroup !== 'future') {
                 state.subgroup = 'current';
@@ -416,13 +446,9 @@
         } else if (state.deckKey === 'myself') {
             let currentLbl = 'Current Self', pastLbl = 'Past Self', futureLbl = 'Future Self';
             if (state.lang === 'ru') {
-                currentLbl = 'Настоящее я';
-                pastLbl = 'Прошлое я';
-                futureLbl = 'Будущее я';
+                currentLbl = 'Настоящее я'; pastLbl = 'Прошлое я'; futureLbl = 'Будущее я';
             } else if (state.lang === 'fr') {
-                currentLbl = 'Moi actuel';
-                pastLbl = 'Moi passé';
-                futureLbl = 'Moi futur';
+                currentLbl = 'Moi actuel'; pastLbl = 'Moi passé'; futureLbl = 'Moi futur';
             }
             fieldsHTML = `
                 <div class="setup-field" style="margin-bottom: 1.5rem;">
@@ -437,7 +463,6 @@
                 </div>
             `;
         } else if (state.deckKey === 'civic') {
-            // Filter regions depending on selected language
             let regionOptions = '';
             if (state.lang === 'en') {
                 regionOptions = `
@@ -450,7 +475,7 @@
                     <option value="france" ${state.subgroup === 'france' ? 'selected' : ''}>France 🇫🇷</option>
                     <option value="canada" ${state.subgroup === 'canada' ? 'selected' : ''}>Canada 🇨🇦</option>
                 `;
-            } else { // Russian/others
+            } else {
                 regionOptions = `
                     <option value="russia" ${state.subgroup === 'russia' ? 'selected' : ''}>Russia 🇷🇺</option>
                 `;
@@ -470,13 +495,10 @@
 
         container.innerHTML = fieldsHTML;
 
-        // Bind events
         if (state.deckKey === 'teacher' || state.deckKey === 'student') {
             const selectLesson = document.getElementById('s-lesson-type');
             if (selectLesson) {
-                selectLesson.addEventListener('change', () => {
-                    state.lessonType = selectLesson.value;
-                });
+                selectLesson.addEventListener('change', () => { state.lessonType = selectLesson.value; });
             }
         } else if (state.deckKey === 'family') {
             const selectSubgroup = document.getElementById('s-subgroup');
@@ -487,21 +509,10 @@
                 });
             }
             updateFamilyTargetFields();
-        } else if (state.deckKey === 'civic') {
+        } else if (state.deckKey === 'civic' || state.deckKey === 'myself') {
             const selectSubgroup = document.getElementById('s-subgroup');
             if (selectSubgroup) {
-                // Initialize default subgroup
-                state.subgroup = selectSubgroup.value;
-                selectSubgroup.addEventListener('change', () => {
-                    state.subgroup = selectSubgroup.value;
-                });
-            }
-        } else if (state.deckKey === 'myself') {
-            const selectSubgroup = document.getElementById('s-subgroup');
-            if (selectSubgroup) {
-                selectSubgroup.addEventListener('change', () => {
-                    state.subgroup = selectSubgroup.value;
-                });
+                selectSubgroup.addEventListener('change', () => { state.subgroup = selectSubgroup.value; });
             }
         }
     }
@@ -540,10 +551,34 @@
 
         const selectTarget = document.getElementById('s-family-target');
         if (selectTarget) {
-            selectTarget.addEventListener('change', () => {
-                state.familyTarget = selectTarget.value;
-            });
+            selectTarget.addEventListener('change', () => { state.familyTarget = selectTarget.value; });
         }
+    }
+
+    function setupTouchSwipe() {
+        const cardContainer = document.querySelector('.rolodex-container');
+        if (!cardContainer) return;
+
+        cardContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        cardContainer.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].screenX;
+            const touchEndY = e.changedTouches[0].screenY;
+            const diffX = touchEndX - touchStartX;
+            const diffY = touchEndY - touchStartY;
+
+            // Ensure horizontal gesture
+            if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+                if (diffX < 0) {
+                    COSY_GAME.nextQuestion();
+                } else {
+                    COSY_GAME.prevQuestion();
+                }
+            }
+        }, { passive: true });
     }
 
     window.COSY_GAME = {
@@ -576,7 +611,7 @@
                         <ul style="list-style-type: none; padding: 0; margin: 0;">
                             ${t.rules_bullets.map(b => `
                                 <li style="margin-bottom: 12px; padding-left: 28px; position: relative; line-height: 1.4; font-size: 0.95rem; color: var(--ink);">
-                                    <span style="position: absolute; left: 0; top: 0; color: var(--teal); font-weight: bold;">✔</span>
+                                    <span style="position: absolute; left: 0; top: 0; color: var(--game-accent, #E05A47); font-weight: bold;">✔</span>
                                     ${esc(b)}
                                 </li>
                             `).join('')}
@@ -591,7 +626,7 @@
                         <button class="btn-g-secondary" onclick="COSY_GAME.reset()" style="flex: 1; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: transparent; cursor: pointer; font-weight: 700;">
                             ${t.btn_back}
                         </button>
-                        <button class="btn-g-primary" onclick="COSY_GAME.goToLevels()" style="flex: 2; padding: 12px; border-radius: 12px; background: var(--teal); color: #fff; border: none; cursor: pointer; font-weight: 700;">
+                        <button class="btn-g-primary" onclick="COSY_GAME.goToLevels()" style="flex: 2; padding: 12px; border-radius: 12px; background: var(--game-accent, #E05A47); color: #fff; border: none; cursor: pointer; font-weight: 700;">
                             ${t.btn_start}
                         </button>
                     </div>
@@ -620,7 +655,7 @@
                                         <div style="font-weight: 700; color: var(--ink); font-size: 1.05rem;">${esc(name)}</div>
                                         <div style="font-size: 0.8rem; color: var(--ink-muted); margin-top: 4px;">${t.q_lbl}s ${lvl.range}${lvlLevelBadge}</div>
                                     </div>
-                                    <div style="font-size: 1.2rem; color: var(--teal);">▶</div>
+                                    <div style="font-size: 1.2rem; color: var(--game-accent, #E05A47);">▶</div>
                                 </div>
                             `;
                         }).join('')}
@@ -650,7 +685,7 @@
         },
 
         selectAnswer(idx, correctIdx) {
-            if (state.selectedAnswerIdx !== null) return; // Answer already selected
+            if (state.selectedAnswerIdx !== null) return;
             state.selectedAnswerIdx = idx;
 
             if (window.gameUtils && gameUtils.playGameSound) {
@@ -661,6 +696,39 @@
                 }
             }
             COSY_GAME.renderQuestion();
+        },
+
+        shareFollowAlong() {
+            const url = new URL(window.location.href);
+            url.searchParams.set('deck', state.deckKey);
+            url.searchParams.set('lvl', state.currentLevelIdx);
+            url.searchParams.set('q', state.currentQuestionIdx);
+            url.searchParams.set('lang', state.lang);
+            if (state.subgroup) url.searchParams.set('subgroup', state.subgroup);
+
+            const shareUrl = url.toString();
+            const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shareUrl)}`;
+            const t = UI_TEXTS[state.lang];
+
+            const overlay = document.createElement('div');
+            overlay.className = 'qr-modal-overlay';
+            overlay.onclick = (e) => {
+                if (e.target === overlay) overlay.remove();
+            };
+
+            overlay.innerHTML = `
+                <div class="qr-modal-card">
+                    <h3 style="margin-top:0; color:var(--game-accent,#E05A47); font-family:Fraunces,serif;">${t.share_title}</h3>
+                    <p style="font-size:0.9rem; color:var(--ink-muted); margin-bottom:1rem;">${t.share_desc}</p>
+                    <img src="${qrApiUrl}" alt="QR Code" style="width:180px; height:180px; border-radius:12px; margin-bottom:1rem; border:1px solid var(--border);" />
+                    <input type="text" readonly value="${shareUrl}" style="width:100%; padding:8px; border-radius:8px; border:1px solid var(--border); font-size:0.8rem; margin-bottom:1rem; text-align:center; background:#F3F4F6;" />
+                    <div style="display:flex; gap:10px;">
+                        <button class="sync-bar-btn" style="flex:1; padding:10px;" onclick="navigator.clipboard.writeText('${shareUrl}'); alert('Copied!');">${t.copy_link}</button>
+                        <button style="padding:10px 16px; border-radius:8px; border:1px solid var(--border); background:transparent; cursor:pointer; font-weight:700;" onclick="this.closest('.qr-modal-overlay').remove()">Close</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
         },
 
         renderQuestion() {
@@ -675,7 +743,6 @@
             const progressMax = level.questions.length;
             const globalNum = parseInt(level.range.split(/[–-]/)[0]) + state.currentQuestionIdx;
 
-            // Determine if card is two-sided and active side text
             const hasTwoSides = (state.deckKey === 'student' || state.deckKey === 'family' || state.deckKey === 'myself');
             let qText = '';
 
@@ -686,38 +753,37 @@
                 qText = q[state.lang] || q['en'] || '...';
             }
 
-            // Apply dynamic vocabulary/grammar adaptations
             qText = adaptText(qText, state.lang);
 
-            const cardBorderColor = state.cardFlipped ? 'var(--coral, #f07167)' : 'var(--teal)';
-            const cardBgColor = state.cardFlipped ? 'var(--coral-light, #fdf0ed)' : 'var(--card-bg, rgba(255,255,255,0.7))';
+            const animClass = state.lastNavDir === 'prev' ? 'motion-slide-chain-prev' : 'motion-slide-chain';
+
+            const cardBorderColor = state.cardFlipped ? 'var(--coral, #f07167)' : 'var(--game-accent, #E05A47)';
+            const cardBgColor = state.cardFlipped ? 'var(--coral-light, #fdf0ed)' : 'var(--card-index-bg, #FFFDF9)';
             const sideBadge = hasTwoSides
-                ? `<span style="background: ${state.cardFlipped ? 'var(--coral, #f07167)' : 'var(--teal)'}; color: white; padding: 4px 10px; border-radius: 50px; font-size: 0.75rem; font-weight: bold;">
+                ? `<span style="background: ${state.cardFlipped ? 'var(--coral, #f07167)' : 'var(--game-accent, #E05A47)'}; color: white; padding: 4px 10px; border-radius: 50px; font-size: 0.75rem; font-weight: bold;">
                     ${state.cardFlipped ? t.back_badge : t.front_badge}
                    </span>`
                 : '';
 
-            // Handle multiple-choice options (e.g. for Civic deck)
             let optionsHTML = '';
             let qOptionsObj = q.options;
-            // If subgroup exists in options, load that subgroup's options
             if (qOptionsObj && qOptionsObj[state.subgroup]) {
                 const subObj = qOptionsObj[state.subgroup];
                 const optList = subObj[state.lang] || subObj['en'] || [];
                 const correctIdx = subObj.correct;
 
                 optionsHTML = `
-                    <div class="word-options" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 2rem;" onclick="event.stopPropagation()">
+                    <div class="word-options" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 1.5rem;" onclick="event.stopPropagation()">
                         ${optList.map((opt, oIdx) => {
                             let statusClass = '';
                             let statusStyle = '';
                             if (state.selectedAnswerIdx !== null) {
                                 if (oIdx === correctIdx) {
                                     statusClass = 'correct';
-                                    statusStyle = 'border-color: var(--green); background: var(--green-light); color: var(--green); font-weight: bold;';
+                                    statusStyle = 'border-color: var(--green, #10B981); background: rgba(16,185,129,0.1); color: var(--green, #10B981); font-weight: bold;';
                                 } else if (oIdx === state.selectedAnswerIdx) {
                                     statusClass = 'wrong';
-                                    statusStyle = 'border-color: var(--coral); background: var(--coral-light); color: var(--coral); text-decoration: line-through;';
+                                    statusStyle = 'border-color: var(--game-accent); background: var(--game-accent-dim); color: var(--game-accent); text-decoration: line-through;';
                                 } else {
                                     statusStyle = 'opacity: 0.6; pointer-events: none;';
                                 }
@@ -733,10 +799,16 @@
             }
 
             body.innerHTML = `
-                <div class="gameplay-screen" style="max-width: 600px; margin: 0 auto; padding: 1.5rem 1rem;">
-                    <div class="score-bar" style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; background: var(--card-bg, rgba(255,255,255,0.7)); backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 12px; padding: 10px 16px;">
+                <div class="gameplay-screen" style="max-width: 620px; margin: 0 auto; padding: 1rem;">
+                    <!-- Follow Along Remote Sync Bar -->
+                    <div class="sync-bar">
+                        <span>📲 Remote Session Sync</span>
+                        <button class="sync-bar-btn" onclick="COSY_GAME.shareFollowAlong()">${t.share_btn}</button>
+                    </div>
+
+                    <div class="score-bar" style="display: flex; justify-content: space-between; margin-bottom: 1rem; background: var(--card-bg, rgba(255,255,255,0.7)); backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 12px; padding: 10px 16px;">
                         <div style="text-align: left;">
-                            <div style="font-size: 0.8rem; font-weight: 700; color: var(--teal); text-transform: uppercase;">${esc(lvlName)}</div>
+                            <div style="font-size: 0.8rem; font-weight: 700; color: var(--game-accent, #E05A47); text-transform: uppercase;">${esc(lvlName)}</div>
                             <div style="font-size: 0.9rem; font-weight: 600; color: var(--ink-muted); margin-top: 2px;">
                                 ${t.q_lbl} ${progressNum} ${t.q_of} ${progressMax}
                             </div>
@@ -747,33 +819,50 @@
                         </div>
                     </div>
 
-                    <!-- Interactive Gameplay Card -->
-                    <div class="game-card" onclick="COSY_GAME.toggleCardFlip()" style="position: relative; background: ${cardBgColor}; backdrop-filter: blur(12px); border: 3px solid ${cardBorderColor}; border-radius: 24px; padding: 2.5rem 1.5rem; margin-bottom: 1.5rem; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); cursor: ${hasTwoSides ? 'pointer' : 'default'}; transition: transform 0.3s, background-color 0.3s, border-color 0.3s;">
+                    <!-- Rolodex Index Card Stack -->
+                    <div class="rolodex-container">
+                        <div class="rolodex-stack">
+                            <div class="stack-card-bg-3"></div>
+                            <div class="stack-card-bg-2"></div>
+                            <div class="rolodex-card ${animClass}" onclick="COSY_GAME.toggleCardFlip()" style="background: ${cardBgColor}; border-color: ${cardBorderColor}; cursor: ${hasTwoSides ? 'pointer' : 'default'};">
+                                <div class="projector-card-counter" style="display:none;">Card ${progressNum} of ${progressMax}</div>
 
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                            <div style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--ink-faint); letter-spacing: 0.05em;">
-                                ${esc(deck.title[state.lang])}
+                                <div class="index-card-tab">
+                                    🗂️ ${esc(deck.title[state.lang])} ${sideBadge}
+                                </div>
+
+                                <div class="index-card-text">
+                                    "${esc(qText)}"
+                                </div>
+
+                                ${hasTwoSides ? `<div style="font-size: 0.8rem; color: var(--ink-muted); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1rem;">${t.click_to_flip}</div>` : ''}
+
+                                ${optionsHTML}
+
+                                <div style="display: flex; justify-content: center; gap: 10px; margin-top: 1rem;" onclick="event.stopPropagation()">
+                                    <button onclick="COSY_GAME.speakQuestion()" style="background: var(--game-accent-dim); border: none; border-radius: 50px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.2rem; color: var(--game-accent);" title="Listen">
+                                        🔊
+                                    </button>
+                                </div>
                             </div>
-                            ${sideBadge}
                         </div>
 
-                        <div style="font-size: 1.5rem; font-weight: 700; line-height: 1.5; color: var(--ink); margin: 1.5rem 0 2rem;">
-                            "${esc(qText)}"
+                        <!-- Touch gesture swipe hint & phone zones -->
+                        <div class="phone-swipe-hint">
+                            ${t.swipe_hint}
                         </div>
 
-                        ${hasTwoSides ? `<div style="font-size: 0.8rem; color: var(--ink-muted); font-weight: 600; letter-spacing: 0.05em;">${t.click_to_flip}</div>` : ''}
-
-                        <!-- Multiple Choice Options -->
-                        ${optionsHTML}
-
-                        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 1rem;" onclick="event.stopPropagation()">
-                            <button onclick="COSY_GAME.speakQuestion()" style="background: rgba(107, 143, 113, 0.1); border: none; border-radius: 50px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.2rem;" title="Listen">
-                                🔊
+                        <div class="phone-nav-zones">
+                            <button class="phone-nav-btn" onclick="COSY_GAME.prevQuestion()" ${state.currentQuestionIdx === 0 ? 'disabled style="opacity:0.5;"' : ''}>
+                                ⬅ Prev Card
+                            </button>
+                            <button class="phone-nav-btn" onclick="COSY_GAME.nextQuestion()">
+                                Next Card ➡
                             </button>
                         </div>
                     </div>
 
-                    <div style="margin-bottom: 2rem; display: flex; justify-content: center;">
+                    <div style="margin-bottom: 1.5rem; display: flex; justify-content: center;">
                         <button id="pass-btn" class="${state.passUsed ? 'btn-g-secondary' : 'btn-g-danger'}" onclick="COSY_GAME.usePass()" ${state.passUsed ? 'disabled' : ''} style="padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: background 0.2s;">
                             ${state.passUsed ? t.btn_pass : t.btn_pass_avail}
                         </button>
@@ -786,12 +875,14 @@
                         <button class="btn-g-secondary" onclick="COSY_GAME.goToLevels()" style="padding: 12px 18px; border-radius: 12px; font-weight: 700; cursor: pointer;">
                             ${t.btn_levels}
                         </button>
-                        <button class="btn-g-primary" onclick="COSY_GAME.nextQuestion()" style="flex: 1; padding: 12px; border-radius: 12px; background: var(--teal); color: #fff; border: none; cursor: pointer; font-weight: 700;">
+                        <button class="btn-g-primary" onclick="COSY_GAME.nextQuestion()" style="flex: 1; padding: 12px; border-radius: 12px; background: var(--game-accent, #E05A47); color: #fff; border: none; cursor: pointer; font-weight: 700;">
                             ${t.btn_next}
                         </button>
                     </div>
                 </div>
             `;
+
+            setupTouchSwipe();
         },
 
         speakQuestion() {
@@ -829,8 +920,9 @@
         prevQuestion() {
             if (state.currentQuestionIdx > 0) {
                 state.currentQuestionIdx--;
-                state.cardFlipped = false; // Reset flip state
-                state.selectedAnswerIdx = null; // Reset selection state
+                state.cardFlipped = false;
+                state.selectedAnswerIdx = null;
+                state.lastNavDir = 'prev';
                 COSY_GAME.renderQuestion();
             }
         },
@@ -840,8 +932,9 @@
             const level = (state.deckKey === 'myself' ? deck[state.subgroup].levels : deck.levels)[state.currentLevelIdx];
             if (state.currentQuestionIdx < level.questions.length - 1) {
                 state.currentQuestionIdx++;
-                state.cardFlipped = false; // Reset flip state
-                state.selectedAnswerIdx = null; // Reset selection state
+                state.cardFlipped = false;
+                state.selectedAnswerIdx = null;
+                state.lastNavDir = 'next';
                 COSY_GAME.renderQuestion();
             } else {
                 COSY_GAME.renderCompletion();
@@ -866,7 +959,7 @@
                         <button class="btn-g-secondary" onclick="COSY_GAME.goToLevels()" style="flex: 1; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: transparent; cursor: pointer; font-weight: 700;">
                             ${t.btn_levels}
                         </button>
-                        <button class="btn-g-primary" onclick="COSY_GAME.reset()" style="flex: 1; padding: 12px; border-radius: 12px; background: var(--teal); color: #fff; border: none; cursor: pointer; font-weight: 700;">
+                        <button class="btn-g-primary" onclick="COSY_GAME.reset()" style="flex: 1; padding: 12px; border-radius: 12px; background: var(--game-accent, #E05A47); color: #fff; border: none; cursor: pointer; font-weight: 700;">
                             Decks ↺
                         </button>
                     </div>

@@ -17,10 +17,13 @@
 
     <link rel="stylesheet" href="../shared/css/cosy-tokens.css">
     <link rel="stylesheet" href="../shared/css/tokens.css">
+    <link rel="stylesheet" href="../shared/css/motion.css">
+    <link rel="stylesheet" href="../_engine/components.css">
     <link rel="stylesheet" href="../shared/css/games.css">
     <link rel="stylesheet" href="../shared/css/cosy-icons.css">
     <link rel="stylesheet" href="../shared/css/nav.css">
     <link rel="stylesheet" href="../shared/styles/game-styles.css">
+    <link rel="stylesheet" href="fluency-flow.css">
 </head>
 <body class="game-standalone cosy-game-theme">
     <!-- Top Navigation Header -->
@@ -51,12 +54,9 @@
             </div>
         </div>
 
-        <!-- Game Description & Migration Notice -->
+        <!-- Game Description & Info -->
         <div class="game-header-info" style="padding: 1.25rem 1.5rem; background: var(--cg-color-surface); border-bottom: 1px solid rgba(0,0,0,0.06);">
-            <p class="game-description" style="margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--cg-color-text);">Spin for a random topic and speak for 1–5 minutes without stopping. Flow, not perfection.</p>
-            <div class="migration-notice" style="display: inline-block; padding: 0.35rem 0.75rem; background: #FEF3C7; color: #92400E; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">
-                ℹ️ Game coming soon - migrating from COSYlanguages
-            </div>
+            <p class="game-description" style="margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--cg-color-text);">Reorder words along the river current flow rail into a fluent sentence, then speak for your chosen duration without stopping!</p>
         </div>
 
         <!-- Game Canvas / Play Area -->
@@ -102,6 +102,7 @@
     <!-- Scripts -->
     <script src="../shared/utils/game-utils.js"></script>
     <script src="../shared/js/nav.js"></script>
+    <script src="../_engine/view_context.js"></script>
     <script src="../_engine/game_session.js"></script>
     <script src="../_engine/scores.js"></script>
     <script src="../_engine/loader.js"></script>

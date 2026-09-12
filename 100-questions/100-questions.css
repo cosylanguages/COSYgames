@@ -1,0 +1,283 @@
+/**
+ * 100-questions/100-questions.css
+ * Rolodex / Card-index identity and responsive contexts for 100 Questions
+ */
+
+:root {
+  --game-accent: #E05A47; /* Coral */
+  --game-accent-dim: rgba(224, 90, 71, 0.15);
+  --game-accent-contrast: #FFFFFF;
+  --card-index-bg: #FFFDF9;
+  --card-index-border: #E8DFD5;
+  --card-stack-shadow: 0 12px 32px rgba(224, 90, 71, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Base Card Stack Container */
+.rolodex-container {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin: 1.5rem auto 2rem auto;
+  perspective: 1000px;
+}
+
+/* Layered cards peeking behind main card */
+.rolodex-stack {
+  position: relative;
+  width: 100%;
+}
+
+.stack-card-bg-3 {
+  position: absolute;
+  top: -16px;
+  left: 20px;
+  right: 20px;
+  height: 100%;
+  background: #F2EBE1;
+  border: 1px solid var(--card-index-border);
+  border-radius: 20px;
+  transform: rotate(2.5deg) scale(0.95);
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.stack-card-bg-2 {
+  position: absolute;
+  top: -9px;
+  left: 10px;
+  right: 10px;
+  height: 100%;
+  background: #F9F5EF;
+  border: 1px solid var(--card-index-border);
+  border-radius: 22px;
+  transform: rotate(-1.5deg) scale(0.98);
+  opacity: 0.85;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.rolodex-card {
+  position: relative;
+  z-index: 3;
+  background: var(--card-index-bg);
+  border: 2px solid var(--game-accent);
+  border-radius: 24px;
+  padding: 2.5rem 1.75rem;
+  box-shadow: var(--card-stack-shadow);
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Index card header & tab design */
+.index-card-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--game-accent-dim);
+  color: var(--game-accent);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.825rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+.index-card-text {
+  font-family: var(--font-heading, "Fraunces", Georgia, serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--ink, #1F2937);
+  margin: 1rem 0 1.75rem 0;
+  word-break: break-word;
+}
+
+/* Slide Chain animation for advancing cards */
+.motion-slide-chain {
+  animation: slideChainIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.motion-slide-chain-prev {
+  animation: slideChainPrevIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideChainIn {
+  0% {
+    opacity: 0.3;
+    transform: translateY(24px) rotate(-3deg) scale(0.96);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateY(-4px) rotate(0.8deg) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes slideChainPrevIn {
+  0% {
+    opacity: 0.3;
+    transform: translateY(-24px) rotate(3deg) scale(0.96);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateY(4px) rotate(-0.8deg) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+/* Follow Along Sync Banner & Modal */
+.sync-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--game-accent-dim);
+  border: 1px solid rgba(224, 90, 71, 0.3);
+  border-radius: 12px;
+  padding: 8px 14px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.sync-bar-btn {
+  background: var(--game-accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.sync-bar-btn:hover {
+  opacity: 0.9;
+}
+
+.qr-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.qr-modal-card {
+  background: #FFFDF9;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Context: Phone ([data-context="phone"]) */
+[data-context="phone"] .rolodex-container {
+  margin: 0.75rem auto 1.25rem auto;
+  touch-action: pan-y;
+}
+
+[data-context="phone"] .rolodex-card {
+  padding: 1.75rem 1.25rem;
+  border-radius: 20px;
+}
+
+[data-context="phone"] .index-card-text {
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+[data-context="phone"] .phone-swipe-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--ink-muted, #6B7280);
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+[data-context="phone"] .phone-nav-zones {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+[data-context="phone"] .phone-nav-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 14px;
+  border: 2px solid var(--game-accent);
+  background: var(--game-accent-dim);
+  color: var(--game-accent);
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  touch-action: manipulation;
+}
+
+[data-context="phone"] .phone-nav-btn:active {
+  background: var(--game-accent);
+  color: white;
+}
+
+/* Context: Projector ([data-context="projector"]) */
+[data-context="projector"] .score-bar,
+[data-context="projector"] .game-controls,
+[data-context="projector"] #pass-btn,
+[data-context="projector"] .sync-bar,
+[data-context="projector"] .word-options,
+[data-context="projector"] .phone-swipe-hint,
+[data-context="projector"] .phone-nav-zones,
+[data-context="projector"] .setup-screen p,
+[data-context="projector"] .setup-field {
+  display: none !important;
+}
+
+[data-context="projector"] .projector-card-counter {
+  display: block !important;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--game-accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+[data-context="projector"] .rolodex-container {
+  max-width: 90vw;
+  margin: 3rem auto;
+}
+
+[data-context="projector"] .rolodex-card {
+  padding: 4rem 3rem;
+  border-width: 4px;
+  border-radius: 32px;
+}
+
+[data-context="projector"] .index-card-text {
+  font-size: 3rem !important;
+  line-height: 1.4;
+  margin: 2rem 0;
+}
