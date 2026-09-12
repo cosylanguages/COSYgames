@@ -2,11 +2,11 @@
     const data = {
       "fluency": [
             {
-                  "text": "Your morning routine ☕",
+                  "text": "What you do in the morning ☕",
                   "level": "starter"
             },
             {
-                  "text": "A childhood memory 🧸",
+                  "text": "Your family and friends 👨‍👩‍👧‍👦",
                   "level": "starter"
             },
             {
@@ -22,7 +22,11 @@
                   "level": "starter"
             },
             {
-                  "text": "A skill you wish you had 🎸",
+                  "text": "Your morning routine ☕",
+                  "level": "elementary"
+            },
+            {
+                  "text": "Your favourite game or sport ⚽",
                   "level": "elementary"
             },
             {
@@ -34,12 +38,20 @@
                   "level": "elementary"
             },
             {
-                  "text": "A funny story that happened to you 🚴",
+                  "text": "A funny day at school or work 🚴",
                   "level": "elementary"
             },
             {
                   "text": "Your favourite holiday tradition 🎄",
                   "level": "elementary"
+            },
+            {
+                  "text": "A childhood memory 🧸",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "A skill you wish you had 🎸",
+                  "level": "intermediate"
             },
             {
                   "text": "Your perfect holiday destination 🌴",
@@ -344,7 +356,7 @@
       "identity": [
             {
                   "person": "A firefighter",
-                  "clue": "They wear a helmet and extinguish fires with water.",
+                  "clue": "They wear a red hat and stop fires with water.",
                   "level": "elementary"
             },
             {
@@ -354,17 +366,17 @@
             },
             {
                   "person": "A librarian",
-                  "clue": "They manage a library and help people find books.",
+                  "clue": "They work in a library and help people find books.",
                   "level": "elementary"
             },
             {
                   "person": "A musician",
-                  "clue": "They play instruments or sing to create music.",
+                  "clue": "They play music or sing songs.",
                   "level": "elementary"
             },
             {
                   "person": "A veterinarian",
-                  "clue": "They take care of sick and injured animals.",
+                  "clue": "They help sick animals like dogs and cats.",
                   "level": "elementary"
             },
             {
@@ -453,25 +465,47 @@
             },
             {
                   "words": [
-                        "Piano",
-                        "Guitar",
-                        "Violin",
-                        "Trumpet"
+                        "Table",
+                        "Chair",
+                        "Bed",
+                        "Car"
                   ],
-                  "odd": "none",
-                  "link": "Musical instruments",
-                  "oddReason": "All are instruments"
+                  "odd": "Car",
+                  "link": "House furniture",
+                  "oddReason": "Car is transport, not house furniture"
             },
             {
                   "words": [
-                        "Happy",
-                        "Joyful",
-                        "Melancholy",
-                        "Cheerful"
+                        "Milk",
+                        "Water",
+                        "Tea",
+                        "Bread"
                   ],
-                  "odd": "Melancholy",
-                  "link": "Happy synonyms",
-                  "oddReason": "Melancholy means sad"
+                  "odd": "Bread",
+                  "link": "Drinks",
+                  "oddReason": "Bread is food, not a drink"
+            },
+            {
+                  "words": [
+                        "Monday",
+                        "Tuesday",
+                        "Friday",
+                        "Summer"
+                  ],
+                  "odd": "Summer",
+                  "link": "Days of the week",
+                  "oddReason": "Summer is a season, not a day"
+            },
+            {
+                  "words": [
+                        "Dog",
+                        "Cat",
+                        "Fish",
+                        "Phone"
+                  ],
+                  "odd": "Phone",
+                  "link": "Animals",
+                  "oddReason": "Phone is technology, not an animal"
             },
             {
                   "words": [
@@ -481,8 +515,8 @@
                         "Swim"
                   ],
                   "odd": "Sleep",
-                  "link": "Active physical verbs",
-                  "oddReason": "Sleep is passive"
+                  "link": "Actions",
+                  "oddReason": "Sleep is not moving"
             },
             {
                   "words": [
@@ -497,6 +531,29 @@
             },
             {
                   "words": [
+                        "Doctor",
+                        "Nurse",
+                        "Teacher",
+                        "Pilot"
+                  ],
+                  "odd": "Pilot",
+                  "link": "Hospital jobs",
+                  "oddReason": "Pilot works on planes, not in hospitals"
+            },
+            {
+                  "words": [
+                        "Piano",
+                        "Guitar",
+                        "Violin",
+                        "Trumpet"
+                  ],
+                  "odd": "none",
+                  "link": "Musical instruments",
+                  "oddReason": "All are instruments",
+                  "level": "intermediate"
+            },
+            {
+                  "words": [
                         "Shakespeare",
                         "Dickens",
                         "Picasso",
@@ -504,7 +561,8 @@
                   ],
                   "odd": "Picasso",
                   "link": "English authors",
-                  "oddReason": "Picasso was a Spanish painter"
+                  "oddReason": "Picasso was a Spanish painter",
+                  "level": "intermediate"
             },
             {
                   "words": [
@@ -515,18 +573,20 @@
                   ],
                   "odd": "none",
                   "link": "Times of day near sunrise/sunset",
-                  "oddReason": "All describe transitional light"
+                  "oddReason": "All describe transitional light",
+                  "level": "intermediate"
             },
             {
                   "words": [
-                        "Doctor",
-                        "Nurse",
-                        "Surgeon",
-                        "Pilot"
+                        "Happy",
+                        "Joyful",
+                        "Melancholy",
+                        "Cheerful"
                   ],
-                  "odd": "Pilot",
-                  "link": "Healthcare professions",
-                  "oddReason": "Pilot operates aircraft, not hospitals"
+                  "odd": "Melancholy",
+                  "link": "Happy synonyms",
+                  "oddReason": "Melancholy means sad",
+                  "level": "upper_intermediate"
             }
       ],
       "etymology": [

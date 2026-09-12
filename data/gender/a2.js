@@ -756,6 +756,248 @@
             }
         },
         "explanation": "Latin 'pluvia' was feminine, preserving feminine gender in Romance. German 'Regen' and Russian 'дождь' are masculine. Greek 'βροχή' is feminine."
+    },
+    {
+        "concept": "Toaster",
+        "translations": {
+            "fr": {
+                "word": "grille-pain",
+                "article": "le",
+                "gender": "masculine"
+            },
+            "es": {
+                "word": "pan",
+                "article": "el",
+                "gender": "masculine"
+            },
+            "it": {
+                "word": "tostapane",
+                "article": "il",
+                "gender": "masculine"
+            },
+            "de": {
+                "word": "Brot",
+                "article": "das",
+                "gender": "neuter"
+            },
+            "ru": {
+                "word": "хлеб",
+                "article": "",
+                "gender": "masculine"
+            },
+            "el": {
+                "word": "ψωμί",
+                "article": "",
+                "gender": "masculine"
+            },
+            "br": {
+                "word": "bara",
+                "article": "",
+                "gender": "masculine"
+            }
+        },
+        "explanation": "Romance languages (French, Spanish, Italian) inherit their genders from Latin (e.g. FR: masculine or ES: masculine or IT: masculine). In Germanic roots, the word shifted or was established as German: neuter. In Slavic languages, gender is determined phonetically based on the word ending (e.g. Russian: masculine). Greek inherits its grammatical gender from Ancient Hellenic roots (Greek: masculine)."
+    },
+    {
+        "concept": "Tray",
+        "translations": {
+            "es": {
+                "word": "almuerzo",
+                "article": "el",
+                "gender": "masculine"
+            },
+            "de": {
+                "word": "Mittagessen",
+                "article": "das",
+                "gender": "neuter"
+            },
+            "ru": {
+                "word": "обед",
+                "article": "",
+                "gender": "masculine"
+            },
+            "br": {
+                "word": "merenn",
+                "article": "",
+                "gender": "masculine"
+            }
+        },
+        "explanation": "Romance languages (French, Spanish, Italian) inherit their genders from Latin (e.g. ES: masculine). In Germanic roots, the word shifted or was established as German: neuter. In Slavic languages, gender is determined phonetically based on the word ending (e.g. Russian: masculine)."
+    },
+    {
+        "concept": "Broccoli",
+        "translations": {
+            "fr": {
+                "word": "légume",
+                "article": "le",
+                "gender": "masculine"
+            },
+            "it": {
+                "word": "verdura",
+                "article": "la",
+                "gender": "feminine"
+            },
+            "ru": {
+                "word": "овощ",
+                "article": "",
+                "gender": "masculine"
+            },
+            "el": {
+                "word": "λαχανικό",
+                "article": "το",
+                "gender": "neuter"
+            }
+        },
+        "explanation": "Romance languages (French, Spanish, Italian) inherit their genders from Latin (e.g. FR: masculine or IT: feminine). In Slavic languages, gender is determined phonetically based on the word ending (e.g. Russian: masculine). Greek inherits its grammatical gender from Ancient Hellenic roots (Greek: neuter)."
+    },
+    {
+        "concept": "Occupation",
+        "translations": {
+            "fr": {
+                "word": "travail",
+                "article": "le",
+                "gender": "masculine"
+            },
+            "es": {
+                "word": "trabajo",
+                "article": "el",
+                "gender": "masculine"
+            },
+            "it": {
+                "word": "lavoro",
+                "article": "il",
+                "gender": "masculine"
+            },
+            "de": {
+                "word": "Arbeit",
+                "article": "die",
+                "gender": "feminine"
+            },
+            "el": {
+                "word": "δουλειά",
+                "article": "η",
+                "gender": "feminine"
+            },
+            "br": {
+                "word": "labour",
+                "article": "",
+                "gender": "masculine"
+            }
+        },
+        "explanation": "Romance languages (French, Spanish, Italian) inherit their genders from Latin (e.g. FR: masculine or ES: masculine or IT: masculine). In Germanic roots, the word shifted or was established as German: feminine. Greek inherits its grammatical gender from Ancient Hellenic roots (Greek: feminine)."
+    },
+    {
+        "concept": "Traffic",
+        "translations": {
+            "fr": {
+                "word": "voiture",
+                "article": "la",
+                "gender": "feminine"
+            },
+            "es": {
+                "word": "coche",
+                "article": "el",
+                "gender": "masculine"
+            },
+            "it": {
+                "word": "macchina",
+                "article": "la",
+                "gender": "feminine"
+            },
+            "de": {
+                "word": "Auto",
+                "article": "das",
+                "gender": "neuter"
+            },
+            "ru": {
+                "word": "водитель",
+                "article": "",
+                "gender": "masculine"
+            },
+            "el": {
+                "word": "οδηγός",
+                "article": "ο",
+                "gender": "masculine"
+            },
+            "br": {
+                "word": "karr",
+                "article": "",
+                "gender": "masculine"
+            }
+        },
+        "explanation": "Romance languages (French, Spanish, Italian) inherit their genders from Latin (e.g. FR: feminine or ES: masculine or IT: feminine). In Germanic roots, the word shifted or was established as German: neuter. In Slavic languages, gender is determined phonetically based on the word ending (e.g. Russian: masculine). Greek inherits its grammatical gender from Ancient Hellenic roots (Greek: masculine)."
+    },
+    {
+        "concept": "Commute",
+        "translations": {
+            "fr": {
+                "word": "train",
+                "article": "le",
+                "gender": "masculine"
+            },
+            "es": {
+                "word": "tren",
+                "article": "el",
+                "gender": "masculine"
+            },
+            "it": {
+                "word": "tragitto",
+                "article": "il",
+                "gender": "masculine"
+            },
+            "de": {
+                "word": "Zug",
+                "article": "der",
+                "gender": "masculine"
+            },
+            "ru": {
+                "word": "поездка на работу",
+                "article": "",
+                "gender": "feminine"
+            },
+            "el": {
+                "word": "μετακίνηση",
+                "article": "η",
+                "gender": "feminine"
+            },
+            "br": {
+                "word": "tren",
+                "article": "",
+                "gender": "masculine"
+            }
+        },
+        "explanation": "Romance languages (French, Spanish, Italian) inherit their genders from Latin (e.g. FR: masculine or ES: masculine or IT: masculine). In Germanic roots, the word shifted or was established as German: masculine. In Slavic languages, gender is determined phonetically based on the word ending (e.g. Russian: feminine). Greek inherits its grammatical gender from Ancient Hellenic roots (Greek: feminine)."
+    },
+    {
+        "concept": "Gate",
+        "translations": {
+            "fr": {
+                "word": "armoire",
+                "article": "l'",
+                "gender": "feminine"
+            },
+            "es": {
+                "word": "puerta",
+                "article": "",
+                "gender": "masculine"
+            },
+            "it": {
+                "word": "uscita",
+                "article": "l'",
+                "gender": "feminine"
+            },
+            "ru": {
+                "word": "дверь",
+                "article": "",
+                "gender": "feminine"
+            },
+            "el": {
+                "word": "πόρτα",
+                "article": "η",
+                "gender": "feminine"
+            }
+        },
+        "explanation": "Romance languages (French, Spanish, Italian) inherit their genders from Latin (e.g. FR: feminine or ES: masculine or IT: feminine). In Slavic languages, gender is determined phonetically based on the word ending (e.g. Russian: feminine). Greek inherits its grammatical gender from Ancient Hellenic roots (Greek: feminine)."
     }
 ];
     window.genderGameData = window.genderGameData || {};
