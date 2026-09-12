@@ -7,7 +7,7 @@ const langs = ['ba', 'br', 'de', 'el', 'en', 'es', 'fr', 'hy', 'it', 'ka', 'pt',
 let totalTested = 0;
 let multiHopCount = 0;
 
-console.log('Running etymology schema & multi-hop path verification tests...\n');
+console.log('Running etymology schema, multi-hop path, false-friends, and doublets tests...\n');
 
 langs.forEach(lang => {
     const filePath = path.join(__dirname, '..', 'data', lang, 'game_data.js');
@@ -28,25 +28,20 @@ langs.forEach(lang => {
         totalTested++;
         const prefix = `Lang '${lang}' entry #${idx + 1} (${entry.word})`;
 
-        // Required fields
         assert.ok(typeof entry.word === 'string' && entry.word.trim().length > 0, `${prefix}: missing 'word'`);
         assert.ok(typeof entry.level === 'string' && entry.level.trim().length > 0, `${prefix}: missing 'level'`);
         assert.ok(typeof entry.answer === 'string' && entry.answer.trim().length > 0, `${prefix}: missing 'answer'`);
         assert.ok(typeof entry.detail === 'string' && entry.detail.trim().length > 0, `${prefix}: missing 'detail'`);
 
-        // Options array constraints
         assert.ok(Array.isArray(entry.options), `${prefix}: 'options' must be an array`);
         assert.ok(entry.options.length >= 3 && entry.options.length <= 4, `${prefix}: 'options' length must be 3 or 4, got ${entry.options.length}`);
 
-        // All options must be unique
         const uniqueOptions = new Set(entry.options);
         assert.strictEqual(uniqueOptions.size, entry.options.length, `${prefix}: 'options' contains duplicates: ${JSON.stringify(entry.options)}`);
 
-        // Options must include answer exactly once
         const answerMatches = entry.options.filter(opt => opt === entry.answer);
         assert.strictEqual(answerMatches.length, 1, `${prefix}: answer '${entry.answer}' must be present in options exactly once, found in: ${JSON.stringify(entry.options)}`);
 
-        // Track 3+ hop paths
         if (entry.path && (entry.path.match(/→/g) || []).length >= 2) {
             multiHopCount++;
         }
@@ -107,8 +102,43 @@ networkData.forEach((entry, idx) => {
 });
 console.log(`✓ Network: ${networkData.length} cross-language family entries verified`);
 
-// Verify at least 15 multi-hop 3+ step paths exist across the decks
+// Test data/shared/false_friends.js
+const falseFriendsPath = path.join(__dirname, '..', 'data', 'shared', 'false_friends.js');
+assert.strictEqual(fs.existsSync(falseFriendsPath), true, 'data/shared/false_friends.js missing');
+const falseFriendsData = require(falseFriendsPath);
+assert.strictEqual(Array.isArray(falseFriendsData), true, 'False friends data should be an array');
+assert.strictEqual(falseFriendsData.length, 20, 'False friends data should have exactly 20 entries');
+
+falseFriendsData.forEach((entry, idx) => {
+    totalTested++;
+    const prefix = `False Friends entry #${idx + 1} (${entry.wordA?.word} / ${entry.wordB?.word})`;
+    assert.ok(entry.wordA && entry.wordA.lang && entry.wordA.word && entry.wordA.meaning, `${prefix}: missing 'wordA' fields`);
+    assert.ok(entry.wordB && entry.wordB.lang && entry.wordB.word && entry.wordB.meaning, `${prefix}: missing 'wordB' fields`);
+    assert.ok(['cognate-but-diverged', 'coincidental-look-alike'].includes(entry.relation), `${prefix}: invalid relation '${entry.relation}'`);
+    assert.ok(typeof entry.detail === 'string' && entry.detail.trim().length > 0, `${prefix}: missing 'detail'`);
+});
+console.log(`✓ False Friends: ${falseFriendsData.length} verified entries`);
+
+// Test data/shared/doublets.js
+const doubletsPath = path.join(__dirname, '..', 'data', 'shared', 'doublets.js');
+assert.strictEqual(fs.existsSync(doubletsPath), true, 'data/shared/doublets.js missing');
+const doubletsData = require(doubletsPath);
+assert.strictEqual(Array.isArray(doubletsData), true, 'Doublets data should be an array');
+assert.strictEqual(doubletsData.length, 15, 'Doublets data should have 15 entries');
+
+doubletsData.forEach((entry, idx) => {
+    totalTested++;
+    const prefix = `Doublet entry #${idx + 1} (${entry.wordA} / ${entry.wordB})`;
+    assert.ok(langs.includes(entry.language), `${prefix}: invalid language '${entry.language}'`);
+    assert.ok(typeof entry.wordA === 'string' && entry.wordA.trim().length > 0, `${prefix}: missing 'wordA'`);
+    assert.ok(typeof entry.wordB === 'string' && entry.wordB.trim().length > 0, `${prefix}: missing 'wordB'`);
+    assert.ok(typeof entry.commonRoot === 'string' && entry.commonRoot.trim().length > 0, `${prefix}: missing 'commonRoot'`);
+    assert.ok(Array.isArray(entry.options) && entry.options.includes(entry.commonRoot), `${prefix}: options must contain commonRoot`);
+    assert.ok(typeof entry.detail === 'string' && entry.detail.trim().length > 0, `${prefix}: missing 'detail'`);
+});
+console.log(`✓ Doublets: ${doubletsData.length} verified entries`);
+
 assert.ok(multiHopCount >= 15, `Expected at least 15 multi-hop 3+ step paths, found ${multiHopCount}`);
 console.log(`✓ Multi-hop Paths: ${multiHopCount} multi-hop 3+ step paths verified across decks.`);
 
-console.log(`\nALL TESTS PASSED! Successfully verified ${totalTested} etymology & network entries.`);
+console.log(`\nALL TESTS PASSED! Successfully verified ${totalTested} etymology, network, false friends & doublet entries.`);

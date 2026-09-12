@@ -1,7 +1,7 @@
 /**
  * games/etymology-explorer/game.js
- * Game logic for Etymology Explorer with Archaeological Dig Site Identity
- * and Cross-Language Network Mode.
+ * Game logic for Etymology Explorer with Archaeological Dig Site Identity,
+ * Cross-Language Network Mode, and Word Pairs (False Friends / Doublets) Mode.
  */
 (function() {
     const GAME_ID = 'etymology';
@@ -90,24 +90,37 @@
         return `<div class="path-chips-container" style="display: flex; align-items: center; gap: 0.2rem; flex-wrap: wrap; margin-top: 0.75rem; padding: 0.5rem; background: rgba(255, 255, 255, 0.6); border-radius: 10px; border: 1px solid rgba(0,0,0,0.05);">${htmlSteps}</div>`;
     }
 
-    function loadNetworkData() {
+    function loadScript(url, globalKey) {
         return new Promise((resolve) => {
-            if (window.etymologyNetworkData) {
-                resolve(window.etymologyNetworkData);
+            if (window[globalKey]) {
+                resolve(window[globalKey]);
                 return;
             }
             const script = document.createElement('script');
-            script.src = '../data/shared/etymology_network.js';
-            script.onload = () => resolve(window.etymologyNetworkData || []);
+            script.src = url;
+            script.onload = () => resolve(window[globalKey] || []);
             script.onerror = () => {
+                const altUrl = url.startsWith('../') ? url.replace('../', '') : '../' + url;
                 const fallbackScript = document.createElement('script');
-                fallbackScript.src = 'data/shared/etymology_network.js';
-                fallbackScript.onload = () => resolve(window.etymologyNetworkData || []);
+                fallbackScript.src = altUrl;
+                fallbackScript.onload = () => resolve(window[globalKey] || []);
                 fallbackScript.onerror = () => resolve([]);
                 document.head.appendChild(fallbackScript);
             };
             document.head.appendChild(script);
         });
+    }
+
+    function loadNetworkData() {
+        return loadScript('../data/shared/etymology_network.js', 'etymologyNetworkData');
+    }
+
+    function loadFalseFriendsData() {
+        return loadScript('../data/shared/false_friends.js', 'falseFriendsData');
+    }
+
+    function loadDoubletsData() {
+        return loadScript('../data/shared/doublets.js', 'doubletsData');
     }
 
     function renderSetup() {
@@ -124,6 +137,7 @@
                   <option value="medium">Medium (Loanwords)</option>
                   <option value="hard">Hard (Deep history)</option>
                   <option value="network">Language Network 🌐 (Cross-language Cognates)</option>
+                  <option value="wordpairs">Word Pairs 👯 (False Friends & Doublets)</option>
                 </select>
               </div>
               <div class="setup-field" id="lang-field"><label>Focus Language</label>
@@ -136,7 +150,7 @@
         const langField = document.getElementById('lang-field');
         if (levelSel && langField) {
             levelSel.addEventListener('change', () => {
-                if (levelSel.value === 'network') {
+                if (levelSel.value === 'network' || levelSel.value === 'wordpairs') {
                     langField.style.display = 'none';
                 } else {
                     langField.style.display = 'block';
@@ -157,6 +171,16 @@
                 COSYGame.maxRounds = 10;
                 revealedHistoryLayers = [];
                 this.startNetworkMode(networkData);
+                return;
+            }
+
+            if (levelVal === 'wordpairs') {
+                const ffData = await loadFalseFriendsData();
+                const dData = await loadDoubletsData();
+                COSYGame.init(GAME_ID, 'universal', 'wordpairs');
+                COSYGame.maxRounds = 10;
+                revealedHistoryLayers = [];
+                this.startWordPairsMode(ffData, dData);
                 return;
             }
 
@@ -312,17 +336,14 @@
                 const item = drawBag.next();
                 const validLangs = item.reflexes.map(r => r.lang);
 
-                // Pick 1 valid target language from validLangs
                 const targetReflex = item.reflexes[Math.floor(Math.random() * item.reflexes.length)];
                 const targetLangCode = targetReflex.lang;
                 const targetLangName = ALL_LANG_NAMES[targetLangCode] || targetLangCode.toUpperCase();
                 const targetWord = targetReflex.word;
 
-                // Pick distractor languages from site languages not in validLangs
                 const allCodes = Object.keys(ALL_LANG_NAMES);
                 const distractorCodes = shuffle(allCodes.filter(c => !validLangs.includes(c))).slice(0, 3);
 
-                // Combine into 4 options (1 correct language name + 3 wrong language names)
                 const options = shuffle([
                     { code: targetLangCode, name: targetLangName, isCorrect: true },
                     ...distractorCodes.map(c => ({ code: c, name: ALL_LANG_NAMES[c], isCorrect: false }))
@@ -395,6 +416,161 @@
             };
 
             nextNetworkQuestion();
+        },
+
+        startWordPairsMode(falseFriendsData, doubletsData) {
+            // Mix false friends and doublets into round pools
+            const pool = [];
+            (falseFriendsData || []).forEach(item => {
+                pool.push({ type: 'false_friend', data: item });
+            });
+            (doubletsData || []).forEach(item => {
+                pool.push({ type: 'doublet', data: item });
+            });
+
+            const drawBag = gameUtils.createDrawBag(pool);
+            const body = document.getElementById('go-body');
+
+            const nextWordPairQuestion = () => {
+                if (!COSYGame.nextRound()) {
+                    this.renderEnd();
+                    return;
+                }
+
+                const current = drawBag.next();
+                if (!current) {
+                    this.renderEnd();
+                    return;
+                }
+
+                if (current.type === 'false_friend') {
+                    const item = current.data;
+                    const langA = ALL_LANG_NAMES[item.wordA.lang] || item.wordA.lang.toUpperCase();
+                    const langB = ALL_LANG_NAMES[item.wordB.lang] || item.wordB.lang.toUpperCase();
+                    const isCognate = item.relation === 'cognate-but-diverged';
+
+                    const options = shuffle([
+                        { text: 'Yes, they share an etymological root', isCorrect: isCognate },
+                        { text: 'No, they are false friends with different roots', isCorrect: !isCognate }
+                    ]);
+
+                    body.innerHTML = `
+                      <div class="score-bar">
+                        <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
+                        <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Question</div></div>
+                      </div>
+                      <div class="game-card">
+                        <div class="game-label">👯 Word Pairs · False Friends Challenge</div>
+                        <div style="font-size: 1.1rem; margin-top: 0.5rem; color: #4B5563;">Are these two words etymologically related?</div>
+
+                        <div style="display: flex; gap: 1rem; margin: 1rem 0; justify-content: center; align-items: stretch;">
+                          <div style="flex: 1; background: rgba(13, 148, 136, 0.08); border: 1px solid var(--teal); border-radius: 8px; padding: 1rem;">
+                            <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--teal);">${gameUtils.escapeAttr(langA)}</div>
+                            <div style="font-size: 1.5rem; font-weight: 800; color: #111827;">${gameUtils.escapeAttr(item.wordA.word)}</div>
+                            <div style="font-size: 0.85rem; color: #6B7280; font-style: italic;">"${gameUtils.escapeAttr(item.wordA.meaning)}"</div>
+                          </div>
+                          <div style="flex: 1; background: rgba(180, 83, 9, 0.08); border: 1px solid #D97706; border-radius: 8px; padding: 1rem;">
+                            <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #B45309;">${gameUtils.escapeAttr(langB)}</div>
+                            <div style="font-size: 1.5rem; font-weight: 800; color: #111827;">${gameUtils.escapeAttr(item.wordB.word)}</div>
+                            <div style="font-size: 0.85rem; color: #6B7280; font-style: italic;">"${gameUtils.escapeAttr(item.wordB.meaning)}"</div>
+                          </div>
+                        </div>
+
+                        <div class="word-options" style="margin-top: 1rem;">
+                          ${options.map(opt => `<button class="word-opt" data-correct="${opt.isCorrect}">${gameUtils.escapeAttr(opt.text)}</button>`).join('')}
+                        </div>
+                        <div class="feedback-bar" id="et-fb"></div>
+                        <div class="game-controls">
+                          <button class="btn-g-primary" id="et-next" style="display:none">Next Pair →</button>
+                          <button class="btn-g-danger" id="et-reset">⬅ Exit</button>
+                        </div>
+                      </div>`;
+
+                    body.querySelectorAll('.word-opt').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const isCorrect = btn.dataset.correct === 'true';
+                            document.querySelectorAll('.word-opt').forEach(b => b.disabled = true);
+                            const fb = document.getElementById('et-fb');
+                            const next = document.getElementById('et-next');
+                            if (next) next.style.display = 'inline-block';
+
+                            if (isCorrect) {
+                                btn.classList.add('correct');
+                                fb.className = 'feedback-bar show ok';
+                                fb.innerHTML = `<div>✓ <strong>Correct!</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
+                                COSYGame.addScore(10);
+                                document.getElementById('et-score').textContent = COSYGame.score;
+                            } else {
+                                btn.classList.add('wrong');
+                                document.querySelectorAll('.word-opt').forEach(b => {
+                                    if (b.dataset.correct === 'true') b.classList.add('correct');
+                                });
+                                fb.className = 'feedback-bar show bad';
+                                fb.innerHTML = `<div>✗ <strong>Not quite!</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
+                            }
+                        });
+                    });
+                } else {
+                    const item = current.data;
+                    const langName = ALL_LANG_NAMES[item.language] || item.language.toUpperCase();
+                    const shuffledOpts = shuffle(item.options);
+
+                    body.innerHTML = `
+                      <div class="score-bar">
+                        <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
+                        <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Question</div></div>
+                      </div>
+                      <div class="game-card">
+                        <div class="game-label">👯 Word Pairs · Etymological Doublets (${gameUtils.escapeAttr(langName)})</div>
+                        <div style="font-size: 1.1rem; margin-top: 0.5rem; color: #4B5563;">What is the shared ancestral root of these two doublets?</div>
+
+                        <div style="display: flex; gap: 1rem; margin: 1rem 0; justify-content: center; align-items: center; background: rgba(99, 102, 241, 0.08); border: 1px dashed #6366F1; border-radius: 8px; padding: 1rem;">
+                          <div style="font-size: 1.8rem; font-weight: 800; color: #4338CA;">"${gameUtils.escapeAttr(item.wordA)}"</div>
+                          <div style="font-size: 1.5rem; font-weight: 800; color: #6366F1;">&amp;</div>
+                          <div style="font-size: 1.8rem; font-weight: 800; color: #4338CA;">"${gameUtils.escapeAttr(item.wordB)}"</div>
+                        </div>
+
+                        <div class="word-options" style="margin-top: 1rem;">
+                          ${shuffledOpts.map(opt => `<button class="word-opt" data-opt="${gameUtils.escapeAttr(opt)}" data-correct="${opt === item.commonRoot}">${gameUtils.escapeAttr(opt)}</button>`).join('')}
+                        </div>
+                        <div class="feedback-bar" id="et-fb"></div>
+                        <div class="game-controls">
+                          <button class="btn-g-primary" id="et-next" style="display:none">Next Pair →</button>
+                          <button class="btn-g-danger" id="et-reset">⬅ Exit</button>
+                        </div>
+                      </div>`;
+
+                    body.querySelectorAll('.word-opt').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const isCorrect = btn.dataset.correct === 'true';
+                            document.querySelectorAll('.word-opt').forEach(b => b.disabled = true);
+                            const fb = document.getElementById('et-fb');
+                            const next = document.getElementById('et-next');
+                            if (next) next.style.display = 'inline-block';
+
+                            if (isCorrect) {
+                                btn.classList.add('correct');
+                                fb.className = 'feedback-bar show ok';
+                                fb.innerHTML = `<div>✓ <strong>Correct Root!</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
+                                COSYGame.addScore(10);
+                                document.getElementById('et-score').textContent = COSYGame.score;
+                            } else {
+                                btn.classList.add('wrong');
+                                document.querySelectorAll('.word-opt').forEach(b => {
+                                    if (b.dataset.correct === 'true') b.classList.add('correct');
+                                });
+                                fb.className = 'feedback-bar show bad';
+                                fb.innerHTML = `<div>✗ <strong>Shared Root: ${gameUtils.escapeAttr(item.commonRoot)}.</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
+                            }
+                        });
+                    });
+                }
+
+                document.getElementById('et-next').addEventListener('click', () => nextWordPairQuestion());
+                document.getElementById('et-reset').addEventListener('click', () => COSY_GAME.reset());
+            };
+
+            nextWordPairQuestion();
         },
 
         renderEnd() {
