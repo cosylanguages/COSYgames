@@ -1,0 +1,428 @@
+/* games/opinion-arena/opinion-arena.css */
+
+:root, .cosy-game-theme {
+    --game-accent-a: #d93838;         /* Warm Red (Agree/Pro side) */
+    --game-accent-a-dim: rgba(217, 56, 56, 0.12);
+    --game-accent-a-hover: #b82e2e;
+
+    --game-accent-b: #2563eb;         /* Cool Blue (Disagree/Con side) */
+    --game-accent-b-dim: rgba(37, 99, 235, 0.12);
+    --game-accent-b-hover: #1d4ed8;
+
+    --arena-center-neutral: #5e586c;  /* Neutral Gray-Violet center */
+    --arena-bg-soft: #f4f3f7;
+}
+
+html[data-theme="dark"], body.theme-dark {
+    --game-accent-a: #ef4444;
+    --game-accent-a-dim: rgba(239, 68, 68, 0.22);
+    --game-accent-b: #3b82f6;
+    --game-accent-b-dim: rgba(59, 130, 246, 0.22);
+    --arena-center-neutral: #8b8599;
+    --arena-bg-soft: #1c1a24;
+}
+
+/* ── Arena Layout Container ───────────────────────── */
+.oa-arena-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+/* ── Tug-of-War Shared Meter ─────────────────────── */
+.oa-meter-wrapper {
+    background: var(--surface-color, #ffffff);
+    border: 1px solid var(--border, rgba(0, 0, 0, 0.1));
+    border-radius: var(--r-md, 14px);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow-sm, 0 2px 12px rgba(0,0,0,0.05));
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.oa-meter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.oa-side-label-a {
+    color: var(--game-accent-a);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.oa-side-label-b {
+    color: var(--game-accent-b);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.oa-center-status {
+    color: var(--arena-center-neutral);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 800;
+}
+
+.oa-meter-track {
+    position: relative;
+    height: 24px;
+    border-radius: 12px;
+    background: var(--arena-bg-soft);
+    overflow: hidden;
+    display: flex;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.oa-meter-fill-a {
+    height: 100%;
+    background: linear-gradient(90deg, var(--game-accent-a), #e05656);
+    width: 50%;
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.oa-meter-fill-b {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, var(--game-accent-b));
+    width: 50%;
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.oa-meter-center-pin {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    margin-left: -2px;
+    background: var(--arena-center-neutral);
+    z-index: 2;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+.oa-meter-indicator {
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    width: 14px;
+    margin-left: -7px;
+    background: #ffffff;
+    border: 3px solid var(--arena-center-neutral);
+    border-radius: 7px;
+    z-index: 3;
+    left: 50%;
+    transition: left 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* ── Two-Podium Arena Layout ───────────────────────── */
+.oa-podiums-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.oa-podium {
+    background: var(--surface-color, #ffffff);
+    border-radius: var(--r-md, 14px);
+    border: 2px solid transparent;
+    box-shadow: var(--shadow-sm, 0 2px 12px rgba(0,0,0,0.05));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.oa-podium-side-a {
+    border-color: var(--game-accent-a-dim);
+}
+
+.oa-podium-side-a.active-turn {
+    border-color: var(--game-accent-a);
+    box-shadow: 0 4px 20px var(--game-accent-a-dim);
+}
+
+.oa-podium-side-b {
+    border-color: var(--game-accent-b-dim);
+}
+
+.oa-podium-side-b.active-turn {
+    border-color: var(--game-accent-b);
+    box-shadow: 0 4px 20px var(--game-accent-b-dim);
+}
+
+.oa-podium-header {
+    padding: 0.9rem 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border, rgba(0,0,0,0.06));
+}
+
+.oa-podium-side-a .oa-podium-header {
+    background: var(--game-accent-a-dim);
+    color: var(--game-accent-a);
+}
+
+.oa-podium-side-b .oa-podium-header {
+    background: var(--game-accent-b-dim);
+    color: var(--game-accent-b);
+}
+
+.oa-podium-title {
+    font-family: var(--font-serif, serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.oa-podium-score {
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+    background: var(--surface-color, #ffffff);
+}
+
+.oa-podium-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    flex: 1;
+}
+
+.oa-phrase-section-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted, #5c5957);
+}
+
+.oa-phrases-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.oa-phrase-chip {
+    padding: 0.45rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid transparent;
+}
+
+.oa-podium-side-a .oa-phrase-chip {
+    background: var(--game-accent-a-dim);
+    color: var(--game-accent-a);
+    border-color: rgba(217, 56, 56, 0.25);
+}
+
+.oa-podium-side-a .oa-phrase-chip:hover:not(.used) {
+    background: var(--game-accent-a);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--game-accent-a-dim);
+}
+
+.oa-podium-side-b .oa-phrase-chip {
+    background: var(--game-accent-b-dim);
+    color: var(--game-accent-b);
+    border-color: rgba(37, 99, 235, 0.25);
+}
+
+.oa-podium-side-b .oa-phrase-chip:hover:not(.used) {
+    background: var(--game-accent-b);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--game-accent-b-dim);
+}
+
+.oa-phrase-chip.used {
+    opacity: 0.45;
+    text-decoration: line-through;
+    cursor: default;
+    transform: none !important;
+}
+
+.oa-podium-actions {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.oa-btn-argue {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--r-sm, 8px);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.oa-podium-side-a .oa-btn-argue {
+    background: var(--game-accent-a);
+    color: #ffffff;
+}
+
+.oa-podium-side-a .oa-btn-argue:hover {
+    background: var(--game-accent-a-hover);
+}
+
+.oa-podium-side-b .oa-btn-argue {
+    background: var(--game-accent-b);
+    color: #ffffff;
+}
+
+.oa-podium-side-b .oa-btn-argue:hover {
+    background: var(--game-accent-b-hover);
+}
+
+.oa-btn-argue:active {
+    transform: scale(0.97);
+}
+
+.oa-phone-side-switcher {
+    display: none;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    border-radius: 10px;
+    background: var(--arena-bg-soft);
+    padding: 3px;
+    gap: 4px;
+}
+
+/* ── PHONE CONTEXT (data-context="phone") ───────────────── */
+[data-context="phone"] .oa-meter-wrapper,
+html[data-context="phone"] .oa-meter-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: -0.5rem -0.5rem 0.5rem -0.5rem;
+    padding: 0.65rem 0.85rem;
+}
+
+[data-context="phone"] .oa-podiums-grid,
+html[data-context="phone"] .oa-podiums-grid {
+    grid-template-columns: 1fr;
+    flex: 1;
+}
+
+[data-context="phone"] .oa-podium,
+html[data-context="phone"] .oa-podium {
+    min-height: calc(100vh - 260px);
+}
+
+[data-context="phone"] .oa-phone-side-switcher,
+html[data-context="phone"] .oa-phone-side-switcher {
+    display: flex;
+}
+
+[data-context="phone"] .oa-phone-tab,
+html[data-context="phone"] .oa-phone-tab {
+    flex: 1;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+[data-context="phone"] .oa-phone-tab.tab-a.active,
+html[data-context="phone"] .oa-phone-tab.tab-a.active {
+    background: var(--game-accent-a);
+    color: #ffffff;
+}
+
+[data-context="phone"] .oa-phone-tab.tab-b.active,
+html[data-context="phone"] .oa-phone-tab.tab-b.active {
+    background: var(--game-accent-b);
+    color: #ffffff;
+}
+
+[data-context="phone"] .oa-podium:not(.phone-visible),
+html[data-context="phone"] .oa-podium:not(.phone-visible) {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .oa-phone-side-switcher {
+        display: flex;
+    }
+    .oa-phone-tab {
+        flex: 1;
+        padding: 0.5rem;
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.85rem;
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        transition: all 0.2s ease;
+    }
+    .oa-phone-tab.tab-a.active {
+        background: var(--game-accent-a);
+        color: #ffffff;
+    }
+    .oa-phone-tab.tab-b.active {
+        background: var(--game-accent-b);
+        color: #ffffff;
+    }
+    .oa-podiums-grid {
+        grid-template-columns: 1fr;
+    }
+    .oa-podium:not(.phone-visible) {
+        display: none;
+    }
+}
+
+/* ── ONLINE CONTEXT (data-context="online") ─────────────── */
+[data-context="online"] .oa-meter-wrapper,
+html[data-context="online"] .oa-meter-wrapper {
+    border: 2px solid var(--arena-center-neutral);
+}
+
+[data-context="online"] .oa-meter-header::after,
+html[data-context="online"] .oa-meter-header::after {
+    content: "📡 Live Shared Anchor";
+    font-size: 0.75rem;
+    background: var(--arena-center-neutral);
+    color: #ffffff;
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    margin-left: auto;
+}

@@ -1,0 +1,208 @@
+/* games/story-chain/story-chain.css */
+
+:root, .cosy-game-theme {
+    --game-accent: #8b5cf6;            /* Lavender */
+    --game-accent-dim: rgba(139, 92, 246, 0.15);
+    --game-accent-hover: #7c3aed;
+    --game-accent-contrast: #ffffff;
+    --paper-card-bg: #fdfcfb;
+    --paper-border: rgba(139, 92, 246, 0.25);
+}
+
+html[data-theme="dark"], body.theme-dark {
+    --game-accent: #a78bfa;            /* Lavender Dark Mode */
+    --game-accent-dim: rgba(167, 139, 250, 0.22);
+    --game-accent-hover: #8b5cf6;
+    --paper-card-bg: #221f2d;
+    --paper-border: rgba(167, 139, 250, 0.35);
+}
+
+/* ── Chain Wrapper & Container ───────────────────── */
+.sc-chain-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* ── Paper Garland Connected Card ────────────────── */
+.sc-card {
+    position: relative;
+    background: var(--paper-card-bg);
+    border: 2px solid var(--paper-border);
+    border-radius: var(--r-md, 12px);
+    padding: 0.9rem 1.25rem;
+    margin: 0.5rem 0.75rem 0.5rem 0;
+    box-shadow: var(--shadow-sm, 0 2px 10px rgba(139, 92, 246, 0.08));
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 220px;
+    max-width: 320px;
+    flex: 1 1 auto;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Visual notch / paper tab connecting card edges */
+.sc-card:not(:first-child)::before {
+    content: "🔗";
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: var(--game-accent);
+    z-index: 5;
+    background: var(--surface-color, #ffffff);
+    border: 1px solid var(--paper-border);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sc-card-index {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--game-accent);
+}
+
+.sc-card-sentence {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--text-color, #2a2a2a);
+    font-weight: 600;
+}
+
+.sc-card-word {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--gold, #945e05);
+    background: var(--gold-light, #fff8e7);
+    padding: 0.15rem 0.45rem;
+    border-radius: 6px;
+    display: inline-block;
+    width: fit-content;
+    margin-top: 0.25rem;
+}
+
+/* ── Pulse Animation for Most Recently Added Card ─── */
+@keyframes chainCardPulse {
+    0% {
+        border-color: var(--game-accent);
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+        transform: scale(1.02);
+    }
+    50% {
+        border-color: var(--game-accent);
+        box-shadow: 0 0 0 12px rgba(139, 92, 246, 0);
+        transform: scale(1.02);
+    }
+    100% {
+        border-color: var(--paper-border);
+        box-shadow: 0 2px 10px rgba(139, 92, 246, 0.08);
+        transform: scale(1);
+    }
+}
+
+.newest-card-pulse {
+    animation: chainCardPulse 2s ease-out forwards;
+}
+
+/* ── PHONE CONTEXT (data-context="phone") ───────────────── */
+[data-context="phone"] .sc-chain-container,
+html[data-context="phone"] .sc-chain-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    max-height: calc(100vh - 280px);
+    overflow-y: auto;
+    padding-bottom: 5rem;
+    scroll-behavior: smooth;
+}
+
+[data-context="phone"] .sc-card,
+html[data-context="phone"] .sc-card {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+[data-context="phone"] .sc-card:not(:first-child)::before,
+html[data-context="phone"] .sc-card:not(:first-child)::before {
+    left: 50%;
+    top: -14px;
+    transform: translateX(-50%);
+}
+
+[data-context="phone"] .sc-input-sticky-zone,
+html[data-context="phone"] .sc-input-sticky-zone {
+    position: sticky;
+    bottom: 0;
+    z-index: 50;
+    background: var(--surface-color, #ffffff);
+    padding: 0.75rem;
+    border-top: 2px solid var(--paper-border);
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+    border-radius: 14px 14px 0 0;
+}
+
+@media (max-width: 600px) {
+    .sc-chain-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        max-height: calc(100vh - 280px);
+        overflow-y: auto;
+        padding-bottom: 5rem;
+    }
+    .sc-card {
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    .sc-card:not(:first-child)::before {
+        left: 50%;
+        top: -14px;
+        transform: translateX(-50%);
+    }
+    .sc-input-sticky-zone {
+        position: sticky;
+        bottom: 0;
+        z-index: 50;
+        background: var(--surface-color, #ffffff);
+        padding: 0.75rem;
+        border-top: 2px solid var(--paper-border);
+        box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+        border-radius: 14px 14px 0 0;
+    }
+}
+
+/* ── PROJECTOR CONTEXT (data-context="projector") ───────── */
+[data-context="projector"] .sc-chain-container,
+html[data-context="projector"] .sc-chain-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem 1.25rem;
+    width: 100%;
+    overflow-x: visible;
+}
+
+[data-context="projector"] .sc-card,
+html[data-context="projector"] .sc-card {
+    min-width: 260px;
+    font-size: 1.1rem;
+    padding: 1.1rem 1.5rem;
+}

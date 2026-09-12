@@ -1,0 +1,163 @@
+/* games/storytelling/storytelling.css */
+
+:root, .cosy-game-theme {
+    --game-accent: #7a5c3a;               /* Plum */
+    --game-accent-dim: rgba(122, 92, 58, 0.15);
+    --game-accent-hover: #5f4327;
+    --game-accent-contrast: #ffffff;
+    --parchment-bg: #fcf8f2;              /* Warm Parchment */
+    --parchment-border: #d4c5b3;
+    --manuscript-gold: #c59b27;
+}
+
+html[data-theme="dark"], body.theme-dark {
+    --game-accent: #c49a70;
+    --game-accent-dim: rgba(196, 154, 112, 0.22);
+    --game-accent-hover: #d8af82;
+    --parchment-bg: #1e1a17;
+    --parchment-border: #4a3e35;
+    --manuscript-gold: #e5be53;
+}
+
+body.game-standalone {
+    background-color: var(--parchment-bg);
+}
+
+/* ── Illuminated Manuscript Frame ───────────────── */
+.manuscript-art-container {
+    background: var(--parchment-bg);
+    border: 3px double var(--game-accent);
+    border-radius: var(--r-md, 14px);
+    padding: 0.75rem;
+    box-shadow: 0 4px 16px rgba(122, 92, 58, 0.12), inset 0 0 12px rgba(197, 155, 39, 0.15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.manuscript-svg-frame {
+    width: 100%;
+    max-width: 480px;
+    height: 180px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #eef2f7 0%, #fdf8f0 100%);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.06);
+}
+
+.manuscript-title {
+    font-family: var(--font-serif, serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--game-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* SVG Scene Layer States */
+.art-layer {
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+}
+
+.art-layer.active {
+    opacity: 1;
+}
+
+/* ── Participant Author Chips ────────────────────── */
+.author-chip {
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.author-chip.p1 {
+    background: rgba(122, 92, 58, 0.15);
+    color: var(--game-accent);
+    border: 1px solid rgba(122, 92, 58, 0.3);
+}
+
+.author-chip.p2 {
+    background: rgba(79, 70, 229, 0.12);
+    color: #4f46e5;
+    border: 1px solid rgba(79, 70, 229, 0.25);
+}
+
+.author-chip.p3 {
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+/* ── PHONE CONTEXT (data-context="phone") ───────────────── */
+[data-context="phone"] .manuscript-art-container,
+html[data-context="phone"] .manuscript-art-container {
+    padding: 0.4rem;
+    margin: 0.5rem 0;
+}
+
+[data-context="phone"] .manuscript-svg-frame,
+html[data-context="phone"] .manuscript-svg-frame {
+    height: 80px;
+}
+
+[data-context="phone"] .manuscript-title,
+html[data-context="phone"] .manuscript-title {
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+}
+
+[data-context="phone"] .story-container,
+html[data-context="phone"] .story-container {
+    max-height: calc(100vh - 380px);
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .manuscript-art-container {
+        padding: 0.4rem;
+        margin: 0.5rem 0;
+    }
+    .manuscript-svg-frame {
+        height: 80px;
+    }
+    .manuscript-title {
+        font-size: 0.75rem;
+        margin-bottom: 0.2rem;
+    }
+}
+
+/* ── PROJECTOR CONTEXT (data-context="projector") ───────── */
+[data-context="projector"] .manuscript-art-container,
+html[data-context="projector"] .manuscript-art-container {
+    max-width: 640px;
+    margin: 1.5rem auto;
+    padding: 1.25rem;
+    border-width: 4px;
+}
+
+[data-context="projector"] .manuscript-svg-frame,
+html[data-context="projector"] .manuscript-svg-frame {
+    height: 320px;
+}
+
+[data-context="projector"] .story-container,
+html[data-context="projector"] .story-container {
+    max-height: 300px;
+    font-size: 1.15rem;
+}
