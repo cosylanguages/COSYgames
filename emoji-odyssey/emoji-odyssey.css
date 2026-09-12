@@ -1,0 +1,119 @@
+:root {
+  --game-accent: #EC4899;
+  --game-accent-dim: rgba(236, 72, 153, 0.15);
+  --game-accent-contrast: #FFFFFF;
+}
+
+/* Constellation Container */
+.eo-constellation-container {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: radial-gradient(circle at center, rgba(236, 72, 153, 0.08) 0%, rgba(255, 255, 255, 0.95) 100%);
+  border: 2px dashed rgba(236, 72, 153, 0.25);
+  border-radius: 16px;
+}
+
+/* Floating Emoji Constellation (Projector / Desktop Default) */
+.eo-emoji-floating {
+  display: inline-block;
+  font-size: 5rem;
+  line-height: 1;
+  margin: 1rem;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 10px rgba(236, 72, 153, 0.2));
+  animation: ambientDrift1 24s infinite ease-in-out alternate;
+  will-change: transform;
+}
+
+.eo-emoji-floating:nth-child(even) {
+  animation-name: ambientDrift2;
+  animation-duration: 28s;
+}
+
+@keyframes ambientDrift1 {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  25% { transform: translate(8px, -12px) rotate(2deg); }
+  50% { transform: translate(-6px, 10px) rotate(-2deg); }
+  75% { transform: translate(10px, 6px) rotate(1deg); }
+  100% { transform: translate(-8px, -8px) rotate(-1deg); }
+}
+
+@keyframes ambientDrift2 {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  25% { transform: translate(-10px, 8px) rotate(-2deg); }
+  50% { transform: translate(6px, -10px) rotate(2deg); }
+  75% { transform: translate(-8px, -6px) rotate(-1deg); }
+  100% { transform: translate(8px, 10px) rotate(1deg); }
+}
+
+/* Disable Drift on Phone Context */
+[data-context="phone"] .eo-emoji-floating {
+  animation: none !important;
+  transform: none !important;
+  font-size: 3.5rem;
+  margin: 0.5rem;
+}
+
+/* Disable Drift under prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .eo-emoji-floating {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Speech Bubble Unfurl Effect */
+.speech-bubble-unfurl {
+  position: relative;
+  display: inline-block;
+  background: var(--game-accent);
+  color: var(--game-accent-contrast);
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.75rem 0;
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.3);
+}
+
+.speech-bubble-unfurl::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 24px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--game-accent);
+}
+
+/* Collected Tray in Corner */
+.collected-tray {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(236, 72, 153, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  border-radius: 9999px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--game-accent);
+}
+
+.collected-pair-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.6rem;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
