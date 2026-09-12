@@ -1131,6 +1131,17 @@
       "definition": "Basic A1 English preposition: 'beside'."
     },
     {
+      "word": "best",
+      "word_id": "en_adjective_best",
+      "pos": "adjective",
+      "topic": "descriptive_adjectives",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English adjective: 'best'."
+    },
+    {
       "word": "between",
       "word_id": "en_preposition_between",
       "pos": "preposition",
@@ -1878,6 +1889,17 @@
         "practice"
       ],
       "definition": "Basic A1 English noun: 'cake'."
+    },
+    {
+      "word": "calendar",
+      "word_id": "en_noun_calendar",
+      "pos": "noun",
+      "topic": "time_calendar",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'calendar'."
     },
     {
       "word": "call",
@@ -4002,6 +4024,17 @@
       "definition": "Basic A1 English noun: 'evening'."
     },
     {
+      "word": "ever",
+      "word_id": "en_adverb_ever",
+      "pos": "adverb",
+      "topic": "time_calendar",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English adverb: 'ever'."
+    },
+    {
       "word": "everybody",
       "word_id": "en_pronoun_everybody",
       "pos": "pronoun",
@@ -4448,6 +4481,17 @@
         "blog"
       ],
       "definition": "Basic A1 English verb: 'finish'."
+    },
+    {
+      "word": "fire",
+      "word_id": "en_noun_fire",
+      "pos": "noun",
+      "topic": "weather_environment",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'fire'."
     },
     {
       "word": "firefighter",
@@ -5003,6 +5047,17 @@
       "definition": "Basic A1 English adjective: 'funny'."
     },
     {
+      "word": "furniture",
+      "word_id": "en_noun_furniture",
+      "pos": "noun",
+      "topic": "house_furniture",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'furniture'."
+    },
+    {
       "word": "future",
       "word_id": "en_noun_future",
       "pos": "noun",
@@ -5544,6 +5599,17 @@
         "general_course_a"
       ],
       "definition": "Basic A1 English verb: 'guess'."
+    },
+    {
+      "word": "gym",
+      "word_id": "en_noun_gym",
+      "pos": "noun",
+      "topic": "sports_hobbies",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'gym'."
     },
     {
       "word": "had",
@@ -9446,6 +9512,17 @@
       "definition": "Basic A1 English noun: 'person'."
     },
     {
+      "word": "pet",
+      "word_id": "en_noun_pet",
+      "pos": "noun",
+      "topic": "animals_nature",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'pet'."
+    },
+    {
       "word": "phone",
       "word_id": "en_noun_phone",
       "pos": "noun",
@@ -9575,6 +9652,17 @@
       "definition": "Basic A1 English noun: 'pizza'."
     },
     {
+      "word": "place",
+      "word_id": "en_noun_place",
+      "pos": "noun",
+      "topic": "places_transport",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'place'."
+    },
+    {
       "word": "plan",
       "word_id": "en_verb_plan",
       "pos": "verb",
@@ -9677,6 +9765,17 @@
         "general_course_a"
       ],
       "definition": "Basic A1 English noun: 'plus'."
+    },
+    {
+      "word": "pocket",
+      "word_id": "en_noun_pocket",
+      "pos": "noun",
+      "topic": "clothes_accessories",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'pocket'."
     },
     {
       "word": "point",
@@ -11486,6 +11585,17 @@
       "definition": "Basic A1 English adjective: 'single'."
     },
     {
+      "word": "sink",
+      "word_id": "en_noun_sink",
+      "pos": "noun",
+      "topic": "house_furniture",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'sink'."
+    },
+    {
       "word": "sister",
       "word_id": "en_noun_sister",
       "pos": "noun",
@@ -12324,6 +12434,17 @@
         "blog"
       ],
       "definition": "Basic A1 English noun: 'storm'."
+    },
+    {
+      "word": "story",
+      "word_id": "en_noun_story",
+      "pos": "noun",
+      "topic": "school_education",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'story'."
     },
     {
       "word": "stove",
@@ -14279,6 +14400,17 @@
         "blog"
       ],
       "definition": "Basic A1 English noun: 'water'."
+    },
+    {
+      "word": "way",
+      "word_id": "en_noun_way",
+      "pos": "noun",
+      "topic": "directions_location",
+      "sources": [
+        "curriculum",
+        "practice"
+      ],
+      "definition": "Basic A1 English noun: 'way'."
     },
     {
       "word": "we",
