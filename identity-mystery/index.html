@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Identity Mystery - COSYgames Language Learning</title>
-    <meta name="description" content="A person or profession is described. Ask yes/no questions to uncover who it is.">
-    <meta name="keywords" content="identity mystery, who am i, 20 questions, profession guessing, descriptive game">
+    <meta name="description" content="A person or profession is described. Ask yes/no questions or add descriptive clues to uncover who it is on the detective corkboard.">
+    <meta name="keywords" content="identity mystery, who am i, 20 questions, profession guessing, descriptive game, detective corkboard">
     <meta property="og:title" content="Identity Mystery - COSYgames">
-    <meta property="og:description" content="A person or profession is described. Ask yes/no questions to uncover who it is.">
+    <meta property="og:description" content="A person or profession is described. Ask yes/no questions to uncover who it is with a progressive detective reveal.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
 
@@ -17,10 +17,13 @@
 
     <link rel="stylesheet" href="../shared/css/cosy-tokens.css">
     <link rel="stylesheet" href="../shared/css/tokens.css">
+    <link rel="stylesheet" href="../shared/css/motion.css">
     <link rel="stylesheet" href="../shared/css/games.css">
     <link rel="stylesheet" href="../shared/css/cosy-icons.css">
     <link rel="stylesheet" href="../shared/css/nav.css">
     <link rel="stylesheet" href="../shared/styles/game-styles.css">
+    <link rel="stylesheet" href="../_engine/components.css">
+    <link rel="stylesheet" href="identity-mystery.css">
 </head>
 <body class="game-standalone cosy-game-theme">
     <!-- Top Navigation Header -->
@@ -53,9 +56,9 @@
 
         <!-- Game Description & Migration Notice -->
         <div class="game-header-info" style="padding: 1.25rem 1.5rem; background: var(--cg-color-surface); border-bottom: 1px solid rgba(0,0,0,0.06);">
-            <p class="game-description" style="margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--cg-color-text);">A person or profession is described. Ask yes/no questions to uncover who it is.</p>
+            <p class="game-description" style="margin: 0 0 0.5rem 0; font-size: 1.05rem; color: var(--cg-color-text);">A person or profession is described. Pin clues onto the detective corkboard as the silhouette gradually unmasks!</p>
             <div class="migration-notice" style="display: inline-block; padding: 0.35rem 0.75rem; background: #FEF3C7; color: #92400E; border-radius: 6px; font-size: 0.85rem; font-weight: 600;">
-                ℹ️ Game coming soon - migrating from COSYlanguages
+                🕵️ Detective Corkboard Mode Active
             </div>
         </div>
 
@@ -102,6 +105,7 @@
     <!-- Scripts -->
     <script src="../shared/utils/game-utils.js"></script>
     <script src="../shared/js/nav.js"></script>
+    <script src="../_engine/view_context.js"></script>
     <script src="../_engine/game_session.js"></script>
     <script src="../_engine/scores.js"></script>
     <script src="../_engine/loader.js"></script>
