@@ -103,20 +103,38 @@
             if (typeof document !== 'undefined') {
                 if (lang && (!window.gameData || !window.gameData[lang])) {
                     promises.push(new Promise((resolve) => {
-                        const script = document.createElement('script');
-                        script.src = `../data/${lang}/game_data.js`;
-                        script.onload = () => resolve();
-                        script.onerror = () => resolve();
-                        document.head.appendChild(script);
+                        const tryLoad = (paths) => {
+                            if (paths.length === 0) { resolve(); return; }
+                            const src = paths.shift();
+                            const script = document.createElement('script');
+                            script.src = src;
+                            script.onload = () => resolve();
+                            script.onerror = () => tryLoad(paths);
+                            document.head.appendChild(script);
+                        };
+                        tryLoad([
+                            `../data/${lang}/game_data.js`,
+                            `../../data/${lang}/game_data.js`,
+                            `./data/${lang}/game_data.js`
+                        ]);
                     }));
                 }
                 if (!window.gameData || !window.gameData['universal']) {
                     promises.push(new Promise((resolve) => {
-                        const script = document.createElement('script');
-                        script.src = '../data/universal.js';
-                        script.onload = () => resolve();
-                        script.onerror = () => resolve();
-                        document.head.appendChild(script);
+                        const tryLoad = (paths) => {
+                            if (paths.length === 0) { resolve(); return; }
+                            const src = paths.shift();
+                            const script = document.createElement('script');
+                            script.src = src;
+                            script.onload = () => resolve();
+                            script.onerror = () => tryLoad(paths);
+                            document.head.appendChild(script);
+                        };
+                        tryLoad([
+                            '../data/universal.js',
+                            '../../data/universal.js',
+                            './data/universal.js'
+                        ]);
                     }));
                 }
             }

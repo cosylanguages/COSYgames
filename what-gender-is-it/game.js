@@ -64,8 +64,40 @@
             const body = document.getElementById('go-body');
             if (body) body.innerHTML = '<div style="text-align:center;padding:4rem;">Loading words & histories...</div>';
 
-            // Wait a tiny moment to simulate asset loading
-            await new Promise(resolve => setTimeout(resolve, 300));
+            const levelFileMap = {
+                'starter': 'a1.js',
+                'a1': 'a1.js',
+                'elementary': 'a2.js',
+                'a2': 'a2.js',
+                'intermediate': 'b1.js',
+                'b1': 'b1.js',
+                'upper_intermediate': 'b2.js',
+                'b2': 'b2.js',
+                'advanced': 'c1.js',
+                'c1': 'c1.js',
+                'proficiency': 'c2.js',
+                'c2': 'c2.js'
+            };
+            const fileName = levelFileMap[levelVal] || 'a1.js';
+
+            if (!window.genderGameData || !window.genderGameData[levelVal]) {
+                await new Promise((resolve) => {
+                    const tryLoad = (paths) => {
+                        if (paths.length === 0) { resolve(); return; }
+                        const src = paths.shift();
+                        const script = document.createElement('script');
+                        script.src = src;
+                        script.onload = () => resolve();
+                        script.onerror = () => tryLoad(paths);
+                        document.head.appendChild(script);
+                    };
+                    tryLoad([
+                        `../data/gender/${fileName}`,
+                        `../../data/gender/${fileName}`,
+                        `./data/gender/${fileName}`
+                    ]);
+                });
+            }
 
             // Retrieve data for selected level
             const allLevelQuestions = (window.genderGameData && window.genderGameData[levelVal]) || [];
