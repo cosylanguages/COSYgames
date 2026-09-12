@@ -1,6 +1,6 @@
 /**
  * games/emoji-odyssey/game.js
- * Standalone logic for Emoji Odyssey.
+ * Standalone logic for Emoji Odyssey with Floating Constellation Identity.
  */
 (function() {
     const GAME_ID = 'emoji';
@@ -8,6 +8,8 @@
     const GAME_META = 'Vocabulary · Solo or group';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+
+    let collectedPairs = [];
 
     function shuffle(arr) { return [...arr].sort(() => Math.random() - .5); }
 
@@ -50,6 +52,7 @@
 
             await COSYLoader.loadLevelData(lang, level);
             COSYGame.init(GAME_ID, lang, level);
+            collectedPairs = [];
 
             const vocab = (window.vocabularyData && window.vocabularyData[lang]) || [];
 
@@ -72,28 +75,64 @@
                             <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
                         </div>
                         <div class="game-card" style="text-align:center">
-                            <div class="game-label">🧩 What is this?</div>
-                            <div class="game-prompt" style="font-size:5rem">${current.emoji}</div>
+                            <div class="game-label">🧩 Floating Constellation Match</div>
+
+                            <!-- Constellation Area -->
+                            <div class="eo-constellation-container">
+                                <div class="eo-emoji-floating" id="current-floating-emoji">${current.emoji}</div>
+                            </div>
+
+                            <div id="speech-bubble-mount"></div>
+
                             <div class="word-options" style="margin-top:1.5rem">
                                 ${options.map(o => `<button class="word-opt" data-word="${gameUtils.escapeAttr(o)}" data-correct="${gameUtils.escapeAttr(current.word)}">${o}</button>`).join('')}
                             </div>
-                            <div class="game-controls" style="margin-top:2rem">
+
+                            <!-- Collected Tray in Corner -->
+                            <div class="collected-tray" id="collected-tray">
+                                <span>Collected:</span>
+                                <div id="collected-chips" style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+                                    ${collectedPairs.length === 0 ? '<span style="opacity:0.6; font-weight:400;">(empty)</span>' : collectedPairs.map(p => `<span class="collected-pair-chip">${p.emoji} ${p.word}</span>`).join('')}
+                                </div>
+                            </div>
+
+                            <div class="game-controls" style="margin-top:1.5rem">
                                 <button class="btn-g-danger" onclick="COSY_GAME.reset()">Stop</button>
                             </div>
                         </div>`;
 
                     body.querySelectorAll('.word-opt').forEach(btn => {
                       btn.addEventListener('click', () => {
-                        COSY_GAME.eoCheck(btn, btn.dataset.word, btn.dataset.correct);
+                        COSY_GAME.eoCheck(btn, btn.dataset.word, btn.dataset.correct, current);
                       });
                     });
                 };
 
-                window.COSY_GAME.eoCheck = (btn, val, correct) => {
+                window.COSY_GAME.eoCheck = (btn, val, correct, item) => {
                     if (val === correct) {
                         btn.classList.add('correct');
                         COSYGame.addScore(10);
-                        setTimeout(() => { current = drawBag.next(); renderGuess(); }, 1000);
+
+                        // Speech Bubble Unfurl Animation around paired phrase
+                        const bubbleMount = document.getElementById('speech-bubble-mount');
+                        if (bubbleMount) {
+                            const bubble = document.createElement('div');
+                            bubble.className = 'speech-bubble-unfurl motion-unfurl';
+                            bubble.textContent = `✨ "${correct}"`;
+                            bubbleMount.appendChild(bubble);
+                        }
+
+                        // Collect pair into tray with motion-slide-chain
+                        collectedPairs.push({ emoji: item.emoji, word: correct });
+                        const chipsContainer = document.getElementById('collected-chips');
+                        if (chipsContainer) {
+                            const chip = document.createElement('span');
+                            chip.className = 'collected-pair-chip motion-slide-chain';
+                            chip.innerHTML = `${item.emoji} ${correct}`;
+                            chipsContainer.appendChild(chip);
+                        }
+
+                        setTimeout(() => { current = drawBag.next(); renderGuess(); }, 1200);
                     } else {
                         btn.classList.add('wrong');
                     }
@@ -106,7 +145,11 @@
                     body.innerHTML = `
                         <div class="game-card" style="text-align:center">
                             <div class="game-label">📖 Tell a story using:</div>
-                            <div class="game-prompt" style="font-size:3.5rem; letter-spacing:10px;">${picked.join('')}</div>
+
+                            <div class="eo-constellation-container">
+                                ${picked.map(e => `<div class="eo-emoji-floating">${e}</div>`).join('')}
+                            </div>
+
                             <div class="game-sub" style="margin-top:1rem">Build the next part of the story with these symbols!</div>
                             <div class="game-controls" style="justify-content:center; margin-top:2rem">
                                 <button class="btn-g-primary" onclick="COSY_GAME.eoNextSet()">Next player →</button>
