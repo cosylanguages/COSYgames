@@ -1,0 +1,104 @@
+:root {
+  --game-accent: #D97706;
+  --game-accent-dim: rgba(217, 119, 6, 0.15);
+  --game-accent-contrast: #FFFFFF;
+}
+
+/* Red-Pen Manuscript Text Container */
+.manuscript-container {
+  background: #FFFDF9;
+  border: 2px dashed rgba(217, 119, 6, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.25rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.manuscript-sentence {
+  font-size: 1.25rem;
+  line-height: 2;
+  color: #1F2937;
+  transition: opacity 0.4s ease;
+  user-select: none;
+}
+
+.manuscript-sentence.spotlight .manuscript-word:not(.word-correct) {
+  opacity: 0.4;
+  filter: grayscale(40%);
+}
+
+.manuscript-word {
+  position: relative;
+  display: inline-block;
+  padding: 0.15rem 0.35rem;
+  margin: 0 0.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.manuscript-word:hover {
+  background-color: rgba(217, 119, 6, 0.1);
+}
+
+/* Incorrect Tap: Shake + Muted Gray Flash */
+.manuscript-word.word-incorrect {
+  animation: manuscriptShake 0.4s ease-in-out;
+  background-color: #E5E7EB !important;
+  color: #6B7280;
+}
+
+@keyframes manuscriptShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+/* Hand-Drawn SVG Red-Pen Circle */
+.red-pen-circle-svg {
+  position: absolute;
+  top: -6px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 12px);
+  pointer-events: none;
+  overflow: visible;
+  z-index: 5;
+}
+
+.red-pen-path {
+  stroke: var(--game-accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawRedPenCircle 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes drawRedPenCircle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Confirmation Label (Online mode) */
+.correction-label {
+  display: block;
+  font-size: 0.75rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  color: var(--game-accent);
+  margin-top: 0.2rem;
+  white-space: nowrap;
+  animation: fadeInLabel 0.3s ease-in forwards;
+}
+
+@keyframes fadeInLabel {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
