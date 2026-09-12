@@ -1,5 +1,5 @@
 /**
- * games/cosy_crossword/game.js
+ * games/cosy-crossword/game.js
  * Standalone logic for Cosy Crossword.
  */
 (function() {

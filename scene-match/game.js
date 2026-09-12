@@ -1,5 +1,5 @@
 /**
- * games/scene_match/game.js
+ * games/scene-match/game.js
  * Reusable engine logic for Scene Match activity across multiple rooms/scenes & CEFR levels.
  */
 (function() {

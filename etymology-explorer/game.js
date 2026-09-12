@@ -1,5 +1,5 @@
 /**
- * games/etymology_explorer/game.js
+ * games/etymology-explorer/game.js
  * Game logic for Etymology Explorer.
  */
 (function() {

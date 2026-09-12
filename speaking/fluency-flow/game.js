@@ -1,5 +1,5 @@
 /**
- * games/fluency_flow/game.js
+ * games/fluency-flow/game.js
  * Standalone logic for Fluency Flow.
  */
 (function() {

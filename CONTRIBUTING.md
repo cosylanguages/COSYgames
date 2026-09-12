@@ -15,7 +15,7 @@ COSYgames/
 ├── _engine/                    # Shared game engine scripts & utilities (session, scores, loader)
 ├── shared/                     # Standalone shared CSS tokens, styles, and core UI scripts
 ├── data/                       # Scene data, game card decks & vocabulary manifests
-└── <game_folder>/              # Per-game directories (e.g., scene_match/, battle_of_wits/)
+└── <game_folder>/              # Per-game directories (e.g., scene-match/, battle-of-wits/)
     ├── index.html              # Standalone game page (derived from _template.html)
     └── game.js                 # Specific game logic and event handlers
 ```
@@ -26,7 +26,7 @@ COSYgames/
 
 ### 1. Allowed & Welcomed Contributions
 You are welcome to submit Pull Requests for:
-- **Game Enhancements & Bug Fixes**: Improving gameplay logic, UI, or fixing bugs in existing per-game folders (e.g., `scene_match/`, `fluency_flow/`, `cosy_crossword/`).
+- **Game Enhancements & Bug Fixes**: Improving gameplay logic, UI, or fixing bugs in existing per-game folders (e.g., `scene-match/`, `fluency-flow/`, `cosy-crossword/`).
 - **Data & Decks**: Expanding or refining vocabulary manifests, scene definitions, and card decks in `data/`.
 - **Shared Styles & Utilities**: Enhancing responsive CSS, accessibility, or shared components in `shared/`.
 - **Engine Improvements**: Non-breaking optimizations or bug fixes in `_engine/`.

@@ -1,5 +1,5 @@
 /**
- * games/emoji_odyssey/game.js
+ * games/emoji-odyssey/game.js
  * Standalone logic for Emoji Odyssey.
  */
 (function() {

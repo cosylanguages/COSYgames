@@ -1,5 +1,5 @@
 /**
- * games/what_gender_is_it/game.js
+ * games/what-gender-is-it/game.js
  * Game logic for "What Gender Is It?".
  */
 (function() {

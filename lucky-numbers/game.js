@@ -1,5 +1,5 @@
 /**
- * games/lucky_numbers/game.js
+ * games/lucky-numbers/game.js
  * Standalone logic for Lucky Numbers (Bingo).
  */
 (function() {

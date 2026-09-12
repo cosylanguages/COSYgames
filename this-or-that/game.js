@@ -1,5 +1,5 @@
 /**
- * games/this_or_that/game.js
+ * games/this-or-that/game.js
  * Game logic for "This or That? (Tinder for Things & Concepts)"
  * Supports CEFR Levels (A0-A1, A2, B1, B2) & Rich Tinder Decks:
  * - Physical Appearance

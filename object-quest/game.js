@@ -1,5 +1,5 @@
 /**
- * games/object_quest/game.js
+ * games/object-quest/game.js
  * Standalone logic for Object Quest.
  */
 (function() {

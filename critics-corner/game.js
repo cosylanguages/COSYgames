@@ -1,5 +1,5 @@
 /**
- * games/critics_corner/game.js
+ * games/critics-corner/game.js
  * Standalone logic for Critic's Corner.
  */
 (function() {
