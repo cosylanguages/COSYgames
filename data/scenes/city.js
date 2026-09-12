@@ -200,43 +200,44 @@
                 </linearGradient>
             </defs>
 
-            <!-- Sky & Road -->
-            <rect x="0" y="0" width="800" height="300" fill="url(#ct-sky)"/>
-            <rect x="0" y="300" width="800" height="60" fill="#94a3b8"/>
-            <line x1="0" y1="330" x2="800" y2="330" stroke="#fef08a" stroke-width="4" stroke-dasharray="20 15"/>
-            <rect x="0" y="360" width="800" height="140" fill="#475569"/>
+            <!-- Layer 1: Sky & Distance Road -->
+            <g class="sm-layer sm-layer-bg">
+                <rect x="0" y="0" width="800" height="300" fill="url(#ct-sky)"/>
+                <rect x="0" y="300" width="800" height="60" fill="#94a3b8"/>
+                <line x1="0" y1="330" x2="800" y2="330" stroke="#fef08a" stroke-width="4" stroke-dasharray="20 15"/>
+            </g>
 
-            <!-- Buildings -->
-            <!-- School -->
-            <rect x="30" y="140" width="140" height="160" fill="#f97316" rx="4"/>
-            <polygon points="30,140 100,90 170,140" fill="#ea580c"/>
-            <text x="100" y="170" font-weight="700" font-size="14" fill="#ffffff" text-anchor="middle">SCHOOL</text>
+            <!-- Layer 2: Midground Buildings -->
+            <g class="sm-layer sm-layer-mid">
+                <rect x="30" y="140" width="140" height="160" fill="#f97316" rx="4"/>
+                <polygon points="30,140 100,90 170,140" fill="#ea580c"/>
+                <text x="100" y="170" font-weight="700" font-size="14" fill="#ffffff" text-anchor="middle">SCHOOL</text>
 
-            <!-- Hospital -->
-            <rect x="190" y="100" width="150" height="200" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="4"/>
-            <rect x="252" y="115" width="26" height="8" fill="#ef4444"/>
-            <rect x="261" y="106" width="8" height="26" fill="#ef4444"/>
+                <rect x="190" y="100" width="150" height="200" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="4"/>
+                <rect x="252" y="115" width="26" height="8" fill="#ef4444"/>
+                <rect x="261" y="106" width="8" height="26" fill="#ef4444"/>
 
-            <!-- Supermarket -->
-            <rect x="360" y="150" width="140" height="150" fill="#22c55e" rx="4"/>
-            <text x="430" y="180" font-weight="700" font-size="13" fill="#ffffff" text-anchor="middle">MARKET</text>
+                <rect x="360" y="150" width="140" height="150" fill="#22c55e" rx="4"/>
+                <text x="430" y="180" font-weight="700" font-size="13" fill="#ffffff" text-anchor="middle">MARKET</text>
 
-            <!-- Bank -->
-            <rect x="520" y="140" width="120" height="160" fill="#0284c7" rx="4"/>
-            <text x="580" y="170" font-weight="700" font-size="14" fill="#ffffff" text-anchor="middle">BANK</text>
+                <rect x="520" y="140" width="120" height="160" fill="#0284c7" rx="4"/>
+                <text x="580" y="170" font-weight="700" font-size="14" fill="#ffffff" text-anchor="middle">BANK</text>
 
-            <!-- Restaurant -->
-            <rect x="660" y="160" width="120" height="140" fill="#e11d48" rx="4"/>
-            <text x="720" y="190" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle">CAFE</text>
+                <rect x="660" y="160" width="120" height="140" fill="#e11d48" rx="4"/>
+                <text x="720" y="190" font-weight="700" font-size="12" fill="#ffffff" text-anchor="middle">CAFE</text>
+            </g>
 
-            <!-- Park Area -->
-            <rect x="280" y="370" width="200" height="80" fill="#15803d" rx="10"/>
-            <circle cx="320" cy="380" r="20" fill="#22c55e"/>
-            <circle cx="440" cy="380" r="20" fill="#22c55e"/>
+            <!-- Layer 3: Foreground Sidewalk, Park & Library -->
+            <g class="sm-layer sm-layer-fg">
+                <rect x="0" y="360" width="800" height="140" fill="#475569"/>
 
-            <!-- Library -->
-            <rect x="580" y="370" width="140" height="80" fill="#78350f" rx="4"/>
-            <text x="650" y="410" font-weight="700" font-size="14" fill="#fef08a" text-anchor="middle">LIBRARY</text>
+                <rect x="280" y="370" width="200" height="80" fill="#15803d" rx="10"/>
+                <circle cx="320" cy="380" r="20" fill="#22c55e"/>
+                <circle cx="440" cy="380" r="20" fill="#22c55e"/>
+
+                <rect x="580" y="370" width="140" height="80" fill="#78350f" rx="4"/>
+                <text x="650" y="410" font-weight="700" font-size="14" fill="#fef08a" text-anchor="middle">LIBRARY</text>
+            </g>
         `
     };
 })();

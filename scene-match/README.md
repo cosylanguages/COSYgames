@@ -26,6 +26,25 @@ An internal build-time web tool for content creators and developers to visually 
 
 ## 📐 Scene Data Schema (`data/scenes/`)
 
+### Depth-Layer & Parallax Scene Rendering Pattern
+
+Scenes support spatial diorama depth rendering by wrapping SVG background groups into 2-3 depth layers:
+
+```html
+<g class="sm-layer sm-layer-bg">
+  <!-- Layer 1: Sky, Walls, Floors, Far Windows -->
+</g>
+<g class="sm-layer sm-layer-mid">
+  <!-- Layer 2: Wall Decor, Shelves, Large Background Furniture -->
+</g>
+<g class="sm-layer sm-layer-fg">
+  <!-- Layer 3: Foreground Furniture, Tables, Seating, Appliances -->
+</g>
+```
+
+- **Desktop Interaction**: Mouse movements over `.sm-stage` dynamically apply smooth CSS `transform: translate(x, y)` offsets to `.sm-layer-bg`, `.sm-layer-mid`, and `.sm-layer-fg` at varying speeds (-8px, +10px, +20px).
+- **Mobile/Phone Context**: On touch devices or under `data-context="phone"`, keyframe animations (`@keyframes sm-auto-drift-bg/mid/fg`) apply continuous subtle floating motion across layers.
+
 Scenes are IIFE JavaScript files attached to `window.COSY_SCENE_DATA`:
 
 ```javascript

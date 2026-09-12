@@ -1,14 +1,26 @@
 /**
  * games/action-hero/game.js
- * Standalone logic for Action Hero.
- * Enhanced with Phase 3 (Sensory FX & Confetti) and Phase 4 (Mobile Tilt Gestures).
+ * Standalone logic for Action Hero with Comic-Book Identity, legible-from-a-distance
+ * feedback, starburst POP animation, screen reader aria-live accessibility,
+ * phone-safe swipe/tap layout, and projector ScoreDial pinning.
  */
 (function() {
+    'use strict';
+
     const GAME_ID = 'action';
     const GAME_TITLE = 'Action Hero 🎭';
-    const GAME_META = 'Mystery · Group';
+    const GAME_META = 'Mystery · Comic Charades';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+
+    // Comic burst pop words per language
+    const POP_WORDS = {
+        en: ['POW!', 'BAM!', 'BOOM!', 'ZAP!', 'KA-POW!'],
+        fr: ['BAM!', 'PAN!', 'BOUM!', 'PAF!'],
+        it: ['BAM!', 'SABAM!', 'BOOM!', 'PATATRAC!'],
+        ru: ['БАМ!', 'БУМ!', 'БАБАХ!'],
+        el: ['ΜΠΑΜ!', 'ΜΠΟΥΜ!', 'ΠΑΦ!']
+    };
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
@@ -17,13 +29,13 @@
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Action Hero 🎭</h2>
-              <p>Hold your phone to your forehead (screen facing others). They describe the word: you guess. Each round is 60 seconds. Pass or guess as many words as you can.</p>
+              <p>Comic-book charades challenge! Hold your phone to your forehead. Others describe the verb: you guess. 60 seconds round duration. Swipe up or tap "Got it!" to score!</p>
 
               <!-- Hands-free sensory tip -->
               <div style="background: var(--cream-dark); border: 1.5px dashed var(--border); border-radius: 12px; padding: 1rem; margin-bottom: 1.5rem; text-align: left; font-size: 0.88rem; line-height: 1.5;">
-                📱 <strong>Hands-Free Tilt Mode (Phase 4):</strong><br>
-                Once active, you can control the game simply by tilting your phone!
+                📱 <strong>Hands-Free Tilt & Touch Controls:</strong>
                 <ul>
+                  <li>• <strong>Swipe Up / Got it:</strong> ✓ POW! Got it!</li>
                   <li>• <strong>Tilt Down (towards floor):</strong> ✓ Got it!</li>
                   <li>• <strong>Tilt Up (towards ceiling):</strong> Skip →</li>
                 </ul>
@@ -53,6 +65,9 @@
     }
 
     window.COSY_GAME = {
+        scoreDialInstance: null,
+        touchStartY: 0,
+
         async start() {
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
             const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
@@ -74,39 +89,36 @@
 
             if (pool.length < 5) {
                 const shortLvl = level === 'starter' ? 'A1' : (level === 'elementary' ? 'A2' : (level === 'intermediate' ? 'B1' : 'B2'));
-                pool = (data.action && data.action[shortLvl]) ? data.action[shortLvl] : (data.action ? (data.action['B2'] || data.action['A2']) : ['...']);
+                pool = (data.action && data.action[shortLvl]) ? data.action[shortLvl] : (data.action ? (data.action['B2'] || data.action['A2']) : ['JUMP', 'RUN', 'DANCE', 'SING', 'SWIM']);
             }
 
             const drawBag = gameUtils.createDrawBag(pool);
             let correct = 0, skipped = 0;
             const DUR = 60;
 
-            // Define physical tilt gesture handler (Phase 4)
+            // Physical tilt gesture handler
             let lastTiltTime = 0;
             const handleTilt = (event) => {
                 const now = Date.now();
-                if (now - lastTiltTime < 1500) return; // 1.5s debounce to allow returning upright
+                if (now - lastTiltTime < 1500) return;
 
-                const beta = event.beta; // Tilt angle [-180, 180]
+                const beta = event.beta;
                 if (beta === null) return;
 
                 if (beta < 55) {
                     lastTiltTime = now;
-                    COSY_GAME.ahResult(true); // Correct!
+                    COSY_GAME.ahResult(true);
                 } else if (beta > 125) {
                     lastTiltTime = now;
-                    COSY_GAME.ahResult(false); // Skip!
+                    COSY_GAME.ahResult(false);
                 }
             };
 
-            // Request mobile browser permission and bind sensor listener
             const requestOrientation = () => {
                 if (typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
                     DeviceOrientationEvent.requestPermission()
                         .then(state => {
-                            if (state === 'granted') {
-                                window.addEventListener('deviceorientation', handleTilt);
-                            }
+                            if (state === 'granted') window.addEventListener('deviceorientation', handleTilt);
                         })
                         .catch(err => console.warn("Orientation permission denied:", err));
                 } else {
@@ -123,33 +135,83 @@
               const currentWord = drawBag.next();
               if (!currentWord) { showActionEnd(); return; }
               const body = document.getElementById('go-body');
+
+              const currentMode = (window.ViewContext && typeof window.ViewContext.getMode === 'function')
+                  ? window.ViewContext.getMode()
+                  : (document.documentElement.dataset.context || 'phone');
+
               body.innerHTML = `
-                <div class="score-bar">
-                  <div class="sb-item"><div class="sb-val">${correct}</div><div class="sb-lbl">Correct</div></div>
-                  <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
-                </div>
-                <div class="game-card" style="text-align:center">
-                  <div class="game-label">🎭 Hold to forehead · ${DUR}s</div>
-                  <div class="game-prompt" style="font-size:2.5rem;letter-spacing:.05em">${currentWord}</div>
-                  <div class="game-sub">Others describe this word: you guess!</div>
-                  <div id="timer-container">${gameUtils.renderTimerRing(DUR, DUR)}</div>
-                  <div class="game-controls" style="justify-content:center;gap:1rem">
-                    <button class="btn-g-primary" style="background:var(--green)" onclick="COSY_GAME.ahResult(true)">✓ Got it!</button>
-                    <button class="btn-g-secondary" onclick="COSY_GAME.ahResult(false)">Skip →</button>
+                <div class="action-container">
+                  <!-- Accessible ARIA-Live Announcer -->
+                  <div id="action-aria-live" class="sr-only-announcer" aria-live="assertive" aria-atomic="true"></div>
+
+                  <!-- Projector ScoreDial Pin -->
+                  <div id="projector-scoredial-container" class="projector-scoredial-pin"></div>
+
+                  <div class="action-game-card" id="action-card-el">
+                    <div class="action-card-header">
+                      <div class="action-game-label">💥 Action Hero · ${DUR}s</div>
+                      <div class="sb-item"><span style="font-weight:800;color:var(--game-accent);">Round ${COSYGame.round}/${COSYGame.maxRounds}</span></div>
+                    </div>
+
+                    <div class="action-prompt-text" id="action-prompt-word">${currentWord}</div>
+                    <div class="action-sub-text">Others describe this word: you guess!</div>
+
+                    <div id="timer-container">${gameUtils.renderTimerRing(DUR, DUR)}</div>
+
+                    <div class="action-controls">
+                      <button class="btn-comic-gotit" type="button" onclick="COSY_GAME.ahResult(true)">✓ POW! Got it!</button>
+                      <button class="btn-comic-skip" type="button" onclick="COSY_GAME.ahResult(false)">Skip →</button>
+                    </div>
+
+                    <div class="action-swipe-hint">☝️ Swipe up anywhere on card to submit!</div>
                   </div>
-                </div>
-                <div style="text-align:center;font-size:.8rem;color:var(--ink-faint);margin-top:.5rem">✓ ${correct} correct · ↷ ${skipped} skipped</div>`;
-            }
+
+                  <div style="text-align:center;font-size:0.9rem;font-weight:700;color:#64748b;margin-top:0.5rem">
+                    ✓ ${correct} correct · ↷ ${skipped} skipped
+                  </div>
+                </div>`;
+
+              // Instantiate ScoreDial under data-context="projector"
+              if (currentMode === 'projector' && window.ScoreDial) {
+                  const dialBox = document.getElementById('projector-scoredial-container');
+                  if (dialBox) {
+                      COSY_GAME.scoreDialInstance = new window.ScoreDial(dialBox, {
+                          score: correct * 5,
+                          label: 'PTS'
+                      });
+                  }
+              }
+
+              // Bind touch swipe-up listener on phone context
+              const cardEl = document.getElementById('action-card-el');
+              if (cardEl) {
+                  cardEl.addEventListener('touchstart', (e) => {
+                      if (e.touches && e.touches.length > 0) {
+                          COSY_GAME.touchStartY = e.touches[0].clientY;
+                      }
+                  }, { passive: true });
+
+                  cardEl.addEventListener('touchend', (e) => {
+                      if (e.changedTouches && e.changedTouches.length > 0) {
+                          const touchEndY = e.changedTouches[0].clientY;
+                          const deltaY = COSY_GAME.touchStartY - touchEndY;
+                          if (deltaY > 60) { // Swipe Up gesture!
+                              COSY_GAME.ahResult(true);
+                          }
+                      }
+                  }, { passive: true });
+              }
+            };
 
             const showActionEnd = () => {
               gameUtils.stopTimer();
-              window.removeEventListener('deviceorientation', handleTilt); // Clean up listener!
+              window.removeEventListener('deviceorientation', handleTilt);
 
               COSYGame.score = correct * 5;
               COSYScores.save(GAME_ID, lang, level, COSYGame.score);
               const best = COSYScores.best(GAME_ID, lang);
 
-              // Play ending fanfares/sound triggers (Phase 3)
               if (correct > 0) {
                 gameUtils.playGameSound('success');
                 gameUtils.createConfetti();
@@ -169,24 +231,63 @@
                   ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
                   <div class="re-actions">
                     <button class="btn-g-primary" onclick="COSY_GAME.start()">Play again ↺</button>
-                    <button class="btn-g-secondary" onclick="location.href='../index.html'">Back to Hub</button>
+                    <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
                   </div>
                 </div>`;
-            }
+            };
 
             window.COSY_GAME.ahResult = (got) => {
-              // Play click feedback sound on results (Phase 3)
               gameUtils.playGameSound(got ? 'success' : 'click');
-              if (got) correct++; else skipped++;
-              showWord();
+
+              if (got) {
+                correct++;
+                if (COSY_GAME.scoreDialInstance) {
+                    COSY_GAME.scoreDialInstance.setScore(correct * 5);
+                }
+
+                // Announce accessibility text
+                const announcer = document.getElementById('action-aria-live');
+                if (announcer) announcer.textContent = 'Correct!';
+
+                // Trigger Comic Starburst POP overlay (.motion-burst fading within 600ms)
+                COSY_GAME.triggerComicBurst(lang);
+              } else {
+                skipped++;
+              }
+
+              setTimeout(() => showWord(), got ? 550 : 0);
             };
 
             showWord();
             gameUtils.startTimer('timer-val', DUR, showActionEnd);
         },
 
+        triggerComicBurst(lang) {
+            const cardEl = document.getElementById('action-card-el');
+            if (!cardEl) return;
+
+            const popList = POP_WORDS[lang] || POP_WORDS.en;
+            const popText = popList[Math.floor(Math.random() * popList.length)];
+
+            const burstOverlay = document.createElement('div');
+            burstOverlay.className = 'comic-burst-overlay';
+            burstOverlay.innerHTML = `
+                <div class="comic-burst-shape motion-burst">
+                    <div class="comic-burst-text">${popText}</div>
+                </div>`;
+
+            cardEl.appendChild(burstOverlay);
+            setTimeout(() => {
+                if (burstOverlay.parentNode) burstOverlay.parentNode.removeChild(burstOverlay);
+            }, 580);
+        },
+
         reset: renderSetup
     };
 
-    document.addEventListener('DOMContentLoaded', renderSetup);
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', renderSetup);
+    } else {
+        renderSetup();
+    }
 })();

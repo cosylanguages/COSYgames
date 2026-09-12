@@ -1,0 +1,264 @@
+/* action-hero/action-hero.css */
+:root {
+  --game-accent: #FF4500;
+  --game-accent-dim: rgba(255, 69, 0, 0.15);
+  --game-accent-contrast: #ffffff;
+}
+
+[data-context="phone"] {
+  --game-accent: #FF4500;
+}
+
+[data-context="projector"] {
+  --game-accent: #DC2626;
+}
+
+/* Comic-book Container & Panel Layout */
+.action-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Comic Panel Border Card */
+.action-game-card {
+  background: #ffffff;
+  border: 3px solid #1e293b;
+  border-radius: 18px 8px 22px 10px; /* Irregular comic panel corners */
+  padding: 2rem 1.5rem;
+  box-shadow: 6px 6px 0px #1e293b;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.action-game-label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--game-accent);
+  letter-spacing: 0.05em;
+}
+
+.action-prompt-text {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 1.5rem 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.action-sub-text {
+  font-size: 1.05rem;
+  color: #475569;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Control Buttons */
+.action-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.btn-comic-gotit {
+  background: #16a34a;
+  color: #ffffff;
+  border: 3px solid #1e293b;
+  border-radius: 12px 6px 14px 8px;
+  padding: 0.85rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #1e293b;
+  transition: all 0.15s ease;
+}
+
+.btn-comic-gotit:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #1e293b;
+}
+
+.btn-comic-skip {
+  background: #f1f5f9;
+  color: #334155;
+  border: 3px solid #1e293b;
+  border-radius: 8px 14px 6px 12px;
+  padding: 0.85rem 1.75rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #1e293b;
+  transition: all 0.15s ease;
+}
+
+.btn-comic-skip:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #1e293b;
+}
+
+/* Comic Starburst Feedback Burst Overlay */
+.comic-burst-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comic-burst-shape {
+  width: 220px;
+  height: 220px;
+  background: #facc15;
+  border: 4px solid #1e293b;
+  clip-path: polygon(50% 0%, 65% 25%, 98% 15%, 80% 45%, 100% 70%, 70% 75%, 75% 100%, 50% 82%, 25% 100%, 30% 75%, 0% 70%, 20% 45%, 2% 15%, 35% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+  animation: burstFade 0.58s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.comic-burst-text {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #dc2626;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #1e293b;
+  text-shadow: 3px 3px 0px #facc15;
+  transform: rotate(-6deg);
+}
+
+@keyframes burstFade {
+  0% {
+    transform: scale(0.2) rotate(-15deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.15) rotate(4deg);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* Screen Reader Accessible Announcer */
+.sr-only-announcer {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Phone Layout Context (~90% Viewport Height) */
+[data-context="phone"] .action-container {
+  padding: 0.5rem;
+  height: calc(90vh - 20px);
+  min-height: 520px;
+  justify-content: center;
+}
+
+[data-context="phone"] .action-game-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  border-radius: 20px 10px 24px 12px;
+}
+
+[data-context="phone"] .action-prompt-text {
+  font-size: 2.75rem;
+  margin: auto 0;
+}
+
+[data-context="phone"] .action-controls {
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+[data-context="phone"] .btn-comic-gotit,
+[data-context="phone"] .btn-comic-skip {
+  width: 100%;
+  padding: 1.1rem;
+  font-size: 1.3rem;
+  border-radius: 12px;
+}
+
+.action-swipe-hint {
+  display: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+[data-context="phone"] .action-swipe-hint {
+  display: block;
+}
+
+/* Projector Layout Context (>=48px Verb Prompt + Pinned ScoreDial) */
+[data-context="projector"] .action-container {
+  max-width: 1400px;
+  padding: 1.5rem;
+}
+
+[data-context="projector"] .action-game-card {
+  padding: 3.5rem 2.5rem;
+  border-width: 5px;
+  box-shadow: 10px 10px 0px #1e293b;
+}
+
+[data-context="projector"] .action-prompt-text {
+  font-size: 4rem; /* >= 48px equivalent */
+  margin: 2.5rem 0;
+}
+
+.projector-scoredial-pin {
+  display: none;
+}
+
+[data-context="projector"] .projector-scoredial-pin {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+}

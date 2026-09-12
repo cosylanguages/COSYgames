@@ -1,0 +1,134 @@
+/* Reusable Motion Keyframe Utility Classes - Visual Genome */
+
+@keyframes motionFlip {
+  0% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(600px) rotateY(90deg);
+  }
+  100% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+}
+
+@keyframes motionSlideChain {
+  0% {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes motionBurst {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes motionReelSpin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(10%) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes motionUnfurl {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top center;
+  }
+}
+
+@keyframes motionPinDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(6px) scale(1.05);
+  }
+  80% {
+    transform: translateY(-2px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes motionSimpleFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.motion-flip {
+  animation: motionFlip var(--motion-duration-med, 300ms) cubic-bezier(0.4, 0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+.motion-slide-chain {
+  animation: motionSlideChain var(--motion-duration-med, 300ms) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.motion-burst {
+  animation: motionBurst var(--motion-duration-fast, 150ms) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.motion-reel-spin {
+  animation: motionReelSpin var(--motion-duration-slow, 500ms) cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.motion-unfurl {
+  animation: motionUnfurl var(--motion-duration-med, 300ms) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.motion-pin-drop {
+  animation: motionPinDrop var(--motion-duration-med, 300ms) cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .motion-flip,
+  .motion-slide-chain,
+  .motion-burst,
+  .motion-reel-spin,
+  .motion-unfurl,
+  .motion-pin-drop {
+    animation-name: motionSimpleFade !important;
+    animation-duration: var(--motion-duration-fast, 150ms) !important;
+    animation-timing-function: ease-in-out !important;
+    transform: none !important;
+  }
+}

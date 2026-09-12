@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" data-context="projector">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSYgames Visual Genome - Shared Engine Demo</title>
+
+  <!-- Shared CSS Tokens & Motion Utilities -->
+  <link rel="stylesheet" href="../shared/css/tokens.css">
+  <link rel="stylesheet" href="../shared/css/motion.css">
+  <link rel="stylesheet" href="components.css">
+
+  <style>
+    body {
+      font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+      background-color: var(--background-color, #fdfcf8);
+      color: var(--text-color, #2a2a2a);
+      margin: 0;
+      padding: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .demo-header {
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .demo-header h1 {
+      font-family: var(--font-serif, serif);
+      color: var(--game-accent, #416b49);
+      margin-bottom: 0.5rem;
+      font-size: 2.25rem;
+    }
+
+    .demo-header p {
+      color: var(--muted, #5c5957);
+      margin-top: 0;
+    }
+
+    .context-switcher {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background: var(--surface-color, #ffffff);
+      padding: 1rem 1.5rem;
+      border-radius: var(--radius, 18px);
+      box-shadow: var(--shadow-sm, 0 2px 12px rgba(0,0,0,0.07));
+      border: 1px solid var(--border, rgba(0,0,0,0.12));
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      flex-wrap: wrap;
+    }
+
+    .context-badge {
+      font-weight: 800;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-sm, 10px);
+      background: var(--game-accent, #416b49);
+      color: var(--game-accent-contrast, #ffffff);
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-context {
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm, 10px);
+      border: 1px solid var(--border, rgba(0,0,0,0.2));
+      background: var(--surface-color, #ffffff);
+      color: var(--text-color, #2a2a2a);
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--motion-duration-fast, 150ms) ease;
+    }
+
+    .btn-context:hover {
+      background: var(--game-accent-dim, rgba(65, 107, 73, 0.15));
+      border-color: var(--game-accent, #416b49);
+    }
+
+    .btn-context.active {
+      background: var(--game-accent, #416b49);
+      color: var(--game-accent-contrast, #ffffff);
+      border-color: var(--game-accent, #416b49);
+    }
+
+    .demo-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .demo-card {
+      background: var(--surface-color, #ffffff);
+      border-radius: var(--radius, 18px);
+      padding: 1.5rem;
+      border: 1px solid var(--border, rgba(0,0,0,0.12));
+      box-shadow: var(--shadow-sm, 0 2px 12px rgba(0,0,0,0.07));
+    }
+
+    .demo-card-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: var(--game-accent, #416b49);
+    }
+
+    .demo-card-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted, #5c5957);
+      margin-bottom: 1.25rem;
+    }
+
+    .component-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background: var(--background-color, #fdfcf8);
+      border-radius: var(--radius-sm, 10px);
+      border: 1px dashed var(--border, rgba(0,0,0,0.15));
+      min-height: 180px;
+    }
+
+    .controls-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-control {
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-sm, 10px);
+      border: 1px solid var(--game-accent, #416b49);
+      background: transparent;
+      color: var(--game-accent, #416b49);
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all var(--motion-duration-fast, 150ms) ease;
+    }
+
+    .btn-control:hover {
+      background: var(--game-accent, #416b49);
+      color: var(--game-accent-contrast, #ffffff);
+    }
+
+    .multi-state-preview {
+      margin-top: 3rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .multi-state-title {
+      font-family: var(--font-serif, serif);
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--game-accent, #416b49);
+    }
+
+    .state-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .state-box {
+      border-radius: var(--radius, 18px);
+      border: 2px solid var(--border, rgba(0,0,0,0.15));
+      padding: 1.25rem;
+      background: var(--surface-color, #ffffff);
+    }
+
+    .state-box-header {
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border, rgba(0,0,0,0.1));
+      color: var(--game-accent, #416b49);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .state-box-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="demo-header">
+    <h1>🎮 COSYgames Visual Genome Layer</h1>
+    <p>Shared responsive design context tokens, motion utilities, and reusable UI components.</p>
+  </header>
+
+  <div class="context-switcher">
+    <span>Active <code>data-context</code>:</span>
+    <span id="current-context-badge" class="context-badge">projector</span>
+    <span style="color: var(--muted, #5c5957);">| Switch State:</span>
+    <button class="btn-context active" data-ctx="projector" onclick="switchContext('projector')">Projector</button>
+    <button class="btn-context" data-ctx="phone" onclick="switchContext('phone')">Phone (&lt;480px)</button>
+    <button class="btn-context" data-ctx="online" onclick="switchContext('online')">Online (?mode=online)</button>
+  </div>
+
+  <div class="demo-grid">
+
+    <!-- TurnBanner Card -->
+    <div class="demo-card">
+      <h2 class="demo-card-title">1. TurnBanner</h2>
+      <div class="demo-card-subtitle">Large, high-contrast active turn and upcoming turn indicator.</div>
+      <div class="component-stage" id="turn-banner-stage"></div>
+      <div class="controls-row">
+        <button class="btn-control" onclick="nextTurn()">Next Turn ➔</button>
+        <button class="btn-control" onclick="resetTurn()">Reset Turn</button>
+      </div>
+    </div>
+
+    <!-- ScoreDial Card -->
+    <div class="demo-card">
+      <h2 class="demo-card-title">2. ScoreDial</h2>
+      <div class="demo-card-subtitle">Compact points display that automatically enlarges dramatically under <code>data-context="projector"</code>.</div>
+      <div class="component-stage" id="score-dial-stage"></div>
+      <div class="controls-row">
+        <button class="btn-control" onclick="addPoints(10)">+10 Points</button>
+        <button class="btn-control" onclick="addPoints(50)">+50 Points</button>
+        <button class="btn-control" onclick="addPoints(-10)">-10 Points</button>
+        <button class="btn-control" onclick="resetPoints()">Reset Score</button>
+      </div>
+    </div>
+
+    <!-- BuzzerButton Card -->
+    <div class="demo-card">
+      <h2 class="demo-card-title">3. BuzzerButton</h2>
+      <div class="demo-card-subtitle">Big single tap target with active press state and haptic-style scale bounce animation.</div>
+      <div class="component-stage" id="buzzer-stage"></div>
+      <div class="controls-row">
+        <span id="buzz-count" style="font-weight: 700; font-size: 0.95rem; align-self: center;">Buzzed: 0 times</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Multi-Context Comparison Section -->
+  <section class="multi-state-preview">
+    <h2 class="multi-state-title">Multi-Context Comparison View</h2>
+    <div class="state-columns">
+
+      <!-- Projector Column -->
+      <div class="state-box" data-context="projector">
+        <div class="state-box-header">
+          <span>Projector Mode</span>
+          <span class="context-badge">Classroom</span>
+        </div>
+        <div class="state-box-content" id="preview-projector"></div>
+      </div>
+
+      <!-- Phone Column -->
+      <div class="state-box" data-context="phone">
+        <div class="state-box-header">
+          <span>Phone Mode</span>
+          <span class="context-badge" style="background:#2563eb;">Mobile</span>
+        </div>
+        <div class="state-box-content" id="preview-phone"></div>
+      </div>
+
+      <!-- Online Column -->
+      <div class="state-box" data-context="online">
+        <div class="state-box-header">
+          <span>Online Mode</span>
+          <span class="context-badge" style="background:#7c3aed;">Embed</span>
+        </div>
+        <div class="state-box-content" id="preview-online"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Engine Scripts -->
+  <script src="view_context.js"></script>
+  <script src="turn_banner.js"></script>
+  <script src="score_dial.js"></script>
+  <script src="buzzer_button.js"></script>
+
+  <script>
+    let activeTurnIndex = 0;
+    const teams = [
+      { current: 'Team Alpha', next: 'Team Beta' },
+      { current: 'Team Beta', next: 'Team Gamma' },
+      { current: 'Team Gamma', next: 'Team Delta' },
+      { current: 'Team Delta', next: 'Team Alpha' }
+    ];
+
+    let turnBannerInstance;
+    let scoreDialInstance;
+    let buzzerInstance;
+    let buzzes = 0;
+
+    function switchContext(ctx) {
+      if (window.ViewContext) {
+        window.ViewContext.setContext(ctx);
+      } else {
+        document.documentElement.dataset.context = ctx;
+      }
+      document.getElementById('current-context-badge').innerText = ctx;
+
+      // Update button active states
+      document.querySelectorAll('.btn-context').forEach(btn => {
+        if (btn.getAttribute('data-ctx') === ctx) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    function nextTurn() {
+      activeTurnIndex = (activeTurnIndex + 1) % teams.length;
+      const team = teams[activeTurnIndex];
+      if (turnBannerInstance) {
+        turnBannerInstance.setTurn(team.current, team.next);
+      }
+    }
+
+    function resetTurn() {
+      activeTurnIndex = 0;
+      const team = teams[0];
+      if (turnBannerInstance) {
+        turnBannerInstance.setTurn(team.current, team.next);
+      }
+    }
+
+    function addPoints(pts) {
+      if (scoreDialInstance) {
+        scoreDialInstance.addScore(pts);
+      }
+    }
+
+    function resetPoints() {
+      if (scoreDialInstance) {
+        scoreDialInstance.setScore(0);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize ViewContext
+      if (window.ViewContext) {
+        window.ViewContext.init();
+        const ctx = window.ViewContext.getContext();
+        switchContext(ctx);
+      }
+
+      // 1. Initialize Interactive Demo Components
+      turnBannerInstance = new TurnBanner('#turn-banner-stage', {
+        currentTurn: teams[0].current,
+        nextTurn: teams[0].next,
+        label: 'Active Turn'
+      });
+
+      scoreDialInstance = new ScoreDial('#score-dial-stage', {
+        score: 120,
+        label: 'Team Points'
+      });
+
+      buzzerInstance = new BuzzerButton('#buzzer-stage', {
+        label: 'BUZZ!',
+        onBuzz: function () {
+          buzzes++;
+          document.getElementById('buzz-count').innerText = 'Buzzed: ' + buzzes + ' times';
+          if (scoreDialInstance) {
+            scoreDialInstance.addScore(10);
+          }
+        }
+      });
+
+      // 2. Populate Side-by-Side Multi-Context Comparison Boxes
+      const projectorBox = document.getElementById('preview-projector');
+      const phoneBox = document.getElementById('preview-phone');
+      const onlineBox = document.getElementById('preview-online');
+
+      new TurnBanner(projectorBox, { currentTurn: 'Team A', nextTurn: 'Team B' });
+      new ScoreDial(projectorBox, { score: 250, label: 'Points' });
+      new BuzzerButton(projectorBox, { label: 'BUZZ' });
+
+      new TurnBanner(phoneBox, { currentTurn: 'Player 1', nextTurn: 'Player 2' });
+      new ScoreDial(phoneBox, { score: 85, label: 'Score' });
+      new BuzzerButton(phoneBox, { label: 'TAP' });
+
+      new TurnBanner(onlineBox, { currentTurn: 'Online Room', nextTurn: 'Waiting...' });
+      new ScoreDial(onlineBox, { score: 140, label: 'Room Score' });
+      new BuzzerButton(onlineBox, { label: 'READY' });
+    });
+  </script>
+</body>
+</html>

@@ -1,11 +1,11 @@
 /**
  * games/critics-corner/game.js
- * Standalone logic for Critic's Corner.
+ * Standalone logic for Critic's Corner with Red-Pen Manuscript Review Identity.
  */
 (function() {
     const GAME_ID = 'critic';
     const GAME_TITLE = "Critic's Corner 🎭";
-    const GAME_META = 'Speaking · Solo or group · B2+';
+    const GAME_META = 'Speaking & Review · B2+';
     const LEVEL_OPTS = ['Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
 
@@ -15,6 +15,19 @@
         return div.innerHTML;
     }
 
+    function createSvgCircle() {
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('class', 'red-pen-circle-svg');
+        svg.setAttribute('viewBox', '0 0 100 50');
+        svg.setAttribute('preserveAspectRatio', 'none');
+
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('class', 'red-pen-path');
+        // Hand-drawn oval ellipse path formula
+        path.setAttribute('d', 'M 10,25 C 10,8 90,8 90,25 C 90,42 10,42 12,25');
+        svg.appendChild(path);
+        return svg;
+    }
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
@@ -23,7 +36,7 @@
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Critic's Corner 🎭</h2>
-              <p>A famous quote appears. What does it mean? Do you agree? Share your thoughts for 2–3 minutes. Perfect for advanced learners who want nuanced expression.</p>
+              <p>Review manuscript quotes, spot subtle errors with red-pen annotations, and share your critique!</p>
               <div class="setup-field"><label>Level</label>
                 <select class="styled-sel" id="s-level">${LEVEL_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
@@ -59,15 +72,24 @@
                 let qText = '', author = '', origin = '', category = '', task = '', qs = [];
                 if (typeof item === 'string') {
                     qText = item;
-                    task = "Describe what this quote means to you.";
+                    task = "Tap the word that contains a subtle stylistic or grammatical error to review with red-pen.";
                 } else {
                     qText = item.q || item.text || '...';
                     author = item.a || item.author || '';
                     origin = item.o || '';
                     category = item.c || '';
-                    task = item.task || "Describe what this quote means to you.";
+                    task = item.task || "Tap the error in the manuscript text to annotate.";
                     qs = item.qs || [];
                 }
+
+                // Split quote into word tokens for tap-based selection
+                const words = qText.split(/\s+/).filter(Boolean);
+                // Pick target error index deterministically based on round
+                const targetIdx = words.length > 0 ? (COSYGame.round % words.length) : 0;
+
+                const manuscriptWordsHtml = words.map((w, idx) => `
+                    <span class="manuscript-word" data-idx="${idx}" data-target="${idx === targetIdx}">${esc(w)}</span>
+                `).join(' ');
 
                 body.innerHTML = `
                   <div class="score-bar">
@@ -75,24 +97,29 @@
                     <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
                   </div>
                   <div class="game-card">
-                    <div class="game-label">🎭 Famous quote ${category ? '· ' + category : ''}</div>
-                    <div class="game-prompt" style="font-style:italic;font-size:1.1rem">"${qText}"</div>
-                    ${author ? `<div style="text-align:right; font-weight:700; margin-top:.5rem; color:var(--ink-muted)">:  ${author}${origin ? `, <span style="font-weight:400; font-style:italic">${origin}</span>` : ''}</div>` : ''}
+                    <div class="game-label">🎭 Red-Pen Manuscript Review ${category ? '· ' + category : ''}</div>
 
-                    <div style="background:var(--sage-light); border-radius:12px; padding:14px; margin-top:1.25rem; border:1px solid rgba(107,143,113,.2); text-align:left;">
-                        <div style="font-size:.65rem; text-transform:uppercase; font-weight:900; color:var(--sage-dark); margin-bottom:.4rem; letter-spacing:.05em;">Task</div>
-                        <div style="font-size:.9rem; line-height:1.5; color:var(--ink); font-weight:700;">${task}</div>
+                    <div class="manuscript-container">
+                      <div class="manuscript-sentence" id="manuscript-sentence">
+                        ${manuscriptWordsHtml}
+                      </div>
+                      ${author ? `<div style="text-align:right; font-weight:700; margin-top:.75rem; color:var(--ink-muted); font-family:sans-serif; font-size:0.9rem;">— ${esc(author)}${origin ? `, <span style="font-weight:400; font-style:italic">${esc(origin)}</span>` : ''}</div>` : ''}
+                    </div>
+
+                    <div style="background:var(--sage-light); border-radius:12px; padding:14px; margin-top:1rem; border:1px solid rgba(107,143,113,.2); text-align:left;">
+                        <div style="font-size:.65rem; text-transform:uppercase; font-weight:900; color:var(--sage-dark); margin-bottom:.4rem; letter-spacing:.05em;">Review Task</div>
+                        <div style="font-size:.9rem; line-height:1.5; color:var(--ink); font-weight:700;">${esc(task)}</div>
                     </div>
 
                     ${qs.length ? `
-                        <div style="margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1rem;">
-                            <div style="font-size:.7rem; text-transform:uppercase; font-weight:800; color:var(--ink-faint); margin-bottom:.5rem;">Deep discussion</div>
+                        <div style="margin-top:1rem; border-top:1px solid var(--border); padding-top:0.75rem;">
+                            <div style="font-size:.7rem; text-transform:uppercase; font-weight:800; color:var(--ink-faint); margin-bottom:.4rem;">Discussion Prompts</div>
                             <ul style="font-size:.85rem; color:var(--ink-muted); padding-left:1.2rem; margin:0; text-align:left;">
-                                ${qs.map(q => `<li style="margin-bottom:.4rem">${q}</li>`).join('')}
+                                ${qs.map(q => `<li style="margin-bottom:.3rem">${esc(q)}</li>`).join('')}
                             </ul>
                         </div>` : ''}
 
-                    <div style="margin-top:2rem" id="timer-container">
+                    <div style="margin-top:1.5rem" id="timer-container">
                         ${gameUtils.renderTimerRing(DUR, DUR)}
                     </div>
 
@@ -103,6 +130,56 @@
                       <button class="btn-g-danger" id="cc-reset">⬅ Setup</button>
                     </div>
                   </div>`;
+
+                // Add Tap-Only Event Listeners
+                const sentenceEl = document.getElementById('manuscript-sentence');
+                const wordEls = body.querySelectorAll('.manuscript-word');
+
+                wordEls.forEach(el => {
+                    el.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const isTarget = el.dataset.target === 'true';
+
+                        if (isTarget) {
+                            if (el.classList.contains('word-correct')) return;
+                            el.classList.add('word-correct');
+
+                            // Append hand-drawn SVG circle
+                            el.appendChild(createSvgCircle());
+
+                            // Check online context for hold duration & label
+                            const ctx = (window.ViewContext && (window.ViewContext.getContext ? window.ViewContext.getContext() : window.ViewContext.getMode())) || document.documentElement.dataset.context;
+                            const isOnline = (ctx === 'online');
+                            const holdDuration = isOnline ? 2500 : 1500;
+
+                            if (isOnline) {
+                                const label = document.createElement('span');
+                                label.className = 'correction-label';
+                                label.textContent = '✓ Corrected';
+                                el.appendChild(label);
+                            }
+
+                            // Dim sentence to 40% opacity (spotlight effect)
+                            sentenceEl?.classList.add('spotlight');
+                            COSYGame.addScore(10);
+                            const scoreEl = document.getElementById('cc-score');
+                            if (scoreEl) scoreEl.textContent = COSYGame.score;
+
+                            setTimeout(() => {
+                                sentenceEl?.classList.remove('spotlight');
+                            }, holdDuration);
+
+                        } else {
+                            // Incorrect tap: shake + muted-gray flash
+                            el.classList.remove('word-incorrect');
+                            void el.offsetWidth;
+                            el.classList.add('word-incorrect');
+                            setTimeout(() => {
+                                el.classList.remove('word-incorrect');
+                            }, 500);
+                        }
+                    });
+                });
 
                 document.getElementById('cc-btn').addEventListener('click', () => COSY_GAME.ccStart(DUR));
                 document.getElementById('cc-dict').addEventListener('click', (e) => {
