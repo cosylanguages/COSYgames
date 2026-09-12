@@ -1,139 +1,807 @@
 (function() {
     const data = {
-      fluency: [
-        { text: 'Sua rotina matinal ☕', level: 'starter' },
-        { text: 'Uma memória de infância 🧸', level: 'starter' },
-        { text: 'Sua estação favorita e por quê 🍂', level: 'starter' },
-        { text: 'Seu animal de estimação favorito 🐶', level: 'starter' },
-        { text: 'Um dia chuvoso ideal 🌧️', level: 'starter' },
-        { text: 'Uma habilidade que você gostaria de ter 🎸', level: 'elementary' },
-        { text: 'A melhor refeição que você já comeu 🍜', level: 'elementary' },
-        { text: 'Um lugar que você quer visitar 🗺️', level: 'elementary' },
-        { text: 'Uma história engraçada da sua vida 🚴', level: 'elementary' },
-        { text: 'Sua festa ou tradição favorita 🎄', level: 'elementary' },
-        { text: 'Seu destino de férias ideal 🌴', level: 'intermediate' },
-        { text: 'A pessoa mais interessante que você conhece 🙋', level: 'intermediate' },
-        { text: 'Descreva seu fim de semana perfeito ☀️', level: 'intermediate' },
-        { text: 'A última vez que você tentou algo novo 🎯', level: 'intermediate' },
-        { text: 'Um novo hobby que você gostaria de começar 🎨', level: 'intermediate' },
-        { text: 'Como a tecnologia muda a sua vida diária 📱', level: 'intermediate' },
-        { text: 'O que você faria com 1 milhão de euros? 💰', level: 'upper_intermediate' },
-        { text: 'Um livro ou filme que mudou sua visão 📚', level: 'upper_intermediate' },
-        { text: 'Se você pudesse viver em qualquer lugar do mundo… 🌍', level: 'upper_intermediate' },
-        { text: 'Algo de que você se orgulha 🏆', level: 'upper_intermediate' },
-        { text: 'Uma lição de vida inesperada 💡', level: 'upper_intermediate' },
-        { text: 'O que significa felicidade para você? 😊', level: 'advanced' },
-        { text: 'A influência da cultura nas nossas escolhas 🏛️', level: 'advanced' },
-        { text: 'O equilíbrio entre ambição e serenidade ⚖️', level: 'advanced' }
+      "fluency": [
+            {
+                  "text": "Sua rotina matinal ☕",
+                  "level": "starter"
+            },
+            {
+                  "text": "Uma memória de infância 🧸",
+                  "level": "starter"
+            },
+            {
+                  "text": "Sua estação favorita e por quê 🍂",
+                  "level": "starter"
+            },
+            {
+                  "text": "Seu animal de estimação favorito 🐶",
+                  "level": "starter"
+            },
+            {
+                  "text": "Um dia chuvoso ideal 🌧️",
+                  "level": "starter"
+            },
+            {
+                  "text": "Uma habilidade que você gostaria de ter 🎸",
+                  "level": "elementary"
+            },
+            {
+                  "text": "A melhor refeição que você já comeu 🍜",
+                  "level": "elementary"
+            },
+            {
+                  "text": "Um lugar que você quer visitar 🗺️",
+                  "level": "elementary"
+            },
+            {
+                  "text": "Uma história engraçada da sua vida 🚴",
+                  "level": "elementary"
+            },
+            {
+                  "text": "Sua festa ou tradição favorita 🎄",
+                  "level": "elementary"
+            },
+            {
+                  "text": "Seu destino de férias ideal 🌴",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "A pessoa mais interessante que você conhece 🙋",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "Descreva seu fim de semana perfeito ☀️",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "A última vez que você tentou algo novo 🎯",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "Um novo hobby que você gostaria de começar 🎨",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "Como a tecnologia muda a sua vida diária 📱",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "O que você faria com 1 milhão de euros? 💰",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "text": "Um livro ou filme que mudou sua visão 📚",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "text": "Se você pudesse viver em qualquer lugar do mundo… 🌍",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "text": "Algo de que você se orgulha 🏆",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "text": "Uma lição de vida inesperada 💡",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "text": "O que significa felicidade para você? 😊",
+                  "level": "advanced"
+            },
+            {
+                  "text": "A influência da cultura nas nossas escolhas 🏛️",
+                  "level": "advanced"
+            },
+            {
+                  "text": "O equilíbrio entre ambição e serenidade ⚖️",
+                  "level": "advanced"
+            }
       ],
-      opinions: [
-        { text: 'As redes sociais fazem mais mal do que bem.', level: 'intermediate' },
-        { text: 'Todos deveriam aprender pelo menos dois idiomas.', level: 'intermediate' },
-        { text: 'Trabalhar em casa é melhor do que no escritório.', level: 'intermediate' },
-        { text: 'Dinheiro não compra felicidade.', level: 'intermediate' },
-        { text: 'A semana de trabalho de 4 dias aumenta a produtividade.', level: 'upper_intermediate' },
-        { text: 'O transporte público deveria ser gratuito para todos.', level: 'upper_intermediate' },
-        { text: 'A renda básica universal é necessária para as economias do futuro.', level: 'upper_intermediate' },
-        { text: 'A IA generativa nunca poderá substituir a verdadeira criatividade artística humana.', level: 'advanced' },
-        { text: 'A privacidade total é impossível na era digital atual.', level: 'advanced' }
+      "opinions": [
+            {
+                  "text": "As redes sociais fazem mais mal do que bem.",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "Todos deveriam aprender pelo menos dois idiomas.",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "Trabalhar em casa é melhor do que no escritório.",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "Dinheiro não compra felicidade.",
+                  "level": "intermediate"
+            },
+            {
+                  "text": "A semana de trabalho de 4 dias aumenta a produtividade.",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "text": "O transporte público deveria ser gratuito para todos.",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "text": "A renda básica universal é necessária para as economias do futuro.",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "text": "A IA generativa nunca poderá substituir a verdadeira criatividade artística humana.",
+                  "level": "advanced"
+            },
+            {
+                  "text": "A privacidade total é impossível na era digital atual.",
+                  "level": "advanced"
+            }
       ],
-      battle: [
-        ['Montanhas 🏔️', 'Praia 🏖️'],
-        ['Café ☕', 'Chá 🍵'],
-        ['Madrugador 🌅', 'Noturno 🦉'],
-        ['Vida na cidade 🏙️', 'Vida no campo 🌾'],
-        ['Ler 📚', 'Assistir filmes 🎬'],
-        ['Verão ☀️', 'Inverno ❄️'],
-        ['Gatos 🐱', 'Cães 🐶'],
-        ['Trabalho em casa 🏠', 'Trabalho no escritório 🏢'],
-        ['Doce 🍰', 'Salgado 🧀'],
-        ['Viajar sozinho ✈️', 'Viajar com amigos 👥']
+      "battle": [
+            [
+                  "Montanhas 🏔️",
+                  "Praia 🏖️"
+            ],
+            [
+                  "Café ☕",
+                  "Chá 🍵"
+            ],
+            [
+                  "Madrugador 🌅",
+                  "Noturno 🦉"
+            ],
+            [
+                  "Vida na cidade 🏙️",
+                  "Vida no campo 🌾"
+            ],
+            [
+                  "Ler 📚",
+                  "Assistir filmes 🎬"
+            ],
+            [
+                  "Verão ☀️",
+                  "Inverno ❄️"
+            ],
+            [
+                  "Gatos 🐱",
+                  "Cães 🐶"
+            ],
+            [
+                  "Trabalho em casa 🏠",
+                  "Trabalho no escritório 🏢"
+            ],
+            [
+                  "Doce 🍰",
+                  "Salgado 🧀"
+            ],
+            [
+                  "Viajar sozinho ✈️",
+                  "Viajar com amigos 👥"
+            ]
       ],
-      critic: [
-        { title: 'Delicioso, mas muito caro 🍝', type: 'Restaurante', review: 'A comida estava incrível e os ingredientes frescos, mas as porções eram pequenas e a conta foi uma surpresa.', question: 'Você voltaria apesar do preço elevado?' },
-        { title: 'Enredo envolvente, final fraco 🎬', type: 'Filme', review: 'Os dois primeiros terços do filme foram cheios de suspense, mas o desfecho foi apressado e ilógico.', question: 'O quanto o final afeta a sua avaliação geral?' },
-        { title: 'Gráficos incríveis, mas com falhas 🎮', type: 'Jogo', review: 'O jogo é visualmente espetacular, mas trava com frequência e tem falhas técnicas.', question: 'A atmosfera e os gráficos podem compensar os problemas técnicos?' }
+      "critic": [
+            {
+                  "title": "Delicioso, mas muito caro 🍝",
+                  "type": "Restaurante",
+                  "review": "A comida estava incrível e os ingredientes frescos, mas as porções eram pequenas e a conta foi uma surpresa.",
+                  "question": "Você voltaria apesar do preço elevado?"
+            },
+            {
+                  "title": "Enredo envolvente, final fraco 🎬",
+                  "type": "Filme",
+                  "review": "Os dois primeiros terços do filme foram cheios de suspense, mas o desfecho foi apressado e ilógico.",
+                  "question": "O quanto o final afeta a sua avaliação geral?"
+            },
+            {
+                  "title": "Gráficos incríveis, mas com falhas 🎮",
+                  "type": "Jogo",
+                  "review": "O jogo é visualmente espetacular, mas trava com frequência e tem falhas técnicas.",
+                  "question": "A atmosfera e os gráficos podem compensar os problemas técnicos?"
+            }
       ],
-      action: {
-        starter: ['Gato', 'Cão', 'Casa', 'Carro', 'Livro', 'Água', 'Sol', 'Lua', 'Árvore', 'Telefone', 'Porta', 'Cadeira', 'Cama', 'Pão', 'Peixe'],
-        elementary: ['Cozinha', 'Jardim', 'Comboio', 'Médico', 'Professor', 'Música', 'Aniversário', 'Natação', 'Férias', 'Loja', 'Estação', 'Hospital'],
-        intermediate: ['Museu', 'Entrevista', 'Arquiteto', 'Jornalista', 'Parlamento', 'Orquestra', 'Maratona', 'Exposição', 'Laboratório', 'Telescópio'],
-        upper_intermediate: ['Filantropia', 'Embaixador', 'Hipótese', 'Empreendedor', 'Arqueologia', 'Biodiversidade', 'Infraestrutura'],
-        advanced: ['Paradigma', 'Juxtaposição', 'Anacronismo', 'Verossimilhança', 'Resiliência', 'Matiz', 'Perspicácia'],
-        proficiency: ['Ubiquidade', 'Efêmero', 'Perspicaz', 'Equanimidade', 'Vicisitude', 'Inefável']
+      "action": {
+            "starter": [
+                  "Gato",
+                  "Cão",
+                  "Casa",
+                  "Carro",
+                  "Livro",
+                  "Água",
+                  "Sol",
+                  "Lua",
+                  "Árvore",
+                  "Telefone",
+                  "Porta",
+                  "Cadeira",
+                  "Cama",
+                  "Pão",
+                  "Peixe"
+            ],
+            "elementary": [
+                  "Cozinha",
+                  "Jardim",
+                  "Comboio",
+                  "Médico",
+                  "Professor",
+                  "Música",
+                  "Aniversário",
+                  "Natação",
+                  "Férias",
+                  "Loja",
+                  "Estação",
+                  "Hospital"
+            ],
+            "intermediate": [
+                  "Museu",
+                  "Entrevista",
+                  "Arquiteto",
+                  "Jornalista",
+                  "Parlamento",
+                  "Orquestra",
+                  "Maratona",
+                  "Exposição",
+                  "Laboratório",
+                  "Telescópio"
+            ],
+            "upper_intermediate": [
+                  "Filantropia",
+                  "Embaixador",
+                  "Hipótese",
+                  "Empreendedor",
+                  "Arqueologia",
+                  "Biodiversidade",
+                  "Infraestrutura"
+            ],
+            "advanced": [
+                  "Paradigma",
+                  "Juxtaposição",
+                  "Anacronismo",
+                  "Verossimilhança",
+                  "Resiliência",
+                  "Matiz",
+                  "Perspicácia"
+            ],
+            "proficiency": [
+                  "Ubiquidade",
+                  "Efêmero",
+                  "Perspicaz",
+                  "Equanimidade",
+                  "Vicisitude",
+                  "Inefável"
+            ]
       },
-      identity: [
-        { person: 'Um bombeiro', clue: 'Usa capacete e apaga fogos com água.', level: 'elementary' },
-        { person: 'Um chef', clue: 'Trabalha numa cozinha e prepara pratos deliciosos.', level: 'elementary' },
-        { person: 'Um bibliotecário', clue: 'Gere uma biblioteca e ajuda as pessoas a encontrar livros.', level: 'elementary' },
-        { person: 'Um veterinário', clue: 'Cuida de animais doentes ou feridos.', level: 'elementary' },
-        { person: 'Um astronauta', clue: 'Viaja no espaço além da Terra.', level: 'intermediate' },
-        { person: 'Um detetive', clue: 'Investiga mistérios e procura pistas.', level: 'intermediate' },
-        { person: 'Um jornalista', clue: 'Informa o público e escreve artigos de notícias.', level: 'intermediate' },
-        { person: 'Um fotógrafo', clue: 'Capta memórias e imagens com uma câmara.', level: 'intermediate' },
-        { person: 'Um arquiteto', clue: 'Projeta casas e edifícios antes da sua construção.', level: 'upper_intermediate' },
-        { person: 'Um cirurgião', clue: 'Realiza operações médicas no hospital.', level: 'upper_intermediate' },
-        { person: 'Um engenheiro de software', clue: 'Escreve código para criar aplicações de software.', level: 'upper_intermediate' },
-        { person: 'Um diplomata', clue: 'Representa o seu país em relações internacionais oficiais.', level: 'advanced' },
-        { person: 'Um biólogo marinho', clue: 'Estuda a fauna e flora dos oceanos.', level: 'advanced' },
-        { person: 'Um astrofísico', clue: 'Estuda as propriedades físicas das estrelas e galáxias.', level: 'advanced' }
+      "identity": [
+            {
+                  "person": "Um bombeiro",
+                  "clue": "Usa capacete e apaga fogos com água.",
+                  "level": "elementary"
+            },
+            {
+                  "person": "Um chef",
+                  "clue": "Trabalha numa cozinha e prepara pratos deliciosos.",
+                  "level": "elementary"
+            },
+            {
+                  "person": "Um bibliotecário",
+                  "clue": "Gere uma biblioteca e ajuda as pessoas a encontrar livros.",
+                  "level": "elementary"
+            },
+            {
+                  "person": "Um veterinário",
+                  "clue": "Cuida de animais doentes ou feridos.",
+                  "level": "elementary"
+            },
+            {
+                  "person": "Um astronauta",
+                  "clue": "Viaja no espaço além da Terra.",
+                  "level": "intermediate"
+            },
+            {
+                  "person": "Um detetive",
+                  "clue": "Investiga mistérios e procura pistas.",
+                  "level": "intermediate"
+            },
+            {
+                  "person": "Um jornalista",
+                  "clue": "Informa o público e escreve artigos de notícias.",
+                  "level": "intermediate"
+            },
+            {
+                  "person": "Um fotógrafo",
+                  "clue": "Capta memórias e imagens com uma câmara.",
+                  "level": "intermediate"
+            },
+            {
+                  "person": "Um arquiteto",
+                  "clue": "Projeta casas e edifícios antes da sua construção.",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "person": "Um cirurgião",
+                  "clue": "Realiza operações médicas no hospital.",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "person": "Um engenheiro de software",
+                  "clue": "Escreve código para criar aplicações de software.",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "person": "Um diplomata",
+                  "clue": "Representa o seu país em relações internacionais oficiais.",
+                  "level": "advanced"
+            },
+            {
+                  "person": "Um biólogo marinho",
+                  "clue": "Estuda a fauna e flora dos oceanos.",
+                  "level": "advanced"
+            },
+            {
+                  "person": "Um astrofísico",
+                  "clue": "Estuda as propriedades físicas das estrelas e galáxias.",
+                  "level": "advanced"
+            }
       ],
-      wordlinker: [
-        { words: ['Maçã', 'Laranja', 'Banana', 'Cenoura'], odd: 'Cenoura', link: 'Frutas', oddReason: 'Cenoura é um vegetal' },
-        { words: ['Lisboa', 'Roma', 'Tóquio', 'Amazonas'], odd: 'Amazonas', link: 'Capitais', oddReason: 'O Amazonas é um rio' },
-        { words: ['Piano', 'Guitarra', 'Violino', 'Trompete'], odd: 'none', link: 'Instrumentos musicais', oddReason: 'Todos são instrumentos' },
-        { words: ['Médico', 'Enfermeiro', 'Cirurgião', 'Piloto'], odd: 'Piloto', link: 'Profissões de saúde', oddReason: 'O piloto pilota aviões, não no hospital' }
+      "wordlinker": [
+            {
+                  "words": [
+                        "Maçã",
+                        "Laranja",
+                        "Banana",
+                        "Cenoura"
+                  ],
+                  "odd": "Cenoura",
+                  "link": "Frutas",
+                  "oddReason": "Cenoura é um vegetal"
+            },
+            {
+                  "words": [
+                        "Lisboa",
+                        "Roma",
+                        "Tóquio",
+                        "Amazonas"
+                  ],
+                  "odd": "Amazonas",
+                  "link": "Capitais",
+                  "oddReason": "O Amazonas é um rio"
+            },
+            {
+                  "words": [
+                        "Piano",
+                        "Guitarra",
+                        "Violino",
+                        "Trompete"
+                  ],
+                  "odd": "none",
+                  "link": "Instrumentos musicais",
+                  "oddReason": "Todos são instrumentos"
+            },
+            {
+                  "words": [
+                        "Médico",
+                        "Enfermeiro",
+                        "Cirurgião",
+                        "Piloto"
+                  ],
+                  "odd": "Piloto",
+                  "link": "Profissões de saúde",
+                  "oddReason": "O piloto pilota aviões, não no hospital"
+            }
       ],
-      etymology: [
-        {
-          word: "Saudade",
-          level: "medium",
-          options: ["Latim","Grego","Árabe","Francês"],
-          answer: "Latim",
-          detail: "Evoluiu no português para expressar o sentimento profundo de nostalgia e presença da ausência.",
-          path: "Latim (solitudo) → Saudade"
-        },
-        {
-          word: "Obrigado",
-          level: "medium",
-          options: ["Latim","Grego","Árabe","Francês"],
-          answer: "Latim",
-          detail: "Expressa a ideia moral de ficar ligado em gratidão a quem ajudou.",
-          path: "Latim (obligatus) → Obrigado"
-        },
-        {
-          word: "Galáxia",
-          level: "medium",
-          options: ["Grego","Latim","Árabe","Francês"],
-          answer: "Grego",
-          detail: "Deriva do mito grego sobre as gotas de leite derramadas no céu.",
-          path: "Grego (gala) → Galáxia"
-        },
-        {
-          word: "Candidato",
-          level: "medium",
-          options: ["Latim","Grego","Árabe","Francês"],
-          answer: "Latim",
-          detail: "Na Roma Antiga, os postulantes a cargos vestiam uma toga perfeitamente branca.",
-          path: "Latim (candidus) → Candidato"
-        },
-        {
-          word: "Nostalgia",
-          level: "medium",
-          options: ["Grego","Latim","Árabe","Francês"],
-          answer: "Grego",
-          detail: "Criado no século XVII para descrever as saudades profundas dos soldados da sua terra natal.",
-          path: "Grego (nostos + algos) → Nostalgia"
-        }
+      "etymology": [
+            {
+                  "word": "Saudade",
+                  "level": "easy",
+                  "options": [
+                        "Latim",
+                        "Grego",
+                        "Árabe",
+                        "Francês"
+                  ],
+                  "answer": "Latim",
+                  "detail": "Evoluiu no português a partir do latim solitudo para expressar o sentimento profundo de nostalgia e presença da ausência.",
+                  "path": "Latim (solitudo) → Português Saudade"
+            },
+            {
+                  "word": "Obrigado",
+                  "level": "easy",
+                  "options": [
+                        "Latim",
+                        "Grego",
+                        "Árabe",
+                        "Espanhol"
+                  ],
+                  "answer": "Latim",
+                  "detail": "Do latim obligatus (atado por dever), expressando a ideia moral de ficar ligado em gratidão a quem ajudou.",
+                  "path": "Latim (obligatus) → Português Obrigado"
+            },
+            {
+                  "word": "Galáxia",
+                  "level": "easy",
+                  "options": [
+                        "Grego",
+                        "Latim",
+                        "Árabe",
+                        "Francês"
+                  ],
+                  "answer": "Grego",
+                  "detail": "Deriva do mito grego sobre as gotas de leite derramadas pela deusa Hera no céu.",
+                  "path": "Grego (gala) → Português Galáxia"
+            },
+            {
+                  "word": "Candidato",
+                  "level": "easy",
+                  "options": [
+                        "Latim",
+                        "Grego",
+                        "Árabe",
+                        "Francês"
+                  ],
+                  "answer": "Latim",
+                  "detail": "Na Roma Antiga, os postulantes a cargos vestiam uma toga perfeitamente branca (candidus).",
+                  "path": "Latim (candidus) → Português Candidato"
+            },
+            {
+                  "word": "Nostalgia",
+                  "level": "easy",
+                  "options": [
+                        "Grego",
+                        "Latim",
+                        "Árabe",
+                        "Francês"
+                  ],
+                  "answer": "Grego",
+                  "detail": "Criado no século XVII unindo as raízes gregas nostos (regresso a casa) e algos (dor).",
+                  "path": "Grego (nostos + algos) → Português Nostalgia"
+            },
+            {
+                  "word": "Cafuné",
+                  "level": "easy",
+                  "options": [
+                        "Quimbundo",
+                        "Tupi",
+                        "Latim",
+                        "Árabe"
+                  ],
+                  "answer": "Quimbundo",
+                  "detail": "Do quimbundo kifune (esfregar a cabeça), gesto de carinho de passar os dedos pelos cabelos.",
+                  "path": "Quimbundo (kifune) → Português Cafuné"
+            },
+            {
+                  "word": "Samba",
+                  "level": "easy",
+                  "options": [
+                        "Quimbundo",
+                        "Tupi",
+                        "Espanhol",
+                        "Árabe"
+                  ],
+                  "answer": "Quimbundo",
+                  "detail": "Origem nas línguas bantu da África Central, ligado a semba (umbigada na dança ritual).",
+                  "path": "Quimbundo (semba) → Português Samba"
+            },
+            {
+                  "word": "Moleque",
+                  "level": "easy",
+                  "options": [
+                        "Quimbundo",
+                        "Tupi",
+                        "Latim",
+                        "Árabe"
+                  ],
+                  "answer": "Quimbundo",
+                  "detail": "Do quimbundo mu'leke (garoto ou menino jovem), integrado ao vocabulário coloquial.",
+                  "path": "Quimbundo (mu'leke) → Português Moleque"
+            },
+            {
+                  "word": "Caçula",
+                  "level": "medium",
+                  "options": [
+                        "Quimbundo",
+                        "Tupi",
+                        "Latim",
+                        "Francês"
+                  ],
+                  "answer": "Quimbundo",
+                  "detail": "Do quimbundo kazule (o filho mais novo ou último nascido na família).",
+                  "path": "Quimbundo (kazule) → Português Caçula"
+            },
+            {
+                  "word": "Dengo",
+                  "level": "medium",
+                  "options": [
+                        "Quimbundo",
+                        "Tupi",
+                        "Latim",
+                        "Espanhol"
+                  ],
+                  "answer": "Quimbundo",
+                  "detail": "Do quimbundo ndengu (doçura ou pedido de mimo no convívio familiar).",
+                  "path": "Quimbundo (ndengu) → Português Dengo"
+            },
+            {
+                  "word": "Abacaxi",
+                  "level": "easy",
+                  "options": [
+                        "Tupi-Guarani",
+                        "Quimbundo",
+                        "Latim",
+                        "Árabe"
+                  ],
+                  "answer": "Tupi-Guarani",
+                  "detail": "Do tupi ibaguati (fruta cheirosa e saborosa), nome nativo dado ao ananás nas terras tropicais.",
+                  "path": "Tupi-Guarani (ibaguati) → Português Abacaxi"
+            },
+            {
+                  "word": "Pipoca",
+                  "level": "easy",
+                  "options": [
+                        "Tupi-Guarani",
+                        "Quimbundo",
+                        "Latim",
+                        "Espanhol"
+                  ],
+                  "answer": "Tupi-Guarani",
+                  "detail": "Do tupi pira-poka (pele arrebentada), descrevendo o grão de milho ao estourar no calor.",
+                  "path": "Tupi-Guarani (pira-poka) → Português Pipoca"
+            },
+            {
+                  "word": "Tatu",
+                  "level": "easy",
+                  "options": [
+                        "Tupi-Guarani",
+                        "Quimbundo",
+                        "Latim",
+                        "Holandês"
+                  ],
+                  "answer": "Tupi-Guarani",
+                  "detail": "Do tupi ta-tu (casca cascuda), mamífero blindado nativo da fauna sul-americana.",
+                  "path": "Tupi-Guarani (ta-tu) → Português Tatu"
+            },
+            {
+                  "word": "Mandioca",
+                  "level": "medium",
+                  "options": [
+                        "Tupi-Guarani",
+                        "Quimbundo",
+                        "Latim",
+                        "Espanhol"
+                  ],
+                  "answer": "Tupi-Guarani",
+                  "detail": "Da lenda tupi de Mani-oka (casa de Mani), raiz tuberosa fundamental na alimentação indígena.",
+                  "path": "Tupi-Guarani (Mani-oka) → Português Mandioca"
+            },
+            {
+                  "word": "Piranha",
+                  "level": "medium",
+                  "options": [
+                        "Tupi-Guarani",
+                        "Quimbundo",
+                        "Latim",
+                        "Espanhol"
+                  ],
+                  "answer": "Tupi-Guarani",
+                  "detail": "Do tupi pira-anha (peixe dente ou tesoura), peixe carnívoro das bacias hidrográficas amazónicas.",
+                  "path": "Tupi-Guarani (pira-anha) → Português Piranha"
+            },
+            {
+                  "word": "Azeite",
+                  "level": "easy",
+                  "options": [
+                        "Árabe",
+                        "Latim",
+                        "Grego",
+                        "Hebreu"
+                  ],
+                  "answer": "Árabe",
+                  "detail": "Do árabe hispânico az-zayt (óleo de azeitona), herdado do período de Al-Andalus na Península Ibérica.",
+                  "path": "Árabe (az-zayt) → Português Azeite"
+            },
+            {
+                  "word": "Açúcar",
+                  "level": "easy",
+                  "options": [
+                        "Árabe",
+                        "Sânscrito",
+                        "Latim",
+                        "Persa"
+                  ],
+                  "answer": "Árabe",
+                  "detail": "Transmitido do árabe as-sukkar via comércio ibérico, originário da palavra sândcrita śarkarā.",
+                  "path": "Sânscrito (śarkarā) → Árabe (as-sukkar) → Português Açúcar"
+            },
+            {
+                  "word": "Oxalá",
+                  "level": "easy",
+                  "options": [
+                        "Árabe",
+                        "Latim",
+                        "Quimbundo",
+                        "Espanhol"
+                  ],
+                  "answer": "Árabe",
+                  "detail": "Da expressão árabe law shā' Allāh (se Deus quiser), expressando desejo fervoroso.",
+                  "path": "Árabe (law shā' Allāh) → Português Oxalá"
+            },
+            {
+                  "word": "Algarismo",
+                  "level": "medium",
+                  "options": [
+                        "Árabe",
+                        "Latim",
+                        "Grego",
+                        "Sânscrito"
+                  ],
+                  "answer": "Árabe",
+                  "detail": "Homenagem ao matemático persa-árabe Al-Khwarizmi, introdutor dos numerais arábicos na Europa.",
+                  "path": "Árabe (Al-Khwarizmi) → Português Algarismo"
+            },
+            {
+                  "word": "Almoxarife",
+                  "level": "hard",
+                  "options": [
+                        "Árabe",
+                        "Latim",
+                        "Holandês",
+                        "Francês"
+                  ],
+                  "answer": "Árabe",
+                  "detail": "Do árabe al-mushrif (o inspetor ou tesoureiro), antigo funcionário encarregado dos suprimentos.",
+                  "path": "Árabe (al-mushrif) → Português Almoxarife"
+            },
+            {
+                  "word": "Iate",
+                  "level": "medium",
+                  "options": [
+                        "Holandês",
+                        "Inglês",
+                        "Alemão",
+                        "Latim"
+                  ],
+                  "answer": "Holandês",
+                  "detail": "Do holandês jacht (caça/perseguição), embarcação rápida introduzida nos mares europeus.",
+                  "path": "Holandês (jacht) → Inglês → Português Iate"
+            },
+            {
+                  "word": "Futebol",
+                  "level": "easy",
+                  "options": [
+                        "Inglês",
+                        "Francês",
+                        "Alemão",
+                        "Espanhol"
+                  ],
+                  "answer": "Inglês",
+                  "detail": "Adaptação fonética direta do inglês football (pés e bola) introduzido no século XIX.",
+                  "path": "Inglês (football) → Português Futebol"
+            },
+            {
+                  "word": "Cheque",
+                  "level": "medium",
+                  "options": [
+                        "Inglês",
+                        "Árabe",
+                        "Francês",
+                        "Latim"
+                  ],
+                  "answer": "Inglês",
+                  "detail": "Do inglês check (verificar ou conferir), derivado da ordem de pagamento bancária.",
+                  "path": "Inglês (check) → Português Cheque"
+            },
+            {
+                  "word": "Líder",
+                  "level": "medium",
+                  "options": [
+                        "Inglês",
+                        "Alemão",
+                        "Francês",
+                        "Latim"
+                  ],
+                  "answer": "Inglês",
+                  "detail": "Do inglês leader (aquele que guia), incorporado na linguagem política e de gestão.",
+                  "path": "Inglês (leader) → Português Líder"
+            },
+            {
+                  "word": "Filosofia",
+                  "level": "easy",
+                  "options": [
+                        "Grego",
+                        "Latim",
+                        "Árabe",
+                        "Francês"
+                  ],
+                  "answer": "Grego",
+                  "detail": "Formado pelas raízes gregas philos (amor) e sophia (sabedoria).",
+                  "path": "Grego (philos + sophia) → Português Filosofia"
+            },
+            {
+                  "word": "Biblioteca",
+                  "level": "easy",
+                  "options": [
+                        "Grego",
+                        "Latim",
+                        "Francês",
+                        "Alemão"
+                  ],
+                  "answer": "Grego",
+                  "detail": "Do grego biblion (livro) e theke (caixa ou repositório).",
+                  "path": "Grego (biblion + theke) → Português Biblioteca"
+            },
+            {
+                  "word": "Restaurante",
+                  "level": "medium",
+                  "options": [
+                        "Francês",
+                        "Latim",
+                        "Espanhol",
+                        "Inglês"
+                  ],
+                  "answer": "Francês",
+                  "detail": "Do francês restaurant, alusivo ao caldo nutritivo servido nos estabelecimentos de Paris no século XVIII.",
+                  "path": "Francês (restaurant) → Português Restaurante"
+            },
+            {
+                  "word": "Balcão",
+                  "level": "hard",
+                  "options": [
+                        "Lombardo/Germanico",
+                        "Latim",
+                        "Francês",
+                        "Árabe"
+                  ],
+                  "answer": "Lombardo/Germanico",
+                  "detail": "Da raiz germanica balcho (viga de madeira) através do italiano medieval balcone.",
+                  "path": "Germanico (balcho) → Italiano → Português Balcão"
+            },
+            {
+                  "word": "Guerra",
+                  "level": "hard",
+                  "options": [
+                        "Germanico",
+                        "Latim",
+                        "Árabe",
+                        "Celta"
+                  ],
+                  "answer": "Germanico",
+                  "detail": "Substituiu o latim bellum durante as invasões visigóticas a partir da raiz werra (conflito).",
+                  "path": "Germanico (werra) → Português Guerra"
+            },
+            {
+                  "word": "Jardim",
+                  "level": "hard",
+                  "options": [
+                        "Francês",
+                        "Germanico",
+                        "Latim",
+                        "Árabe"
+                  ],
+                  "answer": "Francês",
+                  "detail": "Do francês antigo jardin, derivado da raiz franca gardo (terreno cercado).",
+                  "path": "Franco (gardo) → Francês (jardin) → Português Jardim"
+            }
       ],
-      storychain: [
-        { prompt: 'Numa terça-feira chuvosa, o Marcos encontrou uma chave antiga no bolso…', level: 'starter' },
-        { prompt: 'O comboio parou numa estação que não figurava em nenhum mapa…', level: 'elementary' },
-        { prompt: 'Uma carta misteriosa estava na mesa da cozinha sem remetente…', level: 'intermediate' },
-        { prompt: 'Quando a luz faltou em toda a cidade, a Sofia notou um brilho invulgar…', level: 'upper_intermediate' },
-        { prompt: 'No sótão da casa antiga, o António descobriu um diário datado de 1888…', level: 'advanced' }
+      "storychain": [
+            {
+                  "prompt": "Numa terça-feira chuvosa, o Marcos encontrou uma chave antiga no bolso…",
+                  "level": "starter"
+            },
+            {
+                  "prompt": "O comboio parou numa estação que não figurava em nenhum mapa…",
+                  "level": "elementary"
+            },
+            {
+                  "prompt": "Uma carta misteriosa estava na mesa da cozinha sem remetente…",
+                  "level": "intermediate"
+            },
+            {
+                  "prompt": "Quando a luz faltou em toda a cidade, a Sofia notou um brilho invulgar…",
+                  "level": "upper_intermediate"
+            },
+            {
+                  "prompt": "No sótão da casa antiga, o António descobriu um diário datado de 1888…",
+                  "level": "advanced"
+            }
       ]
-    };
+};
 
     window.gameData = window.gameData || {};
     window.gameData['pt'] = data;
