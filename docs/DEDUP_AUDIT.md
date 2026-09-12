@@ -28,7 +28,7 @@ Prior to this cleanup, the repository contained duplicate directories per game r
 | 3 | `cosy-crossword/` | `cosy_crossword/` | `cosy-crossword/` has standardized UI shell; `cosy_crossword/` contains legacy stub. `game.js` identical. | Keep `cosy-crossword/`, delete `cosy_crossword/` |
 | 4 | `critics-corner/` | `critics_corner/` | `critics-corner/` has standardized UI shell; `critics_corner/` contains legacy stub. `game.js` identical. | Keep `critics-corner/`, delete `critics_corner/` |
 | 5 | `emoji-odyssey/` | `emoji_odyssey/` | `emoji-odyssey/` has standardized UI shell; `emoji_odyssey/` contains legacy stub. `game.js` identical. | Keep `emoji-odyssey/`, delete `emoji_odyssey/` |
-| 6 | `etymology-explorer/` | `etymology_explorer/` | `etymology-explorer/` has standardized UI shell; `etymology_explorer/` contains legacy stub. `game.js` identical. | Keep `etymology-explorer/`, delete `etymology_explorer/` |
+| 6 | `etymology-explorer/` | `etymology_explorer/` | `etymology-explorer/` contains full standalone app files (`index.html`, `game.js`, `etymology-explorer.css`, `README.md`); `etymology_explorer/` was a duplicate subset with identical `game.js` and `README.md`. | Keep `etymology-explorer/`, delete `etymology_explorer/` |
 | 7 | `fluency-flow/` | `fluency_flow/` | `fluency-flow/` has standardized UI shell; `fluency_flow/` contains legacy stub. `game.js` identical. | Keep `fluency-flow/`, delete `fluency_flow/` |
 | 8 | `hot-seat/` | `hot_seat/` | `hot-seat/` has standardized UI shell; `hot_seat/` contains legacy stub. `game.js` identical. | Keep `hot-seat/`, delete `hot_seat/` |
 | 9 | `100-questions/` | `hundred_questions/` | `100-questions/` has standardized UI shell & card decks; `hundred_questions/` contains legacy stub. `game.js` & `decks/` identical. | Keep `100-questions/`, delete `hundred_questions/` |
@@ -73,8 +73,9 @@ Prior to this cleanup, the repository contained duplicate directories per game r
 - **Canonical Folder**: `emoji-odyssey/`.
 
 ### 6. Etymology Explorer (`etymology-explorer/` vs `etymology_explorer/`)
-- **`etymology-explorer/`**: Contains modern standalone COSYgames layout (`index.html`, 123 lines) and `game.js`.
-- **`etymology_explorer/`**: Contains legacy stub (`index.html`, 49 lines) and identical `game.js`.
+- **`etymology-explorer/`**: Contains complete standalone game files (`index.html`, `game.js`, `etymology-explorer.css`, `README.md`).
+- **`etymology_explorer/`**: Contained a duplicate subset (`game.js` and `README.md`, identical line-for-line to the kebab-case version).
+- **Resolution**: Verified file-by-file diff was identical; deleted `etymology_explorer/` entirely.
 - **Canonical Folder**: `etymology-explorer/`.
 
 ### 7. Fluency Flow (`fluency-flow/` vs `fluency_flow/`)
