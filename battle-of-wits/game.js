@@ -97,10 +97,8 @@
 
                 // Initialize ScoreDials on podiums
                 if (window.ScoreDial) {
-                    const sdA = new ScoreDial({ initialScore: teamAScore, label: 'Points' });
-                    const sdB = new ScoreDial({ initialScore: teamBScore, label: 'Points' });
-                    document.getElementById('sd-container-a')?.appendChild(sdA.getElement());
-                    document.getElementById('sd-container-b')?.appendChild(sdB.getElement());
+                    const sdA = new ScoreDial('#sd-container-a', { score: teamAScore, label: 'Points' });
+                    const sdB = new ScoreDial('#sd-container-b', { score: teamBScore, label: 'Points' });
                 }
 
                 body.querySelectorAll('.setup-opt').forEach(opt => {
@@ -176,10 +174,8 @@
               // Initialize Podiums
               let sdA = null, sdB = null;
               if (window.ScoreDial) {
-                  sdA = new ScoreDial({ initialScore: teamAScore, label: 'Points' });
-                  sdB = new ScoreDial({ initialScore: teamBScore, label: 'Points' });
-                  document.getElementById('sd-container-a')?.appendChild(sdA.getElement());
-                  document.getElementById('sd-container-b')?.appendChild(sdB.getElement());
+                  sdA = new ScoreDial('#sd-container-a', { score: teamAScore, label: 'Points' });
+                  sdB = new ScoreDial('#sd-container-b', { score: teamBScore, label: 'Points' });
               }
 
               // Initialize BuzzerButton

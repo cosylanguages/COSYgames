@@ -257,6 +257,9 @@
             }, 1000);
             return timer;
         },
+        stopTimer: function() {
+            COSYUtils.stopTimer();
+        },
         showGameMessage: function(target, msg, type = 'info') {
             const container = typeof target === 'string' ? document.getElementById(target) : target;
             if (!container) return;
