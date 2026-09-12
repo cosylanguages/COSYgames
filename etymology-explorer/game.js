@@ -8,19 +8,19 @@
     const GAME_META = 'Vocabulary & Dig Site · Solo or group';
     const LEVEL_OPTS = ['Easy (Greek, Latin, French...)', 'Medium (Arabic, Chinese, Czech...)', 'Hard (Obscure origins)'];
     const LANG_OPTS = [
-        { code: 'en', label: 'English 🇬🇧' },
-        { code: 'fr', label: 'Français 🇫🇷' },
-        { code: 'it', label: 'Italiano 🇮🇹' },
-        { code: 'de', label: 'Deutsch 🇩🇪' },
-        { code: 'es', label: 'Español 🇪🇸' },
-        { code: 'ru', label: 'Русский 🇷🇺' },
-        { code: 'el', label: 'Ελληνικά 🇬🇷' },
-        { code: 'pt', label: 'Português 🇵🇹' },
-        { code: 'hy', label: 'Հայերեն 🇦🇲' },
-        { code: 'ka', label: 'ქართული 🇬🇪' },
-        { code: 'ba', label: 'Башҡорт 🇧🇦' },
-        { code: 'tt', label: 'Татар 🇹🇹' },
-        { code: 'br', label: 'Brezhoneg 🇧🇷' }
+        'English 🇬🇧',
+        'Français 🇫🇷',
+        'Italiano 🇮🇹',
+        'Deutsch 🇩🇪',
+        'Español 🇪🇸',
+        'Русский 🇷🇺',
+        'Ελληνικά 🇬🇷',
+        'Português 🇵🇹',
+        'Հայերեն 🇦🇲',
+        'ქართული 🇬🇪',
+        'Башҡортса 🇷🇺',
+        'Татарча 🇷🇺',
+        'Brezhoneg 🏴'
     ];
 
     // Local self-contained gameUtils shim
@@ -75,7 +75,7 @@
                 </select>
               </div>
               <div class="setup-field"><label>Language</label>
-                <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option value="${l.code}">${l.label}</option>`).join('')}</select>
+                <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
               <button class="btn-start-game" onclick="COSY_GAME.start()">▶ Start journey</button>
             </div>`;
