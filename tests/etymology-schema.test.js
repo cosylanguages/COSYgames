@@ -73,4 +73,28 @@ if (fs.existsSync(universalPath)) {
     }
 }
 
-console.log(`\nALL TESTS PASSED! Successfully verified ${totalTested} etymology entries across all languages.`);
+// Test data/shared/etymology_network.js
+const networkPath = path.join(__dirname, '..', 'data', 'shared', 'etymology_network.js');
+assert.strictEqual(fs.existsSync(networkPath), true, 'data/shared/etymology_network.js missing');
+const networkData = require(networkPath);
+assert.strictEqual(Array.isArray(networkData), true, 'Network data should be an array');
+assert.strictEqual(networkData.length, 25, 'Network data should have exactly 25 entries');
+
+networkData.forEach((entry, idx) => {
+    totalTested++;
+    const prefix = `Network entry #${idx + 1} (${entry.root})`;
+    assert.ok(typeof entry.root === 'string' && entry.root.trim().length > 0, `${prefix}: missing 'root'`);
+    assert.ok(typeof entry.rootLanguage === 'string' && entry.rootLanguage.trim().length > 0, `${prefix}: missing 'rootLanguage'`);
+    assert.ok(typeof entry.meaning === 'string' && entry.meaning.trim().length > 0, `${prefix}: missing 'meaning'`);
+    assert.ok(typeof entry.detail === 'string' && entry.detail.trim().length > 0, `${prefix}: missing 'detail'`);
+    assert.ok(Array.isArray(entry.reflexes) && entry.reflexes.length >= 2, `${prefix}: 'reflexes' must have at least 2 reflexes`);
+
+    entry.reflexes.forEach((r, rIdx) => {
+        assert.ok(langs.includes(r.lang), `${prefix} reflex #${rIdx + 1}: invalid lang '${r.lang}'`);
+        assert.ok(typeof r.word === 'string' && r.word.trim().length > 0, `${prefix} reflex #${rIdx + 1}: missing 'word'`);
+        assert.ok(typeof r.note === 'string' && r.note.trim().length > 0, `${prefix} reflex #${rIdx + 1}: missing 'note'`);
+    });
+});
+console.log(`✓ Network: ${networkData.length} cross-language family entries verified`);
+
+console.log(`\nALL TESTS PASSED! Successfully verified ${totalTested} etymology & network entries.`);
