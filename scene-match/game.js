@@ -230,6 +230,44 @@
             this.renderHotspots();
             this.renderExistingPinnedLabels();
             this.updateProgress();
+            this.bindParallaxEvents();
+        },
+
+        bindParallaxEvents() {
+            const stage = document.querySelector('.sm-stage');
+            if (!stage) return;
+
+            stage.removeEventListener('mousemove', this.handleParallaxMove);
+            stage.removeEventListener('mouseleave', this.handleParallaxReset);
+
+            stage.addEventListener('mousemove', this.handleParallaxMove);
+            stage.addEventListener('mouseleave', this.handleParallaxReset);
+        },
+
+        handleParallaxMove(e) {
+            const stage = e.currentTarget;
+            const rect = stage.getBoundingClientRect();
+            const relX = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
+            const relY = (e.clientY - rect.top) / rect.height - 0.5;
+
+            const bgLayer = stage.querySelector('.sm-layer-bg');
+            const midLayer = stage.querySelector('.sm-layer-mid');
+            const fgLayer = stage.querySelector('.sm-layer-fg');
+
+            if (bgLayer) bgLayer.style.transform = `translate(${relX * -8}px, ${relY * -4}px)`;
+            if (midLayer) midLayer.style.transform = `translate(${relX * 10}px, ${relY * 5}px)`;
+            if (fgLayer) fgLayer.style.transform = `translate(${relX * 20}px, ${relY * 10}px)`;
+        },
+
+        handleParallaxReset(e) {
+            const stage = e.currentTarget;
+            const bgLayer = stage.querySelector('.sm-layer-bg');
+            const midLayer = stage.querySelector('.sm-layer-mid');
+            const fgLayer = stage.querySelector('.sm-layer-fg');
+
+            if (bgLayer) bgLayer.style.transform = 'translate(0px, 0px)';
+            if (midLayer) midLayer.style.transform = 'translate(0px, 0px)';
+            if (fgLayer) fgLayer.style.transform = 'translate(0px, 0px)';
         },
 
         renderCulturalOverlay() {
@@ -405,6 +443,37 @@
                 this.selectedWordId = null;
                 this.updateProgress();
 
+                // Projector context: Show "Found by [player]!" toast notification via TurnBanner
+                const currentMode = (window.ViewContext && typeof window.ViewContext.getMode === 'function')
+                    ? window.ViewContext.getMode()
+                    : (document.documentElement.dataset.context || 'projector');
+
+                if (currentMode === 'projector' && window.TurnBanner) {
+                    const hsData = window.COSY_SCENE_DATA[this.activeSceneId].hotspots.find(h => h.id === hsId);
+                    const matchedWord = hsData ? (hsData.words[this.activeLang] || hsData.words['en'] || hsId) : hsId;
+
+                    const toastContainer = document.createElement('div');
+                    toastContainer.style.position = 'fixed';
+                    toastContainer.style.top = '20px';
+                    toastContainer.style.left = '50%';
+                    toastContainer.style.transform = 'translateX(-50%)';
+                    toastContainer.style.zIndex = '9999';
+                    toastContainer.style.width = '90%';
+                    toastContainer.style.maxWidth = '600px';
+                    toastContainer.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
+
+                    new window.TurnBanner(toastContainer, {
+                        currentTurn: `🎯 Found ${matchedWord}!`,
+                        label: 'PROJECTOR ANNOUNCEMENT',
+                        nextTurn: 'Great Match!'
+                    });
+
+                    document.body.appendChild(toastContainer);
+                    setTimeout(() => {
+                        if (toastContainer.parentNode) toastContainer.parentNode.removeChild(toastContainer);
+                    }, 3000);
+                }
+
                 // Check Completion across active scenes
                 this.checkOverallCompletion();
             } else {
@@ -421,7 +490,7 @@
             }
         },
 
-        pinLabel(hsId) {
+        pinLabel(hsId, isNewMatch = false) {
             const labelsGroup = document.getElementById('sm-labels-group');
             const data = window.COSY_SCENE_DATA[this.activeSceneId];
             const hs = data && data.hotspots.find(h => h.id === hsId);
@@ -435,6 +504,33 @@
             const labelG = document.createElementNS('http://www.w3.org/2000/svg', 'g');
             labelG.setAttribute('id', `pinned-label-${hsId}`);
 
+            // Radiating Ring Pulse
+            const ring = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            ring.setAttribute('class', 'sm-pulse-ring');
+            ring.setAttribute('cx', hs.x + hs.width / 2);
+            ring.setAttribute('cy', hs.y + hs.height / 2);
+
+            // Pin Marker with shared .motion-pin-drop utility class
+            const pinG = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+            pinG.setAttribute('class', isNewMatch ? 'motion-pin-drop' : '');
+            pinG.setAttribute('transform', `translate(${hs.x + hs.width / 2 - 12}, ${hs.y + hs.height / 2 - 28})`);
+
+            const pinPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            pinPath.setAttribute('d', 'M12 0 C5.37 0 0 5.37 0 12 C0 21 12 32 12 32 C12 32 24 21 24 12 C24 5.37 18.63 0 12 0 Z');
+            pinPath.setAttribute('fill', 'var(--game-accent, #0F9B8E)');
+            pinPath.setAttribute('stroke', '#ffffff');
+            pinPath.setAttribute('stroke-width', '2');
+
+            const pinDot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            pinDot.setAttribute('cx', '12');
+            pinDot.setAttribute('cy', '10');
+            pinDot.setAttribute('r', '4');
+            pinDot.setAttribute('fill', '#ffffff');
+
+            pinG.appendChild(pinPath);
+            pinG.appendChild(pinDot);
+
+            // Label Rect & Text
             const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
             rect.setAttribute('class', 'sm-pinned-bg');
             rect.setAttribute('x', hs.labelX - approxWidth / 2);
@@ -449,6 +545,8 @@
             text.setAttribute('text-anchor', 'middle');
             text.textContent = textStr;
 
+            labelG.appendChild(ring);
+            labelG.appendChild(pinG);
             labelG.appendChild(rect);
             labelG.appendChild(text);
             labelsGroup.appendChild(labelG);
