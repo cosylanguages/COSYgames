@@ -88,11 +88,46 @@
         { words: ["Medico", "Infermiere", "Chirurgo", "Pilota"], odd: "Pilota", link: "Professioni sanitarie", oddReason: "Il pilota guida aerei, non in ospedale" }
       ],
       etymology: [
-        { word: "Ciao", origin: "Veneto (sciavo)", meaning: "Sono tuo schiavo (servitore)", story: "Deriva dal saluto veneziano 'scomputo de sciavo', divenuto un saluto informale universale." },
-        { word: "Biscotto", origin: "Latino (bis coctus)", meaning: "Cotto due volte", story: "Si riferisce alla tecnica di cuocere il pane due volte per conservarlo a lungo nei viaggi." },
-        { word: "Galassia", origin: "Greco (gala)", meaning: "Via Lattea / Latte", story: "Dalla leggenda greca delle gocce di latte scaturite nel cielo." },
-        { word: "Candidato", origin: "Latino (candidus)", meaning: "Bianco brillante", story: "Gli aspiranti alle cariche nell'antica Roma indossavano una toga candida." },
-        { word: "Nostalgia", origin: "Greco (nostos + algos)", meaning: "Dolore del ritorno a casa", story: "Coniato nel XVII secolo da un medico svizzero per descrivere il mal di patria dei soldati." }
+        {
+          word: "Ciao",
+          level: "medium",
+          options: ["Veneto","Latino","Greco","Arabo"],
+          answer: "Veneto",
+          detail: "Deriva dal saluto veneziano 'scomputo de sciavo', divenuto un saluto informale universale.",
+          path: "Veneto (sciavo) → Ciao"
+        },
+        {
+          word: "Biscotto",
+          level: "medium",
+          options: ["Latino","Greco","Arabo","Francese"],
+          answer: "Latino",
+          detail: "Si riferisce alla tecnica di cuocere il pane due volte per conservarlo a lungo nei viaggi.",
+          path: "Latino (bis coctus) → Biscotto"
+        },
+        {
+          word: "Galassia",
+          level: "medium",
+          options: ["Greco","Latino","Arabo","Francese"],
+          answer: "Greco",
+          detail: "Dalla leggenda greca delle gocce di latte scaturite nel cielo.",
+          path: "Greco (gala) → Galassia"
+        },
+        {
+          word: "Candidato",
+          level: "medium",
+          options: ["Latino","Greco","Arabo","Francese"],
+          answer: "Latino",
+          detail: "Gli aspiranti alle cariche nell'antica Roma indossavano una toga candida.",
+          path: "Latino (candidus) → Candidato"
+        },
+        {
+          word: "Nostalgia",
+          level: "medium",
+          options: ["Greco","Latino","Arabo","Francese"],
+          answer: "Greco",
+          detail: "Coniato nel XVII secolo da un medico svizzero per descrivere il mal di patria dei soldati.",
+          path: "Greco (nostos + algos) → Nostalgia"
+        }
       ],
       storychain: [
         { prompt: "In un piovoso martedì, Marco trovò una vecchia chiave nella sua tasca…", level: "starter" },

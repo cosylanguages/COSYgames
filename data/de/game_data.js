@@ -88,11 +88,46 @@
         { words: ['Arzt', 'Pfleger', 'Chirurg', 'Pilot'], odd: 'Pilot', link: 'Gesundheitsberufe', oddReason: 'Der Pilot fliegt Flugzeuge, nicht im Krankenhaus' }
       ],
       etymology: [
-        { word: 'Kindergarten', origin: 'Deutsch', meaning: 'Garten für Kinder (wörtlich)', story: '1837 von Friedrich Fröbel geprägt für frühkindliche Bildung.' },
-        { word: 'Roboter', origin: 'Tschechisch (robota)', meaning: 'Fronarbeit / Zwangsarbeit', story: 'Eingeführt von Karel Čapek in seinem Theaterstück R.U.R. im Jahr 1920.' },
-        { word: 'Zeitgeist', origin: 'Deutsch', meaning: 'Geist der Zeit', story: 'Von Herder und Goethe populär gemacht zur Beschreibung der intellektuellen Strömung einer Epoche.' },
-        { word: 'Ketchup', origin: 'Chinesisch (ke-tsiap)', meaning: 'Fermentierte Fischsaucen-Essenz', story: 'Von britischen Händlern aus Asien mitgebracht und später mit Tomaten abgewandelt.' },
-        { word: 'Panik', origin: 'Griechisch (Pan)', meaning: 'Dem Gott Pan zugeschrieben', story: 'Bezieht sich auf den altgriechischen Gott Pan, der plötzliche Furcht in Wäldern auslöste.' }
+        {
+          word: "Kindergarten",
+          level: "medium",
+          options: ["Deutsch","Griechisch","Latein","Tschechisch"],
+          answer: "Deutsch",
+          detail: "1837 von Friedrich Fröbel geprägt für frühkindliche Bildung.",
+          path: "Deutsch → Kindergarten"
+        },
+        {
+          word: "Roboter",
+          level: "medium",
+          options: ["Tschechisch","Deutsch","Griechisch","Latein"],
+          answer: "Tschechisch",
+          detail: "Eingeführt von Karel Čapek in seinem Theaterstück R.U.R. im Jahr 1920.",
+          path: "Tschechisch (robota) → Roboter"
+        },
+        {
+          word: "Zeitgeist",
+          level: "medium",
+          options: ["Deutsch","Griechisch","Latein","Tschechisch"],
+          answer: "Deutsch",
+          detail: "Von Herder und Goethe populär gemacht zur Beschreibung der intellektuellen Strömung einer Epoche.",
+          path: "Deutsch → Zeitgeist"
+        },
+        {
+          word: "Ketchup",
+          level: "medium",
+          options: ["Chinesisch","Deutsch","Griechisch","Latein"],
+          answer: "Chinesisch",
+          detail: "Von britischen Händlern aus Asien mitgebracht und später mit Tomaten abgewandelt.",
+          path: "Chinesisch (ke-tsiap) → Ketchup"
+        },
+        {
+          word: "Panik",
+          level: "medium",
+          options: ["Griechisch","Deutsch","Latein","Tschechisch"],
+          answer: "Griechisch",
+          detail: "Bezieht sich auf den altgriechischen Gott Pan, der plötzliche Furcht in Wäldern auslöste.",
+          path: "Griechisch (Pan) → Panik"
+        }
       ],
       storychain: [
         { prompt: 'An einem regnerischen Dienstag fand Max einen alten Schlüssel in seiner Tasche…', level: 'starter' },

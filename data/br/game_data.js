@@ -85,11 +85,46 @@
         { words: ['Médico', 'Enfermeiro', 'Cirurgião', 'Piloto'], odd: 'Piloto', link: 'Profissões de saúde', oddReason: 'O piloto pilota aviões, não no hospital' }
       ],
       etymology: [
-        { word: 'Saudade', origin: 'Latim (solitudo)', meaning: 'Solidão ou isolamento', story: 'Evoluiu no português para expressar o sentimento profundo de nostalgia e presença da ausência.' },
-        { word: 'Obrigado', origin: 'Latim (obligatus)', meaning: 'Atado por dever de retribuição', story: 'Expressa a ideia moral de ficar ligado em gratidão a quem ajudou.' },
-        { word: 'Galáxia', origin: 'Grego (gala)', meaning: 'Via Láctea / Leite', story: 'Deriva do mito grego sobre as gotas de leite derramadas no céu.' },
-        { word: 'Candidato', origin: 'Latim (candidus)', meaning: 'Branco brilhante', story: 'Na Roma Antiga, os postulantes a cargos vestiam uma toga perfeitamente branca.' },
-        { word: 'Nostalgia', origin: 'Grego (nostos + algos)', meaning: 'Dor do regresso a casa', story: 'Criado no século XVII para descrever as saudades profundas dos soldados da sua terra natal.' }
+        {
+          word: "Saudade",
+          level: "medium",
+          options: ["Latim","Grego","Árabe","Francês"],
+          answer: "Latim",
+          detail: "Evoluiu no português para expressar o sentimento profundo de nostalgia e presença da ausência.",
+          path: "Latim (solitudo) → Saudade"
+        },
+        {
+          word: "Obrigado",
+          level: "medium",
+          options: ["Latim","Grego","Árabe","Francês"],
+          answer: "Latim",
+          detail: "Expressa a ideia moral de ficar ligado em gratidão a quem ajudou.",
+          path: "Latim (obligatus) → Obrigado"
+        },
+        {
+          word: "Galáxia",
+          level: "medium",
+          options: ["Grego","Latim","Árabe","Francês"],
+          answer: "Grego",
+          detail: "Deriva do mito grego sobre as gotas de leite derramadas no céu.",
+          path: "Grego (gala) → Galáxia"
+        },
+        {
+          word: "Candidato",
+          level: "medium",
+          options: ["Latim","Grego","Árabe","Francês"],
+          answer: "Latim",
+          detail: "Na Roma Antiga, os postulantes a cargos vestiam uma toga perfeitamente branca.",
+          path: "Latim (candidus) → Candidato"
+        },
+        {
+          word: "Nostalgia",
+          level: "medium",
+          options: ["Grego","Latim","Árabe","Francês"],
+          answer: "Grego",
+          detail: "Criado no século XVII para descrever as saudades profundas dos soldados da sua terra natal.",
+          path: "Grego (nostos + algos) → Nostalgia"
+        }
       ],
       storychain: [
         { prompt: 'Numa terça-feira chuvosa, o Marcos encontrou uma chave antiga no bolso…', level: 'starter' },

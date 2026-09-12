@@ -94,7 +94,48 @@
         { words: ["Heureux", "Joyeux", "Mélancolique", "Chaleureux"], odd: "Mélancolique", link: "Adjectifs positifs", oddReason: "Mélancolique signifie triste" },
         { words: ["Médecin", "Infirmier", "Chirurgien", "Pilote"], odd: "Pilote", link: "Métiers de la santé", oddReason: "Le pilote pilote des avions, pas en hôpital" }
       ],
-      etymology: [],
+      etymology: [
+        {
+          word: "Candidat",
+          level: "starter",
+          options: ["Latin","Grec","Allemand","Italien"],
+          answer: "Latin",
+          detail: "Dans la Rome antique, les candidats portaient une toge d'une blancheur éclatante.",
+          path: "Latin (candidus) → Candidat"
+        },
+        {
+          word: "Nostalgie",
+          level: "elementary",
+          options: ["Grec","Latin","Allemand","Italien"],
+          answer: "Grec",
+          detail: "Du grec \"nostos\" (retour) et \"algos\" (douleur/chagrin).",
+          path: "Grec (nostos + algos) → Nostalgie"
+        },
+        {
+          word: "Algèbre",
+          level: "intermediate",
+          options: ["Arabe","Grec","Latin","Persan"],
+          answer: "Arabe",
+          detail: "De l'arabe \"al-jabr\" signifiant la réunion des parties transposées.",
+          path: "Arabe (al-jabr) → Algèbre"
+        },
+        {
+          word: "Silo",
+          level: "advanced",
+          options: ["Espagnol","Arabe","Grec","Latin"],
+          answer: "Espagnol",
+          detail: "Terme issu du grec ou du mozarabe pour le stockage des grains.",
+          path: "Espagnol (silo) → Silo"
+        },
+        {
+          word: "Galaxie",
+          level: "starter",
+          options: ["Grec","Latin","Arabe","Allemand"],
+          answer: "Grec",
+          detail: "De la légende grecque des gouttes de lait versées dans le ciel.",
+          path: "Grec (gala) → Galaxie"
+        }
+      ],
       storychain: []
     };
 

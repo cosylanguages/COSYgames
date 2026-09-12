@@ -107,7 +107,48 @@
         { words: ['Sunrise', 'Dawn', 'Dusk', 'Twilight'], odd: 'none', link: 'Times of day near sunrise/sunset', oddReason: 'All describe transitional light' },
         { words: ['Doctor', 'Nurse', 'Surgeon', 'Pilot'], odd: 'Pilot', link: 'Healthcare professions', oddReason: 'Pilot operates aircraft, not hospitals' }
       ],
-      etymology: [],
+      etymology: [
+        {
+          word: "Astronomy",
+          level: "starter",
+          options: ["Greek","Latin","Arabic","Sanskrit"],
+          answer: "Greek",
+          detail: "From Greek \"astron\" (star) + \"nomos\" (law).",
+          path: "Greek (astron + nomos) → Latin (astronomia) → Modern Astronomy"
+        },
+        {
+          word: "Library",
+          level: "starter",
+          options: ["Latin","French","Greek","Germanic"],
+          answer: "Latin",
+          detail: "From Latin \"liber\" meaning book.",
+          path: "Latin (liber) → Old French (librarie) → Modern Library"
+        },
+        {
+          word: "Salary",
+          level: "elementary",
+          options: ["Latin","Greek","Arabic","French"],
+          answer: "Latin",
+          detail: "From Latin \"sal\" (salt), referring to salt allowances given to Roman soldiers.",
+          path: "Latin (salarium) → Old French (salaire) → Modern Salary"
+        },
+        {
+          word: "Algebra",
+          level: "intermediate",
+          options: ["Arabic","Greek","Latin","Persian"],
+          answer: "Arabic",
+          detail: "From Arabic \"al-jabr\" meaning reunion of broken parts.",
+          path: "Arabic (al-jabr) → Medieval Latin → Modern Algebra"
+        },
+        {
+          word: "Robot",
+          level: "intermediate",
+          options: ["Czech","Russian","German","Polish"],
+          answer: "Czech",
+          detail: "Coined in Karel Čapek's play R.U.R. from \"robota\" (forced labour).",
+          path: "Czech (robota) → Modern Robot"
+        }
+      ],
       storychain: []
     };
 

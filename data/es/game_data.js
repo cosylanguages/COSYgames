@@ -91,7 +91,48 @@
         { words: ['Piano', 'Guitarra', 'Violín', 'Trompeta'], odd: 'none', link: 'Instrumentos musicales', oddReason: 'Todos son instrumentos' },
         { words: ['Médico', 'Enfermero', 'Cirujano', 'Piloto'], odd: 'Piloto', link: 'Profesiones sanitarias', oddReason: 'El piloto pilota aviones, no en un hospital' }
       ],
-      etymology: [],
+      etymology: [
+        {
+          word: "Candidato",
+          level: "starter",
+          options: ["Latín","Griego","Francés","Alemán"],
+          answer: "Latín",
+          detail: "En la antigua Roma, los aspirantes vestían una toga blanca brillante (candida).",
+          path: "Latín (candidus) → Candidato"
+        },
+        {
+          word: "Nostalgia",
+          level: "elementary",
+          options: ["Griego","Latín","Alemán","Francés"],
+          answer: "Griego",
+          detail: "Del griego \"nostos\" (regreso) y \"algos\" (dolor/anhelo).",
+          path: "Griego (nostos + algos) → Nostalgia"
+        },
+        {
+          word: "Álgebra",
+          level: "intermediate",
+          options: ["Árabe","Griego","Latín","Persa"],
+          answer: "Árabe",
+          detail: "Del árabe \"al-jabr\" que significa reintegración o restauración.",
+          path: "Árabe (al-jabr) → Álgebra"
+        },
+        {
+          word: "Aguacate",
+          level: "intermediate",
+          options: ["Náhuatl","Español","Maya","Quechua"],
+          answer: "Náhuatl",
+          detail: "Proviene del término náhuatl para la fruta por su forma característica.",
+          path: "Náhuatl (āhuacatl) → Aguacate"
+        },
+        {
+          word: "Galaxia",
+          level: "starter",
+          options: ["Griego","Latín","Árabe","Hebreo"],
+          answer: "Griego",
+          detail: "Del mito griego sobre las gotas de leche derramadas en el cielo.",
+          path: "Griego (gala) → Galaxia"
+        }
+      ],
       storychain: []
     };
 

@@ -1,0 +1,145 @@
+ INFO  Accepting connections at http://localhost:3000
+ HTTP  9/12/2026 12:18:09 PM ::1 HEAD /etymology-explorer/index.html
+ HTTP  9/12/2026 12:18:09 PM ::1 Returned 301 in 271 ms
+ HTTP  9/12/2026 12:18:27 PM ::1 GET /etymology-explorer/
+ HTTP  9/12/2026 12:18:27 PM ::1 Returned 200 in 9 ms
+ HTTP  9/12/2026 12:19:32 PM ::1 GET /etymology-explorer/
+ HTTP  9/12/2026 12:19:32 PM ::1 Returned 200 in 34 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /shared/css/cosy-tokens.css
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 5 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /shared/css/tokens.css
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /shared/css/motion.css
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /_engine/components.css
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /shared/css/games.css
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /shared/css/cosy-icons.css
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /shared/css/nav.css
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 22 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 21 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 21 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 22 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 23 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 19 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /shared/styles/game-styles.css
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /etymology-explorer/etymology-explorer.css
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /shared/utils/game-utils.js
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /shared/js/nav.js
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /_engine/view_context.js
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /_engine/turn_banner.js
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 20 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 10 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 9 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 9 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 9 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 11 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /_engine/score_dial.js
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /_engine/buzzer_button.js
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /_engine/components.js
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 14 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 14 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 5 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /_engine/game_session.js
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /_engine/scores.js
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /_engine/loader.js
+ HTTP  9/12/2026 12:19:33 PM ::1 GET /etymology-explorer/game.js
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 6 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 7 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 6 ms
+ HTTP  9/12/2026 12:19:33 PM ::1 Returned 200 in 7 ms
+ HTTP  9/12/2026 12:19:35 PM ::1 GET /data/English%20%F0%9F%87%AC%F0%9F%87%A7/game_data.js
+ HTTP  9/12/2026 12:19:35 PM ::1 GET /data/universal.js
+ HTTP  9/12/2026 12:19:35 PM ::1 Returned 200 in 6 ms
+ HTTP  9/12/2026 12:19:35 PM ::1 Returned 404 in 8 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /etymology-explorer/
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /shared/css/cosy-tokens.css
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /shared/css/tokens.css
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /shared/css/motion.css
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 3 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /_engine/components.css
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /shared/css/games.css
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /shared/css/cosy-icons.css
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /shared/css/nav.css
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /shared/styles/game-styles.css
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 3 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /etymology-explorer/etymology-explorer.css
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /shared/utils/game-utils.js
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /shared/js/nav.js
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /_engine/view_context.js
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /_engine/turn_banner.js
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 5 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /_engine/score_dial.js
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /_engine/buzzer_button.js
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /_engine/components.js
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 3 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /_engine/game_session.js
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /_engine/scores.js
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /_engine/loader.js
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 3 ms
+ HTTP  9/12/2026 12:20:16 PM ::1 GET /etymology-explorer/game.js
+ HTTP  9/12/2026 12:20:16 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:20:17 PM ::1 GET /data/English%20%F0%9F%87%AC%F0%9F%87%A7/game_data.js
+ HTTP  9/12/2026 12:20:17 PM ::1 GET /data/universal.js
+ HTTP  9/12/2026 12:20:17 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:20:17 PM ::1 Returned 404 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /etymology-explorer/
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /shared/css/cosy-tokens.css
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 0 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /shared/css/tokens.css
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /shared/css/motion.css
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /_engine/components.css
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /shared/css/games.css
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /shared/css/cosy-icons.css
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /shared/css/nav.css
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 3 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /shared/styles/game-styles.css
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /etymology-explorer/etymology-explorer.css
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 3 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /shared/utils/game-utils.js
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /shared/js/nav.js
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /_engine/view_context.js
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /_engine/turn_banner.js
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /_engine/score_dial.js
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /_engine/buzzer_button.js
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /_engine/components.js
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 4 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 4 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /_engine/game_session.js
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /_engine/scores.js
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /_engine/loader.js
+ HTTP  9/12/2026 12:22:00 PM ::1 GET /etymology-explorer/game.js
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 2 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 3 ms
+ HTTP  9/12/2026 12:22:00 PM ::1 Returned 200 in 4 ms
+ HTTP  9/12/2026 12:22:02 PM ::1 GET /data/en/game_data.js
+ HTTP  9/12/2026 12:22:02 PM ::1 GET /data/universal.js
+ HTTP  9/12/2026 12:22:02 PM ::1 Returned 200 in 1 ms
+ HTTP  9/12/2026 12:22:02 PM ::1 Returned 200 in 3 ms
+
+ INFO  Gracefully shutting down. Please wait...
