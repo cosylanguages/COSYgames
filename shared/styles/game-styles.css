@@ -181,13 +181,14 @@ body.cosy-game-theme {
   color: var(--cg-color-gold-dark);
 }
 
-/* Buttons */
+/* Buttons & Interactive Elements */
 .cg-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   padding: 0.65rem 1.25rem;
+  min-height: 44px;
   border-radius: var(--cg-radius-md);
   font-family: var(--cg-font-body);
   font-weight: 700;
@@ -196,15 +197,29 @@ body.cosy-game-theme {
   cursor: pointer;
   text-decoration: none;
   transition: var(--cg-transition);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cg-btn:focus-visible {
+  outline: 3px solid var(--cg-color-teal, #0D9488);
+  outline-offset: 2px;
 }
 
 .cg-btn-primary {
   background-color: var(--cg-color-teal);
   color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
 }
 
 .cg-btn-primary:hover {
   background-color: var(--cg-color-teal-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 148, 136, 0.3);
+}
+
+.cg-btn-primary:active {
+  transform: translateY(1px) scale(0.98);
 }
 
 .cg-btn-secondary {
@@ -214,6 +229,11 @@ body.cosy-game-theme {
 
 .cg-btn-secondary:hover {
   background-color: #D1D5DB;
+  transform: translateY(-1px);
+}
+
+.cg-btn-secondary:active {
+  transform: translateY(1px) scale(0.98);
 }
 
 .cg-btn-outline {
@@ -224,6 +244,25 @@ body.cosy-game-theme {
 
 .cg-btn-outline:hover {
   background-color: var(--cg-color-teal-light);
+  transform: translateY(-1px);
+}
+
+.report-issue-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: color 150ms ease;
+}
+
+.report-issue-link:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 /* Section titles & Hero */
@@ -281,6 +320,7 @@ html[data-context="projector"] .cg-btn,
   padding: 0.85rem 1.75rem;
   font-size: 1.1rem;
   border-width: 3px;
+  min-height: 52px;
 }
 
 html[data-context="projector"] .hero-section h1,
@@ -297,8 +337,8 @@ html[data-context="phone"] body,
 
 html[data-context="phone"] .cg-btn,
 [data-context="phone"] .cg-btn {
-  min-height: 44px;
-  padding: 0.6rem 1rem;
+  min-height: 48px;
+  padding: 0.65rem 1rem;
   width: 100%;
 }
 
@@ -321,7 +361,7 @@ html[data-context="online"] body,
 
 html[data-context="online"] .cg-btn,
 [data-context="online"] .cg-btn {
-  min-height: 40px;
+  min-height: 44px;
 }
 
 /* Mobile Responsiveness */
