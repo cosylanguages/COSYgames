@@ -46,6 +46,49 @@
   display: inline-block;
 }
 
+/* Context-dependent styling for TurnBanner */
+html[data-context="projector"] .turn-banner,
+[data-context="projector"] .turn-banner {
+  padding: 1.5rem 2.5rem;
+  border-width: 4px;
+}
+
+html[data-context="projector"] .turn-banner-label,
+[data-context="projector"] .turn-banner-label {
+  font-size: 1.15rem;
+  letter-spacing: 0.15em;
+}
+
+html[data-context="projector"] .turn-banner-current,
+[data-context="projector"] .turn-banner-current {
+  font-size: 3.2rem;
+}
+
+html[data-context="phone"] .turn-banner,
+[data-context="phone"] .turn-banner {
+  padding: 0.75rem 1rem;
+}
+
+html[data-context="phone"] .turn-banner-label,
+[data-context="phone"] .turn-banner-label {
+  font-size: 0.75rem;
+}
+
+html[data-context="phone"] .turn-banner-current,
+[data-context="phone"] .turn-banner-current {
+  font-size: 1.5rem;
+}
+
+html[data-context="online"] .turn-banner,
+[data-context="online"] .turn-banner {
+  padding: 1rem 1.75rem;
+}
+
+html[data-context="online"] .turn-banner-current,
+[data-context="online"] .turn-banner-current {
+  font-size: 2.2rem;
+}
+
 /* ── ScoreDial ─────────────────────────────────────────── */
 .score-dial {
   display: inline-flex;
@@ -172,6 +215,30 @@ html[data-context="online"] .score-dial-value,
 
 .buzzer-button-bounce {
   animation: buzzerHapticBounce var(--motion-duration-med, 300ms) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Context-dependent styling for BuzzerButton */
+html[data-context="projector"] .buzzer-button,
+[data-context="projector"] .buzzer-button {
+  width: 220px;
+  height: 220px;
+  font-size: 1.75rem;
+  border-width: 8px;
+}
+
+html[data-context="phone"] .buzzer-button,
+[data-context="phone"] .buzzer-button {
+  width: 120px;
+  height: 120px;
+  font-size: 1rem;
+  border-width: 4px;
+}
+
+html[data-context="online"] .buzzer-button,
+[data-context="online"] .buzzer-button {
+  width: 160px;
+  height: 160px;
+  font-size: 1.25rem;
 }
 
 @keyframes buzzerHapticBounce {

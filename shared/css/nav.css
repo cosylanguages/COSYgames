@@ -11,3 +11,29 @@
 .cg-theme-btn { background: none; border: none; font-size: 1.15rem; cursor: pointer;
   padding: 4px 8px; border-radius: var(--r-sm); }
 .cg-theme-btn:hover { background: var(--sage-mist); }
+
+/* Context Switcher Styling */
+.cosy-context-switcher-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.cosy-context-select {
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm, 10px);
+  border: 1px solid var(--border, rgba(0, 0, 0, 0.15));
+  background: var(--surface-color, #ffffff);
+  color: var(--text-color, #2a2a2a);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--motion-duration-fast, 150ms) ease;
+  min-height: 38px;
+}
+
+.cosy-context-select:hover,
+.cosy-context-select:focus {
+  border-color: var(--game-accent, var(--teal, #416b49));
+}
