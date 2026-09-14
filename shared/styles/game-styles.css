@@ -268,6 +268,62 @@ body.cosy-game-theme {
   animation: pulse 1.8s infinite ease-in-out;
 }
 
+/* Display Context Adaptations */
+
+/* Projector (Classroom / Offline) Context */
+html[data-context="projector"] body,
+[data-context="projector"] body {
+  font-size: 1.15rem;
+}
+
+html[data-context="projector"] .cg-btn,
+[data-context="projector"] .cg-btn {
+  padding: 0.85rem 1.75rem;
+  font-size: 1.1rem;
+  border-width: 3px;
+}
+
+html[data-context="projector"] .hero-section h1,
+[data-context="projector"] .hero-section h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* Phone (Mobile) Context */
+html[data-context="phone"] body,
+[data-context="phone"] body {
+  font-size: 0.95rem;
+  padding-bottom: max(1rem, var(--safe-bottom, 0px));
+}
+
+html[data-context="phone"] .cg-btn,
+[data-context="phone"] .cg-btn {
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  width: 100%;
+}
+
+html[data-context="phone"] .hero-section,
+[data-context="phone"] .hero-section {
+  padding: 2rem 1rem 1.25rem;
+}
+
+html[data-context="phone"] .game-grid,
+[data-context="phone"] .game-grid {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Online (Screen-Share / Laptop) Context */
+html[data-context="online"] body,
+[data-context="online"] body {
+  font-size: 1rem;
+}
+
+html[data-context="online"] .cg-btn,
+[data-context="online"] .cg-btn {
+  min-height: 40px;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .cg-header-nav {

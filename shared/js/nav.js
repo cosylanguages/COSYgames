@@ -13,5 +13,18 @@
     localStorage.setItem('cosy_theme', next);
     applyTheme(next);
   };
-  document.addEventListener('DOMContentLoaded', initTheme);
+
+  function initNavContextSwitcher() {
+    if (typeof window !== 'undefined' && window.ViewContext && typeof window.ViewContext.renderSwitcher === 'function') {
+      const target = document.querySelector('.cg-nav-right') || document.querySelector('.cg-header-nav') || document.querySelector('.cg-nav');
+      if (target && !target.querySelector('.cosy-context-switcher-wrapper')) {
+        window.ViewContext.renderSwitcher(target);
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    initTheme();
+    initNavContextSwitcher();
+  });
 })();
