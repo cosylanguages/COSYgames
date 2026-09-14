@@ -50,7 +50,7 @@
 .game-overlay { display: none; position: fixed; inset: 0; background: var(--cream); z-index: 2000; flex-direction: column; overflow-y: auto; }
 .game-overlay.open { display: flex; }
 .go-topbar { background: rgba(26, 43, 29, 0.92); backdrop-filter: blur(12px); color: #fff; padding: 1.15rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; flex-shrink: 0; position: sticky; top: 0; z-index: 10; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-bottom: 1px solid rgba(255,255,255,0.08); }
-.go-back { background: rgba(255, 255, 255, 0.08); border: 1.5px solid rgba(255,255,255,.15); color: #fff; border-radius: 100px; font-family: 'DM Sans', sans-serif; font-size: .8rem; font-weight: 600; padding: 7px 16px; cursor: pointer; transition: all .2s ease; display: flex; align-items: center; gap: 6px; }
+.go-back { background: rgba(255, 255, 255, 0.08); border: 1.5px solid rgba(255,255,255,.15); color: #fff; border-radius: 100px; font-family: 'DM Sans', sans-serif; font-size: .8rem; font-weight: 600; padding: 7px 16px; min-height: 44px; cursor: pointer; transition: all .2s ease; display: inline-flex; align-items: center; gap: 6px; }
 .go-back:hover { background: rgba(255, 255, 255, 0.18); border-color: rgba(255,255,255,.3); transform: translateX(-2px); }
 .go-back:active { transform: scale(0.97); }
 .go-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; letter-spacing: 0.01em; color: #fff; }
@@ -62,7 +62,7 @@
 .setup-screen h2 { font-family: var(--font-serif); font-weight: 600; font-size: 2rem; margin-bottom: .2rem; color: var(--ink); }
 .setup-screen p { color: var(--ink-muted); font-size: .95rem; margin-bottom: 0.5rem; line-height: 1.6; }
 .setup-options { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem; }
-.setup-opt { border: 1.5px solid var(--border); background: var(--warm-white); border-radius: var(--r-md); padding: .9rem 1.2rem; cursor: pointer; transition: all .2s cubic-bezier(0.25, 0.8, 0.25, 1); font-family: 'DM Sans', sans-serif; font-size: .88rem; color: var(--ink-muted); display: flex; align-items: center; gap: 8px; text-align: left; }
+.setup-opt { border: 1.5px solid var(--border); background: var(--warm-white); border-radius: var(--r-md); padding: .9rem 1.2rem; min-height: 44px; cursor: pointer; transition: all .2s cubic-bezier(0.25, 0.8, 0.25, 1); font-family: 'DM Sans', sans-serif; font-size: .88rem; color: var(--ink-muted); display: flex; align-items: center; gap: 8px; text-align: left; }
 .setup-opt:hover { border-color: var(--teal); background: var(--warm-white); transform: translateY(-1px); }
 .setup-opt.sel { border-color: var(--teal); background: var(--teal-light); color: var(--teal); font-weight: 700; box-shadow: 0 4px 12px rgba(107, 143, 113, 0.1); }
 .setup-field label { display: block; font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-faint); margin-bottom: .6rem; }
@@ -85,7 +85,7 @@
 /* ── GAME INPUTS ── */
 .input-row { display: flex; gap: 10px; margin-bottom: 1.25rem; width: 100%; }
 .input-row .game-input { flex: 1; }
-.game-input { width: 100%; padding: 11px 18px; border: 1.5px solid var(--border); border-radius: var(--r-md); font-family: 'DM Sans', sans-serif; font-size: .95rem; color: var(--ink); background: var(--cream); transition: all .2s ease; box-shadow: inset 0 2px 4px rgba(0,0,0,0.01); }
+.game-input { width: 100%; padding: 11px 18px; border: 1.5px solid var(--border); border-radius: var(--r-md); font-family: 'DM Sans', sans-serif; font-size: .95rem; color: var(--ink); background: var(--cream); transition: all .2s ease; box-shadow: inset 0 2px 4px rgba(0,0,0,0.01); min-height: 44px; }
 .game-input:hover { border-color: var(--teal-hover, #6b8f71); }
 .game-input:focus { border-color: var(--teal); background: var(--surface-color); box-shadow: 0 0 0 3px rgba(107, 143, 113, 0.15); outline: none; }
 .game-input.ok { border-color: var(--green); background: var(--green-light); }
@@ -107,7 +107,7 @@
 .score-bar { background: var(--sage-light); border-radius: var(--r-lg); padding: .85rem 1.2rem; display: flex; gap: 1.5rem; margin-bottom: 1rem; border: 1px solid var(--border); }
 .sb-val { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.2rem; line-height: 1; color: var(--sage-dark); }
 .word-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1rem; }
-.word-opt { border: 1.5px solid var(--border); background: var(--warm-white); border-radius: var(--r-md); padding: .9rem 1.2rem; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: .92rem; color: var(--ink); transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); text-align: left; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+.word-opt { border: 1.5px solid var(--border); background: var(--warm-white); border-radius: var(--r-md); padding: .9rem 1.2rem; min-height: 48px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: .92rem; color: var(--ink); transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); text-align: left; box-shadow: 0 2px 4px rgba(0,0,0,0.02); display: flex; align-items: center; }
 .word-opt:hover { border-color: var(--teal); background: var(--surface-color); transform: translateY(-1px); box-shadow: 0 4px 10px rgba(107, 143, 113, 0.1); }
 .word-opt:active { transform: translateY(1px); }
 .word-opt.correct { border-color: var(--green) !important; background: var(--green-light) !important; color: var(--green) !important; font-weight: 700; box-shadow: 0 4px 12px rgba(58,122,74,0.15) !important; }
@@ -181,7 +181,7 @@
 
 @media(max-width: 800px) {
   .game-grid { grid-template-columns: 1fr; }
-  .go-topbar { padding: 1rem; }
+  .go-topbar { padding: 0.85rem 1rem; }
   .go-body { padding: 1.5rem 1rem calc(120px + var(--safe-bottom, 0px)); }
   .game-card { padding: 1.5rem; }
   .setup-options { grid-template-columns: 1fr; gap: 0.75rem; }
@@ -276,6 +276,95 @@
 }
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+/* ── FOOTER COMPONENT ── */
+.cg-footer {
+  margin-top: 2rem;
+  padding: 2.5rem 1.5rem max(2.5rem, var(--safe-bottom, 16px));
+  background: var(--surface-color, #1F2937);
+  color: var(--text-color, #F9FAFB);
+  border-top: 1px solid var(--border, rgba(0, 0, 0, 0.12));
+  text-align: center;
+  transition: all var(--motion-duration-med, 300ms) ease;
+}
+
+.cg-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cg-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-serif, 'Fraunces', serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cg-footer-desc {
+  margin: 0;
+  color: var(--ink-muted, #9CA3AF);
+  font-size: 0.95rem;
+}
+
+.cg-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.cg-footer-links a {
+  color: var(--teal, #0D9488);
+  text-decoration: none;
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.25rem;
+  transition: color var(--motion-duration-fast, 150ms) ease;
+}
+
+.cg-footer-links a:hover {
+  text-decoration: underline;
+  color: var(--teal-hover, #0F766E);
+}
+
+.cg-footer-copy {
+  font-size: 0.85rem;
+  color: var(--ink-faint, #6B7280);
+  margin-top: 0.5rem;
+}
+
+/* Context Overrides for Footer */
+html[data-context="projector"] .cg-footer,
+[data-context="projector"] .cg-footer {
+  padding: 3.5rem 2rem;
+  font-size: 1.15rem;
+}
+
+html[data-context="projector"] .cg-footer-brand,
+[data-context="projector"] .cg-footer-brand {
+  font-size: 1.6rem;
+}
+
+html[data-context="phone"] .cg-footer,
+[data-context="phone"] .cg-footer {
+  padding: 1.5rem 1rem max(2rem, var(--safe-bottom, 16px));
+}
+
+html[data-context="phone"] .cg-footer-links,
+[data-context="phone"] .cg-footer-links {
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /* ── Dark Mode Adaptations for Games ── */
@@ -467,7 +556,8 @@ body.theme-dark .btn-gender {
 /* Standalone Overlay, Loader & Toast Utilities */
 .game-overlay-standalone {
     position: relative;
-    height: calc(100vh - 62px);
+    height: auto;
+    min-height: calc(100vh - 62px);
     z-index: 1;
 }
 

@@ -1,16 +1,76 @@
-.cg-nav { position: sticky; top: 0; z-index: 100; display: flex;
-  align-items: center; justify-content: space-between; padding: 0.9rem 1.5rem;
-  background: var(--warm-white); border-bottom: 1px solid var(--border); }
-.cg-nav-brand { font-family: var(--font-serif); font-weight: 600; font-size: 1.05rem;
-  color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 8px; }
-.cg-nav-right { display: flex; align-items: center; gap: 14px; }
-.cg-nav-hub-link { font-size: 0.85rem; color: var(--ink-muted); text-decoration: none;
-  font-weight: 600; display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; }
-.cg-nav-brand { min-height: 44px; }
-.cg-nav-hub-link:hover { color: var(--teal); }
-.cg-theme-btn { background: none; border: none; font-size: 1.15rem; cursor: pointer;
-  padding: 4px 8px; border-radius: var(--r-sm); }
-.cg-theme-btn:hover { background: var(--sage-mist); }
+/* COSYgames Navigation Bar CSS */
+
+.cg-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: var(--surface-color, var(--warm-white, #FFFEFB));
+  border-bottom: 1px solid var(--border, rgba(74, 107, 80, 0.12));
+  box-shadow: var(--shadow-sm, 0 2px 12px rgba(0, 0, 0, 0.05));
+  transition: all var(--motion-duration-med, 300ms) ease;
+}
+
+.cg-nav-brand {
+  font-family: var(--font-serif, 'Fraunces', Georgia, serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-color, var(--ink, #2a2a2a));
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+}
+
+.cg-nav-brand:hover {
+  color: var(--game-accent, var(--teal, #416b49));
+}
+
+.cg-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cg-nav-hub-link {
+  font-size: 0.85rem;
+  color: var(--ink-muted, #4a4a4a);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 6px;
+  border-radius: var(--radius-sm, 8px);
+  transition: color var(--motion-duration-fast, 150ms) ease;
+}
+
+.cg-nav-hub-link:hover {
+  color: var(--game-accent, var(--teal, #416b49));
+}
+
+.cg-theme-btn {
+  background: none;
+  border: 1px solid transparent;
+  font-size: 1.15rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: var(--r-sm, 8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--motion-duration-fast, 150ms) ease;
+}
+
+.cg-theme-btn:hover {
+  background: var(--sage-mist, rgba(65, 107, 73, 0.1));
+}
 
 /* Context Switcher Styling */
 .cosy-context-switcher-wrapper {
@@ -34,6 +94,45 @@
 }
 
 .cosy-context-select:hover,
-.cosy-context-select:focus {
+.cosy-context-select:focus-visible {
   border-color: var(--game-accent, var(--teal, #416b49));
+  box-shadow: 0 0 0 3px var(--game-accent-dim, rgba(65, 107, 73, 0.15));
+}
+
+/* Context-dependent adaptations for Navbar */
+html[data-context="projector"] .cg-nav,
+[data-context="projector"] .cg-nav {
+  padding: 1rem 2rem;
+  border-bottom-width: 3px;
+}
+
+html[data-context="projector"] .cg-nav-brand,
+[data-context="projector"] .cg-nav-brand {
+  font-size: 1.4rem;
+}
+
+html[data-context="projector"] .cosy-context-select,
+[data-context="projector"] .cosy-context-select {
+  font-size: 1.05rem;
+  padding: 0.5rem 0.85rem;
+  min-height: 48px;
+}
+
+html[data-context="phone"] .cg-nav,
+[data-context="phone"] .cg-nav {
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 640px) {
+  .cg-nav-hub-link {
+    display: none; /* Hide verbose external links on narrow phones to preserve game area */
+  }
+  .cg-nav-right {
+    gap: 8px;
+  }
+  .cosy-context-select {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.4rem;
+    max-width: 140px;
+  }
 }
