@@ -31,3 +31,11 @@ const COSYGame = {
     return this.round >= this.maxRounds;
   }
 };
+
+if (typeof window !== 'undefined') {
+  window.COSYGame = COSYGame;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = COSYGame;
+}

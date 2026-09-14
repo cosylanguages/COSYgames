@@ -20,3 +20,11 @@ const COSYScores = {
       .sort((a, b) => b.score - a.score)[0] || null;
   }
 };
+
+if (typeof window !== 'undefined') {
+  window.COSYScores = COSYScores;
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = COSYScores;
+}
