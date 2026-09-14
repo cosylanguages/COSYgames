@@ -53,8 +53,8 @@
             const data = COSYLoader.getGameData(lang);
 
             let source = data.wordlinker || [{words:['Bridge','Arch','Pillar','Tower'], odd:'none', link:'Architectural structures', oddReason:''}];
-            if (mode === 'odd') source = source.filter(q => q.odd !== 'none');
-            if (mode === 'link') source = source.filter(q => q.odd === 'none');
+            if (mode === 'odd') source = source.filter(q => q.odd && q.odd !== 'none');
+            if (mode === 'link') source = source.filter(q => !q.odd || q.odd === 'none');
 
             const drawBag = gameUtils.createDrawBag(source.length ? source : [{words:['Bridge','Arch','Pillar','Tower'], odd:'none', link:'Architectural structures', oddReason:''}]);
             completedBridges = [];
@@ -67,7 +67,7 @@
                 const q = drawBag.next();
                 const body = document.getElementById('go-body');
                 const shuffled = shuffle(q.words);
-                const hasOdd = q.odd !== 'none';
+                const hasOdd = Boolean(q.odd && q.odd !== 'none');
                 selectedPlank = null;
 
                 const isPhone = document.documentElement.dataset.context === 'phone';
@@ -83,10 +83,10 @@
                     ${isPhone ? '<div class="phone-tap-instruction">📱 Tap word A then tap word B to magnetically bridge them together</div>' : ''}
 
                     <div class="game-card">
-                      <div class="game-label">🧲 ${hasOdd ? 'Spot the unbridgeable odd word out' : 'Tap pairs to forge a magnetic bridge connection'}</div>
+                      <div class="game-label">🧲 ${hasOdd ? 'Spot the unbridgeable odd word out or pair connected words' : 'Tap valid connected word pairs to forge a magnetic bridge connection'}</div>
 
                       <div class="word-options-grid" id="plank-grid">
-                        ${shuffled.map(w => `<button class="word-plank" data-word="${gameUtils.escapeAttr(w)}" data-odd="${gameUtils.escapeAttr(q.odd)}" data-link="${gameUtils.escapeAttr(q.link)}" data-reason="${gameUtils.escapeAttr(q.oddReason || "")}" data-hasodd="${hasOdd}">${w}</button>`).join('')}
+                        ${shuffled.map(w => `<button class="word-plank" data-word="${gameUtils.escapeAttr(w)}" data-odd="${gameUtils.escapeAttr(q.odd || 'none')}" data-link="${gameUtils.escapeAttr(q.link || '')}" data-reason="${gameUtils.escapeAttr(q.oddReason || '')}" data-hasodd="${hasOdd}">${w}</button>`).join('')}
                       </div>
 
                       <div class="feedback-bar" id="wl-fb"></div>
@@ -113,21 +113,21 @@
 
                 body.querySelectorAll('.word-plank').forEach(btn => {
                   btn.addEventListener('click', () => {
-                    COSY_GAME.handlePlankTap(btn, btn.dataset.word, btn.dataset.odd, btn.dataset.link, btn.dataset.reason, btn.dataset.hasodd === 'true');
+                    COSY_GAME.handlePlankTap(btn, btn.dataset.word, btn.dataset.odd, btn.dataset.link, btn.dataset.reason, btn.dataset.hasodd === 'true', q);
                   });
                 });
 
                 window.COSY_GAME._nextWL = nextWordLinker;
             }
 
-            window.COSY_GAME.handlePlankTap = (el, word, odd, link, reason, hasOdd) => {
+            window.COSY_GAME.handlePlankTap = (el, word, odd, link, reason, hasOdd, currentQ) => {
                 if (el.disabled || el.classList.contains('linked')) return;
 
                 const fb = document.getElementById('wl-fb');
                 const next = document.getElementById('wl-next');
 
                 if (hasOdd) {
-                    // Odd one out mode
+                    // Odd one out mode or single choice odd selection
                     document.querySelectorAll('.word-plank').forEach(b => b.disabled = true);
                     if (next) next.style.display = 'inline-block';
 
@@ -171,10 +171,35 @@
                         return;
                     }
 
-                    // Complete magnetic pair
                     const wordA = selectedPlank.word;
                     const wordB = word;
 
+                    // Match validation: Both words must belong to the valid category set and neither can be odd
+                    const validCategoryWords = (currentQ.words || []).filter(w => w !== odd);
+                    const isValidPair = validCategoryWords.includes(wordA) && validCategoryWords.includes(wordB);
+
+                    if (!isValidPair) {
+                        // Incorrect pair!
+                        el.classList.add('wrong');
+                        selectedPlank.el.classList.add('wrong');
+
+                        setTimeout(() => {
+                            if (el) el.classList.remove('wrong');
+                            if (selectedPlank?.el) {
+                                selectedPlank.el.classList.remove('selected', 'wrong');
+                            }
+                            selectedPlank = null;
+                        }, 800);
+
+                        if (fb) {
+                            fb.className = 'feedback-bar show bad';
+                            fb.innerHTML = `✗ These words don't form a valid bridge connection! Try connecting matching words.`;
+                        }
+                        if (window.gameUtils && typeof window.gameUtils.playGameSound === 'function') window.gameUtils.playGameSound('error');
+                        return;
+                    }
+
+                    // Complete valid magnetic pair
                     selectedPlank.el.classList.remove('selected');
                     selectedPlank.el.classList.add('linked', 'motion-slide-chain', 'magnetic-snap');
                     el.classList.add('linked', 'motion-slide-chain', 'magnetic-snap');

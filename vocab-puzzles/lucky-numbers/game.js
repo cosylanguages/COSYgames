@@ -6,10 +6,25 @@
     const GAME_ID = 'bingo';
     const GAME_TITLE = 'Lucky Numbers 🔢';
     const GAME_META = 'Puzzles · Solo or group';
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
-    const BINGO_LVLS = ['Bingo 1 (0-9)', 'Bingo 2 (10-19)', 'Bingo 3 (20-99)', 'Bingo 5 (Random)', 'Alphabet (A-Z)', 'Listening Practice 👂'];
+    const LANG_OPTS = ['English 🇬🇧', 'Français 🇫🇷', 'Italiano 🇮🇹', 'Русский 🇷🇺', 'Ελληνικά 🇬🇷', 'հայերեն 🇦🇲', 'ქართული 🇬🇪'];
+    const BINGO_LVLS = ['Bingo 1 (0-9)', 'Bingo 2 (10-19)', 'Bingo 3 (20-99)', 'Bingo 5 (Random)', 'Alphabet Practice 🔤'];
+
+    window.alphabetsData = window.alphabetsData || {
+        'en': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        'fr': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        'it': 'ABCDEFGHILMNOPQRSTUVZ',
+        'ru': 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ',
+        'el': 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ',
+        'hy': 'ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇՈՉՊՋՌՍՎՏՐՑՒՓՔՕՖ',
+        'ka': 'აბგდევზთიკლმნოპჟრსტუფქღყშჩცძწჭხჯჰ'
+    };
 
     function shuffle(arr) { return [...arr].sort(() => Math.random() - .5); }
+
+    function getAlphabetPool(lang) {
+        const str = window.alphabetsData[lang] || window.alphabetsData['en'];
+        return str.split('');
+    }
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
@@ -55,13 +70,11 @@
             await COSYLoader.loadLevelData(lang, level);
             COSYGame.init(GAME_ID, lang, level);
 
-            const isListening = type.includes('Listening');
-
             if (role === 'caller') {
                 body.innerHTML = `
                     <div class="game-card game-card-centered">
                         <div class="game-label">📣 Lucky Caller</div>
-                        <div class="game-prompt game-prompt-large" id="bingo-call">${isListening ? '👂' : '---'}</div>
+                        <div class="game-prompt game-prompt-large" id="bingo-call">---</div>
                         <div class="game-sub" id="bingo-call-word">Get ready to call!</div>
                         <div class="game-controls game-controls-centered-spaced">
                             <button class="btn-g-primary" id="btn-bingo-next">Next Item 🎲</button>
@@ -72,8 +85,7 @@
 
                 let pool = [];
                 if (type.includes('Alphabet')) {
-                    const alpha = (window.alphabetsData && window.alphabetsData[lang]) ? window.alphabetsData[lang].split('') : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-                    pool = alpha;
+                    pool = getAlphabetPool(lang);
                 } else if (type.includes('Bingo 1')) {
                     pool = Array.from({length: 10}, (_, i) => i);
                 } else if (type.includes('Bingo 2')) {
@@ -99,13 +111,8 @@
                     const item = drawBag.next();
                     drawnCount++;
                     const callEl = document.getElementById('bingo-call');
-                    if (isListening) {
-                        callEl.textContent = '👂';
-                        callEl.onclick = () => { callEl.textContent = item; };
-                        callEl.style.cursor = 'pointer';
-                    } else {
-                        callEl.textContent = item;
-                    }
+                    callEl.textContent = item;
+
                     const hist = document.getElementById('bingo-history');
                     hist.textContent = (hist.textContent ? hist.textContent + ', ' : '') + item;
                     if (gameUtils?.speak) gameUtils.speak(item.toString(), lang);
@@ -132,7 +139,7 @@
                 const grid = document.getElementById('bingo-grid');
                 let pool = [];
                 if (type.includes('Alphabet')) {
-                    pool = (window.alphabetsData && window.alphabetsData[lang]) ? window.alphabetsData[lang].split('') : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+                    pool = getAlphabetPool(lang);
                 } else if (type.includes('Bingo 1')) {
                     pool = Array.from({length: 10}, (_, i) => i);
                 } else if (type.includes('Bingo 2')) {

@@ -328,24 +328,6 @@
     ]
   },
   {
-    "id": "what-gender-is-it",
-    "folder_path": "what-gender-is-it/",
-    "display_name": "What Gender Is It?",
-    "category": "Vocab & Puzzles",
-    "cefr_levels": [
-      "A1",
-      "A2",
-      "B1",
-      "B2",
-      "C1",
-      "C2"
-    ],
-    "skill_focus": "grammar",
-    "mode": [
-      "solo"
-    ]
-  },
-  {
     "id": "this-or-that",
     "folder_path": "this-or-that/",
     "display_name": "This or That?",
