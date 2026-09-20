@@ -7,7 +7,14 @@
             },
             {
                   "text": "Un recuerdo de la infancia 🧸",
-                  "level": "starter"
+                  "level": "starter",
+                  "hints": [
+                        "¿Qué edad tenías?",
+                        "¿Dónde estabas?",
+                        "¿Con quién estabas?",
+                        "¿Qué pasó?",
+                        "¿Por qué lo recuerdas?"
+                  ]
             },
             {
                   "text": "Tu estación favorita y por qué 🍂",
@@ -96,6 +103,215 @@
             {
                   "text": "El equilibrio entre la ambición y la tranquilidad ⚖️",
                   "level": "advanced"
+            },
+            {
+                  "text": "Una vacación que recuerdas",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Adónde fuiste?",
+                        "¿Con quién fuiste?",
+                        "¿Qué hiciste allí?",
+                        "¿Cómo era el clima?",
+                        "¿Cuál fue el mejor momento?"
+                  ]
+            },
+            {
+                  "text": "Tu restaurante o café favorito",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Dónde está?",
+                        "¿Qué comida sirven?",
+                        "¿Por qué te gusta?",
+                        "¿Con quién vas?",
+                        "¿Cuándo fue la última vez que fuiste?"
+                  ]
+            },
+            {
+                  "text": "Cómo vas al trabajo o a la escuela",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Cómo viajas — autobús, coche, bici?",
+                        "¿Cuánto tiempo tardas?",
+                        "¿Disfrutas del viaje?",
+                        "¿Es caro?",
+                        "¿Qué haces por el camino?"
+                  ]
+            },
+            {
+                  "text": "Lo que haces para relajarte",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Qué te ayuda a relajarte?",
+                        "¿Prefieres estar solo o con gente?",
+                        "¿Con qué frecuencia te relajas de verdad?",
+                        "¿Tienes un lugar favorito para relajarte?",
+                        "¿Es fácil relajarse o te resulta difícil?"
+                  ]
+            },
+            {
+                  "text": "Una película que viste hace poco",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Cómo se llamaba la película?",
+                        "¿De qué trataba?",
+                        "¿Te gustó?",
+                        "¿Quién salía en ella?",
+                        "¿La recomendarías?"
+                  ]
+            },
+            {
+                  "text": "Tu fin de semana ideal",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Qué harías el viernes por la noche?",
+                        "¿Saldrías o te quedarías en casa?",
+                        "¿Viajarías a algún lugar?",
+                        "¿Con quién pasarías el tiempo?",
+                        "¿Qué comerías?"
+                  ]
+            },
+            {
+                  "text": "Una persona a la que admiras",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Quién es esta persona?",
+                        "¿A qué se dedica?",
+                        "¿Por qué la admiras?",
+                        "¿La has conocido en persona?",
+                        "¿Qué puedes aprender de ella?"
+                  ]
+            },
+            {
+                  "text": "El destino de vacaciones de tus sueños",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Adónde irías?",
+                        "¿Por qué este lugar?",
+                        "¿Con quién irías?",
+                        "¿Qué harías allí?",
+                        "¿Cuánto tiempo te quedarías?"
+                  ]
+            },
+            {
+                  "text": "Tu relación con tu teléfono",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Cuántas horas al día usas el teléfono?",
+                        "¿Para qué lo usas más?",
+                        "¿Podrías vivir sin él una semana?",
+                        "¿Te ayuda o te distrae?",
+                        "¿Lo miras nada más levantarte por la mañana?"
+                  ]
+            },
+            {
+                  "text": "Algo divertido que te pasó",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Cuándo pasó esto?",
+                        "¿Dónde estabas?",
+                        "¿Con quién estabas?",
+                        "¿Qué pasó exactamente?",
+                        "¿Todavía te ríes de ello ahora?"
+                  ]
+            },
+            {
+                  "text": "Tus aficiones",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Qué haces en tu tiempo libre?",
+                        "¿Cuándo empezaste esta afición?",
+                        "¿La haces solo o con otros?",
+                        "¿Es cara?",
+                        "¿Qué es lo que te gusta de ella?"
+                  ]
+            },
+            {
+                  "text": "El clima donde vives",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Cómo es el clima normalmente?",
+                        "¿Cuál es tu tipo de clima favorito?",
+                        "¿Afecta el clima a tu estado de ánimo?",
+                        "¿Cuál es el peor clima que recuerdas?",
+                        "¿Qué haces los días de lluvia?"
+                  ]
+            },
+            {
+                  "text": "Un cumpleaños que recuerdas",
+                  "level": "elementary",
+                  "hints": [
+                        "¿De quién era el cumpleaños?",
+                        "¿Dónde fue la celebración?",
+                        "¿Qué hicisteis?",
+                        "¿Hubo alguna sorpresa?",
+                        "¿Qué lo hizo especial?"
+                  ]
+            },
+            {
+                  "text": "Cosas que te gustan de donde vives",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Qué es lo que más te gusta de tu pueblo o ciudad?",
+                        "¿Es un buen lugar para las familias?",
+                        "¿Qué hay para hacer allí?",
+                        "¿Qué cambiarías?",
+                        "¿Se lo recomendarías a un amigo?"
+                  ]
+            },
+            {
+                  "text": "Un domingo típico",
+                  "level": "elementary",
+                  "hints": [
+                        "¿A qué hora te despiertas el domingo?",
+                        "¿Tienes una rutina?",
+                        "¿Cocinas una comida grande?",
+                        "¿Descansas o estás ocupado?",
+                        "¿Es el domingo tu día favorito?"
+                  ]
+            },
+            {
+                  "text": "Comida de tu país",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Cuál es un plato tradicional?",
+                        "¿Lo cocinas en casa?",
+                        "¿Cuándo lo come la gente?",
+                        "¿Es difícil de preparar?",
+                        "¿Se lo recomendarías a un extranjero?"
+                  ]
+            },
+            {
+                  "text": "Algo que compraste hace poco",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Qué compraste?",
+                        "¿Dónde lo compraste?",
+                        "¿Fue caro?",
+                        "¿Lo necesitabas o simplemente lo querías?",
+                        "¿Estás contento con la compra?"
+                  ]
+            },
+            {
+                  "text": "Tu aplicación favorita",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Qué aplicación usas más?",
+                        "¿Para qué la usas?",
+                        "¿Cuándo empezaste a usarla?",
+                        "¿La recomendarías?",
+                        "¿Podrías vivir sin ella?"
+                  ]
+            },
+            {
+                  "text": "Lo que comiste ayer",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Qué desayunaste?",
+                        "¿Qué almorzaste?",
+                        "¿Cocinaste o comiste fuera?",
+                        "¿Fue un día típico de comidas?",
+                        "¿Qué fue lo mejor que comiste?"
+                  ]
             }
       ],
       "opinions": [
@@ -150,6 +366,171 @@
             {
                   "text": "La privacidad total es imposible en la era digital actual.",
                   "level": "advanced"
+            },
+            {
+                  "text": "Los fines de semana son demasiado cortos.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Qué haces los fines de semana?",
+                        "¿Cómo te sientes el domingo por la noche?",
+                        "¿Qué harías con un fin de semana de tres días?",
+                        "¿Trabajas o estudias los fines de semana?",
+                        "¿Cuál es el fin de semana perfecto para ti?"
+                  ]
+            },
+            {
+                  "text": "Es de mala educación llegar tarde.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Sueles llegar a tiempo?",
+                        "¿Cuánto tiempo esperas a un amigo?",
+                        "¿Está bien llegar 10 minutos tarde?",
+                        "¿Es importante la puntualidad en tu cultura?",
+                        "¿Qué haces cuando alguien llega muy tarde?"
+                  ]
+            },
+            {
+                  "text": "La gente es más amable en los pueblos pequeños.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Dónde vives: en un pueblo o en una ciudad?",
+                        "¿Son amigables tus vecinos?",
+                        "¿Habla la gente con extraños donde vives?",
+                        "¿Has vivido alguna vez en un tipo de lugar diferente?",
+                        "¿Qué hace que un lugar sea amigable?"
+                  ]
+            },
+            {
+                  "text": "Tener una mascota te hace más feliz.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Tienes mascota?",
+                        "¿Cuál es la mejor mascota para una person ocupada?",
+                        "¿Son caras las mascotas?",
+                        "¿Puede una mascota ser un amigo?",
+                        "¿Qué hay que hacer para cuidar bien a una mascota?"
+                  ]
+            },
+            {
+                  "text": "Se puede saber mucho de alguien por sus zapatos.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Miras los zapatos de la gente?",
+                        "¿Qué dicen tus zapatos de ti?",
+                        "¿Es importante la moda para ti?",
+                        "¿Se puede juzgar a una persona por su apariencia?",
+                        "¿Qué más te dice algo sobre el carácter de una persona?"
+                  ]
+            },
+            {
+                  "text": "Está bien comer solo en un restaurante.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Has comido solo en un restaurante?",
+                        "¿Te resulta cómodo?",
+                        "¿Es mejor la comida con otras personas?",
+                        "¿Ves a mucha gente comiendo sola?",
+                        "¿Qué haces cuando comes solo?"
+                  ]
+            },
+            {
+                  "text": "Aprender un idioma es más fácil cuando eres joven.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Qué edad tenías cuando empezaste a aprender este idioma?",
+                        "¿Crees que la edad importa para aprender idiomas?",
+                        "¿Qué es lo más difícil de aprender un idioma?",
+                        "¿Conoces a alguien que haya aprendido un idioma de adulto?",
+                        "¿Qué es lo que más te ayuda cuando estudias?"
+                  ]
+            },
+            {
+                  "text": "El transporte público es mejor que tener un coche.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Cómo te desplazas por tu ciudad?",
+                        "¿Es bueno el transporte público donde vives?",
+                        "¿Cuáles son los problemas de tener un coche?",
+                        "¿Es caro viajar en transporte público?",
+                        "¿Qué cambiarías del transporte en tu ciudad?"
+                  ]
+            },
+            {
+                  "text": "Es difícil aburrirse cuando tienes un teléfono.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Cuántas horas al día usas el teléfono?",
+                        "¿Para qué lo usas más?",
+                        "¿Te aburrias antes de los smartphones?",
+                        "¿Es bueno el aburrimiento a veces?",
+                        "¿Podrías dejar tu teléfono en casa por un día?"
+                  ]
+            },
+            {
+                  "text": "Cocinar en casa siempre es mejor que comer fuera.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Con qué frecuencia cocinas en casa?",
+                        "¿Qué es más fácil: cocinar o ir a un restaurante?",
+                        "¿Es caro comer fuera donde vives?",
+                        "¿Cuál es tu restaurante favorito?",
+                        "¿Cuál es tu mejor comida casera?"
+                  ]
+            },
+            {
+                  "text": "Todo el mundo debería intentar vivir en el extranjero durante un año.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Has vivido en otro país?",
+                        "¿Qué sería difícil de vivir en el extranjero?",
+                        "¿Qué sería emocionante?",
+                        "¿Qué país elegirías?",
+                        "¿Vivir en el extranjero cambia a una persona?"
+                  ]
+            },
+            {
+                  "text": "Los superhéroes son más interesantes que los héroes reales.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Quién es tu superhéroe favorito?",
+                        "¿Se te ocurre un héroe de la vida real?",
+                        "¿Qué hace que alguien sea un héroe?",
+                        "¿Por qué la gente ama a los superhéroes?",
+                        "¿Son más importantes los héroes reales?"
+                  ]
+            },
+            {
+                  "text": "Es importante hacer la cama todas las mañanas.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Haces la cama todos los días?",
+                        "¿Te hace sentir mejor una habitación ordenada?",
+                        "¿Es esto importante o no?",
+                        "¿Cuál es tu rutina matutina?",
+                        "¿Qué pequeños hábitos tienes?"
+                  ]
+            },
+            {
+                  "text": "Ir de compras es un pasatiempo.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Te gusta ir de compras?",
+                        "¿Compras online o en tiendas?",
+                        "¿Cuánto tiempo pasas comprando?",
+                        "¿Es relajante ir de compras?",
+                        "¿Qué compras con más frecuencia?"
+                  ]
+            },
+            {
+                  "text": "Viajar solo es mejor que viajar con amigos.",
+                  "level": "elementary",
+                  "hints": [
+                        "¿Has viajado solo?",
+                        "¿Qué tiene de bueno viajar solo?",
+                        "¿Qué tiene de bueno viajar con otros?",
+                        "¿Te sientes solo cuando viajas solo?",
+                        "¿Cuál es el mejor viaje que has hecho?"
+                  ]
             }
       ],
       "battle": [

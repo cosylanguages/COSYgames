@@ -7,7 +7,14 @@
             },
             {
                   "text": "Eine Kindheitserinnerung 🧸",
-                  "level": "starter"
+                  "level": "starter",
+                  "hints": [
+                        "Wie alt warst du?",
+                        "Wo warst du?",
+                        "Mit wem warst du zusammen?",
+                        "Was ist passiert?",
+                        "Warum erinnerst du dich daran?"
+                  ]
             },
             {
                   "text": "Deine Lieblingsjahreszeit und warum 🍂",
@@ -96,6 +103,215 @@
             {
                   "text": "Die Balance zwischen Ehrgeiz und Zufriedenheit ⚖️",
                   "level": "advanced"
+            },
+            {
+                  "text": "Ein Urlaub, an den du dich erinnerst",
+                  "level": "elementary",
+                  "hints": [
+                        "Wohin bist du gefahren?",
+                        "Mit wem bist du gefahren?",
+                        "Was hast du dort gemacht?",
+                        "Wie war das Wetter?",
+                        "Was war der beste Moment?"
+                  ]
+            },
+            {
+                  "text": "Dein Lieblingsrestaurant oder -café",
+                  "level": "elementary",
+                  "hints": [
+                        "Wo ist es?",
+                        "Welches Essen servieren sie?",
+                        "Warum magst du es?",
+                        "Mit wem gehst du dorthin?",
+                        "Wann warst du das letzte Mal dort?"
+                  ]
+            },
+            {
+                  "text": "Wie du zur Arbeit oder Schule kommst",
+                  "level": "elementary",
+                  "hints": [
+                        "Wie reist du — Bus, Auto, Fahrrad?",
+                        "Wie lange dauert es?",
+                        "Genießt du die Fahrt?",
+                        "Ist es teuer?",
+                        "Was machst du unterwegs?"
+                  ]
+            },
+            {
+                  "text": "Was du tust, um dich zu entspannen",
+                  "level": "elementary",
+                  "hints": [
+                        "Was hilft dir beim Entspannen?",
+                        "Bist du lieber allein oder mit Leuten zusammen?",
+                        "Wie oft entspannst du dich richtig?",
+                        "Hast du einen Lieblingsort zum Entspannen?",
+                        "Ist es einfach zu entspannen oder findest du es schwierig?"
+                  ]
+            },
+            {
+                  "text": "Ein Film, den du vor Kurzem gesehen hast",
+                  "level": "elementary",
+                  "hints": [
+                        "Wie hieß der Film?",
+                        "Wovon handelte er?",
+                        "Hat er dir gefallen?",
+                        "Wer hat mitgespielt?",
+                        "Würdest du ihn empfehlen?"
+                  ]
+            },
+            {
+                  "text": "Dein ideales Wochenende",
+                  "level": "elementary",
+                  "hints": [
+                        "Was würdest du am Freitagabend machen?",
+                        "Würdest du ausgehen oder zu Hause bleiben?",
+                        "Würdest du irgendwohin reisen?",
+                        "Mit wem würdest du Zeit verbringen?",
+                        "Was würdest du essen?"
+                  ]
+            },
+            {
+                  "text": "Eine Person, die du bewunderst",
+                  "level": "elementary",
+                  "hints": [
+                        "Wer ist diese Person?",
+                        "Was macht sie?",
+                        "Warum bewunderst du sie?",
+                        "Hast du sie schon mal getroffen?",
+                        "Was kannst du von ihr lernen?"
+                  ]
+            },
+            {
+                  "text": "Dein Traum-Urlaubsziel",
+                  "level": "elementary",
+                  "hints": [
+                        "Wohin würdest du reisen?",
+                        "Warum dieser Ort?",
+                        "Mit wem würdest du reisen?",
+                        "Was würdest du dort machen?",
+                        "Wie lange würdest du bleiben?"
+                  ]
+            },
+            {
+                  "text": "Deine Beziehung zu deinem Handy",
+                  "level": "elementary",
+                  "hints": [
+                        "Wie viele Stunden am Tag benutzt du dein Handy?",
+                        "Wofür benutzt du es am meisten?",
+                        "Könntest du eine Woche ohne es auskommen?",
+                        "Hilft es dir oder lenkt es dich ab?",
+                        "Checkst du es als Erstes am Morgen?"
+                  ]
+            },
+            {
+                  "text": "Etwas Lustiges, das dir passiert ist",
+                  "level": "elementary",
+                  "hints": [
+                        "Wann ist das passiert?",
+                        "Wo warst du?",
+                        "Mit wem warst du zusammen?",
+                        "Was genau ist passiert?",
+                        "Lachst du heute noch darüber?"
+                  ]
+            },
+            {
+                  "text": "Deine Hobbys",
+                  "level": "elementary",
+                  "hints": [
+                        "Was machst du in deiner Freizeit?",
+                        "Wann hast du mit diesem Hobby angefangen?",
+                        "Machst du es allein oder mit anderen?",
+                        "Ist es teuer?",
+                        "Was liebst du daran?"
+                  ]
+            },
+            {
+                  "text": "Das Wetter, wo du wohnst",
+                  "level": "elementary",
+                  "hints": [
+                        "Wie ist das Wetter normalerweise?",
+                        "Was ist deine Lieblingswetterart?",
+                        "Beeinflusst das Wetter deine Stimmung?",
+                        "Was ist das schlimmste Wetter, an das du dich erinnerst?",
+                        "Was machst du an Regentagen?"
+                  ]
+            },
+            {
+                  "text": "Ein Geburtstag, an den du dich erinnerst",
+                  "level": "elementary",
+                  "hints": [
+                        "Wessen Geburtstag war es?",
+                        "Wo war die Feier?",
+                        "Was habt ihr gemacht?",
+                        "Gab es eine Überraschung?",
+                        "Was hat ihn besonders gemacht?"
+                  ]
+            },
+            {
+                  "text": "Dinge, die du an deinem Wohnort liebst",
+                  "level": "elementary",
+                  "hints": [
+                        "Was ist deine Lieblingssache an deiner Stadt?",
+                        "Ist es ein guter Ort für Familien?",
+                        "Was kann man dort machen?",
+                        "Was würdest du ändern?",
+                        "Würdest du es einem Freund empfehlen?"
+                  ]
+            },
+            {
+                  "text": "Ein typischer Sonntag",
+                  "level": "elementary",
+                  "hints": [
+                        "Wann wachst du am Sonntag auf?",
+                        "Hast du eine Routine?",
+                        "Kochst du eine große Mahlzeit?",
+                        "Ruhst du dich aus oder bleibst du beschäftigt?",
+                        "Ist Sonntag dein Lieblingstag?"
+                  ]
+            },
+            {
+                  "text": "Essen aus deinem Land",
+                  "level": "elementary",
+                  "hints": [
+                        "Was ist ein traditionelles Gericht?",
+                        "Kochst du es zu Hause?",
+                        "Wann essen die Leute es?",
+                        "Ist es schwierig zuzubereiten?",
+                        "Würdest du es einem Ausländer empfehlen?"
+                  ]
+            },
+            {
+                  "text": "Etwas, das du vor Kurzem gekauft hast",
+                  "level": "elementary",
+                  "hints": [
+                        "Was hast du gekauft?",
+                        "Wo hast du es gekauft?",
+                        "War es teuer?",
+                        "Hast du es gebraucht oder nur gewollt?",
+                        "Bist du zufrieden mit dem Kauf?"
+                  ]
+            },
+            {
+                  "text": "Deine Lieblings-App",
+                  "level": "elementary",
+                  "hints": [
+                        "Welche App benutzt du am meisten?",
+                        "Wofür benutzt du sie?",
+                        "Wann hast du angefangen, sie zu benutzen?",
+                        "Würdest du sie empfehlen?",
+                        "Könntest du ohne sie leben?"
+                  ]
+            },
+            {
+                  "text": "Was du gestern gegessen hast",
+                  "level": "elementary",
+                  "hints": [
+                        "Was hattest du zum Frühstück?",
+                        "Was hast du zu Mittag gegessen?",
+                        "Hast du gekocht oder bist du essen gegangen?",
+                        "War es ein typischer Essenstag?",
+                        "Was war das Beste, das du gegessen hast?"
+                  ]
             }
       ],
       "opinions": [
@@ -138,6 +354,171 @@
             {
                   "text": "Vollständige Privatsphäre ist im digitalen Zeitalter unmöglich.",
                   "level": "advanced"
+            },
+            {
+                  "text": "Wochenenden sind zu kurz.",
+                  "level": "elementary",
+                  "hints": [
+                        "Was machst du am Wochenende?",
+                        "Wie fühlst du dich am Sonntagabend?",
+                        "Was würdest du mit einem dreitägigen Wochenende machen?",
+                        "Arbeitest oder lernst du am Wochenende?",
+                        "Was ist das perfekte Wochenende für dich?"
+                  ]
+            },
+            {
+                  "text": "Es ist unhöflich, zu spät zu kommen.",
+                  "level": "elementary",
+                  "hints": [
+                        "Bist du normalerweise pünktlich?",
+                        "Wie lange wartest du auf einen Freund?",
+                        "Ist es okay, 10 Minuten zu spät zu kommen?",
+                        "Ist Pünktlichkeit in deiner Kultur wichtig?",
+                        "Was machst du, wenn jemand sehr spät kommt?"
+                  ]
+            },
+            {
+                  "text": "Menschen sind in Kleinstädten netter.",
+                  "level": "elementary",
+                  "hints": [
+                        "Wo lebst du — in einer Kleinstadt oder einer Großstadt?",
+                        "Sind deine Nachbarn freundlich?",
+                        "Sprechen Menschen dort, wo du lebst, mit Fremden?",
+                        "Hast du jemals an einem anderen Ortstyp gelebt?",
+                        "Was macht einen Ort freundlich?"
+                  ]
+            },
+            {
+                  "text": "Ein Haustier zu haben, macht glücklicher.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hast du ein Haustier?",
+                        "Was ist das beste Haustier für eine vielbeschäftigte Person?",
+                        "Sind Haustiere teuer?",
+                        "Kann ein Haustier ein Freund sein?",
+                        "Was musst du tun, um dich gut um ein Haustier zu kümmern?"
+                  ]
+            },
+            {
+                  "text": "Man kann viel über jemanden an seinen Schuhen erkennen.",
+                  "level": "elementary",
+                  "hints": [
+                        "Schaust du dir die Schuhe der Leute an?",
+                        "Was sagen deine Schuhe über dich aus?",
+                        "Ist Mode für dich wichtig?",
+                        "Kannst du eine Person nach ihrem Aussehen beurteilen?",
+                        "Was sagt dir sonst noch etwas über den Charakter einer Person?"
+                  ]
+            },
+            {
+                  "text": "Es ist okay, allein in einem Restaurant zu essen.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hast du schon einmal allein in einem Restaurant gegessen?",
+                        "Findest du es angenehm?",
+                        "Ist Essen mit anderen Leuten besser?",
+                        "Siehst du viele Leute, die allein essen?",
+                        "Was machst du, wenn du allein isst?"
+                  ]
+            },
+            {
+                  "text": "Eine Sprache zu lernen ist einfacher, wenn man jung ist.",
+                  "level": "elementary",
+                  "hints": [
+                        "Wie alt warst du, als du angefangen hast, diese Sprache zu lernen?",
+                        "Glaubst du, dass das Alter beim Sprachenlernen eine Rolle spielt?",
+                        "Was ist der schwierigste Teil beim Lernen einer Sprache?",
+                        "Kennst du jemanden, der eine Sprache als Erwachsener gelernt hat?",
+                        "Was hilft dir am meisten beim Lernen?"
+                  ]
+            },
+            {
+                  "text": "Öffentliche Verkehrsmittel sind besser als ein Auto.",
+                  "level": "elementary",
+                  "hints": [
+                        "Wie reist du in deiner Stadt umher?",
+                        "Sind die öffentlichen Verkehrsmittel dort, wo du lebst, gut?",
+                        "Was sind die Probleme, wenn man ein Auto hat?",
+                        "Ist es teuer, mit öffentlichen Verkehrsmitteln zu reisen?",
+                        "Was würdest du am Verkehr in deiner Stadt ändern?"
+                  ]
+            },
+            {
+                  "text": "Es ist schwer, sich zu langweilen, wenn man ein Handy hat.",
+                  "level": "elementary",
+                  "hints": [
+                        "Wie viele Stunden am Tag nutzt du dein Handy?",
+                        "Wofür nutzt du es am meisten?",
+                        "War dir vor den Smartphones langweilig?",
+                        "Ist Langeweile manchmal gut?",
+                        "Könntest du dein Handy für einen Tag zu Hause lassen?"
+                  ]
+            },
+            {
+                  "text": "Zu Hause zu kochen ist immer besser als auswärts zu essen.",
+                  "level": "elementary",
+                  "hints": [
+                        "Wie oft kochst du zu Hause?",
+                        "Was ist einfacher — kochen oder in ein Restaurant gehen?",
+                        "Ist auswärts essen dort, wo du lebst, teuer?",
+                        "Was ist dein Lieblingsrestaurant?",
+                        "Was ist dein bestes selbstgekochtes Essen?"
+                  ]
+            },
+            {
+                  "text": "Jeder sollte versuchen, ein Jahr lang im Ausland zu leben.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hast du schon einmal in einem anderen Land gelebt?",
+                        "Was wäre schwierig am Leben im Ausland?",
+                        "Was wäre aufregend?",
+                        "Welches Land würdest du wählen?",
+                        "Verändert das Leben im Ausland eine Person?"
+                  ]
+            },
+            {
+                  "text": "Superhelden sind interessanter als echte Helden.",
+                  "level": "elementary",
+                  "hints": [
+                        "Wer ist dein Lieblingssuperheld?",
+                        "Fällt dir ein Held aus dem echten Leben ein?",
+                        "Was macht jemanden zu einem Helden?",
+                        "Warum lieben Menschen Superhelden?",
+                        "Sind echte Helden wichtiger?"
+                  ]
+            },
+            {
+                  "text": "Es ist wichtig, jeden Morgen das Bett zu machen.",
+                  "level": "elementary",
+                  "hints": [
+                        "Machst du jeden Tag dein Bett?",
+                        "Fühlst du dich in einem aufgeräumten Zimmer besser?",
+                        "Ist das wichtig oder nicht wichtig?",
+                        "Was ist deine Morgenroutine?",
+                        "Welche kleinen Gewohnheiten hast du?"
+                  ]
+            },
+            {
+                  "text": "Einkaufen ist ein Hobby.",
+                  "level": "elementary",
+                  "hints": [
+                        "Gehst du gerne einkaufen?",
+                        "Kaufst du online oder in Geschäften ein?",
+                        "Wie viel Zeit verbringst du mit Einkaufen?",
+                        "Ist Einkaufen entspannend?",
+                        "Was kaufst du am häufigsten?"
+                  ]
+            },
+            {
+                  "text": "Allein zu reisen ist besser, als mit Freunden zu reisen.",
+                  "level": "elementary",
+                  "hints": [
+                        "Bist du schon einmal allein gereist?",
+                        "Was ist gut am Alleinreisen?",
+                        "Was ist gut am Reisen mit anderen?",
+                        "Wirst du einsam, wenn du allein reist?",
+                        "Was ist die beste Reise, die du gemacht hast?"
+                  ]
             }
       ],
       "battle": [

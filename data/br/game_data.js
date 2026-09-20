@@ -96,6 +96,226 @@
             {
                   "text": "O equilíbrio entre ambição e serenidade ⚖️",
                   "level": "advanced"
+            },
+            {
+                  "text": "Vakañsoù ho peus soñj anezho",
+                  "level": "elementary",
+                  "hints": [
+                        "Pelec'h oc'h bet ?",
+                        "Gant piv oc'h bet ?",
+                        "Petra ho peus graet eno ?",
+                        "Penaos e oa an amzer ?",
+                        "Peini e oa ar mare gwellañ ?"
+                  ]
+            },
+            {
+                  "text": "Ho pretis pe ho cafedi muiañ-karet",
+                  "level": "elementary",
+                  "hints": [
+                        "Pelec'h emañ ?",
+                        "Peseurt boued a vez servijet ganto ?",
+                        "Perak e plij deoc'h ?",
+                        "Gant piv e tait di ?",
+                        "Pegoulz e oa ar wech ziwezhañ ma'z oc'h bet di ?"
+                  ]
+            },
+            {
+                  "text": "Penaos e tait d'al labour pe d'ar skol",
+                  "level": "elementary",
+                  "hints": [
+                        "Penaos e veajit — karr-boutin, karr, marc'h-houarn ?",
+                        "Pegement a amzer a gemer ?",
+                        "Ha plijout a ra ar veaj deoc'h ?",
+                        "Hag-eñ eo ker ?",
+                        "Petra a rit e-kerzh ar veaj ?"
+                  ]
+            },
+            {
+                  "text": "Petra a rit evit diskuizhañ",
+                  "level": "elementary",
+                  "hints": [
+                        "Petra a sikour ac'hanoc'h da ziskuizhañ ?",
+                        "Ha gwelloc'h eo deoc'h bezañ ho-unan pe gant tud all ?",
+                        "Pegoulz e tiskuihit da vat ?",
+                        "Hoc'h eus ul lec'h muiañ-karet evit diskuizhañ ?",
+                        "Hag-eñ eo aes diskuizhañ pe diaes eo deoc'h ?"
+                  ]
+            },
+            {
+                  "text": "Ur film ho peus gwelet n'eus ket pell",
+                  "level": "elementary",
+                  "hints": [
+                        "Petra e oa anv ar film ?",
+                        "Diwar-benn petra e oa ?",
+                        "Ha plijet oc'h bet gantañ ?",
+                        "Piv a oa er film ?",
+                        "Ha kuzuliañ a rafec'h ar film-mañ ?"
+                  ]
+            },
+            {
+                  "text": "Hoc'h dibenn-sizhun eus an dibab",
+                  "level": "elementary",
+                  "hints": [
+                        "Petra a rafec'h d'ar Gwener noz ?",
+                        "Ha mont a rafec'h er-maez pe chom er gêr ?",
+                        "Ha veajet e vefe ganeoc'h ?",
+                        "Gant piv e tremenfec'h amzer ?",
+                        "Petra a zebrfec'h ?"
+                  ]
+            },
+            {
+                  "text": "Un den a vourrit anezhañ",
+                  "level": "elementary",
+                  "hints": [
+                        "Piv eo an den-mañ ?",
+                        "Petra a ra ?",
+                        "Perak e vourrit anezhañ ?",
+                        "Ha kejet ho peus gantañ ?",
+                        "Petra a c'hallit deskiñ gantañ ?"
+                  ]
+            },
+            {
+                  "text": "Lec'h ho vakañsoù a huñvre",
+                  "level": "elementary",
+                  "hints": [
+                        "Pelec'h e vefe deoc'h mont ?",
+                        "Perak al lec'h-mañ ?",
+                        "Gant piv e vefe deoc'h mont ?",
+                        "Petra a rafec'h eno ?",
+                        "Pegement a amzer e chomfec'h eno ?"
+                  ]
+            },
+            {
+                  "text": "Ho liamm gant ho pellgomz",
+                  "level": "elementary",
+                  "hints": [
+                        "Pet eurvezh an deiz e implijit ho pellgomz ?",
+                        "Evit petra e implijit anezhañ ar muiañ ?",
+                        "Ha gallout a rafec'h bevañ hepthañ e-pad ur sizhunvezh ?",
+                        "Hag-eñ e sikour ac'hanoc'h pe e tistroll ac'hanoc'h ?",
+                        "Ha sellout a rit outi raktal pa tivunoc'h ?"
+                  ]
+            },
+            {
+                  "text": "Un dra bennak farsus a zo c'hoarvezet ganeoc'h",
+                  "level": "elementary",
+                  "hints": [
+                        "Pegoulz e oa c'hoarvezet kement-mañ ?",
+                        "Pelec'h edoc'h ?",
+                        "Gant piv edoc'h ?",
+                        "Petra a oa c'hoarvezet resis ?",
+                        "Ha c'hoari a rit c'hoazh bremañ ?"
+                  ]
+            },
+            {
+                  "text": "Ho plijadurioù",
+                  "level": "elementary",
+                  "hints": [
+                        "Petra a rit e-kerzh hoc'h amzer vak ?",
+                        "Pegoulz ho peus kroget gant ar blijadur-mañ ?",
+                        "Ha gallout a rit ober an dra-se hoc'h-unan pe gant tud all ?",
+                        "Hag-eñ eo ker ?",
+                        "Petra a garit en dra-se ?"
+                  ]
+            },
+            {
+                  "text": "An amzer en ho lec'h-bevañ",
+                  "level": "elementary",
+                  "hints": [
+                        "Penaos eo an amzer peurvuiañ ?",
+                        "Peseurt amzer a blij deoc'h ar muiañ ?",
+                        "Hag-eñ e cheñch hoc'h imor gant an amzer ?",
+                        "Peini eo an amzer washañ ho peus soñj anezhi ?",
+                        "Petra a rit e-kerzh an deizioù glav ?"
+                  ]
+            },
+            {
+                  "text": "Un deiz-ha-bloaz ho peus soñj anezhañ",
+                  "level": "elementary",
+                  "hints": [
+                        "Deiz-ha-bloaz piv e oa ?",
+                        "Pelec'h e oa ar fest ?",
+                        "Petra ho peus graet ?",
+                        "Hag-eñ e oa un souezhadenn ?",
+                        "Petra a lakae an deiz-mañ da vezañ dibar ?"
+                  ]
+            },
+            {
+                  "text": "Traoù a garit en ho lec'h-bevañ",
+                  "level": "elementary",
+                  "hints": [
+                        "Petra eo an dra a blij deoc'h ar muiañ en ho kêr ?",
+                        "Hag-eñ eo ul lec'h mat evit ar famihoù ?",
+                        "Petra a zo d'ober eno ?",
+                        "Petra a cheñchfec'h ?",
+                        "Ha kuzuliañ a rafec'h al lec'h-mañ d'ur mignon ?"
+                  ]
+            },
+            {
+                  "text": "Ur Sul peurvuiañ",
+                  "level": "elementary",
+                  "hints": [
+                        "Da bet eur e tivunoc'h d'ar Sul ?",
+                        "Hoc'h eus ur reolenn-vintin ?",
+                        "Ha poazhañ a rit ur pred bras ?",
+                        "Ha diskuizhañ a rit pe chom gant kalz traoù d'ober ?",
+                        "Hag ar Sul eo ho teiz muiañ-karet ?"
+                  ]
+            },
+            {
+                  "text": "Boued eus ho pro",
+                  "level": "elementary",
+                  "hints": [
+                        "Peini eo ur meuz hengounel ?",
+                        "Ha poazhañ a rit anezhañ er gêr ?",
+                        "Pegoulz e vez debret gant an dud ?",
+                        "Hag-eñ eo diaes d'ober ?",
+                        "Ha kuzuliañ a rafec'h anezhañ d'un den estren ?"
+                  ]
+            },
+            {
+                  "text": "Un dra bennak ho peus prenet n'eus ket pell",
+                  "level": "elementary",
+                  "hints": [
+                        "Petra ho peus prenet ?",
+                        "Pelec'h ho peus prenet an dra-se ?",
+                        "Hag-eñ e oa ker ?",
+                        "Hoc'h eus bet ezhomm anezhañ pe ho poa c'hoant hepken ?",
+                        "Ha laouen oc'h gant ar brenadenn-mañ ?"
+                  ]
+            },
+            {
+                  "text": "Hoc'h app muiañ-karet",
+                  "level": "elementary",
+                  "hints": [
+                        "Peseurt app a implijit ar muiañ ?",
+                        "Evit petra e implijit anezhañ ?",
+                        "Pegoulz ho peus kroget d'e implijout ?",
+                        "Ha kuzuliañ a rafec'h anezhañ ?",
+                        "Ha gallout a rafec'h bevañ hepthañ ?"
+                  ]
+            },
+            {
+                  "text": "Ur soñj eus ho pugaleaj",
+                  "level": "elementary",
+                  "hints": [
+                        "Oet oas d'ar mare-se ?",
+                        "Pelec'h edoc'h ?",
+                        "Gant piv edoc'h ?",
+                        "Petra a oa c'hoarvezet ?",
+                        "Perak ho peus soñj anezhañ ?"
+                  ]
+            },
+            {
+                  "text": "Petra ho peus debret dec'h",
+                  "level": "elementary",
+                  "hints": [
+                        "Petra ho peus debret evit lein ?",
+                        "Petra ho peus debret evit merenn ?",
+                        "Ha poazhet ho peus pe debret er-maez ?",
+                        "Ha bezañ e oa un deiz peurvuiañ evit ar boued ?",
+                        "Peini eo an dra wellañ ho peus debret ?"
+                  ]
             }
       ],
       "opinions": [
@@ -134,6 +354,171 @@
             {
                   "text": "A privacidade total é impossível na era digital atual.",
                   "level": "advanced"
+            },
+            {
+                  "text": "Re verr eo an dibenn-sizhun.",
+                  "level": "elementary",
+                  "hints": [
+                        "Petra a rit d'an dibenn-sizhun?",
+                        "Penaos e santit d'ar sul noz?",
+                        "Petra a rafec'h gant un dibenn-sizhun tri devezh?",
+                        "Hag-eñ e labourit pe e studit d'an dibenn-sizhun?",
+                        "Petra eo an dibenn-sizhun peurvat evidoc'h?"
+                  ]
+            },
+            {
+                  "text": "Displed eo bezañ war-lerc'h.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hag-eñ e vezit d'ar mare reizh peurvuiañ?",
+                        "Keit ha ma gortozit ur mignon?",
+                        "Hag-eñ eo mat bezañ 10 munut war-lerc'h?",
+                        "Hag-eñ eo pouezus bezañ d'ar mare reizh en ho sevenadur?",
+                        "Petra a rit pa vez unan bennak kalz war-lerc'h?"
+                  ]
+            },
+            {
+                  "text": "Gwelloc'h eo an dud er c'hêrioù bihan.",
+                  "level": "elementary",
+                  "hints": [
+                        "Pelec'h e chomit — kêriadenn pe gêr?",
+                        "Hag-eñ eo mignonel ho amezeien?",
+                        "Hag-eñ e komz an dud gant an estrenien pelec'h e chomit?",
+                        "Hag-eñ az peus bevet en ul lec'h disheñvel gwechall?",
+                        "Petra a laka ul lec'h da vezañ mignonel?"
+                  ]
+            },
+            {
+                  "text": "Laouenoc'h e vezit pa az peus ul loen-ti.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hag-eñ az peus ul loen-ti?",
+                        "Petra eo al loen-ti gwellañ evit un den micherel?",
+                        "Hag-eñ e koust ker al loened-ti?",
+                        "Hag-eñ e c'hall ul loen-ti bezañ ur mignon?",
+                        "Petra a rankit ober evit soursial ouzh ul loen-ti mat?"
+                  ]
+            },
+            {
+                  "text": "Gallout a rit lavaret kalz traoù diwar-benn unan bennak dre o botoù.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hag-eñ e sellit ouzh botoù an dud?",
+                        "Petra a lavar ho potoù diwar-benn ac'hanoc'h?",
+                        "Hag-eñ eo pouezus ar c'hiz evidoc'h?",
+                        "Hag-eñ e c'hallit barn un den diwar o neuz?",
+                        "Petra a lavar deoc'h traoù all diwar-benn doare un den?"
+                  ]
+            },
+            {
+                  "text": "Mat eo debriñ e-unan en un ti-debriñ.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hag-eñ az peus debret e-unan en un ti-debriñ c'hoazh?",
+                        "Hag-eñ e kav deoc'h eo aes?",
+                        "Hag-eñ eo gwelloc'h ar boued gant tud all?",
+                        "Hag-eñ e welit kalz tud o debriñ o-unan?",
+                        "Petra a rit pa zebrit ho-unan?"
+                  ]
+            },
+            {
+                  "text": "Aesoc'h eo deskiñ ur yezh pa vezit yaouank.",
+                  "level": "elementary",
+                  "hints": [
+                        "Pet bloaz e oach pa az peus kroget da zeskiñ ar yezh-mañ?",
+                        "Hag-eñ e soñjit eo pouezus an oad evit deskiñ yezhoù?",
+                        "Petra eo an dra diaesañ pa zesker ur yezh?",
+                        "Hag-eñ ec'h anavezit unan bennak en deus desket ur yezh pa oa den deuet?",
+                        "Petra a sikour ac'hanoc'h ar muiañ pa studier?"
+                  ]
+            },
+            {
+                  "text": "Gwelloc'h eo an dezougen boutin eget kaout ur c'harr-tan.",
+                  "level": "elementary",
+                  "hints": [
+                        "Penaos e veajit en ho kêr?",
+                        "Hag-eñ eo mat an dezougen boutin pelec'h e chomit?",
+                        "Petra eo ar c'hudennoù pa az peus ur c'harr-tan?",
+                        "Hag-eñ eo ker veajiñ gant an dezougen boutin?",
+                        "Petra a cheñchfec'h diwar-benn an dezougen en ho kêr?"
+                  ]
+            },
+            {
+                  "text": "Diaes eo bezañ en deus dregantiñ pa az peus ur pellgomz.",
+                  "level": "elementary",
+                  "hints": [
+                        "Pet eurvezh bemdez e implijit ho pellgomz?",
+                        "Petra a rit gantañ ar muiañ?",
+                        "Hag-eñ e oach dregantet a-raok ar pellgomzoù hezoug?",
+                        "Hag-eñ eo mat an dregantiñ a-wechoù?",
+                        "Hag-eñ e c'hallfec'h lezel ho pellgomz er gêr e-pad un devezh?"
+                  ]
+            },
+            {
+                  "text": "Gwelloc'h eo poazhañ er gêr eget debriñ en un ti-debriñ.",
+                  "level": "elementary",
+                  "hints": [
+                        "Pegement e poazhit er gêr?",
+                        "Petra eo an aesañ — poazhañ pe mont d'un ti-debriñ?",
+                        "Hag-eñ eo ker debriñ en un ti-debriñ pelec'h e chomit?",
+                        "Petra eo ho ti-debriñ karetañ?",
+                        "Petra eo ho pred gwellañ poazhet er gêr?"
+                  ]
+            },
+            {
+                  "text": "An holl a rankfe klask bevañ en estrenvro e-pad ur bloaz.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hag-eñ az peus bevet en ur vro all?",
+                        "Petra a vije diaes diwar-benn bevañ en estrenvro?",
+                        "Petra a vije plijus?",
+                        "Peseurt bro a zibabfec'h?",
+                        "Hag-eñ e cheñch un den pa vev en estrenvro?"
+                  ]
+            },
+            {
+                  "text": "Dedennotoc'h eo ar gourharozed eget ar harozed wirion.",
+                  "level": "elementary",
+                  "hints": [
+                        "Piv eo ho kourharoz karetañ?",
+                        "Hag-eñ e c'hallit soñjal en ur haroz en deiz a hiziv?",
+                        "Petra a laka un den da vezañ ur haroz?",
+                        "Perak e plij ar gourharozed d'an dud?",
+                        "Hag-eñ eo pouezusoc'h ar harozed wirion?"
+                  ]
+            },
+            {
+                  "text": "Pouezus eo ober ho kwele bemdez d'ar mintin.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hag-eñ e rit ho kwele bemdez?",
+                        "Hag-eñ e santit gwelloc'h en ur gambr kempenn?",
+                        "Hag-eñ eo pouezus pe get?",
+                        "Petra eo ho reolenn-vintin?",
+                        "Peseurt boazioù bihan az peus?"
+                  ]
+            },
+            {
+                  "text": "Un dudi eo ar prenañ traoù.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hag-eñ e plij deoc'h prenañ traoù?",
+                        "Hag-eñ e prenit traoù enlinenn pe er stalioù?",
+                        "Pegement a amzer e tremenit o prenañ traoù?",
+                        "Hag-eñ eo un dra dudi prenañ traoù?",
+                        "Petra a brenit ar muiañ?"
+                  ]
+            },
+            {
+                  "text": "Gwelloc'h eo veajiñ ho-unan eget veajiñ gant mignoned.",
+                  "level": "elementary",
+                  "hints": [
+                        "Hag-eñ az peus veajet ho-unan c'hoazh?",
+                        "Petra a zo mat pa veajier ho-unan?",
+                        "Petra a zo mat pa veajier gant tud all?",
+                        "Hag-eñ e santit an digenvez pa veajiot ho-unan?",
+                        "Petra eo ar veaj wellañ az peus graet?"
+                  ]
             }
       ],
       "battle": [
