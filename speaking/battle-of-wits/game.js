@@ -107,6 +107,7 @@
               body.innerHTML = `
                 <div class="game-card">
                   <div class="game-label">⚖️ Round ${battleRound+1} of 2</div>
+                  ${debate.topic ? `<div style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;color:var(--ink);">${esc(debate.topic)}</div>` : ''}
                   <div class="game-prompt">Arguing for: <em>${esc(currentSide.name)}</em></div>
 
                   ${currentSide.ideas.length > 0 ? `
