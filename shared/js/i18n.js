@@ -374,4 +374,5 @@
     const dict = translations[langCode] || translations.en;
     return dict[key] || (translations.en[key] || key);
   };
+  window.t = window.getI18nText;
 })();
