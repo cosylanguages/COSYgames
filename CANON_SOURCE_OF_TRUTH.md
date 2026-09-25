@@ -1,6 +1,5 @@
 # Ecosystem Canon Source of Truth Policy
 
-This document establishes the official synchronization policy and authority hierarchy for canonical datasets within the COSY ecosystem (**COSYlanguages**, **COSYgames**, **COSYtools**, **COSYworld**, **COSYmanuals**).
 
 ---
 
@@ -13,7 +12,6 @@ To prevent data divergence, duplicate maintenance, and drift across ecosystem re
 2. **Curriculum Canon Authority**:
    - `curriculum/en/general/*.json` (e.g., `A1.json`, `A2.json`, etc.) in **COSYlanguages** is the **sole writable master copy** of general-course curriculum data for the entire COSY ecosystem.
 3. **Read-Only Mirror Requirement**:
-   - Any other repository or application within the COSY ecosystem (**COSYgames**, **COSYtools**, **COSYworld**, **COSYmanuals**) holding a copy or subset of these datasets MUST treat its local copy as a **read-only mirror** and label it as such.
 4. **Change Management Protocol**:
    - Downstream repositories must **NEVER** edit local mirror copies directly.
    - Any proposed addition, removal, definition change, or spelling correction must be submitted to **COSYlanguages** via a GitHub Issue or Pull Request referencing the specific `word` / `word_id` or `lesson` / `unit` number.
@@ -54,7 +52,6 @@ The following companion note must be added manually to the READMEs of downstream
 ### Repositories to Update:
 - `COSYgames` (`README.md`)
 - `COSYtools` (`README.md`)
-- `COSYworld` (`README.md`)
 - `COSYmanuals` (`README.md`)
 
 ### Snippet to Copy:

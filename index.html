@@ -30,7 +30,6 @@
         <div class="cg-nav-right">
             <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">Home</a>
             <a href="index.html" class="cg-nav-hub-link active">All Games</a>
-            <a href="https://cosylanguages.github.io/COSYworld/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSY World</a>
             <a href="https://cosylanguages.github.io/COSYtools/" class="cg-nav-hub-link" target="_blank" rel="noopener">Tools</a>
             <a href="https://cosylanguages.github.io/COSYevents/" class="cg-nav-hub-link" target="_blank" rel="noopener">Events</a>
             <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
@@ -200,7 +199,6 @@
           <div class="footer-links-col">
             <h5>Games</h5>
             <a href="index.html">All 19 Games 🎮</a>
-            <a href="https://cosylanguages.github.io/COSYworld/">COSY World RPG 🌍</a>
             <a href="https://cosylanguages.github.io/COSYtools/">COSYtools 🛠️</a>
             <a href="https://cosylanguages.github.io/COSYmanuals/">COSYmanuals 📚</a>
           </div>
@@ -226,36 +224,82 @@
       (function() {
         const GAME_PATH_MAP = {
           fluency: 'fluency-flow/index.html',
+          'fluency-flow': 'fluency-flow/index.html',
+          fluency_flow: 'fluency-flow/index.html',
           battle: 'battle-of-wits/index.html',
+          'battle-of-wits': 'battle-of-wits/index.html',
+          battle_of_wits: 'battle-of-wits/index.html',
           opinion: 'opinion-arena/index.html',
+          'opinion-arena': 'opinion-arena/index.html',
+          opinion_arena: 'opinion-arena/index.html',
           critic: 'critics-corner/index.html',
+          'critics-corner': 'critics-corner/index.html',
+          critics_corner: 'critics-corner/index.html',
           questions: '100-questions/index.html',
+          '100-questions': '100-questions/index.html',
+          hundred_questions: '100-questions/index.html',
           storychain: 'story-chain/index.html',
+          'story-chain': 'story-chain/index.html',
+          story_chain: 'story-chain/index.html',
           storytelling: 'story-weaver/index.html',
+          'story-weaver': 'story-weaver/index.html',
+          story_weaver: 'story-weaver/index.html',
           hotseat: 'hot-seat/index.html',
+          'hot-seat': 'hot-seat/index.html',
+          hot_seat: 'hot-seat/index.html',
+          thisorthat: 'this-or-that/index.html',
+          'this-or-that': 'this-or-that/index.html',
+          this_or_that: 'this-or-that/index.html',
           action: 'action-hero/index.html',
+          'action-hero': 'action-hero/index.html',
+          action_hero: 'action-hero/index.html',
           identity: 'identity-mystery/index.html',
+          'identity-mystery': 'identity-mystery/index.html',
+          identity_mystery: 'identity-mystery/index.html',
           objectquest: 'object-quest/index.html',
+          'object-quest': 'object-quest/index.html',
+          object_quest: 'object-quest/index.html',
           scenematch: 'scene-match/index.html',
+          'scene-match': 'scene-match/index.html',
+          scene_match: 'scene-match/index.html',
           wordlinker: 'word-linker/index.html',
+          'word-linker': 'word-linker/index.html',
+          word_linker: 'word-linker/index.html',
           lastletter: 'last-letter/index.html',
+          'last-letter': 'last-letter/index.html',
+          last_letter: 'last-letter/index.html',
           emoji: 'emoji-odyssey/index.html',
+          'emoji-odyssey': 'emoji-odyssey/index.html',
+          emoji_odyssey: 'emoji-odyssey/index.html',
           crossword: 'cosy-crossword/index.html',
+          'cosy-crossword': 'cosy-crossword/index.html',
+          cosy_crossword: 'cosy-crossword/index.html',
           bingo: 'lucky-numbers/index.html',
+          'lucky-numbers': 'lucky-numbers/index.html',
+          lucky_numbers: 'lucky-numbers/index.html',
           etymology: 'etymology-explorer/index.html',
-          gender: 'what-gender-is-it/index.html'
+          'etymology-explorer': 'etymology-explorer/index.html',
+          etymology_explorer: 'etymology-explorer/index.html',
+          gender: 'what-gender-is-it/index.html',
+          'what-gender-is-it': 'what-gender-is-it/index.html',
+          what_gender_is_it: 'what-gender-is-it/index.html'
         };
 
         const initialParams = new URLSearchParams(window.location.search);
         const rememberedLang = initialParams.get('lang');
 
         window.openGame = function(id) {
-          let path = GAME_PATH_MAP[id];
+          let normalizedId = (id || '').toLowerCase().trim();
+          let path = GAME_PATH_MAP[normalizedId];
           if (!path) return;
 
           const params = new URLSearchParams(window.location.search);
           const passParams = new URLSearchParams();
-          ['lang', 'level', 'topic'].forEach(key => {
+
+          let topicVal = params.get('topic') || params.get('theme') || params.get('deck');
+          if (topicVal) passParams.set('topic', topicVal);
+
+          ['lang', 'level'].forEach(key => {
             if (params.has(key)) {
               passParams.set(key, params.get(key));
             } else if (key === 'lang' && rememberedLang) {
@@ -295,8 +339,11 @@
 
           const params = new URLSearchParams(window.location.search);
           const gameParam = params.get('game');
-          if (gameParam && GAME_PATH_MAP[gameParam]) {
-            window.openGame(gameParam);
+          if (gameParam) {
+            const normalizedGame = gameParam.toLowerCase().trim();
+            if (GAME_PATH_MAP[normalizedGame]) {
+              window.openGame(normalizedGame);
+            }
           }
         });
       })();

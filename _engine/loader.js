@@ -11,10 +11,11 @@
             const params = new URLSearchParams(window.location.search);
             let lang = params.get('lang') ? params.get('lang').trim().toLowerCase() : null;
             let level = params.get('level') ? params.get('level').trim() : null;
-            let topic = params.get('topic') ? params.get('topic').trim().toLowerCase() : null;
+            let topic = params.get('topic') || params.get('theme') || params.get('deck') || params.get('cat');
+            if (topic) topic = topic.trim().toLowerCase();
 
             const levelMap = {
-                'starter': 'A1', 'a1': 'A1',
+                'starter': 'A1', 'a1': 'A1', 'a0': 'A0', 'a0_a1': 'A1',
                 'elementary': 'A2', 'a2': 'A2',
                 'intermediate': 'B1', 'b1': 'B1',
                 'upper_intermediate': 'B2', 'upper': 'B2', 'b2': 'B2',
@@ -25,9 +26,9 @@
                 level = levelMap[level.toLowerCase()];
             }
 
-            return { lang, level, topic };
+            return { lang, level, topic, theme: topic };
         } catch(e) {
-            return { lang: null, level: null, topic: null };
+            return { lang: null, level: null, topic: null, theme: null };
         }
     }
 
@@ -37,7 +38,7 @@
             const parent = container || document;
 
             if (lang) {
-                const langSelect = parent.querySelector('#s-lang, #sm-s-lang');
+                const langSelect = parent.querySelector('#s-lang, #sm-s-lang, #lang-select, select[name="lang"]');
                 if (langSelect && langSelect.options) {
                     for (let opt of langSelect.options) {
                         const optVal = opt.value.toLowerCase();
@@ -52,7 +53,7 @@
             }
 
             if (level) {
-                const levelSelect = parent.querySelector('#s-level, #sm-s-level');
+                const levelSelect = parent.querySelector('#s-level, #sm-s-level, #level-select, select[name="level"]');
                 if (levelSelect && levelSelect.options) {
                     for (let opt of levelSelect.options) {
                         const optVal = opt.value.toUpperCase();
@@ -67,7 +68,7 @@
             }
 
             if (topic) {
-                const topicSelect = parent.querySelector('#s-deck, #s-cat, #s-scene, #s-mode, #s-theme, #s-topic');
+                const topicSelect = parent.querySelector('#s-deck, #s-cat, #s-scene, #s-mode, #s-theme, #s-topic, #deck-select, #topic-select, select[name="topic"], select[name="theme"]');
                 if (topicSelect && topicSelect.options) {
                     for (let opt of topicSelect.options) {
                         const optVal = opt.value.toLowerCase();
