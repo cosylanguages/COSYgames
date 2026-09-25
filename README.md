@@ -102,6 +102,39 @@ Whether you are a student building oral fluency or a teacher facilitating commun
 
 ---
 
+## 🔗 Ecosystem Integration & Deep-Linking ("Where this fits")
+
+`COSYgames` is fully integrated into the broader **COSYlanguages** ecosystem. It is designed to be cross-linked directly from:
+- **COSYlanguages' Practice Page** (`/practice/`): Allowing self-study learners to jump into games matching their target language, level, and current study topic.
+- **COSYplatform's Lesson Views**: Enabling teachers during live online or classroom lessons to launch directly into specific minigames pre-configured for a lesson unit.
+
+### 🌐 Deep-Link URL Scheme & Query Parameters
+
+Both the central **Games Hub (`index.html`)** and all **individual games** support URL query parameters for seamless deep linking and state handoff:
+
+| Query Parameter | Description | Supported Values / Format | Example Usage |
+| :--- | :--- | :--- | :--- |
+| `game` | Launch directly into a specific minigame (Hub auto-redirects) | Canonical ID or kebab-case string (e.g. `cosy-crossword`, `fluency-flow`, `action-hero`, `100-questions`) | `?game=cosy-crossword` |
+| `theme` / `topic` | Pre-select the vocabulary topic, deck, or category | Topic identifier (e.g. `animals`, `food`, `travel`, `daily_routine`, `jobs`) | `?theme=animals` or `?topic=food` |
+| `level` | Pre-select the CEFR target level | `A0`, `A1`, `A2`, `B1`, `B2`, `C1`, `C2` (or aliases like `starter`, `elementary`, `intermediate`, `advanced`) | `?level=A2` |
+| `lang` | Pre-select the target target language | ISO 2-letter code (e.g. `en`, `es`, `fr`, `de`, `ru`, `it`, `pt`, `el`) | `?lang=es` |
+
+#### Examples
+
+1. **Direct link via Games Hub:**
+   ```
+   https://cosylanguages.github.io/COSYgames/?game=cosy-crossword&theme=animals&level=A2&lang=en
+   ```
+   *The Games Hub parses the parameters and redirects directly into Cosy Crossword with the Animals theme, A2 level, and English language pre-selected.*
+
+2. **Direct link into an individual game:**
+   ```
+   https://cosylanguages.github.io/COSYgames/action-hero/?level=A1&theme=verbs&lang=fr
+   ```
+   *Action Hero opens directly with French A1 action verbs pre-selected for classroom play.*
+
+---
+
 ## 👩‍🏫 Classroom Instructions for Teachers
 
 COSYgames are designed with flexibility for language educators:
