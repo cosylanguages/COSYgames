@@ -13,8 +13,6 @@
     <meta property="og:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
 
     <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../shared/css/cosy-tokens.css">
     <link rel="stylesheet" href="../shared/css/tokens.css">
@@ -70,10 +68,10 @@
         </div>
 
         <!-- Score & Tracking Section -->
-        <div class="score-tracking-section" style="padding: 1.25rem 1.5rem; background: #FAF7F2; border-top: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <div class="score-tracking-section" aria-live="polite" style="padding: 1.25rem 1.5rem; background: #FAF7F2; border-top: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
             <div class="score-display" style="display: flex; align-items: center; gap: 1.5rem;">
-                <div><strong>Current Score:</strong> <span class="score-value" id="current-score">0</span></div>
-                <div><strong>High Score:</strong> <span class="high-score-value" id="high-score">0</span></div>
+                <div><strong>Current Score:</strong> <span class="score-value" id="current-score" aria-live="polite">0</span></div>
+                <div><strong>High Score:</strong> <span class="high-score-value" id="high-score" aria-live="polite">0</span></div>
             </div>
             <div class="related-tools-links" style="font-size: 0.9rem;">
                 <strong>Practice Tools:</strong>
