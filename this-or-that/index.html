@@ -452,7 +452,14 @@
   <a href="../index.html" class="cg-nav-brand">🎮 COSY Games</a>
   <div class="cg-nav-right">
     <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSYlanguages ↗</a>
-    <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+    <select id="cosy-ui-lang-switcher" class="cosy-lang-select" onchange="if(window.setLanguage)window.setLanguage(this.value)" aria-label="Interface Language">
+                <option value="en">🇬🇧 EN</option>
+                <option value="fr">🇫🇷 FR</option>
+                <option value="it">🇮🇹 IT</option>
+                <option value="ru">🇷🇺 RU</option>
+                <option value="el">🇬🇷 EL</option>
+            </select>
+            <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
   </div>
 </nav>
 

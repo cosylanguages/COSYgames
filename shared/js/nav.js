@@ -23,8 +23,22 @@
     }
   }
 
+  window.setLanguage = function(lang) {
+    if (!lang) return;
+    localStorage.setItem('cosy_ui_lang', lang);
+    const selects = document.querySelectorAll('.cosy-lang-select, #cosy-ui-lang-switcher');
+    selects.forEach(select => { select.value = lang; });
+    document.documentElement.setAttribute('lang', lang);
+  };
+
+  function initUiLanguage() {
+    const savedLang = localStorage.getItem('cosy_ui_lang') || 'en';
+    window.setLanguage(savedLang);
+  }
+
   document.addEventListener('DOMContentLoaded', function() {
     initTheme();
+    initUiLanguage();
     initNavContextSwitcher();
   });
 })();
