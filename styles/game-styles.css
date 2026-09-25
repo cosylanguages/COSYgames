@@ -4,14 +4,14 @@
   --cg-font-heading: 'Fraunces', Georgia, serif;
   --cg-font-body: 'Nunito', 'DM Sans', system-ui, -apple-system, sans-serif;
 
-  --cg-color-bg: #FAF7F2;
-  --cg-color-surface: #FFFFFF;
-  --cg-color-text: #2C2C2C;
-  --cg-color-muted: #6B7280;
+  --cg-color-bg: var(--cream, #fdfcf8);
+  --cg-color-surface: var(--surface-color, #FFFFFF);
+  --cg-color-text: var(--ink, #2a2a2a);
+  --cg-color-muted: var(--ink-faint, #5c5957);
 
-  --cg-color-teal: #0D9488;
-  --cg-color-teal-dark: #0F766E;
-  --cg-color-teal-light: #CCFBF1;
+  --cg-color-teal: var(--sage, #416b49);
+  --cg-color-teal-dark: var(--sage-dark, #375742);
+  --cg-color-teal-light: var(--sage-light, #e8f0e9);
 
   --cg-color-plum: #7E22CE;
   --cg-color-plum-dark: #6B21A8;
