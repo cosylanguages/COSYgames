@@ -29,6 +29,9 @@
     const selects = document.querySelectorAll('.cosy-lang-select, #cosy-ui-lang-switcher');
     selects.forEach(select => { select.value = lang; });
     document.documentElement.setAttribute('lang', lang);
+    if (typeof window.applyI18n === 'function') {
+      window.applyI18n(lang);
+    }
   };
 
   function initUiLanguage() {

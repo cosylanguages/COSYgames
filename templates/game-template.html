@@ -46,7 +46,7 @@
     <!-- Game Container & Overlay Header -->
     <div class="game-overlay open game-overlay-standalone" id="game-overlay">
         <div class="go-topbar">
-            <button class="go-back cg-btn cg-btn-secondary" onclick="COSYUtils.backToHub()">← Back to Games Hub</button>
+            <button class="go-back cg-btn cg-btn-secondary" onclick="COSYUtils.backToHub()" data-i18n="back_to_games">← Back to Games Hub</button>
             <div class="go-title-wrapper">
                 <div class="go-title" id="go-title">{{GAME_TITLE}}</div>
                 <div class="go-meta" id="go-meta">{{GAME_CATEGORY}} · {{GAME_LEVELS}}</div>
@@ -109,6 +109,7 @@
 
     <!-- Scripts -->
     <script src="../shared/utils/game-utils.js"></script>
+    <script src="../shared/js/i18n.js"></script>
     <script src="../shared/js/nav.js"></script>
     <script src="../_engine/view_context.js"></script>
     <script src="../_engine/game_session.js"></script>
