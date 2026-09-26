@@ -47,6 +47,13 @@
                 };
                 localStorage.setItem(STORAGE_KEYS.SCORES, JSON.stringify(scores));
                 COSYUtils.updateScoreDisplay('.score-value', score);
+
+                const scoresApi = typeof window !== 'undefined' ? window.COSYScores : (typeof global !== 'undefined' ? global.COSYScores : undefined);
+                if (scoresApi && typeof scoresApi.save === 'function') {
+                    const lang = COSYUtils.getSelectedLanguage();
+                    scoresApi.save(gameId, lang, 'all', score);
+                }
+
                 return scores[gameId];
             } catch (e) {
                 console.error('Error saving score to localStorage:', e);
@@ -64,6 +71,7 @@
         },
 
         updateScoreDisplay: function (selector = '.score-value', score = 0) {
+            if (typeof document === 'undefined') return;
             const elements = document.querySelectorAll(selector);
             elements.forEach(el => {
                 el.textContent = score;
@@ -200,6 +208,7 @@
 
         getURLParams: function () {
             const params = {};
+            if (typeof window === 'undefined' || !window.location) return params;
             const searchParams = new URLSearchParams(window.location.search);
             for (const [key, value] of searchParams.entries()) {
                 params[key] = value;
@@ -245,7 +254,7 @@
         },
         startTimer: function(elementId, duration, onComplete) {
             let remaining = duration;
-            const el = document.getElementById(elementId);
+            const el = typeof document !== 'undefined' ? document.getElementById(elementId) : null;
             if (el) el.textContent = remaining;
             const timer = setInterval(() => {
                 remaining--;
@@ -261,6 +270,7 @@
             COSYUtils.stopTimer();
         },
         showGameMessage: function(target, msg, type = 'info') {
+            if (typeof document === 'undefined') return;
             const container = typeof target === 'string' ? document.getElementById(target) : target;
             if (!container) return;
             const msgEl = document.createElement('div');
@@ -271,7 +281,7 @@
             setTimeout(() => msgEl.remove(), 3000);
         },
         showGameConfirm: function(msg, onConfirm) {
-            if (window.confirm(msg)) {
+            if (typeof window !== 'undefined' && window.confirm(msg)) {
                 if (typeof onConfirm === 'function') onConfirm();
             }
         }
@@ -279,4 +289,4 @@
 
     global.COSYUtils = COSYUtils;
     global.gameUtils = global.gameUtils || gameUtils;
-})(typeof window !== 'undefined' ? window : this);
+})(typeof window !== 'undefined' ? window : (typeof global !== 'undefined' ? global : this));

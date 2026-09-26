@@ -41,6 +41,7 @@
             <a href="#grid-speaking" class="cg-nav-hub-link" data-i18n="nav_speaking">Speaking & Fluency 🗣️</a>
             <a href="#grid-mystery" class="cg-nav-hub-link" data-i18n="nav_mystery">Mystery & Guesses 🔍</a>
             <a href="#grid-vocab" class="cg-nav-hub-link" data-i18n="nav_vocab">Vocab & Puzzles 🧩</a>
+            <a href="#leaderboard" class="cg-nav-hub-link" data-i18n="nav_leaderboard">Leaderboard 🏆</a>
             <select id="cosy-ui-lang-switcher" class="cosy-lang-select" onchange="if(window.setLanguage)window.setLanguage(this.value)" aria-label="Interface Language">
                 <option value="en">🇬🇧 EN</option>
                 <option value="fr">🇫🇷 FR</option>
@@ -186,6 +187,62 @@
             <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span><span class="gtag" data-i18n="filter_vocab">Vocabulary</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('gender')">► Play</button></div>
           </div>
         </div>
+
+        <!-- LEADERBOARD SECTION -->
+        <div class="sec-title fi" id="leaderboard">
+          <span style="font-size:1.4rem;">🏆</span>
+          <span data-i18n="section_leaderboard">Community Leaderboard</span>
+        </div>
+        <div class="leaderboard-card fi" style="background: var(--surface-card, #ffffff); border: 1px solid var(--border-color, #e2e8f0); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <label for="leaderboard-game-select" style="font-weight: 600;">Game:</label>
+              <select id="leaderboard-game-select" class="cosy-lang-select" style="padding: 0.4rem 0.8rem; border-radius: 8px;">
+                <option value="all">All Games</option>
+                <option value="fluency">Fluency Flow</option>
+                <option value="battle">Battle of Wits</option>
+                <option value="opinion">Opinion Arena</option>
+                <option value="critic">Critic's Corner</option>
+                <option value="questions">100 Questions</option>
+                <option value="storychain">Story Chain</option>
+                <option value="storytelling">Story Weaver</option>
+                <option value="hotseat">Hot Seat</option>
+                <option value="action">Action Hero</option>
+                <option value="identity">Identity Mystery</option>
+                <option value="objectquest">Object Quest</option>
+                <option value="scenematch">Scene Match</option>
+                <option value="wordlinker">Word Linker</option>
+                <option value="lastletter">Last Letter</option>
+                <option value="emoji">Emoji Odyssey</option>
+                <option value="crossword">Cosy Crossword</option>
+                <option value="bingo">Lucky Numbers</option>
+                <option value="etymology">Etymology Explorer</option>
+                <option value="gender">What Gender Is It?</option>
+              </select>
+            </div>
+            <div id="leaderboard-optin-wrapper" style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem;">
+              <input type="checkbox" id="leaderboard-optin-toggle" style="width: 1.1rem; height: 1.1rem; cursor: pointer;">
+              <label for="leaderboard-optin-toggle" style="cursor: pointer;">Opt-in to public leaderboard (requires logged-in COSY session)</label>
+            </div>
+          </div>
+
+          <div id="leaderboard-list-container">
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+              <thead>
+                <tr style="border-bottom: 2px solid var(--border-color, #e2e8f0); color: var(--ink-muted, #64748b);">
+                  <th style="padding: 0.5rem;">#</th>
+                  <th style="padding: 0.5rem;">Player</th>
+                  <th style="padding: 0.5rem;">Score</th>
+                  <th style="padding: 0.5rem;">Lang</th>
+                  <th style="padding: 0.5rem;">Date</th>
+                </tr>
+              </thead>
+              <tbody id="leaderboard-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
 
       <!-- Footer -->
@@ -317,6 +374,48 @@
           location.href = path;
         };
 
+        async function renderLeaderboard() {
+          const gameSelect = document.getElementById('leaderboard-game-select');
+          const tbody = document.getElementById('leaderboard-tbody');
+          const optinToggle = document.getElementById('leaderboard-optin-toggle');
+
+          if (optinToggle && window.COSYScores) {
+            optinToggle.checked = window.COSYScores.getOptIn();
+            optinToggle.onchange = function() {
+              window.COSYScores.setOptIn(this.checked);
+            };
+          }
+
+          if (!tbody || !window.COSYScores) return;
+
+          const game = gameSelect ? gameSelect.value : 'all';
+          tbody.innerHTML = '<tr><td colspan="5" style="padding: 1rem; text-align: center; color: var(--ink-muted);">Loading scores...</td></tr>';
+
+          try {
+            const entries = await window.COSYScores.fetchLeaderboard(game, 10);
+            if (!entries || entries.length === 0) {
+              tbody.innerHTML = '<tr><td colspan="5" style="padding: 1rem; text-align: center; color: var(--ink-muted);">No scores recorded yet. Play a game to set a score!</td></tr>';
+              return;
+            }
+
+            tbody.innerHTML = entries.map((entry, idx) => {
+              const dateStr = entry.updated_at ? new Date(entry.updated_at).toLocaleDateString() : '-';
+              const langFlag = entry.language ? entry.language.toUpperCase() : '-';
+              return `
+                <tr style="border-bottom: 1px solid var(--border-color, #e2e8f0);">
+                  <td style="padding: 0.75rem 0.5rem; font-weight: bold;">${idx + 1}</td>
+                  <td style="padding: 0.75rem 0.5rem;">${entry.username || 'Anonymous'}</td>
+                  <td style="padding: 0.75rem 0.5rem; font-weight: bold; color: var(--teal, #0d9488);">${entry.score}</td>
+                  <td style="padding: 0.75rem 0.5rem;">${langFlag}</td>
+                  <td style="padding: 0.75rem 0.5rem; color: var(--ink-muted, #64748b); font-size: 0.85rem;">${dateStr}</td>
+                </tr>
+              `;
+            }).join('');
+          } catch(e) {
+            tbody.innerHTML = '<tr><td colspan="5" style="padding: 1rem; text-align: center; color: var(--ink-muted);">Unable to load scores right now.</td></tr>';
+          }
+        }
+
         // Filter Pills Handler
         document.addEventListener('DOMContentLoaded', () => {
           const filterPills = document.querySelectorAll('.fpill');
@@ -347,11 +446,18 @@
               window.openGame(normalizedGame);
             }
           }
+
+          const gameSelect = document.getElementById('leaderboard-game-select');
+          if (gameSelect) {
+            gameSelect.addEventListener('change', renderLeaderboard);
+          }
+          renderLeaderboard();
         });
       })();
     </script>
 
     <div id="toast" class="toast-notification"></div>
+    <script src="./_engine/scores.js"></script>
     <script src="./shared/utils/game-utils.js"></script>
     <script src="shared/js/i18n.js"></script>
     <script src="./shared/js/nav.js"></script>
