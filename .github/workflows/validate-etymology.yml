@@ -5,14 +5,12 @@ on:
     paths:
       - 'data/**'
       - 'etymology-explorer/**'
-      - 'vocab-puzzles/etymology-explorer/**'
       - 'scripts/validate-etymology-data.js'
       - '.github/workflows/validate-etymology.yml'
   pull_request:
     paths:
       - 'data/**'
       - 'etymology-explorer/**'
-      - 'vocab-puzzles/etymology-explorer/**'
       - 'scripts/validate-etymology-data.js'
       - '.github/workflows/validate-etymology.yml'
 

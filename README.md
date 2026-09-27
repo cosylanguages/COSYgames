@@ -175,9 +175,6 @@ COSYgames/
 │   ├── css/                     # Shared theme CSS files
 │   └── js/                      # Shared navigation logic
 ├── assets/                      # Shared media assets & icons
-├── speaking/                    # Category directory
-├── mystery/                     # Category directory
-├── vocab-puzzles/              # Category directory
 ├── fluency-flow/                # Game directory
 ├── battle-of-wits/              # Game directory
 ├── opinion-arena/               # Game directory
