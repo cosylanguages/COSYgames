@@ -79,8 +79,8 @@
               </p>
 
               <div class="setup-field" style="margin-bottom: 1rem; text-align: left;">
-                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem;">🌐 Target Language</label>
-                <select class="styled-sel" id="tot-lang-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid #e5e7eb; font-weight:600;">
+                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);">🌐 Target Language</label>
+                <select class="styled-sel" id="tot-lang-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border, #e5e7eb); background: var(--surface-color, #fff); color: var(--ink, #111); font-weight:600;">
                   <option value="en" selected>🇬🇧 English</option>
                   <option value="french">🇫🇷 Français (French)</option>
                   <option value="italian">🇮🇹 Italiano (Italian)</option>
@@ -90,8 +90,8 @@
               </div>
 
               <div class="setup-field" style="margin-bottom: 1rem; text-align: left;">
-                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem;">🎯 Target CEFR Level</label>
-                <select class="styled-sel" id="tot-level-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid #e5e7eb; font-weight:600;">
+                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);">🎯 Target CEFR Level</label>
+                <select class="styled-sel" id="tot-level-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border, #e5e7eb); background: var(--surface-color, #fff); color: var(--ink, #111); font-weight:600;">
                   <option value="A0_A1">A0–A1: Starter & Basic Words</option>
                   <option value="A2" selected>A2: Elementary & Daily Life</option>
                   <option value="B1">B1: Intermediate & Work/Travel</option>
@@ -101,8 +101,8 @@
               </div>
 
               <div class="setup-field" style="margin-bottom: 1.75rem; text-align: left;">
-                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem;">🎴 Vocabulary Deck & Topic</label>
-                <select class="styled-sel" id="tot-deck-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid #e5e7eb; font-weight:600;">
+                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);">🎴 Vocabulary Deck & Topic</label>
+                <select class="styled-sel" id="tot-deck-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border, #e5e7eb); background: var(--surface-color, #fff); color: var(--ink, #111); font-weight:600;">
                   <optgroup label="💬 Vocabulary & Speaking Topics">
                     <option value="appearance" selected>👁️ Physical Appearance (People)</option>
                     <option value="professions">💼 Professions & Careers</option>
@@ -380,7 +380,7 @@
                         </div>
 
                         ${item.visualDescription ? `
-                          <div style="font-size:0.78rem; font-style:italic; color:#4b5563; background:#f0f9ff; padding:6px 10px; border-radius:8px; margin-bottom:0.6rem; border-left:3px solid #0284c7;">
+                          <div style="font-size:0.78rem; font-style:italic; color:var(--ink, #4b5563); background:var(--sage-mist, #f0f9ff); padding:6px 10px; border-radius:8px; margin-bottom:0.6rem; border-left:3px solid #0284c7;">
                             🎨 <strong>Visual Details:</strong> ${item.visualDescription}
                           </div>
                         ` : ''}
@@ -405,27 +405,27 @@
 
                           <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:0.65rem;">
                             ${item.anthem ? `
-                              <div style="font-size:0.78rem; font-weight:700; color:#4b5563; background:#f3f4f6; padding:5px 10px; border-radius:10px; border:1px solid #e5e7eb;">
+                              <div style="font-size:0.78rem; font-weight:700; color:var(--ink, #4b5563); background:var(--sage-mist, #f3f4f6); padding:5px 10px; border-radius:10px; border:1px solid var(--border, #e5e7eb);">
                                 ${item.anthem}
                               </div>
                             ` : ''}
                             ${item.film ? `
-                              <div style="font-size:0.78rem; font-weight:700; color:#4b5563; background:#f0f9ff; padding:5px 10px; border-radius:10px; border:1px solid #bae6fd;">
+                              <div style="font-size:0.78rem; font-weight:700; color:var(--ink, #4b5563); background:var(--sage-mist, #f0f9ff); padding:5px 10px; border-radius:10px; border:1px solid var(--border, #bae6fd);">
                                 ${item.film}
                               </div>
                             ` : ''}
                           </div>
                         ` : `
                           <div class="dilemma-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:0.8rem;">
-                            <div class="dilemma-opt" style="background:#f9fafb; padding:10px; border-radius:12px; border:1px solid #e5e7eb; text-align:center;">
+                            <div class="dilemma-opt" style="background:var(--sage-mist, #f9fafb); padding:10px; border-radius:12px; border:1px solid var(--border, #e5e7eb); text-align:center;">
                               <div style="font-size:2.2rem; margin-bottom:4px;">${item.optionA.emoji}</div>
-                              <div style="font-weight:800; font-size:0.95rem; color:#111827;">${item.optionA.title}</div>
-                              <div style="font-size:0.78rem; color:#6b7280; margin-top:4px; line-height:1.3;">${item.optionA.desc}</div>
+                              <div style="font-weight:800; font-size:0.95rem; color:var(--ink, #111827);">${item.optionA.title}</div>
+                              <div style="font-size:0.78rem; color:var(--ink-muted, #6b7280); margin-top:4px; line-height:1.3;">${item.optionA.desc}</div>
                             </div>
-                            <div class="dilemma-opt" style="background:#f9fafb; padding:10px; border-radius:12px; border:1px solid #e5e7eb; text-align:center;">
+                            <div class="dilemma-opt" style="background:var(--sage-mist, #f9fafb); padding:10px; border-radius:12px; border:1px solid var(--border, #e5e7eb); text-align:center;">
                               <div style="font-size:2.2rem; margin-bottom:4px;">${item.optionB.emoji}</div>
-                              <div style="font-weight:800; font-size:0.95rem; color:#111827;">${item.optionB.title}</div>
-                              <div style="font-size:0.78rem; color:#6b7280; margin-top:4px; line-height:1.3;">${item.optionB.desc}</div>
+                              <div style="font-weight:800; font-size:0.95rem; color:var(--ink, #111827);">${item.optionB.title}</div>
+                              <div style="font-size:0.78rem; color:var(--ink-muted, #6b7280); margin-top:4px; line-height:1.3;">${item.optionB.desc}</div>
                             </div>
                           </div>
                         `}
@@ -738,15 +738,15 @@
                   <div style="font-size: 2.5rem; font-weight: 800; color: var(--tinder-pink); margin: 0.5rem 0;">${scoreVal} Points</div>
                   <p style="color:var(--ink-muted);">Here are your Tinder matches & passed items. Discuss your reasons with your learning partner!</p>
 
-                  <div style="text-align: left; background: #ffffff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 1rem; margin: 1.25rem 0; max-height: 280px; overflow-y: auto;">
-                    <h4 style="margin-top: 0; font-family:'DM Sans', sans-serif; font-weight:800;">Your Match History:</h4>
+                  <div style="text-align: left; background: var(--surface-color, #ffffff); border: 1px solid var(--border, #e5e7eb); color: var(--ink, #111); border-radius: 16px; padding: 1rem; margin: 1.25rem 0; max-height: 280px; overflow-y: auto;">
+                    <h4 style="margin-top: 0; font-family:'DM Sans', sans-serif; font-weight:800; color: var(--ink);">Your Match History:</h4>
                     ${this.swipedChoices.map(c => `
-                      <div style="padding: 8px 0; border-bottom: 1px dashed rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;">
+                      <div style="padding: 8px 0; border-bottom: 1px dashed var(--border, rgba(0,0,0,0.1)); display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;">
                         <div>
-                          <strong>${c.item.title}</strong> <span style="font-size:0.75rem; background:#f3f4f6; padding:2px 6px; border-radius:8px; margin-left:4px;">${c.item.level || ''}</span>
-                          <div style="font-size: 0.78rem; color: #6b7280;">${c.item.category}</div>
+                          <strong style="color:var(--ink);">${c.item.title}</strong> <span style="font-size:0.75rem; background:var(--sage-mist, #f3f4f6); color:var(--ink); padding:2px 6px; border-radius:8px; margin-left:4px;">${c.item.level || ''}</span>
+                          <div style="font-size: 0.78rem; color: var(--ink-muted, #6b7280);">${c.item.category}</div>
                         </div>
-                        <span style="font-weight: 700; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; background: ${c.choice.includes('Matched') || c.choice.includes('Option B') ? '#d1fae5' : '#fee2e2'}; color: ${c.choice.includes('Matched') || c.choice.includes('Option B') ? '#047857' : '#b91c1c'};">
+                        <span style="font-weight: 700; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; background: ${c.choice.includes('Matched') || c.choice.includes('Option B') ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)'}; color: ${c.choice.includes('Matched') || c.choice.includes('Option B') ? '#10b981' : '#ef4444'};">
                           ${c.choice}
                         </span>
                       </div>

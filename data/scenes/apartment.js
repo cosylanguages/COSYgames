@@ -5,7 +5,6 @@
     window.COSY_SCENE_DATA['apartment'] = {
         id: 'apartment',
         level: 'A1',
-        imageUrl: 'images/scenes/apartment.png',
         title: {
             en: "Living Room",
             fr: "Le salon",

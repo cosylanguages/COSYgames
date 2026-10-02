@@ -75,7 +75,8 @@
         position: relative;
         width: 100%;
         min-height: 480px;
-        background: var(--warm-white, #ffffff);
+        background: var(--surface-color, #ffffff);
+        color: var(--ink, #2a2a2a);
         border-radius: 20px;
         box-shadow: 0 14px 30px rgba(0,0,0,0.12);
         display: flex;
@@ -84,7 +85,7 @@
         user-select: none;
         cursor: grab;
         transition: transform 0.25s ease, opacity 0.25s ease;
-        border: 1px solid rgba(0,0,0,0.06);
+        border: 1px solid var(--border, rgba(0,0,0,0.06));
       }
       .tinder-card:active {
         cursor: grabbing;
@@ -213,7 +214,8 @@
         flex-direction: column;
         flex: 1;
         justify-content: space-between;
-        background: #ffffff;
+        background: var(--surface-color, #ffffff);
+        color: var(--ink, #2a2a2a);
       }
 
       .profile-title-row {
@@ -226,12 +228,12 @@
         font-family: 'DM Sans', sans-serif;
         font-weight: 800;
         font-size: 1.5rem;
-        color: #111827;
+        color: var(--ink, #111827);
       }
       .profile-age {
         font-weight: 400;
         font-size: 1.3rem;
-        color: #6b7280;
+        color: var(--ink-muted, #6b7280);
       }
       .verified-icon {
         color: #2563eb;
@@ -243,7 +245,7 @@
         align-items: center;
         gap: 12px;
         font-size: 0.85rem;
-        color: #6b7280;
+        color: var(--ink-muted, #6b7280);
         margin-bottom: 0.8rem;
       }
 
@@ -258,18 +260,18 @@
         border-radius: 16px;
         font-size: 0.78rem;
         font-weight: 700;
-        background: #f3f4f6;
-        color: #374151;
-        border: 1px solid #e5e7eb;
+        background: var(--sage-mist, #f3f4f6);
+        color: var(--ink, #374151);
+        border: 1px solid var(--border, #e5e7eb);
       }
 
       .profile-bio-box {
-        background: #f9fafb;
+        background: var(--sage-mist, #f9fafb);
         padding: 0.85rem;
         border-radius: 12px;
         font-size: 0.9rem;
         line-height: 1.45;
-        color: #374151;
+        color: var(--ink, #374151);
         margin-bottom: 0.8rem;
         border-left: 3px solid var(--tinder-pink);
       }
@@ -288,12 +290,12 @@
         font-weight: 600;
       }
       .flag-card.green {
-        background: rgba(16, 185, 129, 0.12);
-        color: #065f46;
+        background: rgba(16, 185, 129, 0.15);
+        color: #10b981;
       }
       .flag-card.red {
-        background: rgba(239, 68, 68, 0.12);
-        color: #991b1b;
+        background: rgba(239, 68, 68, 0.15);
+        color: #ef4444;
       }
 
       .prompt-box {
@@ -302,7 +304,7 @@
         border-radius: 12px;
         font-size: 0.88rem;
         font-weight: 600;
-        color: #1f2937;
+        color: var(--ink, #1f2937);
         border: 1px solid rgba(253, 38, 125, 0.2);
       }
 
