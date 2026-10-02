@@ -47,7 +47,7 @@
             const mode = document.getElementById('s-mode')?.value || 'all';
             document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Assembling magnetic field...</div>';
 
-            await COSYLoader.loadLevelData(lang, level);
+            await COSYLoader.loadLevelData(lang, level, 'wordlinker');
             COSYGame.init(GAME_ID, lang, level);
 
             const data = COSYLoader.getGameData(lang);

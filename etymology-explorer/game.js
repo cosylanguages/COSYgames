@@ -185,7 +185,7 @@
             }
 
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
-            await COSYLoader.loadLevelData(lang, 'starter');
+            await COSYLoader.loadLevelData(lang, 'starter', 'etymology');
             COSYGame.init(GAME_ID, lang, levelVal);
             COSYGame.maxRounds = 10;
             revealedHistoryLayers = [];

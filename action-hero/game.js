@@ -74,7 +74,7 @@
             const category = document.getElementById('s-cat')?.value || 'all';
             document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Loading...</div>';
 
-            await COSYLoader.loadLevelData(lang, level);
+            await COSYLoader.loadLevelData(lang, level, 'action');
             COSYGame.init(GAME_ID, lang, level);
 
             const data = COSYLoader.getGameData(lang);

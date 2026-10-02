@@ -49,8 +49,11 @@ const auditSummary = {
     gender: { total: 0, matched: 0 }
 };
 
-// Audit Action Hero words in data/en/game_data.js
-const enGameDataPath = path.join(ROOT_DIR, 'data', 'en', 'game_data.js');
+// Audit Action Hero words in data/en/action.js or data/en/game_data.js
+let enGameDataPath = path.join(ROOT_DIR, 'data', 'en', 'action.js');
+if (!fs.existsSync(enGameDataPath)) {
+    enGameDataPath = path.join(ROOT_DIR, 'data', 'en', 'game_data.js');
+}
 if (fs.existsSync(enGameDataPath)) {
     const content = fs.readFileSync(enGameDataPath, 'utf8');
     const match = content.match(/"action":\s*\{([\s\S]*?)\}/);

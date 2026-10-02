@@ -96,47 +96,49 @@
     }
 
     window.COSYLoader = {
-        loadLevelData: (lang, level) => {
+        loadLevelData: (lang, level, gameKey) => {
             if (window.gameUtils && typeof window.gameUtils.loadLevelData === 'function') {
-                return window.gameUtils.loadLevelData(lang, level);
+                return window.gameUtils.loadLevelData(lang, level, gameKey);
             }
             const promises = [];
             if (typeof document !== 'undefined') {
-                if (lang && (!window.gameData || !window.gameData[lang])) {
-                    promises.push(new Promise((resolve) => {
-                        const tryLoad = (paths) => {
-                            if (paths.length === 0) { resolve(); return; }
-                            const src = paths.shift();
-                            const script = document.createElement('script');
-                            script.src = src;
-                            script.onload = () => resolve();
-                            script.onerror = () => tryLoad(paths);
-                            document.head.appendChild(script);
-                        };
-                        tryLoad([
+                const loadScript = (paths) => new Promise((resolve) => {
+                    const tryLoad = (pathsLeft) => {
+                        if (pathsLeft.length === 0) { resolve(); return; }
+                        const src = pathsLeft.shift();
+                        const script = document.createElement('script');
+                        script.src = src;
+                        script.onload = () => resolve();
+                        script.onerror = () => tryLoad(pathsLeft);
+                        document.head.appendChild(script);
+                    };
+                    tryLoad([...paths]);
+                });
+
+                if (lang) {
+                    // Load game-specific data file if specified and key missing
+                    if (gameKey && (!window.gameData || !window.gameData[lang] || !window.gameData[lang][gameKey])) {
+                        promises.push(loadScript([
+                            `../data/${lang}/${gameKey}.js`,
+                            `../../data/${lang}/${gameKey}.js`,
+                            `./data/${lang}/${gameKey}.js`
+                        ]));
+                    }
+                    // Fallback load of monolithic game_data.js if window.gameData[lang] missing
+                    if (!window.gameData || !window.gameData[lang]) {
+                        promises.push(loadScript([
                             `../data/${lang}/game_data.js`,
                             `../../data/${lang}/game_data.js`,
                             `./data/${lang}/game_data.js`
-                        ]);
-                    }));
+                        ]));
+                    }
                 }
                 if (!window.gameData || !window.gameData['universal']) {
-                    promises.push(new Promise((resolve) => {
-                        const tryLoad = (paths) => {
-                            if (paths.length === 0) { resolve(); return; }
-                            const src = paths.shift();
-                            const script = document.createElement('script');
-                            script.src = src;
-                            script.onload = () => resolve();
-                            script.onerror = () => tryLoad(paths);
-                            document.head.appendChild(script);
-                        };
-                        tryLoad([
-                            '../data/universal.js',
-                            '../../data/universal.js',
-                            './data/universal.js'
-                        ]);
-                    }));
+                    promises.push(loadScript([
+                        '../data/universal.js',
+                        '../../data/universal.js',
+                        './data/universal.js'
+                    ]));
                 }
             }
             return Promise.all(promises);
