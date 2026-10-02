@@ -10,7 +10,10 @@ let multiHopCount = 0;
 console.log('Running etymology schema, multi-hop path, false-friends, and doublets tests...\n');
 
 langs.forEach(lang => {
-    const filePath = path.join(__dirname, '..', 'data', lang, 'game_data.js');
+    let filePath = path.join(__dirname, '..', 'data', lang, 'etymology.js');
+    if (!fs.existsSync(filePath)) {
+        filePath = path.join(__dirname, '..', 'data', lang, 'game_data.js');
+    }
     assert.strictEqual(fs.existsSync(filePath), true, `File missing for language: ${lang}`);
 
     const content = fs.readFileSync(filePath, 'utf8');

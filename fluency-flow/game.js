@@ -121,7 +121,7 @@
 
             if (typeof COSYLoader !== 'undefined' && COSYLoader.loadLevelData) {
                 try {
-                    await COSYLoader.loadLevelData(lang, level);
+                    await COSYLoader.loadLevelData(lang, level, 'fluency');
                 } catch (e) {
                     console.log('Level data load fallback', e);
                 }

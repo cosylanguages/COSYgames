@@ -227,7 +227,7 @@
             const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
             document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Loading Arena...</div>';
 
-            await COSYLoader.loadLevelData(lang, level);
+            await COSYLoader.loadLevelData(lang, level, 'opinions');
             COSYGame.init(GAME_ID, lang, level);
             COSYGame.maxRounds = 5;
 

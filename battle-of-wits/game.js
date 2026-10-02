@@ -42,7 +42,7 @@
             const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
             document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Loading...</div>';
 
-            await COSYLoader.loadLevelData(lang, level);
+            await COSYLoader.loadLevelData(lang, level, 'battle');
             COSYGame.init(GAME_ID, lang, level);
             COSYGame.maxRounds = 3;
             teamAScore = 0;

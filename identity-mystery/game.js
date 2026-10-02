@@ -48,7 +48,7 @@
 
             try {
                 if (window.COSYLoader && typeof window.COSYLoader.loadLevelData === 'function') {
-                    await window.COSYLoader.loadLevelData(lang, level);
+                    await window.COSYLoader.loadLevelData(lang, level, 'identity');
                 }
             } catch (err) {
                 console.warn('Level data fetch fallback', err);

@@ -30,7 +30,10 @@ console.log(`🔍 Validating Etymology Data across ${languageDirs.length} langua
 
 // 1. Validate Per-Language Datasets
 languageDirs.forEach(lang => {
-    const gameDataPath = path.join(dataDir, lang, 'game_data.js');
+    let gameDataPath = path.join(dataDir, lang, 'etymology.js');
+    if (!fs.existsSync(gameDataPath)) {
+        gameDataPath = path.join(dataDir, lang, 'game_data.js');
+    }
     if (!fs.existsSync(gameDataPath)) return;
 
     const content = fs.readFileSync(gameDataPath, 'utf8');
