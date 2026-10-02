@@ -50,8 +50,12 @@
 .game-overlay { display: none; position: fixed; inset: 0; background: var(--cream); z-index: 2000; flex-direction: column; overflow-y: auto; }
 .game-overlay.open { display: flex; }
 .go-topbar { background: rgba(26, 43, 29, 0.92); backdrop-filter: blur(12px); color: #fff; padding: 1.15rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; flex-shrink: 0; position: sticky; top: 0; z-index: 10; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-bottom: 1px solid rgba(255,255,255,0.08); }
-.go-back { background: rgba(255, 255, 255, 0.08); border: 1.5px solid rgba(255,255,255,.15); color: #fff; border-radius: 100px; font-family: 'DM Sans', sans-serif; font-size: .8rem; font-weight: 600; padding: 7px 16px; min-height: 44px; cursor: pointer; transition: all .2s ease; display: inline-flex; align-items: center; gap: 6px; }
-.go-back:hover { background: rgba(255, 255, 255, 0.18); border-color: rgba(255,255,255,.3); transform: translateX(-2px); }
+.go-back,
+.go-topbar .go-back,
+.go-topbar .cg-btn-secondary { background: rgba(255, 255, 255, 0.12); border: 1.5px solid rgba(255,255,255,.25); color: #ffffff !important; border-radius: 100px; font-family: 'DM Sans', sans-serif; font-size: .8rem; font-weight: 600; padding: 7px 16px; min-height: 44px; cursor: pointer; transition: all .2s ease; display: inline-flex; align-items: center; gap: 6px; }
+.go-back:hover,
+.go-topbar .go-back:hover,
+.go-topbar .cg-btn-secondary:hover { background: rgba(255, 255, 255, 0.22); border-color: rgba(255,255,255,.4); color: #ffffff !important; transform: translateX(-2px); }
 .go-back:active { transform: scale(0.97); }
 .go-title { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; letter-spacing: 0.01em; color: #fff; }
 .go-meta { font-size: 0.75rem; color: rgba(255,255,255,0.65); margin-top: 1px; }
