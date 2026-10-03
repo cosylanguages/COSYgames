@@ -67,128 +67,133 @@
       <div class="page">
         <!-- Filter Bar -->
         <div class="filter-bar fi">
-          <span class="fl" data-i18n="filter_label">Filter:</span>
-          <button class="fpill active" data-f="all" data-i18n="filter_all">All Games</button>
-          <button class="fpill" data-f="solo" data-i18n="filter_solo">Solo</button>
-          <button class="fpill" data-f="group" data-i18n="filter_friends">With Friends</button>
-          <button class="fpill" data-f="speaking" data-i18n="filter_speaking">Speaking</button>
-          <button class="fpill" data-f="vocab" data-i18n="filter_vocab">Vocabulary</button>
-          <button class="fpill" data-f="mystery" data-i18n="filter_mystery">Mystery</button>
-          <button class="fpill" data-f="puzzles" data-i18n="filter_puzzles">Puzzles</button>
+          <div class="filter-group" role="group" aria-labelledby="fg-players">
+            <span class="fl" id="fg-players" data-i18n="filter_players">Players:</span>
+            <button class="fpill active" data-group="players" data-f="all" aria-pressed="true" data-i18n="filter_any">Any</button>
+            <button class="fpill" data-group="players" data-f="solo" aria-pressed="false" data-i18n="filter_solo">Solo</button>
+            <button class="fpill" data-group="players" data-f="group" aria-pressed="false" data-i18n="filter_friends">With Friends</button>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-skill">
+            <span class="fl" id="fg-skill" data-i18n="filter_skill">Skill:</span>
+            <button class="fpill active" data-group="skill" data-f="all" aria-pressed="true" data-i18n="filter_any">Any</button>
+            <button class="fpill" data-group="skill" data-f="speaking" aria-pressed="false" data-i18n="section_speaking">Speaking & Fluency</button>
+            <button class="fpill" data-group="skill" data-f="mystery" aria-pressed="false" data-i18n="section_mystery">Mystery & Guesses</button>
+            <button class="fpill" data-group="skill" data-f="vocab" aria-pressed="false" data-i18n="section_vocab">Vocab & Puzzles</button>
+          </div>
         </div>
 
         <!-- SPEAKING & FLUENCY (9 Games) -->
-        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_speaking">Speaking & Fluency</span> <span class="sec-count" data-i18n="games_count_9">9 games</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_speaking">Speaking & Fluency</span> <span class="sec-count">9 games</span></div>
         <div class="game-grid fi" id="grid-speaking">
-          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('fluency')">
-            <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name">Fluency Flow</div></div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name"><a class="gc-link" href="fluency-flow/index.html">Fluency Flow</a></div></div>
             <div class="gc-desc" data-i18n="desc_fluency_flow">Spin for a random topic and speak for 1–5 minutes without stopping. Flow, not perfection.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('fluency')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-teal" data-tags="speaking group" onclick="openGame('battle')">
-            <div class="gc-top"><div class="gc-icon">⚖️</div><div class="gc-name">Battle of Wits</div></div>
+          <div class="gc gc-teal" data-players="group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">⚖️</div><div class="gc-name"><a class="gc-link" href="battle-of-wits/index.html">Battle of Wits</a></div></div>
             <div class="gc-desc" data-i18n="desc_battle_wits">Two topics, two sides. Build your arguments and debate in the language you're learning.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag multi" data-i18n="tag_group">Group</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('battle')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag multi" data-i18n="tag_group">Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('opinion')">
-            <div class="gc-top"><div class="gc-icon">🏟️</div><div class="gc-name">Opinion Arena</div></div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🏟️</div><div class="gc-name"><a class="gc-link" href="opinion-arena/index.html">Opinion Arena</a></div></div>
             <div class="gc-desc" data-i18n="desc_opinion_arena">Agree or disagree with a statement, then defend your view. Real opinions, real language.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('opinion')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('critic')">
-            <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name">Critic's Corner</div></div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name"><a class="gc-link" href="critics-corner/index.html">Critic's Corner</a></div></div>
             <div class="gc-desc" data-i18n="desc_critics_corner">A famous quote appears. What does it mean to you? Deep discussion for advanced levels.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('critic')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('questions')">
-            <div class="gc-top"><div class="gc-icon">💬</div><div class="gc-name">100 Questions</div></div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">💬</div><div class="gc-name"><a class="gc-link" href="100-questions/index.html">100 Questions</a></div></div>
             <div class="gc-desc" data-i18n="desc_100_questions">Pick a deck and answer deep, funny, or philosophical questions. Perfect for speaking practice.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('questions')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('storychain')">
-            <div class="gc-top"><div class="gc-icon">🃏</div><div class="gc-name">Story Chain</div></div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🃏</div><div class="gc-name"><a class="gc-link" href="story-chain/index.html">Story Chain</a></div></div>
             <div class="gc-desc" data-i18n="desc_story_chain">Add one sentence at a time to build a collaborative story with prompts and connectors.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('storychain')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('story-weaver')">
-            <div class="gc-top"><div class="gc-icon">📖</div><div class="gc-name">Story Weaver</div></div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">📖</div><div class="gc-name"><a class="gc-link" href="story-weaver/index.html">Story Weaver</a></div></div>
             <div class="gc-desc" data-i18n="desc_story_weaver">Weave target words into a coherent narrative. Turn vocabulary study into creative writing.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('story-weaver')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-teal" data-tags="speaking solo" onclick="openGame('hotseat')">
-            <div class="gc-top"><div class="gc-icon">🎯</div><div class="gc-name">Hot Seat</div></div>
+          <div class="gc gc-teal" data-players="group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🎯</div><div class="gc-name"><a class="gc-link" href="hot-seat/index.html">Hot Seat</a></div></div>
             <div class="gc-desc" data-i18n="desc_hot_seat">One player faces away from the board while team members explain target words without saying them.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('hotseat')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag multi" data-i18n="tag_group">Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('this-or-that')">
-            <div class="gc-top"><div class="gc-icon">🔀</div><div class="gc-name">This or That</div></div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🔀</div><div class="gc-name"><a class="gc-link" href="this-or-that/index.html">This or That</a></div></div>
             <div class="gc-desc" data-i18n="desc_this_or_that">Choose between two intriguing options and justify your choice.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('this-or-that')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
         </div>
 
-        <!-- MYSTERY & GUESSES (4 Games) -->
-        <div class="sec-title fi"><span class="cosy-icon icon-search sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_mystery">Mystery & Guesses</span> <span class="sec-count" data-i18n="games_count_4">4 games</span></div>
+        <!-- MYSTERY & GUESSES (3 Games) -->
+        <div class="sec-title fi"><span class="cosy-icon icon-search sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_mystery">Mystery & Guesses</span> <span class="sec-count">3 games</span></div>
         <div class="game-grid fi" id="grid-mystery">
-          <div class="gc gc-gold" data-tags="speaking group mystery" onclick="openGame('action')">
-            <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name">Action Hero</div></div>
+          <div class="gc gc-gold" data-players="group" data-skill="mystery">
+            <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name"><a class="gc-link" href="action-hero/index.html">Action Hero</a></div></div>
             <div class="gc-desc" data-i18n="desc_action_hero">Act out or explain dynamic action verbs and scenarios against the clock.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag multi" data-i18n="tag_group">Group</span><span class="gtag mystery" data-i18n="filter_mystery">Mystery</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('action')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag multi" data-i18n="tag_group">Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-gold" data-tags="speaking solo group mystery" onclick="openGame('identity')">
-            <div class="gc-top"><div class="gc-icon">👤</div><div class="gc-name">Identity Mystery</div></div>
+          <div class="gc gc-gold" data-players="solo group" data-skill="mystery">
+            <div class="gc-top"><div class="gc-icon">👤</div><div class="gc-name"><a class="gc-link" href="identity-mystery/index.html">Identity Mystery</a></div></div>
             <div class="gc-desc" data-i18n="desc_identity_mystery">Deduce the hidden identity through strategic 20 questions and clues.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag mystery" data-i18n="filter_mystery">Mystery</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('identity')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-gold" data-tags="speaking solo group mystery" onclick="openGame('objectquest')">
-            <div class="gc-top"><div class="gc-icon">📦</div><div class="gc-name">Object Quest</div></div>
+          <div class="gc gc-gold" data-players="solo group" data-skill="mystery">
+            <div class="gc-top"><div class="gc-icon">📦</div><div class="gc-name"><a class="gc-link" href="object-quest/index.html">Object Quest</a></div></div>
             <div class="gc-desc" data-i18n="desc_object_quest">Describe, locate, and guess secret objects using descriptive target vocabulary.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag mystery" data-i18n="filter_mystery">Mystery</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('objectquest')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
         </div>
 
         <!-- VOCAB & PUZZLES (8 Games) -->
-        <div class="sec-title fi"><span class="cosy-icon icon-puzzle sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_vocab">Vocab & Puzzles</span> <span class="sec-count" data-i18n="games_count_8">8 games</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-puzzle sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_vocab">Vocab & Puzzles</span> <span class="sec-count">8 games</span></div>
         <div class="game-grid fi" id="grid-vocab">
-          <div class="gc gc-plum" data-tags="vocab puzzles solo" onclick="openGame('scenematch')">
-            <div class="gc-top"><div class="gc-icon">🖼️</div><div class="gc-name">Scene Match</div></div>
+          <div class="gc gc-plum" data-players="solo" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🖼️</div><div class="gc-name"><a class="gc-link" href="scene-match/index.html">Scene Match</a></div></div>
             <div class="gc-desc" data-i18n="desc_scene_match">Explore interactive visual rooms and match vocabulary items to scene objects.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span><span class="gtag" data-i18n="filter_vocab">Vocabulary</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('scenematch')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab puzzles solo group" onclick="openGame('wordlinker')">
-            <div class="gc-top"><div class="gc-icon">🔗</div><div class="gc-name">Word Linker</div></div>
+          <div class="gc gc-plum" data-players="solo group" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🔗</div><div class="gc-name"><a class="gc-link" href="word-linker/index.html">Word Linker</a></div></div>
             <div class="gc-desc" data-i18n="desc_word_linker">Connect related vocabulary words to build semantic chains.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_puzzles">Puzzles</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('wordlinker')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab puzzles solo group" onclick="openGame('lastletter')">
-            <div class="gc-top"><div class="gc-icon">🔤</div><div class="gc-name">Last Letter</div></div>
+          <div class="gc gc-plum" data-players="solo group" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🔤</div><div class="gc-name"><a class="gc-link" href="last-letter/index.html">Last Letter</a></div></div>
             <div class="gc-desc" data-i18n="desc_last_letter">Chain vocabulary words by matching the last letter of each word to the next.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_puzzles">Puzzles</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('lastletter')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab puzzles solo group" onclick="openGame('emoji')">
-            <div class="gc-top"><div class="gc-icon">📖</div><div class="gc-name">Emoji Odyssey</div></div>
+          <div class="gc gc-plum" data-players="solo group" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">📖</div><div class="gc-name"><a class="gc-link" href="emoji-odyssey/index.html">Emoji Odyssey</a></div></div>
             <div class="gc-desc" data-i18n="desc_emoji_odyssey">Decode phrases and idioms represented purely through emoji sequences.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_puzzles">Puzzles</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('emoji')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab puzzles solo" onclick="openGame('crossword')">
-            <div class="gc-top"><div class="gc-icon">🧩</div><div class="gc-name">Cosy Crossword</div></div>
+          <div class="gc gc-plum" data-players="solo" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🧩</div><div class="gc-name"><a class="gc-link" href="cosy-crossword/index.html">Cosy Crossword</a></div></div>
             <div class="gc-desc" data-i18n="desc_cosy_crossword">Solve language puzzles with tailored vocabulary clues and crosswords.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span><span class="gtag" data-i18n="filter_puzzles">Puzzles</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('crossword')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab puzzles solo group" onclick="openGame('bingo')">
-            <div class="gc-top"><div class="gc-icon">🔢</div><div class="gc-name">Lucky Numbers</div></div>
+          <div class="gc gc-plum" data-players="solo group" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🔢</div><div class="gc-name"><a class="gc-link" href="lucky-numbers/index.html">Lucky Numbers</a></div></div>
             <div class="gc-desc" data-i18n="desc_lucky_numbers">Practice numbers, counting, and math expressively in your target language.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_puzzles">Puzzles</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('bingo')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab puzzles solo" onclick="openGame('etymology')">
-            <div class="gc-top"><div class="gc-icon">📜</div><div class="gc-name">Etymology Explorer</div></div>
+          <div class="gc gc-plum" data-players="solo" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">📜</div><div class="gc-name"><a class="gc-link" href="etymology-explorer/index.html">Etymology Explorer</a></div></div>
             <div class="gc-desc" data-i18n="desc_etymology_explorer">Uncover word origins, roots, and language family connections.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span><span class="gtag" data-i18n="filter_vocab">Vocabulary</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('etymology')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
-          <div class="gc gc-plum" data-tags="vocab puzzles solo" onclick="openGame('gender')">
-            <div class="gc-top"><div class="gc-icon">♀️♂️</div><div class="gc-name">What Gender Is It?</div></div>
+          <div class="gc gc-plum" data-players="solo" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">♀️♂️</div><div class="gc-name"><a class="gc-link" href="what-gender-is-it/index.html">What Gender Is It?</a></div></div>
             <div class="gc-desc" data-i18n="desc_what_gender">Master noun genders with speed rounds and grammar memory triggers.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span><span class="gtag" data-i18n="filter_vocab">Vocabulary</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('gender')">► Play</button></div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
           </div>
         </div>
       </div>
@@ -294,11 +299,7 @@
         const initialParams = new URLSearchParams(window.location.search);
         const rememberedLang = initialParams.get('lang');
 
-        window.openGame = function(id) {
-          let normalizedId = (id || '').toLowerCase().trim();
-          let path = GAME_PATH_MAP[normalizedId];
-          if (!path) return;
-
+        function buildGameQuery() {
           const params = new URLSearchParams(window.location.search);
           const passParams = new URLSearchParams();
 
@@ -313,7 +314,15 @@
             }
           });
 
-          const queryString = passParams.toString();
+          return passParams.toString();
+        }
+
+        window.openGame = function(id) {
+          let normalizedId = (id || '').toLowerCase().trim();
+          let path = GAME_PATH_MAP[normalizedId];
+          if (!path) return;
+
+          const queryString = buildGameQuery();
           if (queryString) {
             path += (path.includes('?') ? '&' : '?') + queryString;
           }
@@ -321,28 +330,82 @@
           location.href = path;
         };
 
-        // Filter Pills Handler
         document.addEventListener('DOMContentLoaded', () => {
+          // Append query string to all card links
+          const q = buildGameQuery();
+          if (q) {
+            document.querySelectorAll('a.gc-link').forEach(a => {
+              const baseHref = a.getAttribute('href');
+              a.setAttribute('href', baseHref + (baseHref.includes('?') ? '&' : '?') + q);
+            });
+          }
+
+          // Filter Pills Handler
           const filterPills = document.querySelectorAll('.fpill');
-          const cards = document.querySelectorAll('.gc');
+          const state = { players: 'all', skill: 'all' };
+
+          function updateFilters() {
+            const sections = [
+              { grid: document.getElementById('grid-speaking'), title: document.querySelector('#grid-speaking')?.previousElementSibling },
+              { grid: document.getElementById('grid-mystery'), title: document.querySelector('#grid-mystery')?.previousElementSibling },
+              { grid: document.getElementById('grid-vocab'), title: document.querySelector('#grid-vocab')?.previousElementSibling }
+            ];
+
+            sections.forEach(sec => {
+              if (!sec.grid) return;
+              const cards = sec.grid.querySelectorAll('.gc');
+              let visibleCount = 0;
+
+              cards.forEach(card => {
+                const pAttr = (card.getAttribute('data-players') || '').split(/\s+/);
+                const sAttr = card.getAttribute('data-skill') || '';
+
+                const matchesPlayers = state.players === 'all' || pAttr.includes(state.players);
+                const matchesSkill = state.skill === 'all' || sAttr === state.skill;
+
+                if (matchesPlayers && matchesSkill) {
+                  card.removeAttribute('hidden');
+                  visibleCount++;
+                } else {
+                  card.setAttribute('hidden', '');
+                }
+              });
+
+              if (sec.title) {
+                const countSpan = sec.title.querySelector('.sec-count');
+                if (countSpan) {
+                  countSpan.textContent = visibleCount + ' game' + (visibleCount === 1 ? '' : 's');
+                }
+                if (visibleCount === 0) {
+                  sec.title.setAttribute('hidden', '');
+                  sec.grid.setAttribute('hidden', '');
+                } else {
+                  sec.title.removeAttribute('hidden');
+                  sec.grid.removeAttribute('hidden');
+                }
+              }
+            });
+          }
 
           filterPills.forEach(pill => {
             pill.addEventListener('click', () => {
-              filterPills.forEach(p => p.classList.remove('active'));
-              pill.classList.add('active');
-
+              const group = pill.getAttribute('data-group');
               const filter = pill.getAttribute('data-f');
-              cards.forEach(card => {
-                const tags = (card.getAttribute('data-tags') || '').split(' ');
-                if (filter === 'all' || tags.includes(filter)) {
-                  card.style.display = 'flex';
-                } else {
-                  card.style.display = 'none';
-                }
+              if (!group || !filter) return;
+
+              state[group] = filter;
+
+              document.querySelectorAll(`.fpill[data-group="${group}"]`).forEach(p => {
+                const isActive = p === pill;
+                p.classList.toggle('active', isActive);
+                p.setAttribute('aria-pressed', isActive ? 'true' : 'false');
               });
+
+              updateFilters();
             });
           });
 
+          // Deep link handler
           const params = new URLSearchParams(window.location.search);
           const gameParam = params.get('game');
           if (gameParam) {

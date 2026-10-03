@@ -37,15 +37,61 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem 2rem;
   margin-bottom: 2.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fl {
+  font-weight: 600;
+  color: var(--ink-soft, #4a4a4a);
 }
 
 .fpill {
   min-height: 40px;
 }
 
-/* ── PART B: Section Headings & Card Layout ── */
+/* ── PART B: Card Links & Stretched Link Pattern ── */
+.gc {
+  position: relative;
+}
+
+.gc-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gc-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.gc:has(.gc-link:focus-visible) {
+  outline: 2px solid var(--teal, #416b49);
+  outline-offset: 3px;
+}
+
+.gc-link:focus-visible::after {
+  outline: 2px solid var(--teal, #416b49);
+  outline-offset: 3px;
+}
+
+.gc[hidden],
+.sec-title[hidden],
+.game-grid[hidden] {
+  display: none !important;
+}
+
+/* ── PART C: Section Headings & Card Layout ── */
 .sec-title .sec-title-text {
   font-size: 1.4rem;
   font-family: inherit;
@@ -91,7 +137,7 @@
   flex-shrink: 0;
 }
 
-/* ── PART C: Hub Footer Styling ── */
+/* ── PART D: Hub Footer Styling ── */
 #hub footer {
   background: var(--cg-footer-bg, #1F2937);
   color: var(--cg-footer-text, #F9FAFB);
@@ -179,7 +225,7 @@
   font-size: 0.85rem;
 }
 
-/* ── PART D: Dark Mode Overrides for Hub ── */
+/* ── PART E: Dark Mode Overrides for Hub ── */
 html[data-theme="dark"] .hero-tag,
 body.theme-dark .hero-tag {
   background: #1c3322;
