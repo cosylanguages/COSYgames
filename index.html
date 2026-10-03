@@ -76,8 +76,8 @@
           <button class="fpill" data-f="puzzles" data-i18n="filter_puzzles">Puzzles</button>
         </div>
 
-        <!-- SPEAKING & FLUENCY (8 Games) -->
-        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span><span data-i18n="section_speaking">Speaking & Fluency</span> <span data-i18n="games_count_8">8 games</span></div>
+        <!-- SPEAKING & FLUENCY (9 Games) -->
+        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span><span data-i18n="section_speaking">Speaking & Fluency</span> <span data-i18n="games_count_9">9 games</span></div>
         <div class="game-grid fi" id="grid-speaking">
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('fluency')">
             <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name">Fluency Flow</div></div>
@@ -119,6 +119,11 @@
             <div class="gc-desc" data-i18n="desc_hot_seat">One player faces away from the board while team members explain target words without saying them.</div>
             <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('hotseat')">► Play</button></div>
           </div>
+          <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('this-or-that')">
+            <div class="gc-top"><div class="gc-icon">🔀</div><div class="gc-name">This or That</div></div>
+            <div class="gc-desc" data-i18n="desc_this_or_that">Choose between two intriguing options and justify your choice.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag" data-i18n="filter_speaking">Speaking</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('this-or-that')">► Play</button></div>
+          </div>
         </div>
 
         <!-- MYSTERY & GUESSES (4 Games) -->
@@ -138,11 +143,6 @@
             <div class="gc-top"><div class="gc-icon">📦</div><div class="gc-name">Object Quest</div></div>
             <div class="gc-desc" data-i18n="desc_object_quest">Describe, locate, and guess secret objects using descriptive target vocabulary.</div>
             <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag mystery" data-i18n="filter_mystery">Mystery</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('objectquest')">► Play</button></div>
-          </div>
-          <div class="gc gc-gold" data-tags="speaking solo group mystery" onclick="openGame('thisorthat')">
-            <div class="gc-top"><div class="gc-icon">🔥</div><div class="gc-name">This or That?</div></div>
-            <div class="gc-desc" data-i18n="desc_this_or_that">Choose between two intriguing options, swipe profiles, and justify your choice.</div>
-            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span><span class="gtag mystery" data-i18n="filter_mystery">Mystery</span></div><button class="gc-play" data-i18n="btn_play" onclick="event.stopPropagation();openGame('thisorthat')">► Play</button></div>
           </div>
         </div>
 

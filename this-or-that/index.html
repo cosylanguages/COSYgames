@@ -4,457 +4,38 @@
     <script>if(!location.pathname.endsWith('/')&&!location.pathname.endsWith('.html')){location.replace(location.pathname+'/'+location.search+location.hash);}</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This or That? (Tinder for Things & Concepts): COSYlanguages</title>
+    <title>This or That 🔀: COSYlanguages</title>
+    <meta name="description" content="Swipe left or right on cards showing people, professions, properties and dilemmas. Pick a side, then explain why in the language you are learning.">
+    <meta name="keywords" content="this or that, speaking practice, conversation drills, CEFR decks, fluency practice">
+    <meta property="og:title" content="This or That - COSYgames">
+    <meta property="og:description" content="Swipe left or right on cards showing people, professions, properties and dilemmas. Pick a side, then explain why in the language you are learning.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+
     <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
 
+    <link rel="stylesheet" href="../shared/css/cosy-tokens.css">
     <link rel="stylesheet" href="../shared/css/tokens.css">
-    <link rel="stylesheet" href="../shared/css/games.css">
-    <link rel="stylesheet" href="../shared/css/nav.css">
-    <style>
-      #go-body {
-        padding-top: 1rem;
-        padding-bottom: 2rem;
-        position: relative;
-        z-index: 1;
-      }
-
-      .go-topbar {
-        position: relative;
-        z-index: 10;
-        margin-bottom: 0.5rem;
-      }
-
-      /* Tinder Theme Variables */
-      :root {
-        --tinder-pink: #fd267d;
-        --tinder-orange: #ff6036;
-        --tinder-gradient: linear-gradient(135deg, #fd267d 0%, #ff6036 100%);
-        --tinder-bg: #f5f7fa;
-      }
-
-      /* Swipe Container & Stack */
-      .tinder-app {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 440px;
-        margin: 0 auto;
-        position: relative;
-        touch-action: pan-y;
-      }
-
-      .tinder-top-bar {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 0.75rem;
-        margin-bottom: 0.5rem;
-      }
-      .tinder-brand {
-        font-family: 'DM Sans', sans-serif;
-        font-weight: 800;
-        font-size: 1.25rem;
-        background: var(--tinder-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .card-stack {
-        position: relative;
-        width: 100%;
-        min-height: 480px;
-        perspective: 1000px;
-      }
-
-      /* Authentic Tinder Card Design */
-      .tinder-card {
-        position: relative;
-        width: 100%;
-        min-height: 480px;
-        background: var(--surface-color, #ffffff);
-        color: var(--ink, #2a2a2a);
-        border-radius: 20px;
-        box-shadow: 0 14px 30px rgba(0,0,0,0.12);
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        user-select: none;
-        cursor: grab;
-        transition: transform 0.25s ease, opacity 0.25s ease;
-        border: 1px solid var(--border, rgba(0,0,0,0.06));
-      }
-      .tinder-card:active {
-        cursor: grabbing;
-      }
-      .tinder-card.dragging {
-        transition: none;
-      }
-
-      /* Story Bar / Photo Pagination Dots */
-      .story-bar-container {
-        position: absolute;
-        top: 10px;
-        left: 12px;
-        right: 12px;
-        display: flex;
-        gap: 6px;
-        z-index: 25;
-      }
-      .story-segment {
-        flex: 1;
-        height: 4px;
-        background: rgba(255, 255, 255, 0.4);
-        border-radius: 4px;
-        transition: background 0.2s ease;
-      }
-      .story-segment.active {
-        background: #ffffff;
-        box-shadow: 0 0 6px rgba(255,255,255,0.8);
-      }
-
-      /* Tap navigation zones on image */
-      .tap-zone {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 35%;
-        z-index: 15;
-        cursor: pointer;
-      }
-      .tap-zone.left { left: 0; }
-      .tap-zone.right { right: 0; }
-
-      /* Photo / Avatar Box Header */
-      .card-hero-box {
-        position: relative;
-        height: 230px;
-        background: var(--tinder-gradient);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        padding: 1rem;
-        transition: background 0.3s ease;
-      }
-      .card-avatar-emoji {
-        font-size: 5.5rem;
-        filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
-        transition: transform 0.25s ease;
-      }
-      .tinder-card:hover .card-avatar-emoji {
-        transform: scale(1.1);
-      }
-
-      .card-sub-badge {
-        position: absolute;
-        bottom: 12px;
-        left: 14px;
-        background: rgba(0, 0, 0, 0.45);
-        backdrop-filter: blur(8px);
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.78rem;
-        font-weight: 700;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      /* Dynamic Rotated Stamp Overlays */
-      .badge-indicator {
-        position: absolute;
-        top: 36px;
-        padding: 8px 22px;
-        border-radius: 12px;
-        font-weight: 900;
-        font-size: 1.8rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.1s ease;
-        z-index: 30;
-      }
-      .badge-like {
-        left: 24px;
-        border: 5px solid #10b981;
-        color: #10b981;
-        transform: rotate(-18deg);
-        background: rgba(255,255,255,0.92);
-        box-shadow: 0 8px 20px rgba(16,185,129,0.3);
-      }
-      .badge-pass {
-        right: 24px;
-        border: 5px solid #ef4444;
-        color: #ef4444;
-        transform: rotate(18deg);
-        background: rgba(255,255,255,0.92);
-        box-shadow: 0 8px 20px rgba(239,68,68,0.3);
-      }
-      .badge-super {
-        top: 70px;
-        left: 50%;
-        transform: translateX(-50%) rotate(-6deg);
-        border: 5px solid #3b82f6;
-        color: #3b82f6;
-        background: rgba(255,255,255,0.95);
-        box-shadow: 0 8px 20px rgba(59,130,246,0.3);
-      }
-
-      /* Card Content Body */
-      .card-body {
-        padding: 1.25rem;
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: space-between;
-        background: var(--surface-color, #ffffff);
-        color: var(--ink, #2a2a2a);
-      }
-
-      .profile-title-row {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 0.2rem;
-      }
-      .profile-name {
-        font-family: 'DM Sans', sans-serif;
-        font-weight: 800;
-        font-size: 1.5rem;
-        color: var(--ink, #111827);
-      }
-      .profile-age {
-        font-weight: 400;
-        font-size: 1.3rem;
-        color: var(--ink-muted, #6b7280);
-      }
-      .verified-icon {
-        color: #2563eb;
-        font-size: 1.1rem;
-      }
-
-      .profile-meta-row {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 0.85rem;
-        color: var(--ink-muted, #6b7280);
-        margin-bottom: 0.8rem;
-      }
-
-      .interest-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-bottom: 0.8rem;
-      }
-      .tag-pill {
-        padding: 4px 10px;
-        border-radius: 16px;
-        font-size: 0.78rem;
-        font-weight: 700;
-        background: var(--sage-mist, #f3f4f6);
-        color: var(--ink, #374151);
-        border: 1px solid var(--border, #e5e7eb);
-      }
-
-      .profile-bio-box {
-        background: var(--sage-mist, #f9fafb);
-        padding: 0.85rem;
-        border-radius: 12px;
-        font-size: 0.9rem;
-        line-height: 1.45;
-        color: var(--ink, #374151);
-        margin-bottom: 0.8rem;
-        border-left: 3px solid var(--tinder-pink);
-      }
-
-      /* Expanded Details & Green/Red Flags */
-      .flag-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        margin-bottom: 0.8rem;
-      }
-      .flag-card {
-        padding: 6px 10px;
-        border-radius: 10px;
-        font-size: 0.8rem;
-        font-weight: 600;
-      }
-      .flag-card.green {
-        background: rgba(16, 185, 129, 0.15);
-        color: #10b981;
-      }
-      .flag-card.red {
-        background: rgba(239, 68, 68, 0.15);
-        color: #ef4444;
-      }
-
-      .prompt-box {
-        background: linear-gradient(135deg, rgba(253, 38, 125, 0.08) 0%, rgba(255, 96, 54, 0.08) 100%);
-        padding: 0.75rem;
-        border-radius: 12px;
-        font-size: 0.88rem;
-        font-weight: 600;
-        color: var(--ink, #1f2937);
-        border: 1px solid rgba(253, 38, 125, 0.2);
-      }
-
-      /* Tinder Action Bar */
-      .tinder-actions {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 14px;
-        margin-top: 1rem;
-        width: 100%;
-      }
-      .t-btn {
-        width: 58px;
-        height: 58px;
-        border-radius: 50%;
-        border: none;
-        outline: none;
-        font-size: 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        background: #ffffff;
-        transition: transform 0.15s ease, box-shadow 0.2s ease;
-      }
-      .t-btn:hover {
-        transform: scale(1.12);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      }
-      .t-btn:active {
-        transform: scale(0.92);
-      }
-      .t-btn.btn-rewind {
-        width: 48px;
-        height: 48px;
-        font-size: 1.2rem;
-        color: #f59e0b;
-        border: 2px solid #fef3c7;
-      }
-      .t-btn.btn-pass {
-        color: #ef4444;
-        border: 2px solid #fee2e2;
-      }
-      .t-btn.btn-super {
-        width: 48px;
-        height: 48px;
-        font-size: 1.2rem;
-        color: #3b82f6;
-        border: 2px solid #dbeafe;
-      }
-      .t-btn.btn-like {
-        color: #10b981;
-        border: 2px solid #d1fae5;
-      }
-
-      /* "IT'S A MATCH!" Overlay Modal */
-      .match-modal-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.85);
-        z-index: 3000;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 1.5rem;
-        animation: fadeIn 0.25s ease;
-      }
-      .match-modal-overlay.open {
-        display: flex;
-      }
-      .match-card {
-        background: var(--tinder-gradient);
-        border-radius: 24px;
-        padding: 2rem 1.5rem;
-        text-align: center;
-        color: #ffffff;
-        max-width: 380px;
-        width: 100%;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        animation: popUp 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      @keyframes popUp {
-        from { transform: scale(0.7); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-      }
-      .match-title {
-        font-family: 'DM Sans', sans-serif;
-        font-weight: 900;
-        font-size: 2.2rem;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        margin-bottom: 0.5rem;
-        text-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      }
-      .match-avatars {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        margin: 1.25rem 0;
-      }
-      .match-avatar-circle {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.5rem;
-        border: 4px solid #ffffff;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-      }
-      .match-prompt-box {
-        background: rgba(255,255,255,0.2);
-        backdrop-filter: blur(8px);
-        padding: 1rem;
-        border-radius: 16px;
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-bottom: 1.5rem;
-        border: 1px solid rgba(255,255,255,0.3);
-      }
-      .match-btn {
-        width: 100%;
-        padding: 0.9rem;
-        border-radius: 30px;
-        border: none;
-        font-weight: 800;
-        font-size: 1rem;
-        cursor: pointer;
-        background: #ffffff;
-        color: var(--tinder-pink);
-        box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-        transition: transform 0.15s ease;
-      }
-      .match-btn:hover {
-        transform: scale(1.04);
-      }
-    </style>
+    <link rel="stylesheet" href="../shared/css/motion.css">
     <link rel="stylesheet" href="../_engine/components.css">
+    <link rel="stylesheet" href="../shared/css/games.css">
+    <link rel="stylesheet" href="../shared/css/cosy-icons.css">
+    <link rel="stylesheet" href="../shared/css/nav.css">
+    <link rel="stylesheet" href="../shared/styles/game-styles.css">
+    <link rel="stylesheet" href="this-or-that.css">
 </head>
-<body class="game-standalone">
+<body class="game-standalone cosy-game-theme">
+    <!-- Top Navigation Header -->
     <nav class="cg-nav">
-  <a href="../index.html" class="cg-nav-brand">🎮 COSY Games</a>
-  <div class="cg-nav-right">
-    <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">COSYlanguages ↗</a>
-    <select id="cosy-ui-lang-switcher" class="cosy-lang-select" onchange="if(window.setLanguage)window.setLanguage(this.value)" aria-label="Interface Language">
+        <a href="../index.html" class="cg-nav-brand">
+            <span class="cosy-icon icon-dice cg-nav-brand-icon" aria-hidden="true"></span> COSY Games
+        </a>
+        <div class="cg-nav-right">
+            <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link" target="_blank" rel="noopener">Home 🏠</a>
+            <a href="../index.html" class="cg-nav-hub-link">All Games 🎮</a>
+            <a href="https://cosylanguages.github.io/COSYtools/" class="cg-nav-hub-link" target="_blank" rel="noopener">Tools 🔎</a>
+            <a href="https://cosylanguages.github.io/COSYevents/" class="cg-nav-hub-link" target="_blank" rel="noopener">Events 🎉</a>
+            <select id="cosy-ui-lang-switcher" class="cosy-lang-select" onchange="if(window.setLanguage)window.setLanguage(this.value)" aria-label="Interface Language">
                 <option value="en">🇬🇧 EN</option>
                 <option value="fr">🇫🇷 FR</option>
                 <option value="it">🇮🇹 IT</option>
@@ -462,71 +43,118 @@
                 <option value="el">🇬🇷 EL</option>
             </select>
             <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
-  </div>
-</nav>
-
-    <div class="game-overlay open game-overlay-standalone" id="game-overlay">
-      <div class="go-topbar">
-        <button class="go-back" onclick="location.href='../index.html'" data-i18n="back_to_games">← Back to games</button>
-        <div>
-          <div class="go-title" id="go-title">This or That? 🔥</div>
-          <div class="go-meta" id="go-meta">Tinder Profiles & Speaking Drills</div>
         </div>
-        <div id="go-topbar-right"></div>
-      </div>
-      <div class="go-body" id="go-body">
-          <div id="game-loader" class="game-loader">Loading Tinder profiles...</div>
-      </div>
+    </nav>
+
+    <!-- Game Container Header -->
+    <div class="game-overlay open game-overlay-standalone" id="game-overlay">
+        <div class="go-topbar">
+            <button class="go-back cg-btn cg-btn-secondary" onclick="COSYUtils.backToHub()" data-i18n="back_to_games">← Back to Games Hub</button>
+            <div class="go-title-wrapper">
+                <div class="go-title" id="go-title">This or That? 🔀</div>
+                <div class="go-meta" id="go-meta">Speaking & Fluency · CEFR A0–B2</div>
+            </div>
+            <div id="go-topbar-right">
+                <a aria-label="Report an issue" href="https://github.com/cosylanguages/COSYgames/issues" target="_blank" rel="noopener" class="report-issue-link">🚩 <span class="report-issue-text">Report Issue</span></a>
+            </div>
+        </div>
+
+        <!-- Game Description -->
+        <div class="game-header-info">
+            <p class="game-description">Swipe left or right on cards showing people, professions, properties and dilemmas. Pick a side, then explain why in the language you are learning.</p>
+        </div>
+
+        <!-- Game Canvas / Play Area -->
+        <div class="go-body" id="go-body">
+            <div id="game-canvas" class="game-canvas-area">
+                <div class="game-loader" id="game-loader">Loading cards...</div>
+            </div>
+        </div>
+
+        <!-- Score & Tracking Section -->
+        <div class="score-tracking-section" aria-live="polite">
+            <div class="score-display">
+                <div><strong>Current Score:</strong> <span class="score-value" id="current-score" aria-live="polite">0</span></div>
+                <div><strong>High Score:</strong> <span class="high-score-value" id="high-score" aria-live="polite">0</span></div>
+            </div>
+            <div class="related-tools-links">
+                <strong>Practice Tools:</strong>
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">Grammar Checker</a> ·
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">Vocab Builder</a> ·
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">Pronunciation Trainer</a>
+            </div>
+        </div>
     </div>
 
-    <!-- Match Celebration & Chat Interactive Modal -->
+    <!-- Match Celebration Modal -->
     <div class="match-modal-overlay" id="match-modal">
       <div class="match-card">
-        <div class="match-title">IT'S A MATCH! 🔥</div>
-        <p style="opacity: 0.95; font-size: 0.95rem; margin-bottom: 0.5rem;">You and <strong id="match-item-name">this card</strong> liked each other!</p>
+        <div class="match-title">CARD LIKED! ❤️</div>
+        <p id="match-item-name">You liked this card!</p>
         <div class="match-avatars">
           <div class="match-avatar-circle">🗣️</div>
-          <div style="font-size: 1.5rem; color: #fff;">❤️</div>
-          <div class="match-avatar-circle" id="match-item-emoji">☕</div>
+          <div class="match-avatar-circle" id="match-item-emoji">🔀</div>
         </div>
 
-        <!-- Interactive Chat Playground inside Modal -->
-        <div style="background: rgba(0,0,0,0.25); border-radius: 16px; padding: 0.85rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2); text-align: left;">
-          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; margin-bottom: 0.5rem; text-align: center;">💬 Tinder Chat Opener</div>
-
-          <div id="chat-messages-container" style="max-height: 130px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; margin-bottom: 0.75rem; padding-right: 4px;">
-            <div style="background: rgba(255,255,255,0.95); color: #1f2937; padding: 8px 12px; border-radius: 12px 12px 12px 2px; font-size: 0.85rem; max-width: 85%; align-self: flex-start; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
-              <span id="match-opener-text">Hey there! What made you swipe right on me today? 🔥</span>
+        <div class="match-prompt-box">
+          <div id="chat-messages-container">
+            <div class="chat-bubble-reply">
+              <span id="match-opener-text">Great choice! What made you pick this card today?</span>
             </div>
           </div>
 
-          <!-- Icebreaker Suggestion Pills -->
-          <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 0.6rem;" id="chat-icebreakers">
-            <!-- Dynamically populated -->
-          </div>
+          <div id="chat-icebreakers"></div>
 
-          <!-- User Response Input -->
-          <div style="display: flex; gap: 6px;">
-            <input type="text" id="chat-input" placeholder="Type your reply / argument..." style="flex: 1; padding: 8px 12px; border-radius: 20px; border: none; font-size: 0.85rem; outline: none; color: #111;" onkeydown="if(event.key==='Enter') COSY_GAME.sendChatMessage()" />
-            <button onclick="COSY_GAME.sendChatMessage()" style="background: #ffffff; color: var(--tinder-pink); border: none; padding: 0 14px; border-radius: 20px; font-weight: 800; cursor: pointer; font-size: 0.85rem;">Send 🚀</button>
+          <div>
+            <input type="text" id="chat-input" placeholder="Type your reply / argument..." onkeydown="if(event.key==='Enter') COSY_GAME.sendChatMessage()" />
+            <button onclick="COSY_GAME.sendChatMessage()">Send 🚀</button>
           </div>
         </div>
 
-        <button class="match-btn" onclick="COSY_GAME.closeMatchModal()">Keep Swiping 🔥</button>
+        <button class="match-btn" onclick="COSY_GAME.closeMatchModal()">Keep Swiping 🔀</button>
       </div>
     </div>
 
-    <!-- Game Engine -->
-        <script src="../_engine/view_context.js"></script>
+    <!-- Footer -->
+    <footer class="cg-footer">
+        <div class="cg-footer-inner">
+            <div class="cg-footer-brand">
+                <img src="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png" alt="COSYlanguages logo" class="cg-footer-logo" onerror="this.style.display='none'">
+                <span>COSYlanguages</span>
+            </div>
+            <p class="cg-footer-tagline">Your friendly corner to master new languages and connect with the world. 🌍</p>
+            <div class="cg-footer-links">
+                <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener" class="cg-footer-link">COSYlanguages Home</a>
+                <a href="../index.html" class="cg-footer-link">Games Hub</a>
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cg-footer-link">COSYtools</a>
+                <a href="https://github.com/cosylanguages/COSYgames" target="_blank" rel="noopener" class="cg-footer-link">GitHub Repository</a>
+            </div>
+            <div class="cg-footer-copy">© 2026 COSYlanguages: All rights reserved</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../shared/utils/game-utils.js"></script>
+    <script src="../shared/js/i18n.js"></script>
+    <script src="../shared/js/nav.js"></script>
+    <script src="../_engine/view_context.js"></script>
     <script src="../_engine/game_session.js"></script>
     <script src="../_engine/scores.js"></script>
     <script src="../_engine/loader.js"></script>
-
-    <!-- Game Logic -->
     <script src="game.js"></script>
-
-    <div id="toast" class="toast-notification"></div>
-    <script src="../shared/js/i18n.js"></script>
-    <script src="../shared/js/nav.js"></script>
+    <script>
+      function refreshThisOrThatScores() {
+        if (typeof COSYUtils !== 'undefined') {
+          const current = COSYUtils.getScore('thisorthat');
+          const high = COSYUtils.getHighScore('thisorthat');
+          const scoreEl = document.getElementById('current-score');
+          const highEl = document.getElementById('high-score');
+          if (scoreEl) scoreEl.textContent = current;
+          if (highEl) highEl.textContent = high;
+        }
+      }
+      window.refreshThisOrThatScores = refreshThisOrThatScores;
+      document.addEventListener('DOMContentLoaded', refreshThisOrThatScores);
+    </script>
 </body>
 </html>

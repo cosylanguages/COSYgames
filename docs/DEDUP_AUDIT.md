@@ -39,7 +39,7 @@ Prior to this cleanup, the repository contained duplicate directories per game r
 | 14 | `opinion-arena/` | `opinion_arena/` | `opinion-arena/` has standardized UI shell; `opinion_arena/` contains legacy stub. `game.js` identical. | Keep `opinion-arena/`, delete `opinion_arena/` |
 | 15 | `scene-match/` | `scene_match/` | `scene_match/` contains unique developer tools (`tools/hotspot-editor.html`) & `README.md`. `game.js` identical. | Merge `tools/` and `README.md` into `scene-match/`, delete `scene_match/` |
 | 16 | `story-chain/` | `story_chain/` | `story-chain/` has standardized UI shell; `story_chain/` contains legacy stub. `game.js` identical. | Keep `story-chain/`, delete `story_chain/` |
-| 17 | `this-or-that/` | `this_or_that/` | `this-or-that/` lacked `index.html`; full Tinder-style game page was located in `this_or_that/index.html`. `game.js` & `decks/` identical. | Move `this_or_that/index.html` to `this-or-that/index.html`, delete `this_or_that/` |
+| 17 | `this-or-that/` | `this_or_that/` | `this-or-that/` lacked `index.html`; full swipe-style game page was located in `this_or_that/index.html`. `game.js` & `decks/` identical. | Move `this_or_that/index.html` to `this-or-that/index.html`, delete `this_or_that/` |
 | 18 | `what-gender-is-it/` | `what_gender_is_it/` | `what-gender-is-it/` has standardized UI shell; `what_gender_is_it/` contains legacy layout. `game.js` identical. | Keep `what-gender-is-it/`, delete `what_gender_is_it/` |
 | 19 | `word-linker/` | `word_linker/` | `word-linker/` has standardized UI shell; `word_linker/` contains legacy stub. `game.js` identical. | Keep `word-linker/`, delete `word_linker/` |
 
@@ -131,7 +131,7 @@ Prior to this cleanup, the repository contained duplicate directories per game r
 
 ### 17. This or That (`this-or-that/` vs `this_or_that/`)
 - **`this-or-that/`**: Contained `decks/` and `game.js`, but was missing `index.html`.
-- **`this_or_that/`**: Contained full Tinder-style game page UI (`index.html`, 521 lines), `game.js`, and `decks/`.
+- **`this_or_that/`**: Contained full swipe-style game page UI (`index.html`, 521 lines), `game.js`, and `decks/`.
 - **Merging Action**: Moved `this_or_that/index.html` into `this-or-that/index.html`. Deleted `this_or_that/`.
 - **Canonical Folder**: `this-or-that/`.
 
