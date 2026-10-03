@@ -10,14 +10,25 @@ Before contributing, please familiarize yourself with the structure of the repos
 
 ```
 COSYgames/
-├── index.html                  # Games Hub Entrance & Directory
-├── _template.html              # Standard HTML template for standalone game pages
-├── _engine/                    # Shared game engine scripts & utilities (session, scores, loader)
-├── shared/                     # Standalone shared CSS tokens, styles, and core UI scripts
-├── data/                       # Scene data, game card decks & vocabulary manifests
-└── <game_folder>/              # Per-game directories (e.g., scene-match/, battle-of-wits/)
-    ├── index.html              # Standalone game page (derived from _template.html)
-    └── game.js                 # Specific game logic and event handlers
+├── index.html                   # Central Games Hub entrypoint
+├── templates/
+│   └── game-template.html       # Standardized Game Page Template
+├── _engine/                     # Core runtime engine (session, scores, view context)
+├── shared/                      # Standalone shared CSS tokens, styles, navigation, and i18n scripts
+├── data/                        # Multilingual game datasets & shared etymology network
+├── vocabulary/
+│   └── _canonical/
+│       └── en/                  # Read-only vocabulary snapshot (see docs/vocabulary-source-of-truth.md)
+├── games/
+│   └── index.json               # Game metadata manifest (checked by automated tests)
+├── scripts/                     # Sync and data validation scripts
+├── tests/                       # Automated test suite
+│   └── manual/                  # Manual Playwright browser test scripts
+├── docs/                        # Architecture guidelines & current documentation
+│   └── archive/                 # Historical audit/migration documents
+└── <game_folder>/               # Per-game directories (e.g., scene-match/, battle-of-wits/)
+    ├── index.html               # Standalone game page (derived from templates/game-template.html)
+    └── game.js                  # Specific game logic and event handlers
 ```
 
 ---
@@ -34,17 +45,26 @@ You are welcome to submit Pull Requests for:
 ### 2. Requiring Review & Maintainer Approval
 Please open an issue or discussion before submitting PRs for:
 - **New Games**: Proposing or adding a **new game** directory requires prior maintainer approval.
-  - All approved new games **MUST** follow the canonical layout and dependency loading order defined in `_template.html`.
+  - All approved new games **MUST** follow the canonical layout and dependency loading order defined in `templates/game-template.html`.
 - **Core Engine Breaking Changes**: Modifying session management (`_engine/game_session.js`), scoring models (`_engine/scores.js`), or engine asset loaders (`_engine/loader.js`).
 - **Hub Architecture Changes**: Major changes to the Games Hub layout or filter logic in `index.html`.
 
 ---
 
-## 📋 How to Submit a Pull Request
+## 📋 Before You Open a PR
 
-1. Fork the `COSYgames` repository.
-2. Create a feature branch (`git checkout -b feature/improve-scene-match`).
-3. Validate your changes locally in a browser across supported screen sizes.
-4. Ensure all JavaScript and JSON files conform to clean formatting and pass basic linting.
-5. Commit your changes with clear, descriptive commit messages.
-6. Push to your fork and submit a Pull Request.
+Before submitting a Pull Request, please ensure the following:
+
+1. **Run Automated Tests**:
+   - Run `node --test tests/*.js` and verify that all unit and drift tests pass.
+   - Run `node scripts/sync-from-cosydata.js --check` to verify local dataset alignment.
+
+2. **Requirements when Adding a Game**:
+   - Copy the HTML page structure from `templates/game-template.html`.
+   - Add a game card to `index.html` with appropriate `data-players` and `data-skill` attributes.
+   - Add a matching game metadata entry to `games/index.json`.
+   - Update the total game count in the hub title, hero headline, and meta tags (validated by `tests/hub.test.js`).
+
+3. **Verify Relative Links & Media**:
+   - Ensure all relative CSS, JS, and image references point to valid paths.
+   - Validate responsive layout on both desktop and mobile screens.

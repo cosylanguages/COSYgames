@@ -1,3 +1,5 @@
+> ⚠️ **Historical document (archived 2026-10-03).** Written during the migration/audit work and not kept up to date. For current information see README.md and CONTRIBUTING.md.
+
 # 📊 Discussion Content Diff Audit: COSYlanguages vs COSYgames
 
 This audit report compares the discussion practice content from **COSYlanguages** (`debates.js`, `fluency.js`, `opinions.js`, `speaking.js` across `vocabulary/<lang>/<level>/`) against existing entries in **COSYgames** (`data/<lang>/game_data.js` under `.battle`, `.fluency`, and `.opinions`).
