@@ -1,0 +1,281 @@
+/* ==========================================================================
+   COSYgames Hub Page Layout, Styling & Dark Mode Overrides
+   Canonical Location: shared/css/hub.css
+   ========================================================================== */
+
+/* ── PART A: Page Container & Hero Layout ── */
+.page {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 clamp(1rem, 4vw, 2rem) 3rem;
+}
+
+.hero {
+  padding: clamp(2rem, 6vw, 3.5rem) clamp(1rem, 4vw, 2rem) 1.25rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+  text-wrap: balance;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: var(--teal-light, #e8f0e9);
+  color: var(--teal, #416b49);
+  margin-bottom: 0.75rem;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.fpill {
+  min-height: 40px;
+}
+
+/* ── PART B: Section Headings & Card Layout ── */
+.sec-title .sec-title-text {
+  font-size: 1.4rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--ink, #2a2a2a);
+}
+
+.sec-title .sec-count {
+  font-size: 0.8rem;
+  color: var(--ink-soft, #4a4a4a);
+  font-weight: 500;
+  margin-left: 0.25rem;
+}
+
+.sec-title:nth-of-type(n+2),
+.game-grid + .sec-title {
+  margin-top: 3rem;
+}
+
+.gc-play {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.gc-foot {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.gc-tags {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.gc-icon {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  width: auto;
+  height: 44px;
+  padding: 0 0.45rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── PART C: Hub Footer Styling ── */
+#hub footer {
+  background: var(--cg-footer-bg, #1F2937);
+  color: var(--cg-footer-text, #F9FAFB);
+  padding: 2.5rem clamp(1rem, 4vw, 2rem) 1.25rem;
+  margin-top: 3rem;
+}
+
+#hub footer .footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  #hub footer .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  #hub footer .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+#hub footer .fb-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+#hub footer .fb-logo img {
+  width: 36px;
+  height: 36px;
+}
+
+#hub footer .fb-logo img.hidden {
+  display: none;
+}
+
+#hub footer .fb-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cg-footer-text, #F9FAFB);
+}
+
+#hub footer .footer-brand p {
+  color: var(--cg-footer-muted, #9CA3AF);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+#hub footer .footer-links-col h5 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cg-footer-muted, #9CA3AF);
+  margin: 0 0 0.75rem 0;
+  font-weight: 700;
+}
+
+#hub footer .footer-links-col a {
+  display: block;
+  padding: 0.3rem 0;
+  color: var(--cg-footer-link, #6EE7B7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+#hub footer .footer-links-col a:hover,
+#hub footer .footer-links-col a:focus-visible {
+  text-decoration: underline;
+}
+
+#hub footer .footer-bottom {
+  text-align: center;
+  color: var(--cg-footer-muted, #9CA3AF);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/* ── PART D: Dark Mode Overrides for Hub ── */
+html[data-theme="dark"] .hero-tag,
+body.theme-dark .hero-tag {
+  background: #1c3322;
+  color: #86efac;
+}
+
+html[data-theme="dark"] .sec-title .sec-title-text,
+body.theme-dark .sec-title .sec-title-text {
+  color: var(--ink, #e8f0e9);
+}
+
+html[data-theme="dark"] .sec-title .sec-count,
+body.theme-dark .sec-title .sec-count {
+  color: var(--ink-soft, #c8d8c9);
+}
+
+html[data-theme="dark"] .gc-desc,
+body.theme-dark .gc-desc {
+  color: var(--ink-soft, #c8d8c9);
+}
+
+html[data-theme="dark"] .fpill,
+body.theme-dark .fpill {
+  background: var(--surface-color, #222b22);
+  color: var(--ink, #e8f0e9);
+  border: 1px solid var(--border, rgba(107, 143, 113, 0.20));
+}
+
+html[data-theme="dark"] .fpill:hover {
+  background: #2a382c;
+  border-color: var(--sage, #5a7a5f);
+}
+
+html[data-theme="dark"] .fpill.active,
+body.theme-dark .fpill.active {
+  background: #2d5434;
+  color: #ffffff;
+  border-color: #2d5434;
+}
+
+/* Tag Overrides in Dark Mode (High Specificity to override card-level CSS variables) */
+html[data-theme="dark"] .gtag,
+body.theme-dark .gtag,
+html[data-theme="dark"] .gc .gtag,
+body.theme-dark .gc .gtag {
+  background: #1c3322 !important;
+  color: #86efac !important;
+  border-color: rgba(134, 239, 172, 0.2) !important;
+}
+
+html[data-theme="dark"] .gc-plum .gtag:not(.multi):not(.solo):not(.combo):not(.mystery),
+body.theme-dark .gc-plum .gtag:not(.multi):not(.solo):not(.combo):not(.mystery) {
+  background: #2e1065 !important;
+  color: #d8b4fe !important;
+  border-color: rgba(216, 180, 254, 0.2) !important;
+}
+
+html[data-theme="dark"] .gc-gold .gtag:not(.multi):not(.solo):not(.combo):not(.mystery),
+body.theme-dark .gc-gold .gtag:not(.multi):not(.solo):not(.combo):not(.mystery) {
+  background: #36200d !important;
+  color: #fde047 !important;
+  border-color: rgba(253, 224, 71, 0.2) !important;
+}
+
+html[data-theme="dark"] .gtag.multi,
+body.theme-dark .gtag.multi,
+html[data-theme="dark"] .gc .gtag.multi,
+body.theme-dark .gc .gtag.multi {
+  background: #36200d !important;
+  color: #fde047 !important;
+  border-color: rgba(253, 224, 71, 0.2) !important;
+}
+
+html[data-theme="dark"] .gtag.solo,
+body.theme-dark .gtag.solo,
+html[data-theme="dark"] .gc .gtag.solo,
+body.theme-dark .gc .gtag.solo {
+  background: #2e1065 !important;
+  color: #e9d5ff !important;
+  border-color: rgba(233, 213, 255, 0.2) !important;
+}
+
+html[data-theme="dark"] .gtag.combo,
+body.theme-dark .gtag.combo,
+html[data-theme="dark"] .gc .gtag.combo,
+body.theme-dark .gc .gtag.combo {
+  background: #172554 !important;
+  color: #bfdbfe !important;
+  border-color: rgba(191, 219, 254, 0.2) !important;
+}
+
+html[data-theme="dark"] .gtag.mystery,
+body.theme-dark .gtag.mystery,
+html[data-theme="dark"] .gc .gtag.mystery,
+body.theme-dark .gc .gtag.mystery {
+  background: #500724 !important;
+  color: #fbcfe8 !important;
+  border-color: rgba(251, 207, 232, 0.2) !important;
+}

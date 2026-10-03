@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./shared/css/cosy-icons.css">
     <link rel="stylesheet" href="./shared/css/nav.css">
     <link rel="stylesheet" href="./shared/styles/game-styles.css">
+    <link rel="stylesheet" href="./shared/css/hub.css">
 </head>
 <body class="games-hub-page cosy-game-theme">
     <!-- Ecosystem Strip -->
@@ -35,7 +36,7 @@
     <!-- Top Navigation Header -->
     <nav class="cg-nav">
         <a href="index.html" class="cg-nav-brand">
-            <span class="cosy-icon icon-dice" aria-hidden="true" style="width:1.2rem;height:1.2rem;color:var(--teal)"></span> COSY Games
+            <span class="cosy-icon icon-dice cg-nav-brand-icon" aria-hidden="true"></span> COSY Games
         </a>
         <div class="cg-nav-right">
             <a href="#grid-speaking" class="cg-nav-hub-link" data-i18n="nav_speaking">Speaking & Fluency 🗣️</a>
@@ -77,7 +78,7 @@
         </div>
 
         <!-- SPEAKING & FLUENCY (9 Games) -->
-        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span><span data-i18n="section_speaking">Speaking & Fluency</span> <span data-i18n="games_count_9">9 games</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_speaking">Speaking & Fluency</span> <span class="sec-count" data-i18n="games_count_9">9 games</span></div>
         <div class="game-grid fi" id="grid-speaking">
           <div class="gc gc-teal" data-tags="speaking solo group" onclick="openGame('fluency')">
             <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name">Fluency Flow</div></div>
@@ -127,7 +128,7 @@
         </div>
 
         <!-- MYSTERY & GUESSES (4 Games) -->
-        <div class="sec-title fi"><span class="cosy-icon icon-search sec-title-icon" aria-hidden="true"></span><span data-i18n="section_mystery">Mystery & Guesses</span> <span data-i18n="games_count_4">4 games</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-search sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_mystery">Mystery & Guesses</span> <span class="sec-count" data-i18n="games_count_4">4 games</span></div>
         <div class="game-grid fi" id="grid-mystery">
           <div class="gc gc-gold" data-tags="speaking group mystery" onclick="openGame('action')">
             <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name">Action Hero</div></div>
@@ -147,7 +148,7 @@
         </div>
 
         <!-- VOCAB & PUZZLES (8 Games) -->
-        <div class="sec-title fi"><span class="cosy-icon icon-puzzle sec-title-icon" aria-hidden="true"></span><span data-i18n="section_vocab">Vocab & Puzzles</span> <span data-i18n="games_count_8">8 games</span></div>
+        <div class="sec-title fi"><span class="cosy-icon icon-puzzle sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_vocab">Vocab & Puzzles</span> <span class="sec-count" data-i18n="games_count_8">8 games</span></div>
         <div class="game-grid fi" id="grid-vocab">
           <div class="gc gc-plum" data-tags="vocab puzzles solo" onclick="openGame('scenematch')">
             <div class="gc-top"><div class="gc-icon">🖼️</div><div class="gc-name">Scene Match</div></div>
@@ -197,31 +198,30 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <div class="fb-logo">
-              <img src="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png" alt="COSYlanguages logo" onerror="this.style.display='none'">
+              <img src="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png" alt="COSYlanguages logo" onerror="this.classList.add('hidden')">
               <span class="fb-name">COSYlanguages</span>
             </div>
             <p>Your friendly corner to master new languages and connect with the world. 🌍</p>
           </div>
           <div class="footer-links-col">
-            <h5>Games</h5>
-            <a href="index.html">All 20 Games 🎮</a>
-            <a href="https://cosylanguages.github.io/COSYtools/">COSYtools 🛠️</a>
-            <a href="https://cosylanguages.github.io/COSYmanuals/">COSYmanuals 📚</a>
+            <h5>COSY Ecosystem</h5>
+            <a href="https://cosylanguages.github.io/COSYdata/" target="_blank" rel="noopener">COSYdata 📊</a>
+            <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🛠️</a>
           </div>
           <div class="footer-links-col">
             <h5>Explore</h5>
-            <a href="https://cosylanguages.github.io/COSYlanguages/#languages">Languages 🌍</a>
-            <a href="https://cosylanguages.github.io/COSYlanguages/practice/">Free Practice 💡</a>
-            <a href="https://cosylanguages.github.io/COSYevents/">Events 🎉</a>
+            <a href="https://cosylanguages.github.io/COSYlanguages/#languages" target="_blank" rel="noopener">Languages 🌍</a>
+            <a href="https://cosylanguages.github.io/COSYlanguages/practice/" target="_blank" rel="noopener">Free Practice 💡</a>
+            <a href="https://cosylanguages.github.io/COSYevents/" target="_blank" rel="noopener">Events 🎉</a>
           </div>
           <div class="footer-links-col">
             <h5>Contact</h5>
-            <a href="https://wa.me/330766784195">WhatsApp 📱</a>
-            <a href="https://t.me/cosylanguagesproject">Telegram ✈️</a>
+            <a href="https://wa.me/330766784195" target="_blank" rel="noopener">WhatsApp 📱</a>
+            <a href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener">Telegram ✈️</a>
             <a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
           </div>
         </div>
-        <div class="footer-bottom">© 2026 COSYlanguages: All rights reserved</div>
+        <div class="footer-bottom">© 2026 COSYlanguages. All rights reserved.</div>
       </footer>
     </div><!-- /hub -->
 
