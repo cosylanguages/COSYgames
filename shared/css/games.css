@@ -199,6 +199,33 @@
   .gc-featured .gc-play { align-self: flex-start; }
 }
 
+@media (max-width: 480px) {
+  .report-issue-text {
+    display: none;
+  }
+  .go-topbar {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+    justify-content: space-between;
+  }
+  html[data-context="phone"] .go-topbar .go-back,
+  .go-topbar .go-back {
+    order: 1;
+    width: auto;
+    min-height: 44px;
+  }
+  .go-topbar #go-topbar-right {
+    order: 2;
+    margin-left: auto;
+  }
+  .go-topbar .go-title-wrapper,
+  .go-topbar > div:not(#go-topbar-right) {
+    order: 3;
+    flex: 1 1 100%;
+    text-align: left;
+  }
+}
+
 /* ── ROUND END SCREEN ── */
 .round-end {
     text-align: center;

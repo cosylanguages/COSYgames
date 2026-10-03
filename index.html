@@ -305,7 +305,7 @@
           let topicVal = params.get('topic') || params.get('theme') || params.get('deck');
           if (topicVal) passParams.set('topic', topicVal);
 
-          ['lang', 'level'].forEach(key => {
+          ['lang', 'level', 'teacher'].forEach(key => {
             if (params.has(key)) {
               passParams.set(key, params.get(key));
             } else if (key === 'lang' && rememberedLang) {

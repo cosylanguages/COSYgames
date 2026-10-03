@@ -33,8 +33,35 @@
     }
   }
 
+  function isTeacherMode() {
+    try {
+      if (typeof window !== 'undefined' && window.location && window.location.search) {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('teacher') === '1') {
+          return true;
+        }
+      }
+      if (typeof localStorage !== 'undefined') {
+        return localStorage.getItem('cosy_teacher_mode') === '1';
+      }
+    } catch (e) {
+      try {
+        if (typeof window !== 'undefined' && window.location && window.location.search) {
+          return new URLSearchParams(window.location.search).get('teacher') === '1';
+        }
+      } catch (err) {}
+    }
+    return false;
+  }
+
   function getSavedContext() {
     try {
+      if (!isTeacherMode()) {
+        if (typeof localStorage !== 'undefined') {
+          localStorage.removeItem(STORAGE_KEY);
+        }
+        return null;
+      }
       if (typeof localStorage !== 'undefined') {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved && ['projector', 'phone', 'online'].includes(saved.trim().toLowerCase())) {
@@ -129,15 +156,39 @@
 
     const wrapper = document.createElement('div');
     wrapper.className = 'cosy-context-switcher-wrapper';
+    wrapper.title = 'Display mode: adjusts sizes for projector, online lessons or phones';
+
+    const teacherBtn = document.createElement('button');
+    teacherBtn.className = 'cosy-teacher-badge';
+    teacherBtn.type = 'button';
+    teacherBtn.setAttribute('aria-label', 'Teacher mode is on. Click to turn it off');
+    teacherBtn.textContent = '🎓';
+    teacherBtn.addEventListener('click', function () {
+      try {
+        if (typeof window !== 'undefined' && window.COSYTeacherMode && typeof window.COSYTeacherMode.set === 'function') {
+          window.COSYTeacherMode.set(false);
+        } else if (typeof localStorage !== 'undefined') {
+          localStorage.removeItem('cosy_teacher_mode');
+        }
+      } catch (e) {}
+      try {
+        if (typeof localStorage !== 'undefined') {
+          localStorage.removeItem(STORAGE_KEY);
+        }
+      } catch (e) {}
+      if (typeof window !== 'undefined' && window.location) {
+        window.location.reload();
+      }
+    });
 
     const select = document.createElement('select');
     select.className = 'cosy-context-select';
-    select.setAttribute('aria-label', 'Select Display Context (Projector / Online / Phone)');
+    select.setAttribute('aria-label', 'Display mode');
 
     const options = [
-      { value: 'projector', label: '📽️ Projector (Offline)' },
-      { value: 'online', label: '💻 Online (Video / Screen)' },
-      { value: 'phone', label: '📱 Phone (Mobile)' }
+      { value: 'projector', label: '📽️ Projector' },
+      { value: 'online', label: '💻 Online' },
+      { value: 'phone', label: '📱 Phone' }
     ];
 
     options.forEach(function (opt) {
@@ -154,6 +205,7 @@
       ViewContext.setContext(e.target.value, true);
     });
 
+    wrapper.appendChild(teacherBtn);
     wrapper.appendChild(select);
     parent.appendChild(wrapper);
     return wrapper;
