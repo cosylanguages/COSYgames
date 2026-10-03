@@ -1,4 +1,4 @@
-/* games/storytelling/storytelling.css */
+/* games/story-weaver/story-weaver.css */
 
 :root, .cosy-game-theme {
     --game-accent: #7a5c3a;               /* Plum */
@@ -160,4 +160,31 @@ html[data-context="projector"] .manuscript-svg-frame {
 html[data-context="projector"] .story-container {
     max-height: 300px;
     font-size: 1.15rem;
+}
+
+/* ── Connector Pills ───────────────────────────────────── */
+.connector-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.connector-pill {
+    min-height: 36px;
+    padding: .35rem .9rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface-color);
+    color: var(--ink);
+    font: inherit;
+    cursor: pointer;
+}
+
+.connector-pill:hover {
+    border-color: var(--teal);
+}
+
+.connector-pill:focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
 }
