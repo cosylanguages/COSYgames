@@ -91,6 +91,9 @@
     try {
       localStorage.setItem('cosy_ui_lang', lang);
     } catch (e) {}
+    try {
+      document.documentElement.lang = lang;
+    } catch (e) {}
     const selects = document.querySelectorAll('.cosy-lang-select, #cosy-ui-lang-switcher');
     selects.forEach(select => { select.value = lang; });
     document.documentElement.setAttribute('lang', lang);

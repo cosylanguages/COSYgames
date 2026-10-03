@@ -50,7 +50,11 @@
       desc_what_gender: 'Master noun genders with speed rounds and grammar memory triggers.',
       desc_cosy_crossword: 'Solve language puzzles with tailored vocabulary clues and crosswords.',
       desc_last_letter: 'Chain vocabulary words by matching the last letter of each word to the next.',
-      desc_lucky_numbers: 'Practice numbers, counting, and math expressively in your target language.'
+      desc_lucky_numbers: 'Practice numbers, counting, and math expressively in your target language.',
+      keep_learning: 'Keep learning:',
+      keep_learning_reference: 'Grammar & verb reference',
+      keep_learning_drills: 'Quick practice drills',
+      keep_learning_dictionary: 'Vocabulary dictionary'
     },
     fr: {
       ecosystem_strip: 'ÉCOSYSTÈME COSY :',
@@ -100,7 +104,11 @@
       desc_what_gender: 'Maîtrisez le genre des noms avec des tours rapides et des astuces mnémotechniques.',
       desc_cosy_crossword: 'Résolvez des mots croisés adaptés avec des indices de vocabulaire.',
       desc_last_letter: 'Enchaînez les mots en reliant la dernière lettre au mot suivant.',
-      desc_lucky_numbers: 'Pratiquez les nombres, le calcul et les mathématiques dans votre langue cible.'
+      desc_lucky_numbers: 'Pratiquez les nombres, le calcul et les mathématiques dans votre langue cible.',
+      keep_learning: 'Pour aller plus loin :',
+      keep_learning_reference: 'Grammaire et verbes',
+      keep_learning_drills: 'Exercices rapides',
+      keep_learning_dictionary: 'Dictionnaire de vocabulaire'
     },
     es: {
       ecosystem_strip: 'ECOSISTEMA COSY:',
@@ -150,7 +158,11 @@
       desc_what_gender: 'Domina el género de los sustantivos con rondas rápidas y trucos.',
       desc_cosy_crossword: 'Resuelve crucigramas adaptados con pistas de vocabulario.',
       desc_last_letter: 'Encadena palabras uniendo la última letra con la siguiente.',
-      desc_lucky_numbers: 'Practica números, conteo y matemáticas en tu idioma objetivo.'
+      desc_lucky_numbers: 'Practica números, conteo y matemáticas en tu idioma objetivo.',
+      keep_learning: 'Sigue aprendiendo:',
+      keep_learning_reference: 'Gramática y verbos',
+      keep_learning_drills: 'Ejercicios rápidos',
+      keep_learning_dictionary: 'Diccionario de vocabulario'
     },
     de: {
       ecosystem_strip: 'COSY-ÖKOSYSTEM:',
@@ -200,7 +212,11 @@
       desc_what_gender: 'Meistern Sie das Wortgeschlecht mit Schnelligkeitsrunden.',
       desc_cosy_crossword: 'Lösen Sie Kreuzworträtsel mit maßgeschneiderten Hinweisen.',
       desc_last_letter: 'Verketten Sie Wörter, indem Sie den letzten Buchstaben verbinden.',
-      desc_lucky_numbers: 'Üben Sie Zahlen, Zählen und Mathematik in Ihrer Zielsprache.'
+      desc_lucky_numbers: 'Üben Sie Zahlen, Zählen und Mathematik in Ihrer Zielsprache.',
+      keep_learning: 'Weiterlernen:',
+      keep_learning_reference: 'Grammatik & Verben',
+      keep_learning_drills: 'Schnelle Übungen',
+      keep_learning_dictionary: 'Wörterbuch'
     },
     ru: {
       ecosystem_strip: 'ЭКОСИСТЕМА COSY:',
@@ -250,7 +266,11 @@
       desc_what_gender: 'Запоминайте род существительных с помощью быстрых раундов.',
       desc_cosy_crossword: 'Решайте кроссворды с подсказками словарного запаса.',
       desc_last_letter: 'Составляйте цепочки слов по последней букве.',
-      desc_lucky_numbers: 'Практикуйте числа, счёт и математику на изучаемом языке.'
+      desc_lucky_numbers: 'Практикуйте числа, счёт и математику на изучаемом языке.',
+      keep_learning: 'Продолжайте учиться:',
+      keep_learning_reference: 'Грамматика и глаголы',
+      keep_learning_drills: 'Быстрые упражнения',
+      keep_learning_dictionary: 'Словарь'
     },
     it: {
       ecosystem_strip: 'SISTEMA COSY:',
@@ -300,7 +320,11 @@
       desc_what_gender: 'Padroneggia il genere dei sostantivi con round veloci.',
       desc_cosy_crossword: 'Risolvi cruciverba personalizzati con indizi di vocabolario.',
       desc_last_letter: 'Concatena le parole collegando l\'ultima lettera alla prima.',
-      desc_lucky_numbers: 'Esercitati con numeri, conteggio e matematica nella lingua di studio.'
+      desc_lucky_numbers: 'Esercitati con numeri, conteggio e matematica nella lingua di studio.',
+      keep_learning: 'Continua a imparare:',
+      keep_learning_reference: 'Grammatica e verbi',
+      keep_learning_drills: 'Esercizi rapidi',
+      keep_learning_dictionary: 'Dizionario del vocabolario'
     },
     el: {
       ecosystem_strip: 'ΟΙΚΟΣΥΣΤΗΜΑ COSY:',
@@ -350,7 +374,11 @@
       desc_what_gender: 'Μάθετε το γένος των ουσιαστικών με γρήγορους γύρους.',
       desc_cosy_crossword: 'Λύστε σταυρόλεξα με προσαρμοσμένα στοιχεία.',
       desc_last_letter: 'Συνδέστε λέξεις με το τελευταίο γράμμα.',
-      desc_lucky_numbers: 'Εξασκηθείτε στους αριθμούς και τη μέτρηση.'
+      desc_lucky_numbers: 'Εξασκηθείτε στους αριθμούς και τη μέτρηση.',
+      keep_learning: 'Συνεχίστε να μαθαίνετε:',
+      keep_learning_reference: 'Γραμματική και ρήματα',
+      keep_learning_drills: 'Γρήγορες ασκήσεις',
+      keep_learning_dictionary: 'Λεξικό λεξιλογίου'
     }
   };
 

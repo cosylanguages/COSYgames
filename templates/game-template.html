@@ -32,9 +32,11 @@
             <a href="../index.html" class="cg-nav-hub-link">All Games 🎮</a>
             <a href="https://cosylanguages.github.io/COSYtools/" class="cg-nav-hub-link" target="_blank" rel="noopener">Tools 🔎</a>
             <a href="https://cosylanguages.github.io/COSYevents/" class="cg-nav-hub-link" target="_blank" rel="noopener">Events 🎉</a>
-            <select id="cosy-ui-lang-switcher" class="cosy-lang-select" onchange="if(window.setLanguage)window.setLanguage(this.value)" aria-label="Interface Language">
+            <select id="cosy-ui-lang-switcher" class="cosy-lang-select" onchange="if(window.setLanguage)window.setLanguage(this.value)" aria-label="Interface language" title="Interface language">
                 <option value="en">🇬🇧 EN</option>
                 <option value="fr">🇫🇷 FR</option>
+                <option value="es">🇪🇸 ES</option>
+                <option value="de">🇩🇪 DE</option>
                 <option value="it">🇮🇹 IT</option>
                 <option value="ru">🇷🇺 RU</option>
                 <option value="el">🇬🇷 EL</option>
@@ -78,10 +80,10 @@
                 <div><strong>High Score:</strong> <span class="high-score-value" id="high-score" aria-live="polite">0</span></div>
             </div>
             <div class="related-tools-links">
-                <strong>Practice Tools:</strong>
-                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">Grammar Checker</a> ·
-                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">Vocab Builder</a> ·
-                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">Pronunciation Trainer</a>
+                <strong data-i18n="keep_learning">Keep learning:</strong>
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" data-i18n="keep_learning_reference">Grammar &amp; verb reference</a> ·
+                <a href="https://cosylanguages.github.io/COSYtools/practice/" target="_blank" rel="noopener" data-i18n="keep_learning_drills">Quick practice drills</a> ·
+                <a href="https://cosylanguages.github.io/COSYdata/" target="_blank" rel="noopener" data-i18n="keep_learning_dictionary">Vocabulary dictionary</a>
             </div>
         </div>
     </div>
