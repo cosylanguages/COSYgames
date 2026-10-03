@@ -1,17 +1,12 @@
 /**
  * games/this-or-that/game.js
- * Game logic for "This or That? (Tinder for Things & Concepts)"
- * Supports CEFR Levels (A0-A1, A2, B1, B2) & Rich Tinder Decks:
- * - Physical Appearance
- * - Professions
- * - Properties (Homes, Flats, Lofts, Chalets)
- * - Character Traits & Personality
- * - Hobbies & Passions
+ * Game logic for "This or That? (Speaking & Fluency Drills)"
+ * Supports CEFR Levels (A0-A1, A2, B1, B2) & Vocabulary Decks
  */
 (function() {
     const GAME_ID = 'thisorthat';
-    const GAME_TITLE = 'This or That? 🔥';
-    const GAME_META = 'Tinder Profiles & Speaking Drills (A0–B2 CEFR)';
+    const GAME_TITLE = 'This or That? 🔀';
+    const GAME_META = 'Speaking & Fluency · CEFR A0–B2';
 
     const GENERAL_DILEMMAS = [
         {
@@ -72,15 +67,14 @@
 
         body.innerHTML = `
             <div class="setup-screen" style="text-align: center; max-width: 440px; margin: 0 auto; padding: 1.5rem 1rem;">
-              <div style="font-size: 3.2rem; margin-bottom: 0.2rem;">🔥 Tinder Swipe</div>
-              <h1 style="font-family:'DM Sans', sans-serif; font-weight: 800; margin-bottom: 0.5rem; background: var(--tinder-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">This or That?</h1>
+              <h1 style="font-weight: 800; margin-bottom: 0.5rem; color: var(--ink);">This or That?</h1>
               <p style="color:var(--ink-muted); margin-bottom: 1.25rem; line-height: 1.45; font-size:0.95rem;">
-                Swipe left or right on Tinder profiles of people, professions, properties, and dilemmas. Practice speaking with level-tailored prompts!
+                Swipe left or right on cards showing people, professions, properties and dilemmas. Pick a side, then explain why in the language you are learning.
               </p>
 
               <div class="setup-field" style="margin-bottom: 1rem; text-align: left;">
                 <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);">🌐 Target Language</label>
-                <select class="styled-sel" id="tot-lang-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border, #e5e7eb); background: var(--surface-color, #fff); color: var(--ink, #111); font-weight:600;">
+                <select class="styled-sel" id="tot-lang-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-color); color: var(--ink); font-weight:600;">
                   <option value="en" selected>🇬🇧 English</option>
                   <option value="french">🇫🇷 Français (French)</option>
                   <option value="italian">🇮🇹 Italiano (Italian)</option>
@@ -91,7 +85,7 @@
 
               <div class="setup-field" style="margin-bottom: 1rem; text-align: left;">
                 <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);">🎯 Target CEFR Level</label>
-                <select class="styled-sel" id="tot-level-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border, #e5e7eb); background: var(--surface-color, #fff); color: var(--ink, #111); font-weight:600;">
+                <select class="styled-sel" id="tot-level-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-color); color: var(--ink); font-weight:600;">
                   <option value="A0_A1">A0–A1: Starter & Basic Words</option>
                   <option value="A2" selected>A2: Elementary & Daily Life</option>
                   <option value="B1">B1: Intermediate & Work/Travel</option>
@@ -102,7 +96,7 @@
 
               <div class="setup-field" style="margin-bottom: 1.75rem; text-align: left;">
                 <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);">🎴 Vocabulary Deck & Topic</label>
-                <select class="styled-sel" id="tot-deck-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border, #e5e7eb); background: var(--surface-color, #fff); color: var(--ink, #111); font-weight:600;">
+                <select class="styled-sel" id="tot-deck-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-color); color: var(--ink); font-weight:600;">
                   <optgroup label="💬 Vocabulary & Speaking Topics">
                     <option value="appearance" selected>👁️ Physical Appearance (People)</option>
                     <option value="professions">💼 Professions & Careers</option>
@@ -114,7 +108,7 @@
                     <option value="travel">✈️ Travel & Destinations</option>
                     <option value="entertainment">🎬 Books, Films & Music</option>
                     <option value="daily_habits">🌅 Daily Routines & Habits</option>
-                    <option value="mixed">🔥 Mixed Full Deck (All Categories)</option>
+                    <option value="mixed">🔀 Mixed Full Deck (All Categories)</option>
                   </optgroup>
                   <optgroup label="🎯 Grammar Practice Drills">
                     <option value="grammar">🎯 All Grammar Drills (Combined)</option>
@@ -129,7 +123,7 @@
                 </select>
               </div>
 
-              <button class="btn-start-game" onclick="COSY_GAME.start()" style="width: 100%; padding: 0.95rem; font-size: 1.1rem; border-radius: 30px; background: var(--tinder-gradient); color: #fff; border: none; font-weight: 800; cursor: pointer; box-shadow: 0 6px 18px rgba(253,38,125,0.35);">▶ Start Swiping 🔥</button>
+              <button class="btn-start-game" onclick="COSY_GAME.start()" style="width: 100%; border-radius: 30px;">▶ Start Swiping 🔀</button>
             </div>`;
     }
 
@@ -147,7 +141,7 @@
             const deckSel = document.getElementById('tot-deck-sel')?.value || 'appearance';
             const body = document.getElementById('go-body');
 
-            if (body) body.innerHTML = '<div style="text-align:center;padding:4rem;font-weight:700;color:var(--tinder-pink);">Shuffling Tinder deck... 🔥</div>';
+            if (body) body.innerHTML = '<div id="game-loader" class="game-loader">Loading cards...</div>';
             await new Promise(res => setTimeout(res, 200));
 
             let activeDecksSource = {};
@@ -158,135 +152,67 @@
                 if (Array.isArray(lvlData)) return lvlData;
                 if (category === 'mixed') {
                     let cards = [];
-                    Object.keys(lvlData).forEach(cat => {
-                        if (Array.isArray(lvlData[cat])) cards.push(...lvlData[cat]);
+                    Object.values(lvlData).forEach(catCards => {
+                        if (Array.isArray(catCards)) cards.push(...catCards);
                     });
                     return cards;
                 }
-                if (category === 'grammar') {
-                    let cards = [];
-                    Object.keys(lvlData).filter(c => c.startsWith('grammar')).forEach(cat => {
-                        if (Array.isArray(lvlData[cat])) cards.push(...lvlData[cat]);
-                    });
-                    return cards;
-                }
-                if (Array.isArray(lvlData[category])) {
-                    return lvlData[category];
-                }
-                return [];
+                return lvlData[category] || [];
             }
 
-            if (langSel !== 'en') {
-                try {
-                    const res = await fetch(`decks/${langSel}.json`);
-                    if (res.ok) {
-                        activeDecksSource = await res.json();
-                    }
-                } catch (e) {
-                    console.warn(`Failed to fetch deck for language ${langSel}, falling back to English.`, e);
-                }
-            }
-
-            if (Object.keys(activeDecksSource).length === 0) {
-                try {
-                    let res = await fetch(`decks/en/${deckSel}.json`);
-                    if (res.ok) {
-                        activeDecksSource = await res.json();
-                    } else {
-                        res = await fetch('decks/cefr_all_decks.json');
-                        if (res.ok) {
-                            activeDecksSource = await res.json();
-                        }
-                    }
-                } catch (e) {
-                    console.warn('Failed to fetch English deck file, trying cefr_all_decks.json.', e);
-                    try {
-                        const res = await fetch('decks/cefr_all_decks.json');
-                        if (res.ok) activeDecksSource = await res.json();
-                    } catch (err) {
-                        console.error('Failed to load fallbacks:', err);
+            try {
+                if (window.TOT_DECKS && window.TOT_DECKS[langSel]) {
+                    activeDecksSource = window.TOT_DECKS[langSel];
+                } else if (window.TOT_DECKS && window.TOT_DECKS.en) {
+                    activeDecksSource = window.TOT_DECKS.en;
+                    if (langSel !== 'en') {
+                        this.fallbackNotice = `Language deck for "${langSel}" not found. Falling back to English 🇬🇧 deck.`;
                     }
                 }
+            } catch (e) {
+                console.warn('Error fetching language decks:', e);
             }
 
-            let rawCards = [];
+            let loadedCards = [];
 
             if (deckSel === 'dilemmas') {
-                const levelsToSearch = levelSel === 'ALL' ? ['A0_A1', 'A2', 'B1', 'B2'] : [levelSel];
-                levelsToSearch.forEach(lvl => {
-                    const cards = extractCardsFromSource(activeDecksSource, lvl, 'dilemmas');
-                    rawCards.push(...cards);
-                });
-                if (rawCards.length === 0) {
-                    rawCards = [...GENERAL_DILEMMAS];
-                    if (levelSel !== 'ALL') {
-                        const targetLevelTag = levelSel.replace('_', '-');
-                        rawCards = rawCards.filter(c => c.level === targetLevelTag || c.level.includes(targetLevelTag));
-                    }
+                if (levelSel === 'ALL') {
+                    loadedCards = [...GENERAL_DILEMMAS];
+                } else {
+                    loadedCards = GENERAL_DILEMMAS.filter(d => d.level === levelSel || d.level === 'A0-A1' && levelSel.startsWith('A'));
                 }
+                if (loadedCards.length === 0) loadedCards = [...GENERAL_DILEMMAS];
             } else {
-                const levelsToSearch = levelSel === 'ALL' ? ['A0_A1', 'A2', 'B1', 'B2'] : [levelSel];
-                levelsToSearch.forEach(lvl => {
-                    const cards = extractCardsFromSource(activeDecksSource, lvl, deckSel);
-                    rawCards.push(...cards);
-                });
-            }
-
-            if (rawCards.length === 0) {
-                const langNames = {
-                    french: 'French',
-                    italian: 'Italian',
-                    russian: 'Russian',
-                    greek: 'Greek',
-                    en: 'English'
-                };
-                const catNames = {
-                    appearance: 'Physical Appearance',
-                    professions: 'Professions',
-                    properties: 'Properties',
-                    character: 'Character Traits',
-                    hobbies: 'Hobbies',
-                    nationalities: 'Nationalities',
-                    food: 'Food & Cuisine',
-                    travel: 'Travel & Destinations',
-                    entertainment: 'Books, Films & Music',
-                    daily_habits: 'Daily Routines',
-                    grammar: 'All Grammar Drills',
-                    grammar_present: 'Present Tenses Grammar',
-                    grammar_past: 'Past Tenses Grammar',
-                    grammar_perfect: 'Present Perfect Grammar',
-                    grammar_advanced: 'Conditionals & Advanced Grammar',
-                    dilemmas: 'Dilemmas',
-                    mixed: 'Mixed Deck'
-                };
-
-                const langLabel = langNames[langSel] || (langSel.charAt(0).toUpperCase() + langSel.slice(1));
-                const catLabel = catNames[deckSel] || deckSel;
-                const lvlLabel = levelSel === 'ALL' ? 'All Levels' : levelSel.replace('_', '–');
-
-                try {
-                    const res = await fetch('decks/cefr_all_decks.json');
-                    if (res.ok) {
-                        const fallbackSource = await res.json();
-                        const levelsToSearch = levelSel === 'ALL' ? ['A0_A1', 'A2', 'B1', 'B2'] : [levelSel, 'A0_A1', 'A2', 'B1', 'B2'];
-                        for (const lvl of levelsToSearch) {
-                            const cards = extractCardsFromSource(fallbackSource, lvl, deckSel);
-                            if (cards.length > 0) {
-                                rawCards.push(...cards);
-                                break;
-                            }
-                        }
-                    }
-                } catch (e) {
-                    console.warn('Fallback fetch failed:', e);
-                }
-
-                if (rawCards.length > 0) {
-                    this.fallbackNotice = `No ${langLabel} cards for '${catLabel}' at ${lvlLabel} yet — showing English cards instead.`;
+                if (levelSel === 'ALL') {
+                    ['A0_A1', 'A2', 'B1', 'B2'].forEach(lvl => {
+                        const batch = extractCardsFromSource(activeDecksSource, lvl, deckSel);
+                        loadedCards.push(...batch);
+                    });
+                } else {
+                    loadedCards = extractCardsFromSource(activeDecksSource, levelSel, deckSel);
                 }
             }
 
-            this.deck = [...rawCards].sort(() => Math.random() - 0.5);
+            if (!loadedCards || loadedCards.length === 0) {
+                if (window.TOT_DECKS && window.TOT_DECKS.en) {
+                    activeDecksSource = window.TOT_DECKS.en;
+                    ['A0_A1', 'A2', 'B1', 'B2'].forEach(lvl => {
+                        const batch = extractCardsFromSource(activeDecksSource, lvl, deckSel);
+                        loadedCards.push(...batch);
+                    });
+                }
+            }
+
+            if (!loadedCards || loadedCards.length === 0) {
+                loadedCards = [...GENERAL_DILEMMAS];
+            }
+
+            for (let i = loadedCards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [loadedCards[i], loadedCards[j]] = [loadedCards[j], loadedCards[i]];
+            }
+
+            this.deck = loadedCards;
             this.currentIndex = 0;
             this.swipedChoices = [];
             this.activeStoryIndex = 0;
@@ -294,7 +220,6 @@
             if (window.COSYGame) {
                 COSYGame.init(GAME_ID, langSel, levelSel);
                 COSYGame.maxRounds = this.deck.length;
-                COSYGame.score = 0;
             }
 
             this.renderCard();
@@ -315,27 +240,27 @@
             const currentPage = pages[this.activeStoryIndex] || {};
 
             body.innerHTML = `
-              <div class="tinder-app">
-                <div class="tinder-top-bar">
-                  <div class="tinder-brand">🔥 Tinder Words</div>
-                  <div style="font-weight:800; font-size:0.85rem; color:#6b7280;">Card ${this.currentIndex + 1} / ${this.deck.length}</div>
+              <div class="swipe-app">
+                <div class="swipe-top-bar">
+                  <div class="swipe-brand">🔀 This or That</div>
+                  <div style="font-weight:800; font-size:0.85rem; color:var(--ink-muted);">Card ${this.currentIndex + 1} / ${this.deck.length}</div>
                 </div>
 
                 ${this.fallbackNotice ? `
-                  <div style="background:#fff3cd; color:#856404; border:1px solid #ffeeba; padding:8px 12px; border-radius:10px; font-size:0.82rem; margin: 0 0 10px 0; text-align:center; font-weight:600; line-height:1.35; box-shadow:0 2px 6px rgba(0,0,0,0.05);">
+                  <div style="background:var(--sage-mist); color:var(--ink); border:1px solid var(--border); padding:8px 12px; border-radius:10px; font-size:0.82rem; margin: 0 0 10px 0; text-align:center; font-weight:600; line-height:1.35;">
                     ⚠️ ${this.fallbackNotice}
                   </div>
                 ` : ''}
 
                 <div class="card-stack">
-                  <div class="tinder-card" id="active-card">
+                  <div class="swipe-card" id="active-card">
                     <!-- Dynamic Stamp Overlays -->
                     <div class="badge-indicator badge-like" id="badge-right">${isProfile ? '❤️ LIKE' : '👉 THAT'}</div>
-                    <div class="badge-indicator badge-pass" id="badge-left">${isProfile ? '❌ NOPE' : '👈 THIS'}</div>
+                    <div class="badge-indicator badge-pass" id="badge-left">${isProfile ? '❌ PASS' : '👈 THIS'}</div>
                     <div class="badge-indicator badge-super" id="badge-super">⭐ SUPER LIKE</div>
 
                     <!-- Hero Avatar Box with Story Bars & Tap Navigation -->
-                    <div class="card-hero-box" style="background: ${item.gradient || 'var(--tinder-gradient)'};">
+                    <div class="card-hero-box">
                       ${isProfile && pages.length > 1 ? `
                         <div class="story-bar-container">
                           ${pages.map((_, idx) => `<div class="story-segment ${idx === this.activeStoryIndex ? 'active' : ''}"></div>`).join('')}
@@ -346,7 +271,7 @@
 
                       <!-- Grammar Target Badge Overlay if present -->
                       ${item.grammarTarget ? `
-                        <div style="position:absolute; top:12px; left:12px; background:rgba(253,38,125,0.88); color:#fff; font-weight:800; font-size:0.75rem; padding:3px 9px; border-radius:12px; backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.3); z-index:26;">
+                        <div style="position:absolute; top:12px; left:12px; background:var(--swipe-accent); color:#fff; font-weight:800; font-size:0.75rem; padding:3px 9px; border-radius:12px; backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.3); z-index:26;">
                           🎯 ${item.grammarTarget}
                         </div>
                       ` : ''}
@@ -372,15 +297,15 @@
                         <div class="profile-title-row">
                           <span class="profile-name">${item.title}</span>
                           <span class="profile-age">${item.age ? ', ' + item.age : ''}</span>
-                          ${item.verified ? '<span class="verified-icon" title="Verified Tinder Profile">☑️</span>' : ''}
+                          ${item.verified ? '<span class="verified-icon" title="Verified card">☑️</span>' : ''}
                         </div>
                         <div class="profile-meta-row">
-                          <span>${item.location || '📍 Nearby'}</span>
+                          <span>${item.location || '📍 Worldwide'}</span>
                           <span>• ${item.category}</span>
                         </div>
 
                         ${item.visualDescription ? `
-                          <div style="font-size:0.78rem; font-style:italic; color:var(--ink, #4b5563); background:var(--sage-mist, #f0f9ff); padding:6px 10px; border-radius:8px; margin-bottom:0.6rem; border-left:3px solid #0284c7;">
+                          <div style="font-size:0.78rem; font-style:italic; color:var(--ink-muted); background:var(--sage-mist); padding:6px 10px; border-radius:8px; margin-bottom:0.6rem; border-left:3px solid var(--teal);">
                             🎨 <strong>Visual Details:</strong> ${item.visualDescription}
                           </div>
                         ` : ''}
@@ -405,27 +330,27 @@
 
                           <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:0.65rem;">
                             ${item.anthem ? `
-                              <div style="font-size:0.78rem; font-weight:700; color:var(--ink, #4b5563); background:var(--sage-mist, #f3f4f6); padding:5px 10px; border-radius:10px; border:1px solid var(--border, #e5e7eb);">
+                              <div style="font-size:0.78rem; font-weight:700; color:var(--ink-muted); background:var(--sage-mist); padding:5px 10px; border-radius:10px; border:1px solid var(--border);">
                                 ${item.anthem}
                               </div>
                             ` : ''}
                             ${item.film ? `
-                              <div style="font-size:0.78rem; font-weight:700; color:var(--ink, #4b5563); background:var(--sage-mist, #f0f9ff); padding:5px 10px; border-radius:10px; border:1px solid var(--border, #bae6fd);">
+                              <div style="font-size:0.78rem; font-weight:700; color:var(--ink-muted); background:var(--sage-mist); padding:5px 10px; border-radius:10px; border:1px solid var(--border);">
                                 ${item.film}
                               </div>
                             ` : ''}
                           </div>
                         ` : `
                           <div class="dilemma-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:0.8rem;">
-                            <div class="dilemma-opt" style="background:var(--sage-mist, #f9fafb); padding:10px; border-radius:12px; border:1px solid var(--border, #e5e7eb); text-align:center;">
+                            <div class="dilemma-opt" style="background:var(--sage-mist); padding:10px; border-radius:12px; border:1px solid var(--border); text-align:center;">
                               <div style="font-size:2.2rem; margin-bottom:4px;">${item.optionA.emoji}</div>
-                              <div style="font-weight:800; font-size:0.95rem; color:var(--ink, #111827);">${item.optionA.title}</div>
-                              <div style="font-size:0.78rem; color:var(--ink-muted, #6b7280); margin-top:4px; line-height:1.3;">${item.optionA.desc}</div>
+                              <div style="font-weight:800; font-size:0.95rem; color:var(--ink);">${item.optionA.title}</div>
+                              <div style="font-size:0.78rem; color:var(--ink-muted); margin-top:4px; line-height:1.3;">${item.optionA.desc}</div>
                             </div>
-                            <div class="dilemma-opt" style="background:var(--sage-mist, #f9fafb); padding:10px; border-radius:12px; border:1px solid var(--border, #e5e7eb); text-align:center;">
+                            <div class="dilemma-opt" style="background:var(--sage-mist); padding:10px; border-radius:12px; border:1px solid var(--border); text-align:center;">
                               <div style="font-size:2.2rem; margin-bottom:4px;">${item.optionB.emoji}</div>
-                              <div style="font-weight:800; font-size:0.95rem; color:var(--ink, #111827);">${item.optionB.title}</div>
-                              <div style="font-size:0.78rem; color:var(--ink-muted, #6b7280); margin-top:4px; line-height:1.3;">${item.optionB.desc}</div>
+                              <div style="font-weight:800; font-size:0.95rem; color:var(--ink);">${item.optionB.title}</div>
+                              <div style="font-size:0.78rem; color:var(--ink-muted); margin-top:4px; line-height:1.3;">${item.optionB.desc}</div>
                             </div>
                           </div>
                         `}
@@ -438,14 +363,14 @@
                   </div>
                 </div>
 
-                <!-- Tinder Action Control Bar -->
-                <div class="tinder-actions">
+                <!-- Swipe Action Control Bar -->
+                <div class="swipe-actions">
                   <button class="t-btn btn-rewind" id="btn-rewind" title="Rewind / Undo Last Swipe" ${this.swipedChoices.length === 0 ? 'disabled style="opacity:0.4;cursor:default;"' : ''}>🔄</button>
                   <button class="t-btn btn-pass" id="btn-swipe-left" title="Pass / Swipe Left">❌</button>
                   <button class="t-btn btn-super" id="btn-super-like" title="Super Like!">⭐</button>
                   <button class="t-btn btn-like" id="btn-swipe-right" title="Like / Swipe Right">❤️</button>
                 </div>
-                <div style="font-size:0.78rem; color:#9ca3af; margin-top:0.5rem;">
+                <div style="font-size:0.78rem; color:var(--ink-faint); margin-top:0.5rem;">
                   Tap photo sides to flip details • Keyboard Arrow Keys supported!
                 </div>
               </div>
@@ -478,154 +403,149 @@
             const btnSuper = document.getElementById('btn-super-like');
             const btnRewind = document.getElementById('btn-rewind');
 
-            const badgeLeft = document.getElementById('badge-left');
-            const badgeRight = document.getElementById('badge-right');
+            if (btnLeft) btnLeft.onclick = () => this.handleSwipe('left');
+            if (btnRight) btnRight.onclick = () => this.handleSwipe('right');
+            if (btnSuper) btnSuper.onclick = () => this.handleSwipe('up');
+            if (btnRewind) btnRewind.onclick = () => this.handleRewind();
+
+            const onKey = (e) => {
+                if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'Backspace'].includes(e.key)) {
+                    const modal = document.getElementById('match-modal');
+                    if (modal && modal.classList.contains('open')) return;
+                }
+                if (e.key === 'ArrowLeft') this.handleSwipe('left');
+                if (e.key === 'ArrowRight') this.handleSwipe('right');
+                if (e.key === 'ArrowUp') this.handleSwipe('up');
+                if (e.key === 'Backspace') this.handleRewind();
+            };
+
+            document.removeEventListener('keydown', this._keyHandler);
+            this._keyHandler = onKey;
+            document.addEventListener('keydown', onKey);
 
             if (!card) return;
 
-            let startX = 0, currentX = 0, isDragging = false;
+            let startX = 0, startY = 0, currentX = 0, currentY = 0, isDragging = false;
 
-            const removeKeyHandler = () => {
-                if (this._onKeyDown) {
-                    window.removeEventListener('keydown', this._onKeyDown);
-                    this._onKeyDown = null;
-                }
-            };
+            const badgeRight = document.getElementById('badge-right');
+            const badgeLeft = document.getElementById('badge-left');
+            const badgeSuper = document.getElementById('badge-super');
 
-            removeKeyHandler();
-
-            const onStart = (e) => {
+            const startDrag = (x, y) => {
                 isDragging = true;
-                startX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+                startX = x;
+                startY = y;
                 card.classList.add('dragging');
             };
 
-            const onMove = (e) => {
+            const moveDrag = (x, y) => {
                 if (!isDragging) return;
-                currentX = (e.type.includes('touch') ? e.touches[0].clientX : e.clientX) - startX;
-                const rotate = currentX * 0.08;
-                card.style.transform = `translate3d(${currentX}px, 0, 0) rotate(${rotate}deg)`;
+                currentX = x - startX;
+                currentY = y - startY;
+
+                const rot = currentX * 0.08;
+                card.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) rotate(${rot}deg)`;
 
                 if (currentX > 30) {
                     if (badgeRight) badgeRight.style.opacity = Math.min(1, (currentX - 30) / 70);
-                    if (badgeLeft) badgeLeft.style.opacity = '0';
+                    if (badgeLeft) badgeLeft.style.opacity = 0;
                 } else if (currentX < -30) {
                     if (badgeLeft) badgeLeft.style.opacity = Math.min(1, (-currentX - 30) / 70);
-                    if (badgeRight) badgeRight.style.opacity = '0';
+                    if (badgeRight) badgeRight.style.opacity = 0;
+                } else if (currentY < -50) {
+                    if (badgeSuper) badgeSuper.style.opacity = Math.min(1, (-currentY - 50) / 70);
                 } else {
-                    if (badgeRight) badgeRight.style.opacity = '0';
-                    if (badgeLeft) badgeLeft.style.opacity = '0';
+                    if (badgeRight) badgeRight.style.opacity = 0;
+                    if (badgeLeft) badgeLeft.style.opacity = 0;
+                    if (badgeSuper) badgeSuper.style.opacity = 0;
                 }
             };
 
-            const onEnd = () => {
+            const endDrag = () => {
                 if (!isDragging) return;
                 isDragging = false;
                 card.classList.remove('dragging');
 
-                window.removeEventListener('mousemove', onMove);
-                window.removeEventListener('mouseup', onEnd);
-                window.removeEventListener('touchmove', onMove);
-                window.removeEventListener('touchend', onEnd);
-
                 if (currentX > 100) {
-                    removeKeyHandler();
-                    this.executeSwipe('right');
+                    this.handleSwipe('right');
                 } else if (currentX < -100) {
-                    removeKeyHandler();
-                    this.executeSwipe('left');
+                    this.handleSwipe('left');
+                } else if (currentY < -120) {
+                    this.handleSwipe('up');
                 } else {
-                    card.style.transform = 'translate3d(0,0,0) rotate(0deg)';
-                    if (badgeLeft) badgeLeft.style.opacity = '0';
-                    if (badgeRight) badgeRight.style.opacity = '0';
+                    card.style.transform = '';
+                    if (badgeRight) badgeRight.style.opacity = 0;
+                    if (badgeLeft) badgeLeft.style.opacity = 0;
+                    if (badgeSuper) badgeSuper.style.opacity = 0;
                 }
             };
 
-            card.addEventListener('mousedown', (e) => {
-                onStart(e);
-                window.addEventListener('mousemove', onMove);
-                window.addEventListener('mouseup', onEnd);
-            });
-
-            card.addEventListener('touchstart', (e) => {
-                onStart(e);
-                window.addEventListener('touchmove', onMove, { passive: true });
-                window.addEventListener('touchend', onEnd);
-            }, { passive: true });
-
-            btnLeft?.addEventListener('click', () => {
-                removeKeyHandler();
-                this.executeSwipe('left');
-            });
-
-            btnRight?.addEventListener('click', () => {
-                removeKeyHandler();
-                this.executeSwipe('right');
-            });
-
-            btnSuper?.addEventListener('click', () => {
-                removeKeyHandler();
-                this.executeSwipe('super');
-            });
-
-            btnRewind?.addEventListener('click', () => {
-                removeKeyHandler();
-                this.rewind();
-            });
-
-            this._onKeyDown = (e) => {
-                if (e.key === 'ArrowLeft') {
-                    removeKeyHandler();
-                    this.executeSwipe('left');
-                } else if (e.key === 'ArrowRight') {
-                    removeKeyHandler();
-                    this.executeSwipe('right');
-                }
+            card.onmousedown = (e) => {
+                if (e.target.closest('.tap-zone')) return;
+                startDrag(e.clientX, e.clientY);
             };
-            window.addEventListener('keydown', this._onKeyDown);
+            window.onmousemove = (e) => moveDrag(e.clientX, e.clientY);
+            window.onmouseup = () => endDrag();
+
+            card.ontouchstart = (e) => {
+                if (e.target.closest('.tap-zone')) return;
+                const touch = e.touches[0];
+                startDrag(touch.clientX, touch.clientY);
+            };
+            card.ontouchmove = (e) => {
+                if (!isDragging) return;
+                const touch = e.touches[0];
+                moveDrag(touch.clientX, touch.clientY);
+            };
+            card.ontouchend = () => endDrag();
         },
 
-        executeSwipe(direction) {
+        handleSwipe(dir) {
             const card = document.getElementById('active-card');
             const item = this.deck[this.currentIndex];
-            if (!card || !item) return;
+            if (!item) return;
 
-            const isLike = direction === 'right' || direction === 'super';
-            const flyX = isLike ? 500 : -500;
-            const flyRotate = isLike ? 25 : -25;
+            let choiceName = '';
+            let points = 10;
 
-            card.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
-            card.style.transform = `translate3d(${flyX}px, 0, 0) rotate(${flyRotate}deg)`;
-            card.style.opacity = '0';
-
-            if (window.gameUtils && window.gameUtils.playGameSound) {
-                window.gameUtils.playGameSound('click');
+            if (dir === 'right') {
+                choiceName = item.type === 'profile' ? 'Liked ❤️' : `Option B (${item.optionB ? item.optionB.title : 'Choice'})`;
+                if (card) card.style.transform = 'translate3d(1000px, 0, 0) rotate(30deg)';
+            } else if (dir === 'left') {
+                choiceName = item.type === 'profile' ? 'Passed ❌' : `Option A (${item.optionA ? item.optionA.title : 'Choice'})`;
+                points = 5;
+                if (card) card.style.transform = 'translate3d(-1000px, 0, 0) rotate(-30deg)';
+            } else if (dir === 'up') {
+                choiceName = 'Super Like! ⭐';
+                points = 20;
+                if (card) card.style.transform = 'translate3d(0, -1000px, 0)';
             }
 
-            const choiceObj = {
-                item,
-                type: direction,
-                choice: isLike ? (item.type === 'profile' ? 'Matched ❤️' : 'Option B 👉') : (item.type === 'profile' ? 'Passed ❌' : 'Option A 👈')
-            };
+            this.swipedChoices.push({ item, choice: choiceName });
 
-            this.swipedChoices.push(choiceObj);
-            if (window.COSYGame) COSYGame.score += (direction === 'super' ? 20 : 10);
+            if (window.COSYGame) COSYGame.addScore(points);
 
-            setTimeout(() => {
-                if (isLike && item.type === 'profile') {
+            if (window.gameUtils && window.gameUtils.playGameSound) {
+                window.gameUtils.playGameSound(dir === 'right' || dir === 'up' ? 'success' : 'click');
+            }
+
+            if (dir === 'right' || dir === 'up') {
+                setTimeout(() => {
                     this.openMatchModal(item);
-                } else {
+                }, 200);
+            } else {
+                setTimeout(() => {
                     this.activeStoryIndex = 0;
                     this.currentIndex++;
                     this.renderCard();
-                }
-            }, 260);
+                }, 200);
+            }
         },
 
-        rewind() {
-            if (this.swipedChoices.length === 0 || this.currentIndex === 0) return;
+        handleRewind() {
+            if (this.swipedChoices.length === 0) return;
             this.swipedChoices.pop();
-            this.currentIndex--;
+            if (this.currentIndex > 0) this.currentIndex--;
             this.activeStoryIndex = 0;
             if (window.COSYGame) COSYGame.score = Math.max(0, COSYGame.score - 10);
             this.renderCard();
@@ -641,22 +561,23 @@
             const inputEl = document.getElementById('chat-input');
 
             if (nameEl) nameEl.textContent = item.title;
-            if (emojiEl) emojiEl.textContent = item.avatar || '🔥';
-            if (openerEl) openerEl.textContent = item.opener || `Hey! What made you swipe right on ${item.title} today? 🔥`;
+            if (emojiEl) emojiEl.textContent = item.avatar || '🔀';
+            const openerText = item.opener || `Great choice! What made you pick ${item.title} today?`;
+            if (openerEl) openerEl.textContent = openerText;
             if (inputEl) inputEl.value = '';
 
             if (messagesContainer) {
                 messagesContainer.innerHTML = `
-                    <div style="background: rgba(255,255,255,0.95); color: #1f2937; padding: 8px 12px; border-radius: 12px 12px 12px 2px; font-size: 0.85rem; max-width: 85%; align-self: flex-start; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
-                      <span>${item.opener || `Hey! What made you swipe right on ${item.title} today? 🔥`}</span>
+                    <div class="chat-bubble-reply">
+                      <span>${openerText}</span>
                     </div>
                 `;
             }
 
             if (icebreakersEl) {
-                const pills = item.icebreakers || ['I love this profile!', 'Defend your choice 💬', 'Tell me more!'];
+                const pills = item.icebreakers || ['Great choice! What made you pick this one?', 'Tell your partner why you chose this.', 'Can you give two reasons?', 'How would you describe this in detail?'];
                 icebreakersEl.innerHTML = pills.map(p => `
-                    <button onclick="COSY_GAME.quickChat('${p.replace(/'/g, "\'")}')" style="background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.4); color: #fff; padding: 4px 10px; border-radius: 16px; font-size: 0.75rem; font-weight: 600; cursor: pointer; transition: background 0.15s;">${p}</button>
+                    <button class="chat-icebreaker-btn" onclick="COSY_GAME.quickChat('${p.replace(/'/g, "\\'")}')">${p}</button>
                 `).join('');
             }
 
@@ -685,24 +606,24 @@
 
             // Render User Bubble
             const userMsg = document.createElement('div');
-            userMsg.style.cssText = 'background: #fd267d; color: #ffffff; padding: 8px 12px; border-radius: 12px 12px 2px 12px; font-size: 0.85rem; max-width: 85%; align-self: flex-end; box-shadow: 0 2px 6px rgba(0,0,0,0.15); margin-top: 4px;';
+            userMsg.className = 'chat-bubble-user';
             userMsg.textContent = userText;
             messagesContainer.appendChild(userMsg);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
             if (window.COSYGame) COSYGame.score += 5;
 
-            // Delayed Level-Tailored Reply
+            // Delayed Reply
             setTimeout(() => {
                 const replies = [
-                    "Haha I love that answer! Perfect match energy 🔥",
-                    "Great point! I knew we would hit it off! 🚀",
-                    "Spot on! Definitely agree with you there ☕",
-                    "Fascinating perspective! You really know your stuff 🎉"
+                    "Great explanation! Tell your partner more.",
+                    "Excellent point! Can you give another reason?",
+                    "Spot on! How would you describe it further?",
+                    "Fascinating perspective! Well expressed."
                 ];
                 const replyText = replies[Math.floor(Math.random() * replies.length)];
                 const replyMsg = document.createElement('div');
-                replyMsg.style.cssText = 'background: rgba(255,255,255,0.95); color: #1f2937; padding: 8px 12px; border-radius: 12px 12px 12px 2px; font-size: 0.85rem; max-width: 85%; align-self: flex-start; box-shadow: 0 2px 6px rgba(0,0,0,0.15); margin-top: 4px;';
+                replyMsg.className = 'chat-bubble-reply';
                 replyMsg.textContent = replyText;
                 messagesContainer.appendChild(replyMsg);
                 messagesContainer.scrollTop = messagesContainer.scrollHeight;
@@ -735,18 +656,18 @@
             body.innerHTML = `
                 <div class="setup-screen" style="max-width: 440px; margin: 0 auto; text-align: center; padding: 1.5rem 1rem;">
                   <h2>Swipe Deck Complete! 🎉</h2>
-                  <div style="font-size: 2.5rem; font-weight: 800; color: var(--tinder-pink); margin: 0.5rem 0;">${scoreVal} Points</div>
-                  <p style="color:var(--ink-muted);">Here are your Tinder matches & passed items. Discuss your reasons with your learning partner!</p>
+                  <div class="score-highlight">${scoreVal} Points</div>
+                  <p style="color:var(--ink-muted);">Here are the cards you liked and the ones you passed. Discuss your reasons with your learning partner!</p>
 
-                  <div style="text-align: left; background: var(--surface-color, #ffffff); border: 1px solid var(--border, #e5e7eb); color: var(--ink, #111); border-radius: 16px; padding: 1rem; margin: 1.25rem 0; max-height: 280px; overflow-y: auto;">
-                    <h4 style="margin-top: 0; font-family:'DM Sans', sans-serif; font-weight:800; color: var(--ink);">Your Match History:</h4>
+                  <div style="text-align: left; background: var(--surface-color); border: 1px solid var(--border); color: var(--ink); border-radius: 16px; padding: 1rem; margin: 1.25rem 0; max-height: 280px; overflow-y: auto;">
+                    <h4 style="margin-top: 0; font-weight:800; color: var(--ink);">Your Choices:</h4>
                     ${this.swipedChoices.map(c => `
-                      <div style="padding: 8px 0; border-bottom: 1px dashed var(--border, rgba(0,0,0,0.1)); display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;">
+                      <div style="padding: 8px 0; border-bottom: 1px dashed var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;">
                         <div>
-                          <strong style="color:var(--ink);">${c.item.title}</strong> <span style="font-size:0.75rem; background:var(--sage-mist, #f3f4f6); color:var(--ink); padding:2px 6px; border-radius:8px; margin-left:4px;">${c.item.level || ''}</span>
-                          <div style="font-size: 0.78rem; color: var(--ink-muted, #6b7280);">${c.item.category}</div>
+                          <strong style="color:var(--ink);">${c.item.title}</strong> <span style="font-size:0.75rem; background:var(--sage-mist); color:var(--ink); padding:2px 6px; border-radius:8px; margin-left:4px;">${c.item.level || ''}</span>
+                          <div style="font-size: 0.78rem; color: var(--ink-muted);">${c.item.category}</div>
                         </div>
-                        <span style="font-weight: 700; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; background: ${c.choice.includes('Matched') || c.choice.includes('Option B') ? 'rgba(16, 185, 129, 0.2)' : 'rgba(239, 68, 68, 0.2)'}; color: ${c.choice.includes('Matched') || c.choice.includes('Option B') ? '#10b981' : '#ef4444'};">
+                        <span style="font-weight: 700; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; background: ${c.choice.includes('Liked') || c.choice.includes('Option B') || c.choice.includes('Super') ? 'var(--sage-mist)' : 'var(--sage-mist)'}; color: ${c.choice.includes('Liked') || c.choice.includes('Option B') || c.choice.includes('Super') ? 'var(--swipe-like)' : 'var(--swipe-pass)'};">
                           ${c.choice}
                         </span>
                       </div>
@@ -754,18 +675,18 @@
                   </div>
 
                   <div style="display:flex; gap:1rem; justify-content:center;">
-                    <button class="btn-start-game" onclick="COSY_GAME.start()" style="padding:0.85rem 1.2rem; border-radius:30px; background:var(--tinder-gradient); color:#fff; font-weight:800; border:none; cursor:pointer;">Swipe Again 🔄</button>
-                    <button class="btn-g-danger" onclick="COSY_GAME.reset()">Deck Settings ⚙️</button>
+                    <button class="btn-start-game" onclick="COSY_GAME.start()" style="padding:0.85rem 1.2rem; border-radius:30px;">Swipe Again 🔄</button>
+                    <button class="btn-g-secondary" onclick="COSY_GAME.reset()" style="padding:0.85rem 1.2rem; border-radius:30px;">Deck Settings ⚙️</button>
                   </div>
                 </div>`;
+
+            if (typeof window.refreshThisOrThatScores === 'function') {
+                window.refreshThisOrThatScores();
+            }
         },
 
         reset: renderSetup
     };
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', renderSetup);
-    } else {
-        renderSetup();
-    }
+    document.addEventListener('DOMContentLoaded', renderSetup);
 })();

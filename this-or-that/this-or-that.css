@@ -1,0 +1,526 @@
+/* games/this-or-that/this-or-that.css */
+
+:root {
+  --swipe-like: var(--teal, #0d9488);
+  --swipe-pass: var(--coral, #e11d48);
+  --swipe-surface: var(--surface-color, #ffffff);
+  --swipe-card-bg: linear-gradient(135deg, var(--sage-light, #f4f7f5) 0%, var(--warm-white, #fffdfa) 100%);
+  --swipe-card-border: var(--border, rgba(0, 0, 0, 0.08));
+  --swipe-accent: var(--teal, #0d9488);
+}
+
+html[data-theme="dark"], body.theme-dark {
+  --swipe-like: #2dd4bf;
+  --swipe-pass: #f87171;
+  --swipe-surface: var(--surface-color, #222b22);
+  --swipe-card-bg: linear-gradient(135deg, #1f2720 0%, #1a1f1a 100%);
+  --swipe-card-border: var(--border, rgba(107, 143, 113, 0.20));
+  --swipe-accent: #2dd4bf;
+}
+
+#go-body {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.go-topbar {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 0.5rem;
+}
+
+/* Swipe Container & Stack */
+.swipe-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 440px;
+  margin: 0 auto;
+  position: relative;
+  touch-action: pan-y;
+}
+
+.swipe-top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.swipe-brand {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--ink, #111827);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-stack {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  perspective: 1000px;
+}
+
+/* Card Design */
+.swipe-card {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  background: var(--swipe-surface);
+  color: var(--ink, #2a2a2a);
+  border-radius: 20px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+  cursor: grab;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  border: 1px solid var(--swipe-card-border);
+}
+
+.swipe-card:active {
+  cursor: grabbing;
+}
+
+.swipe-card.dragging {
+  transition: none;
+}
+
+/* Story Bar / Pagination Dots */
+.story-bar-container {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  gap: 6px;
+  z-index: 25;
+}
+
+.story-segment {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.story-segment.active {
+  background: #ffffff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* Tap navigation zones on image */
+.tap-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 35%;
+  z-index: 15;
+  cursor: pointer;
+}
+
+.tap-zone.left { left: 0; }
+.tap-zone.right { right: 0; }
+
+/* Photo / Avatar Box Header */
+.card-hero-box {
+  position: relative;
+  height: 230px;
+  background: var(--swipe-card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink, #111827);
+  padding: 1rem;
+  transition: background 0.3s ease;
+}
+
+.card-avatar-emoji {
+  font-size: 5.5rem;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+  transition: transform 0.25s ease;
+}
+
+.swipe-card:hover .card-avatar-emoji {
+  transform: scale(1.08);
+}
+
+.card-sub-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Dynamic Rotated Stamp Overlays */
+.badge-indicator {
+  position: absolute;
+  top: 36px;
+  padding: 8px 22px;
+  border-radius: 12px;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+  z-index: 30;
+}
+
+.badge-like {
+  left: 24px;
+  border: 5px solid var(--swipe-like);
+  color: var(--swipe-like);
+  transform: rotate(-18deg);
+  background: var(--swipe-surface);
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25);
+}
+
+.badge-pass {
+  right: 24px;
+  border: 5px solid var(--swipe-pass);
+  color: var(--swipe-pass);
+  transform: rotate(18deg);
+  background: var(--swipe-surface);
+  box-shadow: 0 8px 20px rgba(225, 29, 72, 0.25);
+}
+
+.badge-super {
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-6deg);
+  border: 5px solid var(--teal);
+  color: var(--teal);
+  background: var(--swipe-surface);
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25);
+}
+
+/* Card Content Body */
+.card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  background: var(--swipe-surface);
+  color: var(--ink, #2a2a2a);
+}
+
+.profile-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.2rem;
+}
+
+.profile-name {
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--ink, #111827);
+}
+
+.profile-age {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--ink-muted, #6b7280);
+}
+
+.verified-icon {
+  color: var(--teal, #0d9488);
+  font-size: 1.1rem;
+}
+
+.profile-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--ink-muted, #6b7280);
+  margin-bottom: 0.8rem;
+}
+
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.tag-pill {
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--sage-mist, #f3f4f6);
+  color: var(--ink, #374151);
+  border: 1px solid var(--border, #e5e7eb);
+}
+
+.profile-bio-box {
+  background: var(--sage-mist, #f9fafb);
+  padding: 0.85rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--ink, #374151);
+  margin-bottom: 0.8rem;
+  border-left: 3px solid var(--swipe-accent);
+}
+
+/* Green/Red Flags */
+.flag-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.flag-card {
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.flag-card.green {
+  background: rgba(13, 148, 136, 0.15);
+  color: var(--swipe-like);
+}
+
+.flag-card.red {
+  background: rgba(225, 29, 72, 0.15);
+  color: var(--swipe-pass);
+}
+
+.prompt-box {
+  background: var(--sage-mist, rgba(13, 148, 136, 0.08));
+  padding: 0.75rem;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink, #1f2937);
+  border: 1px solid var(--swipe-card-border);
+}
+
+/* Swipe Action Bar */
+.swipe-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.t-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  background: var(--swipe-surface);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.t-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.t-btn:active {
+  transform: scale(0.92);
+}
+
+.t-btn.btn-rewind {
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
+  color: var(--honey, #f59e0b);
+  border: 2px solid var(--border, #fef3c7);
+}
+
+.t-btn.btn-pass {
+  color: var(--swipe-pass);
+  border: 2px solid var(--swipe-pass);
+}
+
+.t-btn.btn-super {
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
+  color: var(--teal, #0d9488);
+  border: 2px solid var(--border, #dbeafe);
+}
+
+.t-btn.btn-like {
+  color: var(--swipe-like);
+  border: 2px solid var(--swipe-like);
+}
+
+/* Match / Liked Overlay Modal */
+.match-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.25s ease;
+}
+
+.match-modal-overlay.open {
+  display: flex;
+}
+
+.match-card {
+  background: var(--swipe-surface);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--ink);
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--swipe-card-border);
+  animation: popUp 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popUp {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.match-title {
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: var(--swipe-like);
+}
+
+.match-avatars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 1.25rem 0;
+}
+
+.match-avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--sage-mist, #f3f4f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  border: 4px solid var(--swipe-surface);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.match-prompt-box {
+  background: var(--sage-mist, #f3f4f6);
+  padding: 1rem;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.match-btn {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 30px;
+  border: none;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--ink);
+  color: var(--warm-white, #ffffff);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.match-btn:hover {
+  transform: scale(1.04);
+}
+
+.chat-bubble-user {
+  background: var(--swipe-like);
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 12px 12px 2px 12px;
+  font-size: 0.85rem;
+  max-width: 85%;
+  align-self: flex-end;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-top: 4px;
+}
+
+.chat-bubble-reply {
+  background: var(--sage-mist, #f3f4f6);
+  color: var(--ink);
+  padding: 8px 12px;
+  border-radius: 12px 12px 12px 2px;
+  font-size: 0.85rem;
+  max-width: 85%;
+  align-self: flex-start;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-top: 4px;
+}
+
+.chat-icebreaker-btn {
+  background: var(--sage-mist, #f3f4f6);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.chat-icebreaker-btn:hover {
+  background: var(--swipe-card-border);
+}
+
+.score-highlight {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--teal, #0d9488);
+  margin: 0.5rem 0;
+}

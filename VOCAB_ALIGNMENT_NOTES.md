@@ -9,7 +9,7 @@ This document summarizes the vocabulary alignment QA audit and leveling decision
   3. `data/scenes/*.js` (Scene Match)
   4. `100-questions/decks/*.js` (100 Questions)
   5. `this-or-that/decks/cefr_all_decks.json` & `this-or-that/decks/en/*.json` (This or That)
-  6. Standalone game engines (`lucky-numbers`, `emoji-odyssey`, `last-letter`, `object-quest`, `cosy-crossword`, `story-chain`, `story-weaver`, `storytelling`, `hot-seat`)
+  6. Standalone game engines (`lucky-numbers`, `emoji-odyssey`, `last-letter`, `object-quest`, `cosy-crossword`, `story-chain`, `story-weaver`, `hot-seat`)
 
 ---
 
@@ -127,7 +127,7 @@ An automated vocabulary alignment audit was conducted across all other games in 
 | **Last Letter** | `last-letter/game.js` | All Levels | **Dynamic Vocabulary**: Word chain engine checks valid dictionary entries. |
 | **Object Quest** | `object-quest/game.js` | Starter (A1) | **100% Canonical A1**: Object identification uses A1 vocabulary. |
 | **Cosy Crossword** | `cosy-crossword/game.js` | Starter (A1) | **100% Canonical A1**: Crossword clues use basic A1 vocabulary. |
-| **Story Chain / Weaver / Storytelling** | `story-chain/`, `story-weaver/`, `storytelling/` | Intermediate - Advanced | **100% Aligned**: Open-ended creative writing engines. |
+| **Story Chain / Weaver** | `story-chain/`, `story-weaver/` | Intermediate - Advanced | **100% Aligned**: Open-ended creative writing engines. |
 | **Hot Seat** | `hot-seat/game.js` | All Levels | **100% Aligned**: Party game engine using vocabulary dataset topics. |
 
 ---

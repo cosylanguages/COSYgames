@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../shared/css/nav.css">
     <link rel="stylesheet" href="../shared/styles/game-styles.css">
     <link rel="stylesheet" href="../_engine/components.css">
+    <link rel="stylesheet" href="story-weaver.css">
 </head>
 <body class="game-standalone cosy-game-theme">
     <!-- Top Navigation Header -->
@@ -110,10 +111,9 @@
     <script src="../_engine/game_session.js"></script>
     <script src="../_engine/scores.js"></script>
     <script src="../_engine/loader.js"></script>
-    <script src="../storytelling/game.js" onerror="console.log('Engine script loaded')"></script>
-    <script src="game.js" onerror="console.log('Local game script checked')"></script>
+    <script src="game.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
+      function refreshStoryWeaverScores() {
         if (typeof COSYUtils !== 'undefined') {
           const current = COSYUtils.getScore('story-weaver');
           const high = COSYUtils.getHighScore('story-weaver');
@@ -122,7 +122,9 @@
           if (scoreEl) scoreEl.textContent = current;
           if (highEl) highEl.textContent = high;
         }
-      });
+      }
+      window.refreshStoryWeaverScores = refreshStoryWeaverScores;
+      document.addEventListener('DOMContentLoaded', refreshStoryWeaverScores);
     </script>
 </body>
 </html>
