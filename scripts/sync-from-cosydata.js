@@ -4,11 +4,11 @@
  * scripts/sync-from-cosydata.js
  *
  * Lightweight build/deploy synchronization script for COSYgames.
- * Audits and syncs local offline game datasets against canonical COSYdata master files.
+ * Audits and syncs local offline game datasets against the local snapshot of COSYdata canonical files.
  *
  * Modes:
- *   --check  (default): Audits local game data against canonical COSYdata master files and reports coverage.
- *   --update : Re-generates / syncs local datasets from canonical master source files.
+ *   --check  (default): Audits local game data against the local snapshot and reports coverage.
+ *   --update : Re-generates / syncs local datasets from local snapshot files.
  *
  * Usage:
  *   node scripts/sync-from-cosydata.js [--check | --update]
@@ -24,7 +24,7 @@ const mode = process.argv.includes('--update') ? 'update' : 'check';
 
 console.log(`[COSYdata Sync] Running in '${mode}' mode...`);
 
-// 1. Load canonical master list
+// 1. Load canonical words from local snapshot
 let canonicalWords = new Set();
 if (fs.existsSync(CANONICAL_PATH)) {
     try {
@@ -35,12 +35,12 @@ if (fs.existsSync(CANONICAL_PATH)) {
             if (typeof item === 'string') canonicalWords.add(item.toLowerCase());
             else if (item && item.word) canonicalWords.add(item.word.toLowerCase());
         });
-        console.log(`[COSYdata Sync] Loaded ${canonicalWords.size} canonical words from COSYdata master.`);
+        console.log(`[COSYdata Sync] Loaded ${canonicalWords.size} canonical words from the local snapshot.`);
     } catch (e) {
         console.error(`[COSYdata Sync] Error parsing ${CANONICAL_PATH}:`, e.message);
     }
 } else {
-    console.warn(`[COSYdata Sync] Canonical file not found at ${CANONICAL_PATH}. Using fallback check.`);
+    console.warn(`[COSYdata Sync] Canonical snapshot file not found at ${CANONICAL_PATH}. Using fallback check.`);
 }
 
 // 2. Audit local datasets

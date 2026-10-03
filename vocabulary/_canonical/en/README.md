@@ -1,3 +1,7 @@
-# Canonical Vocabulary Mirror Notice
+# Canonical Vocabulary Local Snapshot
 
-This is a synced read-only mirror of `COSYlanguages/vocabulary/_canonical/en/A0-A1_master.json` as of 2026-09-12 (commit 5c89fc9036afba450f942e4fd672ea57d42c42a6). Do not edit locally — file changes upstream in COSYlanguages.
+This directory contains a read-only snapshot of canonical A0-A1 vocabulary data (`A0-A1_master.json`), used by offline verification scripts and CI workflows in COSYgames.
+
+For detailed documentation on vocabulary provenance, single source of truth rules, and the known snapshot alignment gap, see [docs/vocabulary-source-of-truth.md](../../../docs/vocabulary-source-of-truth.md).
+
+**Rule:** Do not edit files in this directory by hand. Propose vocabulary changes upstream in COSYdata first.

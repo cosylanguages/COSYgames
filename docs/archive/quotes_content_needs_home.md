@@ -1,3 +1,5 @@
+> ⚠️ **Historical document (archived 2026-10-03).** Written during the migration/audit work and not kept up to date. For current information see README.md and CONTRIBUTING.md.
+
 # Quotes Content Needs Home Report
 
 ## Summary

@@ -1,3 +1,5 @@
+> ⚠️ **Historical document (archived 2026-10-03).** Written during the migration/audit work and not kept up to date. For current information see README.md and CONTRIBUTING.md.
+
 # 📦 COSYgames Multi-Stage Migration Report
 
 This report documents the central migration of all **19 interactive language games** from embedded locations in `COSYlanguages` into the dedicated, standalone `COSYgames` repository.

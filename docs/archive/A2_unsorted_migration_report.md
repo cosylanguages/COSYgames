@@ -1,3 +1,5 @@
+> ⚠️ **Historical document (archived 2026-10-03).** Written during the migration/audit work and not kept up to date. For current information see README.md and CONTRIBUTING.md.
+
 # 📦 A2 Unsorted Vocabulary Data Migration Report
 
 This report documents the migration of `people.js`, `locations.js`, and `quotes.js` files from `cosylanguages/COSYlanguages` (`vocabulary/<lang>/A2/`) into `cosylanguages/COSYgames` (`data/<lang>/unsorted/`).

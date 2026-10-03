@@ -1,3 +1,5 @@
+> ⚠️ **Historical document (archived 2026-10-03).** Written during the migration/audit work and not kept up to date. For current information see README.md and CONTRIBUTING.md.
+
 # 📊 Data Duplication & COSYdata Sync Audit
 
 This document records the audit of local game datasets in **COSYgames** (`data/`, `100-questions/decks/`, `this-or-that/decks/`, `vocabulary/`) against COSYdata canonical vocabulary standards and defines the lightweight build/deploy sync approach.

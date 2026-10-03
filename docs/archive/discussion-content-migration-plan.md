@@ -1,3 +1,5 @@
+> ⚠️ **Historical document (archived 2026-10-03).** Written during the migration/audit work and not kept up to date. For current information see README.md and CONTRIBUTING.md.
+
 # 🗺️ Audit & Migration Plan: COSYlanguages Discussion Content to COSYgames
 
 This audit document analyzes the open-ended discussion questions, opinion prompts, speaking topics, and debate content from **COSYlanguages** (`debates.js`, `fluency.js`, `opinions.js`, `speaking.js`) and defines how this content maps into existing or new minigames within **COSYgames**.

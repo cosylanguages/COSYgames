@@ -2,14 +2,15 @@
 
 Standalone interactive language games repository for the **COSYlanguages** ecosystem.
 
-[![COSYlanguages](https://img.shields.sh/badge/COSYlanguages-Ecosystem-0D9488)](https://cosylanguages.github.io/COSYlanguages/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![COSYlanguages](https://img.shields.io/badge/COSYlanguages-Ecosystem-0D9488)](https://cosylanguages.github.io/COSYlanguages/)
 
 ---
 
 ## 🌟 Overview
 
-`COSYgames` is the official central hub hosting **interactive language learning minigames** designed for immersive self-study and active classroom practice. All games operate standalone without external dependencies, require no account, and support solo play as well as partner and group activities across multiple CEFR levels (A0–C2).
+`COSYgames` is the official central hub hosting **interactive language learning minigames** designed for immersive self-study and active classroom practice. COSYgames is open to everyone—students, free users, and teachers alike. Access is completely free, with no account registration or login required.
+
+All games operate standalone without external dependencies or build steps, supporting solo play as well as partner and group activities across multiple CEFR levels (A0–C2).
 
 Whether you are a student building oral fluency or a teacher facilitating communicative drills, COSYgames offers engaging, pedagogical tools to make language acquisition natural and fun.
 
@@ -17,88 +18,40 @@ Whether you are a student building oral fluency or a teacher facilitating commun
 
 ## 🎲 Language Games Directory
 
-### 🗣️ Speaking & Fluency
-1. **Fluency Flow** (`/fluency-flow/`)
-   - *Description:* Spin for a random topic and speak continuously for 1–5 minutes without stopping. Emphasizes flow and confidence over perfection.
-   - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
+### Speaking & Fluency
 
-2. **Battle of Wits** (`/battle-of-wits/`)
-   - *Description:* Two opposing topics or views. Build arguments and debate in your target language.
-   - *CEFR Levels:* B1–C2 | *Mode:* Group
+| Game | What you do | Players | CEFR levels | Folder |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fluency Flow** | Spin for a random topic and speak for 1–5 minutes without stopping. Flow, not perfection. | Solo / Group | A1, A2, B1, B2, C1, C2 | `fluency-flow/` |
+| **Battle of Wits** | Two topics, two sides. Build your arguments and debate in the language you're learning. | Group | B1, B2, C1, C2 | `battle-of-wits/` |
+| **Opinion Arena** | Agree or disagree with a statement, then defend your view. Real opinions, real language. | Solo / Group | A2, B1, B2, C1, C2 | `opinion-arena/` |
+| **Critic's Corner** | A famous quote appears. What does it mean to you? Deep discussion for advanced levels. | Solo / Group | B2, C1, C2 | `critics-corner/` |
+| **100 Questions** | Pick a deck and answer deep, funny, or philosophical questions. Perfect for speaking practice. | Solo / Group | A2, B1, B2, C1, C2 | `100-questions/` |
+| **Story Chain** | Add one sentence at a time to build a collaborative story with prompts and connectors. | Solo / Group | A1, A2, B1, B2, C1, C2 | `story-chain/` |
+| **Story Weaver** | Weave target words into a coherent narrative. Turn vocabulary study into creative writing. | Solo / Group | A1, A2, B1, B2, C1, C2 | `story-weaver/` |
+| **Hot Seat** | One player faces away from the board while team members explain target words without saying them. | Solo / Group | A1, A2, B1, B2, C1, C2 | `hot-seat/` |
+| **This or That?** | Choose between two intriguing options and justify your choice. | Solo / Group | A1, A2, B1, B2, C1, C2 | `this-or-that/` |
 
-3. **Opinion Arena** (`/opinion-arena/`)
-   - *Description:* Express agreement or disagreement with controversial or everyday statements and defend your reasoning.
-   - *CEFR Levels:* A2–C2 | *Mode:* Solo or Group
+### Mystery & Guesses
 
-4. **Critic's Corner** (`/critics-corner/`)
-   - *Description:* Discuss famous quotes, idioms, and philosophical statements for advanced level conversation.
-   - *CEFR Levels:* B2–C2 | *Mode:* Solo or Group
+| Game | What you do | Players | CEFR levels | Folder |
+| :--- | :--- | :--- | :--- | :--- |
+| **Action Hero** | Act out or explain dynamic action verbs and scenarios against the clock. | Group | A1, A2, B1, B2, C1, C2 | `action-hero/` |
+| **Identity Mystery** | Deduce the hidden identity through strategic 20 questions and clues. | Solo / Group | A2, B1, B2, C1, C2 | `identity-mystery/` |
+| **Object Quest** | Describe, locate, and guess secret objects using descriptive target vocabulary. | Solo / Group | A1, A2, B1, B2, C1, C2 | `object-quest/` |
 
-5. **100 Questions** (`/100-questions/`)
-   - *Description:* Conversation cards designed to foster deep, authentic dialogues between partners, students, or family members.
-   - *CEFR Levels:* A2–C2 | *Mode:* Solo or Group
+### Vocab & Puzzles
 
-6. **Story Chain** (`/story-chain/`)
-   - *Description:* Build a collaborative narrative one sentence at a time, incorporating assigned secret target words.
-   - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
-
-7. **Story Weaver** (`/story-weaver/`)
-   - *Description:* Combine dynamic CEFR grammar rules and thematic vocabulary targets to compose creative stories.
-   - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
-
-8. **Hot Seat** (`/hot-seat/`)
-   - *Description:* High-pressure, quick-fire vocabulary explanation game against the clock.
-   - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
-
-9. **This or That?** (`/this-or-that/`)
-   - *Description:* Interactive profile swiping and decision cards to practice expressing preferences and justifying choices.
-   - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
-
-### 🕵️ Mystery & Guesses
-10. **Action Hero** (`/action-hero/`)
-    - *Description:* Hold your device to your forehead while teammates describe verbs and actions for you to guess.
-    - *CEFR Levels:* A1–C2 | *Mode:* Group
-
-11. **Identity Mystery** (`/identity-mystery/`)
-    - *Description:* Uncover hidden famous characters or professions through strategic yes/no questions.
-    - *CEFR Levels:* A2–C2 | *Mode:* Solo or Group
-
-12. **Object Quest** (`/object-quest/`)
-    - *Description:* Deduce mystery objects from contextual clues and descriptive hints.
-    - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
-
-### 🧩 Vocab & Puzzles
-13. **Scene Match** (`/scene-match/`)
-    - *Description:* Interactive 2D visual rooms where learners match target vocabulary to labeled hotspots.
-    - *CEFR Levels:* A1–C2 | *Mode:* Solo
-
-14. **Word Linker** (`/word-linker/`)
-    - *Description:* Identify collocations, word associations, or spot the odd word out in a set.
-    - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
-
-15. **Last Letter** (`/last-letter/`)
-    - *Description:* Classic word chain game where each new word must begin with the final letter of the previous word.
-    - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
-
-16. **Emoji Odyssey** (`/emoji-odyssey/`)
-    - *Description:* Decipher visual emoji sequences representing common phrases, idioms, and vocabulary.
-    - *CEFR Levels:* A1–C2 | *Mode:* Solo or Group
-
-17. **Cosy Crossword** (`/cosy-crossword/`)
-    - *Description:* Dynamically generated crossword puzzles tailored to specific CEFR vocabulary themes.
-    - *CEFR Levels:* A1–C2 | *Mode:* Solo
-
-18. **Lucky Numbers** (`/lucky-numbers/`)
-    - *Description:* Interactive language Bingo for numbers and listening comprehension practice.
-    - *CEFR Levels:* A0–C2 | *Mode:* Solo or Group
-
-19. **Etymology Explorer** (`/etymology-explorer/`)
-    - *Description:* Discover the historical origins, Latin/Greek roots, and cognates of everyday vocabulary.
-    - *CEFR Levels:* B1–C2 | *Mode:* Solo
-
-20. **What Gender Is It?** (`/what-gender-is-it/`)
-    - *Description:* Master grammatical genders across gendered languages with historical memory rules.
-    - *CEFR Levels:* A1–C2 | *Mode:* Solo
+| Game | What you do | Players | CEFR levels | Folder |
+| :--- | :--- | :--- | :--- | :--- |
+| **Scene Match** | Explore interactive visual rooms and match vocabulary items to scene objects. | Solo | A1, A2, B1, B2, C1, C2 | `scene-match/` |
+| **Word Linker** | Connect related vocabulary words to build semantic chains. | Solo / Group | A1, A2, B1, B2, C1, C2 | `word-linker/` |
+| **Last Letter** | Chain vocabulary words by matching the last letter of each word to the next. | Solo / Group | A1, A2, B1, B2, C1, C2 | `last-letter/` |
+| **Emoji Odyssey** | Decode phrases and idioms represented purely through emoji sequences. | Solo / Group | A1, A2, B1, B2, C1, C2 | `emoji-odyssey/` |
+| **Cosy Crossword** | Solve language puzzles with tailored vocabulary clues and crosswords. | Solo | A1, A2, B1, B2, C1, C2 | `cosy-crossword/` |
+| **Lucky Numbers** | Practice numbers, counting, and math expressively in your target language. | Solo / Group | A0, A1, A2, B1, B2, C1, C2 | `lucky-numbers/` |
+| **Etymology Explorer** | Uncover word origins, roots, and language family connections. | Solo | B1, B2, C1, C2 | `etymology-explorer/` |
+| **What Gender Is It?** | Master noun genders with speed rounds and grammar memory triggers. | Solo | A1, A2, B1, B2, C1, C2 | `what-gender-is-it/` |
 
 ---
 
@@ -115,9 +68,10 @@ Both the central **Games Hub (`index.html`)** and all **individual games** suppo
 | Query Parameter | Description | Supported Values / Format | Example Usage |
 | :--- | :--- | :--- | :--- |
 | `game` | Launch directly into a specific minigame (Hub auto-redirects) | Canonical ID or kebab-case string (e.g. `cosy-crossword`, `fluency-flow`, `action-hero`, `100-questions`) | `?game=cosy-crossword` |
-| `theme` / `topic` | Pre-select the vocabulary topic, deck, or category | Topic identifier (e.g. `animals`, `food`, `travel`, `daily_routine`, `jobs`) | `?theme=animals` or `?topic=food` |
+| `theme` / `topic` / `deck` | Pre-select the vocabulary topic, deck, or category | Topic identifier (e.g. `animals`, `food`, `travel`, `daily_routine`, `jobs`) | `?theme=animals` or `?topic=food` |
 | `level` | Pre-select the CEFR target level | `A0`, `A1`, `A2`, `B1`, `B2`, `C1`, `C2` (or aliases like `starter`, `elementary`, `intermediate`, `advanced`) | `?level=A2` |
-| `lang` | Pre-select the target target language | ISO 2-letter code (e.g. `en`, `es`, `fr`, `de`, `ru`, `it`, `pt`, `el`) | `?lang=es` |
+| `lang` | Pre-select the learning language | ISO 2-letter code (e.g. `en`, `es`, `fr`, `de`, `ru`, `it`, `pt`, `el`) | `?lang=es` |
+| `teacher` | Controls visibility of the context selector | `1` shows the display-mode selector (Projector/Online/Phone) for teachers and the founder; `0` turns it off. Remembered in the browser. A UI convenience, not a security feature. | `?teacher=1` |
 
 #### Examples
 
@@ -135,84 +89,57 @@ Both the central **Games Hub (`index.html`)** and all **individual games** suppo
 
 ---
 
-## 👩‍🏫 Classroom Instructions for Teachers
-
-COSYgames are designed with flexibility for language educators:
-
-1. **Warm-ups & Icebreakers (5–10 mins):**
-   - Use **Fluency Flow** or **Hot Seat** as an energetic lesson opener.
-   - Use **100 Questions** for pair-work warm-ups.
-
-2. **Grammar & Vocab Drill Activities:**
-   - Integrate **Story Weaver** to practice target tenses (e.g., past simple vs. present perfect).
-   - Use **Scene Match** or **Word Linker** for vocabulary consolidation after introductory readings.
-
-3. **Communicative Group Games:**
-   - Divide students into teams for **Action Hero** or **Battle of Wits**.
-   - Use **Identity Mystery** to practice question formation (e.g., "Is this person...?", "Does she work in...?").
-
-4. **Structured Lesson Plans & Curriculum Integration:**
-   - For complete, step-by-step teacher guides, lesson plans, and classroom worksheets matching these games, visit [**COSYmanuals**](https://cosylanguages.github.io/COSYmanuals/).
-
----
-
 ## 📁 Repository Directory Structure
 
 ```
 COSYgames/
-├── index.html                   # Main Games Hub Entrypoint
-├── docs/
-│   └── DEDUP_AUDIT.md           # Deduplication audit documentation
-├── games/
-│   └── index.json               # Game metadata manifest
+├── index.html                   # Central Games Hub entrypoint
 ├── templates/
 │   └── game-template.html       # Standardized Game Page Template
+├── _engine/                     # Core runtime engine (session, scores, view context)
 ├── shared/
-│   ├── utils/
-│   │   └── game-utils.js        # Score tracking, timers, progress storage & nav helpers
-│   ├── styles/
-│   │   └── game-styles.css       # Unified design tokens, grids, cards & responsiveness
-│   ├── css/                     # Shared theme CSS files
-│   └── js/                      # Shared navigation logic
-├── assets/                      # Shared media assets & icons
-├── fluency-flow/                # Game directory
-├── battle-of-wits/              # Game directory
-├── opinion-arena/               # Game directory
-├── critics-corner/              # Game directory
-├── 100-questions/               # Game directory
-├── story-chain/                 # Game directory
-├── story-weaver/                # Game directory
-├── hot-seat/                    # Game directory
-├── this-or-that/                # Game directory
-├── action-hero/                 # Game directory
-├── identity-mystery/            # Game directory
-├── object-quest/                # Game directory
-├── scene-match/                 # Game directory
-├── word-linker/                 # Game directory
-├── last-letter/                 # Game directory
-├── emoji-odyssey/               # Game directory
-├── cosy-crossword/              # Game directory
-├── lucky-numbers/               # Game directory
-├── etymology-explorer/          # Game directory
-└── what-gender-is-it/           # Game directory
+│   ├── css/                     # Shared CSS tokens, motion & hub styles
+│   ├── js/                      # Shared navigation and i18n logic
+│   ├── styles/                  # Shared game stylesheet (game-styles.css)
+│   └── utils/                   # Shared game utility scripts (game-utils.js)
+├── data/                        # Multilingual game datasets & shared etymology network
+├── vocabulary/
+│   └── _canonical/
+│       └── en/                  # Read-only vocabulary snapshot (see docs/vocabulary-source-of-truth.md)
+├── games/
+│   └── index.json               # Game metadata manifest (checked by automated tests)
+├── scripts/                     # Sync and data validation scripts
+├── tests/                       # Automated test suite
+│   └── manual/                  # Manual Playwright browser test scripts
+├── docs/                        # Architecture guidelines & current documentation
+│   └── archive/                 # Historical audit/migration documents
+├── .github/
+│   └── workflows/               # CI GitHub Actions workflows
+├── 100-questions/               # Game folder
+├── action-hero/                 # Game folder
+├── battle-of-wits/              # Game folder
+├── cosy-crossword/              # Game folder
+├── critics-corner/              # Game folder
+├── emoji-odyssey/               # Game folder
+├── etymology-explorer/          # Game folder
+├── fluency-flow/                # Game folder
+├── hot-seat/                    # Game folder
+├── identity-mystery/            # Game folder
+├── last-letter/                 # Game folder
+├── lucky-numbers/               # Game folder
+├── object-quest/                # Game folder
+├── opinion-arena/               # Game folder
+├── scene-match/                 # Game folder
+├── story-chain/                 # Game folder
+├── story-weaver/                # Game folder
+├── story-telling/               # Client-side redirect folder
+├── this-or-that/                # Game folder
+├── what-gender-is-it/           # Game folder
+└── word-linker/                 # Game folder
 ```
 
 ---
 
 ## 🤝 Contribution Guidelines
 
-We welcome contributions from educators, developers, and language enthusiasts!
-
-1. **Bug Reports & Feature Requests:**
-   - Please open an issue on our [GitHub Issues Page](https://github.com/cosylanguages/COSYgames/issues).
-
-2. **Adding New Vocabulary Decks or Content:**
-   - Game card decks and dataset manifests are stored in `data/`. Submit a PR with validated JSON structures.
-
-3. **Code Style & Verification:**
-   - Use standard HTML5, CSS3, and modern ES6 JavaScript.
-   - Ensure all pages include "Back to Games Hub" navigation and function responsively on mobile devices.
-
----
-
-© 2026 COSYlanguages: All rights reserved.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines, testing instructions, and PR requirements.

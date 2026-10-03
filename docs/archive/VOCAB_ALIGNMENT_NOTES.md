@@ -1,3 +1,5 @@
+> ⚠️ **Historical document (archived 2026-10-03).** Written during the migration/audit work and not kept up to date. For current information see README.md and CONTRIBUTING.md.
+
 # Vocabulary Alignment Notes: A1-Tier Games & Gender Concepts
 
 This document summarizes the vocabulary alignment QA audit and leveling decisions performed across **COSYgames content** against the canonical English A0-A1 master list (`vocabulary/_canonical/en/A0-A1_master.json`).

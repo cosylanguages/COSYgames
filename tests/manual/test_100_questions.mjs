@@ -1,3 +1,4 @@
+// Manual browser test. Requires Playwright (npm i -D playwright). Not part of CI.
 import { chromium } from 'playwright';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -12,7 +13,7 @@ async function test100Questions() {
     const contextDesktop = await browser.newContext({ viewport: { width: 1280, height: 800 } });
     const pageDesktop = await contextDesktop.newPage();
 
-    const fileUrl = `file://${path.resolve(__dirname, '100-questions/index.html')}`;
+    const fileUrl = `file://${path.resolve(__dirname, '../../100-questions/index.html')}`;
     await pageDesktop.goto(fileUrl);
     await pageDesktop.waitForSelector('.btn-start-game');
     await pageDesktop.click('.btn-start-game'); // rules

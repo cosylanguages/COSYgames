@@ -39,8 +39,8 @@ test('All relative CSS and JS links in HTML files exist on disk', () => {
   const brokenLinks = [];
 
   htmlFiles.forEach(htmlFile => {
-    // Ignore template files (_template.html and templates/game-template.html) as they are uninstantiated templates
-    if (htmlFile === '_template.html' || htmlFile.startsWith('templates/')) return;
+    // Ignore template files (templates/game-template.html) as they are uninstantiated templates
+    if (htmlFile.startsWith('templates/')) return;
 
     const content = fs.readFileSync(htmlFile, 'utf8');
     const htmlDir = path.dirname(htmlFile);

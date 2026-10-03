@@ -122,3 +122,83 @@ test('Hub drift and integrity tests', () => {
     });
   });
 });
+
+test('Hub cross-check with games/index.json', () => {
+  const rootDir = path.resolve(__dirname, '..');
+  const indexPath = path.join(rootDir, 'index.html');
+  const gamesJsonPath = path.join(rootDir, 'games', 'index.json');
+
+  const indexHtml = fs.readFileSync(indexPath, 'utf8');
+  const gamesJson = JSON.parse(fs.readFileSync(gamesJsonPath, 'utf8'));
+
+  const cardBlockRegex = /<div\s+[^>]*class="(?:\w+\s+)*gc(?:\s+[^"]*)?"[^>]*>[\s\S]*?(?=<div\s+[^>]*class="(?:\w+\s+)*gc(?:\s+[^"]*)?"|<div\s+class="sec-title|<\/div>\s*<\/div>\s*<!-- Footer -->)/g;
+  const blocks = indexHtml.match(cardBlockRegex) || [];
+
+  const hubCards = blocks.map((block, idx) => {
+    const tagMatch = block.match(/<div\s+[^>]*class="(?:\w+\s+)*gc(?:\s+[^"]*)?"([^>]*)>/);
+    const tagAttrs = tagMatch ? tagMatch[1] : '';
+    const playersMatch = tagAttrs.match(/data-players="([^"]+)"/);
+    const skillMatch = tagAttrs.match(/data-skill="([^"]+)"/);
+    const hrefMatch = block.match(/<a\s+class="gc-link"\s+href="([^"]+)"/);
+
+    assert.ok(hrefMatch, `Card ${idx} must have an a.gc-link href`);
+    const href = hrefMatch[1];
+    const folder = href.split('/')[0];
+
+    return {
+      folder,
+      href,
+      players: playersMatch ? playersMatch[1].trim().split(/\s+/).sort() : [],
+      skill: skillMatch ? skillMatch[1].trim() : ''
+    };
+  });
+
+  // a. The set of game folders linked from hub cards equals set of ids in games/index.json
+  const hubFolderSet = new Set(hubCards.map(c => c.folder));
+  const jsonIdSet = new Set(gamesJson.map(g => g.id));
+  assert.deepStrictEqual(hubFolderSet, jsonIdSet, 'Hub linked game folders set must equal games/index.json ids set');
+
+  // d. Every entry has non-empty cefr_levels array and valid folder_path with index.html
+  gamesJson.forEach(entry => {
+    assert.ok(
+      Array.isArray(entry.cefr_levels) && entry.cefr_levels.length > 0,
+      `Entry '${entry.id}' must have a non-empty cefr_levels array`
+    );
+    const indexPathOnDisk = path.join(rootDir, entry.folder_path, 'index.html');
+    assert.ok(
+      fs.existsSync(indexPathOnDisk),
+      `Entry '${entry.id}' folder_path '${entry.folder_path}' must exist on disk with index.html`
+    );
+  });
+
+  // Skill category mapping
+  const skillToCategory = {
+    speaking: 'Speaking & Fluency',
+    mystery: 'Mystery & Guesses',
+    vocab: 'Vocab & Puzzles'
+  };
+
+  const jsonMap = new Map(gamesJson.map(g => [g.id, g]));
+
+  hubCards.forEach(card => {
+    const entry = jsonMap.get(card.folder);
+    assert.ok(entry, `Entry for card folder '${card.folder}' must exist in games/index.json`);
+
+    // b. hub section (data-skill) maps to entry category
+    const expectedCategory = skillToCategory[card.skill];
+    assert.strictEqual(
+      entry.category,
+      expectedCategory,
+      `Game '${card.folder}' hub skill '${card.skill}' mapped category '${expectedCategory}' must match index.json category '${entry.category}'`
+    );
+
+    // c. hub's data-players set equals entry's mode set
+    const hubModeSet = card.players.sort();
+    const entryModeSet = [...entry.mode].sort();
+    assert.deepStrictEqual(
+      hubModeSet,
+      entryModeSet,
+      `Game '${card.folder}' hub data-players ${JSON.stringify(hubModeSet)} must equal index.json mode ${JSON.stringify(entryModeSet)}`
+    );
+  });
+});
