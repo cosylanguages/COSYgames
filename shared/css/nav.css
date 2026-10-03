@@ -12,6 +12,7 @@
   border-bottom: 1px solid var(--border, rgba(74, 107, 80, 0.12));
   box-shadow: var(--shadow-sm, 0 2px 12px rgba(0, 0, 0, 0.05));
   transition: all var(--motion-duration-med, 300ms) ease;
+  min-width: 0;
 }
 
 .cg-nav-brand {
@@ -24,6 +25,7 @@
   align-items: center;
   gap: 8px;
   min-height: 44px;
+  white-space: nowrap;
 }
 
 .cg-nav-brand:hover {
@@ -34,6 +36,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .cg-nav-hub-link {
@@ -76,6 +79,26 @@
 .cosy-context-switcher-wrapper {
   display: inline-flex;
   align-items: center;
+  gap: 4px;
+}
+
+.cosy-teacher-badge {
+  background: transparent;
+  border: none;
+  font-size: 1.15rem;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: var(--radius-sm, 8px);
+}
+
+.cosy-teacher-badge:focus-visible {
+  outline: 2px solid var(--game-accent, var(--teal, #416b49));
+  outline-offset: 2px;
 }
 
 .cosy-context-select {
@@ -91,6 +114,7 @@
   outline: none;
   transition: all var(--motion-duration-fast, 150ms) ease;
   min-height: 38px;
+  max-width: 9rem;
 }
 
 .cosy-context-select:hover,
@@ -124,6 +148,9 @@ html[data-context="phone"] .cg-nav,
 }
 
 @media (max-width: 640px) {
+  .cosy-context-switcher-wrapper {
+    display: none;
+  }
   .cg-nav-hub-link {
     display: none; /* Hide verbose external links on narrow phones to preserve game area */
   }
