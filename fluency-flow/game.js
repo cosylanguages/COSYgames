@@ -84,16 +84,16 @@
             <div class="setup-screen">
               <h2>Fluency Flow 🗣️</h2>
               <p>Reorder word chips along the river flow rail into a fluent sentence, then speak about it without stopping!</p>
-              <div class="setup-field"><label>Level</label>
-                <select class="styled-sel" id="s-level">${LEVEL_OPTS.map(l => `<option>${l}</option>`).join('')}</select>
+              <div class="setup-field"><label data-i18n="ui_level">Level</label>
+                <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
               <div class="setup-field"><label>Duration</label>
                 <div class="setup-options">${DUR_OPTS.map((d, i) => `<div class="setup-opt ${i === 1 ? 'sel' : ''}" data-val="${d}"><span class="setup-opt-icon">⏱</span>${d}</div>`).join('')}</div>
               </div>
-              <div class="setup-field"><label>Language</label>
+              <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l => `<option>${l}</option>`).join('')}</select>
               </div>
-              <button class="btn-start-game" id="ff-start">▶ Start game</button>
+              <button class="btn-start-game" id="ff-start">▶ <span data-i18n="ui_start_game">Start game</span></button>
             </div>`;
 
         body.querySelectorAll('.setup-opt').forEach(opt => {
@@ -250,7 +250,7 @@
                     <div class="re-sub">Topics & Flow Rails completed: <strong>${COSYGame.score}</strong></div>
                     ${best ? `<div class="game-sub personal-best-sub">Personal best: ${best.score}</div>` : ''}
                     <div class="re-actions">
-                        <button class="btn-g-primary" onclick="COSY_GAME.start()">Play again ↺</button>
+                        <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
                         <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
                     </div>
                 </div>`;

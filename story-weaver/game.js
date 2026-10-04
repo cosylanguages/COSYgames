@@ -249,12 +249,12 @@
               <div class="setup-field">
                 <label>CEFR Difficulty Level</label>
                 <select class="styled-sel" id="s-level">
-                  ${LEVEL_OPTS.map(l => `<option value="${l.match(/\(([A-C][1-2])\)/)[1]}">${l}</option>`).join('')}
+                  ${window.cosyLevelOptions(LEVEL_OPTS)}
                 </select>
               </div>
 
               <div class="setup-field">
-                <label>Language</label>
+                <label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">
                   ${LANG_OPTS.map(l => `<option value="${l}">${l}</option>`).join('')}
                 </select>
@@ -553,7 +553,7 @@
 
                     <div class="re-actions" style="margin-top:2rem;">
                         <button class="btn-g-secondary" style="border:1px solid var(--border);" onclick="COSY_GAME.copyStory()">📋 Copy Story to Clipboard</button>
-                        <button class="btn-g-primary" style="background:var(--indigo);" onclick="COSY_GAME.start()">Play again ↺</button>
+                        <button class="btn-g-primary" style="background:var(--indigo);" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
                         <button class="btn-g-secondary" onclick="location.href='../index.html'">Back to hub</button>
                     </div>
                 </div>`;

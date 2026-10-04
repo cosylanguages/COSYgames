@@ -59,13 +59,13 @@
             <div class="setup-screen">
               <h2>Hot Seat 🎯</h2>
               <p>Quick-fire vocabulary round against the ticking ring! One player is in the spotlighted Hot Seat guessing, while others give clues.</p>
-              <div class="setup-field"><label>Level</label>
-                <select class="styled-sel" id="s-level">${LEVEL_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
+              <div class="setup-field"><label data-i18n="ui_level">Level</label>
+                <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
-              <div class="setup-field"><label>Language</label>
+              <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
-              <button class="btn-start-game" id="hs-start">▶ Start game</button>
+              <button class="btn-start-game" id="hs-start">▶ <span data-i18n="ui_start_game">Start game</span></button>
             </div>`;
 
         document.getElementById('hs-start').addEventListener('click', () => COSY_GAME.start());
@@ -304,7 +304,7 @@
                     <div class="re-sub">You answered <strong>${COSYGame.score / 10}</strong> questions correctly. Total: ${COSYGame.score} pts.</div>
                     ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
                     <div class="re-actions">
-                        <button class="btn-g-primary" onclick="COSY_GAME.start()">Play again ↺</button>
+                        <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
                         <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
                     </div>
                 </div>`;

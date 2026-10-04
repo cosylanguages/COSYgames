@@ -35,7 +35,7 @@
             <div class="setup-screen">
               <h2>${titleText}</h2>
               <p data-i18n="scene_match_instruction">Select a word from the bank, then click or press Enter on the matching object in the room!</p>
-              <div class="setup-field"><label>Language</label>
+              <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="sm-s-lang">
                     ${LANG_OPTS.map(l => `<option value="${l.code}" ${l.code === lang ? 'selected' : ''}>${l.label}</option>`).join('')}
                 </select>
@@ -45,7 +45,7 @@
                     ${LEVEL_OPTS.map(lvl => `<option value="${lvl.code}">${lvl.label}</option>`).join('')}
                 </select>
               </div>
-              <button class="btn-start-game" type="button" onclick="COSY_GAME.start()">▶ Start game</button>
+              <button class="btn-start-game" type="button" onclick="COSY_GAME.start()">▶ <span data-i18n="ui_start_game">Start game</span></button>
             </div>`;
     }
 

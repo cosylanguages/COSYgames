@@ -53,7 +53,17 @@
       keep_learning: 'Keep learning:',
       keep_learning_reference: 'Grammar & verb reference',
       keep_learning_drills: 'Quick practice drills',
-      keep_learning_dictionary: 'Vocabulary dictionary'
+      keep_learning_dictionary: 'Vocabulary dictionary',
+      ui_practice_language: 'Practice language',
+      ui_level: 'Level',
+      ui_start_game: 'Start game',
+      ui_play_again: 'Play again',
+      ui_level_a1: 'Starter (A1)',
+      ui_level_a2: 'Primary (A2)',
+      ui_level_b1: 'Intermediate (B1)',
+      ui_level_b2: 'Upper (B2)',
+      ui_level_c1: 'Advanced (C1)',
+      ui_level_c2: 'Proficiency (C2)'
     },
     fr: {
       ecosystem_strip: 'ÉCOSYSTÈME COSY :',
@@ -106,7 +116,17 @@
       keep_learning: 'Pour aller plus loin :',
       keep_learning_reference: 'Grammaire et verbes',
       keep_learning_drills: 'Exercices rapides',
-      keep_learning_dictionary: 'Dictionnaire de vocabulaire'
+      keep_learning_dictionary: 'Dictionnaire de vocabulaire',
+      ui_practice_language: 'Langue à pratiquer',
+      ui_level: 'Niveau',
+      ui_start_game: 'Commencer',
+      ui_play_again: 'Rejouer',
+      ui_level_a1: 'Débutant (A1)',
+      ui_level_a2: 'Élémentaire (A2)',
+      ui_level_b1: 'Intermédiaire (B1)',
+      ui_level_b2: 'Intermédiaire supérieur (B2)',
+      ui_level_c1: 'Avancé (C1)',
+      ui_level_c2: 'Maîtrise (C2)'
     },
     es: {
       ecosystem_strip: 'ECOSISTEMA COSY:',
@@ -159,7 +179,17 @@
       keep_learning: 'Sigue aprendiendo:',
       keep_learning_reference: 'Gramática y verbos',
       keep_learning_drills: 'Ejercicios rápidos',
-      keep_learning_dictionary: 'Diccionario de vocabulario'
+      keep_learning_dictionary: 'Diccionario de vocabulario',
+      ui_practice_language: 'Idioma a practicar',
+      ui_level: 'Nivel',
+      ui_start_game: 'Empezar',
+      ui_play_again: 'Jugar de nuevo',
+      ui_level_a1: 'Principiante (A1)',
+      ui_level_a2: 'Elemental (A2)',
+      ui_level_b1: 'Intermedio (B1)',
+      ui_level_b2: 'Intermedio alto (B2)',
+      ui_level_c1: 'Avanzado (C1)',
+      ui_level_c2: 'Maestría (C2)'
     },
     de: {
       ecosystem_strip: 'COSY-ÖKOSYSTEM:',
@@ -212,7 +242,17 @@
       keep_learning: 'Weiterlernen:',
       keep_learning_reference: 'Grammatik & Verben',
       keep_learning_drills: 'Schnelle Übungen',
-      keep_learning_dictionary: 'Wörterbuch'
+      keep_learning_dictionary: 'Wörterbuch',
+      ui_practice_language: 'Übungssprache',
+      ui_level: 'Stufe',
+      ui_start_game: 'Spiel starten',
+      ui_play_again: 'Nochmal spielen',
+      ui_level_a1: 'Anfänger (A1)',
+      ui_level_a2: 'Grundlagen (A2)',
+      ui_level_b1: 'Mittelstufe (B1)',
+      ui_level_b2: 'Obere Mittelstufe (B2)',
+      ui_level_c1: 'Fortgeschritten (C1)',
+      ui_level_c2: 'Experte (C2)'
     },
     ru: {
       ecosystem_strip: 'ЭКОСИСТЕМА COSY:',
@@ -265,7 +305,17 @@
       keep_learning: 'Продолжайте учиться:',
       keep_learning_reference: 'Грамматика и глаголы',
       keep_learning_drills: 'Быстрые упражнения',
-      keep_learning_dictionary: 'Словарь'
+      keep_learning_dictionary: 'Словарь',
+      ui_practice_language: 'Язык для практики',
+      ui_level: 'Уровень',
+      ui_start_game: 'Начать игру',
+      ui_play_again: 'Играть снова',
+      ui_level_a1: 'Начальный (A1)',
+      ui_level_a2: 'Элементарный (A2)',
+      ui_level_b1: 'Средний (B1)',
+      ui_level_b2: 'Выше среднего (B2)',
+      ui_level_c1: 'Продвинутый (C1)',
+      ui_level_c2: 'Свободное владение (C2)'
     },
     it: {
       ecosystem_strip: 'SISTEMA COSY:',
@@ -318,7 +368,17 @@
       keep_learning: 'Continua a imparare:',
       keep_learning_reference: 'Grammatica e verbi',
       keep_learning_drills: 'Esercizi rapidi',
-      keep_learning_dictionary: 'Dizionario del vocabolario'
+      keep_learning_dictionary: 'Dizionario del vocabolario',
+      ui_practice_language: 'Lingua da praticare',
+      ui_level: 'Livello',
+      ui_start_game: 'Inizia',
+      ui_play_again: 'Gioca ancora',
+      ui_level_a1: 'Principiante (A1)',
+      ui_level_a2: 'Elementare (A2)',
+      ui_level_b1: 'Intermedio (B1)',
+      ui_level_b2: 'Intermedio superiore (B2)',
+      ui_level_c1: 'Avanzato (C1)',
+      ui_level_c2: 'Padronanza (C2)'
     },
     el: {
       ecosystem_strip: 'ΟΙΚΟΣΥΣΤΗΜΑ COSY:',
@@ -371,7 +431,17 @@
       keep_learning: 'Συνεχίστε να μαθαίνετε:',
       keep_learning_reference: 'Γραμματική και ρήματα',
       keep_learning_drills: 'Γρήγορες ασκήσεις',
-      keep_learning_dictionary: 'Λεξικό λεξιλογίου'
+      keep_learning_dictionary: 'Λεξικό λεξιλογίου',
+      ui_practice_language: 'Γλώσσα εξάσκησης',
+      ui_level: 'Επίπεδο',
+      ui_start_game: 'Έναρξη παιχνιδιού',
+      ui_play_again: 'Παίξε ξανά',
+      ui_level_a1: 'Αρχάριο (A1)',
+      ui_level_a2: 'Βασικό (A2)',
+      ui_level_b1: 'Μεσαίο (B1)',
+      ui_level_b2: 'Ανώτερο μεσαίο (B2)',
+      ui_level_c1: 'Προχωρημένο (C1)',
+      ui_level_c2: 'Άριστο (C2)'
     }
   };
 
@@ -398,9 +468,91 @@
   };
 
   window.getI18nText = function(key, lang) {
-    const langCode = (lang || localStorage.getItem('cosy_ui_lang') || 'en').toLowerCase().slice(0, 2);
+    let langCode = 'en';
+    try {
+      langCode = (lang || (typeof localStorage !== 'undefined' && localStorage.getItem('cosy_ui_lang')) || 'en').toLowerCase().slice(0, 2);
+    } catch(e) {}
     const dict = translations[langCode] || translations.en;
     return dict[key] || (translations.en[key] || key);
   };
   window.t = window.getI18nText;
+
+  window.hasI18n = function(key, lang) {
+    let langCode = 'en';
+    try {
+      langCode = (lang || (typeof localStorage !== 'undefined' && localStorage.getItem('cosy_ui_lang')) || 'en').toLowerCase().slice(0, 2);
+    } catch(e) {}
+    const dict = translations[langCode] || translations.en;
+    return Boolean(dict && dict[key] !== undefined);
+  };
+
+  window.tOr = function(key, fallback, lang) {
+    return window.hasI18n(key, lang) ? window.getI18nText(key, lang) : fallback;
+  };
+
+  window.cosyLevelOptions = function(labels, selectedLabel) {
+    if (!Array.isArray(labels)) return '';
+    return labels.map(l => {
+      const match = l.match(/\(([A-C][1-2])\)/i);
+      const isSel = selectedLabel !== undefined && selectedLabel !== null && (
+        l === selectedLabel ||
+        (match && (match[1].toLowerCase() === String(selectedLabel).toLowerCase() || match[0] === selectedLabel))
+      );
+      const selAttr = isSel ? ' selected' : '';
+      if (match) {
+        const cefrKey = 'ui_level_' + match[1].toLowerCase();
+        return `<option value="${l}" data-i18n="${cefrKey}"${selAttr}>${l}</option>`;
+      }
+      return `<option value="${l}"${selAttr}>${l}</option>`;
+    }).join('');
+  };
+
+  function startObserver() {
+    let rafId = null;
+    function scheduleApply() {
+      if (rafId) return;
+      const rAF = typeof requestAnimationFrame === 'function' ? requestAnimationFrame : (cb => setTimeout(cb, 16));
+      rafId = rAF(() => {
+        rafId = null;
+        let uiLang = 'en';
+        try {
+          uiLang = localStorage.getItem('cosy_ui_lang') || 'en';
+        } catch(e) {}
+        window.applyI18n(uiLang);
+      });
+    }
+
+    const observer = new MutationObserver((mutations) => {
+      let shouldTranslate = false;
+      for (const m of mutations) {
+        if (!m.addedNodes) continue;
+        for (const node of m.addedNodes) {
+          if (node.nodeType === 1) {
+            if (node.hasAttribute('data-i18n') || node.querySelector('[data-i18n]')) {
+              shouldTranslate = true;
+              break;
+            }
+          }
+        }
+        if (shouldTranslate) break;
+      }
+      if (shouldTranslate) scheduleApply();
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+
+  function initObserver() {
+    if (typeof MutationObserver !== 'undefined' && typeof document !== 'undefined' && document.body) {
+      startObserver();
+    }
+  }
+
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initObserver);
+    } else {
+      initObserver();
+    }
+  }
 })();

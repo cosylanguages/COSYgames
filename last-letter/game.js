@@ -15,10 +15,10 @@
             <div class="setup-screen">
               <h2>Last Letter 🔗</h2>
               <p>Type a word to start the interlocking chain. Each new word must start with the last letter of the previous word. Watch your chain grow!</p>
-              <div class="setup-field"><label>Level</label>
-                <select class="styled-sel" id="s-level">${LEVEL_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
+              <div class="setup-field"><label data-i18n="ui_level">Level</label>
+                <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
-              <div class="setup-field"><label>Language</label>
+              <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
               <button class="btn-start-game" id="btn-start-game">▶ Start Interlocking Chain</button>
