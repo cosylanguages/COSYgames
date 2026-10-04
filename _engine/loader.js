@@ -177,6 +177,17 @@
             return str.slice(0, 2) || 'en';
         },
         getLevelCode: (val) => window.getLevelCode ? window.getLevelCode(val) : val,
+        getLevelKey: (val) => {
+            if (!val) return 'starter';
+            const str = String(val).toLowerCase().trim();
+            if (str.includes('c2') || str.includes('proficiency')) return 'proficiency';
+            if (str.includes('c1') || str.includes('advanced')) return 'advanced';
+            if (str.includes('b2') || str.includes('upper')) return 'upper_intermediate';
+            if (str.includes('b1') || str.includes('intermediate')) return 'intermediate';
+            if (str.includes('a2') || str.includes('primary') || str.includes('elementary')) return 'elementary';
+            if (str.includes('a0') || str.includes('a1') || str.includes('starter')) return 'starter';
+            return 'starter';
+        },
         getHandoffParams: getHandoffParams,
         applyHandoffParams: applyHandoffParams
     };
