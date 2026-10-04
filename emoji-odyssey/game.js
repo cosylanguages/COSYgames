@@ -6,7 +6,7 @@
     const GAME_ID = 'emoji';
     const GAME_TITLE = 'Emoji Odyssey 📖';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
     let collectedPairs = [];
 
@@ -49,14 +49,22 @@
             body.innerHTML = '<div style="text-align:center;padding:4rem;">Loading...</div>';
 
             await COSYLoader.loadLevelData(lang, level);
+            const vres = await COSYVocab.ensure(lang, COSYVocab.levelCode(level), {needEmoji:true, min:24, forms:['noun','verb','adjective']});
             COSYGame.init(GAME_ID, lang, level);
             collectedPairs = [];
 
             const vocab = (window.vocabularyData && window.vocabularyData[lang]) || [];
 
             if (mode === 'guess') {
-                const pool = vocab.filter(v => v.emoji).slice(0, 30);
-                if (pool.length < 4) { body.innerHTML = '<div class="game-card">No emoji data found. <button id="eo-back">Back</button></div>'; document.getElementById('eo-back').onclick=()=>COSY_GAME.reset(); return; }
+                const pool = shuffle(vocab.filter(v => v.emoji)).slice(0, 30);
+                if (pool.length < 4) {
+                    const failMsg = vres.source === 'unavailable'
+                        ? "Couldn't load vocabulary from COSYdata. Check your connection, or try Story mode."
+                        : "Not enough emoji vocabulary for this language yet.";
+                    body.innerHTML = `<div class="game-card">${failMsg} <button id="eo-back">Back</button></div>`;
+                    document.getElementById('eo-back').onclick=()=>COSY_GAME.reset();
+                    return;
+                }
 
                 const drawBag = gameUtils.createDrawBag(pool);
                 let current = drawBag.next();
@@ -73,6 +81,7 @@
                             <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
                         </div>
                         <div class="game-card" style="text-align:center">
+                            ${vres.widened ? '<div class="game-sub">Limited vocabulary at this level in this language: using words from lower levels.</div>' : ''}
                             <div class="game-label">🧩 Floating Constellation Match</div>
 
                             <!-- Constellation Area -->

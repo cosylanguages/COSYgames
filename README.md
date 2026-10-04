@@ -47,7 +47,7 @@ Whether you are a student building oral fluency or a teacher facilitating commun
 | **Scene Match** | Explore interactive visual rooms and match vocabulary items to scene objects. | Solo | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `scene-match/` |
 | **Word Linker** | Connect related vocabulary words to build semantic chains. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `word-linker/` |
 | **Last Letter** | Chain vocabulary words by matching the last letter of each word to the next. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `last-letter/` |
-| **Emoji Odyssey** | Decode phrases and idioms represented purely through emoji sequences. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `emoji-odyssey/` |
+| **Emoji Odyssey** | Decode phrases and idioms represented purely through emoji sequences. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `emoji-odyssey/` |
 | **Cosy Crossword** | Solve language puzzles with tailored vocabulary clues and crosswords. | Solo | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `cosy-crossword/` |
 | **Lucky Numbers** | Practice numbers, counting, and math expressively in your target language. | Solo / Group | A0, A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `lucky-numbers/` |
 | **Etymology Explorer** | Uncover word origins, roots, and language family connections. | Solo | B1, B2, C1, C2 | EN, FR, IT, DE, ES, RU, EL, PT, HY, KA, BA, TT, BR | `etymology-explorer/` |
@@ -102,7 +102,7 @@ COSYgames/
 │   ├── js/                      # Shared navigation and i18n logic
 │   ├── styles/                  # Shared game stylesheet (game-styles.css)
 │   └── utils/                   # Shared game utility scripts (game-utils.js)
-├── data/                        # Multilingual game datasets & shared etymology network
+├── data/                        # Multilingual game datasets & shared etymology network (for runtime vocabulary details, see docs/vocabulary-source-of-truth.md)
 ├── vocabulary/
 │   └── _canonical/
 │       └── en/                  # Read-only vocabulary snapshot (see docs/vocabulary-source-of-truth.md)
