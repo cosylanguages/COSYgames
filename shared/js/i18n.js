@@ -397,45 +397,9 @@
     });
   };
 
-  const missingKeys = new Set();
-
-  function getLangCode(lang) {
-    const stored = (typeof localStorage !== 'undefined' && localStorage && typeof localStorage.getItem === 'function')
-      ? localStorage.getItem('cosy_ui_lang')
-      : null;
-    return (lang || stored || 'en').toLowerCase().slice(0, 2);
-  }
-
-  function hasKey(dict, key) {
-    return Boolean(dict && Object.prototype.hasOwnProperty.call(dict, key));
-  }
-
-  window.hasI18n = function(key, lang) {
-    const langCode = getLangCode(lang);
-    const dict = translations[langCode] || translations.en;
-    return hasKey(dict, key) || hasKey(translations.en, key);
-  };
-
-  window.tOr = function(key, fallback, lang) {
-    const langCode = getLangCode(lang);
-    const dict = translations[langCode] || translations.en;
-    if (hasKey(dict, key)) {
-      return dict[key];
-    }
-    if (hasKey(translations.en, key)) {
-      return translations.en[key];
-    }
-    return fallback;
-  };
-
   window.getI18nText = function(key, lang) {
-    const langCode = getLangCode(lang);
+    const langCode = (lang || localStorage.getItem('cosy_ui_lang') || 'en').toLowerCase().slice(0, 2);
     const dict = translations[langCode] || translations.en;
-    const exists = hasKey(dict, key) || hasKey(translations.en, key);
-    if (!exists && !missingKeys.has(key)) {
-      missingKeys.add(key);
-      console.warn('[i18n] missing key: ' + key);
-    }
     return dict[key] || (translations.en[key] || key);
   };
   window.t = window.getI18nText;

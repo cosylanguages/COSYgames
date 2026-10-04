@@ -8,7 +8,6 @@
 
     const GAME_ID = 'crossword';
     const GAME_TITLE = 'Cosy Crossword 🧩';
-    const GAME_META = 'Vocabulary · Solo & Online';
 
     // Preset Vocabularies for A1 (small grid) and B2 (large grid) with fallbacks
     const VOCAB_PRESETS = {
@@ -37,7 +36,6 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
-        document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');
 
         const LEVEL_OPTS = [

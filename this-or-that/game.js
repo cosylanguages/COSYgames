@@ -6,7 +6,6 @@
 (function() {
     const GAME_ID = 'thisorthat';
     const GAME_TITLE = 'This or That? 🔀';
-    const GAME_META = 'Speaking & Fluency · CEFR A0–B2';
 
     const GENERAL_DILEMMAS = [
         {
@@ -61,7 +60,6 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
-        document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');
         if (!body) return;
 

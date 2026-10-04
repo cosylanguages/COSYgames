@@ -6,7 +6,6 @@
 (function() {
     const GAME_ID = 'hundred_questions';
     const GAME_TITLE = '100 Questions 💬';
-    const GAME_META = 'Speaking · Group & Friends · CEFR A2–C2';
 
     // Core UI and State Controller Logic
     let state = {
@@ -330,7 +329,6 @@
         }
 
         document.getElementById('go-title').textContent = GAME_TITLE;
-        document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');
 
         const label_deck = UI_TEXTS[state.lang].deck_lbl;
