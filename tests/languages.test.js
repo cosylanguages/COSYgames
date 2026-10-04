@@ -1,10 +1,10 @@
-import test from 'node:test';
-import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import path from 'node:path';
-import vm from 'node:vm';
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
 
-const repoRoot = path.resolve(import.meta.dirname, '..');
+const repoRoot = path.resolve(__dirname, '..');
 const indexJsonPath = path.join(repoRoot, 'games', 'index.json');
 const i18nPath = path.join(repoRoot, 'shared', 'js', 'i18n.js');
 
