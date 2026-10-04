@@ -12,6 +12,15 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "fluency",
     "mode": [
       "solo",
@@ -28,6 +37,13 @@
       "B2",
       "C1",
       "C2"
+    ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
     ],
     "skill_focus": "speaking",
     "mode": [
@@ -46,6 +62,15 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "speaking",
     "mode": [
       "solo",
@@ -61,6 +86,15 @@
       "B2",
       "C1",
       "C2"
+    ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
     ],
     "skill_focus": "speaking",
     "mode": [
@@ -79,6 +113,11 @@
       "B2",
       "C1",
       "C2"
+    ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "ru"
     ],
     "skill_focus": "speaking",
     "mode": [
@@ -99,6 +138,15 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "speaking",
     "mode": [
       "solo",
@@ -117,6 +165,13 @@
       "B2",
       "C1",
       "C2"
+    ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
     ],
     "skill_focus": "speaking",
     "mode": [
@@ -137,6 +192,13 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "vocabulary",
     "mode": [
       "solo",
@@ -156,6 +218,15 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "vocabulary",
     "mode": [
       "group"
@@ -172,6 +243,15 @@
       "B2",
       "C1",
       "C2"
+    ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
     ],
     "skill_focus": "speaking",
     "mode": [
@@ -192,6 +272,13 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "vocabulary",
     "mode": [
       "solo",
@@ -211,6 +298,13 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "vocabulary",
     "mode": [
       "solo"
@@ -228,6 +322,15 @@
       "B2",
       "C1",
       "C2"
+    ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
     ],
     "skill_focus": "vocabulary",
     "mode": [
@@ -248,6 +351,13 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "vocabulary",
     "mode": [
       "solo",
@@ -266,6 +376,13 @@
       "B2",
       "C1",
       "C2"
+    ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
     ],
     "skill_focus": "vocabulary",
     "mode": [
@@ -286,6 +403,13 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "vocabulary",
     "mode": [
       "solo"
@@ -305,6 +429,13 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
+    ],
     "skill_focus": "listening",
     "mode": [
       "solo",
@@ -321,6 +452,21 @@
       "B2",
       "C1",
       "C2"
+    ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "de",
+      "es",
+      "ru",
+      "el",
+      "pt",
+      "hy",
+      "ka",
+      "ba",
+      "tt",
+      "br"
     ],
     "skill_focus": "vocabulary",
     "mode": [
@@ -340,6 +486,15 @@
       "C1",
       "C2"
     ],
+    "learning_languages": [
+      "fr",
+      "es",
+      "it",
+      "de",
+      "ru",
+      "el",
+      "br"
+    ],
     "skill_focus": "grammar",
     "mode": [
       "solo"
@@ -356,6 +511,13 @@
       "A2",
       "B1",
       "B2"
+    ],
+    "learning_languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
     ],
     "skill_focus": "speaking",
     "mode": [

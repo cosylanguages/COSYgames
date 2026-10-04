@@ -7,7 +7,7 @@
     const GAME_TITLE = 'Fluency Flow 🗣️';
     const DUR_OPTS = ['1 minute', '2 minutes', '3 minutes', '5 minutes'];
     const LEVEL_OPTS = ['Starter (A1)', 'Primary (A2)', 'Intermediate (B1)', 'Upper (B2)', 'Advanced (C1)', 'Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧', 'Français 🇫🇷', 'Italiano 🇮🇹', 'Русский 🇷🇺', 'Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
     let currentWords = [];
     let targetWords = [];
@@ -26,13 +26,9 @@
     }
 
     function parseLangCode(val) {
-        if (!val) return 'en';
-        const clean = val.toLowerCase();
-        if (clean.includes('fr') || clean.includes('french')) return 'fr';
-        if (clean.includes('it') || clean.includes('italian')) return 'it';
-        if (clean.includes('ru') || clean.includes('russian')) return 'ru';
-        if (clean.includes('el') || clean.includes('greek')) return 'el';
-        return 'en';
+        return (typeof COSYLoader !== 'undefined' && COSYLoader.getLangCode)
+            ? COSYLoader.getLangCode(val)
+            : 'en';
     }
 
     function parseLevelCode(val) {

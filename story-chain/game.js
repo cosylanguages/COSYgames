@@ -6,7 +6,7 @@
     const GAME_ID = 'storychain';
     const GAME_TITLE = 'Story Chain 🃏';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
     function esc(str) {
         const div = document.createElement('div');
@@ -69,7 +69,10 @@
             let currentWord = null;
 
             const renderStory = (reveal = false, isNewCard = false) => {
-                if (!currentWord) currentWord = drawBag.next();
+                if (!currentWord) {
+                    const raw = drawBag.next();
+                    currentWord = typeof raw === 'string' ? raw : (raw ? (raw.word || raw.prompt || raw.text || '...') : '...');
+                }
 
                 const cardsHtml = story.length ? story.map((s, idx) => {
                     const isLatest = idx === story.length - 1;
@@ -151,7 +154,8 @@
                 }
 
                 story.push({ sentence: sentence, word: currentWord });
-                currentWord = drawBag.next();
+                const raw = drawBag.next();
+                currentWord = typeof raw === 'string' ? raw : (raw ? (raw.word || raw.prompt || raw.text || '...') : '...');
                 COSYGame.addScore(points);
 
                 renderStory(false, true);

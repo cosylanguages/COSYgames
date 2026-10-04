@@ -507,6 +507,21 @@
     }).join('');
   };
 
+  const langLabelMap = {
+    en: 'English 🇬🇧',
+    fr: 'Français 🇫🇷',
+    es: 'Español 🇪🇸',
+    de: 'Deutsch 🇩🇪',
+    it: 'Italiano 🇮🇹',
+    ru: 'Русский 🇷🇺',
+    el: 'Ελληνικά 🇬🇷'
+  };
+
+  window.cosyLanguageLabels = function(codes) {
+    if (!Array.isArray(codes)) return [];
+    return codes.map(code => langLabelMap[code] || code);
+  };
+
   function startObserver() {
     let rafId = null;
     function scheduleApply() {
