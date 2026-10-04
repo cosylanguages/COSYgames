@@ -20,38 +20,38 @@ Whether you are a student building oral fluency or a teacher facilitating commun
 
 ### Speaking & Fluency
 
-| Game | What you do | Players | CEFR levels | Folder |
-| :--- | :--- | :--- | :--- | :--- |
-| **Fluency Flow** | Spin for a random topic and speak for 1–5 minutes without stopping. Flow, not perfection. | Solo / Group | A1, A2, B1, B2, C1, C2 | `fluency-flow/` |
-| **Battle of Wits** | Two topics, two sides. Build your arguments and debate in the language you're learning. | Group | B1, B2, C1, C2 | `battle-of-wits/` |
-| **Opinion Arena** | Agree or disagree with a statement, then defend your view. Real opinions, real language. | Solo / Group | A2, B1, B2, C1, C2 | `opinion-arena/` |
-| **Critic's Corner** | A famous quote appears. What does it mean to you? Deep discussion for advanced levels. | Solo / Group | B2, C1, C2 | `critics-corner/` |
-| **100 Questions** | Pick a deck and answer deep, funny, or philosophical questions. Perfect for speaking practice. | Solo / Group | A2, B1, B2, C1, C2 | `100-questions/` |
-| **Story Chain** | Add one sentence at a time to build a collaborative story with prompts and connectors. | Solo / Group | A1, A2, B1, B2, C1, C2 | `story-chain/` |
-| **Story Weaver** | Weave target words into a coherent narrative. Turn vocabulary study into creative writing. | Solo / Group | A1, A2, B1, B2, C1, C2 | `story-weaver/` |
-| **Hot Seat** | One player faces away from the board while team members explain target words without saying them. | Solo / Group | A1, A2, B1, B2, C1, C2 | `hot-seat/` |
-| **This or That?** | Choose between two intriguing options and justify your choice. | Solo / Group | A0, A1, A2, B1, B2 | `this-or-that/` |
+| Game | What you do | Players | CEFR levels | Languages | Folder |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Fluency Flow** | Spin for a random topic and speak for 1–5 minutes without stopping. Flow, not perfection. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `fluency-flow/` |
+| **Battle of Wits** | Two topics, two sides. Build your arguments and debate in the language you're learning. | Group | B1, B2, C1, C2 | EN, FR, IT, RU, EL | `battle-of-wits/` |
+| **Opinion Arena** | Agree or disagree with a statement, then defend your view. Real opinions, real language. | Solo / Group | A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `opinion-arena/` |
+| **Critic's Corner** | A famous quote appears. What does it mean to you? Deep discussion for advanced levels. | Solo / Group | B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `critics-corner/` |
+| **100 Questions** | Pick a deck and answer deep, funny, or philosophical questions. Perfect for speaking practice. | Solo / Group | A2, B1, B2, C1, C2 | EN, FR, RU | `100-questions/` |
+| **Story Chain** | Add one sentence at a time to build a collaborative story with prompts and connectors. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `story-chain/` |
+| **Story Weaver** | Weave target words into a coherent narrative. Turn vocabulary study into creative writing. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `story-weaver/` |
+| **Hot Seat** | One player faces away from the board while team members explain target words without saying them. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `hot-seat/` |
+| **This or That?** | Choose between two intriguing options and justify your choice. | Solo / Group | A0, A1, A2, B1, B2 | EN, FR, IT, RU, EL | `this-or-that/` |
 
 ### Mystery & Guesses
 
-| Game | What you do | Players | CEFR levels | Folder |
-| :--- | :--- | :--- | :--- | :--- |
-| **Action Hero** | Act out or explain dynamic action verbs and scenarios against the clock. | Group | A1, A2, B1, B2, C1, C2 | `action-hero/` |
-| **Identity Mystery** | Deduce the hidden identity through strategic 20 questions and clues. | Solo / Group | A2, B1, B2, C1, C2 | `identity-mystery/` |
-| **Object Quest** | Describe, locate, and guess secret objects using descriptive target vocabulary. | Solo / Group | A1, A2, B1, B2, C1, C2 | `object-quest/` |
+| Game | What you do | Players | CEFR levels | Languages | Folder |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Action Hero** | Act out or explain dynamic action verbs and scenarios against the clock. | Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `action-hero/` |
+| **Identity Mystery** | Deduce the hidden identity through strategic 20 questions and clues. | Solo / Group | A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `identity-mystery/` |
+| **Object Quest** | Describe, locate, and guess secret objects using descriptive target vocabulary. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `object-quest/` |
 
 ### Vocab & Puzzles
 
-| Game | What you do | Players | CEFR levels | Folder |
-| :--- | :--- | :--- | :--- | :--- |
-| **Scene Match** | Explore interactive visual rooms and match vocabulary items to scene objects. | Solo | A1, A2, B1, B2, C1, C2 | `scene-match/` |
-| **Word Linker** | Connect related vocabulary words to build semantic chains. | Solo / Group | A1, A2, B1, B2, C1, C2 | `word-linker/` |
-| **Last Letter** | Chain vocabulary words by matching the last letter of each word to the next. | Solo / Group | A1, A2, B1, B2, C1, C2 | `last-letter/` |
-| **Emoji Odyssey** | Decode phrases and idioms represented purely through emoji sequences. | Solo / Group | A1, A2, B1, B2, C1, C2 | `emoji-odyssey/` |
-| **Cosy Crossword** | Solve language puzzles with tailored vocabulary clues and crosswords. | Solo | A1, A2, B1, B2, C1, C2 | `cosy-crossword/` |
-| **Lucky Numbers** | Practice numbers, counting, and math expressively in your target language. | Solo / Group | A0, A1, A2, B1, B2, C1, C2 | `lucky-numbers/` |
-| **Etymology Explorer** | Uncover word origins, roots, and language family connections. | Solo | B1, B2, C1, C2 | `etymology-explorer/` |
-| **What Gender Is It?** | Master noun genders with speed rounds and grammar memory triggers. | Solo | A1, A2, B1, B2, C1, C2 | `what-gender-is-it/` |
+| Game | What you do | Players | CEFR levels | Languages | Folder |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Scene Match** | Explore interactive visual rooms and match vocabulary items to scene objects. | Solo | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `scene-match/` |
+| **Word Linker** | Connect related vocabulary words to build semantic chains. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `word-linker/` |
+| **Last Letter** | Chain vocabulary words by matching the last letter of each word to the next. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `last-letter/` |
+| **Emoji Odyssey** | Decode phrases and idioms represented purely through emoji sequences. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `emoji-odyssey/` |
+| **Cosy Crossword** | Solve language puzzles with tailored vocabulary clues and crosswords. | Solo | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `cosy-crossword/` |
+| **Lucky Numbers** | Practice numbers, counting, and math expressively in your target language. | Solo / Group | A0, A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `lucky-numbers/` |
+| **Etymology Explorer** | Uncover word origins, roots, and language family connections. | Solo | B1, B2, C1, C2 | EN, FR, IT, DE, ES, RU, EL, PT, HY, KA, BA, TT, BR | `etymology-explorer/` |
+| **What Gender Is It?** | Master noun genders with speed rounds and grammar memory triggers. | Solo | A1, A2, B1, B2, C1, C2 | FR, ES, IT, DE, RU, EL, BR | `what-gender-is-it/` |
 
 ---
 

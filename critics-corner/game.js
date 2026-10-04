@@ -6,7 +6,7 @@
     const GAME_ID = 'critic';
     const GAME_TITLE = "Critic's Corner 🎭";
     const LEVEL_OPTS = ['Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
     function esc(str) {
         const div = document.createElement('div');

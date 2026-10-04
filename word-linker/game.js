@@ -6,7 +6,7 @@
     const GAME_ID = 'wordlinker';
     const GAME_TITLE = 'Word Linker 🧲';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
     function shuffle(arr) { return [...arr].sort(() => Math.random() - .5); }
 
