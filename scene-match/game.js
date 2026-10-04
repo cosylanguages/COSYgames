@@ -11,8 +11,8 @@
         const body = document.getElementById('go-body');
         const lang = (window.COSY_I18N && window.COSY_I18N.currentLang) || 'en';
 
-        const titleText = window.t('scene_match_title') || 'Scene Match 🖼️';
-        const metaText = window.t('scene_match_meta') || 'Vocab & Puzzles · Solo';
+        const titleText = window.tOr('scene_match_title', 'Scene Match 🖼️');
+        const metaText = window.tOr('scene_match_meta', 'Vocab & Puzzles · Solo');
 
         document.getElementById('go-title').textContent = titleText;
         document.getElementById('go-meta').textContent = metaText;
@@ -151,10 +151,10 @@
             })));
 
             const instructionText = isHub
-                ? (window.t('scene_match_hub_instruction') || '🧭 Hub Navigation Map: Click any region or doorway on the map to explore rooms or stalls!')
-                : (window.t('scene_match_instruction') || 'Select a word from the bank, then click or press Enter on the matching object in the room!');
-            const selectWordText = window.t('scene_match_select_word') || 'Select a word:';
-            const progressLabel = window.t('scene_match_progress') || 'Matched';
+                ? window.tOr('scene_match_hub_instruction', '🧭 Hub Navigation Map: Click any region or doorway on the map to explore rooms or stalls!')
+                : window.tOr('scene_match_instruction', 'Select a word from the bank, then click or press Enter on the matching object in the room!');
+            const selectWordText = window.tOr('scene_match_select_word', 'Select a word:');
+            const progressLabel = window.tOr('scene_match_progress', 'Matched');
 
             const activeSceneKeys = this.getFilteredSceneKeys();
 
@@ -565,7 +565,7 @@
 
             const fill = document.getElementById('sm-p-fill');
             const text = document.getElementById('sm-p-text');
-            const progressLabel = window.t('scene_match_progress') || 'Matched';
+            const progressLabel = window.tOr('scene_match_progress', 'Matched');
 
             if (fill && fill.style) fill.style.width = isHub ? '100%' : `${percent}%`;
             if (text) text.textContent = isHub ? 'Navigation Hub Map 🧭' : `${progressLabel}: ${current} / ${total}`;
@@ -614,9 +614,9 @@
             COSYScores.save(GAME_ID, lang, level, COSYGame.score);
             const best = COSYScores.best(GAME_ID, lang);
 
-            const compTitle = window.t('scene_match_complete_title') || 'Scene Match Complete! 🎉';
-            const compMsg = window.t('scene_match_complete_msg') || `Outstanding work! You've successfully identified all objects across all scenes in ${level === 'ALL' ? 'Cozy Town' : 'Level ' + level}.`;
-            const playAgainText = window.t('scene_match_play_again') || 'Play Again ↺';
+            const compTitle = window.tOr('scene_match_complete_title', 'Scene Match Complete! 🎉');
+            const compMsg = window.tOr('scene_match_complete_msg', `Outstanding work! You've successfully identified all objects across all scenes in ${level === 'ALL' ? 'Cozy Town' : 'Level ' + level}.`);
+            const playAgainText = window.tOr('scene_match_play_again', 'Play Again ↺');
 
             document.getElementById('go-body').innerHTML = `
                 <div class="sm-completion-card">
