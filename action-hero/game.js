@@ -86,8 +86,34 @@
             }
 
             if (pool.length < 5) {
-                const shortLvl = level === 'starter' ? 'A1' : (level === 'elementary' ? 'A2' : (level === 'intermediate' ? 'B1' : 'B2'));
-                pool = (data.action && data.action[shortLvl]) ? data.action[shortLvl] : (data.action ? (data.action['B2'] || data.action['A2']) : ['JUMP', 'RUN', 'DANCE', 'SING', 'SWIM']);
+                const levelKey = COSYLoader.getLevelKey(level);
+                const levelOrder = ['starter', 'elementary', 'intermediate', 'upper_intermediate', 'advanced', 'proficiency'];
+                let collected = [];
+                if (data.action) {
+                    const idx = levelOrder.indexOf(levelKey);
+                    const startIdx = idx >= 0 ? idx : 0;
+                    for (let i = startIdx; i >= 0; i--) {
+                        const k = levelOrder[i];
+                        if (Array.isArray(data.action[k]) && data.action[k].length > 0) {
+                            collected = collected.concat(data.action[k]);
+                        }
+                        if (collected.length >= 8) break;
+                    }
+                } else {
+                    collected = ['JUMP', 'RUN', 'DANCE', 'SING', 'SWIM'];
+                }
+                pool = collected;
+            }
+
+            if (pool.length === 0) {
+                document.getElementById('go-body').innerHTML = `
+                    <div class="round-end">
+                      <p>No words available for this language and level yet.</p>
+                      <div class="re-actions">
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                      </div>
+                    </div>`;
+                return;
             }
 
             const drawBag = gameUtils.createDrawBag(pool);
