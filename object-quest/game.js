@@ -26,10 +26,10 @@
                   <option value="group:health_body">Body Parts & Health 🏥</option>
                 </select>
               </div>
-              <div class="setup-field"><label>Level</label>
-                <select class="styled-sel" id="s-level">${LEVEL_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
+              <div class="setup-field"><label data-i18n="ui_level">Level</label>
+                <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
-              <div class="setup-field"><label>Language</label>
+              <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
               <button class="btn-start-game" id="btn-start-game">▶ Start Fog of War Quest</button>

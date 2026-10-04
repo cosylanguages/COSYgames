@@ -170,10 +170,10 @@
             <div class="setup-screen">
               <h2>Opinion Arena 🏟️</h2>
               <p>Step into the two-podium debate arena. Defend your stance, utilize argument phrases, and shift the shared tug-of-war meter in your favor!</p>
-              <div class="setup-field"><label>Level</label>
-                <select class="styled-sel" id="s-level">${LEVEL_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
+              <div class="setup-field"><label data-i18n="ui_level">Level</label>
+                <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
-              <div class="setup-field"><label>Language</label>
+              <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
               <button class="btn-start-game" onclick="COSY_GAME.start()">▶ Enter Arena</button>
@@ -480,7 +480,7 @@
                     <div class="re-sub">Your final score: <strong>${COSYGame.score}</strong></div>
                     ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
                     <div class="re-actions">
-                        <button class="btn-g-primary" onclick="COSY_GAME.start()">Play again ↺</button>
+                        <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
                         <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
                     </div>
                 </div>`;

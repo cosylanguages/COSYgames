@@ -586,7 +586,7 @@
                   ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
                   <p>You've explored the roots and connections of many words across languages!</p>
                   <div style="display:flex; gap:1rem; justify-content:center; margin-top:2rem;">
-                    <button class="btn-start-game" onclick="COSY_GAME.start()">Play Again</button>
+                    <button class="btn-start-game" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span></button>
                     <button class="btn-g-danger" onclick="COSY_GAME.reset()">Back to Setup</button>
                   </div>
                 </div>`;
