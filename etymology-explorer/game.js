@@ -6,7 +6,6 @@
 (function() {
     const GAME_ID = 'etymology';
     const GAME_TITLE = 'Etymology Explorer 📜';
-    const GAME_META = 'Vocabulary & Dig Site · Solo or group';
     const LANG_OPTS = [
         'English 🇬🇧',
         'Français 🇫🇷',
@@ -125,7 +124,6 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
-        document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">

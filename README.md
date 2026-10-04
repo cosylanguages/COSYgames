@@ -30,7 +30,7 @@ Whether you are a student building oral fluency or a teacher facilitating commun
 | **Story Chain** | Add one sentence at a time to build a collaborative story with prompts and connectors. | Solo / Group | A1, A2, B1, B2, C1, C2 | `story-chain/` |
 | **Story Weaver** | Weave target words into a coherent narrative. Turn vocabulary study into creative writing. | Solo / Group | A1, A2, B1, B2, C1, C2 | `story-weaver/` |
 | **Hot Seat** | One player faces away from the board while team members explain target words without saying them. | Solo / Group | A1, A2, B1, B2, C1, C2 | `hot-seat/` |
-| **This or That?** | Choose between two intriguing options and justify your choice. | Solo / Group | A1, A2, B1, B2, C1, C2 | `this-or-that/` |
+| **This or That?** | Choose between two intriguing options and justify your choice. | Solo / Group | A0, A1, A2, B1, B2 | `this-or-that/` |
 
 ### Mystery & Guesses
 

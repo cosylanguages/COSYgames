@@ -5,7 +5,6 @@
 (function() {
     const GAME_ID = 'gender';
     const GAME_TITLE = 'What Gender Is It? ♀️♂️';
-    const GAME_META = 'Grammar & Etymology · Solo';
 
     const GENDER_LANGUAGES = [
         { code: 'all', native: 'All Genders Mode 🌀' },
@@ -24,7 +23,6 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
-        document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');
         if (!body) return;
 

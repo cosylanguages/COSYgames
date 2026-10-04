@@ -5,7 +5,6 @@
 (function() {
     const GAME_ID = 'fluency';
     const GAME_TITLE = 'Fluency Flow 🗣️';
-    const GAME_META = 'Speaking & Fluency · CEFR A1–C2';
     const DUR_OPTS = ['1 minute', '2 minutes', '3 minutes', '5 minutes'];
     const LEVEL_OPTS = ['Starter (A1)', 'Primary (A2)', 'Intermediate (B1)', 'Upper (B2)', 'Advanced (C1)', 'Proficiency (C2)'];
     const LANG_OPTS = ['English 🇬🇧', 'Français 🇫🇷', 'Italiano 🇮🇹', 'Русский 🇷🇺', 'Ελληνικά 🇬🇷'];
@@ -80,7 +79,6 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
-        document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">

@@ -5,7 +5,6 @@
 (function() {
     const GAME_ID = 'storychain';
     const GAME_TITLE = 'Story Chain 🃏';
-    const GAME_META = 'Speaking · Paper Garland Chain · A1–C2';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
 
@@ -35,7 +34,6 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
-        document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">

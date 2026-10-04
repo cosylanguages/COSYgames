@@ -5,7 +5,6 @@
 (function() {
     const GAME_ID = 'bingo';
     const GAME_TITLE = 'Lucky Numbers 🔢';
-    const GAME_META = 'Puzzles · Solo or group';
     const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
     const BINGO_LVLS = ['Bingo 1 (0-9)', 'Bingo 2 (10-19)', 'Bingo 3 (20-99)', 'Bingo 5 (Random)', 'Alphabet (A-Z)', 'Listening Practice 👂'];
 
@@ -13,7 +12,6 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
-        document.getElementById('go-meta').textContent = GAME_META;
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
