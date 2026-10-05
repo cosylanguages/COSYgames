@@ -164,6 +164,9 @@
     };
 
     function renderSetup() {
+        if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
+            COSYLoader.clearLevelNote();
+        }
         document.getElementById('go-title').textContent = GAME_TITLE;
         const body = document.getElementById('go-body');
         body.innerHTML = `
@@ -230,7 +233,16 @@
             COSYGame.maxRounds = 5;
 
             const data = COSYLoader.getGameData(lang);
-            const drawBag = createDrawBag(data.opinions || ['...']);
+            const rawOpinions = data.opinions;
+            const lv = COSYLoader.pickByLevel(rawOpinions, level, {min: COSYGame.maxRounds});
+            const opinionList = (lv.items && lv.items.length > 0) ? lv.items : (rawOpinions || ['...']);
+
+            COSYLoader.clearLevelNote();
+            if (lv.limited) {
+                COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+            }
+
+            const drawBag = createDrawBag(opinionList);
 
             const nextRound = () => {
                 if (!COSYGame.nextRound()) {

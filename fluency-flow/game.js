@@ -74,6 +74,9 @@
     }
 
     function renderSetup() {
+        if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
+            COSYLoader.clearLevelNote();
+        }
         document.getElementById('go-title').textContent = GAME_TITLE;
         const body = document.getElementById('go-body');
         body.innerHTML = `
@@ -125,12 +128,21 @@
             COSYGame.maxRounds = 10;
 
             const data = (typeof COSYLoader !== 'undefined' ? COSYLoader.getGameData(lang) : null) || {};
-            const topicList = data.fluency || [
+            const rawFluency = data.fluency;
+            const lv = COSYLoader.pickByLevel(rawFluency, level, {min: COSYGame.maxRounds});
+            const fallbackFluency = [
                 { text: 'Your morning routine ☕' },
                 { text: 'A childhood memory 🧸' },
                 { text: 'Your favourite season and why 🍂' },
                 { text: 'What you like to do on rainy days 🌧️' }
             ];
+            const topicList = (lv.items && lv.items.length > 0) ? lv.items : (rawFluency || fallbackFluency);
+
+            COSYLoader.clearLevelNote();
+            if (lv.limited) {
+                COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+            }
+
             const topicBag = utils.createDrawBag ? utils.createDrawBag(topicList) : { next: () => topicList[Math.floor(Math.random() * topicList.length)] };
 
             const durStr = document.querySelector('.setup-opt.sel[data-val]')?.dataset.val || '2 minutes';

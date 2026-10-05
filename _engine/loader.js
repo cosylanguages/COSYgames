@@ -188,6 +188,101 @@
             if (str.includes('a0') || str.includes('a1') || str.includes('starter')) return 'starter';
             return 'starter';
         },
+        pickByLevel: function(items, level, opts) {
+            const min = (opts && typeof opts.min === 'number') ? opts.min : 5;
+            if (!Array.isArray(items)) {
+                return { items: [], usedLevels: [], exactCount: 0, widened: false, limited: false, filtered: false };
+            }
+
+            const leveledItems = items.filter(item => item && typeof item === 'object' && typeof item.level === 'string');
+            if (leveledItems.length === 0) {
+                return { items: [...items], usedLevels: [], exactCount: 0, widened: false, limited: false, filtered: false };
+            }
+
+            const LEVELS = ['starter', 'elementary', 'intermediate', 'upper_intermediate', 'advanced', 'proficiency'];
+            const targetKey = this.getLevelKey ? this.getLevelKey(level) : 'starter';
+            let targetIdx = LEVELS.indexOf(targetKey);
+            if (targetIdx === -1) targetIdx = 0;
+
+            const itemsByLevel = {
+                starter: [],
+                elementary: [],
+                intermediate: [],
+                upper_intermediate: [],
+                advanced: [],
+                proficiency: []
+            };
+
+            leveledItems.forEach(item => {
+                const k = this.getLevelKey ? this.getLevelKey(item.level) : 'starter';
+                if (itemsByLevel[k]) {
+                    itemsByLevel[k].push(item);
+                }
+            });
+
+            const exactCount = itemsByLevel[targetKey].length;
+            const limited = exactCount < 3;
+            const filtered = leveledItems.length < items.length;
+
+            const usedLevels = [targetKey];
+            const resultItems = [...itemsByLevel[targetKey]];
+
+            if (resultItems.length < min) {
+                for (let d = 1; d < LEVELS.length; d++) {
+                    const lowerIdx = targetIdx - d;
+                    if (lowerIdx >= 0) {
+                        const lKey = LEVELS[lowerIdx];
+                        usedLevels.push(lKey);
+                        resultItems.push(...itemsByLevel[lKey]);
+                        if (resultItems.length >= min) break;
+                    }
+                    const upperIdx = targetIdx + d;
+                    if (upperIdx < LEVELS.length) {
+                        const uKey = LEVELS[upperIdx];
+                        usedLevels.push(uKey);
+                        resultItems.push(...itemsByLevel[uKey]);
+                        if (resultItems.length >= min) break;
+                    }
+                }
+            }
+
+            const widened = usedLevels.length > 1;
+
+            return {
+                items: resultItems,
+                usedLevels: usedLevels,
+                exactCount: exactCount,
+                widened: widened,
+                limited: limited,
+                filtered: filtered
+            };
+        },
+        clearLevelNote: function() {
+            if (typeof document === 'undefined') return;
+            const existing = document.getElementById('level-note');
+            if (existing) {
+                existing.remove();
+            }
+        },
+        showLevelNote: function(text) {
+            if (typeof document === 'undefined') return;
+            this.clearLevelNote();
+            const goBody = document.getElementById('go-body');
+            if (!goBody) return;
+            const p = document.createElement('p');
+            p.id = 'level-note';
+            p.className = 'level-note';
+            p.setAttribute('role', 'status');
+            p.textContent = text || this.levelNoteText();
+            goBody.insertAdjacentElement('beforebegin', p);
+        },
+        levelNoteText: function() {
+            const fallback = 'Limited content at this level in this language: nearby levels are shown too.';
+            if (typeof window !== 'undefined' && typeof window.tOr === 'function') {
+                return window.tOr('ui_limited_level', fallback);
+            }
+            return fallback;
+        },
         getHandoffParams: getHandoffParams,
         applyHandoffParams: applyHandoffParams
     };

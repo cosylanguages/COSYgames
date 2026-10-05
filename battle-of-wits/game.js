@@ -18,6 +18,9 @@
     }
 
     function renderSetup() {
+        if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
+            COSYLoader.clearLevelNote();
+        }
         document.getElementById('go-title').textContent = GAME_TITLE;
         const body = document.getElementById('go-body');
         body.innerHTML = `
@@ -47,7 +50,17 @@
             teamBScore = 0;
 
             const data = COSYLoader.getGameData(lang);
-            const drawBag = gameUtils.createDrawBag(data.battle || [{sideA:'A', sideB:'B', topic:'Which is better?'}]);
+            const rawBattle = data.battle;
+            const lv = COSYLoader.pickByLevel(rawBattle, level, {min: COSYGame.maxRounds});
+            const fallbackBattle = [{sideA:'A', sideB:'B', topic:'Which is better?'}];
+            const battleList = (lv.items && lv.items.length > 0) ? lv.items : (rawBattle || fallbackBattle);
+
+            COSYLoader.clearLevelNote();
+            if (lv.limited) {
+                COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+            }
+
+            const drawBag = gameUtils.createDrawBag(battleList);
 
             const nextBattle = () => {
                 if (!COSYGame.nextRound()) {

@@ -42,7 +42,13 @@ You are welcome to submit Pull Requests for:
 - **Shared Styles & Utilities**: Enhancing responsive CSS, accessibility, or shared components in `shared/`.
 - **Engine Improvements**: Non-breaking optimizations or bug fixes in `_engine/`.
 
-### 2. Requiring Review & Maintainer Approval
+### 2. Levels
+When reading level options in game setup screens, the select value is a label (such as 'Upper (B2)').
+Use `COSYLoader.getLevelKey(label)` to convert labels, CEFR codes, or legacy keys to standardized level keys.
+Use `COSYLoader.pickByLevel(items, level, {min})` to select level-appropriate content with automatic widening when exact content is thin.
+Datasets or items without a `level` field are left untouched, ensuring backwards compatibility for unleveled content.
+
+### 3. Requiring Review & Maintainer Approval
 Please open an issue or discussion before submitting PRs for:
 - **New Games**: Proposing or adding a **new game** directory requires prior maintainer approval.
   - All approved new games **MUST** follow the canonical layout and dependency loading order defined in `templates/game-template.html`.

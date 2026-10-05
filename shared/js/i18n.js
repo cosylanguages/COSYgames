@@ -63,7 +63,8 @@
       ui_level_b1: 'Intermediate (B1)',
       ui_level_b2: 'Upper (B2)',
       ui_level_c1: 'Advanced (C1)',
-      ui_level_c2: 'Proficiency (C2)'
+      ui_level_c2: 'Proficiency (C2)',
+      ui_limited_level: 'Limited content at this level in this language: nearby levels are shown too.'
     },
     fr: {
       ecosystem_strip: 'ÉCOSYSTÈME COSY :',
@@ -126,7 +127,8 @@
       ui_level_b1: 'Intermédiaire (B1)',
       ui_level_b2: 'Intermédiaire supérieur (B2)',
       ui_level_c1: 'Avancé (C1)',
-      ui_level_c2: 'Maîtrise (C2)'
+      ui_level_c2: 'Maîtrise (C2)',
+      ui_limited_level: 'Contenu limité à ce niveau dans cette langue : des niveaux proches sont aussi proposés.'
     },
     es: {
       ecosystem_strip: 'ECOSISTEMA COSY:',
@@ -189,7 +191,8 @@
       ui_level_b1: 'Intermedio (B1)',
       ui_level_b2: 'Intermedio alto (B2)',
       ui_level_c1: 'Avanzado (C1)',
-      ui_level_c2: 'Maestría (C2)'
+      ui_level_c2: 'Maestría (C2)',
+      ui_limited_level: 'Contenido limitado en este nivel y idioma: también se muestran niveles cercanos.'
     },
     de: {
       ecosystem_strip: 'COSY-ÖKOSYSTEM:',
@@ -252,7 +255,8 @@
       ui_level_b1: 'Mittelstufe (B1)',
       ui_level_b2: 'Obere Mittelstufe (B2)',
       ui_level_c1: 'Fortgeschritten (C1)',
-      ui_level_c2: 'Experte (C2)'
+      ui_level_c2: 'Experte (C2)',
+      ui_limited_level: 'Begrenzte Inhalte auf dieser Stufe in dieser Sprache: auch benachbarte Stufen werden gezeigt.'
     },
     ru: {
       ecosystem_strip: 'ЭКОСИСТЕМА COSY:',
@@ -315,7 +319,8 @@
       ui_level_b1: 'Средний (B1)',
       ui_level_b2: 'Выше среднего (B2)',
       ui_level_c1: 'Продвинутый (C1)',
-      ui_level_c2: 'Свободное владение (C2)'
+      ui_level_c2: 'Свободное владение (C2)',
+      ui_limited_level: 'На этом уровне на этом языке материалов мало: показаны также близкие уровни.'
     },
     it: {
       ecosystem_strip: 'SISTEMA COSY:',
@@ -378,7 +383,8 @@
       ui_level_b1: 'Intermedio (B1)',
       ui_level_b2: 'Intermedio superiore (B2)',
       ui_level_c1: 'Avanzato (C1)',
-      ui_level_c2: 'Padronanza (C2)'
+      ui_level_c2: 'Padronanza (C2)',
+      ui_limited_level: 'Contenuti limitati a questo livello in questa lingua: vengono mostrati anche livelli vicini.'
     },
     el: {
       ecosystem_strip: 'ΟΙΚΟΣΥΣΤΗΜΑ COSY:',
@@ -441,7 +447,8 @@
       ui_level_b1: 'Μεσαίο (B1)',
       ui_level_b2: 'Ανώτερο μεσαίο (B2)',
       ui_level_c1: 'Προχωρημένο (C1)',
-      ui_level_c2: 'Άριστο (C2)'
+      ui_level_c2: 'Άριστο (C2)',
+      ui_limited_level: 'Περιορισμένο περιεχόμενο σε αυτό το επίπεδο σε αυτή τη γλώσσα: εμφανίζονται και κοντινά επίπεδα.'
     }
   };
 
