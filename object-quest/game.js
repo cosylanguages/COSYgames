@@ -6,9 +6,12 @@
     const GAME_ID = 'objectquest';
     const GAME_TITLE = 'Object Quest 🔍';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
     function renderSetup() {
+        if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
+            COSYLoader.clearLevelNote();
+        }
         document.getElementById('go-title').textContent = GAME_TITLE;
         const body = document.getElementById('go-body');
         body.innerHTML = `
@@ -57,23 +60,50 @@
                 console.warn('Level data fetch fallback', err);
             }
 
+            const reqLevelCode = window.COSYVocab ? window.COSYVocab.levelCode(level) : level;
+            const vres = window.COSYVocab ? await window.COSYVocab.ensureFull(lang, reqLevelCode, { needEmoji: true, min: 24, forms: ['noun'], maxFiles: 10 }) : { ok: false };
+
+            if (typeof COSYLoader !== 'undefined') {
+                COSYLoader.clearLevelNote();
+                if (vres.widened) {
+                    COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+                }
+            }
+
             COSYGame.init(GAME_ID, lang, level);
 
             const body = document.getElementById('go-body');
             const vocab = (window.vocabularyData && window.vocabularyData[lang]) || [];
 
             const personKeywords = ['profession', 'job', 'people', 'person', 'nationality', 'famous'];
-            const isThemeMatch = (window.gameUtils && typeof window.gameUtils.isThemeMatch === 'function')
-                ? window.gameUtils.isThemeMatch
-                : (t, cat) => t.includes(cat.replace('group:', ''));
+
+            const themeCategoryMap = {
+                'group:environment_nature': ['animal', 'nature', 'pet', 'plant', 'environment', 'weather', 'fauna', 'flora'],
+                'group:food_drink': ['food', 'drink', 'beverage', 'fruit', 'vegetable', 'dish', 'meal', 'kitchen', 'eating'],
+                'group:places_geography': ['place', 'geography', 'city', 'building', 'country', 'travel', 'location', 'town', 'space', 'landscape'],
+                'group:home_living': ['home', 'living', 'house', 'furniture', 'gadget', 'appliance', 'tool', 'object', 'room', 'household', 'stationery', 'electronic', 'technology', 'device'],
+                'group:clothes_appearance': ['cloth', 'wear', 'fashion', 'accessory', 'apparel', 'jewelry', 'shoe', 'garment', 'appearance'],
+                'group:health_body': ['health', 'body', 'medicine', 'anatomy', 'hygiene', 'hospital', 'wellness']
+            };
+
+            const isThemeMatch = (vTheme, cat) => {
+                if (!cat || cat === 'all') return true;
+                if (!vTheme) return false;
+                const t = vTheme.toLowerCase();
+                const keywords = themeCategoryMap[cat] || [cat.replace('group:', '')];
+                return keywords.some(k => t.includes(k));
+            };
 
             let objects = vocab.filter(v => v.theme && !personKeywords.some(k => v.theme.toLowerCase().includes(k)));
             if (category !== 'all') {
-                objects = objects.filter(v => v.theme && isThemeMatch(v.theme, category));
+                const categoryObjects = objects.filter(v => isThemeMatch(v.theme, category));
+                if (categoryObjects.length >= 4) {
+                    objects = categoryObjects;
+                }
             }
 
-            if (objects.length < 4) {
-                // Fallback objects if category is sparse
+            if (vres.ok === false) {
+                // Fallback objects only when COSYdata is unreachable
                 objects = [
                     { word: 'Apple', emoji: '🍎', definitions: [{ text: 'A round fruit with red or green skin.' }] },
                     { word: 'Camera', emoji: '📷', definitions: [{ text: 'A device used to take photographs.' }] },

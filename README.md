@@ -38,7 +38,7 @@ Whether you are a student building oral fluency or a teacher facilitating commun
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Action Hero** | Act out or explain dynamic action verbs and scenarios against the clock. | Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `action-hero/` |
 | **Identity Mystery** | Deduce the hidden identity through strategic 20 questions and clues. | Solo / Group | A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `identity-mystery/` |
-| **Object Quest** | Describe, locate, and guess secret objects using descriptive target vocabulary. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `object-quest/` |
+| **Object Quest** | Describe, locate, and guess secret objects using descriptive target vocabulary. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `object-quest/` |
 
 ### Vocab & Puzzles
 
