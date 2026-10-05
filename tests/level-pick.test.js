@@ -215,3 +215,12 @@ test('Check pickByLevel reference isolated to the four target games', (t) => {
 
     scanDir(gamesDir);
 });
+
+test('fluency-flow/game.js passes the raw select value (#s-level) to pickByLevel', () => {
+    const fluencyJsPath = path.join(__dirname, '../fluency-flow/game.js');
+    const content = fs.readFileSync(fluencyJsPath, 'utf8');
+    assert.ok(
+        content.includes("document.getElementById('s-level')?.value || level"),
+        'fluency-flow/game.js should pass document.getElementById("s-level")?.value || level to pickByLevel'
+    );
+});

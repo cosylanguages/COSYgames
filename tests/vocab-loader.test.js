@@ -136,26 +136,204 @@ test('f. levelCode("Starter (A1)") === "A1", levelCode("A2") === "A2"', () => {
     assert.strictEqual(sandbox.window.COSYVocab.levelCode('Proficiency (C2)'), 'C2');
 });
 
-test('g. emoji-odyssey/game.js references COSYVocab.ensure and no other game.js does (opt-in guarantee)', () => {
+test('g. Opt-in guarantee: exactly emoji-odyssey/game.js and object-quest/game.js reference COSYVocab', () => {
     const gamesDir = path.join(__dirname, '..');
     const files = fs.readdirSync(gamesDir, { recursive: true });
     const gameJsFiles = files.filter(f => f.endsWith('game.js'));
 
-    let emojiOdysseyFound = false;
-    const otherGamesFound = [];
+    const expectedGames = ['emoji-odyssey', 'object-quest'];
+    const foundGames = [];
 
     for (const relFile of gameJsFiles) {
         const fullPath = path.join(gamesDir, relFile);
         const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('COSYVocab.ensure')) {
-            if (relFile.includes('emoji-odyssey')) {
-                emojiOdysseyFound = true;
-            } else {
-                otherGamesFound.push(relFile);
+        if (content.includes('COSYVocab.')) {
+            const folder = relFile.split(path.sep)[0];
+            if (!foundGames.includes(folder)) {
+                foundGames.push(folder);
             }
         }
     }
 
-    assert.strictEqual(emojiOdysseyFound, true, 'emoji-odyssey/game.js should reference COSYVocab.ensure');
-    assert.deepStrictEqual(otherGamesFound, [], `Other games should NOT reference COSYVocab.ensure: ${otherGamesFound.join(', ')}`);
+    foundGames.sort();
+    expectedGames.sort();
+
+    assert.deepStrictEqual(foundGames, expectedGames, `COSYVocab should only be referenced in ${expectedGames.join(', ')}, but found in: ${foundGames.join(', ')}`);
+});
+
+test('ensureFull - a. fetches index.json once and no more than maxFiles theme files; a second call re-uses cache', async () => {
+    const fetchedUrls = [];
+    const indexMap = {
+        'id1': 'a0_a1/f1.json',
+        'id2': 'a0_a1/f2.json'
+    };
+
+    const sandbox = createSandbox(async (url) => {
+        fetchedUrls.push(url);
+        if (url.endsWith('index.json')) {
+            return { ok: true, json: async () => indexMap };
+        }
+        return {
+            ok: true,
+            json: async () => [
+                { id: url.split('/').pop(), word: 'w1', level: 'A1', form: 'noun', emoji: '🍎' }
+            ]
+        };
+    });
+
+    const res1 = await sandbox.window.COSYVocab.ensureFull('en', 'A1', { maxFiles: 2, min: 10 });
+    assert.strictEqual(res1.ok, true);
+    assert.strictEqual(res1.files, 2);
+
+    const initialFetchCount = fetchedUrls.length;
+    assert.strictEqual(initialFetchCount, 3); // 1 index.json + 2 theme files
+
+    // Second call for same language re-uses cached index and file promises
+    await sandbox.window.COSYVocab.ensureFull('en', 'A1', { maxFiles: 2, min: 10 });
+    assert.strictEqual(fetchedUrls.length, initialFetchCount, 'No new fetches should occur for already cached URLs');
+});
+
+test('ensureFull - b. adapted entry shape with definitions, examples, article, gender, plural, transcription and emoji filtering', async () => {
+    const indexMap = {
+        'id1': 'a0_a1/f1.json'
+    };
+
+    const rawFile = [
+        {
+            id: 'fr:pomme:noun',
+            word: 'pomme',
+            level: 'A1',
+            form: 'noun',
+            theme: 'food',
+            emoji: '🍎',
+            article: 'la',
+            gender: 'f',
+            plural_form: 'pommes',
+            transcription: 'pɔm',
+            definitions: ['une pomme est un fruit'],
+            examples: ['J\'aime les pommes.']
+        },
+        {
+            id: 'fr:question:noun',
+            word: 'question',
+            level: 'A1',
+            form: 'noun',
+            theme: 'general',
+            emoji: '❓',
+            definitions: []
+        }
+    ];
+
+    const sandbox = createSandbox(async (url) => {
+        if (url.endsWith('index.json')) {
+            return { ok: true, json: async () => indexMap };
+        }
+        return { ok: true, json: async () => rawFile };
+    });
+
+    const res = await sandbox.window.COSYVocab.ensureFull('fr', 'A1', { needEmoji: true, min: 1 });
+    assert.strictEqual(res.ok, true);
+    assert.strictEqual(res.count, 1);
+
+    const pool = sandbox.window.vocabularyData.fr;
+    assert.strictEqual(pool.length, 1);
+    assert.deepStrictEqual(JSON.parse(JSON.stringify(pool[0])), {
+        id: 'fr:pomme:noun',
+        word: 'pomme',
+        level: 'A1',
+        form: 'noun',
+        theme: 'food',
+        emoji: '🍎',
+        article: 'la',
+        gender: 'f',
+        plural: 'pommes',
+        transcription: 'pɔm',
+        definitions: [
+            {
+                text: 'une pomme est un fruit',
+                examples: [{ text: 'J\'aime les pommes.' }]
+            }
+        ]
+    });
+});
+
+test('ensureFull - c. level folder ordering: requested B1 with only a0_a1/a2 folders -> usedLevels [A2, A1], widened true; requested A1 -> widened false; A0 behaves like A1', async () => {
+    const indexMap = {
+        'id1': 'a0_a1/f1.json',
+        'id2': 'a2/f2.json'
+    };
+
+    const sandbox = createSandbox(async (url) => {
+        if (url.endsWith('index.json')) {
+            return { ok: true, json: async () => indexMap };
+        }
+        if (url.includes('a2/f2.json')) {
+            return {
+                ok: true,
+                json: async () => [{ id: '1', word: 'w1', level: 'A2', form: 'noun', emoji: '⭐' }]
+            };
+        }
+        if (url.includes('a0_a1/f1.json')) {
+            return {
+                ok: true,
+                json: async () => [{ id: '2', word: 'w2', level: 'A1', form: 'noun', emoji: '🌟' }]
+            };
+        }
+        return { ok: false };
+    });
+
+    // Requested B1: tries b1 (absent), then a2, then a0_a1
+    const resB1 = await sandbox.window.COSYVocab.ensureFull('de', 'B1', { needEmoji: true, min: 2 });
+    assert.strictEqual(resB1.ok, true);
+    assert.strictEqual(resB1.widened, true);
+    assert.deepStrictEqual(Array.from(resB1.usedLevels), ['A2', 'A1']);
+
+    // Requested A0: behaves like A1
+    const resA0 = await sandbox.window.COSYVocab.ensureFull('de', 'A0', { needEmoji: true, min: 1 });
+    assert.strictEqual(resA0.ok, true);
+    assert.strictEqual(resA0.widened, false);
+    assert.deepStrictEqual(Array.from(resA0.usedLevels), ['A1']);
+});
+
+test('ensureFull - d. needEmoji and forms filters drop non-qualifying entries', async () => {
+    const indexMap = { 'id1': 'a0_a1/f1.json' };
+    const rawFile = [
+        { id: '1', word: 'run', level: 'A1', form: 'verb', emoji: '🏃' },
+        { id: '2', word: 'cat', level: 'A1', form: 'noun', emoji: '🐱' },
+        { id: '3', word: 'dog', level: 'A1', form: 'noun', emoji: '❓' }
+    ];
+
+    const sandbox = createSandbox(async (url) => {
+        if (url.endsWith('index.json')) return { ok: true, json: async () => indexMap };
+        return { ok: true, json: async () => rawFile };
+    });
+
+    const res = await sandbox.window.COSYVocab.ensureFull('en', 'A1', { needEmoji: true, forms: ['noun'], min: 1 });
+    assert.strictEqual(res.ok, true);
+    assert.strictEqual(res.count, 1);
+    assert.strictEqual(sandbox.window.vocabularyData.en[0].word, 'cat');
+});
+
+test('ensureFull - e. index.json failure -> {ok:false, source:"unavailable"} without throwing and window.vocabularyData untouched; one failing theme file does not fail call', async () => {
+    const sandboxFail = createSandbox(async () => ({ ok: false }));
+    const resFail = await sandboxFail.window.COSYVocab.ensureFull('es', 'A1');
+    assert.strictEqual(resFail.ok, false);
+    assert.strictEqual(resFail.source, 'unavailable');
+    assert.strictEqual(sandboxFail.window.vocabularyData, undefined);
+
+    const indexMap = {
+        'id1': 'a0_a1/good.json',
+        'id2': 'a0_a1/bad.json'
+    };
+
+    const sandboxPartial = createSandbox(async (url) => {
+        if (url.endsWith('index.json')) return { ok: true, json: async () => indexMap };
+        if (url.includes('good.json')) return { ok: true, json: async () => [{ id: '1', word: 'sun', level: 'A1', form: 'noun' }] };
+        return { ok: false, status: 404 };
+    });
+
+    const resPartial = await sandboxPartial.window.COSYVocab.ensureFull('es', 'A1', { min: 1 });
+    assert.strictEqual(resPartial.ok, true);
+    assert.strictEqual(resPartial.count, 1);
+    assert.strictEqual(sandboxPartial.window.vocabularyData.es[0].word, 'sun');
 });

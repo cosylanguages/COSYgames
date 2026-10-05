@@ -13,6 +13,9 @@
     function shuffle(arr) { return [...arr].sort(() => Math.random() - .5); }
 
     function renderSetup() {
+        if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
+            COSYLoader.clearLevelNote();
+        }
         document.getElementById('go-title').textContent = GAME_TITLE;
         const body = document.getElementById('go-body');
         body.innerHTML = `
@@ -55,6 +58,8 @@
 
             const vocab = (window.vocabularyData && window.vocabularyData[lang]) || [];
 
+            COSYLoader.clearLevelNote();
+
             if (mode === 'guess') {
                 const pool = shuffle(vocab.filter(v => v.emoji)).slice(0, 30);
                 if (pool.length < 4) {
@@ -64,6 +69,10 @@
                     body.innerHTML = `<div class="game-card">${failMsg} <button id="eo-back">Back</button></div>`;
                     document.getElementById('eo-back').onclick=()=>COSY_GAME.reset();
                     return;
+                }
+
+                if (vres.widened && pool.length > 0) {
+                    COSYLoader.showLevelNote(COSYLoader.levelNoteText());
                 }
 
                 const drawBag = gameUtils.createDrawBag(pool);
@@ -81,7 +90,6 @@
                             <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
                         </div>
                         <div class="game-card" style="text-align:center">
-                            ${vres.widened ? '<div class="game-sub">Limited vocabulary at this level in this language: using words from lower levels.</div>' : ''}
                             <div class="game-label">🧩 Floating Constellation Match</div>
 
                             <!-- Constellation Area -->

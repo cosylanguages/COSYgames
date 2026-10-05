@@ -129,7 +129,7 @@
 
             const data = (typeof COSYLoader !== 'undefined' ? COSYLoader.getGameData(lang) : null) || {};
             const rawFluency = data.fluency;
-            const lv = COSYLoader.pickByLevel(rawFluency, level, {min: COSYGame.maxRounds});
+            const lv = COSYLoader.pickByLevel(rawFluency, rawLevel || document.getElementById('s-level')?.value || level, {min: COSYGame.maxRounds});
             const fallbackFluency = [
                 { text: 'Your morning routine ☕' },
                 { text: 'A childhood memory 🧸' },
