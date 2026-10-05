@@ -94,11 +94,22 @@
                 return keywords.some(k => t.includes(k));
             };
 
-            let objects = vocab.filter(v => v.theme && !personKeywords.some(k => v.theme.toLowerCase().includes(k)));
+            const allConcretePool = vocab.filter(v => {
+                if (!v.theme) return false;
+                if (personKeywords.some(k => v.theme.toLowerCase().includes(k))) return false;
+                if (window.COSYVocab && typeof window.COSYVocab.isConcreteObjectTheme === 'function') {
+                    return window.COSYVocab.isConcreteObjectTheme(v.theme);
+                }
+                return true;
+            });
+
+            let objects = allConcretePool;
             if (category !== 'all') {
-                const categoryObjects = objects.filter(v => isThemeMatch(v.theme, category));
+                const categoryObjects = vocab.filter(v => v.theme && !personKeywords.some(k => v.theme.toLowerCase().includes(k)) && isThemeMatch(v.theme, category));
                 if (categoryObjects.length >= 4) {
                     objects = categoryObjects;
+                } else {
+                    objects = allConcretePool;
                 }
             }
 

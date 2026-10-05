@@ -6,7 +6,7 @@
     const GAME_ID = 'hotseat';
     const GAME_TITLE = 'Hot Seat 🎯';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
     let activeRole = 'guessing'; // 'guessing' | 'clue_giver' | 'watching'
     let currentTimerInterval = null;
@@ -25,9 +25,14 @@
     }
 
     function parseLangCode(val) {
+        if (window.COSYLoader && typeof window.COSYLoader.getLangCode === 'function') {
+            return window.COSYLoader.getLangCode(val);
+        }
         if (!val) return 'en';
         const clean = val.toLowerCase();
         if (clean.includes('fr') || clean.includes('french')) return 'fr';
+        if (clean.includes('es') || clean.includes('spanish')) return 'es';
+        if (clean.includes('de') || clean.includes('german')) return 'de';
         if (clean.includes('it') || clean.includes('italian')) return 'it';
         if (clean.includes('ru') || clean.includes('russian')) return 'ru';
         if (clean.includes('el') || clean.includes('greek')) return 'el';
@@ -53,6 +58,9 @@
     }
 
     function renderSetup() {
+        if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
+            COSYLoader.clearLevelNote();
+        }
         document.getElementById('go-title').textContent = GAME_TITLE;
         const body = document.getElementById('go-body');
         body.innerHTML = `
@@ -89,20 +97,44 @@
                 }
             }
 
+            const reqLevelCode = window.COSYVocab ? window.COSYVocab.levelCode(rawLevel) : level;
+            const vres = window.COSYVocab ? await window.COSYVocab.ensureFull(lang, reqLevelCode, { needEmoji: false, min: 30, forms: ['noun', 'verb', 'adjective'], maxFiles: 10 }) : { ok: false };
+
+            if (typeof COSYLoader !== 'undefined') {
+                COSYLoader.clearLevelNote();
+                if (vres.widened) {
+                    COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+                }
+            }
+
             COSYGame.init(GAME_ID, lang, level);
             COSYGame.maxRounds = 15;
 
             const body = document.getElementById('go-body');
             let active = true;
 
-            const vocab = (window.vocabularyData && window.vocabularyData[lang]) || [
-                { word: 'Apple', plural: 'Apples', definitions: [{ text: 'A round fruit with red or green skin', examples: ['I ate an apple.'] }] },
-                { word: 'Book', plural: 'Books', definitions: [{ text: 'Written pages bound together', examples: ['She reads a book.'] }] },
-                { word: 'Guitar', plural: 'Guitars', definitions: [{ text: 'A stringed musical instrument', examples: ['He plays guitar.'] }] },
-                { word: 'Coffee', plural: 'Coffees', definitions: [{ text: 'A hot roasted bean drink', examples: ['I drink morning coffee.'] }] },
-                { word: 'Sun', plural: 'Suns', definitions: [{ text: 'The star at the center of our solar system', examples: ['The sun is bright.'] }] },
-                { word: 'Tree', plural: 'Trees', definitions: [{ text: 'A woody perennial plant', examples: ['Birds sit in the tree.'] }] }
+            const fallbackVocab = [
+                { isFallback: true, word: 'Apple', plural: 'Apples', definitions: [{ text: 'A round fruit with red or green skin', examples: [{ text: 'I ate an apple.' }] }] },
+                { isFallback: true, word: 'Book', plural: 'Books', definitions: [{ text: 'Written pages bound together', examples: [{ text: 'She reads a book.' }] }] },
+                { isFallback: true, word: 'Guitar', plural: 'Guitars', definitions: [{ text: 'A stringed musical instrument', examples: [{ text: 'He plays guitar.' }] }] },
+                { isFallback: true, word: 'Coffee', plural: 'Coffees', definitions: [{ text: 'A hot roasted bean drink', examples: [{ text: 'I drink morning coffee.' }] }] },
+                { isFallback: true, word: 'Sun', plural: 'Suns', definitions: [{ text: 'The star at the center of our solar system', examples: [{ text: 'The sun is bright.' }] }] },
+                { isFallback: true, word: 'Tree', plural: 'Trees', definitions: [{ text: 'A woody perennial plant', examples: [{ text: 'Birds sit in the tree.' }] }] }
             ];
+
+            let vocab = [];
+            if (vres.ok && window.vocabularyData && window.vocabularyData[lang]) {
+                vocab = window.vocabularyData[lang].filter(item => {
+                    const hasPluralNoun = Boolean(item.plural && item.form === 'noun');
+                    const hasDefinition = Boolean(item.definitions && item.definitions[0] && item.definitions[0].text);
+                    const hasExample = Boolean(item.definitions && item.definitions[0] && item.definitions[0].examples && item.definitions[0].examples[0] && (item.definitions[0].examples[0].text || typeof item.definitions[0].examples[0] === 'string'));
+                    return hasPluralNoun || hasDefinition || hasExample;
+                });
+            }
+
+            if (!vres.ok || vocab.length < 8) {
+                vocab = fallbackVocab;
+            }
 
             const drawBag = utils.createDrawBag ? utils.createDrawBag(vocab) : { next: () => vocab[Math.floor(Math.random() * vocab.length)] };
 
@@ -141,21 +173,58 @@
                     return;
                 }
 
-                const item = drawBag.next();
-                const types = ['plural', 'definition', 'sentence'];
-                const type = types[Math.floor(Math.random() * types.length)];
+                let item = drawBag.next();
+                let availableTypes = [];
 
-                let promptText = '', answerText = '';
-                if (type === 'plural') {
-                    promptText = `What is the plural of <strong>${esc(item.word)}</strong>?`;
-                    answerText = item.plural || (item.word + 's');
-                } else if (type === 'definition') {
-                    promptText = `Define the word <strong>${esc(item.word)}</strong>.`;
-                    answerText = item.definitions?.[0]?.text || '...';
-                } else {
-                    promptText = `Use <strong>${esc(item.word)}</strong> in a sentence.`;
-                    answerText = item.definitions?.[0]?.examples?.[0]?.text || item.definitions?.[0]?.examples?.[0] || '...';
+                const getTypes = (it) => {
+                    const list = [];
+                    if (it.plural && (it.form === 'noun' || it.isFallback)) {
+                        list.push('plural');
+                    }
+                    if (it.definitions && it.definitions[0] && it.definitions[0].text) {
+                        list.push('definition');
+                    }
+                    if (it.definitions && it.definitions[0] && it.definitions[0].examples && it.definitions[0].examples[0]) {
+                        const ex = it.definitions[0].examples[0];
+                        if (typeof ex === 'string' ? ex.trim() !== '' : (ex.text && ex.text.trim() !== '')) {
+                            list.push('sentence');
+                        }
+                    }
+                    return list;
+                };
+
+                availableTypes = getTypes(item);
+                if (availableTypes.length === 0) {
+                    for (let attempts = 0; attempts < 20; attempts++) {
+                        item = drawBag.next();
+                        availableTypes = getTypes(item);
+                        if (availableTypes.length > 0) break;
+                    }
+                    if (availableTypes.length === 0) {
+                        item = fallbackVocab[0];
+                        availableTypes = ['plural', 'definition', 'sentence'];
+                    }
                 }
+
+                const type = availableTypes[Math.floor(Math.random() * availableTypes.length)];
+
+                let answerText = '';
+                let fallbackPrompt = '';
+                if (type === 'plural') {
+                    fallbackPrompt = `What is the plural of {word}?`;
+                    answerText = item.plural;
+                } else if (type === 'definition') {
+                    fallbackPrompt = `Define the word {word}.`;
+                    answerText = item.definitions[0].text;
+                } else {
+                    fallbackPrompt = `Use {word} in a sentence.`;
+                    const ex = item.definitions[0].examples[0];
+                    answerText = typeof ex === 'string' ? ex : ex.text;
+                }
+
+                const wordHtml = `<strong>${esc(item.word)}</strong>`;
+                const promptTemplate = window.tOr(`hs_prompt_${type}`, fallbackPrompt);
+                const promptText = promptTemplate.replace('{word}', wordHtml);
 
                 const radius = 70;
                 const circumference = 2 * Math.PI * radius; // ~439.8
