@@ -9,6 +9,9 @@
     const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
     function renderSetup() {
+        if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
+            COSYLoader.clearLevelNote();
+        }
         document.getElementById('go-title').textContent = GAME_TITLE;
         const body = document.getElementById('go-body');
         body.innerHTML = `
@@ -56,8 +59,17 @@
             COSYGame.maxRounds = 5;
 
             const data = (window.COSYLoader && typeof window.COSYLoader.getGameData === 'function') ? (window.COSYLoader.getGameData(lang) || {}) : {};
+            const rawIdentity = data.identity;
+            const lv = COSYLoader.pickByLevel(rawIdentity, level, {min: COSYGame.maxRounds});
+            const filteredIdentity = (lv.items && lv.items.length > 0) ? lv.items : (rawIdentity || []);
+
+            COSYLoader.clearLevelNote();
+            if (lv.limited) {
+                COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+            }
+
             const vocab = (window.vocabularyData && window.vocabularyData[lang]) || [];
-            let pool = (data && data.identity) ? [...data.identity] : [];
+            let pool = [...filteredIdentity];
 
             if (vocab.length > 0) {
                 if (category === 'jobs' || category === 'all') {
