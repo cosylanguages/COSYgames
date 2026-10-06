@@ -555,9 +555,28 @@
         return false;
     }
 
+    function wordSet(lang) {
+        return fetchIndex(lang).then(function(result) {
+            if (!result.ok || !Array.isArray(result.data)) {
+                return null;
+            }
+            var set = new Set();
+            for (var i = 0; i < result.data.length; i++) {
+                var entry = result.data[i];
+                if (entry && entry.word && typeof entry.word === 'string') {
+                    set.add(entry.word.toLowerCase());
+                }
+            }
+            return set;
+        }).catch(function() {
+            return null;
+        });
+    }
+
     var COSYVocab = {
         ensure: ensure,
         ensureFull: ensureFull,
+        wordSet: wordSet,
         levelCode: levelCode,
         joinArticle: joinArticle,
         isConcreteObjectTheme: isConcreteObjectTheme

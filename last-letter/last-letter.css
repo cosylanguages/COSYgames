@@ -85,6 +85,11 @@ body.game-standalone.cosy-game-theme {
 }
 
 /* Chain Link Element (Interlocking Notch Shape) */
+.ll-chain-link.ll-unverified {
+    border-style: dashed;
+    opacity: .85;
+}
+
 .ll-chain-link {
     position: relative;
     display: inline-flex;
