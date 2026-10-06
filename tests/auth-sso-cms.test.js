@@ -16,6 +16,48 @@ test('Ecosystem SSO: parseHashParams handles empty hash gracefully', () => {
   assert.deepStrictEqual(parsed, {});
 });
 
+test('Ecosystem SSO: loadExistingSession retrieves current session from client', async () => {
+  global.window = {};
+  let listener = null;
+
+  global.window.supabase = {
+    createClient: () => ({
+      auth: {
+        getSession: () => Promise.resolve({
+          data: {
+            session: {
+              access_token: 'existing_acc',
+              refresh_token: 'existing_ref',
+              user: { email: 'founder@cosylanguages.com', role: 'founder' }
+            }
+          }
+        }),
+        onAuthStateChange: (cb) => {
+          listener = cb;
+        }
+      }
+    })
+  };
+
+  COSYAuth.loadExistingSession();
+  await new Promise(resolve => setTimeout(resolve, 20));
+
+  assert.strictEqual(global.window.COSY_SESSION.access_token, 'existing_acc');
+  assert.strictEqual(global.window.COSY_USER.email, 'founder@cosylanguages.com');
+
+  if (listener) {
+    listener('SIGNED_IN', {
+      access_token: 'new_acc',
+      refresh_token: 'new_ref',
+      user: { email: 'founder@cosylanguages.com', role: 'admin' }
+    });
+    assert.strictEqual(global.window.COSY_SESSION.access_token, 'new_acc');
+    assert.strictEqual(global.window.COSY_USER.role, 'admin');
+  }
+
+  delete global.window;
+});
+
 test('Founder CMS Editor: role authorization detection', () => {
   global.window = {
     COSY_USER: { role: 'admin' }

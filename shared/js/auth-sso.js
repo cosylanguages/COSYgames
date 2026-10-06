@@ -59,6 +59,32 @@
     }
   }
 
+  function loadExistingSession() {
+    var client = initSupabase();
+    if (client && client.auth && typeof client.auth.getSession === 'function') {
+      client.auth.getSession().then(function(res) {
+        if (res && res.data && res.data.session) {
+          window.COSY_SESSION = res.data.session;
+          window.COSY_USER = res.data.session.user;
+        }
+      }).catch(function(err) {
+        console.warn('SSO getSession error:', err);
+      });
+
+      if (typeof client.auth.onAuthStateChange === 'function') {
+        client.auth.onAuthStateChange(function(event, session) {
+          if (session) {
+            window.COSY_SESSION = session;
+            window.COSY_USER = session.user;
+          } else {
+            window.COSY_SESSION = null;
+            window.COSY_USER = null;
+          }
+        });
+      }
+    }
+  }
+
   function getCurrentSessionTokens() {
     if (typeof window !== 'undefined' && window.COSY_SESSION) {
       return {
@@ -108,6 +134,7 @@
   function init() {
     initSupabase();
     handleHashAuth();
+    loadExistingSession();
     attachEcosystemLinkInterceptor();
   }
 
@@ -123,6 +150,7 @@
     initSupabase: initSupabase,
     parseHashParams: parseHashParams,
     handleHashAuth: handleHashAuth,
+    loadExistingSession: loadExistingSession,
     getCurrentSessionTokens: getCurrentSessionTokens,
     attachEcosystemLinkInterceptor: attachEcosystemLinkInterceptor
   };
