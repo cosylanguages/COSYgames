@@ -63,28 +63,75 @@
             const lv = COSYLoader.pickByLevel(rawIdentity, level, {min: COSYGame.maxRounds});
             const filteredIdentity = (lv.items && lv.items.length > 0) ? lv.items : (rawIdentity || []);
 
-            COSYLoader.clearLevelNote();
-            if (lv.limited) {
-                COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+            const fileMatchMap = {
+                jobs: ['jobs'],
+                nationalities: ['nationalit'],
+                people: ['people'],
+                all: ['jobs', 'nationalit', 'people']
+            };
+            const fileMatch = fileMatchMap[category] || fileMatchMap.all;
+
+            const rawLevelSelect = document.getElementById('s-level')?.value;
+            const reqLevelCode = window.COSYVocab ? COSYVocab.levelCode(rawLevelSelect) : level;
+            const vres = window.COSYVocab ? await COSYVocab.ensureFull(lang, reqLevelCode, { fileMatch, min: 8, forms: ['noun', 'adjective'], maxFiles: 6 }) : { ok: false };
+
+            if (typeof COSYLoader !== 'undefined') {
+                if (lv.limited || vres.widened) {
+                    COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+                } else {
+                    COSYLoader.clearLevelNote();
+                }
             }
 
             const vocab = (window.vocabularyData && window.vocabularyData[lang]) || [];
             let pool = [...filteredIdentity];
 
             if (vocab.length > 0) {
+                const themeIncludes = (theme, sub) => {
+                    if (!theme) return false;
+                    if (typeof theme === 'string') return theme.toLowerCase().includes(sub.toLowerCase());
+                    if (Array.isArray(theme)) return theme.some(t => typeof t === 'string' && t.toLowerCase().includes(sub.toLowerCase()));
+                    return false;
+                };
+
+                const isClueValid = (clueText, answerWord) => {
+                    if (!clueText || !clueText.trim()) return false;
+                    const word = (answerWord || '').trim().toLowerCase();
+                    if (word && clueText.toLowerCase().includes(word)) return false;
+                    return true;
+                };
+
                 if (category === 'jobs' || category === 'all') {
-                    const jobs = vocab.filter(v => v.theme && (v.theme.includes('professions') || v.theme.includes('job')))
-                        .map(v => ({ person: (v.article ? v.article + ' ' : '') + v.word, clue: v.definitions?.[0]?.text || '' }));
+                    const jobs = vocab.filter(v => themeIncludes(v.theme, 'job') || themeIncludes(v.theme, 'profession'))
+                        .map(v => {
+                            const person = window.COSYVocab ? COSYVocab.joinArticle(v.article, v.word) : ((v.article ? v.article + ' ' : '') + v.word);
+                            const clue = v.definitions?.[0]?.text || '';
+                            return { person, clue, word: v.word };
+                        })
+                        .filter(item => isClueValid(item.clue, item.word))
+                        .map(item => ({ person: item.person, clue: item.clue }));
                     pool = [...pool, ...jobs];
                 }
                 if (category === 'people' || category === 'all') {
-                    const people = vocab.filter(v => v.theme && (v.theme.includes('people') || v.theme.includes('person')))
-                        .map(v => ({ person: v.word, clue: v.subtext || v.definitions?.[0]?.text || '' }));
+                    const people = vocab.filter(v => themeIncludes(v.theme, 'people') || themeIncludes(v.theme, 'person'))
+                        .map(v => {
+                            const person = v.word;
+                            const clue = v.subtext || v.definitions?.[0]?.text || '';
+                            return { person, clue, word: v.word };
+                        })
+                        .filter(item => isClueValid(item.clue, item.word))
+                        .map(item => ({ person: item.person, clue: item.clue }));
                     pool = [...pool, ...people];
                 }
                 if (category === 'nationalities' || category === 'all') {
-                    const nationals = vocab.filter(v => v.theme && v.theme.includes('nationality'))
-                        .map(v => ({ person: v.word, clue: v.definitions?.[0]?.text || '' }));
+                    const nationals = vocab.filter(v => themeIncludes(v.theme, 'nationalit'))
+                        .map(v => {
+                            const person = v.word;
+                            const clue = v.definitions?.[0]?.text || '';
+                            return { person, clue, word: v.word };
+                        })
+                        .filter(item => isClueValid(item.clue, item.word))
+                        .map(item => ({ person: item.person, clue: item.clue }));
                     pool = [...pool, ...nationals];
                 }
             }
