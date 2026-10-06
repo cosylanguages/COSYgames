@@ -136,12 +136,12 @@ test('f. levelCode("Starter (A1)") === "A1", levelCode("A2") === "A2"', () => {
     assert.strictEqual(sandbox.window.COSYVocab.levelCode('Proficiency (C2)'), 'C2');
 });
 
-test('g. Opt-in guarantee: exactly emoji-odyssey, object-quest and hot-seat game.js reference COSYVocab', () => {
+test('g. Opt-in guarantee: exactly emoji-odyssey, object-quest, hot-seat and identity-mystery game.js reference COSYVocab', () => {
     const gamesDir = path.join(__dirname, '..');
     const files = fs.readdirSync(gamesDir, { recursive: true });
     const gameJsFiles = files.filter(f => f.endsWith('game.js'));
 
-    const expectedGames = ['emoji-odyssey', 'hot-seat', 'object-quest'];
+    const expectedGames = ['emoji-odyssey', 'hot-seat', 'identity-mystery', 'object-quest'];
     const foundGames = [];
 
     for (const relFile of gameJsFiles) {
@@ -159,6 +159,67 @@ test('g. Opt-in guarantee: exactly emoji-odyssey, object-quest and hot-seat game
     expectedGames.sort();
 
     assert.deepStrictEqual(foundGames, expectedGames, `COSYVocab should only be referenced in ${expectedGames.join(', ')}, but found in: ${foundGames.join(', ')}`);
+});
+
+test('PART C(b): COSYVocab.joinArticle tests', () => {
+    const sandbox = createSandbox();
+    const joinArticle = sandbox.window.COSYVocab.joinArticle;
+
+    assert.strictEqual(joinArticle('le', 'professeur'), 'le professeur');
+    assert.strictEqual(joinArticle("l'", 'artiste'), "l'artiste");
+    assert.strictEqual(joinArticle('l’', 'élève'), 'l’élève');
+    assert.strictEqual(joinArticle('', 'x'), 'x');
+    assert.strictEqual(joinArticle(undefined, 'x'), 'x');
+});
+
+test('PART C(d): hot-seat/game.js maps definition -> hs_prompt_define', () => {
+    const hotSeatCode = fs.readFileSync(path.join(__dirname, '../hot-seat/game.js'), 'utf8');
+    assert.ok(hotSeatCode.includes('hs_prompt_define'), 'hot-seat/game.js must contain hs_prompt_define');
+    assert.strictEqual(hotSeatCode.includes('hs_prompt_${type}'), false, 'hot-seat/game.js must not contain hs_prompt_${type}');
+});
+
+test('PART C(a): ensureFull fileMatch option filters basenames while preserving level ordering and default behavior', async () => {
+    const fetchedUrls = [];
+    const indexMap = {
+        'id1': 'a2/jobs.json',
+        'id2': 'a2/food.json',
+        'id3': 'a0_a1/jobs.json',
+        'id4': 'a0_a1/nationalities.json'
+    };
+
+    const sandbox = createSandbox(async (url) => {
+        fetchedUrls.push(url);
+        if (url.endsWith('index.json')) {
+            return { ok: true, json: async () => indexMap };
+        }
+        return {
+            ok: true,
+            json: async () => [
+                { id: url, word: 'test', level: url.includes('a2') ? 'A2' : 'A1', form: 'noun' }
+            ]
+        };
+    });
+
+    const resFiltered = await sandbox.window.COSYVocab.ensureFull('fr', 'A2', { fileMatch: ['jobs'], min: 2 });
+    assert.strictEqual(resFiltered.ok, true);
+
+    const themeFetches = fetchedUrls.filter(u => !u.endsWith('index.json'));
+    assert.strictEqual(themeFetches.length, 2);
+    assert.ok(themeFetches[0].includes('a2/jobs.json'), 'Requested level A2 folder checked first');
+    assert.ok(themeFetches[1].includes('a0_a1/jobs.json'), 'Lower level A0_A1 folder checked second');
+    assert.ok(!themeFetches.some(u => u.includes('food.json') || u.includes('nationalities.json')), 'Non-matching files were not fetched');
+
+    // Absent fileMatch scenario
+    const fetchedUrls2 = [];
+    const sandbox2 = createSandbox(async (url) => {
+        fetchedUrls2.push(url);
+        if (url.endsWith('index.json')) return { ok: true, json: async () => indexMap };
+        return { ok: true, json: async () => [{ id: url, word: 'w', level: 'A1', form: 'noun' }] };
+    });
+
+    await sandbox2.window.COSYVocab.ensureFull('fr', 'A2', { min: 4 });
+    const themeFetches2 = fetchedUrls2.filter(u => !u.endsWith('index.json'));
+    assert.strictEqual(themeFetches2.length, 4, 'Without fileMatch, all candidate theme files are available');
 });
 
 test('PART A: isConcreteObjectTheme - unit tests', () => {

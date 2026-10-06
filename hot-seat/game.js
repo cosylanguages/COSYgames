@@ -222,8 +222,14 @@
                     answerText = typeof ex === 'string' ? ex : ex.text;
                 }
 
+                const PROMPT_KEYS = {
+                    plural: 'hs_prompt_plural',
+                    definition: 'hs_prompt_define',
+                    sentence: 'hs_prompt_sentence'
+                };
+
                 const wordHtml = `<strong>${esc(item.word)}</strong>`;
-                const promptTemplate = window.tOr(`hs_prompt_${type}`, fallbackPrompt);
+                const promptTemplate = window.tOr(PROMPT_KEYS[type], fallbackPrompt);
                 const promptText = promptTemplate.replace('{word}', wordHtml);
 
                 const radius = 70;

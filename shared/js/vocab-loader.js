@@ -311,6 +311,18 @@
         return adapted;
     }
 
+    function joinArticle(article, word) {
+        if (!word) word = '';
+        if (!article || typeof article !== 'string' || article.trim() === '') {
+            return word;
+        }
+        var lastChar = article.charAt(article.length - 1);
+        if (lastChar === "'" || lastChar === '’') {
+            return article + word;
+        }
+        return article + ' ' + word;
+    }
+
     function ensureFull(lang, level, opts) {
         opts = opts || {};
         var needEmoji = opts.needEmoji === true;
@@ -318,6 +330,7 @@
         var forms = Array.isArray(opts.forms) ? opts.forms : null;
         var maxFiles = typeof opts.maxFiles === 'number' ? opts.maxFiles : 10;
         var batchSize = typeof opts.batch === 'number' ? opts.batch : 3;
+        var fileMatch = Array.isArray(opts.fileMatch) ? opts.fileMatch.map(function(s) { return String(s).toLowerCase(); }) : null;
 
         var reqLevel = levelCode(level);
         if (reqLevel === 'A0') reqLevel = 'A1';
@@ -395,8 +408,19 @@
                 var otherFiles = [];
                 for (var sf = 0; sf < folderFiles.length; sf++) {
                     var fPath = folderFiles[sf];
-                    var fName = fPath.split('/').pop().replace('.json', '');
-                    if (isConcreteObjectTheme(fName)) {
+                    var baseName = fPath.split('/').pop().replace('.json', '');
+                    if (fileMatch) {
+                        var lowerBase = baseName.toLowerCase();
+                        var matches = false;
+                        for (var fm = 0; fm < fileMatch.length; fm++) {
+                            if (lowerBase.indexOf(fileMatch[fm]) !== -1) {
+                                matches = true;
+                                break;
+                            }
+                        }
+                        if (!matches) continue;
+                    }
+                    if (isConcreteObjectTheme(baseName)) {
                         concreteFiles.push(fPath);
                     } else {
                         otherFiles.push(fPath);
@@ -535,6 +559,7 @@
         ensure: ensure,
         ensureFull: ensureFull,
         levelCode: levelCode,
+        joinArticle: joinArticle,
         isConcreteObjectTheme: isConcreteObjectTheme
     };
 
