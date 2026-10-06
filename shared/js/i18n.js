@@ -64,7 +64,10 @@
       ui_level_b2: 'Upper (B2)',
       ui_level_c1: 'Advanced (C1)',
       ui_level_c2: 'Proficiency (C2)',
-      ui_limited_level: 'Limited content at this level in this language: nearby levels are shown too.'
+      ui_limited_level: 'Limited content at this level in this language: nearby levels are shown too.',
+      hs_prompt_plural: 'What is the plural of {word}?',
+      hs_prompt_define: 'Define the word {word}.',
+      hs_prompt_sentence: 'Use {word} in a sentence.'
     },
     fr: {
       ecosystem_strip: 'ÉCOSYSTÈME COSY :',
@@ -128,7 +131,10 @@
       ui_level_b2: 'Intermédiaire supérieur (B2)',
       ui_level_c1: 'Avancé (C1)',
       ui_level_c2: 'Maîtrise (C2)',
-      ui_limited_level: 'Contenu limité à ce niveau dans cette langue : des niveaux proches sont aussi proposés.'
+      ui_limited_level: 'Contenu limité à ce niveau dans cette langue : des niveaux proches sont aussi proposés.',
+      hs_prompt_plural: 'Quel est le pluriel de {word} ?',
+      hs_prompt_define: 'Définissez le mot {word}.',
+      hs_prompt_sentence: 'Utilisez {word} dans une phrase.'
     },
     es: {
       ecosystem_strip: 'ECOSISTEMA COSY:',
@@ -192,7 +198,10 @@
       ui_level_b2: 'Intermedio alto (B2)',
       ui_level_c1: 'Avanzado (C1)',
       ui_level_c2: 'Maestría (C2)',
-      ui_limited_level: 'Contenido limitado en este nivel y idioma: también se muestran niveles cercanos.'
+      ui_limited_level: 'Contenido limitado en este nivel y idioma: también se muestran niveles cercanos.',
+      hs_prompt_plural: '¿Cuál es el plural de {word}?',
+      hs_prompt_define: 'Define la palabra {word}.',
+      hs_prompt_sentence: 'Usa {word} en una oración.'
     },
     de: {
       ecosystem_strip: 'COSY-ÖKOSYSTEM:',
@@ -256,7 +265,10 @@
       ui_level_b2: 'Obere Mittelstufe (B2)',
       ui_level_c1: 'Fortgeschritten (C1)',
       ui_level_c2: 'Experte (C2)',
-      ui_limited_level: 'Begrenzte Inhalte auf dieser Stufe in dieser Sprache: auch benachbarte Stufen werden gezeigt.'
+      ui_limited_level: 'Begrenzte Inhalte auf dieser Stufe in dieser Sprache: auch benachbarte Stufen werden gezeigt.',
+      hs_prompt_plural: 'Wie lautet der Plural von {word}?',
+      hs_prompt_define: 'Definiere das Wort {word}.',
+      hs_prompt_sentence: 'Verwende {word} in einem Satz.'
     },
     ru: {
       ecosystem_strip: 'ЭКОСИСТЕМА COSY:',
@@ -320,7 +332,10 @@
       ui_level_b2: 'Выше среднего (B2)',
       ui_level_c1: 'Продвинутый (C1)',
       ui_level_c2: 'Свободное владение (C2)',
-      ui_limited_level: 'На этом уровне на этом языке материалов мало: показаны также близкие уровни.'
+      ui_limited_level: 'На этом уровне на этом языке материалов мало: показаны также близкие уровни.',
+      hs_prompt_plural: 'Какое множественное число у слова {word}?',
+      hs_prompt_define: 'Дайте определение слова {word}.',
+      hs_prompt_sentence: 'Составьте предложение со словом {word}.'
     },
     it: {
       ecosystem_strip: 'SISTEMA COSY:',
@@ -384,7 +399,10 @@
       ui_level_b2: 'Intermedio superiore (B2)',
       ui_level_c1: 'Avanzato (C1)',
       ui_level_c2: 'Padronanza (C2)',
-      ui_limited_level: 'Contenuti limitati a questo livello in questa lingua: vengono mostrati anche livelli vicini.'
+      ui_limited_level: 'Contenuti limitati a questo livello in questa lingua: vengono mostrati anche livelli vicini.',
+      hs_prompt_plural: 'Qual è il plurale di {word}?',
+      hs_prompt_define: 'Definisci la parola {word}.',
+      hs_prompt_sentence: 'Usa {word} in una frase.'
     },
     el: {
       ecosystem_strip: 'ΟΙΚΟΣΥΣΤΗΜΑ COSY:',
@@ -448,7 +466,10 @@
       ui_level_b2: 'Ανώτερο μεσαίο (B2)',
       ui_level_c1: 'Προχωρημένο (C1)',
       ui_level_c2: 'Άριστο (C2)',
-      ui_limited_level: 'Περιορισμένο περιεχόμενο σε αυτό το επίπεδο σε αυτή τη γλώσσα: εμφανίζονται και κοντινά επίπεδα.'
+      ui_limited_level: 'Περιορισμένο περιεχόμενο σε αυτό το επίπεδο σε αυτή τη γλώσσα: εμφανίζονται και κοντινά επίπεδα.',
+      hs_prompt_plural: 'Ποιος είναι ο πληθυντικός του {word};',
+      hs_prompt_define: 'Ορίστε τη λέξη {word}.',
+      hs_prompt_sentence: 'Χρησιμοποιήστε τη λέξη {word} σε μια πρόταση.'
     }
   };
 

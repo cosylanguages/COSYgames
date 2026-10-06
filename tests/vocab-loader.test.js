@@ -136,12 +136,12 @@ test('f. levelCode("Starter (A1)") === "A1", levelCode("A2") === "A2"', () => {
     assert.strictEqual(sandbox.window.COSYVocab.levelCode('Proficiency (C2)'), 'C2');
 });
 
-test('g. Opt-in guarantee: exactly emoji-odyssey/game.js and object-quest/game.js reference COSYVocab', () => {
+test('g. Opt-in guarantee: exactly emoji-odyssey, object-quest and hot-seat game.js reference COSYVocab', () => {
     const gamesDir = path.join(__dirname, '..');
     const files = fs.readdirSync(gamesDir, { recursive: true });
     const gameJsFiles = files.filter(f => f.endsWith('game.js'));
 
-    const expectedGames = ['emoji-odyssey', 'object-quest'];
+    const expectedGames = ['emoji-odyssey', 'hot-seat', 'object-quest'];
     const foundGames = [];
 
     for (const relFile of gameJsFiles) {
@@ -159,6 +159,52 @@ test('g. Opt-in guarantee: exactly emoji-odyssey/game.js and object-quest/game.j
     expectedGames.sort();
 
     assert.deepStrictEqual(foundGames, expectedGames, `COSYVocab should only be referenced in ${expectedGames.join(', ')}, but found in: ${foundGames.join(', ')}`);
+});
+
+test('PART A: isConcreteObjectTheme - unit tests', () => {
+    const sandbox = createSandbox();
+    const fn = sandbox.window.COSYVocab.isConcreteObjectTheme;
+
+    // True cases
+    const trueThemes = ['food_drink', 'house_furniture', 'clothes', 'clothing', 'animals', 'body_health', 'objects', 'technology', 'nature', 'school'];
+    for (const t of trueThemes) {
+        assert.strictEqual(fn(t), true, `Expected theme "${t}" to be concrete`);
+    }
+
+    // False cases
+    const falseThemes = ['nationalities', 'family', 'time', 'communication', 'jobs', 'emotions', 'politics', 'general', 'society', '', undefined, null];
+    for (const t of falseThemes) {
+        assert.strictEqual(fn(t), false, `Expected theme "${t}" to be non-concrete`);
+    }
+
+    // Blocklist wins over allowlist
+    assert.strictEqual(fn('family_food'), false, 'Expected blocklist to win for family_food');
+    assert.strictEqual(fn('food_jobs'), false, 'Expected blocklist to win for food_jobs');
+});
+
+test('PART B: i18n keys hs_prompt_plural/define/sentence exist across all 7 languages and contain {word}', () => {
+    const i18nCode = fs.readFileSync(path.join(__dirname, '../shared/js/i18n.js'), 'utf8');
+    const sandbox = createSandbox();
+    vm.runInContext(i18nCode, sandbox);
+
+    const languages = ['en', 'fr', 'es', 'de', 'it', 'ru', 'el'];
+    const promptKeys = ['hs_prompt_plural', 'hs_prompt_define', 'hs_prompt_sentence'];
+
+    for (const lang of languages) {
+        for (const key of promptKeys) {
+            const text = sandbox.window.tOr(key, '', lang);
+            assert.notStrictEqual(text, '', `Expected i18n key ${key} to exist in lang ${lang}`);
+            assert.ok(text.includes('{word}'), `Expected translation for ${key} in ${lang} to contain {word}`);
+        }
+    }
+});
+
+test('PART B: hot-seat/game.js does not synthesize word + "s" for non-fallback entries', () => {
+    const hotSeatCode = fs.readFileSync(path.join(__dirname, '../hot-seat/game.js'), 'utf8');
+    // We check that the code string `+ 's'` or `+ "s"` or `+ 'S'` does not appear in plural generation logic
+    // The test decides by inspecting the source code of hot-seat/game.js and verifying that item.plural is used directly without fallback string concatenation.
+    assert.strictEqual(hotSeatCode.includes("item.word + 's'"), false, "hot-seat/game.js should not synthesize item.word + 's'");
+    assert.strictEqual(hotSeatCode.includes('item.word + "s"'), false, 'hot-seat/game.js should not synthesize item.word + "s"');
 });
 
 test('ensureFull - a. fetches index.json once and no more than maxFiles theme files; a second call re-uses cache', async () => {

@@ -391,7 +391,18 @@
                     return processFolders(folderIndex + 1);
                 }
 
-                var shuffledFiles = shuffleArray(folderFiles);
+                var concreteFiles = [];
+                var otherFiles = [];
+                for (var sf = 0; sf < folderFiles.length; sf++) {
+                    var fPath = folderFiles[sf];
+                    var fName = fPath.split('/').pop().replace('.json', '');
+                    if (isConcreteObjectTheme(fName)) {
+                        concreteFiles.push(fPath);
+                    } else {
+                        otherFiles.push(fPath);
+                    }
+                }
+                var shuffledFiles = shuffleArray(concreteFiles).concat(shuffleArray(otherFiles));
                 var fileIndex = 0;
 
                 var processBatches = function() {
@@ -487,10 +498,44 @@
         });
     }
 
+    function isConcreteObjectTheme(theme) {
+        if (!theme || typeof theme !== 'string') return false;
+        var t = theme.toLowerCase();
+
+        var blocklist = [
+            'nationalit', 'famil', 'time', 'communicat', 'emotion', 'politic', 'societ',
+            'ethic', 'legal', 'financ', 'econom', 'relationship', 'concept', 'psycholog',
+            'cultur', 'identit', 'general', 'express', 'number', 'quantity', 'propert',
+            'colo', 'measure', 'activit', 'media', 'business', 'work', 'job',
+            'profession', 'people', 'person', 'famous'
+        ];
+
+        for (var i = 0; i < blocklist.length; i++) {
+            if (t.indexOf(blocklist[i]) !== -1) {
+                return false;
+            }
+        }
+
+        var allowlist = [
+            'food', 'drink', 'animal', 'nature', 'house', 'furniture', 'housing',
+            'cloth', 'body', 'object', 'technology', 'school', 'kitchen', 'garden',
+            'tool', 'vehicle'
+        ];
+
+        for (var j = 0; j < allowlist.length; j++) {
+            if (t.indexOf(allowlist[j]) !== -1) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     var COSYVocab = {
         ensure: ensure,
         ensureFull: ensureFull,
-        levelCode: levelCode
+        levelCode: levelCode,
+        isConcreteObjectTheme: isConcreteObjectTheme
     };
 
     if (typeof window !== 'undefined') {
