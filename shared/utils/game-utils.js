@@ -208,7 +208,85 @@
         }
     };
 
+    const TTS_LANG_MAP = {
+        en: 'en-GB',
+        fr: 'fr-FR',
+        es: 'es-ES',
+        de: 'de-DE',
+        it: 'it-IT',
+        ru: 'ru-RU',
+        el: 'el-GR',
+        pt: 'pt-PT'
+    };
+
     const gameUtils = {
+        canSpeak: function () {
+            return typeof window !== 'undefined' &&
+                Boolean(window.speechSynthesis) &&
+                Boolean(window.SpeechSynthesisUtterance);
+        },
+
+        speak: function (text, langCode) {
+            if (!gameUtils.canSpeak()) return false;
+            if (text === null || text === undefined) return false;
+            const strText = String(text);
+            if (!strText) return false;
+
+            try {
+                window.speechSynthesis.cancel();
+                const utterance = new window.SpeechSynthesisUtterance(strText);
+                const mappedLang = TTS_LANG_MAP[langCode] || langCode;
+                utterance.lang = mappedLang;
+                utterance.rate = 0.9;
+
+                const voices = typeof window.speechSynthesis.getVoices === 'function' ? window.speechSynthesis.getVoices() : [];
+                if (Array.isArray(voices) && voices.length > 0) {
+                    const targetLangLower = mappedLang.toLowerCase().replace('_', '-');
+                    const targetPrimary = targetLangLower.split('-')[0];
+
+                    let selectedVoice = voices.find(v => v && v.lang && v.lang.toLowerCase().replace('_', '-') === targetLangLower);
+                    if (!selectedVoice) {
+                        selectedVoice = voices.find(v => v && v.lang && v.lang.toLowerCase().replace('_', '-').split('-')[0] === targetPrimary);
+                    }
+
+                    if (selectedVoice) {
+                        utterance.voice = selectedVoice;
+                    }
+                }
+
+                window.speechSynthesis.speak(utterance);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        },
+
+        normalizeWord: function (raw) {
+            if (raw === null || raw === undefined) return '';
+            return String(raw).toLowerCase().trim().replace(/[^\p{L}]/gu, '');
+        },
+
+        foldLetter: function (ch, lang) {
+            if (!ch) return '';
+            let letter = String(ch).toLowerCase();
+            if (letter === 'ς') return 'σ';
+            if (lang === 'ru') return letter;
+            return letter.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        },
+
+        chainLetter: function (word, lang) {
+            const norm = gameUtils.normalizeWord(word);
+            if (!norm) return '';
+            let chars = norm.split('');
+            if (lang === 'ru') {
+                while (chars.length > 0 && ['ь', 'ъ', 'ы'].includes(chars[chars.length - 1])) {
+                    chars.pop();
+                }
+            }
+            if (chars.length === 0) return '';
+            return gameUtils.foldLetter(chars[chars.length - 1], lang);
+        },
+
         createDrawBag: function(arr) {
             let bag = [...(arr || [])];
             return {

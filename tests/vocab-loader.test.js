@@ -136,12 +136,12 @@ test('f. levelCode("Starter (A1)") === "A1", levelCode("A2") === "A2"', () => {
     assert.strictEqual(sandbox.window.COSYVocab.levelCode('Proficiency (C2)'), 'C2');
 });
 
-test('g. Opt-in guarantee: exactly emoji-odyssey, object-quest, hot-seat and identity-mystery game.js reference COSYVocab', () => {
+test('g. Opt-in guarantee: exactly emoji-odyssey, object-quest, hot-seat, identity-mystery and last-letter game.js reference COSYVocab', () => {
     const gamesDir = path.join(__dirname, '..');
     const files = fs.readdirSync(gamesDir, { recursive: true });
     const gameJsFiles = files.filter(f => f.endsWith('game.js'));
 
-    const expectedGames = ['emoji-odyssey', 'hot-seat', 'identity-mystery', 'object-quest'];
+    const expectedGames = ['emoji-odyssey', 'hot-seat', 'identity-mystery', 'last-letter', 'object-quest'];
     const foundGames = [];
 
     for (const relFile of gameJsFiles) {

@@ -5,7 +5,7 @@
 (function() {
     const GAME_ID = 'bingo';
     const GAME_TITLE = 'Lucky Numbers 🔢';
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels ? window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]) : ["en","fr","es","de","it","ru","el"];
     const BINGO_LVLS = ['Bingo 1 (0-9)', 'Bingo 2 (10-19)', 'Bingo 3 (20-99)', 'Bingo 5 (Random)', 'Alphabet (A-Z)', 'Listening Practice 👂'];
 
     function shuffle(arr) { return [...arr].sort(() => Math.random() - .5); }
@@ -97,16 +97,26 @@
                     const item = drawBag.next();
                     drawnCount++;
                     const callEl = document.getElementById('bingo-call');
+
+                    const spoken = window.gameUtils && gameUtils.speak ? gameUtils.speak(String(item), lang) : false;
+
                     if (isListening) {
-                        callEl.textContent = '👂';
-                        callEl.onclick = () => { callEl.textContent = item; };
-                        callEl.style.cursor = 'pointer';
+                        if (!spoken) {
+                            callEl.textContent = item;
+                            const wordEl = document.getElementById('bingo-call-word');
+                            if (wordEl) {
+                                wordEl.textContent = "🔇 Your browser cannot read numbers aloud.";
+                            }
+                        } else {
+                            callEl.textContent = '👂';
+                            callEl.onclick = () => { callEl.textContent = item; };
+                            callEl.style.cursor = 'pointer';
+                        }
                     } else {
                         callEl.textContent = item;
                     }
                     const hist = document.getElementById('bingo-history');
                     hist.textContent = (hist.textContent ? hist.textContent + ', ' : '') + item;
-                    if (gameUtils?.speak) gameUtils.speak(item.toString(), lang);
                 };
             } else {
                 if (!COSYGame.nextRound()) {

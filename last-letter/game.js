@@ -6,7 +6,7 @@
     const GAME_ID = 'lastletter';
     const GAME_TITLE = 'Last Letter 🔗';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels ? window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]) : ["en","fr","es","de","it","ru","el"];
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
@@ -44,6 +44,8 @@
             } catch (err) {
                 console.warn('Level data load fallback', err);
             }
+
+            const known = window.COSYVocab ? await COSYVocab.wordSet(lang) : null;
 
             COSYGame.init(GAME_ID, lang, level);
 
@@ -104,8 +106,7 @@
                 const chainContainer = document.getElementById('ll-chain');
                 if (!input || !fb || !chainContainer) return;
 
-                const rawWord = input.value.trim().toLowerCase();
-                const word = rawWord.replace(/[^a-zàâäéèêëîïôùûüæœçñáíóúüý\u0400-\u04FF\u0370-\u03FF]/gi, '');
+                const word = window.gameUtils ? window.gameUtils.normalizeWord(input.value) : input.value.trim().toLowerCase();
 
                 const triggerInvalidAnimation = (msg) => {
                     this.showFB(fb, 'bad', msg);
@@ -131,9 +132,11 @@
                     return;
                 }
                 if (llChain.length > 0) {
-                    const lastChar = llChain[llChain.length - 1].slice(-1).toLowerCase();
-                    if (word[0] !== lastChar) {
-                        triggerInvalidAnimation(`"${word}" doesn't start with <strong>${lastChar.toUpperCase()}</strong>. Attempted link bounced off!`);
+                    const lastWord = llChain[llChain.length - 1];
+                    const reqLetter = window.gameUtils ? window.gameUtils.chainLetter(lastWord, lang) : lastWord.slice(-1).toLowerCase();
+                    const firstFolded = window.gameUtils ? window.gameUtils.foldLetter(word[0], lang) : word[0].toLowerCase();
+                    if (firstFolded !== reqLetter) {
+                        triggerInvalidAnimation(`"${word}" doesn't start with <strong>${reqLetter.toUpperCase()}</strong>. Attempted link bounced off!`);
                         input.value = '';
                         return;
                     }
@@ -144,9 +147,18 @@
                     return;
                 }
 
+                const isKnown = known === null || (known instanceof Set && known.has(word));
+                const isUnverified = known instanceof Set && !known.has(word);
+
                 LL_USED.add(word);
                 llChain.push(word);
-                COSYGame.addScore(5);
+
+                if (isUnverified) {
+                    COSYGame.addScore(2);
+                } else {
+                    COSYGame.addScore(5);
+                }
+
                 input.value = '';
 
                 // Remove empty state placeholder
@@ -160,7 +172,7 @@
                 // Create new chain link element
                 const linkEl = document.createElement('div');
                 const isOnline = document.documentElement.dataset.context === 'online';
-                linkEl.className = `ll-chain-link motion-slide-chain ${isOnline ? 'll-latest-link' : ''}`;
+                linkEl.className = `ll-chain-link motion-slide-chain ${isOnline ? 'll-latest-link' : ''}${isUnverified ? ' ll-unverified' : ''}`;
 
                 const stem = word.slice(0, -1);
                 const lastL = word.slice(-1).toUpperCase();
@@ -175,10 +187,16 @@
                     chainContainer.scrollLeft = chainContainer.scrollWidth;
                 }
 
-                document.getElementById('ll-score').textContent = COSYGame.score;
-                document.getElementById('ll-next-letter').textContent = `${word.slice(-1).toUpperCase()}`;
+                const nextReqLetter = window.gameUtils ? window.gameUtils.chainLetter(word, lang) : word.slice(-1).toLowerCase();
 
-                this.showFB(fb, 'ok', `✓ Link snapped into place! Next word must start with <strong>${word.slice(-1).toUpperCase()}</strong>.`);
+                document.getElementById('ll-score').textContent = COSYGame.score;
+                document.getElementById('ll-next-letter').textContent = nextReqLetter.toUpperCase();
+
+                if (isUnverified) {
+                    this.showFB(fb, 'ok', `"${word}" accepted, but it is not in our word list yet: check the spelling.`);
+                } else {
+                    this.showFB(fb, 'ok', `✓ Link snapped into place! Next word must start with <strong>${nextReqLetter.toUpperCase()}</strong>.`);
+                }
                 input.focus();
             };
         },
