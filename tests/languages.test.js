@@ -86,6 +86,78 @@ test('b. For the 7 wired games, game.js contains cosyLanguageLabels([...]) whose
   });
 });
 
+test('b2. Menu codes derived from game.js equal games/index.json learning_languages for every game', () => {
+  const games = JSON.parse(fs.readFileSync(indexJsonPath, 'utf8'));
+  const allowList = ['100-questions', 'what-gender-is-it', 'this-or-that']; // These games use their own custom selects or deck structures
+
+  const loaderPath = path.join(repoRoot, '_engine', 'loader.js');
+  const loaderCode = fs.readFileSync(loaderPath, 'utf8');
+  const sandbox = { window: {}, console: console };
+  sandbox.window = sandbox;
+  vm.createContext(sandbox);
+  vm.runInContext(loaderCode, sandbox);
+  const COSYLoader = sandbox.COSYLoader;
+
+  games.forEach(gameEntry => {
+    if (allowList.includes(gameEntry.id)) {
+      return; // Skip allow-listed games with own selects
+    }
+
+    const gameJsPath = path.join(repoRoot, gameEntry.folder_path, 'game.js');
+    assert.ok(fs.existsSync(gameJsPath), `File ${gameJsPath} must exist for ${gameEntry.id}`);
+
+    const code = fs.readFileSync(gameJsPath, 'utf8');
+    let menuCodes = [];
+
+    const cosyMatch = code.match(/cosyLanguageLabels\(\s*(\[[^\]]+\])\s*\)/);
+    if (cosyMatch) {
+      menuCodes = JSON.parse(cosyMatch[1]);
+    } else {
+      const langOptsMatch = code.match(/LANG_OPTS\s*=\s*(\[[^\]]+\])/s);
+      assert.ok(langOptsMatch, `LANG_OPTS or cosyLanguageLabels must exist in ${gameJsPath}`);
+
+      const parsedOpts = vm.runInContext(langOptsMatch[1], sandbox);
+      menuCodes = Array.from(parsedOpts).map(opt => {
+        if (typeof opt === 'object' && opt !== null && opt.code) {
+          return String(opt.code);
+        }
+        return String(COSYLoader.getLangCode(opt));
+      });
+    }
+
+    assert.deepStrictEqual(
+      Array.from(menuCodes),
+      Array.from(gameEntry.learning_languages),
+      `Menu codes in ${gameJsPath} [${menuCodes.join(', ')}] must equal learning_languages [${gameEntry.learning_languages.join(', ')}] in games/index.json for ${gameEntry.id}`
+    );
+  });
+});
+
+test('b3. README.md Languages cell equals upper-cased learning_languages joined with ", " for every game', () => {
+  const games = JSON.parse(fs.readFileSync(indexJsonPath, 'utf8'));
+  const readmePath = path.join(repoRoot, 'README.md');
+  const readmeLines = fs.readFileSync(readmePath, 'utf8').split('\n');
+
+  games.forEach(gameEntry => {
+    const expectedCell = gameEntry.learning_languages.map(c => c.toUpperCase()).join(', ');
+    const folderTag = `\`${gameEntry.folder_path}\``;
+
+    const row = readmeLines.find(line => line.startsWith('|') && line.includes(folderTag));
+    assert.ok(row, `README.md must contain a table row for game folder \`${gameEntry.folder_path}\``);
+
+    const parts = row.split('|').map(p => p.trim());
+    // Table format: | Game | What you do | Players | CEFR levels | Languages | Folder |
+    // parts[0] is '', parts[5] is Languages, parts[6] is Folder
+    const actualCell = parts[5];
+
+    assert.strictEqual(
+      actualCell,
+      expectedCell,
+      `README.md Languages cell for ${gameEntry.id} must equal "${expectedCell}"`
+    );
+  });
+});
+
 test('c. Helper unit test in a node:vm sandbox for cosyLanguageLabels', () => {
   const i18nCode = fs.readFileSync(i18nPath, 'utf8');
   const sandbox = {
