@@ -14,6 +14,9 @@
     let completedBridges = []; // Array of { wordA, wordB, link }
 
     function renderSetup() {
+        if (typeof COSYLoader !== 'undefined' && typeof COSYLoader.clearLevelNote === 'function') {
+            COSYLoader.clearLevelNote();
+        }
         document.getElementById('go-title').textContent = GAME_TITLE;
         const body = document.getElementById('go-body');
         body.innerHTML = `
@@ -38,19 +41,51 @@
             </div>`;
     }
 
+    function humanize(id) {
+        if (!id) return '';
+        var s = String(id).replace(/[-_]/g, ' ');
+        return s.charAt(0).toUpperCase() + s.slice(1);
+    }
+
     window.COSY_GAME = {
         async start() {
+            if (typeof COSYLoader !== 'undefined' && typeof COSYLoader.clearLevelNote === 'function') {
+                COSYLoader.clearLevelNote();
+            }
+            const rawLevelSel = document.getElementById('s-level')?.value;
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
-            const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
+            const level = COSYLoader.getLevelCode(rawLevelSel);
             const mode = document.getElementById('s-mode')?.value || 'all';
             document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Assembling magnetic field...</div>';
 
             await COSYLoader.loadLevelData(lang, level, 'wordlinker');
             COSYGame.init(GAME_ID, lang, level);
 
-            const data = COSYLoader.getGameData(lang);
+            const gen = window.COSYVocab ? await COSYVocab.buildLinkPuzzles(lang, COSYVocab.levelCode(rawLevelSel), {count: 30}) : {ok: false, puzzles: []};
+            COSYLoader.clearLevelNote();
+            if (gen.widened) {
+                COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+            }
 
-            let source = data.wordlinker || [{words:['Bridge','Arch','Pillar','Tower'], odd:'none', link:'Architectural structures', oddReason:''}];
+            const convertedPuzzles = (gen.puzzles || []).map(p => {
+                const isOdd = p.odd !== 'none';
+                const link = humanize(p.theme);
+                let oddReason = '';
+                if (isOdd) {
+                    const template = window.tOr ? window.tOr('hl_reason_belongs', 'It belongs to: {theme}') : 'It belongs to: {theme}';
+                    oddReason = template.replace('{theme}', humanize(p.oddTheme));
+                }
+                return {
+                    words: p.words,
+                    odd: p.odd,
+                    link: link,
+                    oddReason: oddReason
+                };
+            });
+
+            const data = COSYLoader.getGameData(lang);
+            let builtIn = data.wordlinker || [{words:['Bridge','Arch','Pillar','Tower'], odd:'none', link:'Architectural structures', oddReason:''}];
+            let source = [...builtIn, ...convertedPuzzles];
             if (mode === 'odd') source = source.filter(q => q.odd !== 'none');
             if (mode === 'link') source = source.filter(q => q.odd === 'none');
 
@@ -84,7 +119,7 @@
                       <div class="game-label">🧲 ${hasOdd ? 'Spot the unbridgeable odd word out' : 'Tap pairs to forge a magnetic bridge connection'}</div>
 
                       <div class="word-options-grid" id="plank-grid">
-                        ${shuffled.map(w => `<button class="word-plank" data-word="${gameUtils.escapeAttr(w)}" data-odd="${gameUtils.escapeAttr(q.odd)}" data-link="${gameUtils.escapeAttr(q.link)}" data-reason="${gameUtils.escapeAttr(q.oddReason || "")}" data-hasodd="${hasOdd}">${w}</button>`).join('')}
+                        ${shuffled.map(w => `<button class="word-plank" data-word="${gameUtils.escapeAttr(w)}" data-odd="${gameUtils.escapeAttr(q.odd)}" data-link="${gameUtils.escapeAttr(q.link)}" data-reason="${gameUtils.escapeAttr(q.oddReason || "")}" data-hasodd="${hasOdd}">${gameUtils.escapeHtml(w)}</button>`).join('')}
                       </div>
 
                       <div class="feedback-bar" id="wl-fb"></div>
@@ -100,9 +135,9 @@
                       <div class="bridge-segments-container" id="bridge-segments">
                         ${completedBridges.length ? completedBridges.map(b => `
                           <div class="bridge-segment motion-slide-chain">
-                            <span class="bridge-word">${b.wordA}</span>
-                            <span class="bridge-connection-label">🧲 ${b.link}</span>
-                            <span class="bridge-word">${b.wordB}</span>
+                            <span class="bridge-word">${gameUtils.escapeHtml(b.wordA)}</span>
+                            <span class="bridge-connection-label">🧲 ${gameUtils.escapeHtml(b.link)}</span>
+                            <span class="bridge-word">${gameUtils.escapeHtml(b.wordB)}</span>
                           </div>
                         `).join('') : '<div style="color:var(--ink-faint); text-align:center; padding:12px; font-style:italic;">No bridge spans assembled yet. Connect word pairs!</div>'}
                       </div>
@@ -133,7 +168,7 @@
                         el.classList.add('odd-out', 'motion-slide-chain', 'magnetic-snap');
                         if (fb) {
                             fb.className = 'feedback-bar show ok';
-                            fb.innerHTML = `✓ Correct! <strong>${odd}</strong> is the odd word out. ${reason}. The connected ones share: <em>${link}</em>`;
+                            fb.innerHTML = `✓ Correct! <strong>${gameUtils.escapeHtml(odd)}</strong> is the odd word out. ${gameUtils.escapeHtml(reason)}. The connected ones share: <em>${gameUtils.escapeHtml(link)}</em>`;
                         }
                         COSYGame.addScore(10);
                         const scoreEl = document.getElementById('wl-score');
@@ -144,7 +179,7 @@
                         document.querySelectorAll('.word-plank').forEach(b => { if (b.dataset.word === odd) b.classList.add('odd-out'); });
                         if (fb) {
                             fb.className = 'feedback-bar show bad';
-                            fb.innerHTML = `✗ Not quite. The unbridgeable odd word was <strong>${odd}</strong>. ${reason}.`;
+                            fb.innerHTML = `✗ Not quite. The unbridgeable odd word was <strong>${gameUtils.escapeHtml(odd)}</strong>. ${gameUtils.escapeHtml(reason)}.`;
                         }
                         if (window.gameUtils && typeof window.gameUtils.playGameSound === 'function') window.gameUtils.playGameSound('error');
                     }
@@ -158,7 +193,7 @@
                     if (window.gameUtils && typeof window.gameUtils.playGameSound === 'function') window.gameUtils.playGameSound('click');
                     if (fb) {
                         fb.className = 'feedback-bar show ok';
-                        fb.innerHTML = `🧲 Selected <strong>${word}</strong>. Now tap another word to form a magnetic bridge span!`;
+                        fb.innerHTML = `🧲 Selected <strong>${gameUtils.escapeHtml(word)}</strong>. Now tap another word to form a magnetic bridge span!`;
                     }
                 } else {
                     if (selectedPlank.el === el) {
@@ -189,15 +224,15 @@
                         const newSeg = document.createElement('div');
                         newSeg.className = 'bridge-segment motion-slide-chain magnetic-snap';
                         newSeg.innerHTML = `
-                            <span class="bridge-word">${wordA}</span>
-                            <span class="bridge-connection-label">🧲 ${link}</span>
-                            <span class="bridge-word">${wordB}</span>`;
+                            <span class="bridge-word">${gameUtils.escapeHtml(wordA)}</span>
+                            <span class="bridge-connection-label">🧲 ${gameUtils.escapeHtml(link)}</span>
+                            <span class="bridge-word">${gameUtils.escapeHtml(wordB)}</span>`;
                         container.appendChild(newSeg);
                     }
 
                     if (fb) {
                         fb.className = 'feedback-bar show ok';
-                        fb.innerHTML = `✓ Magnetic link forged! <strong>${wordA}</strong> 🧲 <strong>${wordB}</strong> (Link: <em>${link}</em>)`;
+                        fb.innerHTML = `✓ Magnetic link forged! <strong>${gameUtils.escapeHtml(wordA)}</strong> 🧲 <strong>${gameUtils.escapeHtml(wordB)}</strong> (Link: <em>${gameUtils.escapeHtml(link)}</em>)`;
                     }
 
                     COSYGame.addScore(10);
@@ -233,9 +268,9 @@
                       <div class="bridge-segments-container">
                         ${completedBridges.length ? completedBridges.map(b => `
                           <div class="bridge-segment">
-                            <span class="bridge-word">${b.wordA}</span>
-                            <span class="bridge-connection-label">🧲 ${b.link}</span>
-                            <span class="bridge-word">${b.wordB}</span>
+                            <span class="bridge-word">${gameUtils.escapeHtml(b.wordA)}</span>
+                            <span class="bridge-connection-label">🧲 ${gameUtils.escapeHtml(b.link)}</span>
+                            <span class="bridge-word">${gameUtils.escapeHtml(b.wordB)}</span>
                           </div>
                         `).join('') : 'No bridge spans forged.'}
                       </div>
