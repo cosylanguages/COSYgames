@@ -70,6 +70,29 @@
         return promise;
     }
 
+    function hasMarkupChars(entry) {
+        if (!entry) return true;
+        var checkStr = function(s) {
+            return typeof s === 'string' && (s.indexOf('<') !== -1 || s.indexOf('>') !== -1);
+        };
+        if (checkStr(entry.word) || checkStr(entry.theme)) return true;
+        if (Array.isArray(entry.definitions)) {
+            for (var i = 0; i < entry.definitions.length; i++) {
+                var d = entry.definitions[i];
+                var dText = typeof d === 'string' ? d : (d && d.text);
+                if (checkStr(dText)) return true;
+            }
+        }
+        if (Array.isArray(entry.examples)) {
+            for (var j = 0; j < entry.examples.length; j++) {
+                var ex = entry.examples[j];
+                var exText = typeof ex === 'string' ? ex : (ex && ex.text);
+                if (checkStr(exText)) return true;
+            }
+        }
+        return false;
+    }
+
     function adaptEntry(entry) {
         var adapted = {
             id: entry.id,
@@ -114,6 +137,7 @@
 
                 for (var j = 0; j < rawEntries.length; j++) {
                     var item = rawEntries[j];
+                    if (hasMarkupChars(item)) continue;
                     var itemLvl = item.level ? item.level.toUpperCase() : 'A1';
                     if (itemLvl === 'A0') itemLvl = 'A1';
 
@@ -259,10 +283,11 @@
         return promise;
     }
 
-    function shuffleArray(arr) {
+    function shuffleArray(arr, rngFn) {
         var copy = arr.slice();
+        var r = typeof rngFn === 'function' ? rngFn : Math.random;
         for (var i = copy.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
+            var j = Math.floor(r() * (i + 1));
             var temp = copy[i];
             copy[i] = copy[j];
             copy[j] = temp;
@@ -426,7 +451,7 @@
                         otherFiles.push(fPath);
                     }
                 }
-                var shuffledFiles = shuffleArray(concreteFiles).concat(shuffleArray(otherFiles));
+                var shuffledFiles = shuffleArray(concreteFiles, opts.rng).concat(shuffleArray(otherFiles, opts.rng));
                 var fileIndex = 0;
 
                 var processBatches = function() {
@@ -456,7 +481,7 @@
                                 successfulFilesCount++;
                                 for (var e = 0; e < res.entries.length; e++) {
                                     var item = res.entries[e];
-                                    if (!item || !item.id) continue;
+                                    if (!item || !item.id || hasMarkupChars(item)) continue;
 
                                     var passesEmoji = !needEmoji || (item.emoji && item.emoji !== '❓');
                                     var passesForm = !forms || (forms.indexOf(item.form) !== -1);
@@ -563,7 +588,7 @@
             var set = new Set();
             for (var i = 0; i < result.data.length; i++) {
                 var entry = result.data[i];
-                if (entry && entry.word && typeof entry.word === 'string') {
+                if (entry && entry.word && typeof entry.word === 'string' && !hasMarkupChars(entry)) {
                     set.add(entry.word.toLowerCase());
                 }
             }
@@ -573,13 +598,181 @@
         });
     }
 
+    function buildLinkPuzzles(lang, level, opts) {
+        opts = opts || {};
+        var count = typeof opts.count === 'number' ? opts.count : 30;
+        var rng = typeof opts.rng === 'function' ? opts.rng : Math.random;
+        var maxFiles = typeof opts.maxFiles === 'number' ? opts.maxFiles : 8;
+
+        return new Promise(function(resolve) {
+            ensureFull(lang, level, { needEmoji: false, min: 60, forms: ['noun'], maxFiles: maxFiles, rng: rng })
+                .then(function(res) {
+                    if (!res || !res.ok) {
+                        resolve({ ok: false, puzzles: [], widened: false });
+                        return;
+                    }
+
+                    var rawPool = (typeof window !== 'undefined' && window.vocabularyData && window.vocabularyData[lang]) || [];
+                    var widened = Boolean(res.widened);
+
+                    var vagueThemes = ['general','common','express','phrase','misc','other','adverb','connector','descriptor','action','verb','number'];
+
+                    var cleanPool = [];
+                    for (var i = 0; i < rawPool.length; i++) {
+                        var entry = rawPool[i];
+                        if (!entry || typeof entry.word !== 'string') continue;
+                        var w = entry.word;
+                        if (w.length < 3 || w.length > 14) continue;
+                        if (/\s/.test(w)) continue;
+                        if (/^-+$/.test(w)) continue;
+                        if (/[<>&"`]/.test(w)) continue;
+
+                        if (!entry.theme || typeof entry.theme !== 'string') continue;
+                        var tLower = entry.theme.toLowerCase();
+                        var isVague = vagueThemes.some(function(v) { return tLower.indexOf(v) !== -1; });
+                        if (isVague) continue;
+
+                        cleanPool.push(entry);
+                    }
+
+                    var themeMap = {};
+                    for (var j = 0; j < cleanPool.length; j++) {
+                        var item = cleanPool[j];
+                        var tKey = item.theme.toLowerCase();
+                        if (!themeMap[tKey]) {
+                            themeMap[tKey] = {
+                                id: item.theme,
+                                words: [],
+                                seenWords: {}
+                            };
+                        }
+                        var wLower = item.word.toLowerCase();
+                        if (!themeMap[tKey].seenWords[wLower]) {
+                            themeMap[tKey].seenWords[wLower] = true;
+                            themeMap[tKey].words.push({ word: item.word, form: item.form });
+                        }
+                    }
+
+                    var puzzles = [];
+                    var seenPuzzleKeys = {};
+
+                    function shuffleRng(arr) {
+                        var copy = arr.slice();
+                        for (var k = copy.length - 1; k > 0; k--) {
+                            var idx = Math.floor(rng() * (k + 1));
+                            var temp = copy[k];
+                            copy[k] = copy[idx];
+                            copy[idx] = temp;
+                        }
+                        return copy;
+                    }
+
+                    function getPuzzleKey(words) {
+                        var sorted = words.map(function(w) { return w.toLowerCase(); }).sort();
+                        return sorted.join('|');
+                    }
+
+                    var themeKeys = Object.keys(themeMap);
+                    var attempts = 0;
+                    var maxAttempts = 1000;
+
+                    function tryGeneratePuzzle(isOdd) {
+                        var shuffledThemes = shuffleRng(themeKeys);
+
+                        for (var tIdx = 0; tIdx < shuffledThemes.length; tIdx++) {
+                            var tKey = shuffledThemes[tIdx];
+                            var themeObj = themeMap[tKey];
+                            if (!themeObj) continue;
+
+                            if (!isOdd) {
+                                if (themeObj.words.length >= 4) {
+                                    var chosenWords = shuffleRng(themeObj.words).slice(0, 4).map(function(obj) { return obj.word; });
+                                    var key = getPuzzleKey(chosenWords);
+                                    if (!seenPuzzleKeys[key]) {
+                                        seenPuzzleKeys[key] = true;
+                                        return {
+                                            words: shuffleRng(chosenWords),
+                                            odd: 'none',
+                                            theme: themeObj.id,
+                                            oddTheme: null,
+                                            generated: true
+                                        };
+                                    }
+                                }
+                            } else {
+                                if (themeObj.words.length >= 3) {
+                                    var otherThemes = shuffledThemes.filter(function(otherKey) { return otherKey !== tKey; });
+                                    for (var oIdx = 0; oIdx < otherThemes.length; oIdx++) {
+                                        var t2Key = otherThemes[oIdx];
+                                        var t2Obj = themeMap[t2Key];
+                                        if (!t2Obj || t2Obj.words.length === 0) continue;
+
+                                        var candidateOddWords = t2Obj.words.filter(function(wObj) {
+                                            return !themeObj.seenWords[wObj.word.toLowerCase()];
+                                        });
+                                        if (candidateOddWords.length === 0) continue;
+
+                                        var chosen3 = shuffleRng(themeObj.words).slice(0, 3);
+                                        var chosen3Words = chosen3.map(function(obj) { return obj.word; });
+
+                                        var targetForm = chosen3[0] ? chosen3[0].form : null;
+                                        var matchingFormOdd = candidateOddWords.filter(function(wObj) {
+                                            return targetForm && wObj.form === targetForm;
+                                        });
+                                        var selectedOddObj = matchingFormOdd.length > 0 ?
+                                            shuffleRng(matchingFormOdd)[0] : shuffleRng(candidateOddWords)[0];
+
+                                        var fourWords = chosen3Words.concat([selectedOddObj.word]);
+                                        var pKey = getPuzzleKey(fourWords);
+                                        if (!seenPuzzleKeys[pKey]) {
+                                            seenPuzzleKeys[pKey] = true;
+                                            return {
+                                                words: shuffleRng(fourWords),
+                                                odd: selectedOddObj.word,
+                                                theme: themeObj.id,
+                                                oddTheme: t2Obj.id,
+                                                generated: true
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        return null;
+                    }
+
+                    while (puzzles.length < count && attempts < maxAttempts) {
+                        attempts++;
+                        var wantOdd = (puzzles.length % 2 === 1);
+
+                        var puzzle = tryGeneratePuzzle(wantOdd) || tryGeneratePuzzle(!wantOdd);
+                        if (puzzle) {
+                            puzzles.push(puzzle);
+                        } else {
+                            break;
+                        }
+                    }
+
+                    resolve({
+                        ok: true,
+                        puzzles: puzzles,
+                        widened: widened
+                    });
+                })
+                .catch(function() {
+                    resolve({ ok: false, puzzles: [], widened: false });
+                });
+        });
+    }
+
     var COSYVocab = {
         ensure: ensure,
         ensureFull: ensureFull,
         wordSet: wordSet,
         levelCode: levelCode,
         joinArticle: joinArticle,
-        isConcreteObjectTheme: isConcreteObjectTheme
+        isConcreteObjectTheme: isConcreteObjectTheme,
+        buildLinkPuzzles: buildLinkPuzzles
     };
 
     if (typeof window !== 'undefined') {

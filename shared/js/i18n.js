@@ -67,7 +67,8 @@
       ui_limited_level: 'Limited content at this level in this language: nearby levels are shown too.',
       hs_prompt_plural: 'What is the plural of {word}?',
       hs_prompt_define: 'Define the word {word}.',
-      hs_prompt_sentence: 'Use {word} in a sentence.'
+      hs_prompt_sentence: 'Use {word} in a sentence.',
+      hl_reason_belongs: 'It belongs to: {theme}'
     },
     fr: {
       ecosystem_strip: 'ÉCOSYSTÈME COSY :',
@@ -134,7 +135,8 @@
       ui_limited_level: 'Contenu limité à ce niveau dans cette langue : des niveaux proches sont aussi proposés.',
       hs_prompt_plural: 'Quel est le pluriel de {word} ?',
       hs_prompt_define: 'Définissez le mot {word}.',
-      hs_prompt_sentence: 'Utilisez {word} dans une phrase.'
+      hs_prompt_sentence: 'Utilisez {word} dans une phrase.',
+      hl_reason_belongs: 'Il appartient à : {theme}'
     },
     es: {
       ecosystem_strip: 'ECOSISTEMA COSY:',
@@ -201,7 +203,8 @@
       ui_limited_level: 'Contenido limitado en este nivel y idioma: también se muestran niveles cercanos.',
       hs_prompt_plural: '¿Cuál es el plural de {word}?',
       hs_prompt_define: 'Define la palabra {word}.',
-      hs_prompt_sentence: 'Usa {word} en una oración.'
+      hs_prompt_sentence: 'Usa {word} en una oración.',
+      hl_reason_belongs: 'Pertenece a: {theme}'
     },
     de: {
       ecosystem_strip: 'COSY-ÖKOSYSTEM:',
@@ -268,7 +271,8 @@
       ui_limited_level: 'Begrenzte Inhalte auf dieser Stufe in dieser Sprache: auch benachbarte Stufen werden gezeigt.',
       hs_prompt_plural: 'Wie lautet der Plural von {word}?',
       hs_prompt_define: 'Definiere das Wort {word}.',
-      hs_prompt_sentence: 'Verwende {word} in einem Satz.'
+      hs_prompt_sentence: 'Verwende {word} in einem Satz.',
+      hl_reason_belongs: 'Es gehört zu: {theme}'
     },
     ru: {
       ecosystem_strip: 'ЭКОСИСТЕМА COSY:',
@@ -335,7 +339,8 @@
       ui_limited_level: 'На этом уровне на этом языке материалов мало: показаны также близкие уровни.',
       hs_prompt_plural: 'Какое множественное число у слова {word}?',
       hs_prompt_define: 'Дайте определение слова {word}.',
-      hs_prompt_sentence: 'Составьте предложение со словом {word}.'
+      hs_prompt_sentence: 'Составьте предложение со словом {word}.',
+      hl_reason_belongs: 'Относится к: {theme}'
     },
     it: {
       ecosystem_strip: 'SISTEMA COSY:',
@@ -402,7 +407,8 @@
       ui_limited_level: 'Contenuti limitati a questo livello in questa lingua: vengono mostrati anche livelli vicini.',
       hs_prompt_plural: 'Qual è il plurale di {word}?',
       hs_prompt_define: 'Definisci la parola {word}.',
-      hs_prompt_sentence: 'Usa {word} in una frase.'
+      hs_prompt_sentence: 'Usa {word} in una frase.',
+      hl_reason_belongs: 'Appartiene a: {theme}'
     },
     el: {
       ecosystem_strip: 'ΟΙΚΟΣΥΣΤΗΜΑ COSY:',
@@ -469,7 +475,8 @@
       ui_limited_level: 'Περιορισμένο περιεχόμενο σε αυτό το επίπεδο σε αυτή τη γλώσσα: εμφανίζονται και κοντινά επίπεδα.',
       hs_prompt_plural: 'Ποιος είναι ο πληθυντικός του {word};',
       hs_prompt_define: 'Ορίστε τη λέξη {word}.',
-      hs_prompt_sentence: 'Χρησιμοποιήστε τη λέξη {word} σε μια πρόταση.'
+      hs_prompt_sentence: 'Χρησιμοποιήστε τη λέξη {word} σε μια πρόταση.',
+      hl_reason_belongs: 'Ανήκει σε: {theme}'
     }
   };
 

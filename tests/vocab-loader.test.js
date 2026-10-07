@@ -136,12 +136,12 @@ test('f. levelCode("Starter (A1)") === "A1", levelCode("A2") === "A2"', () => {
     assert.strictEqual(sandbox.window.COSYVocab.levelCode('Proficiency (C2)'), 'C2');
 });
 
-test('g. Opt-in guarantee: exactly emoji-odyssey, object-quest, hot-seat, identity-mystery and last-letter game.js reference COSYVocab', () => {
+test('g. Opt-in guarantee: exactly emoji-odyssey, object-quest, hot-seat, identity-mystery, last-letter and word-linker game.js reference COSYVocab', () => {
     const gamesDir = path.join(__dirname, '..');
     const files = fs.readdirSync(gamesDir, { recursive: true });
     const gameJsFiles = files.filter(f => f.endsWith('game.js'));
 
-    const expectedGames = ['emoji-odyssey', 'hot-seat', 'identity-mystery', 'last-letter', 'object-quest'];
+    const expectedGames = ['emoji-odyssey', 'hot-seat', 'identity-mystery', 'last-letter', 'object-quest', 'word-linker'];
     const foundGames = [];
 
     for (const relFile of gameJsFiles) {
@@ -443,4 +443,165 @@ test('ensureFull - e. index.json failure -> {ok:false, source:"unavailable"} wit
     assert.strictEqual(resPartial.ok, true);
     assert.strictEqual(resPartial.count, 1);
     assert.strictEqual(sandboxPartial.window.vocabularyData.es[0].word, 'sun');
+});
+
+test('PART D a: buildLinkPuzzles returns valid puzzles with distinct words, correct themes, no markup/vague themes, deterministic with seeded rng', async () => {
+    const indexMap = {
+        'id1': 'a0_a1/animals.json',
+        'id2': 'a0_a1/food.json',
+        'id3': 'a0_a1/vague.json'
+    };
+
+    const animalsFile = [
+        { id: '1', word: 'dog', level: 'A1', form: 'noun', theme: 'animals' },
+        { id: '2', word: 'cat', level: 'A1', form: 'noun', theme: 'animals' },
+        { id: '3', word: 'bird', level: 'A1', form: 'noun', theme: 'animals' },
+        { id: '4', word: 'fish', level: 'A1', form: 'noun', theme: 'animals' },
+        { id: '5', word: 'lion', level: 'A1', form: 'noun', theme: 'animals' }
+    ];
+
+    const foodFile = [
+        { id: '6', word: 'bread', level: 'A1', form: 'noun', theme: 'food_drink' },
+        { id: '7', word: 'apple', level: 'A1', form: 'noun', theme: 'food_drink' },
+        { id: '8', word: 'cheese', level: 'A1', form: 'noun', theme: 'food_drink' },
+        { id: '9', word: 'milk', level: 'A1', form: 'noun', theme: 'food_drink' },
+        { id: '10', word: 'bad<word>', level: 'A1', form: 'noun', theme: 'food_drink' },
+        { id: '11', word: 'a sentence with spaces', level: 'A1', form: 'noun', theme: 'food_drink' }
+    ];
+
+    const vagueFile = [
+        { id: '12', word: 'thing', level: 'A1', form: 'noun', theme: 'general' },
+        { id: '13', word: 'stuff', level: 'A1', form: 'noun', theme: 'common_nouns' },
+        { id: '14', word: 'word', level: 'A1', form: 'noun', theme: 'expressions' }
+    ];
+
+    function createSeededRng(seed) {
+        return function() {
+            seed = (seed * 9301 + 49297) % 233280;
+            return seed / 233280;
+        };
+    }
+
+    function makeSandbox() {
+        return createSandbox(async (url) => {
+            if (url.endsWith('index.json')) return { ok: true, json: async () => indexMap };
+            if (url.includes('animals.json')) return { ok: true, json: async () => animalsFile };
+            if (url.includes('food.json')) return { ok: true, json: async () => foodFile };
+            if (url.includes('vague.json')) return { ok: true, json: async () => vagueFile };
+            return { ok: false };
+        });
+    }
+
+    const sb1 = makeSandbox();
+    const rng1 = createSeededRng(42);
+    const res1 = await sb1.window.COSYVocab.buildLinkPuzzles('en', 'A1', { count: 10, rng: rng1 });
+
+    assert.strictEqual(res1.ok, true);
+    assert.ok(res1.puzzles.length > 0);
+
+    const seen4WordSets = new Set();
+    for (const p of res1.puzzles) {
+        assert.strictEqual(p.words.length, 4, 'Puzzle must have exactly 4 words');
+        const set4 = new Set(p.words.map(w => w.toLowerCase()));
+        assert.strictEqual(set4.size, 4, 'All 4 words in a puzzle must be distinct');
+
+        for (const w of p.words) {
+            assert.ok(!w.includes('<'), 'Forbidden markup characters excluded');
+            assert.ok(!w.includes(' '), 'Multi-token words excluded');
+            assert.notStrictEqual(w, 'thing');
+            assert.notStrictEqual(w, 'stuff');
+        }
+
+        assert.notStrictEqual(p.theme, 'general');
+        assert.notStrictEqual(p.theme, 'common_nouns');
+        assert.notStrictEqual(p.theme, 'expressions');
+
+        if (p.odd !== 'none') {
+            assert.ok(p.words.includes(p.odd), 'Odd word must be one of the 4 words');
+            assert.ok(p.oddTheme, 'Odd puzzle must specify oddTheme');
+            assert.notStrictEqual(p.theme, p.oddTheme, 'Odd word theme must be different from puzzle theme');
+
+            const animalsWords = animalsFile.map(x => x.word.toLowerCase());
+            const foodWords = foodFile.map(x => x.word.toLowerCase());
+            if (p.theme === 'animals') {
+                assert.ok(!animalsWords.includes(p.odd.toLowerCase()), 'Odd word cannot belong to main theme animals');
+            } else if (p.theme === 'food_drink') {
+                assert.ok(!foodWords.includes(p.odd.toLowerCase()), 'Odd word cannot belong to main theme food_drink');
+            }
+        }
+
+        const key = Array.from(set4).sort().join('|');
+        assert.ok(!seen4WordSets.has(key), 'No duplicate 4-word sets');
+        seen4WordSets.add(key);
+    }
+
+    const sb2 = makeSandbox();
+    const rng2 = createSeededRng(42);
+    const res2 = await sb2.window.COSYVocab.buildLinkPuzzles('en', 'A1', { count: 10, rng: rng2 });
+    assert.deepStrictEqual(JSON.parse(JSON.stringify(res1.puzzles)), JSON.parse(JSON.stringify(res2.puzzles)), 'Same seed produces identical puzzles');
+});
+
+test('PART D b: Failure of ensureFull -> resolves { ok: false, puzzles: [] } without throwing', async () => {
+    const sandbox = createSandbox(async () => ({ ok: false, status: 500 }));
+    const res = await sandbox.window.COSYVocab.buildLinkPuzzles('es', 'A1');
+    assert.strictEqual(res.ok, false);
+    assert.strictEqual(res.puzzles.length, 0);
+    assert.strictEqual(res.widened, false);
+});
+
+test('PART D c: Defensive filter drops entries containing <script> or markup characters in ensure, ensureFull and wordSet', async () => {
+    const rawData = [
+        { id: '1', word: 'apple', level: 'A1', form: 'noun', theme: 'food', definitions: ['<script>alert(1)</script>'] },
+        { id: '2', word: 'banana', level: 'A1', form: 'noun', theme: 'food', definitions: ['a yellow fruit'] },
+        { id: '3', word: 'cherry', level: 'A1', form: 'noun', theme: 'food', definitions: ['a red fruit'] },
+        { id: '4', word: 'date', level: 'A1', form: 'noun', theme: 'food', definitions: ['a sweet fruit'] },
+        { id: '5', word: 'elderberry', level: 'A1', form: 'noun', theme: 'food', definitions: ['a dark berry'] }
+    ];
+
+    const indexMap = { 'id1': 'a0_a1/food.json' };
+
+    const sandbox = createSandbox(async (url) => {
+        if (url.endsWith('search-index.json')) return { ok: true, json: async () => rawData };
+        if (url.endsWith('index.json')) return { ok: true, json: async () => indexMap };
+        if (url.endsWith('food.json')) return { ok: true, json: async () => rawData };
+        return { ok: false };
+    });
+
+    const resEnsure = await sandbox.window.COSYVocab.ensure('en', 'A1', { min: 4 });
+    assert.strictEqual(resEnsure.ok, true);
+    assert.strictEqual(sandbox.window.vocabularyData.en.length, 4);
+    assert.strictEqual(sandbox.window.vocabularyData.en.some(e => e.word === 'apple'), false);
+    assert.strictEqual(sandbox.window.vocabularyData.en[0].word, 'banana');
+
+    const sandbox2 = createSandbox(async (url) => {
+        if (url.endsWith('index.json')) return { ok: true, json: async () => indexMap };
+        if (url.endsWith('food.json')) return { ok: true, json: async () => rawData };
+        return { ok: false };
+    });
+    const resEnsureFull = await sandbox2.window.COSYVocab.ensureFull('en', 'A1', { min: 4 });
+    assert.strictEqual(resEnsureFull.ok, true);
+    assert.strictEqual(sandbox2.window.vocabularyData.en.length, 4);
+    assert.strictEqual(sandbox2.window.vocabularyData.en.some(e => e.word === 'apple'), false);
+    assert.strictEqual(sandbox2.window.vocabularyData.en[0].word, 'banana');
+
+    const sandbox3 = createSandbox(async (url) => {
+        if (url.endsWith('search-index.json')) return { ok: true, json: async () => rawData };
+        return { ok: false };
+    });
+    const set = await sandbox3.window.COSYVocab.wordSet('en');
+    assert.ok(set.has('banana'));
+    assert.ok(!set.has('apple'));
+});
+
+test('PART D e: hl_reason_belongs exists across all 7 languages and contains {theme}', () => {
+    const i18nCode = fs.readFileSync(path.join(__dirname, '../shared/js/i18n.js'), 'utf8');
+    const sandbox = createSandbox();
+    vm.runInContext(i18nCode, sandbox);
+
+    const languages = ['en', 'fr', 'es', 'de', 'it', 'ru', 'el'];
+    for (const lang of languages) {
+        const text = sandbox.window.tOr('hl_reason_belongs', '', lang);
+        assert.notStrictEqual(text, '', `Key hl_reason_belongs missing in ${lang}`);
+        assert.ok(text.includes('{theme}'), `Translation for hl_reason_belongs in ${lang} must contain {theme}`);
+    }
 });

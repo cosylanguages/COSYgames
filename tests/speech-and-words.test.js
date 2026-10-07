@@ -153,12 +153,12 @@ test('d. wordSet(): with a stub fetch -> Set of lower-cased words; failure -> nu
     assert.strictEqual(failSet, null);
 });
 
-test('e. Opt-in guarantee: exactly emoji-odyssey, object-quest, hot-seat, identity-mystery and last-letter game.js reference COSYVocab', () => {
+test('e. Opt-in guarantee: exactly emoji-odyssey, object-quest, hot-seat, identity-mystery, last-letter and word-linker game.js reference COSYVocab', () => {
     const gamesDir = path.join(__dirname, '..');
     const files = fs.readdirSync(gamesDir, { recursive: true });
     const gameJsFiles = files.filter(f => f.endsWith('game.js'));
 
-    const expectedGames = ['emoji-odyssey', 'hot-seat', 'identity-mystery', 'last-letter', 'object-quest'];
+    const expectedGames = ['emoji-odyssey', 'hot-seat', 'identity-mystery', 'last-letter', 'object-quest', 'word-linker'];
     const foundGames = [];
 
     for (const relFile of gameJsFiles) {
