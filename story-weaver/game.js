@@ -6,7 +6,7 @@
     const GAME_ID = 'story-weaver';
     const GAME_TITLE = 'Story Weaver 📖';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels(["en"]);
 
     // --- Dynamic Curricula Database (Grammar, Vocabulary themes, Connectors) ---
     const GRAMMAR_DB = {
@@ -258,6 +258,7 @@
                 <select class="styled-sel" id="s-lang">
                   ${LANG_OPTS.map(l => `<option value="${l}">${l}</option>`).join('')}
                 </select>
+                <p class="setup-note" data-i18n="sw_english_only">Story Weaver currently works in English only: its grammar rules, themes and connectors are not available in other languages yet.</p>
               </div>
 
               <div class="setup-field" style="display:flex; align-items:center; gap:10px; margin-top:1.5rem; background:rgba(0,0,0,0.02); padding:12px; border-radius:12px; border:1px solid var(--border);">

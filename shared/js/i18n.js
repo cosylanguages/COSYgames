@@ -68,7 +68,8 @@
       hs_prompt_plural: 'What is the plural of {word}?',
       hs_prompt_define: 'Define the word {word}.',
       hs_prompt_sentence: 'Use {word} in a sentence.',
-      hl_reason_belongs: 'It belongs to: {theme}'
+      hl_reason_belongs: 'It belongs to: {theme}',
+      sw_english_only: 'Story Weaver currently works in English only: its grammar rules, themes and connectors are not available in other languages yet.'
     },
     fr: {
       ecosystem_strip: 'ÉCOSYSTÈME COSY :',
@@ -136,7 +137,8 @@
       hs_prompt_plural: 'Quel est le pluriel de {word} ?',
       hs_prompt_define: 'Définissez le mot {word}.',
       hs_prompt_sentence: 'Utilisez {word} dans une phrase.',
-      hl_reason_belongs: 'Il appartient à : {theme}'
+      hl_reason_belongs: 'Il appartient à : {theme}',
+      sw_english_only: 'Story Weaver fonctionne pour l’instant en anglais uniquement : ses règles de grammaire, thèmes et connecteurs ne sont pas encore disponibles dans d’autres langues.'
     },
     es: {
       ecosystem_strip: 'ECOSISTEMA COSY:',
@@ -204,7 +206,8 @@
       hs_prompt_plural: '¿Cuál es el plural de {word}?',
       hs_prompt_define: 'Define la palabra {word}.',
       hs_prompt_sentence: 'Usa {word} en una oración.',
-      hl_reason_belongs: 'Pertenece a: {theme}'
+      hl_reason_belongs: 'Pertenece a: {theme}',
+      sw_english_only: 'Story Weaver funciona por ahora solo en inglés: sus reglas gramaticales, temas y conectores aún no están disponibles en otros idiomas.'
     },
     de: {
       ecosystem_strip: 'COSY-ÖKOSYSTEM:',
@@ -272,7 +275,8 @@
       hs_prompt_plural: 'Wie lautet der Plural von {word}?',
       hs_prompt_define: 'Definiere das Wort {word}.',
       hs_prompt_sentence: 'Verwende {word} in einem Satz.',
-      hl_reason_belongs: 'Es gehört zu: {theme}'
+      hl_reason_belongs: 'Es gehört zu: {theme}',
+      sw_english_only: 'Story Weaver funktioniert derzeit nur auf Englisch: Grammatikregeln, Themen und Konnektoren sind in anderen Sprachen noch nicht verfügbar.'
     },
     ru: {
       ecosystem_strip: 'ЭКОСИСТЕМА COSY:',
@@ -340,7 +344,8 @@
       hs_prompt_plural: 'Какое множественное число у слова {word}?',
       hs_prompt_define: 'Дайте определение слова {word}.',
       hs_prompt_sentence: 'Составьте предложение со словом {word}.',
-      hl_reason_belongs: 'Относится к: {theme}'
+      hl_reason_belongs: 'Относится к: {theme}',
+      sw_english_only: 'Story Weaver пока работает только на английском: грамматические правила, темы и связки ещё недоступны на других языках.'
     },
     it: {
       ecosystem_strip: 'SISTEMA COSY:',
@@ -408,7 +413,8 @@
       hs_prompt_plural: 'Qual è il plurale di {word}?',
       hs_prompt_define: 'Definisci la parola {word}.',
       hs_prompt_sentence: 'Usa {word} in una frase.',
-      hl_reason_belongs: 'Appartiene a: {theme}'
+      hl_reason_belongs: 'Appartiene a: {theme}',
+      sw_english_only: 'Story Weaver funziona per ora solo in inglese: regole grammaticali, temi e connettori non sono ancora disponibili in altre lingue.'
     },
     el: {
       ecosystem_strip: 'ΟΙΚΟΣΥΣΤΗΜΑ COSY:',
@@ -476,7 +482,8 @@
       hs_prompt_plural: 'Ποιος είναι ο πληθυντικός του {word};',
       hs_prompt_define: 'Ορίστε τη λέξη {word}.',
       hs_prompt_sentence: 'Χρησιμοποιήστε τη λέξη {word} σε μια πρόταση.',
-      hl_reason_belongs: 'Ανήκει σε: {theme}'
+      hl_reason_belongs: 'Ανήκει σε: {theme}',
+      sw_english_only: 'Το Story Weaver λειτουργεί προς το παρόν μόνο στα αγγλικά: οι γραμματικοί κανόνες, τα θέματα και οι σύνδεσμοι δεν είναι ακόμη διαθέσιμα σε άλλες γλώσσες.'
     }
   };
 

@@ -53,6 +53,12 @@
   border-radius: 6px;
 }
 
+.setup-note {
+  font-size: .9rem;
+  color: var(--ink-soft);
+  margin: .25rem 0 0;
+}
+
 body.cosy-game-theme {
   margin: 0;
   padding: 0;

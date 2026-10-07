@@ -28,7 +28,7 @@ Whether you are a student building oral fluency or a teacher facilitating commun
 | **Critic's Corner** | A famous quote appears. What does it mean to you? Deep discussion for advanced levels. | Solo / Group | B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `critics-corner/` |
 | **100 Questions** | Pick a deck and answer deep, funny, or philosophical questions. Perfect for speaking practice. | Solo / Group | A2, B1, B2, C1, C2 | EN, FR, RU | `100-questions/` |
 | **Story Chain** | Add one sentence at a time to build a collaborative story with prompts and connectors. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `story-chain/` |
-| **Story Weaver** | Weave target words into a coherent narrative. Turn vocabulary study into creative writing. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, IT, RU, EL | `story-weaver/` |
+| **Story Weaver** | Weave target words into a coherent narrative. Turn vocabulary study into creative writing. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN | `story-weaver/` |
 | **Hot Seat** | One player faces away from the board while team members explain target words without saying them. | Solo / Group | A1, A2, B1, B2, C1, C2 | EN, FR, ES, DE, IT, RU, EL | `hot-seat/` |
 | **This or That?** | Choose between two intriguing options and justify your choice. | Solo / Group | A0, A1, A2, B1, B2 | EN, FR, IT, RU, EL | `this-or-that/` |
 
