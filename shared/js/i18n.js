@@ -507,6 +507,10 @@
         }
       }
     });
+
+    if (typeof window.applyGameStrings === 'function') {
+      window.applyGameStrings(langCode);
+    }
   };
 
   window.getI18nText = function(key, lang) {
@@ -585,7 +589,10 @@
         if (!m.addedNodes) continue;
         for (const node of m.addedNodes) {
           if (node.nodeType === 1) {
-            if (node.hasAttribute('data-i18n') || node.querySelector('[data-i18n]')) {
+            if (
+              node.hasAttribute('data-i18n') || node.querySelector('[data-i18n]') ||
+              node.hasAttribute('data-gs') || node.querySelector('[data-gs]')
+            ) {
               shouldTranslate = true;
               break;
             }

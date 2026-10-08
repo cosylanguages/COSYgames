@@ -71,6 +71,13 @@ Before submitting a Pull Request, please ensure the following:
    - Add a matching game metadata entry to `games/index.json`.
    - Update the total game count in the hub title, hero headline, and meta tags (validated by `tests/hub.test.js`).
 
-3. **Verify Relative Links & Media**:
+3. **Translating Game Text**:
+   - Game-specific interface strings reside in `i18n/games/<game-id>.js`.
+   - Use `scripts/translations-export.js <lang> [--game <id>]` to export strings for teacher review in CSV format.
+   - Teachers can review and update translations in `translations/export/<lang>.csv` and mark status as `reviewed`.
+   - Use `scripts/translations-import.js <file.csv>` to import reviewed translations and automatically update `i18n/games/<game-id>.js`.
+   - Run `node scripts/translations-report.js` to inspect coverage reports across games and languages.
+
+4. **Verify Relative Links & Media**:
    - Ensure all relative CSS, JS, and image references point to valid paths.
    - Validate responsive layout on both desktop and mobile screens.
