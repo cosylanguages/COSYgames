@@ -605,3 +605,172 @@ test('PART D e: hl_reason_belongs exists across all 7 languages and contains {th
         assert.ok(text.includes('{theme}'), `Translation for hl_reason_belongs in ${lang} must contain {theme}`);
     }
 });
+
+test('Word Linker PART C a: COSYVocab.themeFamily maps correctly to coherent families and unchanged non-coherent themes', () => {
+    const sandbox = createSandbox();
+    const tf = sandbox.window.COSYVocab.themeFamily;
+
+    assert.strictEqual(tf('food_drink'), 'food');
+    assert.strictEqual(tf('food'), 'food');
+    assert.strictEqual(tf('drink'), 'food');
+    assert.strictEqual(tf('meal'), 'food');
+    assert.strictEqual(tf('cooking'), 'food');
+
+    assert.strictEqual(tf('body_health'), 'body');
+    assert.strictEqual(tf('health'), 'body');
+    assert.strictEqual(tf('medical'), 'body');
+
+    assert.strictEqual(tf('house_furniture'), 'house');
+    assert.strictEqual(tf('housing'), 'house');
+    assert.strictEqual(tf('kitchen'), 'house');
+
+    assert.strictEqual(tf('clothes'), 'clothes');
+    assert.strictEqual(tf('clothing'), 'clothes');
+    assert.strictEqual(tf('fashion'), 'clothes');
+
+    assert.strictEqual(tf('animals'), 'animals');
+    assert.strictEqual(tf('pets'), 'animals');
+
+    assert.strictEqual(tf('nature'), 'nature');
+    assert.strictEqual(tf('weather'), 'nature');
+
+    assert.strictEqual(tf('transport'), 'transport');
+    assert.strictEqual(tf('vehicle'), 'transport');
+
+    assert.strictEqual(tf('technology'), 'tech');
+
+    // Non-coherent themes returned unchanged
+    assert.strictEqual(tf('school'), 'school');
+    assert.strictEqual(tf('work'), 'work');
+    assert.strictEqual(tf('jobs'), 'jobs');
+    assert.strictEqual(tf('general'), 'general');
+    assert.strictEqual(tf('common_nouns'), 'common_nouns');
+});
+
+test('Word Linker PART C b: No generated puzzle ever contains a word from a school/work/jobs/general/common_nouns theme', async () => {
+    const indexMap = {
+        'id1': 'a0_a1/school.json',
+        'id2': 'a0_a1/food.json',
+        'id3': 'a0_a1/body.json'
+    };
+
+    const schoolFile = [
+        { id: '1', word: 'bureau', level: 'A1', form: 'noun', theme: 'school' },
+        { id: '2', word: 'argent', level: 'A1', form: 'noun', theme: 'school' },
+        { id: '3', word: 'sac', level: 'A1', form: 'noun', theme: 'school' },
+        { id: '4', word: 'science', level: 'A1', form: 'noun', theme: 'school' }
+    ];
+
+    const foodFile = [
+        { id: '5', word: 'apple', level: 'A1', form: 'noun', theme: 'food' },
+        { id: '6', word: 'banana', level: 'A1', form: 'noun', theme: 'food' },
+        { id: '7', word: 'cherry', level: 'A1', form: 'noun', theme: 'food' },
+        { id: '8', word: 'bread', level: 'A1', form: 'noun', theme: 'food' }
+    ];
+
+    const bodyFile = [
+        { id: '9', word: 'head', level: 'A1', form: 'noun', theme: 'body' },
+        { id: '10', word: 'arm', level: 'A1', form: 'noun', theme: 'body' },
+        { id: '11', word: 'leg', level: 'A1', form: 'noun', theme: 'body' },
+        { id: '12', word: 'foot', level: 'A1', form: 'noun', theme: 'body' }
+    ];
+
+    const sandbox = createSandbox(async (url) => {
+        if (url.endsWith('index.json')) return { ok: true, json: async () => indexMap };
+        if (url.includes('school.json')) return { ok: true, json: async () => schoolFile };
+        if (url.includes('food.json')) return { ok: true, json: async () => foodFile };
+        if (url.includes('body.json')) return { ok: true, json: async () => bodyFile };
+        return { ok: false };
+    });
+
+    const res = await sandbox.window.COSYVocab.buildLinkPuzzles('fr', 'A1', { count: 10 });
+    assert.strictEqual(res.ok, true);
+    for (const p of res.puzzles) {
+        assert.ok(!p.words.includes('bureau'));
+        assert.ok(!p.words.includes('argent'));
+        assert.ok(!p.words.includes('sac'));
+        assert.ok(!p.words.includes('science'));
+    }
+});
+
+test('Word Linker PART C c: Odd puzzle family(odd theme) !== family(main theme); body_health vs health entries never paired', async () => {
+    const indexMap = {
+        'id1': 'a0_a1/body_health.json',
+        'id2': 'a0_a1/health.json',
+        'id3': 'a0_a1/food.json'
+    };
+
+    const bodyHealthFile = [
+        { id: '1', word: 'toothpaste', level: 'A1', form: 'noun', theme: 'body_health' },
+        { id: '2', word: 'shampoo', level: 'A1', form: 'noun', theme: 'body_health' },
+        { id: '3', word: 'sunscreen', level: 'A1', form: 'noun', theme: 'body_health' }
+    ];
+
+    const healthFile = [
+        { id: '4', word: 'stomach', level: 'A1', form: 'noun', theme: 'health' }
+    ];
+
+    const foodFile = [
+        { id: '5', word: 'bread', level: 'A1', form: 'noun', theme: 'food' },
+        { id: '6', word: 'milk', level: 'A1', form: 'noun', theme: 'food' },
+        { id: '7', word: 'apple', level: 'A1', form: 'noun', theme: 'food' },
+        { id: '8', word: 'cheese', level: 'A1', form: 'noun', theme: 'food' }
+    ];
+
+    const sandbox = createSandbox(async (url) => {
+        if (url.endsWith('index.json')) return { ok: true, json: async () => indexMap };
+        if (url.includes('body_health.json')) return { ok: true, json: async () => bodyHealthFile };
+        if (url.includes('health.json')) return { ok: true, json: async () => healthFile };
+        if (url.includes('food.json')) return { ok: true, json: async () => foodFile };
+        return { ok: false };
+    });
+
+    const res = await sandbox.window.COSYVocab.buildLinkPuzzles('en', 'A1', { count: 10 });
+    assert.strictEqual(res.ok, true);
+    for (const p of res.puzzles) {
+        if (p.odd !== 'none') {
+            const tf = sandbox.window.COSYVocab.themeFamily;
+            assert.notStrictEqual(tf(p.theme), tf(p.oddTheme));
+            if (p.theme.includes('health') || p.theme.includes('body')) {
+                assert.notStrictEqual(p.odd, 'stomach');
+            }
+        }
+    }
+});
+
+test('Word Linker PART C d: A word present in two coherent families is never used (polysemy guard)', async () => {
+    const indexMap = {
+        'id1': 'a0_a1/food.json',
+        'id2': 'a0_a1/nature.json',
+        'id3': 'a0_a1/animals.json'
+    };
+
+    const foodFile = [
+        { id: '1', word: 'apple', level: 'A1', form: 'noun', theme: 'food' },
+        { id: '2', word: 'banana', level: 'A1', form: 'noun', theme: 'food' },
+        { id: '3', word: 'orange', level: 'A1', form: 'noun', theme: 'food' },
+        { id: '4', word: 'duck', level: 'A1', form: 'noun', theme: 'food' }, // Polysemous: food + animal
+        { id: '5', word: 'bread', level: 'A1', form: 'noun', theme: 'food' }
+    ];
+
+    const animalsFile = [
+        { id: '6', word: 'dog', level: 'A1', form: 'noun', theme: 'animals' },
+        { id: '7', word: 'cat', level: 'A1', form: 'noun', theme: 'animals' },
+        { id: '8', word: 'bird', level: 'A1', form: 'noun', theme: 'animals' },
+        { id: '9', word: 'duck', level: 'A1', form: 'noun', theme: 'animals' }, // Polysemous: food + animal
+        { id: '10', word: 'lion', level: 'A1', form: 'noun', theme: 'animals' }
+    ];
+
+    const sandbox = createSandbox(async (url) => {
+        if (url.endsWith('index.json')) return { ok: true, json: async () => indexMap };
+        if (url.includes('food.json')) return { ok: true, json: async () => foodFile };
+        if (url.includes('animals.json')) return { ok: true, json: async () => animalsFile };
+        return { ok: false };
+    });
+
+    const res = await sandbox.window.COSYVocab.buildLinkPuzzles('en', 'A1', { count: 10 });
+    assert.strictEqual(res.ok, true);
+    for (const p of res.puzzles) {
+        assert.ok(!p.words.includes('duck'), 'Polysemous word "duck" must be dropped from all puzzles');
+    }
+});

@@ -547,6 +547,22 @@
         });
     }
 
+    var COHERENT_FAMILIES = ['food', 'body', 'house', 'clothes', 'animals', 'nature', 'transport', 'tech'];
+
+    function themeFamily(theme) {
+        if (!theme || typeof theme !== 'string') return '';
+        var t = theme.toLowerCase();
+        if (t.indexOf('food') !== -1 || t.indexOf('drink') !== -1 || t.indexOf('meal') !== -1 || t.indexOf('cook') !== -1) return 'food';
+        if (t.indexOf('body') !== -1 || t.indexOf('health') !== -1 || t.indexOf('medic') !== -1) return 'body';
+        if (t.indexOf('house') !== -1 || t.indexOf('home') !== -1 || t.indexOf('furnit') !== -1 || t.indexOf('housing') !== -1 || t.indexOf('kitchen') !== -1) return 'house';
+        if (t.indexOf('cloth') !== -1 || t.indexOf('fashion') !== -1) return 'clothes';
+        if (t.indexOf('animal') !== -1 || t.indexOf('pet') !== -1) return 'animals';
+        if (t.indexOf('nature') !== -1 || t.indexOf('weather') !== -1 || t.indexOf('plant') !== -1 || t.indexOf('environment') !== -1) return 'nature';
+        if (t.indexOf('transport') !== -1 || t.indexOf('vehicle') !== -1 || t.indexOf('travel') !== -1) return 'transport';
+        if (t.indexOf('technolog') !== -1 || t.indexOf('computer') !== -1) return 'tech';
+        return t;
+    }
+
     function isConcreteObjectTheme(theme) {
         if (!theme || typeof theme !== 'string') return false;
         var t = theme.toLowerCase();
@@ -632,24 +648,45 @@
                         var isVague = vagueThemes.some(function(v) { return tLower.indexOf(v) !== -1; });
                         if (isVague) continue;
 
+                        var fam = themeFamily(entry.theme);
+                        if (COHERENT_FAMILIES.indexOf(fam) === -1) continue;
+
                         cleanPool.push(entry);
                     }
 
-                    var themeMap = {};
+                    var wordFamiliesMap = {};
+                    for (var p = 0; p < cleanPool.length; p++) {
+                        var itemP = cleanPool[p];
+                        var wL = itemP.word.toLowerCase();
+                        var fL = themeFamily(itemP.theme);
+                        if (!wordFamiliesMap[wL]) {
+                            wordFamiliesMap[wL] = [];
+                        }
+                        if (wordFamiliesMap[wL].indexOf(fL) === -1) {
+                            wordFamiliesMap[wL].push(fL);
+                        }
+                    }
+
+                    var familyMap = {};
                     for (var j = 0; j < cleanPool.length; j++) {
                         var item = cleanPool[j];
-                        var tKey = item.theme.toLowerCase();
-                        if (!themeMap[tKey]) {
-                            themeMap[tKey] = {
-                                id: item.theme,
+                        var wLower = item.word.toLowerCase();
+                        if (wordFamiliesMap[wLower].length > 1) {
+                            continue;
+                        }
+
+                        var fKey = themeFamily(item.theme);
+                        if (!familyMap[fKey]) {
+                            familyMap[fKey] = {
+                                id: fKey,
+                                rawTheme: item.theme,
                                 words: [],
                                 seenWords: {}
                             };
                         }
-                        var wLower = item.word.toLowerCase();
-                        if (!themeMap[tKey].seenWords[wLower]) {
-                            themeMap[tKey].seenWords[wLower] = true;
-                            themeMap[tKey].words.push({ word: item.word, form: item.form });
+                        if (!familyMap[fKey].seenWords[wLower]) {
+                            familyMap[fKey].seenWords[wLower] = true;
+                            familyMap[fKey].words.push({ word: item.word, form: item.form, rawTheme: item.theme });
                         }
                     }
 
@@ -672,47 +709,47 @@
                         return sorted.join('|');
                     }
 
-                    var themeKeys = Object.keys(themeMap);
+                    var familyKeys = Object.keys(familyMap);
                     var attempts = 0;
                     var maxAttempts = 1000;
 
                     function tryGeneratePuzzle(isOdd) {
-                        var shuffledThemes = shuffleRng(themeKeys);
+                        var shuffledFamilies = shuffleRng(familyKeys);
 
-                        for (var tIdx = 0; tIdx < shuffledThemes.length; tIdx++) {
-                            var tKey = shuffledThemes[tIdx];
-                            var themeObj = themeMap[tKey];
-                            if (!themeObj) continue;
+                        for (var tIdx = 0; tIdx < shuffledFamilies.length; tIdx++) {
+                            var fKey = shuffledFamilies[tIdx];
+                            var familyObj = familyMap[fKey];
+                            if (!familyObj) continue;
 
                             if (!isOdd) {
-                                if (themeObj.words.length >= 4) {
-                                    var chosenWords = shuffleRng(themeObj.words).slice(0, 4).map(function(obj) { return obj.word; });
+                                if (familyObj.words.length >= 4) {
+                                    var chosenWords = shuffleRng(familyObj.words).slice(0, 4).map(function(obj) { return obj.word; });
                                     var key = getPuzzleKey(chosenWords);
                                     if (!seenPuzzleKeys[key]) {
                                         seenPuzzleKeys[key] = true;
                                         return {
                                             words: shuffleRng(chosenWords),
                                             odd: 'none',
-                                            theme: themeObj.id,
+                                            theme: familyObj.rawTheme,
                                             oddTheme: null,
                                             generated: true
                                         };
                                     }
                                 }
                             } else {
-                                if (themeObj.words.length >= 3) {
-                                    var otherThemes = shuffledThemes.filter(function(otherKey) { return otherKey !== tKey; });
-                                    for (var oIdx = 0; oIdx < otherThemes.length; oIdx++) {
-                                        var t2Key = otherThemes[oIdx];
-                                        var t2Obj = themeMap[t2Key];
-                                        if (!t2Obj || t2Obj.words.length === 0) continue;
+                                if (familyObj.words.length >= 3) {
+                                    var otherFamilies = shuffledFamilies.filter(function(otherKey) { return otherKey !== fKey; });
+                                    for (var oIdx = 0; oIdx < otherFamilies.length; oIdx++) {
+                                        var f2Key = otherFamilies[oIdx];
+                                        var f2Obj = familyMap[f2Key];
+                                        if (!f2Obj || f2Obj.words.length === 0) continue;
 
-                                        var candidateOddWords = t2Obj.words.filter(function(wObj) {
-                                            return !themeObj.seenWords[wObj.word.toLowerCase()];
+                                        var candidateOddWords = f2Obj.words.filter(function(wObj) {
+                                            return !familyObj.seenWords[wObj.word.toLowerCase()];
                                         });
                                         if (candidateOddWords.length === 0) continue;
 
-                                        var chosen3 = shuffleRng(themeObj.words).slice(0, 3);
+                                        var chosen3 = shuffleRng(familyObj.words).slice(0, 3);
                                         var chosen3Words = chosen3.map(function(obj) { return obj.word; });
 
                                         var targetForm = chosen3[0] ? chosen3[0].form : null;
@@ -729,8 +766,8 @@
                                             return {
                                                 words: shuffleRng(fourWords),
                                                 odd: selectedOddObj.word,
-                                                theme: themeObj.id,
-                                                oddTheme: t2Obj.id,
+                                                theme: familyObj.rawTheme,
+                                                oddTheme: f2Obj.rawTheme,
                                                 generated: true
                                             };
                                         }
@@ -772,6 +809,7 @@
         levelCode: levelCode,
         joinArticle: joinArticle,
         isConcreteObjectTheme: isConcreteObjectTheme,
+        themeFamily: themeFamily,
         buildLinkPuzzles: buildLinkPuzzles
     };
 
