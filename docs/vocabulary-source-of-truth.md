@@ -27,7 +27,7 @@ Games can dynamically fetch vocabulary from COSYdata at runtime via `shared/js/v
 - **`COSYVocab.ensure(lang, level, opts)`**: Used by Emoji Odyssey to load search index summary entries (`search-index.json`).
 - **`COSYVocab.wordSet(lang)`**: Used by Last Letter to fetch search index entries (`search-index.json`) and return a Set of known lower-cased words for soft validation.
 - **`COSYVocab.ensureFull(lang, level, opts)`**: Used by Object Quest, Hot Seat and Identity Mystery to load full vocabulary entries file-by-file starting from the requested level folder (`index.json` -> theme files e.g. `a0_a1/jobs.json`), with optional `fileMatch` substring filtering. Full entries include definitions, examples, article, gender, plural forms, and transcriptions.
-- **`COSYVocab.buildLinkPuzzles(lang, level, opts)`**: Used by Word Linker to generate dynamic link and odd-one-out puzzles from theme entries loaded via `ensureFull`.
+- **`COSYVocab.buildLinkPuzzles(lang, level, opts)`**: Used by Word Linker to generate dynamic link and odd-one-out puzzles from coherent theme families loaded via `ensureFull`.
 
 ### Data Endpoint & Index Coverage
 Indices are fetched on demand from `https://cosylanguages.github.io/COSYdata/vocabulary/<lang>/search-index.json` or `https://cosylanguages.github.io/COSYdata/vocabulary/<lang>/index.json`.
