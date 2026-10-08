@@ -8,26 +8,44 @@
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = window.cosyLanguageLabels ? window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]) : ["en","fr","es","de","it","ru","el"];
 
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('last-letter')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Last Letter 🔗</h2>
-              <p>Type a word to start the interlocking chain. Each new word must start with the last letter of the previous word. Watch your chain grow!</p>
+              <p data-gs="setup.description">${T('setup.description', null, 'Type a word to start the interlocking chain. Each new word must start with the last letter of the previous word. Watch your chain grow!')}</p>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
                 <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
               <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
-              <button class="btn-start-game" id="btn-start-game">▶ Start Interlocking Chain</button>
+              <button class="btn-start-game" id="btn-start-game">▶ <span data-gs="setup.btn_start">${T('setup.btn_start', null, 'Start Interlocking Chain')}</span></button>
             </div>`;
         document.getElementById('btn-start-game')?.addEventListener('click', () => COSY_GAME.start());
     }
 
     window.COSY_GAME = {
         async start() {
+            const T = getT();
             const lang = (window.COSYLoader && typeof window.COSYLoader.getLangCode === 'function')
                 ? window.COSYLoader.getLangCode(document.getElementById('s-lang')?.value)
                 : 'en';
@@ -35,7 +53,8 @@
                 ? window.COSYLoader.getLevelCode(document.getElementById('s-level')?.value)
                 : 'a1';
 
-            document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;color:#f8fafc;">Loading chain link data...</div>';
+            const loadingMsg = T('play.loading', null, 'Loading chain link data...');
+            document.getElementById('go-body').innerHTML = `<div style="text-align:center;padding:4rem;color:#f8fafc;" data-gs="play.loading">${loadingMsg}</div>`;
 
             try {
                 if (window.COSYLoader && typeof window.COSYLoader.loadLevelData === 'function') {
@@ -58,32 +77,32 @@
                 <div class="ll-score-bar">
                   <div class="ll-sb-item">
                     <div class="ll-sb-val" id="ll-score">0</div>
-                    <div class="ll-sb-lbl">Chain Links</div>
+                    <div class="ll-sb-lbl" data-gs="play.chain_links">${T('play.chain_links', null, 'Chain Links')}</div>
                   </div>
                   <div class="ll-sb-item">
-                    <div class="ll-sb-val" id="ll-next-letter">ANY</div>
-                    <div class="ll-sb-lbl">Required Start</div>
+                    <div class="ll-sb-val" id="ll-next-letter" data-gs="play.required_any">${T('play.required_any', null, 'ANY')}</div>
+                    <div class="ll-sb-lbl" data-gs="play.required_start">${T('play.required_start', null, 'Required Start')}</div>
                   </div>
                 </div>
 
                 <div class="game-label" style="font-weight:700; color:#94a3b8; letter-spacing:0.05em; text-transform:uppercase; font-size:0.85rem;">
-                  🔗 Interlocking Chain
+                  🔗 <span data-gs="play.chain_label">${T('play.chain_label', null, 'Interlocking Chain')}</span>
                 </div>
 
                 <div class="ll-chain-container" id="ll-chain">
-                  <div class="ll-chain-empty" id="ll-chain-empty">Type the first word below to forge the first chain link…</div>
+                  <div class="ll-chain-empty" id="ll-chain-empty" data-gs="play.chain_empty">${T('play.chain_empty', null, 'Type the first word below to forge the first chain link…')}</div>
                 </div>
 
                 <div class="ll-input-group">
-                  <input class="ll-input" id="ll-input" placeholder="Type a word to link…" autocomplete="off" autocorrect="off" spellcheck="false" />
-                  <button class="btn-g-primary" id="ll-btn-add" style="background:var(--game-accent); color:var(--game-accent-contrast); font-weight:700;">Link Word 🔗</button>
+                  <input class="ll-input" id="ll-input" placeholder="${T('play.placeholder', null, 'Type a word to link…')}" autocomplete="off" autocorrect="off" spellcheck="false" />
+                  <button class="btn-g-primary" id="ll-btn-add" style="background:var(--game-accent); color:var(--game-accent-contrast); font-weight:700;"><span data-gs="btn.link_word">${T('btn.link_word', null, 'Link Word')}</span> 🔗</button>
                 </div>
 
                 <div class="ll-feedback" id="ll-fb"></div>
 
                 <div class="game-controls" style="display:flex; justify-content:space-between; margin-top:0.5rem;">
-                  <button class="btn-g-secondary" id="ll-btn-restart">Restart Chain ↺</button>
-                  <button class="btn-g-danger" id="ll-btn-setup">⬅ Setup</button>
+                  <button class="btn-g-secondary" id="ll-btn-restart"><span data-gs="btn.restart_chain">${T('btn.restart_chain', null, 'Restart Chain')}</span> ↺</button>
+                  <button class="btn-g-danger" id="ll-btn-setup">⬅ <span data-gs="btn.setup">${T('btn.setup', null, 'Setup')}</span></button>
                 </div>
               </div>`;
 
@@ -106,7 +125,8 @@
                 const chainContainer = document.getElementById('ll-chain');
                 if (!input || !fb || !chainContainer) return;
 
-                const word = window.gameUtils ? window.gameUtils.normalizeWord(input.value) : input.value.trim().toLowerCase();
+                const rawValue = input.value;
+                const word = window.gameUtils ? window.gameUtils.normalizeWord(rawValue) : rawValue.trim().toLowerCase();
 
                 const triggerInvalidAnimation = (msg) => {
                     this.showFB(fb, 'bad', msg);
@@ -122,12 +142,12 @@
                 };
 
                 if (!word || word.length < 2) {
-                    triggerInvalidAnimation('Please enter a word with at least 2 letters.');
+                    triggerInvalidAnimation(T('feedback.min_letters', null, 'Please enter a word with at least 2 letters.'));
                     input.value = '';
                     return;
                 }
                 if (LL_USED.has(word)) {
-                    triggerInvalidAnimation(`"${word}" was already used in the chain! Try another.`);
+                    triggerInvalidAnimation(T('feedback.already_used', { word: escapeHtml(word) }, `"${word}" was already used in the chain! Try another.`));
                     input.value = '';
                     return;
                 }
@@ -136,7 +156,9 @@
                     const reqLetter = window.gameUtils ? window.gameUtils.chainLetter(lastWord, lang) : lastWord.slice(-1).toLowerCase();
                     const firstFolded = window.gameUtils ? window.gameUtils.foldLetter(word[0], lang) : word[0].toLowerCase();
                     if (firstFolded !== reqLetter) {
-                        triggerInvalidAnimation(`"${word}" doesn't start with <strong>${reqLetter.toUpperCase()}</strong>. Attempted link bounced off!`);
+                        const reqUpper = escapeHtml(reqLetter.toUpperCase());
+                        const letterHtml = `<strong>${reqUpper}</strong>`;
+                        triggerInvalidAnimation(T('feedback.wrong_start', { word: escapeHtml(word), letter: letterHtml }, `"${word}" doesn't start with <strong>${reqUpper}</strong>. Attempted link bounced off!`));
                         input.value = '';
                         return;
                     }
@@ -176,7 +198,7 @@
 
                 const stem = word.slice(0, -1);
                 const lastL = word.slice(-1).toUpperCase();
-                linkEl.innerHTML = `${stem}<span class="ll-last-letter">${lastL}</span>`;
+                linkEl.innerHTML = `${escapeHtml(stem)}<span class="ll-last-letter">${escapeHtml(lastL)}</span>`;
 
                 chainContainer.appendChild(linkEl);
 
@@ -193,9 +215,11 @@
                 document.getElementById('ll-next-letter').textContent = nextReqLetter.toUpperCase();
 
                 if (isUnverified) {
-                    this.showFB(fb, 'ok', `"${word}" accepted, but it is not in our word list yet: check the spelling.`);
+                    this.showFB(fb, 'ok', T('feedback.unverified', { word: escapeHtml(word) }, `"${word}" accepted, but it is not in our word list yet: check the spelling.`));
                 } else {
-                    this.showFB(fb, 'ok', `✓ Link snapped into place! Next word must start with <strong>${nextReqLetter.toUpperCase()}</strong>.`);
+                    const reqUpper = escapeHtml(nextReqLetter.toUpperCase());
+                    const letterHtml = `<strong>${reqUpper}</strong>`;
+                    this.showFB(fb, 'ok', T('feedback.success_link', { letter: letterHtml }, `✓ Link snapped into place! Next word must start with <strong>${reqUpper}</strong>.`));
                 }
                 input.focus();
             };
@@ -211,21 +235,25 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             const lang = COSYGame.language;
             const level = COSYGame.level;
             if (window.COSYScores && typeof window.COSYScores.save === 'function') {
                 COSYScores.save(GAME_ID, lang, level, COSYGame.score);
             }
             const best = (window.COSYScores && typeof window.COSYScores.best === 'function') ? COSYScores.best(GAME_ID, lang) : null;
+            const count = COSYGame.score / 5;
+            const score = COSYGame.score;
+
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end" style="background:var(--ll-card-bg); border:2px solid var(--game-accent); border-radius:16px; padding:2rem; text-align:center; color:#f8fafc;">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title" style="font-family:var(--cg-font-heading); font-size:1.8rem; margin:0.5rem 0;">Chain Mastered!</div>
-                    <div class="re-sub" style="font-size:1.1rem; margin-bottom:1rem;">Total Interlocked Words: <strong>${COSYGame.score / 5}</strong> (Score: ${COSYGame.score} pts)</div>
-                    ${best ? `<div class="game-sub" style="color:var(--game-accent); margin-bottom:1.5rem">Personal best: ${best.score} pts</div>` : ''}
+                    <div class="re-title" style="font-family:var(--cg-font-heading); font-size:1.8rem; margin:0.5rem 0;" data-gs="end.title">${T('end.title', null, 'Chain Mastered!')}</div>
+                    <div class="re-sub" style="font-size:1.1rem; margin-bottom:1rem;">${T('end.sub', { count: `<strong>${count}</strong>`, score: score }, `Total Interlocked Words: <strong>${count}</strong> (Score: ${score} pts)`)}</div>
+                    ${best ? `<div class="game-sub" style="color:var(--game-accent); margin-bottom:1.5rem">${T('end.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions" style="display:flex; justify-content:center; gap:1rem;">
-                        <button class="btn-g-primary" onclick="COSY_GAME.start()" style="background:var(--game-accent); color:var(--game-accent-contrast);">Forge New Chain ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-primary" onclick="COSY_GAME.start()" style="background:var(--game-accent); color:var(--game-accent-contrast);"><span data-gs="btn.forge_new_chain">${T('btn.forge_new_chain', null, 'Forge New Chain')}</span> ↺</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="btn.setup">${T('btn.setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }
