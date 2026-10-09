@@ -14,6 +14,12 @@
     let totalTimeSec = 60;
     let remainingTimeSec = 60;
 
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('hot-seat')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
     function getUtils() {
         return window.COSYUtils || window.gameUtils || {};
     }
@@ -50,23 +56,17 @@
         return 'starter';
     }
 
-    function isPhoneContext() {
-        if (typeof ViewContext !== 'undefined' && ViewContext.getContext) {
-            return ViewContext.getContext() === 'phone';
-        }
-        return document.documentElement.dataset.context === 'phone' || window.innerWidth < 480;
-    }
-
     function renderSetup() {
         if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
             COSYLoader.clearLevelNote();
         }
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Hot Seat 🎯</h2>
-              <p>Quick-fire vocabulary round against the ticking ring! One player is in the spotlighted Hot Seat guessing, while others give clues.</p>
+              <p data-gs="setup.description">${T('setup.description', null, 'Quick-fire vocabulary round against the ticking ring! One player is in the spotlighted Hot Seat guessing, while others give clues.')}</p>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
                 <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
@@ -81,13 +81,14 @@
 
     window.COSY_GAME = {
         async start() {
+            const T = getT();
             const rawLang = document.getElementById('s-lang')?.value;
             const rawLevel = document.getElementById('s-level')?.value;
             const lang = parseLangCode(rawLang);
             const level = parseLevelCode(rawLevel);
             const utils = getUtils();
 
-            document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Loading vocabulary...</div>';
+            document.getElementById('go-body').innerHTML = `<div style="text-align:center;padding:4rem;" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
 
             if (typeof COSYLoader !== 'undefined' && COSYLoader.loadLevelData) {
                 try {
@@ -147,11 +148,11 @@
                 // Update TurnBanner role text
                 if (turnBannerInstance) {
                     if (activeRole === 'guessing') {
-                        turnBannerInstance.setTurn("You're guessing", "Guesser in the Hot Seat 🔥");
+                        turnBannerInstance.setTurn(T('common.turn_guessing', null, "You're guessing"), T('common.turn_guessing_sub', null, "Guesser in the Hot Seat 🔥"));
                     } else if (activeRole === 'clue_giver') {
-                        turnBannerInstance.setTurn("You're giving clues", "Give clues without saying the word!");
+                        turnBannerInstance.setTurn(T('common.turn_clues', null, "You're giving clues"), T('common.turn_clues_sub', null, "Give clues without saying the word!"));
                     } else {
-                        turnBannerInstance.setTurn("You're watching", "Audience Spectator View");
+                        turnBannerInstance.setTurn(T('common.turn_watching', null, "You're watching"), T('common.turn_watching_sub', null, "Audience Spectator View"));
                     }
                 }
 
@@ -235,22 +236,24 @@
                 const radius = 70;
                 const circumference = 2 * Math.PI * radius; // ~439.8
 
+                const ansEsc = `<strong>${esc(answerText)}</strong>`;
+
                 body.innerHTML = `
                     <div class="score-bar">
-                        <div class="sb-item"><div class="sb-val" id="hs-score">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
-                        <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
+                        <div class="sb-item"><div class="sb-val" id="hs-score">${COSYGame.score}</div><div class="sb-lbl" data-gs="common.score">${T('common.score', null, 'Score')}</div></div>
+                        <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl" data-gs="common.round">${T('common.round', null, 'Round')}</div></div>
                     </div>
 
                     <div id="turn-banner-mount" style="margin-bottom: 1rem;"></div>
 
                     <div class="role-toggle-bar">
-                        <button class="role-btn ${activeRole === 'guessing' ? 'active' : ''}" data-role="guessing">🎯 Guessing</button>
-                        <button class="role-btn ${activeRole === 'clue_giver' ? 'active' : ''}" data-role="clue_giver">🗣️ Giving Clues</button>
-                        <button class="role-btn ${activeRole === 'watching' ? 'active' : ''}" data-role="watching">👁️ Watching</button>
+                        <button class="role-btn ${activeRole === 'guessing' ? 'active' : ''}" data-role="guessing">🎯 <span data-gs="role.guessing">${T('role.guessing', null, 'Guessing')}</span></button>
+                        <button class="role-btn ${activeRole === 'clue_giver' ? 'active' : ''}" data-role="clue_giver">🗣️ <span data-gs="role.giving_clues">${T('role.giving_clues', null, 'Giving Clues')}</span></button>
+                        <button class="role-btn ${activeRole === 'watching' ? 'active' : ''}" data-role="watching">👁️ <span data-gs="role.watching">${T('role.watching', null, 'Watching')}</span></button>
                     </div>
 
                     <div class="hotseat-spotlight-card role-${activeRole}" id="hs-main-card">
-                        <div class="game-label">🎯 Spotlighted Hot Seat</div>
+                        <div class="game-label">🎯 <span data-gs="play.spotlight_title">${T('play.spotlight_title', null, 'Spotlighted Hot Seat')}</span></div>
 
                         <!-- Radial SVG Countdown Ring -->
                         <div class="hotseat-ring-wrapper">
@@ -260,7 +263,7 @@
                                         stroke-dasharray="${circumference}" stroke-dashoffset="0" />
                             </svg>
                             <div class="hotseat-avatar-content">
-                                <div class="hotseat-guesser-name">🔥 Hot Seat</div>
+                                <div class="hotseat-guesser-name">🔥 <span data-gs="play.hot_seat_label">${T('play.hot_seat_label', null, 'Hot Seat')}</span></div>
                                 <div class="hotseat-timer-sec" id="hs-timer-val">60</div>
                             </div>
                         </div>
@@ -269,14 +272,14 @@
                         <div class="hotseat-prompt-area">
                             <div class="game-prompt" style="font-size:1.4rem">${promptText}</div>
                             <div class="hotseat-answer-hint" style="font-size:0.9rem; color:var(--ink-faint); margin: 0.75rem 0;">
-                                Suggested Answer: "<strong>${esc(answerText)}</strong>"
+                                ${T('play.suggested_answer', { answer: ansEsc }, `Suggested Answer: "${ansEsc}"`)}
                             </div>
                         </div>
 
                         <!-- Controls -->
                         <div class="game-controls" style="justify-content:center; gap:1rem; margin-top: 1rem;">
-                            <button class="btn-g-primary" style="background:#16a34a;" id="hs-got-it">✓ Got it!</button>
-                            <button class="btn-pass-large" id="hs-pass">➔ Pass</button>
+                            <button class="btn-g-primary" style="background:#16a34a;" id="hs-got-it">✓ <span data-gs="btn.got_it">${T('btn.got_it', null, 'Got it!')}</span></button>
+                            <button class="btn-pass-large" id="hs-pass">➔ <span data-gs="btn.pass">${T('btn.pass', null, 'Pass')}</span></button>
                         </div>
                     </div>`;
 
@@ -284,8 +287,8 @@
                 const bannerContainer = document.getElementById('turn-banner-mount');
                 if (bannerContainer && typeof TurnBanner !== 'undefined') {
                     turnBannerInstance = new TurnBanner(bannerContainer, {
-                        label: "You're guessing",
-                        currentTurn: "Guesser in the Hot Seat 🔥"
+                        label: T('common.turn_guessing', null, "You're guessing"),
+                        currentTurn: T('common.turn_guessing_sub', null, "Guesser in the Hot Seat 🔥")
                     });
                 }
 
@@ -366,21 +369,24 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             if (currentTimerInterval) clearInterval(currentTimerInterval);
             const lang = COSYGame.language;
             const level = COSYGame.level;
             COSYScores.save(GAME_ID, lang, level, COSYGame.score);
             const best = COSYScores.best(GAME_ID, lang);
+            const countStr = `<strong>${COSYGame.score / 10}</strong>`;
+            const scoreVal = COSYGame.score;
             const body = document.getElementById('go-body');
             body.innerHTML = `
                 <div class="round-end">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title">Round Over!</div>
-                    <div class="re-sub">You answered <strong>${COSYGame.score / 10}</strong> questions correctly. Total: ${COSYGame.score} pts.</div>
-                    ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
+                    <div class="re-title" data-gs="end.title">${T('end.title', null, 'Round Over!')}</div>
+                    <div class="re-sub">${T('end.sub', { count: countStr, score: scoreVal }, `You answered <strong>${COSYGame.score / 10}</strong> questions correctly. Total: ${COSYGame.score} pts.`)}</div>
+                    ${best ? `<div class="game-sub" style="margin-bottom:1rem">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions">
                         <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

@@ -102,7 +102,7 @@
 
                 <div class="game-controls" style="display:flex; justify-content:space-between; margin-top:0.5rem;">
                   <button class="btn-g-secondary" id="ll-btn-restart"><span data-gs="btn.restart_chain">${T('btn.restart_chain', null, 'Restart Chain')}</span> ↺</button>
-                  <button class="btn-g-danger" id="ll-btn-setup">⬅ <span data-gs="btn.setup">${T('btn.setup', null, 'Setup')}</span></button>
+                  <button class="btn-g-danger" id="ll-btn-setup">⬅ <span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                 </div>
               </div>`;
 
@@ -250,10 +250,10 @@
                     <div class="re-icon">🏆</div>
                     <div class="re-title" style="font-family:var(--cg-font-heading); font-size:1.8rem; margin:0.5rem 0;" data-gs="end.title">${T('end.title', null, 'Chain Mastered!')}</div>
                     <div class="re-sub" style="font-size:1.1rem; margin-bottom:1rem;">${T('end.sub', { count: `<strong>${count}</strong>`, score: score }, `Total Interlocked Words: <strong>${count}</strong> (Score: ${score} pts)`)}</div>
-                    ${best ? `<div class="game-sub" style="color:var(--game-accent); margin-bottom:1.5rem">${T('end.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
+                    ${best ? `<div class="game-sub" style="color:var(--game-accent); margin-bottom:1.5rem">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions" style="display:flex; justify-content:center; gap:1rem;">
                         <button class="btn-g-primary" onclick="COSY_GAME.start()" style="background:var(--game-accent); color:var(--game-accent-contrast);"><span data-gs="btn.forge_new_chain">${T('btn.forge_new_chain', null, 'Forge New Chain')}</span> ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="btn.setup">${T('btn.setup', null, 'Setup')}</span></button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

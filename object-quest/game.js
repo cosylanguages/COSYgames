@@ -8,25 +8,32 @@
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('object-quest')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
     function renderSetup() {
         if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
             COSYLoader.clearLevelNote();
         }
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Object Quest 🔍</h2>
-              <p>Explore hidden scene objects through the fog of war using your magnifying glass lens! Tap, drag, or hold to reveal concealed nouns and uncover the quest target.</p>
-              <div class="setup-field"><label>Category</label>
+              <p data-gs="setup.description">${T('setup.description', null, 'Explore hidden scene objects through the fog of war using your magnifying glass lens! Tap, drag, or hold to reveal concealed nouns and uncover the quest target.')}</p>
+              <div class="setup-field"><label data-gs="common.category">${T('common.category', null, 'Category')}</label>
                 <select class="styled-sel" id="s-cat">
-                  <option value="all">All objects</option>
-                  <option value="group:environment_nature">Animals & Nature 🐾</option>
-                  <option value="group:food_drink">Food & Drink 🍕</option>
-                  <option value="group:places_geography">Places & Geography 🌍</option>
-                  <option value="group:home_living">Home & Gadgets 🏠</option>
-                  <option value="group:clothes_appearance">Clothes & Accessories 👕</option>
-                  <option value="group:health_body">Body Parts & Health 🏥</option>
+                  <option value="all" data-gs="cat.all">${T('cat.all', null, 'All objects')}</option>
+                  <option value="group:environment_nature" data-gs="cat.environment">${T('cat.environment', null, 'Animals & Nature 🐾')}</option>
+                  <option value="group:food_drink" data-gs="cat.food">${T('cat.food', null, 'Food & Drink 🍕')}</option>
+                  <option value="group:places_geography" data-gs="cat.places">${T('cat.places', null, 'Places & Geography 🌍')}</option>
+                  <option value="group:home_living" data-gs="cat.home">${T('cat.home', null, 'Home & Gadgets 🏠')}</option>
+                  <option value="group:clothes_appearance" data-gs="cat.clothes">${T('cat.clothes', null, 'Clothes & Accessories 👕')}</option>
+                  <option value="group:health_body" data-gs="cat.body">${T('cat.body', null, 'Body Parts & Health 🏥')}</option>
                 </select>
               </div>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
@@ -35,13 +42,14 @@
               <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
-              <button class="btn-start-game" id="btn-start-game">▶ Start Fog of War Quest</button>
+              <button class="btn-start-game" id="btn-start-game">▶ <span data-gs="btn.start_quest">${T('btn.start_quest', null, 'Start Fog of War Quest')}</span></button>
             </div>`;
         document.getElementById('btn-start-game')?.addEventListener('click', () => COSY_GAME.start());
     }
 
     window.COSY_GAME = {
         async start() {
+            const T = getT();
             const lang = (window.COSYLoader && typeof window.COSYLoader.getLangCode === 'function')
                 ? window.COSYLoader.getLangCode(document.getElementById('s-lang')?.value)
                 : 'en';
@@ -50,7 +58,7 @@
                 : 'a1';
             const category = document.getElementById('s-cat')?.value || 'all';
 
-            document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;color:#f0fdf4;">Loading fog of war map...</div>';
+            document.getElementById('go-body').innerHTML = `<div style="text-align:center;padding:4rem;color:#f0fdf4;" data-gs="play.loading">${T('play.loading', null, 'Loading fog of war map...')}</div>`;
 
             try {
                 if (window.COSYLoader && typeof window.COSYLoader.loadLevelData === 'function') {
@@ -163,22 +171,22 @@
                 body.innerHTML = `
                   <div class="oq-game-wrapper">
                     <div class="oq-score-bar">
-                      <div class="oq-sb-item">Score: <span class="oq-sb-val">${COSYGame.score}</span></div>
-                      <div class="oq-sb-item">Target Object: <strong style="color:var(--oq-pin-color); font-size:1.15rem;">${currentTarget.word} ${currentTarget.emoji || ''}</strong></div>
-                      <div class="oq-sb-item">Round: <span class="oq-sb-val">${COSYGame.round}/${COSYGame.maxRounds}</span></div>
+                      <div class="oq-sb-item"><span data-gs="common.score">${T('common.score', null, 'Score')}</span>: <span class="oq-sb-val">${COSYGame.score}</span></div>
+                      <div class="oq-sb-item"><span data-gs="play.target_object">${T('play.target_object', null, 'Target Object:')}</span> <strong style="color:var(--oq-pin-color); font-size:1.15rem;">${gameUtils.escapeHtml(currentTarget.word)} ${currentTarget.emoji || ''}</strong></div>
+                      <div class="oq-sb-item"><span data-gs="common.round">${T('common.round', null, 'Round')}</span>: <span class="oq-sb-val">${COSYGame.round}/${COSYGame.maxRounds}</span></div>
                     </div>
 
                     <div style="font-size:0.9rem; color:#a7f3d0; font-weight:600;">
-                      🔍 Drag magnifying glass lens to explore the fog & locate hidden targets!
+                      🔍 <span data-gs="play.instruction">${T('play.instruction', null, 'Drag magnifying glass lens to explore the fog & locate hidden targets!')}</span>
                     </div>
 
                     <div class="oq-scene-board" id="oq-scene-board">
                       <!-- Scene Items Grid -->
                       <div class="oq-scene-grid" id="oq-scene-grid">
                         ${sceneItems.map((item, idx) => `
-                          <div class="oq-target-item" id="oq-item-${idx}" data-word="${item.word}">
+                          <div class="oq-target-item" id="oq-item-${idx}" data-word="${gameUtils.escapeAttr(item.word)}">
                             <div class="oq-item-emoji">${item.emoji || '📦'}</div>
-                            <div class="oq-item-label">${item.word}</div>
+                            <div class="oq-item-label">${gameUtils.escapeHtml(item.word)}</div>
                           </div>
                         `).join('')}
                       </div>
@@ -199,14 +207,14 @@
                     </div>
 
                     <div class="game-card" id="oq-hint-card" style="display:none; background:#14281d; border:1px solid #1e3a29; margin:0;">
-                      <div class="game-label" style="color:#a7f3d0">💡 Help Clues</div>
+                      <div class="game-label" style="color:#a7f3d0">💡 <span data-gs="play.help_clues">${T('play.help_clues', null, 'Help Clues')}</span></div>
                       <div id="oq-hint-list" style="font-size:0.9rem; line-height:1.6; color:#f0fdf4;"></div>
                     </div>
 
                     <div class="game-controls" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
-                      <button class="btn-g-primary" id="oq-btn-hint" style="background:var(--game-accent); color:var(--game-accent-contrast);">💡 Hint</button>
-                      <button class="btn-g-secondary" id="oq-btn-next">Next Object →</button>
-                      <button class="btn-g-danger" id="oq-btn-setup">⬅ Setup</button>
+                      <button class="btn-g-primary" id="oq-btn-hint" style="background:var(--game-accent); color:var(--game-accent-contrast);">💡 <span data-gs="btn.hint">${T('btn.hint', null, 'Hint')}</span></button>
+                      <button class="btn-g-secondary" id="oq-btn-next"><span data-gs="btn.next_object">${T('btn.next_object', null, 'Next Object')}</span> →</button>
+                      <button class="btn-g-danger" id="oq-btn-setup">⬅ <span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                   </div>`;
 
@@ -330,10 +338,14 @@
                         const hintList = document.getElementById('oq-hint-list');
                         if (hintCard && hintList) {
                             hintCard.style.display = 'block';
+                            const letterStr = `<strong>${currentTarget.word[0].toUpperCase()}</strong>`;
+                            const lenStr = `<strong>${currentTarget.word.length}</strong>`;
+                            const defText = currentTarget.definitions?.[0]?.text ? gameUtils.escapeHtml(currentTarget.definitions[0].text) : T('hint.no_def', null, 'No definition available.');
+                            const defStr = `<em>${defText}</em>`;
                             hintList.innerHTML = `
-                              ${hints >= 1 ? `<div>• Target starts with letter <strong>${currentTarget.word[0].toUpperCase()}</strong></div>` : ''}
-                              ${hints >= 2 ? `<div>• Target length: <strong>${currentTarget.word.length}</strong> characters</div>` : ''}
-                              ${hints >= 3 ? `<div>• Definition clue: <em>${currentTarget.definitions?.[0]?.text || 'No definition available.'}</em></div>` : ''}
+                              ${hints >= 1 ? `<div>• ${T('hint.letter', { letter: letterStr }, `Target starts with letter ${letterStr}`)}</div>` : ''}
+                              ${hints >= 2 ? `<div>• ${T('hint.length', { length: lenStr }, `Target length: ${lenStr} characters`)}</div>` : ''}
+                              ${hints >= 3 ? `<div>• ${T('hint.definition', { clue: defStr }, `Definition clue: ${defStr}`)}</div>` : ''}
                             `;
                         }
                     });
@@ -349,6 +361,7 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             const lang = COSYGame.language;
             const level = COSYGame.level;
             if (window.COSYScores && typeof window.COSYScores.save === 'function') {
@@ -358,12 +371,12 @@
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end" style="background:var(--oq-card-bg); border:2px solid var(--game-accent); border-radius:16px; padding:2rem; text-align:center; color:#f0fdf4;">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title" style="font-family:var(--cg-font-heading); font-size:1.8rem; margin:0.5rem 0;">Quest Completed!</div>
-                    <div class="re-sub" style="font-size:1.1rem; margin-bottom:1rem;">Final Score: <strong>${COSYGame.score}</strong> pts</div>
-                    ${best ? `<div class="game-sub" style="color:#4ade80; margin-bottom:1.5rem">Personal best: ${best.score} pts</div>` : ''}
+                    <div class="re-title" style="font-family:var(--cg-font-heading); font-size:1.8rem; margin:0.5rem 0;" data-gs="end.title">${T('end.title', null, 'Quest Completed!')}</div>
+                    <div class="re-sub" style="font-size:1.1rem; margin-bottom:1rem;">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Final Score: <strong>${COSYGame.score}</strong> pts`)}</div>
+                    ${best ? `<div class="game-sub" style="color:#4ade80; margin-bottom:1.5rem">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions" style="display:flex; justify-content:center; gap:1rem;">
-                        <button class="btn-g-primary" onclick="COSY_GAME.start()" style="background:var(--game-accent); color:var(--game-accent-contrast);">Start New Quest ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-primary" onclick="COSY_GAME.start()" style="background:var(--game-accent); color:var(--game-accent-contrast);"><span data-gs="btn.start_new_quest">${T('btn.start_new_quest', null, 'Start New Quest')}</span> ↺</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

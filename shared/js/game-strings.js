@@ -20,9 +20,17 @@
   COSYGameStrings.forGame = function(gameId) {
     return function T(key, params, fallbackEnglish) {
       var uiLang = getUiLang();
-      var gameObj = COSYGameStrings[gameId] || {};
-      var strings = gameObj.strings || {};
-      var entry = strings[key];
+      var entry;
+
+      if (key && typeof key === 'string' && key.indexOf('common.') === 0) {
+        var commonObj = COSYGameStrings['_common'] || {};
+        var commonStrings = commonObj.strings || {};
+        entry = commonStrings[key];
+      } else {
+        var gameObj = COSYGameStrings[gameId] || {};
+        var strings = gameObj.strings || {};
+        entry = strings[key];
+      }
 
       var val;
       if (entry && typeof entry === 'object') {
@@ -76,7 +84,14 @@
     elements.forEach(function(el) {
       var key = el.getAttribute('data-gs');
       if (!key) return;
-      var entry = strings[key];
+      var entry;
+      if (key.indexOf('common.') === 0) {
+        var commonObj = COSYGameStrings['_common'] || {};
+        var commonStrings = commonObj.strings || {};
+        entry = commonStrings[key];
+      } else {
+        entry = strings[key];
+      }
       var val;
       if (entry && typeof entry === 'object') {
         if (typeof entry[uiLang] === 'string' && entry[uiLang] !== '') {

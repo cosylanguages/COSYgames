@@ -8,22 +8,29 @@
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('identity-mystery')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
     function renderSetup() {
         if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
             COSYLoader.clearLevelNote();
         }
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Identity Mystery 🕵️</h2>
-              <p>A profession or person is hidden in shadow on the detective corkboard. Record descriptive clues or questions to gradually unmask the mystery silhouette!</p>
-              <div class="setup-field"><label>Category</label>
+              <p data-gs="setup.description">${T('setup.description', null, 'A profession or person is hidden in shadow on the detective corkboard. Record descriptive clues or questions to gradually unmask the mystery silhouette!')}</p>
+              <div class="setup-field"><label data-gs="common.category">${T('common.category', null, 'Category')}</label>
                 <select class="styled-sel" id="s-cat">
-                  <option value="all">All categories</option>
-                  <option value="people">Famous People 🌟</option>
-                  <option value="jobs">Jobs & Professions 💼</option>
-                  <option value="nationalities">Nationalities 🌍</option>
+                  <option value="all" data-gs="cat.all">${T('cat.all', null, 'All categories')}</option>
+                  <option value="people" data-gs="cat.people">${T('cat.people', null, 'Famous People 🌟')}</option>
+                  <option value="jobs" data-gs="cat.jobs">${T('cat.jobs', null, 'Jobs & Professions 💼')}</option>
+                  <option value="nationalities" data-gs="cat.nationalities">${T('cat.nationalities', null, 'Nationalities 🌍')}</option>
                 </select>
               </div>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
@@ -39,6 +46,7 @@
 
     window.COSY_GAME = {
         async start() {
+            const T = getT();
             const lang = (window.COSYLoader && typeof window.COSYLoader.getLangCode === 'function')
                 ? window.COSYLoader.getLangCode(document.getElementById('s-lang')?.value)
                 : 'en';
@@ -177,15 +185,17 @@
                     const blurPx = isRevealed ? 0 : Math.max(0, 18 - (cluesList.length * 3));
                     const isPhone = document.documentElement.dataset.context === 'phone';
 
+                    const calcPercent = Math.min(100, Math.round((1 - blurPx / 18) * 100));
+
                     body.innerHTML = `
                       <div class="im-corkboard-wrapper">
                         <div class="im-header-bar">
                           <div class="score-display">
-                            <strong>Score:</strong> <span class="score-value" id="im-score">${COSYGame.score}</span> |
-                            <strong>Round:</strong> ${COSYGame.round}/${COSYGame.maxRounds}
+                            <strong data-gs="common.score">${T('common.score', null, 'Score')}</strong>: <span class="score-value" id="im-score">${COSYGame.score}</span> |
+                            <strong data-gs="common.round">${T('common.round', null, 'Round')}</strong>: ${COSYGame.round}/${COSYGame.maxRounds}
                           </div>
                           <div style="font-size:0.9rem; color:var(--im-teal-string); font-weight:600;">
-                            🕵️ Clues Pinboard (${cluesList.length} pinned)
+                            🕵️ <span data-gs="play.pinboard_title">${T('play.pinboard_title', { count: cluesList.length }, `Clues Pinboard (${cluesList.length} pinned)`)}</span>
                           </div>
                         </div>
 
@@ -203,8 +213,8 @@
                               </div>
                             </div>
                             <div class="im-portrait-info">
-                              <div class="im-portrait-title">${isRevealed ? identity.person : '??? Mystery Person'}</div>
-                              <div class="im-portrait-status">${isRevealed ? '🎉 Identity Unmasked!' : `Clarity: ${Math.min(100, Math.round((1 - blurPx / 18) * 100))}%`}</div>
+                              <div class="im-portrait-title">${isRevealed ? gameUtils.escapeHtml(identity.person) : T('play.mystery_person', null, '??? Mystery Person')}</div>
+                              <div class="im-portrait-status">${isRevealed ? T('play.unmasked_status', null, '🎉 Identity Unmasked!') : T('play.clarity_status', { percent: calcPercent }, `Clarity: ${calcPercent}%`)}</div>
                             </div>
                           </div>
 
@@ -216,8 +226,8 @@
                               return `
                                 <div class="im-clue-card" style="--rotation: ${rot};" id="im-clue-card-${idx}">
                                   <div class="im-card-pin ${isNew ? 'motion-pin-drop' : ''}" id="im-card-pin-${idx}"></div>
-                                  <div class="im-clue-num">Clue #${idx + 1}</div>
-                                  <div class="im-clue-text">${clueText}</div>
+                                  <div class="im-clue-num">${T('play.clue_num', { n: idx + 1 }, `Clue #${idx + 1}`)}</div>
+                                  <div class="im-clue-text">${gameUtils.escapeHtml(clueText)}</div>
                                 </div>
                               `;
                             }).join('')}
@@ -228,17 +238,17 @@
                         <div class="im-action-panel">
                           ${!isRevealed ? `
                             <div class="im-input-group">
-                              <input type="text" id="im-clue-input" class="im-clue-input" placeholder="Enter a descriptive clue or question answer..." />
-                              <button class="btn-g-primary" id="im-btn-add-clue">+ Pin Clue</button>
+                              <input type="text" id="im-clue-input" class="im-clue-input" placeholder="${gameUtils.escapeAttr(T('placeholder.clue_input', null, 'Enter a descriptive clue or question answer...'))}" />
+                              <button class="btn-g-primary" id="im-btn-add-clue">+ <span data-gs="btn.pin_clue">${T('btn.pin_clue', null, 'Pin Clue')}</span></button>
                             </div>
                             <div class="im-controls-row">
-                              <button class="btn-g-secondary" id="im-btn-question">+ Record Question (${questions}/${maxQ})</button>
-                              <button class="btn-g-primary" id="im-btn-reveal" style="background:#0f766e; border-color:#14b8a6;">🎉 Unmask Identity</button>
-                              <button class="btn-g-danger" id="im-btn-skip">Skip Round →</button>
+                              <button class="btn-g-secondary" id="im-btn-question">+ <span data-gs="btn.record_question">${T('btn.record_question', { questions, max: maxQ }, `Record Question (${questions}/${maxQ})`)}</span></button>
+                              <button class="btn-g-primary" id="im-btn-reveal" style="background:#0f766e; border-color:#14b8a6;">🎉 <span data-gs="btn.unmask_identity">${T('btn.unmask_identity', null, 'Unmask Identity')}</span></button>
+                              <button class="btn-g-danger" id="im-btn-skip"><span data-gs="btn.skip_round">${T('btn.skip_round', null, 'Skip Round')}</span> →</button>
                             </div>
                           ` : `
                             <div class="im-controls-row" style="justify-content: center;">
-                              <button class="btn-g-primary" id="im-btn-next-round">Next Mystery →</button>
+                              <button class="btn-g-primary" id="im-btn-next-round"><span data-gs="btn.next_mystery">${T('btn.next_mystery', null, 'Next Mystery')}</span> →</button>
                             </div>
                           `}
                         </div>
@@ -278,7 +288,6 @@
                         line.setAttribute('x2', cx);
                         line.setAttribute('y2', cy);
 
-                        // Cap concurrently visible active strings at ~5, fade older ones
                         const isRecent = idx >= (totalClues - maxActiveStrings);
                         line.setAttribute('class', `im-string-line ${isRecent ? 'active-recent' : 'faded-old'}`);
                         svg.appendChild(line);
@@ -365,19 +374,22 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             const lang = COSYGame.language;
             const level = COSYGame.level;
-            COSYScores.save(GAME_ID, lang, level, COSYGame.score);
-            const best = COSYScores.best(GAME_ID, lang);
+            if (window.COSYScores && typeof window.COSYScores.save === 'function') {
+                COSYScores.save(GAME_ID, lang, level, COSYGame.score);
+            }
+            const best = (window.COSYScores && typeof window.COSYScores.best === 'function') ? COSYScores.best(GAME_ID, lang) : null;
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end" style="background:var(--im-corkboard-bg); border:2px solid var(--im-corkboard-border); border-radius:16px; padding:2rem; text-align:center; color:#f8fafc;">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title" style="font-family:var(--cg-font-heading); font-size:1.8rem; margin:0.5rem 0;">Case Files Closed!</div>
-                    <div class="re-sub" style="font-size:1.1rem; margin-bottom:1rem;">Final Score: <strong>${COSYGame.score}</strong></div>
-                    ${best ? `<div class="game-sub" style="color:var(--im-teal-string); margin-bottom:1.5rem">Personal best: ${best.score} pts</div>` : ''}
+                    <div class="re-title" style="font-family:var(--cg-font-heading); font-size:1.8rem; margin:0.5rem 0;" data-gs="end.title">${T('end.title', null, 'Case Files Closed!')}</div>
+                    <div class="re-sub" style="font-size:1.1rem; margin-bottom:1rem;">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Final Score: <strong>${COSYGame.score}</strong>`)}</div>
+                    ${best ? `<div class="game-sub" style="color:var(--im-teal-string); margin-bottom:1.5rem">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions" style="display:flex; justify-content:center; gap:1rem;">
-                        <button class="btn-g-primary" onclick="COSY_GAME.start()">Solve More Mysteries ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-gs="btn.solve_more">${T('btn.solve_more', null, 'Solve More Mysteries')}</span> ↺</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

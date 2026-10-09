@@ -21,7 +21,7 @@ Welcome! This guide explains how to review game translations for COSYgames.
 
 1. **Placeholders**: Keep all `{placeholders}` exactly as they appear in English (e.g. `{word}`, `{score}`, `{count}`). Never translate, alter, or remove placeholder names inside `{}`.
 2. **Keep it Short**: Interface buttons and status lines have limited UI space. Keep translations concise.
-3. **Symbols & Emojis**: Game names, symbols (`▶`, `✓`, `↺`), and emojis are kept in the surrounding markup/code. Do not add or remove symbols inside translated strings unless present in English.
+3. **Symbols & Emojis**: Game names, symbols (`▶`, `✓`, `↺`), and emojis are kept in the surrounding markup/code outside `data-gs` elements (e.g., `📍 <span data-gs="setup.level">…</span>`). Exception: inside `<option>` elements (where child tags are forbidden), emoji prefixes remain in the translatable string, identical across languages.
 4. **Register**: Use informal register (`tu` in French, `tú` in Spanish, `du` in German, `tu` in Italian, `ты` in Russian, `εσύ` in Greek).
 5. **What "reviewed" means**: Setting `status` to `reviewed` indicates that a human teacher has verified that the translation is accurate, natural, and adheres to the glossary.
 
