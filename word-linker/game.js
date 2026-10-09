@@ -139,7 +139,10 @@
                     </div>
 
                     <div class="bridge-deck">
-                      <div class="bridge-deck-title">🌉 <span data-gs="play.deck_title">${T('play.deck_title', { count: completedBridges.length }, `Accumulated Bridge Deck (${completedBridges.length} segments)`)}</span></div>
+                      ${(() => {
+                        const deckTitleText = T('play.deck_title', { count: completedBridges.length }, 'Accumulated Bridge Deck (' + completedBridges.length + ' segments)');
+                        return `<div class="bridge-deck-title">🌉 <span data-gs="play.deck_title">${deckTitleText}</span></div>`;
+                      })()}
                       <div class="bridge-segments-container" id="bridge-segments">
                         ${completedBridges.length ? completedBridges.map(b => `
                           <div class="bridge-segment motion-slide-chain">

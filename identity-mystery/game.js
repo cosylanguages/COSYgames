@@ -187,6 +187,8 @@
 
                     const calcPercent = Math.min(100, Math.round((1 - blurPx / 18) * 100));
 
+                  const pinboardTitle = T('play.pinboard_title', { count: cluesList.length }, 'Clues Pinboard (' + cluesList.length + ' pinned)');
+
                     body.innerHTML = `
                       <div class="im-corkboard-wrapper">
                         <div class="im-header-bar">
@@ -195,7 +197,7 @@
                             <strong data-gs="common.round">${T('common.round', null, 'Round')}</strong>: ${COSYGame.round}/${COSYGame.maxRounds}
                           </div>
                           <div style="font-size:0.9rem; color:var(--im-teal-string); font-weight:600;">
-                            🕵️ <span data-gs="play.pinboard_title">${T('play.pinboard_title', { count: cluesList.length }, `Clues Pinboard (${cluesList.length} pinned)`)}</span>
+                          🕵️ <span data-gs="play.pinboard_title">${pinboardTitle}</span>
                           </div>
                         </div>
 
@@ -242,7 +244,10 @@
                               <button class="btn-g-primary" id="im-btn-add-clue">+ <span data-gs="btn.pin_clue">${T('btn.pin_clue', null, 'Pin Clue')}</span></button>
                             </div>
                             <div class="im-controls-row">
-                              <button class="btn-g-secondary" id="im-btn-question">+ <span data-gs="btn.record_question">${T('btn.record_question', { questions, max: maxQ }, `Record Question (${questions}/${maxQ})`)}</span></button>
+                              ${(() => {
+                                const btnQText = T('btn.record_question', { questions, max: maxQ }, 'Record Question (' + questions + '/' + maxQ + ')');
+                                return `<button class="btn-g-secondary" id="im-btn-question">+ <span data-gs="btn.record_question">${btnQText}</span></button>`;
+                              })()}
                               <button class="btn-g-primary" id="im-btn-reveal" style="background:#0f766e; border-color:#14b8a6;">🎉 <span data-gs="btn.unmask_identity">${T('btn.unmask_identity', null, 'Unmask Identity')}</span></button>
                               <button class="btn-g-danger" id="im-btn-skip"><span data-gs="btn.skip_round">${T('btn.skip_round', null, 'Skip Round')}</span> →</button>
                             </div>
