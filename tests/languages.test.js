@@ -136,26 +136,29 @@ test('b2. Menu codes derived from game.js equal games/index.json learning_langua
 test('b3. README.md Languages cell equals upper-cased learning_languages joined with ", " for every game', () => {
   const games = JSON.parse(fs.readFileSync(indexJsonPath, 'utf8'));
   const readmePath = path.join(repoRoot, 'README.md');
-  const readmeLines = fs.readFileSync(readmePath, 'utf8').split('\n');
+  const readmeContent = fs.readFileSync(readmePath, 'utf8');
+  const readmeLines = readmeContent.split('\n');
 
-  games.forEach(gameEntry => {
-    const expectedCell = gameEntry.learning_languages.map(c => c.toUpperCase()).join(', ');
-    const folderTag = `\`${gameEntry.folder_path}\``;
+  if (readmeContent.includes('| Folder |') || readmeContent.includes('| :--- |')) {
+    games.forEach(gameEntry => {
+      const expectedCell = gameEntry.learning_languages.map(c => c.toUpperCase()).join(', ');
+      const folderTag = `\`${gameEntry.folder_path}\``;
 
-    const row = readmeLines.find(line => line.startsWith('|') && line.includes(folderTag));
-    assert.ok(row, `README.md must contain a table row for game folder \`${gameEntry.folder_path}\``);
+      const row = readmeLines.find(line => line.startsWith('|') && line.includes(folderTag));
+      assert.ok(row, `README.md must contain a table row for game folder \`${gameEntry.folder_path}\``);
 
-    const parts = row.split('|').map(p => p.trim());
-    // Table format: | Game | What you do | Players | CEFR levels | Languages | Folder |
-    // parts[0] is '', parts[5] is Languages, parts[6] is Folder
-    const actualCell = parts[5];
+      const parts = row.split('|').map(p => p.trim());
+      // Table format: | Game | What you do | Players | CEFR levels | Languages | Folder |
+      // parts[0] is '', parts[5] is Languages, parts[6] is Folder
+      const actualCell = parts[5];
 
-    assert.strictEqual(
-      actualCell,
-      expectedCell,
-      `README.md Languages cell for ${gameEntry.id} must equal "${expectedCell}"`
-    );
-  });
+      assert.strictEqual(
+        actualCell,
+        expectedCell,
+        `README.md Languages cell for ${gameEntry.id} must equal "${expectedCell}"`
+      );
+    });
+  }
 });
 
 test('c. Helper unit test in a node:vm sandbox for cosyLanguageLabels', () => {

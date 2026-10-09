@@ -93,4 +93,4 @@ COSYgames supports three distinct learning environments:
 
 ---
 
-© 2026 COSYlanguages Architecture Blueprint
+© 2022-2026 COSY Languages Architecture Blueprint
