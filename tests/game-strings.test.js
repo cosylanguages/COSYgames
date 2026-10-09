@@ -135,4 +135,56 @@ test('game-strings.js in node:vm tests', async (t) => {
     context.applyGameStrings();
     assert.strictEqual(el1.textContent, 'Reset');
   });
+
+  await t.test('e. _common lookup in vm', () => {
+    const commonPath = path.join(__dirname, '..', 'i18n', 'games', '_common.js');
+    const commonCode = fs.readFileSync(commonPath, 'utf8');
+    const { context, elements } = setupVmContext(gsCode, 'fr', '/lucky-numbers/index.html');
+    vm.runInContext(commonCode, context);
+    context.COSYGameStrings['lucky-numbers'] = { strings: {} };
+
+    context.COSYGameStrings['_common'].strings['common.btn_setup'] = { en: 'Setup', fr: 'Configuration' };
+    const T = context.COSYGameStrings.forGame('lucky-numbers');
+
+    assert.strictEqual(T('common.btn_setup'), 'Configuration');
+    assert.strictEqual(T('common.missing', null, 'Fallback'), 'Fallback');
+
+    const el = createElement('span', { 'data-gs': 'common.btn_setup' }, 'Setup Initial');
+    elements.push(el);
+    context.applyGameStrings();
+    assert.strictEqual(el.textContent, 'Configuration');
+  });
+
+  await t.test('f. guard test for data-gs elements in game.js files', () => {
+    const gameDirs = fs.readdirSync(path.join(__dirname, '..')).filter(d => {
+      const gPath = path.join(__dirname, '..', d, 'game.js');
+      return fs.existsSync(gPath);
+    });
+
+    for (const dir of gameDirs) {
+      const gPath = path.join(__dirname, '..', dir, 'game.js');
+      const code = fs.readFileSync(gPath, 'utf8');
+
+      if (!code.includes('data-gs')) continue;
+
+      const elemRegex = /<([a-zA-Z0-9-]+)\b([^>]*\bdata-gs=["']([^"']+)["'][^>]*)>(.*?)(<\/ \1>|<\/\1>)/gs;
+      let match;
+      while ((match = elemRegex.exec(code)) !== null) {
+        const tagName = match[1].toLowerCase();
+        const key = match[3];
+        const inner = match[4];
+
+        if (tagName === 'option') {
+          continue;
+        }
+
+        const withoutInterpolation = inner.replace(/\$\{[\s\S]*?\}/g, '');
+        assert.strictEqual(
+          withoutInterpolation.trim(),
+          '',
+          `[${dir}/game.js] Element <${tagName} data-gs="${key}"> contains text/emoji outside \${...}: "${inner.trim()}"`
+        );
+      }
+    }
+  });
 });

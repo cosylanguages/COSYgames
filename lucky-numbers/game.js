@@ -34,12 +34,12 @@
             <div class="setup-screen">
               <h2>Lucky Numbers 🔢</h2>
               <p data-gs="setup.description">${T('setup.description', null, 'Play Bingo! You can be the Caller for a group, or play as a Player (solo or with a host).')}</p>
-              <div class="gold-info-banner" data-gs="setup.level">
-                📍 ${T('setup.level', null, 'Level: Starter (A1)')}
+              <div class="gold-info-banner">
+                📍 <span data-gs="setup.level">${T('setup.level', null, 'Level: Starter (A1)')}</span>
               </div>
-              <div class="setup-field"><label data-gs="setup.role">${T('setup.role', null, 'Role')}</label>
+              <div class="setup-field"><label data-gs="common.role">${T('common.role', null, 'Role')}</label>
                 <div class="setup-options">
-                  <div class="setup-opt sel" onclick="COSY_GAME.selectOpt(this)" data-val="player">🃏 <span data-gs="role.player">${T('role.player', null, 'Player')}</span></div>
+                  <div class="setup-opt sel" onclick="COSY_GAME.selectOpt(this)" data-val="player">🃏 <span data-gs="common.player">${T('common.player', null, 'Player')}</span></div>
                   <div class="setup-opt" onclick="COSY_GAME.selectOpt(this)" data-val="caller">📣 <span data-gs="role.caller">${T('role.caller', null, 'Caller')}</span></div>
                 </div>
               </div>
@@ -66,7 +66,7 @@
             const type = document.getElementById('s-type')?.value || 'Bingo 1 (0-9)';
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
             const level = 'starter';
-            body.innerHTML = `<div class="game-loader-centered" data-gs="play.loading">${T('play.loading', null, 'Loading...')}</div>`;
+            body.innerHTML = `<div class="game-loader-centered" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
 
             await COSYLoader.loadLevelData(lang, level);
             COSYGame.init(GAME_ID, lang, level);
@@ -81,7 +81,7 @@
                         <div class="game-sub" id="bingo-call-word" data-gs="caller.ready">${T('caller.ready', null, 'Get ready to call!')}</div>
                         <div class="game-controls game-controls-centered-spaced">
                             <button class="btn-g-primary" id="btn-bingo-next"><span data-gs="btn.next_item">${T('btn.next_item', null, 'Next Item')}</span> 🎲</button>
-                            <button class="btn-g-danger" id="btn-bingo-stop" data-gs="btn.stop">${T('btn.stop', null, 'Stop')}</button>
+                            <button class="btn-g-danger" id="btn-bingo-stop" data-gs="common.stop">${T('common.stop', null, 'Stop')}</button>
                         </div>
                         <div id="bingo-history" class="game-history-box"></div>
                     </div>`;
@@ -144,7 +144,7 @@
                 }
                 body.innerHTML = `
                   <div class="score-bar">
-                    <div class="sb-item"><div class="sb-val">${COSYGame.score}</div><div class="sb-lbl" data-gs="player.score">${T('player.score', null, 'Score')}</div></div>
+                    <div class="sb-item"><div class="sb-val">${COSYGame.score}</div><div class="sb-lbl" data-gs="common.score">${T('common.score', null, 'Score')}</div></div>
                     <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl" data-gs="player.card_num">${T('player.card_num', null, 'Card')}</div></div>
                   </div>
                     <div class="game-card game-card-centered">
@@ -152,7 +152,7 @@
                         <div id="bingo-grid" class="bingo-grid bingo-grid-layout"></div>
                         <div class="game-controls game-controls-centered">
                             <button class="btn-g-secondary" onclick="COSY_GAME.start()"><span data-gs="btn.new_card">${T('btn.new_card', null, 'New Card')}</span> ↺</button>
-                            <button class="btn-g-danger" onclick="COSY_GAME.reset()"><span data-gs="btn.setup">${T('btn.setup', null, 'Setup')}</span></button>
+                            <button class="btn-g-danger" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                         </div>
                     </div>`;
 
@@ -223,12 +223,12 @@
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title" data-gs="end.title">${T('end.title', null, 'Game Over!')}</div>
-                    <div class="re-sub">${T('end.sub', { score: `<strong>${COSYGame.score}</strong>` }, `Your final score: <strong>${COSYGame.score}</strong>`)}</div>
-                    ${best ? `<div class="game-sub personal-best-sub">${T('end.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
+                    <div class="re-title" data-gs="common.game_over">${T('common.game_over', null, 'Game Over!')}</div>
+                    <div class="re-sub">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Your final score: <strong>${COSYGame.score}</strong>`)}</div>
+                    ${best ? `<div class="game-sub personal-best-sub">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions">
                         <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="btn.setup">${T('btn.setup', null, 'Setup')}</span></button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

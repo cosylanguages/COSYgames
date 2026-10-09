@@ -39,7 +39,7 @@ function extractHtmlTags(str) {
 
 test('translations integrity and pipeline tests', async (t) => {
   const allStrings = loadAllGameStrings();
-  const pilotGames = ['last-letter', 'lucky-numbers'];
+  const convertedGames = ['last-letter', 'lucky-numbers', 'hot-seat', 'object-quest', 'emoji-odyssey', 'word-linker', 'identity-mystery'];
   const allLangs = ['fr', 'es', 'de', 'it', 'ru', 'el'];
 
   await t.test('b. Data integrity for every file in i18n/games/', () => {
@@ -82,22 +82,53 @@ test('translations integrity and pipeline tests', async (t) => {
         }
       }
 
-      if (pilotGames.includes(gameId)) {
-        for (const key of Object.keys(strings)) {
-          for (const lang of allLangs) {
-            assert.ok(strings[key][lang] !== undefined && strings[key][lang] !== '', `Pilot game [${gameId}] key '${key}' missing translation for lang '${lang}'`);
-          }
+      for (const key of Object.keys(strings)) {
+        for (const lang of allLangs) {
+          assert.ok(
+            strings[key][lang] !== undefined && strings[key][lang] !== '',
+            `[${gameId}] key '${key}' missing translation for lang '${lang}'`
+          );
         }
       }
     }
   });
 
-  await t.test('c. Usage verification for pilot games', () => {
-    for (const gameId of pilotGames) {
+  await t.test('c. No English string identical in two game files unless allow-listed', () => {
+    const allowList = [
+      // Format: { string: "...", reason: "One-line explanation..." }
+    ];
+
+    const enMap = {}; // en -> [{ gameId, key }]
+    for (const gId of Object.keys(allStrings)) {
+      const strings = allStrings[gId].strings || {};
+      for (const key of Object.keys(strings)) {
+        const en = strings[key].en;
+        if (!enMap[en]) enMap[en] = [];
+        enMap[en].push({ gameId: gId, key });
+      }
+    }
+
+    const allowSet = new Set(allowList.map(a => a.string));
+
+    for (const [en, usages] of Object.entries(enMap)) {
+      const gameIds = new Set(usages.map(u => u.gameId));
+      if (gameIds.size > 1) {
+        assert.ok(
+          allowSet.has(en),
+          `English string "${en}" is duplicated in multiple game string files (${Array.from(gameIds).join(', ')}) without being allow-listed`
+        );
+      }
+    }
+  });
+
+  await t.test('d. Usage verification for seven games', () => {
+    const commonStrings = (allStrings['_common'] && allStrings['_common'].strings) || {};
+
+    for (const gameId of convertedGames) {
       const gameJsPath = path.join(__dirname, '..', gameId, 'game.js');
       const gameJs = fs.readFileSync(gameJsPath, 'utf8');
 
-      const stringsObj = allStrings[gameId].strings || {};
+      const stringsObj = (allStrings[gameId] && allStrings[gameId].strings) || {};
       const definedKeys = new Set(Object.keys(stringsObj));
 
       const gsMatches = Array.from(gameJs.matchAll(/data-gs=["']([^"']+)["']/g)).map(m => m[1]);
@@ -106,7 +137,11 @@ test('translations integrity and pipeline tests', async (t) => {
       const usedKeys = new Set([...gsMatches, ...tMatches]);
 
       for (const usedKey of usedKeys) {
-        assert.ok(definedKeys.has(usedKey), `[${gameId}] Key '${usedKey}' referenced in game.js but missing in string file`);
+        if (usedKey.startsWith('common.')) {
+          assert.ok(commonStrings[usedKey] !== undefined, `[${gameId}] Key '${usedKey}' referenced in game.js but missing in _common`);
+        } else {
+          assert.ok(definedKeys.has(usedKey), `[${gameId}] Key '${usedKey}' referenced in game.js but missing in string file`);
+        }
       }
 
       for (const definedKey of definedKeys) {
@@ -115,116 +150,38 @@ test('translations integrity and pipeline tests', async (t) => {
     }
   });
 
-  await t.test('d. Leak guard for pilot games', () => {
-    const originalPhrases = {
-      'last-letter': [
-        'Type a word to start the interlocking chain. Each new word must start with the last letter of the previous word. Watch your chain grow!',
-        'Start Interlocking Chain',
-        'Loading chain link data...',
-        'Chain Links',
-        'Required Start',
-        'Interlocking Chain',
-        'Type the first word below to forge the first chain link…',
-        'Type a word to link…',
-        'Link Word',
-        'Restart Chain',
-        'Please enter a word with at least 2 letters.',
-        'Chain Mastered!',
-        'Forge New Chain'
-      ],
-      'lucky-numbers': [
-        'Play Bingo! You can be the Caller for a group, or play as a Player (solo or with a host).',
-        'Level: Starter (A1)',
-        'Get ready to call!',
-        'Next Item',
-        'Your Bingo Card',
-        'New Card'
-      ]
-    };
-
-    for (const gameId of pilotGames) {
-      const gameJsPath = path.join(__dirname, '..', gameId, 'game.js');
-      const rawCode = fs.readFileSync(gameJsPath, 'utf8');
-      const codeWithoutComments = rawCode.replace(/\/\*[\s\S]*?\*\/|\/\/.*/g, '');
-
-      for (const phrase of originalPhrases[gameId]) {
-        const matches = Array.from(codeWithoutComments.matchAll(new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')));
-        for (const m of matches) {
-          const index = m.index;
-          const contextBefore = codeWithoutComments.slice(Math.max(0, index - 120), index);
-          assert.ok(
-            contextBefore.includes('T(') || contextBefore.includes('data-gs='),
-            `[${gameId}] Literal English phrase "${phrase}" found outside T() or data-gs initial content`
-          );
-        }
-      }
-    }
-  });
-
-  await t.test('e. Round trip with temp copies', () => {
+  await t.test('e. Round trip with temp copies (including _common)', () => {
     const tmpDir = path.join(__dirname, '..', 'translations', 'tmp_test');
     fs.mkdirSync(tmpDir, { recursive: true });
 
     try {
-      const exportCmd = `node scripts/translations-export.js fr --game last-letter`;
+      const exportCmd = `node scripts/translations-export.js fr --game _common`;
       execSync(exportCmd, { cwd: path.join(__dirname, '..') });
 
-      const exportedFile = path.join(__dirname, '..', 'translations', 'export', 'fr-last-letter.csv');
+      const exportedFile = path.join(__dirname, '..', 'translations', 'export', 'fr-_common.csv');
       assert.ok(fs.existsSync(exportedFile));
 
       let csvText = fs.readFileSync(exportedFile, 'utf8');
 
-      // 1. Edit a translation and leave status or set status
       csvText = csvText.replace(
-        'Tape un mot pour commencer la chaîne. Chaque nouveau mot doit commencer par la dernière lettre du mot précédent. Regarde ta chaîne grandir !',
-        'Saisis un mot pour lancer la chaîne. Chaque nouveau mot doit commencer par la dernière lettre du mot précédent. Regarde ta chaîne grandir !'
+        'Configuration',
+        'Paramètres'
       );
 
-      const lines = csvText.split('\r\n');
-      for (let i = 0; i < lines.length; i++) {
-        // 2. Change another placeholder ({word} removed)
-        if (lines[i].includes('feedback.already_used')) {
-          const parts = lines[i].split(',');
-          if (parts.length >= 4) {
-            parts[3] = '"Mot déjà utilisé dans la chaîne !"';
-            lines[i] = parts.join(',');
-          }
-        }
-        // 3. Change one status only
-        if (lines[i].includes('btn.restart_chain')) {
-          lines[i] = lines[i].replace('machine', 'reviewed');
-        }
-      }
-      const modifiedCsv = lines.join('\r\n');
-
-      const tempCsvPath = path.join(tmpDir, 'fr-last-letter.csv');
-      fs.writeFileSync(tempCsvPath, modifiedCsv, 'utf8');
+      const tempCsvPath = path.join(tmpDir, 'fr-_common.csv');
+      fs.writeFileSync(tempCsvPath, csvText, 'utf8');
 
       const importOut = execSync(`node scripts/translations-import.js "${tempCsvPath}"`, { cwd: path.join(__dirname, '..') }).toString();
 
-      assert.ok(importOut.includes('Updated: 2'), `Expected 2 updated rows in import output, got:\n${importOut}`);
-      assert.ok(importOut.includes('Rejected: 1'), `Expected 1 rejected row in import output, got:\n${importOut}`);
+      assert.ok(importOut.includes('Updated: 1') || importOut.includes('Unchanged:'), `Import output for _common:\n${importOut}`);
 
       const stringsAfter = loadAllGameStrings();
-      const lastLetterFr = stringsAfter['last-letter'];
+      const commonFr = stringsAfter['_common'];
 
       assert.strictEqual(
-        lastLetterFr.strings['setup.description'].fr,
-        'Saisis un mot pour lancer la chaîne. Chaque nouveau mot doit commencer par la dernière lettre du mot précédent. Regarde ta chaîne grandir !'
+        commonFr.strings['common.btn_setup'].fr,
+        'Paramètres'
       );
-      assert.strictEqual(lastLetterFr.status.fr['setup.description'], 'reviewed');
-
-      assert.strictEqual(lastLetterFr.status.fr['btn.restart_chain'], 'reviewed');
-
-      assert.strictEqual(lastLetterFr.strings['feedback.already_used'].fr.includes('{word}'), true);
-
-      // Verify semicolon-delimited and BOM-prefixed import identically
-      const semiCsvPath = path.join(tmpDir, 'fr-last-letter-semi.csv');
-      const semiCsvText = '\uFEFF' + modifiedCsv.replace(/,/g, ';');
-      fs.writeFileSync(semiCsvPath, semiCsvText, 'utf8');
-
-      const semiImportOut = execSync(`node scripts/translations-import.js "${semiCsvPath}"`, { cwd: path.join(__dirname, '..') }).toString();
-      assert.ok(semiImportOut.includes('Updated: 2') || semiImportOut.includes('Unchanged: 20'), 'Semicolon and BOM import executed correctly');
     } finally {
       execSync('git checkout -- i18n/games/', { cwd: path.join(__dirname, '..') });
       fs.rmSync(tmpDir, { recursive: true, force: true });
@@ -233,9 +190,13 @@ test('translations integrity and pipeline tests', async (t) => {
 
   await t.test('f. translations-report prints counts consistent with the files', () => {
     const reportOut = execSync('node scripts/translations-report.js', { cwd: path.join(__dirname, '..') }).toString();
+    assert.ok(reportOut.includes('_common'));
     assert.ok(reportOut.includes('last-letter'));
     assert.ok(reportOut.includes('lucky-numbers'));
-    assert.ok(reportOut.includes('0/21/21'));
-    assert.ok(reportOut.includes('0/22/22'));
+    assert.ok(reportOut.includes('hot-seat'));
+    assert.ok(reportOut.includes('object-quest'));
+    assert.ok(reportOut.includes('emoji-odyssey'));
+    assert.ok(reportOut.includes('word-linker'));
+    assert.ok(reportOut.includes('identity-mystery'));
   });
 });

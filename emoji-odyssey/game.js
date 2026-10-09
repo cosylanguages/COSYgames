@@ -10,6 +10,12 @@
 
     let collectedPairs = [];
 
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('emoji-odyssey')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
     function shuffle(arr) { return [...arr].sort(() => Math.random() - .5); }
 
     function renderSetup() {
@@ -17,18 +23,19 @@
             COSYLoader.clearLevelNote();
         }
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Emoji Odyssey 📖</h2>
-              <p>Two modes: <strong>Guess</strong> the word behind the emoji, or <strong>Tell a Story</strong> using a set of random emojis.</p>
+              <p data-gs="setup.description">${T('setup.description', null, 'Two modes: Guess the word behind the emoji, or Tell a Story using a set of random emojis.')}</p>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
                 <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
-              <div class="setup-field"><label>Mode</label>
+              <div class="setup-field"><label data-gs="common.mode">${T('common.mode', null, 'Mode')}</label>
                 <div class="setup-options">
-                  <div class="setup-opt sel" onclick="COSY_GAME.selectOpt(this)" data-val="guess">🧩 Guess</div>
-                  <div class="setup-opt" onclick="COSY_GAME.selectOpt(this)" data-val="story">📖 Story</div>
+                  <div class="setup-opt sel" onclick="COSY_GAME.selectOpt(this)" data-val="guess">🧩 <span data-gs="mode.guess">${T('mode.guess', null, 'Guess')}</span></div>
+                  <div class="setup-opt" onclick="COSY_GAME.selectOpt(this)" data-val="story">📖 <span data-gs="mode.story">${T('mode.story', null, 'Story')}</span></div>
                 </div>
               </div>
               <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
@@ -45,11 +52,12 @@
         },
 
         async start() {
+            const T = getT();
             const mode = document.querySelector('.setup-opt.sel[data-val]')?.dataset.val || 'guess';
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
             const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
             const body = document.getElementById('go-body');
-            body.innerHTML = '<div style="text-align:center;padding:4rem;">Loading...</div>';
+            body.innerHTML = `<div style="text-align:center;padding:4rem;" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
 
             await COSYLoader.loadLevelData(lang, level);
             const vres = await COSYVocab.ensure(lang, COSYVocab.levelCode(level), {needEmoji:true, min:24, forms:['noun','verb','adjective']});
@@ -64,9 +72,9 @@
                 const pool = shuffle(vocab.filter(v => v.emoji)).slice(0, 30);
                 if (pool.length < 4) {
                     const failMsg = vres.source === 'unavailable'
-                        ? "Couldn't load vocabulary from COSYdata. Check your connection, or try Story mode."
-                        : "Not enough emoji vocabulary for this language yet.";
-                    body.innerHTML = `<div class="game-card">${failMsg} <button id="eo-back">Back</button></div>`;
+                        ? T('err.no_data', null, "Couldn't load vocabulary from COSYdata. Check your connection, or try Story mode.")
+                        : T('err.not_enough', null, "Not enough emoji vocabulary for this language yet.");
+                    body.innerHTML = `<div class="game-card">${failMsg} <button id="eo-back"><span data-gs="common.back">${T('common.back', null, 'Back')}</span></button></div>`;
                     document.getElementById('eo-back').onclick=()=>COSY_GAME.reset();
                     return;
                 }
@@ -86,11 +94,11 @@
                     const options = shuffle([current.word, ...shuffle(vocab.filter(v => v.word !== current.word)).slice(0, 3).map(v => v.word)]);
                     body.innerHTML = `
                         <div class="score-bar">
-                            <div class="sb-item"><div class="sb-val">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
-                            <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
+                            <div class="sb-item"><div class="sb-val">${COSYGame.score}</div><div class="sb-lbl" data-gs="common.score">${T('common.score', null, 'Score')}</div></div>
+                            <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl" data-gs="common.round">${T('common.round', null, 'Round')}</div></div>
                         </div>
                         <div class="game-card" style="text-align:center">
-                            <div class="game-label">🧩 Floating Constellation Match</div>
+                            <div class="game-label">🧩 <span data-gs="play.floating_title">${T('play.floating_title', null, 'Floating Constellation Match')}</span></div>
 
                             <!-- Constellation Area -->
                             <div class="eo-constellation-container">
@@ -100,19 +108,19 @@
                             <div id="speech-bubble-mount"></div>
 
                             <div class="word-options" style="margin-top:1.5rem">
-                                ${options.map(o => `<button class="word-opt" data-word="${gameUtils.escapeAttr(o)}" data-correct="${gameUtils.escapeAttr(current.word)}">${o}</button>`).join('')}
+                                ${options.map(o => `<button class="word-opt" data-word="${gameUtils.escapeAttr(o)}" data-correct="${gameUtils.escapeAttr(current.word)}">${gameUtils.escapeHtml(o)}</button>`).join('')}
                             </div>
 
                             <!-- Collected Tray in Corner -->
                             <div class="collected-tray" id="collected-tray">
-                                <span>Collected:</span>
+                                <span data-gs="play.collected">${T('play.collected', null, 'Collected:')}</span>
                                 <div id="collected-chips" style="display:flex; gap:0.4rem; flex-wrap:wrap;">
-                                    ${collectedPairs.length === 0 ? '<span style="opacity:0.6; font-weight:400;">(empty)</span>' : collectedPairs.map(p => `<span class="collected-pair-chip">${p.emoji} ${p.word}</span>`).join('')}
+                                    ${collectedPairs.length === 0 ? `<span style="opacity:0.6; font-weight:400;" data-gs="play.empty">${T('play.empty', null, '(empty)')}</span>` : collectedPairs.map(p => `<span class="collected-pair-chip">${p.emoji} ${gameUtils.escapeHtml(p.word)}</span>`).join('')}
                                 </div>
                             </div>
 
                             <div class="game-controls" style="margin-top:1.5rem">
-                                <button class="btn-g-danger" onclick="COSY_GAME.reset()">Stop</button>
+                                <button class="btn-g-danger" onclick="COSY_GAME.reset()" data-gs="common.stop">${T('common.stop', null, 'Stop')}</button>
                             </div>
                         </div>`;
 
@@ -143,7 +151,7 @@
                         if (chipsContainer) {
                             const chip = document.createElement('span');
                             chip.className = 'collected-pair-chip motion-slide-chain';
-                            chip.innerHTML = `${item.emoji} ${correct}`;
+                            chip.innerHTML = `${item.emoji} ${gameUtils.escapeHtml(correct)}`;
                             chipsContainer.appendChild(chip);
                         }
 
@@ -159,16 +167,16 @@
                     const picked = shuffle(emojis).slice(0, 4);
                     body.innerHTML = `
                         <div class="game-card" style="text-align:center">
-                            <div class="game-label">📖 Tell a story using:</div>
+                            <div class="game-label">📖 <span data-gs="play.story_title">${T('play.story_title', null, 'Tell a story using:')}</span></div>
 
                             <div class="eo-constellation-container">
                                 ${picked.map(e => `<div class="eo-emoji-floating">${e}</div>`).join('')}
                             </div>
 
-                            <div class="game-sub" style="margin-top:1rem">Build the next part of the story with these symbols!</div>
+                            <div class="game-sub" style="margin-top:1rem" data-gs="play.story_sub">${T('play.story_sub', null, 'Build the next part of the story with these symbols!')}</div>
                             <div class="game-controls" style="justify-content:center; margin-top:2rem">
-                                <button class="btn-g-primary" onclick="COSY_GAME.eoNextSet()">Next player →</button>
-                                <button class="btn-g-danger" onclick="COSY_GAME.reset()">End Story</button>
+                                <button class="btn-g-primary" onclick="COSY_GAME.eoNextSet()"><span data-gs="btn.next_player">${T('btn.next_player', null, 'Next player')}</span> →</button>
+                                <button class="btn-g-danger" onclick="COSY_GAME.reset()" data-gs="btn.end_story">${T('btn.end_story', null, 'End Story')}</button>
                             </div>
                         </div>`;
                 };
@@ -180,6 +188,7 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             const lang = COSYGame.language;
             const level = COSYGame.level;
             COSYScores.save(GAME_ID, lang, level, COSYGame.score);
@@ -188,12 +197,12 @@
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title">Game Over!</div>
-                    <div class="re-sub">Your final score: <strong>${COSYGame.score}</strong></div>
-                    ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
+                    <div class="re-title" data-gs="common.game_over">${T('common.game_over', null, 'Game Over!')}</div>
+                    <div class="re-sub">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Your final score: <strong>${COSYGame.score}</strong>`)}</div>
+                    ${best ? `<div class="game-sub" style="margin-bottom:1rem">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions">
                         <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }
