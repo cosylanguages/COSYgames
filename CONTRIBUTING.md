@@ -74,6 +74,7 @@ Before submitting a Pull Request, please ensure the following:
 3. **Translating Game Text**:
    - Game-specific interface strings reside in `i18n/games/<game-id>.js`.
    - Emoji Rule: An element with `data-gs` contains ONLY the translatable text; emoji/symbols go outside it in a sibling or parent element (e.g., `📍 <span data-gs="setup.level">…</span>`). Exception: inside `<option>` elements (no child elements allowed), the emoji prefix stays part of the translated string, identical in every language.
+   - Elements that require dynamic parameters (such as count or score) must NOT use `data-gs`; they are rebuilt dynamically with `${T('key', { params }, ...)}` when the game renders.
    - Use `scripts/translations-export.js <lang> [--game <id>]` to export strings for teacher review in CSV format.
    - Teachers can review and update translations in `translations/export/<lang>.csv` and mark status as `reviewed`.
    - Use `scripts/translations-import.js <file.csv>` to import reviewed translations and automatically update `i18n/games/<game-id>.js`.
