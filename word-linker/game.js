@@ -141,7 +141,7 @@
                     <div class="bridge-deck">
                       ${(() => {
                         const deckTitleText = T('play.deck_title', { count: completedBridges.length }, 'Accumulated Bridge Deck (' + completedBridges.length + ' segments)');
-                        return `<div class="bridge-deck-title">🌉 <span data-gs="play.deck_title">${deckTitleText}</span></div>`;
+                        return `<div class="bridge-deck-title">🌉 <span>${deckTitleText}</span></div>`;
                       })()}
                       <div class="bridge-segments-container" id="bridge-segments">
                         ${completedBridges.length ? completedBridges.map(b => `

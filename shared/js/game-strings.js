@@ -17,7 +17,15 @@
     return (lang || 'en').toLowerCase().slice(0, 2);
   }
 
+  var warnedGames = {};
+
   COSYGameStrings.forGame = function(gameId) {
+    if (!COSYGameStrings[gameId] && !warnedGames[gameId]) {
+      warnedGames[gameId] = true;
+      if (typeof console !== 'undefined' && console.warn) {
+        console.warn('[i18n] strings not loaded for ' + gameId);
+      }
+    }
     return function T(key, params, fallbackEnglish) {
       var uiLang = getUiLang();
       var entry;

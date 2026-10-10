@@ -197,7 +197,7 @@
                             <strong data-gs="common.round">${T('common.round', null, 'Round')}</strong>: ${COSYGame.round}/${COSYGame.maxRounds}
                           </div>
                           <div style="font-size:0.9rem; color:var(--im-teal-string); font-weight:600;">
-                          🕵️ <span data-gs="play.pinboard_title">${pinboardTitle}</span>
+                          🕵️ <span>${pinboardTitle}</span>
                           </div>
                         </div>
 
@@ -246,7 +246,7 @@
                             <div class="im-controls-row">
                               ${(() => {
                                 const btnQText = T('btn.record_question', { questions, max: maxQ }, 'Record Question (' + questions + '/' + maxQ + ')');
-                                return `<button class="btn-g-secondary" id="im-btn-question">+ <span data-gs="btn.record_question">${btnQText}</span></button>`;
+                                return `<button class="btn-g-secondary" id="im-btn-question">+ <span>${btnQText}</span></button>`;
                               })()}
                               <button class="btn-g-primary" id="im-btn-reveal" style="background:#0f766e; border-color:#14b8a6;">🎉 <span data-gs="btn.unmask_identity">${T('btn.unmask_identity', null, 'Unmask Identity')}</span></button>
                               <button class="btn-g-danger" id="im-btn-skip"><span data-gs="btn.skip_round">${T('btn.skip_round', null, 'Skip Round')}</span> →</button>

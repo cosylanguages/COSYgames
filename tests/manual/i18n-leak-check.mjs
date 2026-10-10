@@ -68,6 +68,16 @@ async function runFlowForGame(page, gameId, lang, baseUrl) {
     try {
       localStorage.setItem('cosy_ui_lang', uiLang);
     } catch(e) {}
+
+    function mulberry32(a) {
+      return function() {
+        var t = a += 0x6D2B79F5;
+        t = Math.imul(t ^ t >>> 15, t | 1);
+        t ^= t + Math.imul(t ^ t >>> 8, t | 61);
+        return ((t ^ t >>> 14) >>> 0) / 4294967296;
+      };
+    }
+    Math.random = mulberry32(1);
   }, lang);
 
   await page.goto(pageUrl);
@@ -99,6 +109,19 @@ async function runFlowForGame(page, gameId, lang, baseUrl) {
 
   await page.waitForTimeout(300);
   states.play = await page.innerText('#go-body');
+
+  if (gameId === 'identity-mystery') {
+    try {
+      const askBtn = await page.$('#im-btn-question');
+      if (askBtn && await askBtn.isVisible()) {
+        await askBtn.click();
+        await page.waitForTimeout(300);
+        await askBtn.click();
+        await page.waitForTimeout(300);
+      }
+    } catch(e) {}
+    states.clues = await page.innerText('#go-body');
+  }
 
   try {
     const actionBtn = await page.$('.word-opt, .word-plank, #hs-got-it, #oq-btn-hint, #im-btn-question');
@@ -154,19 +177,71 @@ async function main() {
         }
       }
 
+      const rawPlaceholders = Array.from(combinedText.matchAll(/\{[a-zA-Z0-9_]+\}/g)).map(m => m[0]);
+
       leakageTable.push({
         game: gameId,
         lang: lang,
         leakageCount: leaked.length,
-        leakedStrings: leaked.join(' | ')
+        leakedStrings: leaked.join(' | '),
+        rawPlaceholders: rawPlaceholders.join(', ')
       });
     }
   }
 
-  console.log('Game          | Lang | Leakage | Leaked Strings');
-  console.log('--------------|------|---------|------------------------------------');
+  console.log('Game          | Lang | Leakage | Raw Placeholders | Leaked Strings');
+  console.log('--------------|------|---------|------------------|------------------------------------');
   for (const row of leakageTable) {
-    console.log(`${row.game.padEnd(13)}| ${row.lang.padEnd(5)}| ${String(row.leakageCount).padEnd(8)}| ${row.leakedStrings}`);
+    console.log(`${row.game.padEnd(13)}| ${row.lang.padEnd(5)}| ${String(row.leakageCount).padEnd(8)}| ${row.rawPlaceholders.padEnd(17)}| ${row.leakedStrings}`);
+  }
+
+  console.log('\n=== (2) LIVE LANGUAGE SWITCHING ON SETUP SCREENS ===');
+  const FIVE_GAMES = ['hot-seat', 'object-quest', 'emoji-odyssey', 'word-linker', 'identity-mystery'];
+
+  for (const gId of ['hot-seat', 'word-linker']) {
+    const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+    const errors = [];
+    page.on('pageerror', err => errors.push(err.message));
+
+    await page.goto(`file://${repoRoot}/${gId}/index.html`);
+    await page.waitForSelector('#go-body');
+
+    const selectEl = await page.$('.styled-sel, select:not(#cosy-ui-lang-switcher)');
+    let initialVal = null;
+    if (selectEl) {
+      initialVal = await selectEl.inputValue();
+    }
+
+    const textEn = await page.innerText('#go-body');
+
+    await page.evaluate(() => window.setLanguage && window.setLanguage('fr'));
+    await page.waitForTimeout(200);
+    const textFr = await page.innerText('#go-body');
+
+    await page.evaluate(() => window.setLanguage && window.setLanguage('el'));
+    await page.waitForTimeout(200);
+    const textEl = await page.innerText('#go-body');
+
+    let preservedVal = null;
+    if (selectEl) {
+      preservedVal = await selectEl.inputValue();
+    }
+
+    console.log(`Live switch [${gId}]: EN -> FR -> EL | Text Changed: ${textEn !== textFr && textFr !== textEl} | Menu Preserved: ${initialVal === preservedVal} (${initialVal}) | Page Errors: ${errors.length}`);
+    await page.close();
+  }
+
+  console.log('\n=== (3) PAGE LOAD & ROUND SCREEN ERRORS (FR, RU, EL) ===');
+  for (const gId of FIVE_GAMES) {
+    for (const l of ['fr', 'ru', 'el']) {
+      const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+      const pageErrors = [];
+      page.on('pageerror', err => pageErrors.push(err.message));
+
+      await runFlowForGame(page, gId, l, `file://${repoRoot}`);
+      console.log(`Page Load [${gId}] [${l}]: Page Errors = ${pageErrors.length}`);
+      await page.close();
+    }
   }
 
   const baselineRef = ref || 'HEAD~1';

@@ -178,12 +178,69 @@ test('game-strings.js in node:vm tests', async (t) => {
           continue;
         }
 
-        const withoutInterpolation = inner.replace(/\$\{[\s\S]*?\}/g, '');
+        function stripInterpolations(str) {
+          let result = '';
+          let interpolations = [];
+          let i = 0;
+          while (i < str.length) {
+            if (str[i] === '$' && str[i + 1] === '{') {
+              let braceCount = 1;
+              let start = i;
+              i += 2;
+              let inString = null;
+              while (i < str.length && braceCount > 0) {
+                const ch = str[i];
+                if (ch === '\\') {
+                  i += 2;
+                  continue;
+                }
+                if (inString) {
+                  if (ch === inString) {
+                    inString = null;
+                  }
+                  i++;
+                  continue;
+                }
+                if (ch === "'" || ch === '"' || ch === '`') {
+                  inString = ch;
+                  i++;
+                  continue;
+                }
+                if (ch === '{') {
+                  braceCount++;
+                  i++;
+                  continue;
+                }
+                if (ch === '}') {
+                  braceCount--;
+                  i++;
+                  continue;
+                }
+                i++;
+              }
+              interpolations.push(str.slice(start, i));
+            } else {
+              result += str[i];
+              i++;
+            }
+          }
+          return { withoutInterpolation: result, interpolations };
+        }
+
+        const { withoutInterpolation, interpolations } = stripInterpolations(inner);
         assert.strictEqual(
           withoutInterpolation.trim(),
           '',
           `[${dir}/game.js] Element <${tagName} data-gs="${key}"> contains text/emoji outside \${...}: "${inner.trim()}"`
         );
+
+        for (const interp of interpolations) {
+          assert.strictEqual(
+            /T\s*\([^,]+,\s*\{/.test(interp),
+            false,
+            `[${dir}/game.js] Element <${tagName} data-gs="${key}"> cannot use params in T(...) call because data-gs elements are translated statically without params: ${interp}`
+          );
+        }
       }
     }
   });
