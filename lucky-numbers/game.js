@@ -6,7 +6,7 @@
     const GAME_ID = 'bingo';
     const GAME_TITLE = 'Lucky Numbers 🔢';
     const LANG_OPTS = window.cosyLanguageLabels ? window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]) : ["en","fr","es","de","it","ru","el"];
-    const BINGO_LVLS = ['Bingo 1 (0-9)', 'Bingo 2 (10-19)', 'Bingo 3 (20-99)', 'Bingo 5 (Random)', 'Alphabet (A-Z)', 'Listening Practice 👂'];
+    const BINGO_LVLS = ['Alphabet (A-Z)', 'Numbers 0-9', 'Numbers 0-19', 'Numbers 0-99'];
 
     function getT() {
         return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
@@ -25,6 +25,63 @@
     }
 
     function shuffle(arr) { return [...arr].sort(() => Math.random() - .5); }
+
+    const numberCache = {};
+
+    async function fetchNumbersData(lang) {
+        if (numberCache[lang]) return numberCache[lang];
+
+        const baseUrl = (typeof window !== 'undefined' && window.COSY_DATA_BASE)
+            ? window.COSY_DATA_BASE
+            : 'https://cosylanguages.github.io/COSYdata/vocabulary';
+
+        const url = `${baseUrl}/${lang}/a0_a1/numbers.json`;
+
+        try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const json = await res.json();
+            const items = Array.isArray(json) ? json : Object.values(json);
+            const map = {};
+            items.forEach(item => {
+                if (item && typeof item.value === 'number') {
+                    if (!map[item.value] || item.sub_theme === 'cardinal_numbers') {
+                        map[item.value] = item.word || String(item.value);
+                    }
+                }
+            });
+            numberCache[lang] = map;
+            return map;
+        } catch (err) {
+            console.warn('[Lucky Numbers] COSYdata numbers fetch failed, using fallbacks:', err);
+            numberCache[lang] = null;
+            return null;
+        }
+    }
+
+    function getPool(type, lang, numbersMap) {
+        if (type.includes('Alphabet')) {
+            const alphaStr = (window.alphabetsData && window.alphabetsData[lang])
+                ? window.alphabetsData[lang]
+                : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            return alphaStr.split('').map(ch => ({ value: ch, word: ch }));
+        }
+
+        let min = 0;
+        let max = 9;
+        if (type.includes('0-19')) {
+            max = 19;
+        } else if (type.includes('0-99')) {
+            max = 99;
+        }
+
+        const pool = [];
+        for (let i = min; i <= max; i++) {
+            const word = (numbersMap && numbersMap[i]) ? numbersMap[i] : String(i);
+            pool.push({ value: i, word: word });
+        }
+        return pool;
+    }
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
@@ -63,7 +120,7 @@
             const T = getT();
             const role = document.querySelector('.setup-opt.sel[data-val]')?.dataset.val || 'player';
             const body = document.getElementById('go-body');
-            const type = document.getElementById('s-type')?.value || 'Bingo 1 (0-9)';
+            const type = document.getElementById('s-type')?.value || 'Numbers 0-9';
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
             const level = 'starter';
             body.innerHTML = `<div class="game-loader-centered" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
@@ -71,13 +128,17 @@
             await COSYLoader.loadLevelData(lang, level);
             COSYGame.init(GAME_ID, lang, level);
 
-            const isListening = type.includes('Listening');
+            let numbersMap = null;
+            if (!type.includes('Alphabet')) {
+                numbersMap = await fetchNumbersData(lang);
+            }
+            const pool = getPool(type, lang, numbersMap);
 
             if (role === 'caller') {
                 body.innerHTML = `
                     <div class="game-card game-card-centered">
                         <div class="game-label">📣 <span data-gs="caller.label">${T('caller.label', null, 'Lucky Caller')}</span></div>
-                        <div class="game-prompt game-prompt-large" id="bingo-call">${isListening ? '👂' : '---'}</div>
+                        <div class="game-prompt game-prompt-large" id="bingo-call">---</div>
                         <div class="game-sub" id="bingo-call-word" data-gs="caller.ready">${T('caller.ready', null, 'Get ready to call!')}</div>
                         <div class="game-controls game-controls-centered-spaced">
                             <button class="btn-g-primary" id="btn-bingo-next"><span data-gs="btn.next_item">${T('btn.next_item', null, 'Next Item')}</span> 🎲</button>
@@ -85,20 +146,6 @@
                         </div>
                         <div id="bingo-history" class="game-history-box"></div>
                     </div>`;
-
-                let pool = [];
-                if (type.includes('Alphabet')) {
-                    const alpha = (window.alphabetsData && window.alphabetsData[lang]) ? window.alphabetsData[lang].split('') : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-                    pool = alpha;
-                } else if (type.includes('Bingo 1')) {
-                    pool = Array.from({length: 10}, (_, i) => i);
-                } else if (type.includes('Bingo 2')) {
-                    pool = Array.from({length: 10}, (_, i) => i + 10);
-                } else if (type.includes('Bingo 3')) {
-                    pool = Array.from({length: 80}, (_, i) => i + 20);
-                } else {
-                    pool = Array.from({length: 100}, (_, i) => i);
-                }
 
                 const drawBag = gameUtils.createDrawBag(pool);
                 const maxItems = pool.length;
@@ -116,26 +163,21 @@
                     const item = drawBag.next();
                     drawnCount++;
                     const callEl = document.getElementById('bingo-call');
+                    const wordEl = document.getElementById('bingo-call-word');
 
-                    const spoken = window.gameUtils && gameUtils.speak ? gameUtils.speak(String(item), lang) : false;
-
-                    if (isListening) {
-                        if (!spoken) {
-                            callEl.textContent = item;
-                            const wordEl = document.getElementById('bingo-call-word');
-                            if (wordEl) {
-                                wordEl.textContent = "🔇 " + T('caller.speech_unavailable', null, 'Your browser cannot read numbers aloud.');
-                            }
-                        } else {
-                            callEl.textContent = '👂';
-                            callEl.onclick = () => { callEl.textContent = item; };
-                            callEl.style.cursor = 'pointer';
-                        }
-                    } else {
-                        callEl.textContent = item;
+                    callEl.textContent = item.value;
+                    if (wordEl) {
+                        wordEl.textContent = item.word;
                     }
+
+                    const spoken = (window.gameUtils && gameUtils.speak) ? gameUtils.speak(String(item.word), lang) : false;
+                    if (!spoken && wordEl) {
+                        wordEl.title = T('caller.speech_unavailable', null, 'Your browser cannot read numbers aloud.');
+                    }
+
                     const hist = document.getElementById('bingo-history');
-                    hist.textContent = (hist.textContent ? hist.textContent + ', ' : '') + item;
+                    const labelStr = (item.value !== item.word) ? `${item.value} (${item.word})` : `${item.value}`;
+                    hist.textContent = (hist.textContent ? hist.textContent + ', ' : '') + labelStr;
                 };
             } else {
                 if (!COSYGame.nextRound()) {
@@ -157,28 +199,23 @@
                     </div>`;
 
                 const grid = document.getElementById('bingo-grid');
-                let pool = [];
-                if (type.includes('Alphabet')) {
-                    pool = (window.alphabetsData && window.alphabetsData[lang]) ? window.alphabetsData[lang].split('') : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-                } else if (type.includes('Bingo 1')) {
-                    pool = Array.from({length: 10}, (_, i) => i);
-                } else if (type.includes('Bingo 2')) {
-                    pool = Array.from({length: 10}, (_, i) => i + 10);
-                } else if (type.includes('Bingo 3')) {
-                    pool = Array.from({length: 80}, (_, i) => i + 20);
-                } else {
-                    pool = Array.from({length: 100}, (_, i) => i);
+                let selectedItems = shuffle(pool).slice(0, 9);
+                if (!type.includes('Alphabet')) {
+                    selectedItems.sort((a, b) => a.value - b.value);
                 }
 
-                let nums = shuffle(pool).slice(0, 9);
-                if (!type.includes('Alphabet')) nums.sort((a, b) => a - b);
-
-                nums.forEach(n => {
+                selectedItems.forEach(item => {
                     const cell = document.createElement('div');
                     cell.className = 'word-opt';
                     cell.style.textAlign = 'center';
                     cell.style.fontSize = '1.2rem';
-                    cell.textContent = n;
+
+                    if (item.value !== item.word) {
+                        cell.innerHTML = `<div><strong>${escapeHtml(item.value)}</strong></div><div style="font-size:0.85rem; opacity:0.85;">${escapeHtml(item.word)}</div>`;
+                    } else {
+                        cell.textContent = item.value;
+                    }
+
                     cell.onclick = () => {
                         cell.classList.toggle('correct');
                         if (cell.classList.contains('correct')) {
