@@ -6,7 +6,7 @@
     const GAME_ID = 'battle';
     const GAME_TITLE = 'Battle of Wits ⚖️';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = window.cosyLanguageLabels ? window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]) : ['English 🇬🇧','Français 🇫🇷','Español 🇪🇸','Deutsch 🇩🇪','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels ? window.cosyLanguageLabels(["en","fr","it","ru","el"]) : ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
 
     function getT() {
         return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
