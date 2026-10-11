@@ -8,6 +8,12 @@
     const LEVEL_OPTS = ['Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('critics-corner')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
     function esc(str) {
         const div = document.createElement('div');
         div.textContent = str;
@@ -30,11 +36,12 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Critic's Corner 🎭</h2>
-              <p>Review manuscript quotes, spot subtle errors with red-pen annotations, and share your critique!</p>
+              <p data-gs="setup.description">${T('setup.description', null, 'Reflect on famous quotes and thought-provoking statements! Analyze perspectives, discuss underlying meanings, and share your critical evaluation.')}</p>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
                 <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
@@ -47,9 +54,10 @@
 
     window.COSY_GAME = {
         async start() {
+            const T = getT();
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
             const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
-            document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Loading...</div>';
+            document.getElementById('go-body').innerHTML = `<div style="text-align:center;padding:4rem;" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
 
             await COSYLoader.loadLevelData(lang, level, 'critic');
             COSYGame.init(GAME_ID, lang, level);
@@ -89,13 +97,14 @@
                     <span class="manuscript-word" data-idx="${idx}" data-target="${idx === targetIdx}">${esc(w)}</span>
                 `).join(' ');
 
+                const T = getT();
                 body.innerHTML = `
                   <div class="score-bar">
-                    <div class="sb-item"><div class="sb-val" id="cc-score">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
-                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
+                    <div class="sb-item"><div class="sb-val" id="cc-score">${COSYGame.score}</div><div class="sb-lbl" data-gs="common.score">${T('common.score', null, 'Score')}</div></div>
+                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl" data-gs="common.round">${T('common.round', null, 'Round')}</div></div>
                   </div>
                   <div class="game-card">
-                    <div class="game-label">🎭 Red-Pen Manuscript Review ${category ? '· ' + category : ''}</div>
+                    <div class="game-label">🎭 <span data-gs="play.title">${T('play.title', null, 'Critic\'s Corner')}</span> ${category ? '· ' + category : ''}</div>
 
                     <div class="manuscript-container">
                       <div class="manuscript-sentence" id="manuscript-sentence">
@@ -105,13 +114,13 @@
                     </div>
 
                     <div style="background:var(--sage-light); border-radius:12px; padding:14px; margin-top:1rem; border:1px solid rgba(107,143,113,.2); text-align:left;">
-                        <div style="font-size:.65rem; text-transform:uppercase; font-weight:900; color:var(--sage-dark); margin-bottom:.4rem; letter-spacing:.05em;">Review Task</div>
+                        <div style="font-size:.65rem; text-transform:uppercase; font-weight:900; color:var(--sage-dark); margin-bottom:.4rem; letter-spacing:.05em;" data-gs="play.quote_label">${T('play.quote_label', null, 'Featured Quote:')}</div>
                         <div style="font-size:.9rem; line-height:1.5; color:var(--ink); font-weight:700;">${esc(task)}</div>
                     </div>
 
                     ${qs.length ? `
                         <div style="margin-top:1rem; border-top:1px solid var(--border); padding-top:0.75rem;">
-                            <div style="font-size:.7rem; text-transform:uppercase; font-weight:800; color:var(--ink-faint); margin-bottom:.4rem;">Discussion Prompts</div>
+                            <div style="font-size:.7rem; text-transform:uppercase; font-weight:800; color:var(--ink-faint); margin-bottom:.4rem;" data-gs="play.reflection_prompts">${T('play.reflection_prompts', null, 'Reflection & Discussion Prompts')}</div>
                             <ul style="font-size:.85rem; color:var(--ink-muted); padding-left:1.2rem; margin:0; text-align:left;">
                                 ${qs.map(q => `<li style="margin-bottom:.3rem">${esc(q)}</li>`).join('')}
                             </ul>
@@ -122,10 +131,9 @@
                     </div>
 
                     <div class="game-controls" style="margin-top:1.5rem">
-                      <button class="btn-g-primary" id="cc-btn">▶ Start speaking</button>
-                      <button class="btn-g-secondary" id="cc-dict">+ Vocabulary</button>
-                      <button class="btn-g-secondary" id="cc-new">Skip topic →</button>
-                      <button class="btn-g-danger" id="cc-reset">⬅ Setup</button>
+                      <button class="btn-g-primary" id="cc-btn">▶ <span data-gs="play.title">${T('play.title', null, 'Critic\'s Corner')}</span></button>
+                      <button class="btn-g-secondary" id="cc-new"><span data-gs="btn.next_quote">${T('btn.next_quote', null, 'Next Quote')}</span> ➔</button>
+                      <button class="btn-g-danger" id="cc-reset">⬅ <span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                   </div>`;
 
@@ -179,14 +187,18 @@
                     });
                 });
 
-                document.getElementById('cc-btn').addEventListener('click', () => COSY_GAME.ccStart(DUR));
-                document.getElementById('cc-dict').addEventListener('click', (e) => {
+                const btnCc = document.getElementById('cc-btn');
+                if (btnCc) btnCc.addEventListener('click', () => COSY_GAME.ccStart(DUR));
+                const btnDict = document.getElementById('cc-dict');
+                if (btnDict) btnDict.addEventListener('click', (e) => {
                     if (window.COSY && COSY.addToDict) {
                         COSY.addToDict({ word: qText, definition: author ? `Quote by ${author}` : 'Famous Quote' }, e.target);
                     }
                 });
-                document.getElementById('cc-new').addEventListener('click', () => nextCC());
-                document.getElementById('cc-reset').addEventListener('click', () => COSY_GAME.reset());
+                const btnNew = document.getElementById('cc-new');
+                if (btnNew) btnNew.addEventListener('click', () => nextCC());
+                const btnReset = document.getElementById('cc-reset');
+                if (btnReset) btnReset.addEventListener('click', () => COSY_GAME.reset());
             };
             COSY_GAME._next = nextCC;
             nextCC();
@@ -212,6 +224,7 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             const lang = COSYGame.language;
             const level = COSYGame.level;
             COSYScores.save(GAME_ID, lang, level, COSYGame.score);
@@ -219,12 +232,12 @@
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title">Session Complete!</div>
-                    <div class="re-sub">Your final score: <strong>${COSYGame.score}</strong></div>
-                    ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
+                    <div class="re-title" data-gs="common.game_over">${T('common.game_over', null, 'Game Over!')}</div>
+                    <div class="re-sub">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Your final score: <strong>${COSYGame.score}</strong>`)}</div>
+                    ${best ? `<div class="game-sub personal-best-sub">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions">
                         <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

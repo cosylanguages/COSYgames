@@ -6,7 +6,13 @@
     const GAME_ID = 'battle';
     const GAME_TITLE = 'Battle of Wits ⚖️';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = ['English 🇬🇧','Français 🇫🇷','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+    const LANG_OPTS = window.cosyLanguageLabels ? window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]) : ['English 🇬🇧','Français 🇫🇷','Español 🇪🇸','Deutsch 🇩🇪','Italiano 🇮🇹','Русский 🇷🇺','Ελληνικά 🇬🇷'];
+
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('battle-of-wits')
+            : function(key, params, fallback) { return fallback || key; };
+    }
 
     let teamAScore = 0;
     let teamBScore = 0;
@@ -22,11 +28,12 @@
             COSYLoader.clearLevelNote();
         }
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Battle of Wits ⚖️</h2>
-              <p>Two things are shown. Each player (or team) picks a side and argues for it. Use the charging buzzer to lock in arguments!</p>
+              <p data-gs="setup.description">${T('setup.description', null, 'Engage in structured mini-debates! Defend assigned viewpoints, challenge counter-arguments, and present compelling arguments with target vocabulary.')}</p>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
                 <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
@@ -39,9 +46,10 @@
 
     window.COSY_GAME = {
         async start() {
+            const T = getT();
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
             const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
-            document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Loading...</div>';
+            document.getElementById('go-body').innerHTML = `<div style="text-align:center;padding:4rem;" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
 
             await COSYLoader.loadLevelData(lang, level, 'battle');
             COSYGame.init(GAME_ID, lang, level);
@@ -75,13 +83,14 @@
                 const sideB = debate.sideB || (Array.isArray(debate) ? debate[1] : 'B');
                 const topic = debate.topic || 'Which is better?';
 
+                const T = getT();
                 body.innerHTML = `
                   <div class="score-bar">
-                    <div class="sb-item"><div class="sb-val" id="bt-score">${COSYGame.score}</div><div class="sb-lbl">Total Score</div></div>
-                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
+                    <div class="sb-item"><div class="sb-val" id="bt-score">${COSYGame.score}</div><div class="sb-lbl" data-gs="common.score">${T('common.score', null, 'Score')}</div></div>
+                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl" data-gs="common.round">${T('common.round', null, 'Round')}</div></div>
                   </div>
                   <div class="game-card">
-                    <div class="game-label">⚖️ Choose your side</div>
+                    <div class="game-label">⚖️ <span data-gs="play.title">${T('play.title', null, 'Battle of Wits')}</span></div>
                     <div class="game-prompt">${topic}</div>
                     <div class="setup-options" style="margin:1rem 0">
                       <div class="setup-opt sel" data-val="0"><span class="setup-opt-icon">🅰️</span>${sideA}</div>
@@ -90,19 +99,20 @@
 
                     <div class="bow-podiums">
                       <div class="bow-podium bow-podium-a" id="podium-a">
-                        <div class="bow-podium-label">🅰️ ${esc(sideA)}</div>
+                        <div class="bow-podium-label">🅰️ <span data-gs="play.side_a">${T('play.side_a', null, 'Side A: Proponent')}</span> ${esc(sideA)}</div>
                         <div id="sd-container-a"></div>
                       </div>
                       <div class="bow-podium bow-podium-b" id="podium-b">
-                        <div class="bow-podium-label">🅱️ ${esc(sideB)}</div>
+                        <div class="bow-podium-label">🅱️ <span data-gs="play.side_b">${T('play.side_b', null, 'Side B: Opponent')}</span> ${esc(sideB)}</div>
                         <div id="sd-container-b"></div>
                       </div>
                     </div>
 
-                    <div class="game-sub">Each side gets 2 minutes to argue their case. Lock in with the charging buzzer!</div>
+                    <div class="game-sub" data-gs="play.key_ideas">${T('play.key_ideas', null, 'Key Arguments & Ideas')}</div>
                     <div class="game-controls" style="margin-top:.5rem">
-                      <button class="btn-g-primary" id="btn-start-battle">▶ Start debate</button>
-                      <button class="btn-g-secondary" id="btn-new-topic">Skip topic →</button>
+                      <button class="btn-g-primary" id="btn-start-battle">▶ <span data-gs="play.title">${T('play.title', null, 'Battle of Wits')}</span></button>
+                      <button class="btn-g-secondary" id="btn-new-topic"><span data-gs="btn.next_debate">${T('btn.next_debate', null, 'Next Debate Motion')}</span> ➔</button>
+                      <button class="btn-g-danger" onclick="COSY_GAME.reset()">⬅ <span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                   </div>`;
 
@@ -135,6 +145,7 @@
             ];
 
             const runRound = () => {
+              const T = getT();
               const currentSide = sides[battleRound];
               const body = document.getElementById('go-body');
               const isOnline = (document.documentElement.dataset.context === 'online');
@@ -146,16 +157,16 @@
                 </div>
 
                 <div class="game-card">
-                  <div class="game-label">⚖️ Round ${battleRound+1} of 2</div>
+                  <div class="game-label">⚖️ <span data-gs="common.round">${T('common.round', null, 'Round')}</span> ${battleRound+1}/2</div>
                   ${debate.topic ? `<div style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;color:var(--ink);">${esc(debate.topic)}</div>` : ''}
                   <div class="game-prompt">
-                    Arguing for: <em>${esc(currentSide.name)}</em>
+                    ${esc(currentSide.name)}
                     <span id="latency-readout-holder"></span>
                   </div>
 
                   ${currentSide.ideas.length > 0 ? `
                     <div style="background:var(--sage-light); padding:1rem; border-radius:var(--r-md); margin:1rem 0; border: 1px solid var(--border);">
-                        <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; color:var(--sage-dark); margin-bottom:.5rem;">💡 Ideas for you:</div>
+                        <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; color:var(--sage-dark); margin-bottom:.5rem;">💡 <span data-gs="play.key_ideas">${T('play.key_ideas', null, 'Key Arguments & Ideas')}</span></div>
                         <ul style="font-size:.85rem; padding-left:1.2rem; color:var(--ink-muted); line-height:1.4;">
                             ${currentSide.ideas.map(i => `<li>${esc(i)}</li>`).join('')}
                         </ul>
@@ -165,11 +176,11 @@
                   <!-- Side by Side Dueling Podiums -->
                   <div class="bow-podiums">
                     <div class="bow-podium bow-podium-a ${battleRound === 0 ? 'highlight' : ''}" id="podium-a">
-                      <div class="bow-podium-label">🅰️ ${esc(sides[0].name)}</div>
+                      <div class="bow-podium-label">🅰️ <span data-gs="play.side_a">${T('play.side_a', null, 'Side A: Proponent')}</span> ${esc(sides[0].name)}</div>
                       <div id="sd-container-a"></div>
                     </div>
                     <div class="bow-podium bow-podium-b ${battleRound === 1 ? 'highlight' : ''}" id="podium-b">
-                      <div class="bow-podium-label">🅱️ ${esc(sides[1].name)}</div>
+                      <div class="bow-podium-label">🅱️ <span data-gs="play.side_b">${T('play.side_b', null, 'Side B: Opponent')}</span> ${esc(sides[1].name)}</div>
                       <div id="sd-container-b"></div>
                     </div>
                   </div>
@@ -179,7 +190,7 @@
                   </div>
 
                   <div class="game-controls">
-                    <button class="btn-g-danger" onclick="COSY_GAME.reset()">⬅ Setup</button>
+                    <button class="btn-g-danger" onclick="COSY_GAME.reset()">⬅ <span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                   </div>
                 </div>`;
 
@@ -251,9 +262,8 @@
                         body.innerHTML = `
                           <div class="game-card" style="text-align:center">
                             <div style="font-size:1.8rem;margin-bottom:.5rem">👏</div>
-                            <div class="game-prompt">Round ${battleRound} done!</div>
-                            <div class="game-sub">Now it's <strong>${esc(sides[battleRound].name)}</strong>'s turn.</div>
-                            <button class="btn-g-primary" style="margin:1rem auto 0;display:block" id="btn-run-round">▶ Start round ${battleRound+1}</button>
+                            <div class="game-sub">${T('play.turn_now', { name: '<strong>' + esc(sides[battleRound].name) + '</strong>' }, `Now it's <strong>${esc(sides[battleRound].name)}</strong>'s turn.`)}</div>
+                            <button class="btn-g-primary" style="margin:1rem auto 0;display:block" id="btn-run-round">▶ <span data-gs="common.round">${T('common.round', null, 'Round')}</span> ${battleRound+1}</button>
                           </div>`;
                         document.getElementById('btn-run-round').addEventListener('click', runRound);
                       } else {
@@ -261,13 +271,12 @@
                           body.innerHTML = `
                           <div class="game-card" style="text-align:center">
                             <div class="re-icon">🗳️</div>
-                            <div class="re-title">Both sides heard!</div>
-                            <div class="re-sub">Vote now: who was most convincing?</div>
+                            <div class="re-title" data-gs="play.key_ideas">${T('play.key_ideas', null, 'Key Arguments & Ideas')}</div>
                             <div class="setup-options" style="margin-bottom:1.2rem">
-                              <div class="setup-opt"><span>🅰️</span>${esc(sides[0].name)}</div>
-                              <div class="setup-opt"><span>🅱️</span>${esc(sides[1].name)}</div>
+                              <div class="setup-opt"><span>🅰️</span><span data-gs="btn.vote_a">${T('btn.vote_a', null, 'Vote Side A')}</span> (${esc(sides[0].name)})</div>
+                              <div class="setup-opt"><span>🅱️</span><span data-gs="btn.vote_b">${T('btn.vote_b', null, 'Vote Side B')}</span> (${esc(sides[1].name)})</div>
                             </div>
-                            <button class="btn-g-primary" id="btn-next-battle">Next topic →</button>
+                            <button class="btn-g-primary" id="btn-next-battle"><span data-gs="btn.next_debate">${T('btn.next_debate', null, 'Next Debate Motion')}</span> ➔</button>
                           </div>`;
                           body.querySelectorAll('.setup-opt').forEach(opt => {
                               opt.addEventListener('click', () => COSY_GAME.selectOpt(opt));
@@ -283,6 +292,7 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             const lang = COSYGame.language;
             const level = COSYGame.level;
             COSYScores.save(GAME_ID, lang, level, COSYGame.score);
@@ -290,12 +300,12 @@
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title">Battle Complete!</div>
-                    <div class="re-sub">Your final score: <strong>${COSYGame.score}</strong></div>
-                    ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
+                    <div class="re-title" data-gs="common.game_over">${T('common.game_over', null, 'Game Over!')}</div>
+                    <div class="re-sub">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Your final score: <strong>${COSYGame.score}</strong>`)}</div>
+                    ${best ? `<div class="game-sub personal-best-sub">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions">
                         <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

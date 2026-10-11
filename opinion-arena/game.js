@@ -8,6 +8,12 @@
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('opinion-arena')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
     const PHRASE_BANKS = {
         en: {
             a: [
@@ -168,18 +174,19 @@
             COSYLoader.clearLevelNote();
         }
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Opinion Arena 🏟️</h2>
-              <p>Step into the two-podium debate arena. Defend your stance, utilize argument phrases, and shift the shared tug-of-war meter in your favor!</p>
+              <p data-gs="setup.description">${T('setup.description', null, 'State your stance on controversial statements or intriguing questions! Express your opinion, justify your thoughts, and practice persuasive language.')}</p>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
                 <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
               <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
-              <button class="btn-start-game" onclick="COSY_GAME.start()">▶ Enter Arena</button>
+              <button class="btn-start-game" onclick="COSY_GAME.start()">▶ <span data-i18n="ui_start_game">Start game</span></button>
             </div>`;
     }
 
@@ -224,9 +231,10 @@
 
     window.COSY_GAME = {
         async start() {
+            const T = getT();
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
             const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
-            document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Loading Arena...</div>';
+            document.getElementById('go-body').innerHTML = `<div style="text-align:center;padding:4rem;" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
 
             await COSYLoader.loadLevelData(lang, level, 'opinions');
             COSYGame.init(GAME_ID, lang, level);
@@ -266,6 +274,7 @@
         },
 
         renderArena(lang) {
+            const T = getT();
             const body = document.getElementById('go-body');
             const phrasesA = getPhrases(lang, 'a');
             const phrasesB = getPhrases(lang, 'b');
@@ -277,16 +286,16 @@
               <div class="oa-arena-container">
                 <!-- Shared Score & Round Header -->
                 <div class="score-bar" style="margin-bottom: 0;">
-                  <div class="sb-item"><div class="sb-val" id="op-score">${COSYGame.score}</div><div class="sb-lbl">Total Score</div></div>
-                  <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
+                  <div class="sb-item"><div class="sb-val" id="op-score">${COSYGame.score}</div><div class="sb-lbl" data-gs="common.score">${T('common.score', null, 'Score')}</div></div>
+                  <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl" data-gs="common.round">${T('common.round', null, 'Round')}</div></div>
                 </div>
 
                 <!-- Debate Topic Card -->
                 <div class="game-card" style="margin-bottom:0;">
-                  <div class="game-label">🏟️ Arena Topic</div>
+                  <div class="game-label">🏟️ <span data-gs="play.title">${T('play.title', null, 'Opinion Arena')}</span></div>
                   <div class="game-prompt" style="font-size: 1.25rem;">"${esc(state.stmt)}"</div>
                   ${state.hints.length > 0 ? `
-                      <div style="font-size:.75rem; font-weight:700; text-transform:uppercase; color:var(--sage-dark); margin: .5rem 0 .25rem;">💡 Key Angles:</div>
+                      <div style="font-size:.75rem; font-weight:700; text-transform:uppercase; color:var(--sage-dark); margin: .5rem 0 .25rem;">💡 <span data-gs="play.useful_phrases">${T('play.useful_phrases', null, 'Useful Expression Anchors')}</span></div>
                       <ul style="font-size:.85rem; text-align:left; margin:0 0 .5rem 1rem; padding:0; line-height:1.4">
                           ${state.hints.map(h => `<li>${esc(h)}</li>`).join('')}
                       </ul>` : ''}
@@ -295,9 +304,9 @@
                 <!-- Tug-of-War Shared Meter -->
                 <div class="oa-meter-wrapper" id="oa-meter-anchor">
                   <div class="oa-meter-header">
-                    <span class="oa-side-label-a">🔴 Agree / Pro</span>
+                    <span class="oa-side-label-a">🔴 <span data-gs="play.agree">${T('play.agree', null, 'Agree')}</span></span>
                     <span class="oa-center-status" id="oa-center-status">Balanced Debate</span>
-                    <span class="oa-side-label-b">🔵 Disagree / Con</span>
+                    <span class="oa-side-label-b">🔵 <span data-gs="play.disagree">${T('play.disagree', null, 'Disagree')}</span></span>
                   </div>
                   <div class="oa-meter-track">
                     <div class="oa-meter-fill-a" id="oa-fill-a" style="width: ${pctA}%"></div>
@@ -310,10 +319,10 @@
                 <!-- Mobile Phone Context Side Switcher -->
                 <div class="oa-phone-side-switcher">
                   <button class="oa-phone-tab tab-a ${state.activePhoneSide === 'a' ? 'active' : ''}" onclick="COSY_GAME.switchPhoneSide('a')">
-                    🔴 Agree Podium (<span id="oa-phone-score-a">${state.sideAScore}</span>)
+                    🔴 <span data-gs="play.agree">${T('play.agree', null, 'Agree')}</span> (<span id="oa-phone-score-a">${state.sideAScore}</span>)
                   </button>
                   <button class="oa-phone-tab tab-b ${state.activePhoneSide === 'b' ? 'active' : ''}" onclick="COSY_GAME.switchPhoneSide('b')">
-                    🔵 Disagree Podium (<span id="oa-phone-score-b">${state.sideBScore}</span>)
+                    🔵 <span data-gs="play.disagree">${T('play.disagree', null, 'Disagree')}</span> (<span id="oa-phone-score-b">${state.sideBScore}</span>)
                   </button>
                 </div>
 
@@ -322,11 +331,11 @@
                   <!-- Podium A: Agree / Pro -->
                   <div class="oa-podium oa-podium-side-a ${state.activePhoneSide === 'a' ? 'phone-visible' : ''}" id="podium-a">
                     <div class="oa-podium-header">
-                      <div class="oa-podium-title">🔴 Agree Podium</div>
+                      <div class="oa-podium-title">🔴 <span data-gs="play.agree">${T('play.agree', null, 'Agree')}</span></div>
                       <div class="oa-podium-score" id="oa-score-a">${state.sideAScore} pts</div>
                     </div>
                     <div class="oa-podium-body">
-                      <div class="oa-phrase-section-title">Available Expressions</div>
+                      <div class="oa-phrase-section-title" data-gs="play.useful_phrases">${T('play.useful_phrases', null, 'Useful Expression Anchors')}</div>
                       <div class="oa-phrases-list">
                         ${phrasesA.map((phrase, i) => `
                           <div class="oa-phrase-chip ${state.usedPhrasesA.has(i) ? 'used' : ''}"
@@ -336,7 +345,7 @@
                       </div>
                       <div class="oa-podium-actions">
                         <button class="oa-btn-argue" onclick="COSY_GAME.addArgument('a')">
-                          ➕ Defend Stance (+5 pts)
+                          ➕ <span data-gs="play.agree">${T('play.agree', null, 'Agree')}</span> (+5 pts)
                         </button>
                       </div>
                     </div>
@@ -345,11 +354,11 @@
                   <!-- Podium B: Disagree / Con -->
                   <div class="oa-podium oa-podium-side-b ${state.activePhoneSide === 'b' ? 'phone-visible' : ''}" id="podium-b">
                     <div class="oa-podium-header">
-                      <div class="oa-podium-title">🔵 Disagree Podium</div>
+                      <div class="oa-podium-title">🔵 <span data-gs="play.disagree">${T('play.disagree', null, 'Disagree')}</span></div>
                       <div class="oa-podium-score" id="oa-score-b">${state.sideBScore} pts</div>
                     </div>
                     <div class="oa-podium-body">
-                      <div class="oa-phrase-section-title">Available Expressions</div>
+                      <div class="oa-phrase-section-title" data-gs="play.useful_phrases">${T('play.useful_phrases', null, 'Useful Expression Anchors')}</div>
                       <div class="oa-phrases-list">
                         ${phrasesB.map((phrase, i) => `
                           <div class="oa-phrase-chip ${state.usedPhrasesB.has(i) ? 'used' : ''}"
@@ -359,7 +368,7 @@
                       </div>
                       <div class="oa-podium-actions">
                         <button class="oa-btn-argue" onclick="COSY_GAME.addArgument('b')">
-                          ➕ Defend Stance (+5 pts)
+                          ➕ <span data-gs="play.disagree">${T('play.disagree', null, 'Disagree')}</span> (+5 pts)
                         </button>
                       </div>
                     </div>
@@ -368,9 +377,9 @@
 
                 <!-- Controls & Timer Trigger -->
                 <div class="game-controls" style="margin-top: 0.5rem;">
-                  <button class="btn-g-primary" id="op-start">▶ Start 90s Defense Speech</button>
-                  <button class="btn-g-secondary" id="op-new">Skip topic →</button>
-                  <button class="btn-g-danger" id="op-reset">⬅ Setup</button>
+                  <button class="btn-g-primary" id="op-start">▶ <span data-gs="play.title">${T('play.title', null, 'Opinion Arena')}</span></button>
+                  <button class="btn-g-secondary" id="op-new"><span data-gs="btn.next_opinion">${T('btn.next_opinion', null, 'Next Statement')}</span> ➔</button>
+                  <button class="btn-g-danger" id="op-reset">⬅ <span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                 </div>
               </div>`;
 
@@ -481,6 +490,7 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             const lang = COSYGame.language;
             const level = COSYGame.level;
             COSYScores.save(GAME_ID, lang, level, COSYGame.score);
@@ -488,12 +498,12 @@
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title">Arena Session Complete!</div>
-                    <div class="re-sub">Your final score: <strong>${COSYGame.score}</strong></div>
-                    ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
+                    <div class="re-title" data-gs="common.game_over">${T('common.game_over', null, 'Game Over!')}</div>
+                    <div class="re-sub">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Your final score: <strong>${COSYGame.score}</strong>`)}</div>
+                    ${best ? `<div class="game-sub personal-best-sub">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions">
                         <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

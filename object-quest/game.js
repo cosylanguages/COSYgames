@@ -171,9 +171,9 @@
                 body.innerHTML = `
                   <div class="oq-game-wrapper">
                     <div class="oq-score-bar">
-                      <div class="oq-sb-item"><span data-gs="common.score">${T('common.score', null, 'Score')}</span>: <span class="oq-sb-val">${COSYGame.score}</span></div>
+                      <div class="oq-sb-item"><span data-gs="common.score_colon">${T('common.score_colon', null, 'Score:')}</span> <span class="oq-sb-val">${COSYGame.score}</span></div>
                       <div class="oq-sb-item"><span data-gs="play.target_object">${T('play.target_object', null, 'Target Object:')}</span> <strong style="color:var(--oq-pin-color); font-size:1.15rem;">${gameUtils.escapeHtml(currentTarget.word)} ${currentTarget.emoji || ''}</strong></div>
-                      <div class="oq-sb-item"><span data-gs="common.round">${T('common.round', null, 'Round')}</span>: <span class="oq-sb-val">${COSYGame.round}/${COSYGame.maxRounds}</span></div>
+                      <div class="oq-sb-item"><span data-gs="common.round_colon">${T('common.round_colon', null, 'Round:')}</span> <span class="oq-sb-val">${COSYGame.round}/${COSYGame.maxRounds}</span></div>
                     </div>
 
                     <div style="font-size:0.9rem; color:#a7f3d0; font-weight:600;">

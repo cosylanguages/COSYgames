@@ -8,6 +8,12 @@
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('story-chain')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
     function esc(str) {
         const div = document.createElement('div');
         div.textContent = str;
@@ -34,26 +40,28 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Story Chain 🃏</h2>
-              <p>Build a paper garland story chain together. One person sees a secret word and writes a sentence using it (without saying the word). Watch the garland unfurl as each card connects edge-to-edge!</p>
+              <p data-gs="setup.description">${T('setup.description', null, 'Build a collaborative story sentence by sentence! Connect plot developments using story prompt cards and target connector vocabulary.')}</p>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
                 <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
               <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
-              <button class="btn-start-game" onclick="COSY_GAME.start()">▶ Start Chain</button>
+              <button class="btn-start-game" onclick="COSY_GAME.start()">▶ <span data-i18n="ui_start_game">Start game</span></button>
             </div>`;
     }
 
     window.COSY_GAME = {
         async start() {
+            const T = getT();
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
             const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
-            document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Loading Story Chain...</div>';
+            document.getElementById('go-body').innerHTML = `<div style="text-align:center;padding:4rem;" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
 
             await COSYLoader.loadLevelData(lang, level, 'storychain');
             COSYGame.init(GAME_ID, lang, level);
@@ -86,34 +94,34 @@
                     `;
                 }).join('') : '<div style="color:var(--muted); font-style:italic; padding: 1rem;">No links in the garland yet. Add the first sentence below!</div>';
 
+                const T = getT();
                 body.innerHTML = `
                   <div class="score-bar">
-                    <div class="sb-item"><div class="sb-val" id="sc-score">${COSYGame.score}</div><div class="sb-lbl">Total Score</div></div>
-                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
+                    <div class="sb-item"><div class="sb-val" id="sc-score">${COSYGame.score}</div><div class="sb-lbl" data-gs="common.score">${T('common.score', null, 'Score')}</div></div>
+                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl" data-gs="common.round">${T('common.round', null, 'Round')}</div></div>
                   </div>
 
                   <div class="game-card">
-                      <div class="game-label">🤫 Host secret word: keep hidden!</div>
+                      <div class="game-label">🃏 <span data-gs="play.prompt_card">${T('play.prompt_card', null, 'Plot Twist Card')}</span></div>
                       <div class="game-prompt" id="sc-word">${esc(currentWord)}</div>
-                      <div class="game-sub">Incorporate this secret word in your sentence without saying it out loud.</div>
                   </div>
 
                   <div class="game-card" style="padding: 1rem 1.25rem;">
-                      <div class="game-label">📜 Paper Garland Chain (${story.length} link${story.length === 1 ? '' : 's'})</div>
+                      <div class="game-label">📜 <span data-gs="play.title">${T('play.title', null, 'Story Chain')}</span> · <span data-gs="play.garland_label">${T('play.garland_label', null, 'Story Garland')}</span> (${story.length})</div>
                       <div class="sc-chain-container" id="sc-chain-container">
                           ${cardsHtml}
                       </div>
 
                       <div class="sc-input-sticky-zone">
                           <div class="input-row">
-                              <input class="game-input" id="sc-input" placeholder="Type sentence to extend chain…" autocomplete="off" onkeydown="if(event.key==='Enter') COSY_GAME.scAdd()">
-                              <button class="btn-g-primary" onclick="COSY_GAME.scAdd()">➕ Add Link</button>
+                              <input class="game-input" id="sc-input" autocomplete="off" onkeydown="if(event.key==='Enter') COSY_GAME.scAdd()">
+                              <button class="btn-g-primary" onclick="COSY_GAME.scAdd()">➕ <span data-gs="btn.add_link">${T('btn.add_link', null, 'Add Link to Garland')}</span></button>
                           </div>
                       </div>
 
                       <div class="game-controls" style="margin-top:1rem">
-                          <button class="btn-g-secondary" onclick="COSY_GAME.scReveal()">${reveal ? 'Hide words' : '👁️ Reveal words'}</button>
-                          <button class="btn-g-danger" onclick="COSY_GAME.start()">New Garland ↺</button>
+                          <button class="btn-g-secondary" onclick="COSY_GAME.start()"><span data-gs="btn.next_twist">${T('btn.next_twist', null, 'Next Plot Card')}</span> ➔</button>
+                          <button class="btn-g-danger" onclick="COSY_GAME.reset()">⬅ <span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                       </div>
                   </div>`;
 
@@ -178,6 +186,7 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             const lang = COSYGame.language;
             const level = COSYGame.level;
             COSYScores.save(GAME_ID, lang, level, COSYGame.score);
@@ -185,12 +194,12 @@
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title">Story Garland Complete!</div>
-                    <div class="re-sub">Your final score: <strong>${COSYGame.score}</strong></div>
-                    ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
+                    <div class="re-title" data-gs="common.game_over">${T('common.game_over', null, 'Game Over!')}</div>
+                    <div class="re-sub">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Your final score: <strong>${COSYGame.score}</strong>`)}</div>
+                    ${best ? `<div class="game-sub personal-best-sub">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions">
                         <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

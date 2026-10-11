@@ -193,8 +193,8 @@
                       <div class="im-corkboard-wrapper">
                         <div class="im-header-bar">
                           <div class="score-display">
-                            <strong data-gs="common.score">${T('common.score', null, 'Score')}</strong>: <span class="score-value" id="im-score">${COSYGame.score}</span> |
-                            <strong data-gs="common.round">${T('common.round', null, 'Round')}</strong>: ${COSYGame.round}/${COSYGame.maxRounds}
+                            <strong data-gs="common.score_colon">${T('common.score_colon', null, 'Score:')}</strong> <span class="score-value" id="im-score">${COSYGame.score}</span> |
+                            <strong data-gs="common.round_colon">${T('common.round_colon', null, 'Round:')}</strong> ${COSYGame.round}/${COSYGame.maxRounds}
                           </div>
                           <div style="font-size:0.9rem; color:var(--im-teal-string); font-weight:600;">
                           🕵️ <span>${pinboardTitle}</span>

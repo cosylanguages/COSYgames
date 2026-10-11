@@ -12,6 +12,12 @@
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
     const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
 
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('action-hero')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
     // Comic burst pop words per language
     const POP_WORDS = {
         en: ['POW!', 'BAM!', 'BOOM!', 'ZAP!', 'KA-POW!'],
@@ -23,33 +29,34 @@
 
     function renderSetup() {
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Action Hero 🎭</h2>
-              <p>Comic-book charades challenge! Hold your phone to your forehead. Others describe the verb: you guess. 60 seconds round duration. Swipe up or tap "Got it!" to score!</p>
+              <p data-gs="setup.description">${T('setup.description', null, 'Act out target action verbs, emotions, and phrases! Mimic, describe without saying the word, or make sound effects for your team to guess.')}</p>
 
               <!-- Hands-free sensory tip -->
               <div style="background: var(--cream-dark); border: 1.5px dashed var(--border); border-radius: 12px; padding: 1rem; margin-bottom: 1.5rem; text-align: left; font-size: 0.88rem; line-height: 1.5;">
-                📱 <strong>Hands-Free Tilt & Touch Controls:</strong>
+                📱 <strong data-gs="play.acting_rules">${T('play.acting_rules', null, 'Acting Guidelines')}</strong>
                 <ul>
-                  <li>• <strong>Swipe Up / Got it:</strong> ✓ POW! Got it!</li>
-                  <li>• <strong>Tilt Down (towards floor):</strong> ✓ Got it!</li>
-                  <li>• <strong>Tilt Up (towards ceiling):</strong> Skip →</li>
+                  <li><span data-gs="play.rule_1">${T('play.rule_1', null, 'Act it out silently using gestures and body language.')}</span></li>
+                  <li><span data-gs="play.rule_2">${T('play.rule_2', null, 'Describe the scenario without saying the exact words on the card.')}</span></li>
+                  <li><span data-gs="play.rule_3">${T('play.rule_3', null, 'Use sound effects if allowed by your group!')}</span></li>
                 </ul>
               </div>
 
-              <div class="setup-field"><label>Category</label>
+              <div class="setup-field"><label data-gs="common.category">${T('common.category', null, 'Category')}</label>
                 <select class="styled-sel" id="s-cat">
-                  <option value="all">All vocabulary</option>
-                  <option value="verbs">Verbs 🏃‍♂️</option>
-                  <option value="group:environment_nature">Animals & Nature 🐾</option>
-                  <option value="group:food_drink">Food & Drink 🍕</option>
-                  <option value="group:places_geography">Places & Geography 🌍</option>
-                  <option value="group:home_living">Home & Objects 🏠</option>
-                  <option value="group:clothes_appearance">Clothes & Appearance 👕</option>
-                  <option value="group:health_body">Health & Body 🏥</option>
-                  <option value="group:sport_leisure">Sport & Leisure ⚽</option>
+                  <option value="all" data-gs="cat.all">${T('cat.all', null, 'All Categories 🌟')}</option>
+                  <option value="verbs" data-gs="cat.daily">${T('cat.daily', null, 'Daily Routines 🌅')}</option>
+                  <option value="group:environment_nature" data-gs="cat.nature">${T('cat.nature', null, 'Nature & Outdoors 🌲')}</option>
+                  <option value="group:food_drink" data-gs="cat.sports">${T('cat.sports', null, 'Sports & Hobbies ⚽')}</option>
+                  <option value="group:places_geography" data-gs="cat.travel">${T('cat.travel', null, 'Travel & Adventure ✈️')}</option>
+                  <option value="group:home_living" data-gs="cat.household">${T('cat.household', null, 'Household Chores 🧹')}</option>
+                  <option value="group:clothes_appearance" data-gs="cat.professions">${T('cat.professions', null, 'Professions & Work 💼')}</option>
+                  <option value="group:health_body" data-gs="cat.emotions">${T('cat.emotions', null, 'Emotions & States 😊')}</option>
+                  <option value="group:sport_leisure" data-gs="cat.arts">${T('cat.arts', null, 'Arts & Entertainment 🎭')}</option>
                 </select>
               </div>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
@@ -67,10 +74,11 @@
         touchStartY: 0,
 
         async start() {
+            const T = getT();
             const lang = COSYLoader.getLangCode(document.getElementById('s-lang')?.value);
             const level = COSYLoader.getLevelCode(document.getElementById('s-level')?.value);
             const category = document.getElementById('s-cat')?.value || 'all';
-            document.getElementById('go-body').innerHTML = '<div style="text-align:center;padding:4rem;">Loading...</div>';
+            document.getElementById('go-body').innerHTML = `<div style="text-align:center;padding:4rem;" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
 
             await COSYLoader.loadLevelData(lang, level, 'action');
             COSYGame.init(GAME_ID, lang, level);
@@ -164,35 +172,30 @@
                   ? window.ViewContext.getMode()
                   : (document.documentElement.dataset.context || 'phone');
 
+              const T = getT();
               body.innerHTML = `
                 <div class="action-container">
-                  <!-- Accessible ARIA-Live Announcer -->
                   <div id="action-aria-live" class="sr-only-announcer" aria-live="assertive" aria-atomic="true"></div>
-
-                  <!-- Projector ScoreDial Pin -->
                   <div id="projector-scoredial-container" class="projector-scoredial-pin"></div>
 
                   <div class="action-game-card" id="action-card-el">
                     <div class="action-card-header">
-                      <div class="action-game-label">💥 Action Hero · ${DUR}s</div>
-                      <div class="sb-item"><span style="font-weight:800;color:var(--game-accent);">Round ${COSYGame.round}/${COSYGame.maxRounds}</span></div>
+                      <div class="action-game-label">💥 <span data-gs="play.title">${T('play.title', null, 'Action Hero')}</span></div>
+                      <div class="sb-item"><span style="font-weight:800;color:var(--game-accent);"><span data-gs="common.round">${T('common.round', null, 'Round')}</span> ${COSYGame.round}/${COSYGame.maxRounds}</span></div>
                     </div>
 
                     <div class="action-prompt-text" id="action-prompt-word">${currentWord}</div>
-                    <div class="action-sub-text">Others describe this word: you guess!</div>
 
                     <div id="timer-container">${gameUtils.renderTimerRing(DUR, DUR)}</div>
 
                     <div class="action-controls">
-                      <button class="btn-comic-gotit" type="button" onclick="COSY_GAME.ahResult(true)">✓ POW! Got it!</button>
-                      <button class="btn-comic-skip" type="button" onclick="COSY_GAME.ahResult(false)">Skip →</button>
+                      <button class="btn-comic-gotit" type="button" onclick="COSY_GAME.ahResult(true)">✓ <span data-gs="btn.guessed">${T('btn.guessed', null, 'Guessed!')}</span></button>
+                      <button class="btn-comic-skip" type="button" onclick="COSY_GAME.ahResult(false)"><span data-gs="btn.skip">${T('btn.skip', null, 'Skip Card')}</span> ➔</button>
                     </div>
-
-                    <div class="action-swipe-hint">☝️ Swipe up anywhere on card to submit!</div>
                   </div>
 
                   <div style="text-align:center;font-size:0.9rem;font-weight:700;color:#64748b;margin-top:0.5rem">
-                    ✓ ${correct} correct · ↷ ${skipped} skipped
+                    ✓ ${correct} · ↷ ${skipped}
                   </div>
                 </div>`;
 
@@ -235,6 +238,7 @@
               COSYGame.score = correct * 5;
               COSYScores.save(GAME_ID, lang, level, COSYGame.score);
               const best = COSYScores.best(GAME_ID, lang);
+              const T = getT();
 
               if (correct > 0) {
                 gameUtils.playGameSound('success');
@@ -246,16 +250,12 @@
               document.getElementById('go-body').innerHTML = `
                 <div class="round-end">
                   <div class="re-icon">🏆</div>
-                  <div class="re-title">Round over!</div>
-                  <div class="re-sub">Time's up: here's how you did:</div>
-                  <div class="re-stats">
-                    <div class="sb-item"><div class="re-stat-val" style="color:var(--green)">${correct}</div><div class="re-stat-lbl">✓ Correct</div></div>
-                    <div class="sb-item"><div class="re-stat-val" style="color:var(--ink-muted)">${skipped}</div><div class="re-stat-lbl">↷ Skipped</div></div>
-                  </div>
-                  ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
+                  <div class="re-title" data-gs="common.game_over">${T('common.game_over', null, 'Game Over!')}</div>
+                  <div class="re-sub">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Your final score: <strong>${COSYGame.score}</strong>`)}</div>
+                  ${best ? `<div class="game-sub personal-best-sub">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                   <div class="re-actions">
                     <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
-                    <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                    <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                   </div>
                 </div>`;
             };

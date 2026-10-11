@@ -39,7 +39,11 @@ function extractHtmlTags(str) {
 
 test('translations integrity and pipeline tests', async (t) => {
   const allStrings = loadAllGameStrings();
-  const convertedGames = ['last-letter', 'lucky-numbers', 'hot-seat', 'object-quest', 'emoji-odyssey', 'word-linker', 'identity-mystery'];
+  const convertedGames = [
+    'last-letter', 'lucky-numbers', 'hot-seat', 'object-quest', 'emoji-odyssey',
+    'word-linker', 'identity-mystery', 'fluency-flow', 'opinion-arena',
+    'battle-of-wits', 'critics-corner', 'story-chain', 'action-hero'
+  ];
   const allLangs = ['fr', 'es', 'de', 'it', 'ru', 'el'];
 
   await t.test('b. Data integrity for every file in i18n/games/', () => {
