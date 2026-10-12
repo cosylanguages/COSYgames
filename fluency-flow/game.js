@@ -5,9 +5,20 @@
 (function() {
     const GAME_ID = 'fluency';
     const GAME_TITLE = 'Fluency Flow 🗣️';
-    const DUR_OPTS = ['1 minute', '2 minutes', '3 minutes', '5 minutes'];
+    const DUR_OPTS = [
+        { key: 'setup.dur_1', val: '1 minute', fallback: '1 minute' },
+        { key: 'setup.dur_2', val: '2 minutes', fallback: '2 minutes' },
+        { key: 'setup.dur_3', val: '3 minutes', fallback: '3 minutes' },
+        { key: 'setup.dur_5', val: '5 minutes', fallback: '5 minutes' }
+    ];
     const LEVEL_OPTS = ['Starter (A1)', 'Primary (A2)', 'Intermediate (B1)', 'Upper (B2)', 'Advanced (C1)', 'Proficiency (C2)'];
     const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
+
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('fluency-flow')
+            : function(key, params, fallback) { return fallback || key; };
+    }
 
     let currentWords = [];
     let targetWords = [];
@@ -78,16 +89,22 @@
             COSYLoader.clearLevelNote();
         }
         document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
         const body = document.getElementById('go-body');
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Fluency Flow 🗣️</h2>
-              <p>Reorder word chips along the river flow rail into a fluent sentence, then speak about it without stopping!</p>
+              <p data-gs="setup.description">${T('setup.description', null, 'Keep the conversation flowing smoothly without long hesitations or sudden pauses! Practice connecting ideas seamlessly with dynamic time limits and transition words.')}</p>
               <div class="setup-field"><label data-i18n="ui_level">Level</label>
                 <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
               </div>
-              <div class="setup-field"><label>Duration</label>
-                <div class="setup-options">${DUR_OPTS.map((d, i) => `<div class="setup-opt ${i === 1 ? 'sel' : ''}" data-val="${d}"><span class="setup-opt-icon">⏱</span>${d}</div>`).join('')}</div>
+              <div class="setup-field"><label data-gs="setup.duration">${T('setup.duration', null, 'Duration')}</label>
+                <div class="setup-options">
+                  <div class="setup-opt" data-val="1 minute"><span class="setup-opt-icon">⏱</span><span data-gs="setup.dur_1">${T('setup.dur_1', null, '1 minute')}</span></div>
+                  <div class="setup-opt sel" data-val="2 minutes"><span class="setup-opt-icon">⏱</span><span data-gs="setup.dur_2">${T('setup.dur_2', null, '2 minutes')}</span></div>
+                  <div class="setup-opt" data-val="3 minutes"><span class="setup-opt-icon">⏱</span><span data-gs="setup.dur_3">${T('setup.dur_3', null, '3 minutes')}</span></div>
+                  <div class="setup-opt" data-val="5 minutes"><span class="setup-opt-icon">⏱</span><span data-gs="setup.dur_5">${T('setup.dur_5', null, '5 minutes')}</span></div>
+                </div>
               </div>
               <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l => `<option>${l}</option>`).join('')}</select>
@@ -114,7 +131,8 @@
             const level = parseLevelCode(rawLevel);
             const utils = getUtils();
 
-            document.getElementById('go-body').innerHTML = '<div class="game-loader-centered">Loading river current...</div>';
+            const T = getT();
+            document.getElementById('go-body').innerHTML = `<div class="game-loader-centered" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
 
             if (typeof COSYLoader !== 'undefined' && COSYLoader.loadLevelData) {
                 try {
@@ -169,27 +187,27 @@
                 const body = document.getElementById('go-body');
                 body.innerHTML = `
                     <div class="score-bar">
-                      <div class="sb-item"><div class="sb-val" id="ff-score">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
-                      <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Round</div></div>
+                      <div class="sb-item"><div class="sb-val" id="ff-score">${COSYGame.score}</div><div class="sb-lbl" data-gs="common.score">${T('common.score', null, 'Score')}</div></div>
+                      <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl" data-gs="common.round">${T('common.round', null, 'Round')}</div></div>
                     </div>
                     <div class="game-card">
-                      <div class="game-label">🌊 River Current Flow Rail</div>
+                      <div class="game-label">🌊 <span data-gs="play.flow_mastery">${T('play.flow_mastery', null, 'Fluency Flow')}</span></div>
                       <div class="flow-instructions-badge" id="ff-instructions">
                         ${isPhoneContext() ? 'Tap a chip, then tap a gap indicator to insert it.' : 'Drag and drop chips along the flow rail to order them.'}
                       </div>
 
                       <div class="flow-rail-container">
-                        <div class="flow-rail-title"><span>🌊</span> Word Current Rail</div>
+                        <div class="flow-rail-title"><span>🌊</span> <span data-gs="play.topic_label">${T('play.topic_label', null, 'Topic:')}</span></div>
                         <div class="flow-rail-track" id="ff-rail-track"></div>
                       </div>
 
                       ${hints.length > 0 ? `
-                        <div class="ideas-title-sage">💡 Ideas for speaking:</div>
+                        <div class="ideas-title-sage">💡 <span data-gs="play.target_connectors">${T('play.target_connectors', null, 'Target Connectors')}</span></div>
                         <ul class="ideas-list-styled">
                             ${hints.map(h => `<li>${esc(h)}</li>`).join('')}
                         </ul>` : ''}
 
-                      <div class="game-sub" id="ff-sub-msg">Arrange words in fluent order on the river rail, then click Check Flow!</div>
+                      <div class="game-sub" id="ff-sub-msg" data-gs="play.tap_hint">${T('play.tap_hint', null, 'Tap a connector as you speak it aloud!')}</div>
 
                       <div id="timer-container">${timerHtml}</div>
 
@@ -197,8 +215,8 @@
                         <button class="btn-g-primary" id="ff-check-flow">✓ Check Flow</button>
                         <button class="btn-g-primary" id="ff-btn" style="display:none;">▶ Start speaking</button>
                         <button class="btn-g-secondary" id="ff-reset-rail">↺ Reset Rail</button>
-                        <button class="btn-g-secondary" id="ff-new">Next topic ➔</button>
-                        <button class="btn-g-danger" id="ff-setup">⬅ Setup</button>
+                        <button class="btn-g-secondary" id="ff-new"><span data-gs="btn.next_topic">${T('btn.next_topic', null, 'Next Topic')}</span> ➔</button>
+                        <button class="btn-g-danger" id="ff-setup">⬅ <span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                       </div>
                     </div>`;
 
@@ -247,6 +265,7 @@
         reset: renderSetup,
 
         renderEnd() {
+            const T = getT();
             const lang = COSYGame.language;
             const level = COSYGame.level;
             COSYScores.save(GAME_ID, lang, level, COSYGame.score);
@@ -254,12 +273,12 @@
             document.getElementById('go-body').innerHTML = `
                 <div class="round-end">
                     <div class="re-icon">🏆</div>
-                    <div class="re-title">Flow Complete!</div>
-                    <div class="re-sub">Topics & Flow Rails completed: <strong>${COSYGame.score}</strong></div>
-                    ${best ? `<div class="game-sub personal-best-sub">Personal best: ${best.score}</div>` : ''}
+                    <div class="re-title" data-gs="common.game_over">${T('common.game_over', null, 'Game Over!')}</div>
+                    <div class="re-sub">${T('common.final_score', { score: `<strong>${COSYGame.score}</strong>` }, `Your final score: <strong>${COSYGame.score}</strong>`)}</div>
+                    ${best ? `<div class="game-sub personal-best-sub">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
                     <div class="re-actions">
                         <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
-                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()">Setup</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
                     </div>
                 </div>`;
         }

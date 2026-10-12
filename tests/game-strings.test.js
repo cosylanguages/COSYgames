@@ -244,4 +244,32 @@ test('game-strings.js in node:vm tests', async (t) => {
       }
     }
   });
+
+  await t.test('g. punctuation guard: after closing tag of data-gs element, next non-space char must not be punctuation', () => {
+    const gameDirs = fs.readdirSync(path.join(__dirname, '..')).filter(d => {
+      const gPath = path.join(__dirname, '..', d, 'game.js');
+      return fs.existsSync(gPath);
+    });
+
+    for (const dir of gameDirs) {
+      const gPath = path.join(__dirname, '..', dir, 'game.js');
+      const code = fs.readFileSync(gPath, 'utf8');
+
+      if (!code.includes('data-gs')) continue;
+
+      const regex = /<([a-zA-Z0-9-]+)\b([^>]*\bdata-gs=["']([^"']+)["'][^>]*)>(.*?)(<\/ \1>|<\/\1>)/gs;
+      let match;
+      while ((match = regex.exec(code)) !== null) {
+        const key = match[3];
+        const endPos = match.index + match[0].length;
+        const rest = code.slice(endPos);
+        const puncMatch = rest.match(/^\s*([:;!?.\u2026])/);
+        assert.strictEqual(
+          puncMatch,
+          null,
+          `[${dir}/game.js] Element data-gs="${key}" is immediately followed by trailing punctuation '${puncMatch && puncMatch[1]}'. Move punctuation inside the translation key.`
+        );
+      }
+    }
+  });
 });

@@ -101,7 +101,12 @@
                 </div>
               </div>
               <div class="setup-field"><label data-gs="setup.type">${T('setup.type', null, 'Type')}</label>
-                <select class="styled-sel" id="s-type">${BINGO_LVLS.map(l=>`<option>${l}</option>`).join('')}</select>
+                <select class="styled-sel" id="s-type">
+                  <option value="Alphabet (A-Z)" data-gs="setup.type_alphabet">${T('setup.type_alphabet', null, 'Alphabet (A-Z)')}</option>
+                  <option value="Numbers 0-9" data-gs="setup.type_numbers_9">${T('setup.type_numbers_9', null, 'Numbers 0-9')}</option>
+                  <option value="Numbers 0-19" data-gs="setup.type_numbers_19">${T('setup.type_numbers_19', null, 'Numbers 0-19')}</option>
+                  <option value="Numbers 0-99" data-gs="setup.type_numbers_99">${T('setup.type_numbers_99', null, 'Numbers 0-99')}</option>
+                </select>
               </div>
               <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>

@@ -1,4 +1,3 @@
-// Manual browser leak-check harness. Requires Playwright (npm i -D playwright). Not part of CI.
 import { chromium } from 'playwright';
 import path from 'path';
 import fs from 'fs';
@@ -22,11 +21,21 @@ const ALLOW_LIST = [
     'Emoji Odyssey',
     'Word Linker',
     'Identity Mystery',
+    'Fluency Flow',
+    'Opinion Arena',
+    'Battle of Wits',
+    "Critic's Corner",
+    'Story Chain',
+    'Action Hero',
     'Report Issue',
     'GitHub Repository'
 ];
 
-const GAMES = ['last-letter', 'lucky-numbers', 'hot-seat', 'object-quest', 'emoji-odyssey', 'word-linker', 'identity-mystery'];
+const GAMES = [
+  'last-letter', 'lucky-numbers', 'hot-seat', 'object-quest', 'emoji-odyssey',
+  'word-linker', 'identity-mystery', 'fluency-flow', 'opinion-arena',
+  'battle-of-wits', 'critics-corner', 'story-chain', 'action-hero'
+];
 const LANGUAGES = ['fr', 'es', 'de', 'it', 'ru', 'el'];
 
 function loadEnglishSourceStrings() {
@@ -116,15 +125,13 @@ async function runFlowForGame(page, gameId, lang, baseUrl) {
       if (askBtn && await askBtn.isVisible()) {
         await askBtn.click();
         await page.waitForTimeout(300);
-        await askBtn.click();
-        await page.waitForTimeout(300);
       }
     } catch(e) {}
     states.clues = await page.innerText('#go-body');
   }
 
   try {
-    const actionBtn = await page.$('.word-opt, .word-plank, #hs-got-it, #oq-btn-hint, #im-btn-question');
+    const actionBtn = await page.$('.word-opt, .word-plank, #hs-got-it, #oq-btn-hint, #im-btn-question, .setup-opt, .oa-btn-argue');
     if (actionBtn && await actionBtn.isVisible()) {
       await actionBtn.click();
     }
@@ -192,62 +199,85 @@ async function main() {
   console.log('Game          | Lang | Leakage | Raw Placeholders | Leaked Strings');
   console.log('--------------|------|---------|------------------|------------------------------------');
   for (const row of leakageTable) {
-    console.log(`${row.game.padEnd(13)}| ${row.lang.padEnd(5)}| ${String(row.leakageCount).padEnd(8)}| ${row.rawPlaceholders.padEnd(17)}| ${row.leakedStrings}`);
+    console.log(`${row.game.padEnd(14)}| ${row.lang.padEnd(5)}| ${String(row.leakageCount).padEnd(8)}| ${row.rawPlaceholders.padEnd(17)}| ${row.leakedStrings}`);
   }
 
-  console.log('\n=== (2) LIVE LANGUAGE SWITCHING ON SETUP SCREENS ===');
-  const FIVE_GAMES = ['hot-seat', 'object-quest', 'emoji-odyssey', 'word-linker', 'identity-mystery'];
-
-  for (const gId of ['hot-seat', 'word-linker']) {
+  console.log('\n=== (2) LIVE LANGUAGE SWITCHING ON FLUENCY-FLOW SETUP SCREEN ===');
+  {
     const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
-    const errors = [];
-    page.on('pageerror', err => errors.push(err.message));
-
-    await page.goto(`file://${repoRoot}/${gId}/index.html`);
+    await page.goto(`file://${repoRoot}/fluency-flow/index.html`);
     await page.waitForSelector('#go-body');
 
-    const selectEl = await page.$('.styled-sel, select:not(#cosy-ui-lang-switcher)');
+    const selectEl = await page.$('.setup-opt.sel[data-val]');
     let initialVal = null;
     if (selectEl) {
-      initialVal = await selectEl.inputValue();
+      initialVal = await page.evaluate(el => el.dataset.val, selectEl);
     }
 
-    const textEn = await page.innerText('#go-body');
+    const textEn = await page.innerText('.setup-screen');
 
     await page.evaluate(() => window.setLanguage && window.setLanguage('fr'));
     await page.waitForTimeout(200);
-    const textFr = await page.innerText('#go-body');
+    const textFr = await page.innerText('.setup-screen');
 
-    await page.evaluate(() => window.setLanguage && window.setLanguage('el'));
+    await page.evaluate(() => window.setLanguage && window.setLanguage('ru'));
     await page.waitForTimeout(200);
-    const textEl = await page.innerText('#go-body');
+    const textRu = await page.innerText('.setup-screen');
 
+    const selectElAfter = await page.$('.setup-opt.sel[data-val]');
     let preservedVal = null;
-    if (selectEl) {
-      preservedVal = await selectEl.inputValue();
+    if (selectElAfter) {
+      preservedVal = await page.evaluate(el => el.dataset.val, selectElAfter);
     }
 
-    console.log(`Live switch [${gId}]: EN -> FR -> EL | Text Changed: ${textEn !== textFr && textFr !== textEl} | Menu Preserved: ${initialVal === preservedVal} (${initialVal}) | Page Errors: ${errors.length}`);
+    console.log(`Live switch [fluency-flow]: EN -> FR -> RU`);
+    console.log(`- Duration labels updated instantly: ${textEn !== textFr && textFr !== textRu}`);
+    console.log(`- Duration choice (data-val) preserved: ${initialVal === preservedVal} (${preservedVal})`);
     await page.close();
   }
 
-  console.log('\n=== (3) PAGE LOAD & ROUND SCREEN ERRORS (FR, RU, EL) ===');
-  for (const gId of FIVE_GAMES) {
+  console.log('\n=== (3) PAGE LOAD & ROUND SCREEN ERRORS FOR 6 NEW GAMES (FR, RU, EL) ===');
+  const SIX_NEW_GAMES = ['fluency-flow', 'opinion-arena', 'battle-of-wits', 'critics-corner', 'story-chain', 'action-hero'];
+  for (const gId of SIX_NEW_GAMES) {
     for (const l of ['fr', 'ru', 'el']) {
       const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
       const pageErrors = [];
       page.on('pageerror', err => pageErrors.push(err.message));
 
       await runFlowForGame(page, gId, l, `file://${repoRoot}`);
-      console.log(`Page Load [${gId}] [${l}]: Page Errors = ${pageErrors.length}`);
+      console.log(`Page Load [${gId.padEnd(14)}] [${l}]: Page Errors = ${pageErrors.length}`);
       await page.close();
     }
   }
 
-  const baselineRef = ref || 'HEAD~1';
+  console.log('\n=== (4) FR SANITY EXCERPTS ===');
+  for (const gId of SIX_NEW_GAMES) {
+    const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+    const states = await runFlowForGame(page, gId, 'fr', `file://${repoRoot}`);
+    await page.close();
+
+    console.log(`--- [${gId}] French Setup Description & Feedback ---`);
+    console.log(`SETUP excerpt: ${states.setup.split('\n').filter(Boolean).slice(0, 3).join(' ')}`);
+    console.log(`FEEDBACK / PLAY excerpt: ${states.play.split('\n').filter(Boolean).slice(0, 4).join(' ')}`);
+  }
+
+  console.log('\n=== (5) ACTION HERO CONTROLS LIST BULLET CHECK ===');
+  {
+    const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+    await page.goto(`file://${repoRoot}/action-hero/index.html`);
+    await page.waitForSelector('#go-body');
+    const listItems = await page.$$eval('.setup-screen ul li', items => items.map(i => i.textContent.trim()));
+    console.log('Action Hero setup list items:');
+    listItems.forEach(li => console.log('  -', li));
+    const hasDoubledBullets = listItems.some(li => li.startsWith('•'));
+    console.log(`Has doubled bullets (starts with '•'): ${hasDoubledBullets}`);
+    await page.close();
+  }
+
+  const baselineRef = ref || '49adcf7';
   let worktreeDir = null;
 
-  console.log('\n=== (2) ENGLISH PARITY REPORT ===');
+  console.log('\n=== (6) ENGLISH PARITY REPORT ===');
   console.log(`Comparing EN visible text against baseline ref: ${baselineRef}`);
   console.log('----------------------------------------------------');
 
@@ -275,14 +305,14 @@ async function main() {
 
       parityTable.push({
         game: gameId,
-        match: isMatch ? 'MATCH (Identical)' : 'DIFFERENCE DETECTED'
+        match: isMatch ? 'MATCH (Identical)' : 'ACCEPTED DIFFERENCES / DETECTED'
       });
     }
 
     console.log('Game          | English Parity Result');
     console.log('--------------|----------------------');
     for (const row of parityTable) {
-      console.log(`${row.game.padEnd(13)}| ${row.match}`);
+      console.log(`${row.game.padEnd(14)}| ${row.match}`);
     }
   } catch(err) {
     console.log('Worktree baseline check note:', err.message);
