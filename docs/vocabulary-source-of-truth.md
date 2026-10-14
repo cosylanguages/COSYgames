@@ -1,25 +1,16 @@
-# Vocabulary Source of Truth & Local Snapshot
+# Vocabulary Source of Truth & COSYdata Integration
 
-This document details the relationship between COSYdata, COSYgames, and the local canonical vocabulary snapshot.
+This document details the relationship between COSYdata and COSYgames.
 
 ## Canonical Source
-- **COSYdata** declares itself the single source of truth for vocabulary used by COSYgames.
+- **COSYdata** (`https://cosylanguages.github.io/COSYdata/vocabulary/`) is the sole canonical source of truth for all vocabulary used across COSYgames.
 
-## Local Read-Only Snapshot
-- COSYgames maintains a READ-ONLY snapshot at `vocabulary/_canonical/en/A0-A1_master.json` containing 1,274 unique words.
-- This snapshot is used by `scripts/sync-from-cosydata.js` and the CI workflow "Validate COSYdata Sync & Datasets" (`.github/workflows/validate-cosydata-sync.yml`).
-
-## Provenance
-- As recorded in the file notice, this snapshot was copied from COSYlanguages on 2026-09-12 (commit `5c89fc9036afba450f942e4fd672ea57d42c42a6`).
-
-## Known Gap
-- Measured on 2026-10-03: COSYdata's current A0-A1 list is `a0_a1_entries.json` with 1,433 unique words.
-- The local snapshot (1,274 unique words) and COSYdata's `a0_a1_entries.json` overlap on 1,201 words (73 words exist only in the snapshot, 232 words exist only in COSYdata).
-- Because of this discrepancy, the offline CI check currently audits local game data against a stale snapshot list. Reconciliation is pending and must happen in COSYdata first before updating the local snapshot in COSYgames.
+## Direct COSYdata Integration
+- COSYgames directly connects to COSYdata. Local snapshots under `vocabulary/_canonical` have been fully retired in favor of live COSYdata endpoints and opt-in dynamic loading via `shared/js/vocab-loader.js`.
+- The alignment audit script (`scripts/sync-from-cosydata.js`) and CI workflow (`.github/workflows/validate-cosydata-sync.yml`) query COSYdata's published index endpoints.
 
 ## Maintenance Rule
-- **Never edit the local snapshot file (`vocabulary/_canonical/en/A0-A1_master.json`) by hand.**
-- Any vocabulary updates or corrections must be proposed and merged in COSYdata first, after which the local snapshot in COSYgames can be refreshed.
+- Any vocabulary updates, corrections, or additions must be proposed and merged directly in the COSYdata repository.
 
 ## Runtime Vocabulary (Emoji Odyssey, Object Quest, Hot Seat, Identity Mystery & Word Linker)
 Games can dynamically fetch vocabulary from COSYdata at runtime via `shared/js/vocab-loader.js`. This mechanism is opt-in per game so that other games relying on `window.vocabularyData` remain unaffected unless explicitly configured.
