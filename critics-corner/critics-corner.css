@@ -1,6 +1,6 @@
 :root {
-  --game-accent: #D97706;
-  --game-accent-dim: rgba(217, 119, 6, 0.15);
+  --game-accent: var(--cosy-color-honey, #945e05);
+  --game-accent-dim: rgba(148, 94, 5, 0.15);
   --game-accent-contrast: #FFFFFF;
 }
 

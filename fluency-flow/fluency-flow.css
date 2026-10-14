@@ -1,13 +1,13 @@
 :root {
-  --game-accent: linear-gradient(135deg, #0284c7, #06b6d4);
-  --game-accent-dim: rgba(2, 132, 199, 0.15);
+  --game-accent: linear-gradient(135deg, var(--cosy-color-sage, #416b49), var(--cosy-color-forest-green, #416b49));
+  --game-accent-dim: rgba(65, 107, 73, 0.15);
   --game-accent-contrast: #ffffff;
-  --river-surface: #e0f2fe;
-  --river-border: #38bdf8;
-  --chip-bg: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
-  --chip-text: #0369a1;
-  --chip-border: #bae6fd;
-  --chip-selected-bg: #bae6fd;
+  --river-surface: var(--cosy-color-sage-light, #e8f0e9);
+  --river-border: var(--cosy-color-sage-soft, #6b9474);
+  --chip-bg: linear-gradient(180deg, #ffffff 0%, var(--cosy-color-sage-mist, #f0f5f1) 100%);
+  --chip-text: var(--cosy-color-sage-dark, #375742);
+  --chip-border: var(--cosy-color-border, rgba(74, 107, 80, 0.25));
+  --chip-selected-bg: var(--cosy-color-sage-light, #e8f0e9);
 }
 
 /* River Rail Container */

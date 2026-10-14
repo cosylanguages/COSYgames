@@ -1,16 +1,16 @@
 /* action-hero/action-hero.css */
 :root {
-  --game-accent: #FF4500;
-  --game-accent-dim: rgba(255, 69, 0, 0.15);
+  --game-accent: var(--cosy-color-coral, #B84318);
+  --game-accent-dim: rgba(184, 67, 24, 0.15);
   --game-accent-contrast: #ffffff;
 }
 
 [data-context="phone"] {
-  --game-accent: #FF4500;
+  --game-accent: var(--cosy-color-coral, #B84318);
 }
 
 [data-context="projector"] {
-  --game-accent: #DC2626;
+  --game-accent: var(--cosy-color-rose, #a32d2d);
 }
 
 /* Comic-book Container & Panel Layout */
@@ -27,11 +27,11 @@
 
 /* Comic Panel Border Card */
 .action-game-card {
-  background: #ffffff;
-  border: 3px solid #1e293b;
+  background: var(--cosy-color-surface, #ffffff);
+  border: 3px solid var(--cosy-color-sage-deep, #233827);
   border-radius: 18px 8px 22px 10px; /* Irregular comic panel corners */
   padding: 2rem 1.5rem;
-  box-shadow: 6px 6px 0px #1e293b;
+  box-shadow: 6px 6px 0px var(--cosy-color-sage-deep, #233827);
   text-align: center;
   position: relative;
   overflow: hidden;

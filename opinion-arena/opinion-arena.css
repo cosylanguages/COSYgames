@@ -1,24 +1,24 @@
 /* games/opinion-arena/opinion-arena.css */
 
 :root, .cosy-game-theme {
-    --game-accent-a: #d93838;         /* Warm Red (Agree/Pro side) */
-    --game-accent-a-dim: rgba(217, 56, 56, 0.12);
-    --game-accent-a-hover: #b82e2e;
+    --game-accent-a: var(--cosy-color-coral, #B84318);         /* Warm Red (Agree/Pro side) */
+    --game-accent-a-dim: rgba(184, 67, 24, 0.12);
+    --game-accent-a-hover: #9e3612;
 
-    --game-accent-b: #2563eb;         /* Cool Blue (Disagree/Con side) */
-    --game-accent-b-dim: rgba(37, 99, 235, 0.12);
-    --game-accent-b-hover: #1d4ed8;
+    --game-accent-b: var(--cosy-color-navy, #1e2f6b);         /* Credible Navy (Disagree/Con side) */
+    --game-accent-b-dim: rgba(30, 47, 107, 0.12);
+    --game-accent-b-hover: #162350;
 
-    --arena-center-neutral: #5e586c;  /* Neutral Gray-Violet center */
-    --arena-bg-soft: #f4f3f7;
+    --arena-center-neutral: var(--cosy-color-muted, #5c5957);
+    --arena-bg-soft: var(--cosy-color-sage-mist, #f0f5f1);
 }
 
 html[data-theme="dark"], body.theme-dark {
-    --game-accent-a: #ef4444;
-    --game-accent-a-dim: rgba(239, 68, 68, 0.22);
-    --game-accent-b: #3b82f6;
-    --game-accent-b-dim: rgba(59, 130, 246, 0.22);
-    --arena-center-neutral: #8b8599;
+    --game-accent-a: #f87171;
+    --game-accent-a-dim: rgba(248, 113, 113, 0.22);
+    --game-accent-b: #60a5fa;
+    --game-accent-b-dim: rgba(96, 165, 250, 0.22);
+    --arena-center-neutral: var(--cosy-color-ink-faint, #9eb3a0);
     --arena-bg-soft: #1c1a24;
 }
 
