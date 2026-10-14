@@ -28,6 +28,13 @@
   white-space: nowrap;
 }
 
+.cg-nav-logo {
+  height: 32px;
+  width: auto;
+  border-radius: var(--cosy-radius-sm, 6px);
+  object-fit: contain;
+}
+
 .cg-nav-brand:hover {
   color: var(--game-accent, var(--teal, #416b49));
 }
