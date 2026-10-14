@@ -16,9 +16,6 @@ COSYgames/
 ├── _engine/                     # Core runtime engine (session, scores, view context)
 ├── shared/                      # Standalone shared CSS tokens, styles, navigation, and i18n scripts
 ├── data/                        # Multilingual game datasets & shared etymology network
-├── vocabulary/
-│   └── _canonical/
-│       └── en/                  # Read-only vocabulary snapshot (see docs/vocabulary-source-of-truth.md)
 ├── games/
 │   └── index.json               # Game metadata manifest (checked by automated tests)
 ├── scripts/                     # Sync and data validation scripts

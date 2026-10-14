@@ -1,0 +1,411 @@
+[
+  {
+    "game": "100-questions",
+    "languages": [
+      "en"
+    ],
+    "dataFiles": [
+      "100-questions/decks/civic.js",
+      "100-questions/decks/family.js",
+      "100-questions/decks/friends.js",
+      "100-questions/decks/interview.js",
+      "100-questions/decks/myself.js",
+      "100-questions/decks/netflix.js",
+      "100-questions/decks/student.js",
+      "100-questions/decks/teacher.js"
+    ],
+    "externalDeps": []
+  },
+  {
+    "game": "action-hero",
+    "languages": [
+      "ba",
+      "br",
+      "de",
+      "el",
+      "en",
+      "es",
+      "fr",
+      "hy",
+      "it",
+      "ka",
+      "pt",
+      "ru",
+      "tt"
+    ],
+    "dataFiles": [
+      "data/*/action.js"
+    ],
+    "externalDeps": [
+      "shared/js/game-strings.js",
+      "i18n/games/action-hero.js"
+    ]
+  },
+  {
+    "game": "battle-of-wits",
+    "languages": [
+      "ba",
+      "br",
+      "de",
+      "el",
+      "en",
+      "es",
+      "fr",
+      "hy",
+      "it",
+      "ka",
+      "pt",
+      "ru",
+      "tt"
+    ],
+    "dataFiles": [
+      "data/*/battle.js"
+    ],
+    "externalDeps": [
+      "shared/js/game-strings.js",
+      "i18n/games/battle-of-wits.js"
+    ]
+  },
+  {
+    "game": "cosy-crossword",
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
+    "dataFiles": [],
+    "externalDeps": [
+      "COSYdata / shared/js/vocab-loader.js"
+    ]
+  },
+  {
+    "game": "critics-corner",
+    "languages": [
+      "ba",
+      "br",
+      "de",
+      "el",
+      "en",
+      "es",
+      "fr",
+      "hy",
+      "it",
+      "ka",
+      "pt",
+      "ru",
+      "tt"
+    ],
+    "dataFiles": [
+      "data/*/critic.js"
+    ],
+    "externalDeps": [
+      "shared/js/game-strings.js",
+      "i18n/games/critics-corner.js"
+    ]
+  },
+  {
+    "game": "emoji-odyssey",
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
+    "dataFiles": [],
+    "externalDeps": [
+      "COSYdata / shared/js/vocab-loader.js",
+      "i18n/games/emoji-odyssey.js"
+    ]
+  },
+  {
+    "game": "etymology-explorer",
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el",
+      "hy",
+      "ka",
+      "ba",
+      "br",
+      "pt",
+      "tt"
+    ],
+    "dataFiles": [
+      "data/*/etymology.js",
+      "data/shared/etymology_network.js",
+      "data/shared/doublets.js",
+      "data/shared/false_friends.js"
+    ],
+    "externalDeps": []
+  },
+  {
+    "game": "fluency-flow",
+    "languages": [
+      "ba",
+      "br",
+      "de",
+      "el",
+      "en",
+      "es",
+      "fr",
+      "hy",
+      "it",
+      "ka",
+      "pt",
+      "ru",
+      "tt"
+    ],
+    "dataFiles": [
+      "data/*/fluency.js"
+    ],
+    "externalDeps": [
+      "shared/js/game-strings.js",
+      "i18n/games/fluency-flow.js"
+    ]
+  },
+  {
+    "game": "hot-seat",
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
+    "dataFiles": [],
+    "externalDeps": [
+      "COSYdata / shared/js/vocab-loader.js",
+      "i18n/games/hot-seat.js"
+    ]
+  },
+  {
+    "game": "identity-mystery",
+    "languages": [
+      "ba",
+      "br",
+      "de",
+      "el",
+      "en",
+      "es",
+      "fr",
+      "hy",
+      "it",
+      "ka",
+      "pt",
+      "ru",
+      "tt"
+    ],
+    "dataFiles": [
+      "data/*/identity.js"
+    ],
+    "externalDeps": [
+      "COSYdata / shared/js/vocab-loader.js",
+      "i18n/games/identity-mystery.js"
+    ]
+  },
+  {
+    "game": "last-letter",
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
+    "dataFiles": [],
+    "externalDeps": [
+      "COSYdata / shared/js/vocab-loader.js",
+      "i18n/games/last-letter.js"
+    ]
+  },
+  {
+    "game": "lucky-numbers",
+    "languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el",
+      "hy",
+      "ka"
+    ],
+    "dataFiles": [],
+    "externalDeps": [
+      "COSYdata (a0_a1/numbers.json)",
+      "i18n/games/lucky-numbers.js"
+    ]
+  },
+  {
+    "game": "object-quest",
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
+    "dataFiles": [],
+    "externalDeps": [
+      "COSYdata / shared/js/vocab-loader.js",
+      "i18n/games/object-quest.js"
+    ]
+  },
+  {
+    "game": "opinion-arena",
+    "languages": [
+      "ba",
+      "br",
+      "de",
+      "el",
+      "en",
+      "es",
+      "fr",
+      "hy",
+      "it",
+      "ka",
+      "pt",
+      "ru",
+      "tt"
+    ],
+    "dataFiles": [
+      "data/*/opinions.js"
+    ],
+    "externalDeps": [
+      "shared/js/game-strings.js",
+      "i18n/games/opinion-arena.js"
+    ]
+  },
+  {
+    "game": "scene-match",
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
+    "dataFiles": [
+      "data/scenes/*.js"
+    ],
+    "externalDeps": []
+  },
+  {
+    "game": "story-chain",
+    "languages": [
+      "ba",
+      "br",
+      "de",
+      "el",
+      "en",
+      "es",
+      "fr",
+      "hy",
+      "it",
+      "ka",
+      "pt",
+      "ru",
+      "tt"
+    ],
+    "dataFiles": [
+      "data/*/storychain.js"
+    ],
+    "externalDeps": [
+      "shared/js/game-strings.js",
+      "i18n/games/story-chain.js"
+    ]
+  },
+  {
+    "game": "story-weaver",
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
+    "dataFiles": [],
+    "externalDeps": [
+      "COSYdata / shared/js/vocab-loader.js"
+    ]
+  },
+  {
+    "game": "this-or-that",
+    "languages": [
+      "en",
+      "fr",
+      "it",
+      "ru",
+      "el"
+    ],
+    "dataFiles": [
+      "this-or-that/decks/cefr_all_decks.json",
+      "this-or-that/decks/french.json",
+      "this-or-that/decks/greek.json",
+      "this-or-that/decks/italian.json",
+      "this-or-that/decks/russian.json",
+      "this-or-that/decks/en/*.json"
+    ],
+    "externalDeps": []
+  },
+  {
+    "game": "what-gender-is-it",
+    "languages": [
+      "fr",
+      "es",
+      "it",
+      "de",
+      "ru",
+      "el",
+      "br"
+    ],
+    "dataFiles": [
+      "data/gender/a1.js",
+      "data/gender/a2.js",
+      "data/gender/b1.js",
+      "data/gender/b2.js",
+      "data/gender/c1.js",
+      "data/gender/c2.js"
+    ],
+    "externalDeps": []
+  },
+  {
+    "game": "word-linker",
+    "languages": [
+      "en",
+      "fr",
+      "es",
+      "de",
+      "it",
+      "ru",
+      "el"
+    ],
+    "dataFiles": [
+      "data/*/wordlinker.js"
+    ],
+    "externalDeps": [
+      "COSYdata / shared/js/vocab-loader.js",
+      "i18n/games/word-linker.js"
+    ]
+  }
+]

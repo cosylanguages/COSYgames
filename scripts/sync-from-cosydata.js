@@ -17,31 +17,47 @@
 const fs = require('fs');
 const path = require('path');
 
+const https = require('https');
+
 const ROOT_DIR = path.resolve(__dirname, '..');
-const CANONICAL_PATH = path.join(ROOT_DIR, 'vocabulary', '_canonical', 'en', 'A0-A1_master.json');
+const COSYDATA_URL = 'https://cosylanguages.github.io/COSYdata/vocabulary/en/search-index.json';
 
 const mode = process.argv.includes('--update') ? 'update' : 'check';
 
 console.log(`[COSYdata Sync] Running in '${mode}' mode...`);
 
-// 1. Load canonical words from local snapshot
+// 1. Load canonical words from COSYdata endpoint
 let canonicalWords = new Set();
-if (fs.existsSync(CANONICAL_PATH)) {
-    try {
-        const raw = fs.readFileSync(CANONICAL_PATH, 'utf8');
-        const parsed = JSON.parse(raw);
-        const list = Array.isArray(parsed) ? parsed : (parsed.words || []);
-        list.forEach(item => {
-            if (typeof item === 'string') canonicalWords.add(item.toLowerCase());
-            else if (item && item.word) canonicalWords.add(item.word.toLowerCase());
+
+async function fetchCanonicalWords() {
+    return new Promise((resolve) => {
+        https.get(COSYDATA_URL, { headers: { 'User-Agent': 'COSYgames-Sync/1.0' } }, (res) => {
+            let data = '';
+            res.on('data', chunk => data += chunk);
+            res.on('end', () => {
+                try {
+                    const parsed = JSON.parse(data);
+                    const list = Array.isArray(parsed) ? parsed : (parsed.words || parsed.entries || []);
+                    list.forEach(item => {
+                        if (typeof item === 'string') canonicalWords.add(item.toLowerCase());
+                        else if (item && item.word) canonicalWords.add(item.word.toLowerCase());
+                        else if (item && item.w) canonicalWords.add(item.w.toLowerCase());
+                    });
+                    console.log(`[COSYdata Sync] Loaded ${canonicalWords.size} canonical words from COSYdata.`);
+                } catch (e) {
+                    console.warn(`[COSYdata Sync] Could not parse COSYdata response (${e.message}). Using fallback audit mode.`);
+                }
+                resolve();
+            });
+        }).on('error', (err) => {
+            console.warn(`[COSYdata Sync] Network fetch failed (${err.message}). Using fallback audit mode.`);
+            resolve();
         });
-        console.log(`[COSYdata Sync] Loaded ${canonicalWords.size} canonical words from the local snapshot.`);
-    } catch (e) {
-        console.error(`[COSYdata Sync] Error parsing ${CANONICAL_PATH}:`, e.message);
-    }
-} else {
-    console.warn(`[COSYdata Sync] Canonical snapshot file not found at ${CANONICAL_PATH}. Using fallback check.`);
+    });
 }
+
+async function runSync() {
+    await fetchCanonicalWords();
 
 // 2. Audit local datasets
 const auditSummary = {
@@ -99,3 +115,9 @@ if (mode === 'update') {
 } else {
     console.log('[COSYdata Sync] Check complete. All local datasets are aligned and offline-capable.');
 }
+}
+
+runSync().catch(err => {
+    console.error('[COSYdata Sync] Error running sync audit:', err);
+    process.exit(1);
+});
