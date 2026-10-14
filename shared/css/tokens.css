@@ -392,18 +392,18 @@ html[data-theme="dark"], body.theme-dark {
     --cosy-color-warm-white:             #222b22;
     --cosy-color-surface:                #222b22;
 
-    --cosy-color-ink:                    #e8f0e9;
-    --cosy-color-ink-soft:               #c8d8c9;
-    --cosy-color-ink-muted:              #c8d8c9;
-    --cosy-color-ink-faint:              #8a9e8b;
-    --cosy-color-muted:                  #8a9e8b;
+    --cosy-color-ink:                    #f0f7f1;
+    --cosy-color-ink-soft:               #d2e0d3;
+    --cosy-color-ink-muted:              #d2e0d3;
+    --cosy-color-ink-faint:              #9eb3a0;
+    --cosy-color-muted:                  #9eb3a0;
 
-    --cosy-color-border:                 rgba(107, 143, 113, 0.20);
-    --cosy-color-border-hover:           rgba(107, 143, 113, 0.35);
+    --cosy-color-border:                 rgba(134, 179, 141, 0.25);
+    --cosy-color-border-hover:           rgba(134, 179, 141, 0.45);
 
-    --cosy-color-sage:                   #5a7a5f;
-    --cosy-color-sage-dark:              #8a9e8b;
-    --cosy-color-sage-deep:              #e8f0e9;
+    --cosy-color-sage:                   #688e6e;
+    --cosy-color-sage-dark:              #a3b8a5;
+    --cosy-color-sage-deep:              #f0f7f1;
     --cosy-color-sage-pale:              #222c23;
     --cosy-color-sage-mist:              #1f2720;
     --cosy-color-sage-light:             #222c23;
