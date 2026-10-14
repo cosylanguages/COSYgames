@@ -1,16 +1,16 @@
 /* cosy-crossword/cosy-crossword.css */
 :root {
-  --game-accent: #3730A3;
-  --game-accent-dim: rgba(55, 48, 163, 0.15);
+  --game-accent: var(--cosy-color-navy, #1e2f6b);
+  --game-accent-dim: rgba(30, 47, 107, 0.15);
   --game-accent-contrast: #ffffff;
 }
 
 [data-context="phone"] {
-  --game-accent: #3730A3;
+  --game-accent: var(--cosy-color-navy, #1e2f6b);
 }
 
 [data-context="projector"] {
-  --game-accent: #312E81;
+  --game-accent: var(--cosy-color-navy, #1e2f6b);
 }
 
 /* Crossword Container & Layout */

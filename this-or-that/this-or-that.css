@@ -1,21 +1,21 @@
 /* games/this-or-that/this-or-that.css */
 
 :root {
-  --swipe-like: var(--teal, #0d9488);
-  --swipe-pass: var(--coral, #e11d48);
-  --swipe-surface: var(--surface-color, #ffffff);
-  --swipe-card-bg: linear-gradient(135deg, var(--sage-light, #f4f7f5) 0%, var(--warm-white, #fffdfa) 100%);
-  --swipe-card-border: var(--border, rgba(0, 0, 0, 0.08));
-  --swipe-accent: var(--teal, #0d9488);
+  --swipe-like: var(--cosy-color-forest-green, #416b49);
+  --swipe-pass: var(--cosy-color-coral, #B84318);
+  --swipe-surface: var(--cosy-color-surface, #ffffff);
+  --swipe-card-bg: linear-gradient(135deg, var(--cosy-color-sage-light, #e8f0e9) 0%, var(--cosy-color-warm-white, #FFFEFB) 100%);
+  --swipe-card-border: var(--cosy-color-border, rgba(74, 107, 80, 0.12));
+  --swipe-accent: var(--cosy-color-sage, #416b49);
 }
 
 html[data-theme="dark"], body.theme-dark {
-  --swipe-like: #2dd4bf;
+  --swipe-like: #688e6e;
   --swipe-pass: #f87171;
-  --swipe-surface: var(--surface-color, #222b22);
+  --swipe-surface: var(--cosy-color-surface, #222b22);
   --swipe-card-bg: linear-gradient(135deg, #1f2720 0%, #1a1f1a 100%);
-  --swipe-card-border: var(--border, rgba(107, 143, 113, 0.20));
-  --swipe-accent: #2dd4bf;
+  --swipe-card-border: var(--cosy-color-border, rgba(134, 179, 141, 0.25));
+  --swipe-accent: #688e6e;
 }
 
 #go-body {
@@ -74,9 +74,9 @@ html[data-theme="dark"], body.theme-dark {
   width: 100%;
   min-height: 480px;
   background: var(--swipe-surface);
-  color: var(--ink, #2a2a2a);
-  border-radius: 20px;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  color: var(--cosy-color-ink, #2a2a2a);
+  border-radius: var(--cosy-radius-base, 20px);
+  box-shadow: var(--cosy-shadow-base, 0 6px 28px rgba(46, 74, 51, 0.10));
   display: flex;
   flex-direction: column;
   overflow: hidden;
