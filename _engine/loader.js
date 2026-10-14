@@ -143,11 +143,29 @@
             }
             return Promise.all(promises);
         },
+        hasGameData: (lang, gameKey) => {
+            if (!lang) return false;
+            const data = (window.gameData && window.gameData[lang]) || null;
+            if (!data) return false;
+            if (gameKey) {
+                return Boolean(data[gameKey] || data.categories || data.items || data.prompts);
+            }
+            return true;
+        },
         getGameData: (lang) => {
             if (window.gameUtils && typeof window.gameUtils.getGameData === 'function') {
                 return window.gameUtils.getGameData(lang);
             }
             return (window.gameData && window.gameData[lang]) || (window.gameData && window.gameData['universal']) || {};
+        },
+        getGameDataWithFallback: (lang, gameKey) => {
+            const primary = (window.gameData && window.gameData[lang]) ? window.gameData[lang] : null;
+            if (primary && gameKey && primary[gameKey]) {
+                return primary[gameKey];
+            }
+            if (primary) return primary;
+            const fallback = (window.gameData && window.gameData['en']) ? window.gameData['en'] : ((window.gameData && window.gameData['universal']) || {});
+            return (gameKey && fallback[gameKey]) ? fallback[gameKey] : fallback;
         },
         getLangCode: (val) => {
             if (window.getLangCode && typeof window.getLangCode === 'function') {
