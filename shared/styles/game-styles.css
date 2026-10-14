@@ -317,8 +317,10 @@ html[data-context="online"] .cg-btn,
 }
 
 .cg-footer-logo {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--cosy-radius-sm, 6px);
+  object-fit: contain;
 }
 
 .cg-footer-tagline,
