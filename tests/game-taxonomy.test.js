@@ -119,9 +119,9 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.equal(etymology.specialSelection.bypassesCEFR, true);
   assert.ok(etymology.audienceNotes.includes('not CEFR-labelled'));
 
-  const sceneMatch = taxonomy.games.find(game => game.id === 'scene-match');
-  assert.deepEqual(sceneMatch.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], 'Scene Match taxonomy should include its B2–C2 setup option');
-  assert.ok(sceneMatch.modeNotes.includes('solo-oriented'));
+  const sceneMatchAdvanced = taxonomy.games.find(game => game.id === 'scene-match');
+  assert.deepEqual(sceneMatchAdvanced.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], 'Scene Match taxonomy should include its B2–C2 setup option');
+  assert.ok(sceneMatchAdvanced.modeNotes.includes('solo-oriented'));
   for (const id of ['fluency-flow', 'critics-corner', 'this-or-that', 'word-linker', 'what-gender-is-it']) {
     const game = taxonomy.games.find(item => item.id === id);
     assert.ok(game.audienceNotes, id + ' should document audience caveats');
