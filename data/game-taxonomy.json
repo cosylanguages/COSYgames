@@ -536,6 +536,148 @@
       "formats": [
         "online",
         "in-person"
+      ],
+      "contentSets": [
+        {
+          "id": "civic",
+          "name": "Civic Exam",
+          "source": "100-questions/decks/civic.js",
+          "categories": [
+            "learning-knowledge",
+            "society-culture",
+            "places-travel"
+          ],
+          "subcategories": [
+            "Geography",
+            "History",
+            "Government",
+            "Rights & responsibilities"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses progressive content stages, not CEFR labels; no CEFR equivalence is asserted."
+        },
+        {
+          "id": "family",
+          "name": "Questions to Family",
+          "source": "100-questions/decks/family.js",
+          "categories": [
+            "people-feelings",
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Family & friends",
+            "Personal stories",
+            "Feelings & emotions"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source progresses from daily life to deeper relationships; these stages are not CEFR assessments."
+        },
+        {
+          "id": "friends",
+          "name": "Questions to Friends",
+          "source": "100-questions/decks/friends.js",
+          "categories": [
+            "people-feelings",
+            "opinions-ideas"
+          ],
+          "subcategories": [
+            "Friendship",
+            "Feelings & emotions",
+            "Conflict resolution",
+            "Personal boundaries"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source progresses from safe icebreakers to more personal topics; stages are not CEFR assessments."
+        },
+        {
+          "id": "interview",
+          "name": "Interview Questions",
+          "source": "100-questions/decks/interview.js",
+          "categories": [
+            "work-future",
+            "real-life-communication"
+          ],
+          "subcategories": [
+            "Interviews",
+            "Workplace vocabulary",
+            "Skills & talents",
+            "Problem-solving"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses interview stages, not CEFR labels; language demands vary by role and answer."
+        },
+        {
+          "id": "myself",
+          "name": "Questions to Myself",
+          "source": "100-questions/decks/myself.js",
+          "categories": [
+            "people-feelings",
+            "opinions-ideas"
+          ],
+          "subcategories": [
+            "Feelings & emotions",
+            "Goals & ambitions",
+            "Hypothetical situations",
+            "Personal stories"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source contains multiple themed progressions; no CEFR equivalence is asserted."
+        },
+        {
+          "id": "netflix",
+          "name": "Netflix Documentary Questions",
+          "source": "100-questions/decks/netflix.js",
+          "categories": [
+            "hobbies-entertainment",
+            "stories-mystery",
+            "society-culture"
+          ],
+          "subcategories": [
+            "Films & TV",
+            "Story prompts",
+            "Media",
+            "Secrets & clues"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses narrative stages and media themes, not CEFR labels."
+        },
+        {
+          "id": "student",
+          "name": "Questions to Students",
+          "source": "100-questions/decks/student.js",
+          "categories": [
+            "learning-knowledge",
+            "people-feelings",
+            "everyday-life"
+          ],
+          "subcategories": [
+            "School subjects",
+            "Personal stories",
+            "Feelings & emotions",
+            "Goals & ambitions"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses progressive topic stages, not CEFR labels; audience suitability is separate from proficiency."
+        },
+        {
+          "id": "teacher",
+          "name": "Teacher & Student Questions",
+          "source": "100-questions/decks/teacher.js",
+          "categories": [
+            "learning-knowledge",
+            "hobbies-entertainment",
+            "words-grammar"
+          ],
+          "subcategories": [
+            "Study skills",
+            "Languages",
+            "Grammar patterns",
+            "Pronunciation",
+            "Humour"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses themed stages and humour; no CEFR equivalence is asserted."
+        }
       ]
     },
     {
