@@ -80,6 +80,14 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(hundredQuestions.contentSets.filter(set => ['family', 'student', 'myself'].includes(set.id)).every(set => set.audienceNote && set.audiences.includes('children')), 'Child-friendly sides should be documented for Family, Student, and Myself decks');
   assert.ok(hundredQuestions.contentSets.filter(set => ['friends', 'interview', 'civic', 'netflix'].includes(set.id)).every(set => set.audienceNote && set.audiences.includes('adults')), 'Deck-specific suitability notes should exist for Friends, Interview, Civic, and Netflix');
 
+  for (const id of ['story-chain', 'story-weaver', 'hot-seat']) {
+    const game = taxonomy.games.find(item => item.id === id);
+    assert.deepEqual(game.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], id + ' levels should match its explicit setup options');
+    assert.ok(game.audienceNotes && game.modeNotes, id + ' should document age suitability and mode assumptions');
+  }
+  assert.ok(taxonomy.games.find(game => game.id === 'hot-seat').modeNotes.includes('at least a guesser and a clue-giver'), 'Hot Seat should document its minimum role structure');
+  assert.ok(taxonomy.games.find(game => game.id === 'story-weaver').audienceNotes.includes('English-only'), 'Story Weaver should disclose its English-only setup');
+
   const luckyNumbers = taxonomy.games.find(game => game.id === 'lucky-numbers');
   assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–100']);
   assert.equal(luckyNumbers.specialSelection.bypassesCEFR, true);
