@@ -2324,13 +2324,8 @@
     {
       "id": "etymology-explorer",
       "name": "Etymology Explorer",
-      "levels": [
-        "B1",
-        "B2",
-        "C1",
-        "C2"
-      ],
-      "levelAvailability": "language-dependent",
+      "levels": [],
+      "levelAvailability": "mode-based-not-cefr",
       "audiences": [
         "teens",
         "adults"
@@ -2356,7 +2351,20 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "specialSelection": {
+        "label": "Game mode / difficulty",
+        "options": [
+          "Easy",
+          "Medium",
+          "Hard",
+          "Language Network",
+          "Word Pairs"
+        ],
+        "bypassesCEFR": true
+      },
+      "audienceNotes": "The setup offers Easy, Medium, and Hard difficulty modes plus Language Network and Word Pairs modes; these are not CEFR-labelled choices. Historical and cross-language vocabulary may require advanced background knowledge, and suitability depends on the selected language and available dataset.",
+      "modeNotes": "The game supports individual play through its own setup. Language Network and Word Pairs are separate modes from the Easy/Medium/Hard etymology difficulty track. The setup does not enforce participant counts for collaborative facilitation."
     },
     {
       "id": "what-gender-is-it",
