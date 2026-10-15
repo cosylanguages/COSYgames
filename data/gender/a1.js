@@ -83,22 +83,22 @@
         "concept": "Mum",
         "translations": {
             "fr": {
-                "word": "tante",
+                "word": "maman",
                 "article": "la",
                 "gender": "feminine"
             },
             "es": {
-                "word": "mujer",
+                "word": "mamá",
                 "article": "la",
                 "gender": "feminine"
             },
             "it": {
-                "word": "zia",
+                "word": "mamma",
                 "article": "la",
                 "gender": "feminine"
             },
             "de": {
-                "word": "Frau",
+                "word": "Mutter",
                 "article": "die",
                 "gender": "feminine"
             },
@@ -110,43 +110,43 @@
             "el": {
                 "word": "μαμά",
                 "article": "",
-                "gender": "masculine"
+                "gender": "feminine"
             },
             "br": {
-                "word": "maouez",
+                "word": "mamm",
                 "article": "",
-                "gender": "masculine"
+                "gender": "feminine"
             }
         },
-        "explanation": "Romance languages (French, Spanish, Italian) inherit their genders from Latin (e.g. FR: feminine or ES: feminine or IT: feminine). In Germanic roots, the word shifted or was established as German: feminine. In Slavic languages, gender is determined phonetically based on the word ending (e.g. Russian: feminine). Greek inherits its grammatical gender from Ancient Hellenic roots (Greek: masculine)."
+        "explanation": "These translations mean “mum” or “mother.” Each noun is grammatically feminine in the language shown, regardless of the person being described."
     },
     {
         "concept": "Dad",
         "translations": {
             "fr": {
-                "word": "oncle",
-                "article": "l'",
+                "word": "papa",
+                "article": "le",
                 "gender": "masculine"
             },
             "es": {
-                "word": "marido",
+                "word": "papá",
                 "article": "el",
                 "gender": "masculine"
             },
             "it": {
-                "word": "zio",
-                "article": "lo",
+                "word": "papà",
+                "article": "il",
                 "gender": "masculine"
             },
             "de": {
-                "word": "Mann",
+                "word": "Vater",
                 "article": "der",
                 "gender": "masculine"
             },
             "ru": {
                 "word": "папа",
                 "article": "",
-                "gender": "feminine"
+                "gender": "masculine"
             },
             "el": {
                 "word": "μπαμπάς",
@@ -154,12 +154,12 @@
                 "gender": "masculine"
             },
             "br": {
-                "word": "gwaz",
+                "word": "tad",
                 "article": "",
                 "gender": "masculine"
             }
         },
-        "explanation": "Romance languages (French, Spanish, Italian) inherit their genders from Latin (e.g. FR: masculine or ES: masculine or IT: masculine). In Germanic roots, the word shifted or was established as German: masculine. In Slavic languages, gender is determined phonetically based on the word ending (e.g. Russian: feminine). Greek inherits its grammatical gender from Ancient Hellenic roots (Greek: masculine)."
+        "explanation": "These translations mean “dad” or “father.” Each noun is grammatically masculine in the language shown, including Russian папа, which is grammatically masculine despite ending in -а."
     },
     {
         "concept": "Parent",
