@@ -30,9 +30,16 @@
     const selectedCategory = categorySelect.value;
     const previous = subcategorySelect.value;
     const values = new Set();
+    const allowedSubtopics = new Set();
+    taxonomy.categories.forEach(function (category) {
+      if (selectedCategory === 'all' || category.id === selectedCategory) {
+        (category.subcategories || []).forEach(function (label) { allowedSubtopics.add(label); });
+      }
+    });
     taxonomy.games.forEach(function (game) {
-      if (selectedCategory !== 'all' && !game.categories.includes(selectedCategory)) return;
-      Object.values(game.subcategoryMappings || {}).flat().forEach(function (label) { values.add(label); });
+      Object.values(game.subcategoryMappings || {}).flat().forEach(function (label) {
+        if (allowedSubtopics.has(label)) values.add(label);
+      });
     });
     subcategorySelect.replaceChildren(new Option('All subtopics', 'all'));
     Array.from(values).sort(function (a, b) { return a.localeCompare(b); }).forEach(function (label) {
