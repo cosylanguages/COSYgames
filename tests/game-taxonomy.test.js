@@ -35,6 +35,12 @@ test('Shared game taxonomy stays aligned with the hub', () => {
       game.levels.forEach(id => assert.ok(mapped.has(id), game.id + ' declares CEFR level ' + id + ' without a source-level mapping'));
     }
     assert.ok(Array.isArray(game.subcategories), game.id + ' needs subcategories');
+    assert.deepEqual(Object.keys(game.subcategoryMappings || {}).sort(), game.subcategories.slice().sort(), game.id + ' must explicitly map every source subtopic label');
+    const canonicalSubtopics = new Set(taxonomy.categories.flatMap(category => category.subcategories || []));
+    Object.entries(game.subcategoryMappings || {}).forEach(([sourceLabel, targets]) => {
+      assert.ok(Array.isArray(targets), game.id + '/' + sourceLabel + ' mapping must be an array');
+      targets.forEach(target => assert.ok(canonicalSubtopics.has(target), game.id + '/' + sourceLabel + ' maps to unknown canonical subtopic ' + target));
+    });
     if (game.contentSets) {
       game.contentSets.forEach(set => {
         assert.ok(set.id, game.id + ' content set needs an ID');
@@ -149,6 +155,8 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(html.includes('id="taxonomy-load-error"'), 'hub should provide a fallback notice if taxonomy filters fail to load');
   assert.ok(filterScript.includes("if (loadError) loadError.hidden = false;"), 'taxonomy load failure should reveal the fallback notice');
   assert.ok(html.includes('if (emptyState) emptyState.hidden = totalVisible > 0;'), 'filter logic should show the no-results message only when no games match');
+  assert.ok(filterScript.includes('Object.values(game.subcategoryMappings || {}).flat()'), 'subtopic choices should use canonical mappings, not game-specific source labels');
+  assert.ok(filterScript.includes('card.dataset.subcategories = JSON.stringify(Array.from(new Set(Object.values(game.subcategoryMappings || {}).flat())))'), 'game cards should be tagged with deduplicated canonical subtopics');
   assert.ok(filterScript.includes('data/game-taxonomy.json'), 'filter logic should load the shared taxonomy');
   assert.ok(html.includes('matchesCategory && matchesSubcategory && matchesLevel && matchesAudience && matchesMode && matchesFormat'), 'all taxonomy selectors should combine in result filtering');
 });
