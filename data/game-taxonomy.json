@@ -1585,7 +1585,8 @@
         "elementary",
         "intermediate",
         "upper_intermediate",
-        "advanced"
+        "advanced",
+        "proficiency"
       ],
       "levelMapping": {
         "elementary": [
@@ -1600,6 +1601,9 @@
         ],
         "advanced": [
           "C1"
+        ],
+        "proficiency": [
+          "C2"
         ]
       },
       "audienceNotes": "The game uses hidden identities across famous people, jobs, and nationalities. Suitability depends on the chosen category and language data; review culturally specific names and nationality-related content for the group. No age-specific filter is provided.",
