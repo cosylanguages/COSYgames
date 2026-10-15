@@ -2215,7 +2215,9 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "Offers Guess and Story modes. Guess mode requires enough emoji-tagged vocabulary for the selected language and level; Story mode is a separate fallback when that vocabulary is unavailable. Review emoji meanings and story prompts for cultural context and age suitability.",
+      "modeNotes": "The setup provides Guess and Story modes but does not enforce group size. Both can be adapted for individual practice or collaborative classroom play; treat those as facilitation choices rather than enforced player-count rules."
     },
     {
       "id": "cosy-crossword",
@@ -2283,7 +2285,7 @@
         "Alphabet",
         "Numbers 0–9",
         "Numbers 0–19",
-        "Numbers 0–100"
+        "Numbers 0–99"
       ],
       "modes": [
         "solo",
@@ -2297,14 +2299,16 @@
           "Alphabet",
           "Numbers 0–9",
           "Numbers 0–19",
-          "Numbers 0–100"
+          "Numbers 0–99"
         ],
         "bypassesCEFR": true
       },
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "The source offers a Caller role for a group and a Player role for solo play or play with a host. The alphabet and number ranges are explicit practice sets; they are not ordinary CEFR vocabulary bands. Select the range appropriate to the learners and language.",
+      "modeNotes": "Supports a Player role (solo or with a host) and a Caller role for a group. The selectable practice sets are Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–99. The source fetches number words online with numeric fallbacks, so in-person use does not guarantee internet-free operation."
     },
     {
       "id": "etymology-explorer",
