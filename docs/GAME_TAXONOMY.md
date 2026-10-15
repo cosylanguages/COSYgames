@@ -10,6 +10,8 @@ The hub's shared taxonomy lives in `data/game-taxonomy.json`. It is designed to 
 - **Play modes:** solo, pairs, mini-groups, and big groups. **Setting:** online or in person. These are separate dimensions; “in person” means a face-to-face setting, not a guarantee that the game runs without an internet connection.
 - **Special selectors:** some games use their own meaningful practice sets rather than ordinary CEFR selection. Lucky Numbers is explicitly configured for Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–99.
 
+Cosy Crossword source audit: its setup exposes A1, A2, B1, B2, and C1, so the taxonomy does not advertise A0 or C2. It has built-in fallback vocabulary for A1 and B2 and offers English, French, Italian, Russian, and Greek in the language selector. The setup does not expose a player-count control, so solo is the direct configured mode; collaborative classroom use is a facilitation choice.
+
 Lucky Numbers source audit: the actual setup offers Numbers 0–9, Numbers 0–19, and Numbers 0–99 (not 0–100), plus Alphabet. The game supports a Player role for solo play or with a host and a Caller role for a group. Number words are fetched from COSYdata with numeric fallbacks, so an in-person setup is not necessarily offline-capable. Emoji Odyssey offers Guess and Story modes; Guess mode depends on emoji-tagged vocabulary being available for the chosen language and level.
 
 ## Audience and group-size audit
