@@ -702,12 +702,29 @@
         "society-culture"
       ],
       "subcategories": [
-        "Lifestyle",
-        "Food",
-        "Travel",
-        "Technology",
-        "Relationships",
-        "Hypothetical choices"
+        "Describing people",
+        "Personality",
+        "Feelings & emotions",
+        "Daily routines",
+        "Time & dates",
+        "Choices & dilemmas",
+        "Hypothetical situations",
+        "Films & TV",
+        "Music",
+        "Books",
+        "Food & drinks",
+        "Grammar patterns",
+        "Free-time activities",
+        "Sports",
+        "Countries & nationalities",
+        "Cultural differences",
+        "Jobs & professions",
+        "Skills & talents",
+        "Personal belongings",
+        "Describing things",
+        "Holidays",
+        "Transport",
+        "Sightseeing"
       ],
       "modes": [
         "solo",
@@ -739,7 +756,406 @@
         "B2": [
           "B2"
         ]
-      }
+      },
+      "contentSets": [
+        {
+          "id": "appearance",
+          "source": "this-or-that/decks/en/appearance.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Describing people",
+            "Personality"
+          ]
+        },
+        {
+          "id": "character",
+          "source": "this-or-that/decks/en/character.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Personality",
+            "Feelings & emotions"
+          ]
+        },
+        {
+          "id": "daily_habits",
+          "source": "this-or-that/decks/en/daily_habits.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Daily routines",
+            "Time & dates"
+          ]
+        },
+        {
+          "id": "dilemmas",
+          "source": "this-or-that/decks/en/dilemmas.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "opinions-ideas"
+          ],
+          "subcategories": [
+            "Choices & dilemmas",
+            "Hypothetical situations"
+          ]
+        },
+        {
+          "id": "entertainment",
+          "source": "this-or-that/decks/en/entertainment.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "hobbies-entertainment"
+          ],
+          "subcategories": [
+            "Films & TV",
+            "Music",
+            "Books"
+          ]
+        },
+        {
+          "id": "food",
+          "source": "this-or-that/decks/en/food.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Food & drinks"
+          ]
+        },
+        {
+          "id": "grammar",
+          "source": "this-or-that/decks/en/grammar.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "words-grammar"
+          ],
+          "subcategories": [
+            "Grammar patterns"
+          ]
+        },
+        {
+          "id": "hobbies",
+          "source": "this-or-that/decks/en/hobbies.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "hobbies-entertainment"
+          ],
+          "subcategories": [
+            "Free-time activities",
+            "Sports",
+            "Music"
+          ]
+        },
+        {
+          "id": "nationalities",
+          "source": "this-or-that/decks/en/nationalities.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "society-culture"
+          ],
+          "subcategories": [
+            "Countries & nationalities",
+            "Cultural differences"
+          ]
+        },
+        {
+          "id": "professions",
+          "source": "this-or-that/decks/en/professions.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "work-future"
+          ],
+          "subcategories": [
+            "Jobs & professions",
+            "Skills & talents"
+          ]
+        },
+        {
+          "id": "properties",
+          "source": "this-or-that/decks/en/properties.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Personal belongings",
+            "Describing things"
+          ]
+        },
+        {
+          "id": "travel",
+          "source": "this-or-that/decks/en/travel.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "places-travel"
+          ],
+          "subcategories": [
+            "Holidays",
+            "Transport",
+            "Sightseeing"
+          ]
+        }
+      ]
     },
     {
       "id": "action-hero",
