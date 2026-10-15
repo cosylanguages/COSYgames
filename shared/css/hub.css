@@ -360,3 +360,12 @@ html[data-theme="dark"] .taxonomy-filter-note,
 body.theme-dark .taxonomy-filter-note {
   color: var(--ink-soft, #c8d8c9);
 }
+
+.taxonomy-empty-state {
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--border-color, #d8d2c8);
+  border-radius: 0.75rem;
+  color: var(--text-muted, #625f58);
+  line-height: 1.5;
+}
