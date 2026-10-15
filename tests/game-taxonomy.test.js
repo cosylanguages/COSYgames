@@ -26,6 +26,14 @@ test('Shared game taxonomy stays aligned with the hub', () => {
     game.modes.forEach(id => assert.ok(modeIds.has(id), game.id + ' references unknown mode ' + id));
     game.formats.forEach(id => assert.ok(formatIds.has(id), game.id + ' references unknown format ' + id));
     game.levels.forEach(id => assert.ok(taxonomy.cefrLevels.some(level => level.id === id), game.id + ' references unknown CEFR level ' + id));
+    if (game.levelMapping) {
+      Object.entries(game.levelMapping).forEach(([sourceLevel, mappedLevels]) => {
+        assert.ok(game.sourceLevels.includes(sourceLevel), game.id + ' maps unknown source level ' + sourceLevel);
+        mappedLevels.forEach(id => assert.ok(game.levels.includes(id), game.id + ' maps to undeclared CEFR level ' + id));
+      });
+      const mapped = new Set(Object.values(game.levelMapping).flat());
+      game.levels.forEach(id => assert.ok(mapped.has(id), game.id + ' declares CEFR level ' + id + ' without a source-level mapping'));
+    }
     assert.ok(Array.isArray(game.subcategories), game.id + ' needs subcategories');
     assert.ok(html.includes(game.id + '/index.html'), 'hub should link to ' + game.id);
   });
