@@ -32,7 +32,7 @@
     const values = new Set();
     taxonomy.games.forEach(function (game) {
       if (selectedCategory !== 'all' && !game.categories.includes(selectedCategory)) return;
-      (game.subcategories || []).forEach(function (label) { values.add(label); });
+      Object.values(game.subcategoryMappings || {}).flat().forEach(function (label) { values.add(label); });
     });
     subcategorySelect.replaceChildren(new Option('All subtopics', 'all'));
     Array.from(values).sort(function (a, b) { return a.localeCompare(b); }).forEach(function (label) {
@@ -70,7 +70,7 @@
         card.dataset.audiences = game.audiences.join(' ');
         card.dataset.modes = game.modes.join(' ');
         card.dataset.formats = game.formats.join(' ');
-        card.dataset.subcategories = JSON.stringify(game.subcategories || []);
+        card.dataset.subcategories = JSON.stringify(Array.from(new Set(Object.values(game.subcategoryMappings || {}).flat())));
       });
 
       populateSubcategories(taxonomy);
