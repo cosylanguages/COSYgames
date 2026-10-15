@@ -127,6 +127,7 @@
           </div>
         </div>
         <p class="taxonomy-filter-note" id="level-filter-note">Level filters show games with mapped CEFR levels. Some games use difficulty modes or have content that is not yet CEFR-assessed, so they may not appear when a specific level is selected.</p>
+        <p class="taxonomy-empty-state" id="taxonomy-empty-state" role="status" aria-live="polite" hidden>No games match these filters. Try changing or clearing one or more filters.</p>
 
         <!-- SPEAKING & FLUENCY (9 Games) -->
         <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_speaking">Speaking & Fluency</span> <span class="sec-count">9 games</span></div>
@@ -391,6 +392,7 @@
           const state = { players: 'all', skill: 'all' };
 
           function updateFilters() {
+            let totalVisible = 0;
             const sections = [
               { grid: document.getElementById('grid-speaking'), title: document.querySelector('#grid-speaking')?.previousElementSibling },
               { grid: document.getElementById('grid-mystery'), title: document.querySelector('#grid-mystery')?.previousElementSibling },
@@ -430,6 +432,7 @@
                 if (matchesPlayers && matchesSkill && matchesCategory && matchesSubcategory && matchesLevel && matchesAudience && matchesMode && matchesFormat) {
                   card.removeAttribute('hidden');
                   visibleCount++;
+                  totalVisible++;
                 } else {
                   card.setAttribute('hidden', '');
                 }
@@ -449,6 +452,8 @@
                 }
               }
             });
+            const emptyState = document.getElementById('taxonomy-empty-state');
+            if (emptyState) emptyState.hidden = totalVisible > 0;
           }
 
           window.updateGameHubFilters = updateFilters;
