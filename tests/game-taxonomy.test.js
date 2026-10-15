@@ -112,6 +112,13 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.deepEqual(crossword.levels, ['A1', 'A2', 'B1', 'B2', 'C1'], 'Cosy Crossword levels should match explicit setup options');
   assert.ok(crossword.audienceNotes.includes('language selector currently lists'), 'Cosy Crossword should document current language options');
 
+  const etymology = taxonomy.games.find(game => game.id === 'etymology-explorer');
+  assert.deepEqual(etymology.levels, [], 'Etymology Explorer should not present non-CEFR difficulty modes as CEFR levels');
+  assert.equal(etymology.levelAvailability, 'mode-based-not-cefr');
+  assert.deepEqual(etymology.specialSelection.options, ['Easy', 'Medium', 'Hard', 'Language Network', 'Word Pairs']);
+  assert.equal(etymology.specialSelection.bypassesCEFR, true);
+  assert.ok(etymology.audienceNotes.includes('not CEFR-labelled'));
+
   const luckyNumbers = taxonomy.games.find(game => game.id === 'lucky-numbers');
   assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–99']);
   assert.equal(luckyNumbers.specialSelection.bypassesCEFR, true);
