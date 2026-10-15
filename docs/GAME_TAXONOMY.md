@@ -14,14 +14,14 @@ The hub's shared taxonomy lives in `data/game-taxonomy.json`. It is designed to 
 
 1. Add or revise categories in `categories` and use stable, lowercase IDs.
 2. Tag each game with category IDs in `games[].categories`; add narrower prompts/deck tags in `games[].subcategories`.
-3. Keep the hub's filters data-driven. `shared/js/game-taxonomy.js` loads this file and adds category/level metadata to the existing game cards.
+3. Keep the hub's filters data-driven. `shared/js/game-taxonomy.js` loads this file and annotates existing game cards with the metadata used by the selectors.
 4. When content decks gain explicit CEFR or audience metadata, replace broad provisional game-level tags with deck- or prompt-level tags.
 5. Avoid treating age as proficiency: age suitability and language level are separate dimensions.
 
 ## Current implementation
 
-The hub supports combining the existing player and game-family filters with topic and CEFR filters. The first release preserves the existing card layout and game URLs. The new topic and level metadata is intentionally centralized in the JSON file.
+The hub combines the existing player and game-family filters with **topic, subtopic, CEFR level, audience, and play-mode** selectors. The original card layout and game URLs are preserved. The topic and level metadata is centralized in the JSON file; subtopics are populated dynamically from the selected topic.
 
 ## Quality note
 
-Initial tags are a practical starting point based on each game's purpose and visible description. They should be reviewed against actual prompt/deck content before being presented as precise pedagogical guarantees.
+Initial tags are a practical starting point based on each game's purpose and visible description. They should be reviewed against actual prompt/deck content before being presented as precise pedagogical guarantees. Play-mode tags, especially offline use, also need validation against each game's data and network requirements.
