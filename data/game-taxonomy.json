@@ -839,7 +839,6 @@
       "id": "story-chain",
       "name": "Story Chain",
       "levels": [
-        "A0",
         "A1",
         "A2",
         "B1",
@@ -878,13 +877,14 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "The activity is collaborative storytelling with sentence-by-sentence contributions. Audience suitability depends on the selected language, vocabulary pool, and facilitator support; the interface does not provide age-specific content filtering.",
+      "modeNotes": "Collaborative chain-building naturally supports pairs and groups. Solo use may be possible for practice, but the game description frames it as collaborative rather than a verified solo-first activity."
     },
     {
       "id": "story-weaver",
       "name": "Story Weaver",
       "levels": [
-        "A0",
         "A1",
         "A2",
         "B1",
@@ -925,18 +925,20 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "The built-in grammar curriculum begins at A1 and progresses through higher levels. Story themes and examples should still be previewed for the intended age group; the interface is English-only.",
+      "modeNotes": "The curriculum provides prompts and grammar cues for composing stories; pairs and groups can share the storytelling task, but the setup does not enforce a particular group size."
     },
     {
       "id": "hot-seat",
       "name": "Hot Seat",
       "levels": [
-        "A0",
         "A1",
         "A2",
         "B1",
         "B2",
-        "C1"
+        "C1",
+        "C2"
       ],
       "levelAvailability": "vocabulary-dependent",
       "audiences": [
@@ -971,7 +973,9 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "The setup describes one player guessing while others give clues. Preview vocabulary and definitions for the intended age group; proficiency selection is not an age-suitability guarantee.",
+      "modeNotes": "The rules require at least a guesser and a clue-giver, with others able to watch or contribute; pairs and larger groups fit the described roles. The game uses a 60-second timer and 15 rounds."
     },
     {
       "id": "this-or-that",
