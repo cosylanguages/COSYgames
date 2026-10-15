@@ -103,7 +103,8 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.deepEqual(battle.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], 'Battle of Wits levels should match explicit setup options');
   assert.ok(battle.modeNotes.includes('Team A and Team B'), 'Battle of Wits should document team play');
   const opinionArena = taxonomy.games.find(game => game.id === 'opinion-arena');
-  assert.deepEqual(opinionArena.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], 'Opinion Arena levels should match explicit setup options');
+  assert.deepEqual(opinionArena.levels, ['B1', 'B2', 'C1'], 'Opinion Arena should advertise only levels with explicit source mappings');
+  assert.ok(opinionArena.audienceNotes.includes('setup selector offers A1–C2'), 'Opinion Arena should explain the difference between selector options and mapped content');
   const lastLetter = taxonomy.games.find(game => game.id === 'last-letter');
   assert.deepEqual(lastLetter.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], 'Last Letter levels should match explicit setup options');
 
