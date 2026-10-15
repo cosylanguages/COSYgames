@@ -8,7 +8,9 @@ The hub's shared taxonomy lives in `data/game-taxonomy.json`. It is designed to 
 - **CEFR level:** A0–C2, with A0 representing supported pre-A1 practice. A game's listed levels are initial discovery metadata, not a guarantee that every prompt or deck supports that level.
 - **Audience:** content suitability guidance, not a proxy for language proficiency or a hard age gate.
 - **Play modes:** solo, pairs, mini-groups, and big groups. **Setting:** online or in person. These are separate dimensions; “in person” means a face-to-face setting, not a guarantee that the game runs without an internet connection.
-- **Special selectors:** some games use their own meaningful practice sets rather than ordinary CEFR selection. Lucky Numbers is explicitly configured for Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–100.
+- **Special selectors:** some games use their own meaningful practice sets rather than ordinary CEFR selection. Lucky Numbers is explicitly configured for Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–99.
+
+Lucky Numbers source audit: the actual setup offers Numbers 0–9, Numbers 0–19, and Numbers 0–99 (not 0–100), plus Alphabet. The game supports a Player role for solo play or with a host and a Caller role for a group. Number words are fetched from COSYdata with numeric fallbacks, so an in-person setup is not necessarily offline-capable. Emoji Odyssey offers Guess and Story modes; Guess mode depends on emoji-tagged vocabulary being available for the chosen language and level.
 
 ## Audience and group-size audit
 
