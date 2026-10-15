@@ -2223,13 +2223,11 @@
       "id": "cosy-crossword",
       "name": "Cosy Crossword",
       "levels": [
-        "A0",
         "A1",
         "A2",
         "B1",
         "B2",
-        "C1",
-        "C2"
+        "C1"
       ],
       "levelAvailability": "vocabulary-dependent",
       "audiences": [
@@ -2261,7 +2259,9 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "The crossword uses dynamically generated CEFR vocabulary, with built-in fallback word lists specifically shown for A1 and B2. Clue difficulty and grid size vary by level; preview generated clues and vocabulary for the intended age group. The language selector currently lists English, French, Italian, Russian, and Greek.",
+      "modeNotes": "The setup starts a crossword puzzle without a player-count selector. The taxonomy records solo as the direct setup mode; collaborative solving may be facilitated by a teacher but is not an explicitly configured game mode."
     },
     {
       "id": "lucky-numbers",
