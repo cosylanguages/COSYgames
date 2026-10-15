@@ -88,5 +88,7 @@
       [categorySelect, subcategorySelect, levelSelect, audienceSelect, modeSelect, formatSelect].forEach(function (select) {
         select.disabled = true;
       });
+      const loadError = document.getElementById('taxonomy-load-error');
+      if (loadError) loadError.hidden = false;
     });
 })();
