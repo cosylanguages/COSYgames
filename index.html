@@ -400,7 +400,8 @@
                 const sAttr = card.getAttribute('data-skill') || '';
 
                 const categories = (card.dataset.categories || '').split(/\s+/).filter(Boolean);
-                const subcategories = (card.dataset.subcategories || '').split(/\s+/).filter(Boolean);
+                const subcategories = JSON.parse(card.dataset.subcategories || '[]');
+                const modes = (card.dataset.modes || '').split(/\s+/).filter(Boolean);
                 const levels = (card.dataset.levels || '').split(/\s+/).filter(Boolean);
                 const audiences = (card.dataset.audiences || '').split(/\s+/).filter(Boolean);
                 const matchesPlayers = state.players === 'all' || pAttr.includes(state.players);
@@ -412,9 +413,11 @@
                 const matchesCategory = selectedCategory === 'all' || categories.includes(selectedCategory);
                 const matchesSubcategory = selectedSubcategory === 'all' || subcategories.includes(selectedSubcategory);
                 const matchesLevel = selectedLevel === 'all' || levels.includes(selectedLevel);
+                const selectedMode = document.getElementById('filter-mode')?.value || 'all';
                 const matchesAudience = selectedAudience === 'all' || audiences.includes(selectedAudience);
+                const matchesMode = selectedMode === 'all' || modes.includes(selectedMode);
 
-                if (matchesPlayers && matchesSkill && matchesCategory && matchesSubcategory && matchesLevel && matchesAudience) {
+                if (matchesPlayers && matchesSkill && matchesCategory && matchesSubcategory && matchesLevel && matchesAudience && matchesMode) {
                   card.removeAttribute('hidden');
                   visibleCount++;
                 } else {
