@@ -64,6 +64,15 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(questions.contentSets.every(set => set.levelBasis === 'not-assessed' && !set.levels), '100 Questions should not imply unverified CEFR levels for its progressive stages');
   assert.ok(questions.contentSets.every(set => fs.existsSync(path.join(root, set.source))), '100 Questions content-set sources should exist');
 
+  const fluency = taxonomy.games.find(game => game.id === 'fluency-flow');
+  assert.equal(fluency.contentSets.length, 5, 'Fluency Flow should group its English prompts by five source level bands');
+  assert.ok(fluency.contentSets.every(set => set.sourceLevel && set.levels && set.source === 'data/en/fluency.js'), 'Fluency Flow content sets should preserve source level bands and source file');
+
+  const wordLinker = taxonomy.games.find(game => game.id === 'word-linker');
+  assert.equal(wordLinker.contentSets.length, 3, 'Word Linker should distinguish unlabelled core puzzles and explicitly level-labelled puzzles');
+  assert.ok(wordLinker.contentSets.some(set => set.levelBasis === 'not-assessed'), 'Word Linker unlabelled puzzles must not be assigned guessed CEFR levels');
+  assert.ok(wordLinker.contentSets.filter(set => set.levels).every(set => set.sourceLevel), 'Word Linker CEFR tags should preserve source level labels');
+
   const luckyNumbers = taxonomy.games.find(game => game.id === 'lucky-numbers');
   assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–100']);
   assert.equal(luckyNumbers.specialSelection.bypassesCEFR, true);
