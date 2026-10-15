@@ -460,6 +460,7 @@
       "id": "battle-of-wits",
       "name": "Battle of Wits",
       "levels": [
+        "A1",
         "A2",
         "B1",
         "B2",
@@ -497,15 +498,20 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "A timed team-versus-team buzzer game with a short three-round setup. Review the selected prompts and vocabulary for the learners; a CEFR selector is not a guarantee that every language has equivalent content at each level.",
+      "modeNotes": "The game explicitly scores Team A and Team B, so it is best represented as team play for a group rather than solo or a simple pair activity. The setup does not enforce participant counts."
     },
     {
       "id": "opinion-arena",
       "name": "Opinion Arena",
       "levels": [
+        "A1",
+        "A2",
         "B1",
         "B2",
-        "C1"
+        "C1",
+        "C2"
       ],
       "levelAvailability": "prompt-tagged",
       "audiences": [
@@ -557,7 +563,9 @@
         "advanced": [
           "C1"
         ]
-      }
+      },
+      "audienceNotes": "The activity supports expressing and weighing opinions with phrase banks. Review topic prompts for age appropriateness and sensitivity; selectable levels are setup choices rather than independent assessment of debate readiness.",
+      "modeNotes": "The arena format is designed around contrasting positions and a shared debate meter. It can be facilitated with pairs or groups, but the setup does not enforce group size or guarantee solo-first play."
     },
     {
       "id": "critics-corner",
@@ -1510,7 +1518,6 @@
       ],
       "levelMapping": {
         "starter": [
-          "A0",
           "A1"
         ],
         "elementary": [
@@ -2134,11 +2141,12 @@
       "id": "last-letter",
       "name": "Last Letter",
       "levels": [
-        "A0",
         "A1",
         "A2",
         "B1",
-        "B2"
+        "B2",
+        "C1",
+        "C2"
       ],
       "levelAvailability": "vocabulary-dependent",
       "audiences": [
@@ -2171,7 +2179,9 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "The setup provides A1–C2 level choices and relies on vocabulary available for the selected language and level. Consider spelling conventions and whether the target language's word forms make last-letter chaining suitable.",
+      "modeNotes": "The game supports turn-based word chaining, which can be used individually or with partners/groups, but the setup does not configure a player count. Treat larger-group use as facilitation rather than a guaranteed built-in mode."
     },
     {
       "id": "emoji-odyssey",
