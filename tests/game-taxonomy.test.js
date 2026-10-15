@@ -156,6 +156,8 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(filterScript.includes("if (loadError) loadError.hidden = false;"), 'taxonomy load failure should reveal the fallback notice');
   assert.ok(html.includes('if (emptyState) emptyState.hidden = totalVisible > 0;'), 'filter logic should show the no-results message only when no games match');
   assert.ok(filterScript.includes('Object.values(game.subcategoryMappings || {}).flat()'), 'subtopic choices should use canonical mappings, not game-specific source labels');
+  assert.ok(filterScript.includes('const allowedSubtopics = new Set();'), 'subtopic choices should be constrained to canonical topics');
+  assert.ok(filterScript.includes("category.id === selectedCategory"), 'a selected topic should only offer subtopics owned by that topic');
   assert.ok(filterScript.includes('card.dataset.subcategories = JSON.stringify(Array.from(new Set(Object.values(game.subcategoryMappings || {}).flat())))'), 'game cards should be tagged with deduplicated canonical subtopics');
   assert.ok(filterScript.includes('data/game-taxonomy.json'), 'filter logic should load the shared taxonomy');
   assert.ok(html.includes('matchesCategory && matchesSubcategory && matchesLevel && matchesAudience && matchesMode && matchesFormat'), 'all taxonomy selectors should combine in result filtering');
