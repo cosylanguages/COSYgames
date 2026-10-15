@@ -280,10 +280,9 @@
         "A2",
         "B1",
         "B2",
-        "C1",
-        "C2"
+        "C1"
       ],
-      "levelAvailability": "content-dependent",
+      "levelAvailability": "prompt-tagged",
       "audiences": [
         "young-learners",
         "children",
@@ -322,7 +321,33 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "sourceLevels": [
+        "starter",
+        "elementary",
+        "intermediate",
+        "upper_intermediate",
+        "advanced"
+      ],
+      "levelMapping": {
+        "starter": [
+          "A0",
+          "A1"
+        ],
+        "elementary": [
+          "A1",
+          "A2"
+        ],
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ],
+        "advanced": [
+          "C1"
+        ]
+      }
     },
     {
       "id": "battle-of-wits",
@@ -371,14 +396,11 @@
       "id": "opinion-arena",
       "name": "Opinion Arena",
       "levels": [
-        "A1",
-        "A2",
         "B1",
         "B2",
-        "C1",
-        "C2"
+        "C1"
       ],
-      "levelAvailability": "content-dependent",
+      "levelAvailability": "prompt-tagged",
       "audiences": [
         "children",
         "teens",
@@ -412,7 +434,23 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "sourceLevels": [
+        "intermediate",
+        "upper_intermediate",
+        "advanced"
+      ],
+      "levelMapping": {
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ],
+        "advanced": [
+          "C1"
+        ]
+      }
     },
     {
       "id": "critics-corner",
@@ -692,9 +730,11 @@
         "A1",
         "A2",
         "B1",
-        "B2"
+        "B2",
+        "C1",
+        "C2"
       ],
-      "levelAvailability": "vocabulary-dependent",
+      "levelAvailability": "bucketed-word-lists",
       "audiences": [
         "children",
         "teens",
@@ -724,7 +764,37 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "sourceLevels": [
+        "starter",
+        "elementary",
+        "intermediate",
+        "upper_intermediate",
+        "advanced",
+        "proficiency"
+      ],
+      "levelMapping": {
+        "starter": [
+          "A0",
+          "A1"
+        ],
+        "elementary": [
+          "A1",
+          "A2"
+        ],
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ],
+        "advanced": [
+          "C1"
+        ],
+        "proficiency": [
+          "C2"
+        ]
+      }
     },
     {
       "id": "identity-mystery",
@@ -734,10 +804,9 @@
         "A2",
         "B1",
         "B2",
-        "C1",
-        "C2"
+        "C1"
       ],
-      "levelAvailability": "content-dependent",
+      "levelAvailability": "prompt-tagged",
       "audiences": [
         "children",
         "teens",
@@ -769,7 +838,28 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "sourceLevels": [
+        "elementary",
+        "intermediate",
+        "upper_intermediate",
+        "advanced"
+      ],
+      "levelMapping": {
+        "elementary": [
+          "A1",
+          "A2"
+        ],
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ],
+        "advanced": [
+          "C1"
+        ]
+      }
     },
     {
       "id": "object-quest",
@@ -859,14 +949,10 @@
       "id": "word-linker",
       "name": "Word Linker",
       "levels": [
-        "A0",
-        "A1",
-        "A2",
         "B1",
-        "B2",
-        "C1"
+        "B2"
       ],
-      "levelAvailability": "vocabulary-dependent",
+      "levelAvailability": "prompt-tagged",
       "audiences": [
         "children",
         "teens",
@@ -899,7 +985,19 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "sourceLevels": [
+        "intermediate",
+        "upper_intermediate"
+      ],
+      "levelMapping": {
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ]
+      }
     },
     {
       "id": "last-letter",
