@@ -129,6 +129,7 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   }
 
   const luckyNumbers = taxonomy.games.find(game => game.id === 'lucky-numbers');
+  assert.deepEqual(luckyNumbers.levels, [], 'Lucky Numbers practice sets should not be presented as CEFR-assessed');
   assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–99']);
   assert.equal(luckyNumbers.specialSelection.bypassesCEFR, true);
 
