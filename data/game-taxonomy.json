@@ -300,7 +300,8 @@
         "nature-world",
         "society-culture",
         "opinions-ideas",
-        "real-life-communication"
+        "real-life-communication",
+        "stories-mystery"
       ],
       "subcategories": [
         "Everyday topics",
@@ -487,6 +488,7 @@
           "Environment"
         ],
         "Personal stories": [
+          "Story prompts",
           "Family & friends"
         ],
         "Random mix": []
@@ -588,7 +590,8 @@
         "people-feelings",
         "society-culture",
         "learning-knowledge",
-        "nature-world"
+        "nature-world",
+        "work-future"
       ],
       "subcategories": [
         "Lifestyle",
@@ -637,7 +640,8 @@
           "Free-time activities"
         ],
         "School & work": [
-          "School subjects"
+          "School subjects",
+          "Workplace vocabulary"
         ],
         "Technology": [
           "Technology in society",
@@ -674,7 +678,8 @@
         "society-culture",
         "people-feelings",
         "learning-knowledge",
-        "stories-mystery"
+        "stories-mystery",
+        "hobbies-entertainment"
       ],
       "subcategories": [
         "Famous quotes",
@@ -704,6 +709,7 @@
           "Ethics"
         ],
         "Literature": [
+          "Books",
           "Story prompts"
         ],
         "Society": [
@@ -1068,7 +1074,8 @@
         "places-travel",
         "people-feelings",
         "hobbies-entertainment",
-        "work-future"
+        "work-future",
+        "words-grammar"
       ],
       "subcategories": [
         "Everyday vocabulary",
@@ -1091,7 +1098,9 @@
       "audienceNotes": "The built-in grammar curriculum begins at A1 and progresses through higher levels. Story themes and examples should still be previewed for the intended age group; the interface is English-only.",
       "modeNotes": "The curriculum provides prompts and grammar cues for composing stories; pairs and groups can share the storytelling task, but the setup does not enforce a particular group size.",
       "subcategoryMappings": {
-        "Everyday vocabulary": [],
+        "Everyday vocabulary": [
+          "Vocabulary themes"
+        ],
         "Travel": [
           "Holidays",
           "Transport"
@@ -1206,7 +1215,9 @@
         "places-travel",
         "people-feelings",
         "opinions-ideas",
-        "society-culture"
+        "society-culture",
+        "words-grammar",
+        "work-future"
       ],
       "subcategories": [
         "Describing people",
@@ -1699,7 +1710,9 @@
         "Food & drinks": [
           "Food & drinks"
         ],
-        "Grammar patterns": [],
+        "Grammar patterns": [
+          "Grammar patterns"
+        ],
         "Free-time activities": [
           "Free-time activities"
         ],
@@ -1712,12 +1725,18 @@
         "Cultural differences": [
           "Cultural differences"
         ],
-        "Jobs & professions": [],
-        "Skills & talents": [],
+        "Jobs & professions": [
+          "Jobs & professions"
+        ],
+        "Skills & talents": [
+          "Skills & talents"
+        ],
         "Personal belongings": [
           "Personal belongings"
         ],
-        "Describing things": [],
+        "Describing things": [
+          "Adjectives"
+        ],
         "Holidays": [
           "Holidays"
         ],
@@ -1753,7 +1772,8 @@
         "nature-world",
         "work-future",
         "real-life-communication",
-        "words-grammar"
+        "words-grammar",
+        "stories-mystery"
       ],
       "subcategories": [
         "Everyday actions",
@@ -1810,7 +1830,9 @@
         "Sports": [
           "Sports"
         ],
-        "Adventure": [],
+        "Adventure": [
+          "Adventure"
+        ],
         "Work": [
           "Workplace vocabulary",
           "Jobs & professions"
@@ -1936,7 +1958,9 @@
         "places-travel",
         "hobbies-entertainment",
         "work-future",
-        "words-grammar"
+        "words-grammar",
+        "society-culture",
+        "learning-knowledge"
       ],
       "subcategories": [
         "Household objects",
@@ -1978,7 +2002,10 @@
           "Holidays",
           "Transport"
         ],
-        "Technology": []
+        "Technology": [
+          "Technology in society",
+          "Inventions"
+        ]
       }
     },
     {
@@ -2005,7 +2032,8 @@
         "places-travel",
         "learning-knowledge",
         "work-future",
-        "nature-world"
+        "nature-world",
+        "real-life-communication"
       ],
       "subcategories": [
         "Airports",
@@ -2388,8 +2416,13 @@
         "Clothes & accessories": [
           "Clothes & accessories"
         ],
-        "Health & services": [],
-        "Making requests": [],
+        "Health & services": [
+          "Making requests",
+          "Offering help"
+        ],
+        "Making requests": [
+          "Making requests"
+        ],
         "Shopping": [
           "Shopping"
         ],
