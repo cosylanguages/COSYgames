@@ -12,7 +12,7 @@ The hub's shared taxonomy lives in `data/game-taxonomy.json`. It is designed to 
 
 ## Content-set audit
 
-The 100 Questions deck audit records all eight current decks (Civic, Family, Friends, Interview, Myself, Netflix, Student, Teacher) with topic and subtopic tags grounded in their content and source filenames. Their source stages are thematic/progressive rather than CEFR assessments, so these deck entries intentionally do not claim individual CEFR levels. The game's overall level list remains discovery metadata and should not be read as a verified level for every deck.
+The 100 Questions deck audit records all eight current decks (Civic, Family, Friends, Interview, Myself, Netflix, Student, Teacher) with topic and subtopic tags grounded in their content and source filenames. Their source stages are thematic/progressive rather than CEFR assessments, so these deck entries intentionally do not claim individual CEFR levels. Fluency Flow's English prompts are grouped by the five source level bands in its data file, with the existing approximate mappings preserved. Word Linker's explicitly labelled English puzzles retain their source level bands; puzzles without a level field are marked not assessed rather than assigned a guessed CEFR level. These source-level audits currently cover English data, not every language dataset.
 
 ## Updating the taxonomy
 
