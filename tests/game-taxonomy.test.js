@@ -146,6 +146,8 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(!html.includes('</script>\\n    <div id="toast"'), 'hub markup should not contain a literal escaped newline after the taxonomy script');
   assert.ok(html.includes('Level filters show games with mapped CEFR levels'), 'hub should explain that CEFR filtering only includes mapped games');
   assert.ok(html.includes('id="taxonomy-empty-state"'), 'hub should provide a no-results message for combined filters');
+  assert.ok(html.includes('id="taxonomy-load-error"'), 'hub should provide a fallback notice if taxonomy filters fail to load');
+  assert.ok(filterScript.includes("if (loadError) loadError.hidden = false;"), 'taxonomy load failure should reveal the fallback notice');
   assert.ok(html.includes('if (emptyState) emptyState.hidden = totalVisible > 0;'), 'filter logic should show the no-results message only when no games match');
   assert.ok(filterScript.includes('data/game-taxonomy.json'), 'filter logic should load the shared taxonomy');
   assert.ok(html.includes('matchesCategory && matchesSubcategory && matchesLevel && matchesAudience && matchesMode && matchesFormat'), 'all taxonomy selectors should combine in result filtering');
