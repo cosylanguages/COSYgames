@@ -35,8 +35,25 @@ test('Shared game taxonomy stays aligned with the hub', () => {
       game.levels.forEach(id => assert.ok(mapped.has(id), game.id + ' declares CEFR level ' + id + ' without a source-level mapping'));
     }
     assert.ok(Array.isArray(game.subcategories), game.id + ' needs subcategories');
+    if (game.contentSets) {
+      game.contentSets.forEach(set => {
+        assert.ok(set.id, game.id + ' content set needs an ID');
+        assert.ok(Array.isArray(set.levels) && set.levels.length, game.id + '/' + set.id + ' needs level tags');
+        set.levels.forEach(id => assert.ok(game.levels.includes(id), game.id + '/' + set.id + ' has undeclared level ' + id));
+        set.categories.forEach(id => assert.ok(categoryIds.has(id), game.id + '/' + set.id + ' references unknown category ' + id));
+        if (set.source) assert.ok(fs.existsSync(path.join(root, set.source)), game.id + '/' + set.id + ' source file does not exist: ' + set.source);
+      });
+    }
     assert.ok(html.includes(game.id + '/index.html'), 'hub should link to ' + game.id);
   });
+
+  const sceneMatch = taxonomy.games.find(game => game.id === 'scene-match');
+  assert.equal(sceneMatch.contentSets.length, 24, 'Scene Match should tag every current scene');
+  assert.ok(sceneMatch.contentSets.every(set => fs.existsSync(path.join(root, 'data', 'scenes', set.id + '.js'))), 'Scene Match content-set IDs should resolve to scene files');
+
+  const thisOrThat = taxonomy.games.find(game => game.id === 'this-or-that');
+  assert.equal(thisOrThat.contentSets.length, 12, 'This or That should tag all twelve English decks');
+  assert.ok(thisOrThat.contentSets.every(set => set.levelBuckets && set.levelBuckets['A0-A1']), 'This or That decks should preserve their source CEFR buckets');
 
   const luckyNumbers = taxonomy.games.find(game => game.id === 'lucky-numbers');
   assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–100']);
