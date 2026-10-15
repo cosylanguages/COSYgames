@@ -97,6 +97,16 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(taxonomy.games.find(game => game.id === 'identity-mystery').modeNotes.includes('Do not assume solo play'), 'Identity Mystery should not overstate solo support');
   assert.ok(taxonomy.games.find(game => game.id === 'object-quest').modeNotes.includes('does not by itself guarantee offline'), 'Object Quest should distinguish in-person use from offline capability');
 
+  const actionHero = taxonomy.games.find(game => game.id === 'action-hero');
+  assert.deepEqual(actionHero.levelMapping.starter, ['A1'], 'Action Hero Starter mapping should match its visible setup label');
+  const battle = taxonomy.games.find(game => game.id === 'battle-of-wits');
+  assert.deepEqual(battle.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], 'Battle of Wits levels should match explicit setup options');
+  assert.ok(battle.modeNotes.includes('Team A and Team B'), 'Battle of Wits should document team play');
+  const opinionArena = taxonomy.games.find(game => game.id === 'opinion-arena');
+  assert.deepEqual(opinionArena.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], 'Opinion Arena levels should match explicit setup options');
+  const lastLetter = taxonomy.games.find(game => game.id === 'last-letter');
+  assert.deepEqual(lastLetter.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], 'Last Letter levels should match explicit setup options');
+
   const crossword = taxonomy.games.find(game => game.id === 'cosy-crossword');
   assert.deepEqual(crossword.levels, ['A1', 'A2', 'B1', 'B2', 'C1'], 'Cosy Crossword levels should match explicit setup options');
   assert.ok(crossword.audienceNotes.includes('language selector currently lists'), 'Cosy Crossword should document current language options');
