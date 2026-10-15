@@ -8,28 +8,12 @@
   const levelSelect = document.getElementById('filter-level');
   const audienceSelect = document.getElementById('filter-audience');
   const modeSelect = document.getElementById('filter-mode');
-  if (!categorySelect || !subcategorySelect || !levelSelect || !audienceSelect || !modeSelect) return;
-
-  const labels = {
-    'young-learners': 'Young learners',
-    children: 'Children',
-    teens: 'Teenagers',
-    adults: 'Adults',
-    'mixed-ages': 'Mixed ages',
-    solo: 'Solo',
-    pairs: 'Pairs',
-    'mini-group': 'Mini group',
-    'big-group': 'Big group',
-    online: 'Online',
-    offline: 'Offline'
-  };
+  const formatSelect = document.getElementById('filter-format');
+  if (!categorySelect || !subcategorySelect || !levelSelect || !audienceSelect || !modeSelect || !formatSelect) return;
 
   function addOptions(select, items, getValue, getLabel) {
     items.forEach(function (item) {
-      const option = document.createElement('option');
-      option.value = getValue(item);
-      option.textContent = getLabel(item);
-      select.appendChild(option);
+      select.add(new Option(getLabel(item), getValue(item)));
     });
   }
 
@@ -42,7 +26,7 @@
     if (active) active.click();
   }
 
-  function populateSubcategories(taxonomy, gameById) {
+  function populateSubcategories(taxonomy) {
     const selectedCategory = categorySelect.value;
     const previous = subcategorySelect.value;
     const values = new Set();
@@ -55,11 +39,9 @@
       subcategorySelect.add(new Option(label, label));
     });
     subcategorySelect.disabled = values.size === 0;
-    if (Array.from(subcategorySelect.options).some(function (option) { return option.value === previous; })) {
-      subcategorySelect.value = previous;
-    } else {
-      subcategorySelect.value = 'all';
-    }
+    subcategorySelect.value = Array.from(subcategorySelect.options).some(function (option) {
+      return option.value === previous;
+    }) ? previous : 'all';
   }
 
   fetch(taxonomyUrl)
@@ -72,6 +54,7 @@
       addOptions(levelSelect, taxonomy.cefrLevels, function (item) { return item.id; }, function (item) { return item.label; });
       addOptions(audienceSelect, taxonomy.audiences, function (item) { return item.id; }, function (item) { return item.label; });
       addOptions(modeSelect, taxonomy.playModes, function (item) { return item.id; }, function (item) { return item.label; });
+      addOptions(formatSelect, taxonomy.playFormats, function (item) { return item.id; }, function (item) { return item.label; });
 
       const byId = new Map(taxonomy.games.map(function (game) { return [game.id, game]; }));
       document.querySelectorAll('.gc').forEach(function (card) {
@@ -86,22 +69,23 @@
         card.dataset.levels = game.levels.join(' ');
         card.dataset.audiences = game.audiences.join(' ');
         card.dataset.modes = game.modes.join(' ');
+        card.dataset.formats = game.formats.join(' ');
         card.dataset.subcategories = JSON.stringify(game.subcategories || []);
       });
 
-      populateSubcategories(taxonomy, byId);
+      populateSubcategories(taxonomy);
       categorySelect.addEventListener('change', function () {
-        populateSubcategories(taxonomy, byId);
+        populateSubcategories(taxonomy);
         refreshExistingFilters();
       });
-      [subcategorySelect, levelSelect, audienceSelect, modeSelect].forEach(function (select) {
+      [subcategorySelect, levelSelect, audienceSelect, modeSelect, formatSelect].forEach(function (select) {
         select.addEventListener('change', refreshExistingFilters);
       });
       refreshExistingFilters();
     })
     .catch(function (error) {
       console.error('[COSYgames] Taxonomy filters unavailable:', error);
-      [categorySelect, subcategorySelect, levelSelect, audienceSelect, modeSelect].forEach(function (select) {
+      [categorySelect, subcategorySelect, levelSelect, audienceSelect, modeSelect, formatSelect].forEach(function (select) {
         select.disabled = true;
       });
     });
