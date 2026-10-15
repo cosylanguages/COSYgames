@@ -347,7 +347,114 @@
         "advanced": [
           "C1"
         ]
-      }
+      },
+      "contentSets": [
+        {
+          "id": "starter",
+          "name": "Starter conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "starter",
+          "levels": [
+            "A0",
+            "A1"
+          ],
+          "categories": [
+            "everyday-life",
+            "people-feelings",
+            "nature-world"
+          ],
+          "subcategories": [
+            "Daily routines",
+            "Family & friends",
+            "Weather & seasons",
+            "Animals & pets"
+          ]
+        },
+        {
+          "id": "elementary",
+          "name": "Elementary conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "elementary",
+          "levels": [
+            "A1",
+            "A2"
+          ],
+          "categories": [
+            "everyday-life",
+            "places-travel",
+            "hobbies-entertainment"
+          ],
+          "subcategories": [
+            "Daily routines",
+            "Food & drinks",
+            "Holidays",
+            "Transport",
+            "Free-time activities"
+          ]
+        },
+        {
+          "id": "intermediate",
+          "name": "Intermediate conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "intermediate",
+          "levels": [
+            "B1"
+          ],
+          "categories": [
+            "people-feelings",
+            "hobbies-entertainment",
+            "places-travel",
+            "everyday-life",
+            "society-culture"
+          ],
+          "subcategories": [
+            "Personal stories",
+            "Skills & talents",
+            "Holidays",
+            "Technology in society"
+          ]
+        },
+        {
+          "id": "upper-intermediate",
+          "name": "Upper-intermediate conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "upper_intermediate",
+          "levels": [
+            "B2"
+          ],
+          "categories": [
+            "opinions-ideas",
+            "hobbies-entertainment",
+            "places-travel",
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Hypothetical situations",
+            "Films & TV",
+            "Travel",
+            "Goals & ambitions"
+          ]
+        },
+        {
+          "id": "advanced",
+          "name": "Advanced conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "advanced",
+          "levels": [
+            "C1"
+          ],
+          "categories": [
+            "opinions-ideas",
+            "society-culture",
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Philosophical questions",
+            "Cultural differences",
+            "Goals & ambitions"
+          ]
+        }
+      ]
     },
     {
       "id": "battle-of-wits",
@@ -1900,7 +2007,69 @@
         "upper_intermediate": [
           "B2"
         ]
-      }
+      },
+      "contentSets": [
+        {
+          "id": "starter-core",
+          "name": "Core concrete vocabulary links",
+          "source": "data/en/wordlinker.js",
+          "sourceLevel": "unspecified",
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "Most built-in English puzzles do not carry an explicit level field; do not assume they all belong to a CEFR band.",
+          "categories": [
+            "everyday-life",
+            "nature-world",
+            "places-travel",
+            "learning-knowledge"
+          ],
+          "subcategories": [
+            "Food & drinks",
+            "Animals & pets",
+            "Home & household",
+            "Countries & nationalities",
+            "Numbers",
+            "Colours & shapes",
+            "Jobs & professions"
+          ]
+        },
+        {
+          "id": "intermediate",
+          "name": "Intermediate labelled word links",
+          "source": "data/en/wordlinker.js",
+          "sourceLevel": "intermediate",
+          "levels": [
+            "B1"
+          ],
+          "categories": [
+            "hobbies-entertainment",
+            "people-feelings",
+            "words-grammar"
+          ],
+          "subcategories": [
+            "Music",
+            "Books",
+            "Synonyms & antonyms",
+            "Adjectives"
+          ]
+        },
+        {
+          "id": "upper-intermediate",
+          "name": "Upper-intermediate labelled word links",
+          "source": "data/en/wordlinker.js",
+          "sourceLevel": "upper_intermediate",
+          "levels": [
+            "B2"
+          ],
+          "categories": [
+            "words-grammar",
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Synonyms & antonyms",
+            "Adjectives"
+          ]
+        }
+      ]
     },
     {
       "id": "last-letter",
