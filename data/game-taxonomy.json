@@ -76,14 +76,6 @@
     {
       "id": "big-group",
       "label": "Big groups"
-    },
-    {
-      "id": "online",
-      "label": "Online"
-    },
-    {
-      "id": "offline",
-      "label": "Offline"
     }
   ],
   "categories": [
@@ -325,9 +317,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -366,9 +360,11 @@
       "modes": [
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -411,9 +407,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -448,9 +446,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -493,9 +493,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -536,9 +538,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -581,9 +585,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -625,9 +631,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -669,9 +677,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -709,9 +719,11 @@
       "modes": [
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -752,9 +764,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -794,9 +808,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -832,9 +848,11 @@
         "Nature"
       ],
       "modes": [
-        "solo",
+        "solo"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -876,9 +894,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -917,9 +937,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -959,9 +981,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -1001,9 +1025,11 @@
         "Mixed practice"
       ],
       "modes": [
-        "solo",
+        "solo"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -1034,9 +1060,7 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
-        "online",
-        "offline"
+        "big-group"
       ],
       "specialSelection": {
         "label": "Practice set",
@@ -1047,7 +1071,11 @@
           "Numbers 0–100"
         ],
         "bypassesCEFR": true
-      }
+      },
+      "formats": [
+        "online",
+        "in-person"
+      ]
     },
     {
       "id": "etymology-explorer",
@@ -1079,9 +1107,11 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
     },
     {
@@ -1116,10 +1146,22 @@
         "solo",
         "pairs",
         "mini-group",
-        "big-group",
+        "big-group"
+      ],
+      "formats": [
         "online",
-        "offline"
+        "in-person"
       ]
+    }
+  ],
+  "playFormats": [
+    {
+      "id": "online",
+      "label": "Online"
+    },
+    {
+      "id": "in-person",
+      "label": "In person"
     }
   ]
 }
