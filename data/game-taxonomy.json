@@ -1462,7 +1462,6 @@
       "id": "action-hero",
       "name": "Action Hero",
       "levels": [
-        "A0",
         "A1",
         "A2",
         "B1",
@@ -1530,7 +1529,9 @@
         "proficiency": [
           "C2"
         ]
-      }
+      },
+      "audienceNotes": "The activity asks players to act, mime, describe, or use sound effects for teammates to guess. The interface has no age-specific content filter; review vocabulary and acting prompts for the learners and group context. Movement can be adapted for accessibility.",
+      "modeNotes": "Team-based guessing is the described format, with a player acting and teammates guessing. Pairs and larger groups are plausible; the setup does not enforce a specific minimum or maximum player count."
     },
     {
       "id": "identity-mystery",
@@ -1540,7 +1541,8 @@
         "A2",
         "B1",
         "B2",
-        "C1"
+        "C1",
+        "C2"
       ],
       "levelAvailability": "prompt-tagged",
       "audiences": [
@@ -1595,17 +1597,20 @@
         "advanced": [
           "C1"
         ]
-      }
+      },
+      "audienceNotes": "The game uses hidden identities across famous people, jobs, and nationalities. Suitability depends on the chosen category and language data; review culturally specific names and nationality-related content for the group. No age-specific filter is provided.",
+      "modeNotes": "The player asks or records descriptive clues/questions to uncover a hidden identity. The UI does not set a fixed group size; pairs and groups can use it as a collaborative guessing activity. Do not assume solo play is a distinct supported mode."
     },
     {
       "id": "object-quest",
       "name": "Object Quest",
       "levels": [
-        "A0",
         "A1",
         "A2",
         "B1",
-        "B2"
+        "B2",
+        "C1",
+        "C2"
       ],
       "levelAvailability": "vocabulary-dependent",
       "audiences": [
@@ -1639,7 +1644,9 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "The activity reveals hidden scene objects and target nouns. Suitability depends on the selected vocabulary, language data, and accessibility needs; the setup does not provide age-specific content filtering.",
+      "modeNotes": "The game is a visual object-discovery activity and may be used individually or collaboratively, but the setup does not define player roles or enforce group size. In-person availability does not by itself guarantee offline operation."
     },
     {
       "id": "scene-match",
