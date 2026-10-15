@@ -684,11 +684,9 @@
         "A1",
         "A2",
         "B1",
-        "B2",
-        "C1",
-        "C2"
+        "B2"
       ],
-      "levelAvailability": "deck-dependent",
+      "levelAvailability": "deck-tagged",
       "audiences": [
         "children",
         "teens",
@@ -720,7 +718,28 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "sourceLevels": [
+        "A0-A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "levelMapping": {
+        "A0-A1": [
+          "A0",
+          "A1"
+        ],
+        "A2": [
+          "A2"
+        ],
+        "B1": [
+          "B1"
+        ],
+        "B2": [
+          "B2"
+        ]
+      }
     },
     {
       "id": "action-hero",
