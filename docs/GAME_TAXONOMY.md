@@ -7,7 +7,7 @@ The hub's shared taxonomy lives in `data/game-taxonomy.json`. It is designed to 
 - **Topic category and subcategory:** broad, reusable themes (for example, Everyday Life → Food & drinks). Content can be tagged across more than one category.
 - **CEFR level:** A0–C2, with A0 representing supported pre-A1 practice. A game's listed levels are initial discovery metadata, not a guarantee that every prompt or deck supports that level.
 - **Audience:** content suitability guidance, not a proxy for language proficiency or a hard age gate.
-- **Play modes:** solo, pairs, mini-groups, big groups, online, and offline. These are intended as discovery metadata and should be validated against each game's actual facilitation needs.
+- **Play modes:** solo, pairs, mini-groups, and big groups. **Setting:** online or in person. These are separate dimensions; “in person” means a face-to-face setting, not a guarantee that the game runs without an internet connection.
 - **Special selectors:** some games use their own meaningful practice sets rather than ordinary CEFR selection. Lucky Numbers is explicitly configured for Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–100.
 
 ## Updating the taxonomy
@@ -20,8 +20,8 @@ The hub's shared taxonomy lives in `data/game-taxonomy.json`. It is designed to 
 
 ## Current implementation
 
-The hub combines the existing player and game-family filters with **topic, subtopic, CEFR level, audience, and play-mode** selectors. The original card layout and game URLs are preserved. The topic and level metadata is centralized in the JSON file; subtopics are populated dynamically from the selected topic.
+The hub combines the existing player and game-family filters with **topic, subtopic, CEFR level, audience, group-size, and setting** selectors. The original card layout and game URLs are preserved. The topic and level metadata is centralized in the JSON file; subtopics are populated dynamically from the selected topic.
 
 ## Quality note
 
-Initial tags are a practical starting point based on each game's purpose and visible description. They should be reviewed against actual prompt/deck content before being presented as precise pedagogical guarantees. Play-mode tags, especially offline use, also need validation against each game's data and network requirements.
+Initial tags are a practical starting point based on each game's purpose and visible description. They should be reviewed against actual prompt/deck content before being presented as precise pedagogical guarantees. Group-size tags should be checked against each game's facilitation needs. Do not advertise offline/no-internet support unless a game and its dependencies have been verified to work without a connection.
