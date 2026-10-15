@@ -456,7 +456,41 @@
         }
       ],
       "audienceNotes": "The setup offers A1–C2 level choices and practice-language selection; the audited English prompt source has a Starter band mapped approximately to A0/A1, but other language datasets may differ. Audience suitability depends on selected prompts and facilitation.",
-      "modeNotes": "The setup runs ten speaking prompts and does not enforce a participant count. Solo practice is directly possible; pairs and groups are facilitation options rather than distinct enforced game modes."
+      "modeNotes": "The setup runs ten speaking prompts and does not enforce a participant count. Solo practice is directly possible; pairs and groups are facilitation options rather than distinct enforced game modes.",
+      "subcategoryMappings": {
+        "Everyday topics": [
+          "Daily routines",
+          "Food & drinks",
+          "Shopping",
+          "Family & friends"
+        ],
+        "Travel & experiences": [
+          "Holidays",
+          "Sightseeing",
+          "Travel problems"
+        ],
+        "Work & study": [
+          "Workplace vocabulary",
+          "School subjects",
+          "Study skills"
+        ],
+        "Culture & society": [
+          "Countries & cultures",
+          "Community",
+          "Cultural differences"
+        ],
+        "Technology": [
+          "Technology in society",
+          "Inventions"
+        ],
+        "Environment": [
+          "Environment"
+        ],
+        "Personal stories": [
+          "Family & friends"
+        ],
+        "Random mix": []
+      }
     },
     {
       "id": "battle-of-wits",
@@ -502,7 +536,35 @@
         "in-person"
       ],
       "audienceNotes": "A timed team-versus-team buzzer game with a short three-round setup. Review the selected prompts and vocabulary for the learners; a CEFR selector is not a guarantee that every language has equivalent content at each level.",
-      "modeNotes": "The game explicitly scores Team A and Team B, so it is best represented as team play for a group rather than solo or a simple pair activity. The setup does not enforce participant counts."
+      "modeNotes": "The game explicitly scores Team A and Team B, so it is best represented as team play for a group rather than solo or a simple pair activity. The setup does not enforce participant counts.",
+      "subcategoryMappings": {
+        "Education": [
+          "School subjects",
+          "Study skills"
+        ],
+        "Technology": [
+          "Technology in society",
+          "Inventions"
+        ],
+        "Environment": [
+          "Environment"
+        ],
+        "Society": [
+          "Community",
+          "Current issues"
+        ],
+        "Ethics": [
+          "Ethics"
+        ],
+        "Culture": [
+          "Countries & cultures",
+          "Cultural differences"
+        ],
+        "Work & career": [
+          "Career choices",
+          "Jobs & professions"
+        ]
+      }
     },
     {
       "id": "opinion-arena",
@@ -564,7 +626,34 @@
         ]
       },
       "audienceNotes": "The setup selector offers A1–C2, but the taxonomy only advertises B1–C1 where explicit source-level mappings currently exist. Do not treat the broader selector as proof that every language has tagged prompts at every level. Review topic prompts for age appropriateness and sensitivity.",
-      "modeNotes": "The arena format is designed around contrasting positions and a shared debate meter. It can be facilitated with pairs or groups, but the setup does not enforce group size or guarantee solo-first play."
+      "modeNotes": "The arena format is designed around contrasting positions and a shared debate meter. It can be facilitated with pairs or groups, but the setup does not enforce group size or guarantee solo-first play.",
+      "subcategoryMappings": {
+        "Lifestyle": [
+          "Daily routines",
+          "Free-time activities"
+        ],
+        "Food & free time": [
+          "Food & drinks",
+          "Free-time activities"
+        ],
+        "School & work": [
+          "School subjects"
+        ],
+        "Technology": [
+          "Technology in society",
+          "Inventions"
+        ],
+        "Environment": [
+          "Environment"
+        ],
+        "Culture": [
+          "Countries & cultures",
+          "Cultural differences"
+        ],
+        "Ethics": [
+          "Ethics"
+        ]
+      }
     },
     {
       "id": "critics-corner",
@@ -605,7 +694,27 @@
         "in-person"
       ],
       "audienceNotes": "The setup offers Intermediate (B1) through Proficiency (C2) and practice-language selection. The level selector is a guide; topic sensitivity and language-specific prompt availability should be reviewed for the group.",
-      "modeNotes": "The setup runs five critique prompts without a fixed participant-count control. Solo responses are possible; collaborative discussion is a facilitation choice, not a separately enforced mode."
+      "modeNotes": "The setup runs five critique prompts without a fixed participant-count control. Solo responses are possible; collaborative discussion is a facilitation choice, not a separately enforced mode.",
+      "subcategoryMappings": {
+        "Famous quotes": [
+          "Philosophical questions"
+        ],
+        "Philosophy": [
+          "Philosophical questions",
+          "Ethics"
+        ],
+        "Literature": [
+          "Story prompts"
+        ],
+        "Society": [
+          "Community",
+          "Current issues"
+        ],
+        "Human nature": [
+          "Personality",
+          "Feelings & emotions"
+        ]
+      }
     },
     {
       "id": "100-questions",
@@ -842,7 +951,29 @@
         }
       ],
       "audienceNotes": "Audience suitability depends on deck and card side. The Family, Student, and Myself decks explicitly provide a children-friendly side and an adult-friendly side. Other decks may contain personal, sensitive, civic, or adult-oriented prompts; do not treat the game-wide audience tags as blanket approval for every deck or question.",
-      "modeNotes": "The game supports individual and group lesson types. The UI says both players or the whole group can answer; solo mode should be treated as self-reflection/teacher-led preparation rather than a verified standalone game mode."
+      "modeNotes": "The game supports individual and group lesson types. The UI says both players or the whole group can answer; solo mode should be treated as self-reflection/teacher-led preparation rather than a verified standalone game mode.",
+      "subcategoryMappings": {
+        "Funny": [],
+        "Personal": [
+          "Family & friends",
+          "Feelings & emotions"
+        ],
+        "Everyday life": [
+          "Daily routines",
+          "Personal belongings"
+        ],
+        "Relationships": [
+          "Family & friends",
+          "Friendship"
+        ],
+        "Deep & philosophical": [
+          "Philosophical questions",
+          "Ethics"
+        ],
+        "Hypothetical": [
+          "Hypothetical situations"
+        ]
+      }
     },
     {
       "id": "story-chain",
@@ -888,7 +1019,29 @@
         "in-person"
       ],
       "audienceNotes": "The activity is collaborative storytelling with sentence-by-sentence contributions. Audience suitability depends on the selected language, vocabulary pool, and facilitator support; the interface does not provide age-specific content filtering.",
-      "modeNotes": "Collaborative chain-building naturally supports pairs and groups. Solo use may be possible for practice, but the game description frames it as collaborative rather than a verified solo-first activity."
+      "modeNotes": "Collaborative chain-building naturally supports pairs and groups. Solo use may be possible for practice, but the game description frames it as collaborative rather than a verified solo-first activity.",
+      "subcategoryMappings": {
+        "Fantasy": [
+          "Fantasy"
+        ],
+        "Mystery": [
+          "Detective stories",
+          "Secrets & clues"
+        ],
+        "Adventure": [
+          "Adventure"
+        ],
+        "Everyday life": [
+          "Daily routines",
+          "Personal belongings"
+        ],
+        "Comedy": [
+          "Strange situations"
+        ],
+        "Science fiction": [
+          "Science fiction"
+        ]
+      }
     },
     {
       "id": "story-weaver",
@@ -936,7 +1089,29 @@
         "in-person"
       ],
       "audienceNotes": "The built-in grammar curriculum begins at A1 and progresses through higher levels. Story themes and examples should still be previewed for the intended age group; the interface is English-only.",
-      "modeNotes": "The curriculum provides prompts and grammar cues for composing stories; pairs and groups can share the storytelling task, but the setup does not enforce a particular group size."
+      "modeNotes": "The curriculum provides prompts and grammar cues for composing stories; pairs and groups can share the storytelling task, but the setup does not enforce a particular group size.",
+      "subcategoryMappings": {
+        "Everyday vocabulary": [],
+        "Travel": [
+          "Holidays",
+          "Transport"
+        ],
+        "Nature": [
+          "Environment",
+          "Animals & pets",
+          "Plants & flowers"
+        ],
+        "Emotions": [
+          "Feelings & emotions"
+        ],
+        "Work": [
+          "Workplace vocabulary",
+          "Jobs & professions"
+        ],
+        "Adventure": [
+          "Adventure"
+        ]
+      }
     },
     {
       "id": "hot-seat",
@@ -984,7 +1159,29 @@
         "in-person"
       ],
       "audienceNotes": "The setup describes one player guessing while others give clues. Preview vocabulary and definitions for the intended age group; proficiency selection is not an age-suitability guarantee.",
-      "modeNotes": "The rules require at least a guesser and a clue-giver, with others able to watch or contribute; pairs and larger groups fit the described roles. The game uses a 60-second timer and 15 rounds."
+      "modeNotes": "The rules require at least a guesser and a clue-giver, with others able to watch or contribute; pairs and larger groups fit the described roles. The game uses a 60-second timer and 15 rounds.",
+      "subcategoryMappings": {
+        "Everyday objects": [
+          "Personal belongings",
+          "Home & household"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Animals": [
+          "Animals & pets"
+        ],
+        "Places": [
+          "My town",
+          "Sightseeing"
+        ],
+        "Professions": [
+          "Jobs & professions"
+        ],
+        "Actions": [
+          "Verbs & actions"
+        ]
+      }
     },
     {
       "id": "this-or-that",
@@ -1467,7 +1664,70 @@
         }
       ],
       "audienceNotes": "The setup offers English, French, Italian, Russian, and Greek, CEFR bands A0–B2, and topic decks. Age suitability varies by deck (for example, dilemmas, nationalities, professions, or entertainment), so review the selected deck rather than treating all decks as interchangeable.",
-      "modeNotes": "Players choose between paired options; the setup does not enforce group size. It can be used individually or as a pair/group discussion activity, but group play is facilitation rather than a fixed participant configuration."
+      "modeNotes": "Players choose between paired options; the setup does not enforce group size. It can be used individually or as a pair/group discussion activity, but group play is facilitation rather than a fixed participant configuration.",
+      "subcategoryMappings": {
+        "Describing people": [
+          "Describing people"
+        ],
+        "Personality": [
+          "Personality"
+        ],
+        "Feelings & emotions": [
+          "Feelings & emotions"
+        ],
+        "Daily routines": [
+          "Daily routines"
+        ],
+        "Time & dates": [
+          "Time & dates"
+        ],
+        "Choices & dilemmas": [
+          "Choices & dilemmas"
+        ],
+        "Hypothetical situations": [
+          "Hypothetical situations"
+        ],
+        "Films & TV": [
+          "Films & TV"
+        ],
+        "Music": [
+          "Music"
+        ],
+        "Books": [
+          "Books"
+        ],
+        "Food & drinks": [
+          "Food & drinks"
+        ],
+        "Grammar patterns": [],
+        "Free-time activities": [
+          "Free-time activities"
+        ],
+        "Sports": [
+          "Sports"
+        ],
+        "Countries & nationalities": [
+          "Countries & nationalities"
+        ],
+        "Cultural differences": [
+          "Cultural differences"
+        ],
+        "Jobs & professions": [],
+        "Skills & talents": [],
+        "Personal belongings": [
+          "Personal belongings"
+        ],
+        "Describing things": [],
+        "Holidays": [
+          "Holidays"
+        ],
+        "Transport": [
+          "Transport"
+        ],
+        "Sightseeing": [
+          "Sightseeing"
+        ]
+      }
     },
     {
       "id": "action-hero",
@@ -1541,7 +1801,25 @@
         ]
       },
       "audienceNotes": "The activity asks players to act, mime, describe, or use sound effects for teammates to guess. The interface has no age-specific content filter; review vocabulary and acting prompts for the learners and group context. Movement can be adapted for accessibility.",
-      "modeNotes": "Team-based guessing is the described format, with a player acting and teammates guessing. Pairs and larger groups are plausible; the setup does not enforce a specific minimum or maximum player count."
+      "modeNotes": "Team-based guessing is the described format, with a player acting and teammates guessing. Pairs and larger groups are plausible; the setup does not enforce a specific minimum or maximum player count.",
+      "subcategoryMappings": {
+        "Everyday actions": [
+          "Verbs & actions",
+          "Daily routines"
+        ],
+        "Sports": [
+          "Sports"
+        ],
+        "Adventure": [],
+        "Work": [
+          "Workplace vocabulary",
+          "Jobs & professions"
+        ],
+        "Household activities": [
+          "Home & household",
+          "Daily routines"
+        ]
+      }
     },
     {
       "id": "identity-mystery",
@@ -1613,7 +1891,26 @@
         ]
       },
       "audienceNotes": "The game uses hidden identities across famous people, jobs, and nationalities. Suitability depends on the chosen category and language data; review culturally specific names and nationality-related content for the group. No age-specific filter is provided.",
-      "modeNotes": "The player asks or records descriptive clues/questions to uncover a hidden identity. The UI does not set a fixed group size; pairs and groups can use it as a collaborative guessing activity. Do not assume solo play is a distinct supported mode."
+      "modeNotes": "The player asks or records descriptive clues/questions to uncover a hidden identity. The UI does not set a fixed group size; pairs and groups can use it as a collaborative guessing activity. Do not assume solo play is a distinct supported mode.",
+      "subcategoryMappings": {
+        "Famous people": [
+          "History",
+          "Describing people"
+        ],
+        "Fictional characters": [
+          "Fantasy",
+          "Describing people"
+        ],
+        "Professions": [
+          "Jobs & professions"
+        ],
+        "Historical figures": [
+          "History"
+        ],
+        "Animals": [
+          "Animals & pets"
+        ]
+      }
     },
     {
       "id": "object-quest",
@@ -1660,7 +1957,29 @@
         "in-person"
       ],
       "audienceNotes": "The activity reveals hidden scene objects and target nouns. Suitability depends on the selected vocabulary, language data, and accessibility needs; the setup does not provide age-specific content filtering.",
-      "modeNotes": "The game is a visual object-discovery activity and may be used individually or collaboratively, but the setup does not define player roles or enforce group size. In-person availability does not by itself guarantee offline operation."
+      "modeNotes": "The game is a visual object-discovery activity and may be used individually or collaboratively, but the setup does not define player roles or enforce group size. In-person availability does not by itself guarantee offline operation.",
+      "subcategoryMappings": {
+        "Household objects": [
+          "Home & household",
+          "Personal belongings"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Clothing": [
+          "Clothes & accessories"
+        ],
+        "Nature": [
+          "Environment",
+          "Animals & pets",
+          "Plants & flowers"
+        ],
+        "Travel": [
+          "Holidays",
+          "Transport"
+        ],
+        "Technology": []
+      }
     },
     {
       "id": "scene-match",
@@ -2031,7 +2350,68 @@
         }
       ],
       "audienceNotes": "The setup supports A1, A2, B1, B2–C2, or all scenes, depending on available scene metadata. Suitability depends on the chosen scene, target language, vocabulary, and accessibility needs; advanced scene labels should not be read as a formal assessment.",
-      "modeNotes": "The setup is a single-player scene exploration interface with clickable scenes and hotspots. Collaborative pair/group use is possible as a teaching arrangement, but the game UI itself is solo-oriented."
+      "modeNotes": "The setup is a single-player scene exploration interface with clickable scenes and hotspots. Collaborative pair/group use is possible as a teaching arrangement, but the game UI itself is solo-oriented.",
+      "subcategoryMappings": {
+        "Airports": [
+          "Airports"
+        ],
+        "Transport": [
+          "Transport"
+        ],
+        "Travel problems": [
+          "Travel problems"
+        ],
+        "Animals & pets": [
+          "Animals & pets"
+        ],
+        "Home & household": [
+          "Home & household"
+        ],
+        "Daily routines": [
+          "Daily routines"
+        ],
+        "Food & drinks": [
+          "Food & drinks"
+        ],
+        "Restaurants": [
+          "Restaurants"
+        ],
+        "Time & dates": [
+          "Time & dates"
+        ],
+        "My town": [
+          "My town"
+        ],
+        "Directions": [
+          "Directions"
+        ],
+        "Clothes & accessories": [
+          "Clothes & accessories"
+        ],
+        "Health & services": [],
+        "Making requests": [],
+        "Shopping": [
+          "Shopping"
+        ],
+        "Money & prices": [
+          "Money & prices"
+        ],
+        "Landscapes": [
+          "Landscapes"
+        ],
+        "Plants & flowers": [
+          "Plants & flowers"
+        ],
+        "School subjects": [
+          "School subjects"
+        ],
+        "Workplace vocabulary": [
+          "Workplace vocabulary"
+        ],
+        "Weather & seasons": [
+          "Weather & seasons"
+        ]
+      }
     },
     {
       "id": "word-linker",
@@ -2149,7 +2529,32 @@
         }
       ],
       "audienceNotes": "The setup offers level choices A1–C2 and language selection, but the audited English built-in puzzles include explicit intermediate/upper-intermediate labels plus unlabelled core puzzles. Do not infer that every language has tagged content at every level.",
-      "modeNotes": "The setup provides Common Connection, Odd One Out, and Mixed Modes. It supports direct solo interaction; pair/group use is a facilitation option, and no fixed participant count is enforced."
+      "modeNotes": "The setup provides Common Connection, Odd One Out, and Mixed Modes. It supports direct solo interaction; pair/group use is a facilitation option, and no fixed participant count is enforced.",
+      "subcategoryMappings": {
+        "Everyday life": [
+          "Daily routines",
+          "Personal belongings"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Nature": [
+          "Environment",
+          "Animals & pets",
+          "Plants & flowers"
+        ],
+        "Emotions": [
+          "Feelings & emotions"
+        ],
+        "Work": [
+          "Workplace vocabulary",
+          "Jobs & professions"
+        ],
+        "Travel": [
+          "Holidays",
+          "Transport"
+        ]
+      }
     },
     {
       "id": "last-letter",
@@ -2195,7 +2600,28 @@
         "in-person"
       ],
       "audienceNotes": "The setup provides A1–C2 level choices and relies on vocabulary available for the selected language and level. Consider spelling conventions and whether the target language's word forms make last-letter chaining suitable.",
-      "modeNotes": "The game supports turn-based word chaining, which can be used individually or with partners/groups, but the setup does not configure a player count. Treat larger-group use as facilitation rather than a guaranteed built-in mode."
+      "modeNotes": "The game supports turn-based word chaining, which can be used individually or with partners/groups, but the setup does not configure a player count. Treat larger-group use as facilitation rather than a guaranteed built-in mode.",
+      "subcategoryMappings": {
+        "Everyday words": [
+          "Vocabulary themes"
+        ],
+        "Animals": [
+          "Animals & pets"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Places": [
+          "My town",
+          "Sightseeing"
+        ],
+        "Verbs": [
+          "Verbs & actions"
+        ],
+        "Adjectives": [
+          "Adjectives"
+        ]
+      }
     },
     {
       "id": "emoji-odyssey",
@@ -2241,7 +2667,26 @@
         "in-person"
       ],
       "audienceNotes": "Offers Guess and Story modes. Guess mode requires enough emoji-tagged vocabulary for the selected language and level; Story mode is a separate fallback when that vocabulary is unavailable. Review emoji meanings and story prompts for cultural context and age suitability.",
-      "modeNotes": "The setup provides Guess and Story modes but does not enforce group size. Both can be adapted for individual practice or collaborative classroom play; treat those as facilitation choices rather than enforced player-count rules."
+      "modeNotes": "The setup provides Guess and Story modes but does not enforce group size. Both can be adapted for individual practice or collaborative classroom play; treat those as facilitation choices rather than enforced player-count rules.",
+      "subcategoryMappings": {
+        "Idioms": [
+          "Idioms"
+        ],
+        "Movies & stories": [
+          "Films & TV",
+          "Story prompts"
+        ],
+        "Everyday expressions": [
+          "Idioms",
+          "Vocabulary themes"
+        ],
+        "Emotions": [
+          "Feelings & emotions"
+        ],
+        "Proverbs": [
+          "Idioms"
+        ]
+      }
     },
     {
       "id": "cosy-crossword",
@@ -2285,7 +2730,29 @@
         "in-person"
       ],
       "audienceNotes": "The crossword uses dynamically generated CEFR vocabulary, with built-in fallback word lists specifically shown for A1 and B2. Clue difficulty and grid size vary by level; preview generated clues and vocabulary for the intended age group. The language selector currently lists English, French, Italian, Russian, and Greek.",
-      "modeNotes": "The setup starts a crossword puzzle without a player-count selector. The taxonomy records solo as the direct setup mode; collaborative solving may be facilitated by a teacher but is not an explicitly configured game mode."
+      "modeNotes": "The setup starts a crossword puzzle without a player-count selector. The taxonomy records solo as the direct setup mode; collaborative solving may be facilitated by a teacher but is not an explicitly configured game mode.",
+      "subcategoryMappings": {
+        "Everyday vocabulary": [
+          "Vocabulary themes"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Travel": [
+          "Holidays",
+          "Transport"
+        ],
+        "Nature": [
+          "Environment",
+          "Animals & pets",
+          "Plants & flowers"
+        ],
+        "Work": [
+          "Workplace vocabulary",
+          "Jobs & professions"
+        ],
+        "Mixed practice": []
+      }
     },
     {
       "id": "lucky-numbers",
@@ -2330,7 +2797,15 @@
         "in-person"
       ],
       "audienceNotes": "The source offers a Caller role for a group and a Player role for solo play or play with a host. The alphabet and number ranges are explicit practice sets; they are not ordinary CEFR vocabulary bands. Select the range appropriate to the learners and language.",
-      "modeNotes": "Supports a Player role (solo or with a host) and a Caller role for a group. The selectable practice sets are Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–99. The source fetches number words online with numeric fallbacks, so in-person use does not guarantee internet-free operation."
+      "modeNotes": "Supports a Player role (solo or with a host) and a Caller role for a group. The selectable practice sets are Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–99. The source fetches number words online with numeric fallbacks, so in-person use does not guarantee internet-free operation.",
+      "subcategoryMappings": {
+        "Alphabet": [
+          "Spelling"
+        ],
+        "Numbers 0–9": [],
+        "Numbers 0–19": [],
+        "Numbers 0–99": []
+      }
     },
     {
       "id": "etymology-explorer",
@@ -2375,7 +2850,26 @@
         "bypassesCEFR": true
       },
       "audienceNotes": "The setup offers Easy, Medium, and Hard difficulty modes plus Language Network and Word Pairs modes; these are not CEFR-labelled choices. Historical and cross-language vocabulary may require advanced background knowledge, and suitability depends on the selected language and available dataset.",
-      "modeNotes": "The game supports individual play through its own setup. Language Network and Word Pairs are separate modes from the Easy/Medium/Hard etymology difficulty track. The setup does not enforce participant counts for collaborative facilitation."
+      "modeNotes": "The game supports individual play through its own setup. Language Network and Word Pairs are separate modes from the Easy/Medium/Hard etymology difficulty track. The setup does not enforce participant counts for collaborative facilitation.",
+      "subcategoryMappings": {
+        "Word origins": [
+          "Etymology"
+        ],
+        "Prefixes & suffixes": [
+          "Word formation"
+        ],
+        "Latin & Greek roots": [
+          "Etymology",
+          "Word formation"
+        ],
+        "Word families": [
+          "Word formation",
+          "Word associations"
+        ],
+        "Cognates": [
+          "Word associations"
+        ]
+      }
     },
     {
       "id": "what-gender-is-it",
@@ -2416,7 +2910,22 @@
         "in-person"
       ],
       "audienceNotes": "The setup offers A1–C2 and a target-language choice. Available data is language- and level-dependent, and some supported languages have different grammatical-gender systems; review content availability and suitability for the learners before selecting a level.",
-      "modeNotes": "The setup is a solo quiz with up to ten questions and a language selector. Pair/group discussion can be added by a facilitator, but the interface does not configure group size or collaborative roles."
+      "modeNotes": "The setup is a solo quiz with up to ten questions and a language selector. Pair/group discussion can be added by a facilitator, but the interface does not configure group size or collaborative roles.",
+      "subcategoryMappings": {
+        "Masculine & feminine": [
+          "Noun gender"
+        ],
+        "Articles": [
+          "Grammar patterns"
+        ],
+        "Gender exceptions": [
+          "Noun gender"
+        ],
+        "Noun endings": [
+          "Noun gender"
+        ],
+        "Mixed practice": []
+      }
     }
   ],
   "playFormats": [
