@@ -20,6 +20,8 @@ Audience tags are discovery hints, not guarantees that every prompt in a game is
 
 ## Setup-level and audience audit
 
+Scene Match exposes A1, A2, B1, B2–C2, and All Levels in its setup; the hub taxonomy therefore lists A1–C2, while scene-level tags determine which scenes actually appear. Its interactive scene interface is solo-oriented, although a teacher can facilitate pair or group exploration. Audience and play-mode labels across the hub are discovery hints; they should not imply enforced participant counts or guarantee suitability.
+
 Story Chain, Story Weaver, and Hot Seat expose explicit setup choices from Starter (A1) through Proficiency (C2); their game-level taxonomy therefore lists A1–C2 rather than A0. These are interface choices, not independent CEFR certification. Story Chain is described as collaborative sentence-by-sentence storytelling; Story Weaver provides a built-in English grammar curriculum; Hot Seat explicitly assigns a guesser and one or more clue-givers/watchers, and runs 15 rounds with a 60-second timer. Audience notes are suitability prompts, not age guarantees. Do not infer hard player-count limits from the hub taxonomy when the game setup does not enforce them.
 
 ## Guessing and discovery game audit
