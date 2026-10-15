@@ -98,8 +98,14 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(taxonomy.games.find(game => game.id === 'object-quest').modeNotes.includes('does not by itself guarantee offline'), 'Object Quest should distinguish in-person use from offline capability');
 
   const luckyNumbers = taxonomy.games.find(game => game.id === 'lucky-numbers');
-  assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–100']);
+  assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–99']);
   assert.equal(luckyNumbers.specialSelection.bypassesCEFR, true);
+
+  assert.ok(luckyNumbers.audienceNotes.includes('Caller role'), 'Lucky Numbers should document player/caller roles');
+  assert.ok(luckyNumbers.modeNotes.includes('internet-free'), 'Lucky Numbers should not imply in-person means offline');
+  assert.ok(!luckyNumbers.specialSelection.options.includes('Numbers 0–100'), 'Lucky Numbers range should match source maximum of 99');
+  const emojiOdyssey = taxonomy.games.find(game => game.id === 'emoji-odyssey');
+  assert.ok(emojiOdyssey.audienceNotes.includes('Guess and Story'), 'Emoji Odyssey should document its two modes and content suitability');
 
   ['filter-category', 'filter-subcategory', 'filter-level', 'filter-audience', 'filter-mode', 'filter-format'].forEach(id => {
     assert.ok(html.includes('id="' + id + '"'), 'hub should expose ' + id);
