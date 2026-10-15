@@ -142,6 +142,7 @@ test('Shared game taxonomy stays aligned with the hub', () => {
     assert.ok(html.includes('id="' + id + '"'), 'hub should expose ' + id);
   });
   assert.ok(html.includes('shared/js/game-taxonomy.js'), 'hub should load taxonomy filter logic');
+  assert.ok(html.includes('Level filters show games with mapped CEFR levels'), 'hub should explain that CEFR filtering only includes mapped games');
   assert.ok(filterScript.includes('data/game-taxonomy.json'), 'filter logic should load the shared taxonomy');
   assert.ok(html.includes('matchesCategory && matchesSubcategory && matchesLevel && matchesAudience && matchesMode && matchesFormat'), 'all taxonomy selectors should combine in result filtering');
 });
