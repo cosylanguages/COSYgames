@@ -88,6 +88,15 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(taxonomy.games.find(game => game.id === 'hot-seat').modeNotes.includes('at least a guesser and a clue-giver'), 'Hot Seat should document its minimum role structure');
   assert.ok(taxonomy.games.find(game => game.id === 'story-weaver').audienceNotes.includes('English-only'), 'Story Weaver should disclose its English-only setup');
 
+  for (const id of ['action-hero', 'identity-mystery', 'object-quest']) {
+    const game = taxonomy.games.find(item => item.id === id);
+    assert.deepEqual(game.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], id + ' levels should match its explicit setup options');
+    assert.ok(game.audienceNotes && game.modeNotes, id + ' should document audience suitability and play-mode assumptions');
+  }
+  assert.ok(taxonomy.games.find(game => game.id === 'action-hero').modeNotes.includes('does not enforce'), 'Action Hero should not imply a hard group-size limit without one in the UI');
+  assert.ok(taxonomy.games.find(game => game.id === 'identity-mystery').modeNotes.includes('Do not assume solo play'), 'Identity Mystery should not overstate solo support');
+  assert.ok(taxonomy.games.find(game => game.id === 'object-quest').modeNotes.includes('does not by itself guarantee offline'), 'Object Quest should distinguish in-person use from offline capability');
+
   const luckyNumbers = taxonomy.games.find(game => game.id === 'lucky-numbers');
   assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–100']);
   assert.equal(luckyNumbers.specialSelection.bypassesCEFR, true);
