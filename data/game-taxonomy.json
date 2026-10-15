@@ -602,8 +602,6 @@
       "id": "100-questions",
       "name": "100 Questions",
       "levels": [
-        "A0",
-        "A1",
         "A2",
         "B1",
         "B2",
@@ -661,7 +659,12 @@
             "Rights & responsibilities"
           ],
           "levelBasis": "not-assessed",
-          "sourceLevelNote": "The source uses progressive content stages, not CEFR labels; no CEFR equivalence is asserted."
+          "sourceLevelNote": "The source uses progressive content stages, not CEFR labels; no CEFR equivalence is asserted.",
+          "audiences": [
+            "teens",
+            "adults"
+          ],
+          "audienceNote": "Civic exam questions are country-specific and assume interest in civic knowledge; adapt region settings and review for learner context."
         },
         {
           "id": "family",
@@ -677,7 +680,14 @@
             "Feelings & emotions"
           ],
           "levelBasis": "not-assessed",
-          "sourceLevelNote": "The source progresses from daily life to deeper relationships; these stages are not CEFR assessments."
+          "sourceLevelNote": "The source progresses from daily life to deeper relationships; these stages are not CEFR assessments.",
+          "audiences": [
+            "children",
+            "teens",
+            "adults",
+            "mixed-ages"
+          ],
+          "audienceNote": "Source provides a children-friendly card side and an adult-friendly side; choose the side appropriate to the group."
         },
         {
           "id": "friends",
@@ -694,7 +704,12 @@
             "Personal boundaries"
           ],
           "levelBasis": "not-assessed",
-          "sourceLevelNote": "The source progresses from safe icebreakers to more personal topics; stages are not CEFR assessments."
+          "sourceLevelNote": "The source progresses from safe icebreakers to more personal topics; stages are not CEFR assessments.",
+          "audiences": [
+            "teens",
+            "adults"
+          ],
+          "audienceNote": "Prompts become personal and include relationships, boundaries, and conflict; preview for younger groups."
         },
         {
           "id": "interview",
@@ -711,7 +726,12 @@
             "Problem-solving"
           ],
           "levelBasis": "not-assessed",
-          "sourceLevelNote": "The source uses interview stages, not CEFR labels; language demands vary by role and answer."
+          "sourceLevelNote": "The source uses interview stages, not CEFR labels; language demands vary by role and answer.",
+          "audiences": [
+            "teens",
+            "adults"
+          ],
+          "audienceNote": "Interview and workplace prompts are best suited to learners ready for career-related discussion."
         },
         {
           "id": "myself",
@@ -728,7 +748,14 @@
             "Personal stories"
           ],
           "levelBasis": "not-assessed",
-          "sourceLevelNote": "The source contains multiple themed progressions; no CEFR equivalence is asserted."
+          "sourceLevelNote": "The source contains multiple themed progressions; no CEFR equivalence is asserted.",
+          "audiences": [
+            "children",
+            "teens",
+            "adults",
+            "mixed-ages"
+          ],
+          "audienceNote": "Source provides a children-friendly card side and an adult-friendly side; choose the side appropriate to the group."
         },
         {
           "id": "netflix",
@@ -746,7 +773,12 @@
             "Secrets & clues"
           ],
           "levelBasis": "not-assessed",
-          "sourceLevelNote": "The source uses narrative stages and media themes, not CEFR labels."
+          "sourceLevelNote": "The source uses narrative stages and media themes, not CEFR labels.",
+          "audiences": [
+            "teens",
+            "adults"
+          ],
+          "audienceNote": "Media/documentary prompts may refer to mature themes; preview the selected questions and source material."
         },
         {
           "id": "student",
@@ -764,7 +796,14 @@
             "Goals & ambitions"
           ],
           "levelBasis": "not-assessed",
-          "sourceLevelNote": "The source uses progressive topic stages, not CEFR labels; audience suitability is separate from proficiency."
+          "sourceLevelNote": "The source uses progressive topic stages, not CEFR labels; audience suitability is separate from proficiency.",
+          "audiences": [
+            "children",
+            "teens",
+            "adults",
+            "mixed-ages"
+          ],
+          "audienceNote": "Source provides a children-friendly card side and an adult-friendly side; choose the side appropriate to the group."
         },
         {
           "id": "teacher",
@@ -783,9 +822,18 @@
             "Humour"
           ],
           "levelBasis": "not-assessed",
-          "sourceLevelNote": "The source uses themed stages and humour; no CEFR equivalence is asserted."
+          "sourceLevelNote": "The source uses themed stages and humour; no CEFR equivalence is asserted.",
+          "audiences": [
+            "children",
+            "teens",
+            "adults",
+            "mixed-ages"
+          ],
+          "audienceNote": "Teacher-student framing can be used across ages, but select questions and humour for the actual group."
         }
-      ]
+      ],
+      "audienceNotes": "Audience suitability depends on deck and card side. The Family, Student, and Myself decks explicitly provide a children-friendly side and an adult-friendly side. Other decks may contain personal, sensitive, civic, or adult-oriented prompts; do not treat the game-wide audience tags as blanket approval for every deck or question.",
+      "modeNotes": "The game supports individual and group lesson types. The UI says both players or the whole group can answer; solo mode should be treated as self-reflection/teacher-led preparation rather than a verified standalone game mode."
     },
     {
       "id": "story-chain",
