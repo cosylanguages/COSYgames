@@ -454,7 +454,9 @@
             "Goals & ambitions"
           ]
         }
-      ]
+      ],
+      "audienceNotes": "The setup offers A1–C2 level choices and practice-language selection; the audited English prompt source has a Starter band mapped approximately to A0/A1, but other language datasets may differ. Audience suitability depends on selected prompts and facilitation.",
+      "modeNotes": "The setup runs ten speaking prompts and does not enforce a participant count. Solo practice is directly possible; pairs and groups are facilitation options rather than distinct enforced game modes."
     },
     {
       "id": "battle-of-wits",
@@ -601,7 +603,9 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "The setup offers Intermediate (B1) through Proficiency (C2) and practice-language selection. The level selector is a guide; topic sensitivity and language-specific prompt availability should be reviewed for the group.",
+      "modeNotes": "The setup runs five critique prompts without a fixed participant-count control. Solo responses are possible; collaborative discussion is a facilitation choice, not a separately enforced mode."
     },
     {
       "id": "100-questions",
@@ -1461,7 +1465,9 @@
             "Sightseeing"
           ]
         }
-      ]
+      ],
+      "audienceNotes": "The setup offers English, French, Italian, Russian, and Greek, CEFR bands A0–B2, and topic decks. Age suitability varies by deck (for example, dilemmas, nationalities, professions, or entertainment), so review the selected deck rather than treating all decks as interchangeable.",
+      "modeNotes": "Players choose between paired options; the setup does not enforce group size. It can be used individually or as a pair/group discussion activity, but group play is facilitation rather than a fixed participant configuration."
     },
     {
       "id": "action-hero",
@@ -1662,7 +1668,10 @@
       "levels": [
         "A1",
         "A2",
-        "B1"
+        "B1",
+        "B2",
+        "C1",
+        "C2"
       ],
       "levelAvailability": "scene-tagged",
       "audiences": [
@@ -2020,7 +2029,9 @@
             "A1"
           ]
         }
-      ]
+      ],
+      "audienceNotes": "The setup supports A1, A2, B1, B2–C2, or all scenes, depending on available scene metadata. Suitability depends on the chosen scene, target language, vocabulary, and accessibility needs; advanced scene labels should not be read as a formal assessment.",
+      "modeNotes": "The setup is a single-player scene exploration interface with clickable scenes and hotspots. Collaborative pair/group use is possible as a teaching arrangement, but the game UI itself is solo-oriented."
     },
     {
       "id": "word-linker",
@@ -2136,7 +2147,9 @@
             "Adjectives"
           ]
         }
-      ]
+      ],
+      "audienceNotes": "The setup offers level choices A1–C2 and language selection, but the audited English built-in puzzles include explicit intermediate/upper-intermediate labels plus unlabelled core puzzles. Do not infer that every language has tagged content at every level.",
+      "modeNotes": "The setup provides Common Connection, Odd One Out, and Mixed Modes. It supports direct solo interaction; pair/group use is a facilitation option, and no fixed participant count is enforced."
     },
     {
       "id": "last-letter",
@@ -2403,7 +2416,9 @@
       "formats": [
         "online",
         "in-person"
-      ]
+      ],
+      "audienceNotes": "The setup offers A1–C2 and a target-language choice. Available data is language- and level-dependent, and some supported languages have different grammatical-gender systems; review content availability and suitability for the learners before selecting a level.",
+      "modeNotes": "The setup is a solo quiz with up to ten questions and a language selector. Pair/group discussion can be added by a facilitator, but the interface does not configure group size or collaborative roles."
     }
   ],
   "playFormats": [
