@@ -1,0 +1,1125 @@
+{
+  "schemaVersion": 1,
+  "description": "Shared, extensible taxonomy for COSYgames. Category metadata is a starting point; level availability and individual content tags should be validated against each game's content before being treated as exhaustive.",
+  "cefrLevels": [
+    {
+      "id": "A0",
+      "label": "Pre-A1 / Beginner",
+      "description": "First words, recognition, and highly supported practice"
+    },
+    {
+      "id": "A1",
+      "label": "A1 — Beginner",
+      "description": "Simple familiar words and everyday phrases"
+    },
+    {
+      "id": "A2",
+      "label": "A2 — Elementary",
+      "description": "Routine exchanges and short descriptions"
+    },
+    {
+      "id": "B1",
+      "label": "B1 — Intermediate",
+      "description": "Connected speech, experiences, and opinions"
+    },
+    {
+      "id": "B2",
+      "label": "B2 — Upper intermediate",
+      "description": "More detailed explanations and arguments"
+    },
+    {
+      "id": "C1",
+      "label": "C1 — Advanced",
+      "description": "Flexible, nuanced expression"
+    },
+    {
+      "id": "C2",
+      "label": "C2 — Proficient",
+      "description": "Precise, nuanced and sophisticated use"
+    }
+  ],
+  "audiences": [
+    {
+      "id": "young-learners",
+      "label": "Young learners"
+    },
+    {
+      "id": "children",
+      "label": "Children"
+    },
+    {
+      "id": "teens",
+      "label": "Teenagers"
+    },
+    {
+      "id": "adults",
+      "label": "Adults"
+    },
+    {
+      "id": "mixed-ages",
+      "label": "Mixed ages"
+    }
+  ],
+  "playModes": [
+    {
+      "id": "solo",
+      "label": "Solo"
+    },
+    {
+      "id": "pairs",
+      "label": "Pairs"
+    },
+    {
+      "id": "mini-group",
+      "label": "Mini groups"
+    },
+    {
+      "id": "big-group",
+      "label": "Big groups"
+    },
+    {
+      "id": "online",
+      "label": "Online"
+    },
+    {
+      "id": "offline",
+      "label": "Offline"
+    }
+  ],
+  "categories": [
+    {
+      "id": "everyday-life",
+      "label": "Everyday Life",
+      "subcategories": [
+        "Home & household",
+        "Daily routines",
+        "Food & drinks",
+        "Clothes & accessories",
+        "Shopping",
+        "Money & prices",
+        "Time & dates",
+        "Numbers",
+        "Colours & shapes",
+        "Personal belongings"
+      ]
+    },
+    {
+      "id": "nature-world",
+      "label": "Nature & the World",
+      "subcategories": [
+        "Animals & pets",
+        "Plants & flowers",
+        "Weather & seasons",
+        "Landscapes",
+        "Oceans",
+        "Space",
+        "Environment",
+        "Climate & conservation"
+      ]
+    },
+    {
+      "id": "places-travel",
+      "label": "Places & Travel",
+      "subcategories": [
+        "My town",
+        "Countries & nationalities",
+        "Transport",
+        "Directions",
+        "Holidays",
+        "Hotels",
+        "Airports",
+        "Restaurants",
+        "Sightseeing",
+        "Travel problems"
+      ]
+    },
+    {
+      "id": "hobbies-entertainment",
+      "label": "Hobbies, Fun & Entertainment",
+      "subcategories": [
+        "Sports",
+        "Games",
+        "Music",
+        "Films & TV",
+        "Books",
+        "Art & creativity",
+        "Dance",
+        "Internet culture",
+        "Celebrations",
+        "Free-time activities"
+      ]
+    },
+    {
+      "id": "people-feelings",
+      "label": "People, Feelings & Relationships",
+      "subcategories": [
+        "Family & friends",
+        "Personality",
+        "Feelings & emotions",
+        "Describing people",
+        "Friendship",
+        "Social situations",
+        "Communication",
+        "Conflict resolution",
+        "Empathy"
+      ]
+    },
+    {
+      "id": "learning-knowledge",
+      "label": "Learning & Knowledge",
+      "subcategories": [
+        "School subjects",
+        "Languages",
+        "Science",
+        "History",
+        "Geography",
+        "Mathematics",
+        "Inventions",
+        "General knowledge",
+        "Problem-solving",
+        "Study skills"
+      ]
+    },
+    {
+      "id": "work-future",
+      "label": "Work & Future",
+      "subcategories": [
+        "Jobs & professions",
+        "Workplace vocabulary",
+        "Skills & talents",
+        "Goals & ambitions",
+        "Career choices",
+        "Meetings",
+        "Interviews",
+        "Business communication",
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "id": "stories-mystery",
+      "label": "Imagination, Stories & Mystery",
+      "subcategories": [
+        "Fairy tales",
+        "Fantasy",
+        "Adventure",
+        "Detective stories",
+        "Secrets & clues",
+        "Science fiction",
+        "Superheroes",
+        "Strange situations",
+        "Alternative endings",
+        "Story prompts"
+      ]
+    },
+    {
+      "id": "society-culture",
+      "label": "Society & Culture",
+      "subcategories": [
+        "Traditions & festivals",
+        "Countries & cultures",
+        "Food traditions",
+        "Community",
+        "Media",
+        "Technology in society",
+        "Social rules",
+        "Cultural differences",
+        "Current issues",
+        "Citizenship"
+      ]
+    },
+    {
+      "id": "opinions-ideas",
+      "label": "Opinions, Ideas & Big Questions",
+      "subcategories": [
+        "Agree or disagree",
+        "Choices & dilemmas",
+        "Would you rather?",
+        "Ethics",
+        "Hypothetical situations",
+        "Philosophical questions",
+        "Predictions",
+        "Arguments & counterarguments"
+      ]
+    },
+    {
+      "id": "real-life-communication",
+      "label": "Real-Life Communication",
+      "subcategories": [
+        "Greetings & introductions",
+        "Asking questions",
+        "Making requests",
+        "Giving instructions",
+        "Offering help",
+        "Apologising",
+        "Making plans",
+        "Solving misunderstandings",
+        "Telephone conversations",
+        "Role-play"
+      ]
+    },
+    {
+      "id": "words-grammar",
+      "label": "Words, Grammar & Language Discovery",
+      "subcategories": [
+        "Vocabulary themes",
+        "Verbs & actions",
+        "Adjectives",
+        "Synonyms & antonyms",
+        "Word associations",
+        "Collocations",
+        "Idioms",
+        "Phrasal verbs",
+        "Word formation",
+        "Pronunciation",
+        "Spelling",
+        "Grammar patterns",
+        "Noun gender",
+        "Etymology"
+      ]
+    }
+  ],
+  "games": [
+    {
+      "id": "fluency-flow",
+      "name": "Fluency Flow",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "content-dependent",
+      "audiences": [
+        "young-learners",
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "places-travel",
+        "hobbies-entertainment",
+        "people-feelings",
+        "learning-knowledge",
+        "work-future",
+        "nature-world",
+        "society-culture",
+        "opinions-ideas",
+        "real-life-communication"
+      ],
+      "subcategories": [
+        "Everyday topics",
+        "Travel & experiences",
+        "Work & study",
+        "Culture & society",
+        "Technology",
+        "Environment",
+        "Personal stories",
+        "Random mix"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "battle-of-wits",
+      "name": "Battle of Wits",
+      "levels": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "content-dependent",
+      "audiences": [
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "opinions-ideas",
+        "society-culture",
+        "learning-knowledge",
+        "work-future",
+        "nature-world",
+        "hobbies-entertainment"
+      ],
+      "subcategories": [
+        "Education",
+        "Technology",
+        "Environment",
+        "Society",
+        "Ethics",
+        "Culture",
+        "Work & career"
+      ],
+      "modes": [
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "opinion-arena",
+      "name": "Opinion Arena",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "content-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "opinions-ideas",
+        "everyday-life",
+        "hobbies-entertainment",
+        "people-feelings",
+        "society-culture",
+        "learning-knowledge",
+        "nature-world"
+      ],
+      "subcategories": [
+        "Lifestyle",
+        "Food & free time",
+        "School & work",
+        "Technology",
+        "Environment",
+        "Culture",
+        "Ethics"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "critics-corner",
+      "name": "Critic's Corner",
+      "levels": [
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "content-dependent",
+      "audiences": [
+        "teens",
+        "adults"
+      ],
+      "categories": [
+        "opinions-ideas",
+        "society-culture",
+        "people-feelings",
+        "learning-knowledge",
+        "stories-mystery"
+      ],
+      "subcategories": [
+        "Famous quotes",
+        "Philosophy",
+        "Literature",
+        "Society",
+        "Human nature"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "100-questions",
+      "name": "100 Questions",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "deck-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "hobbies-entertainment",
+        "people-feelings",
+        "places-travel",
+        "opinions-ideas",
+        "society-culture",
+        "stories-mystery"
+      ],
+      "subcategories": [
+        "Funny",
+        "Personal",
+        "Everyday life",
+        "Relationships",
+        "Deep & philosophical",
+        "Hypothetical"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "story-chain",
+      "name": "Story Chain",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "prompt-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "stories-mystery",
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment"
+      ],
+      "subcategories": [
+        "Fantasy",
+        "Mystery",
+        "Adventure",
+        "Everyday life",
+        "Comedy",
+        "Science fiction"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "story-weaver",
+      "name": "Story Weaver",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "stories-mystery",
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "people-feelings",
+        "hobbies-entertainment",
+        "work-future"
+      ],
+      "subcategories": [
+        "Everyday vocabulary",
+        "Travel",
+        "Nature",
+        "Emotions",
+        "Work",
+        "Adventure"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "hot-seat",
+      "name": "Hot Seat",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment",
+        "people-feelings",
+        "work-future",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday objects",
+        "Food",
+        "Animals",
+        "Places",
+        "Professions",
+        "Actions"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "this-or-that",
+      "name": "This or That",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "deck-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "hobbies-entertainment",
+        "places-travel",
+        "people-feelings",
+        "opinions-ideas",
+        "society-culture"
+      ],
+      "subcategories": [
+        "Lifestyle",
+        "Food",
+        "Travel",
+        "Technology",
+        "Relationships",
+        "Hypothetical choices"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "action-hero",
+      "name": "Action Hero",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "hobbies-entertainment",
+        "nature-world",
+        "work-future",
+        "real-life-communication",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday actions",
+        "Sports",
+        "Adventure",
+        "Work",
+        "Household activities"
+      ],
+      "modes": [
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "identity-mystery",
+      "name": "Identity Mystery",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "content-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "people-feelings",
+        "hobbies-entertainment",
+        "learning-knowledge",
+        "work-future",
+        "stories-mystery",
+        "nature-world",
+        "society-culture"
+      ],
+      "subcategories": [
+        "Famous people",
+        "Fictional characters",
+        "Professions",
+        "Historical figures",
+        "Animals"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "object-quest",
+      "name": "Object Quest",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment",
+        "work-future",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Household objects",
+        "Food",
+        "Clothing",
+        "Nature",
+        "Travel",
+        "Technology"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "scene-match",
+      "name": "Scene Match",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1"
+      ],
+      "levelAvailability": "scene-dependent",
+      "audiences": [
+        "young-learners",
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "places-travel",
+        "learning-knowledge",
+        "work-future",
+        "nature-world"
+      ],
+      "subcategories": [
+        "Home",
+        "Classroom",
+        "Restaurant",
+        "City",
+        "Supermarket",
+        "Nature"
+      ],
+      "modes": [
+        "solo",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "word-linker",
+      "name": "Word Linker",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "people-feelings",
+        "hobbies-entertainment",
+        "work-future",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday life",
+        "Food",
+        "Nature",
+        "Emotions",
+        "Work",
+        "Travel"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "last-letter",
+      "name": "Last Letter",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday words",
+        "Animals",
+        "Food",
+        "Places",
+        "Verbs",
+        "Adjectives"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "emoji-odyssey",
+      "name": "Emoji Odyssey",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "puzzle-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "hobbies-entertainment",
+        "people-feelings",
+        "stories-mystery",
+        "society-culture",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Idioms",
+        "Movies & stories",
+        "Everyday expressions",
+        "Emotions",
+        "Proverbs"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "cosy-crossword",
+      "name": "Cosy Crossword",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment",
+        "learning-knowledge",
+        "work-future",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday vocabulary",
+        "Food",
+        "Travel",
+        "Nature",
+        "Work",
+        "Mixed practice"
+      ],
+      "modes": [
+        "solo",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "lucky-numbers",
+      "name": "Lucky Numbers",
+      "levels": [
+        "A0"
+      ],
+      "levelAvailability": "special-category-selection",
+      "audiences": [
+        "young-learners",
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "words-grammar",
+        "everyday-life"
+      ],
+      "subcategories": [
+        "Alphabet",
+        "Numbers 0–9",
+        "Numbers 0–19",
+        "Numbers 0–100"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ],
+      "specialSelection": {
+        "label": "Practice set",
+        "options": [
+          "Alphabet",
+          "Numbers 0–9",
+          "Numbers 0–19",
+          "Numbers 0–100"
+        ],
+        "bypassesCEFR": true
+      }
+    },
+    {
+      "id": "etymology-explorer",
+      "name": "Etymology Explorer",
+      "levels": [
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "language-dependent",
+      "audiences": [
+        "teens",
+        "adults"
+      ],
+      "categories": [
+        "words-grammar",
+        "learning-knowledge",
+        "society-culture"
+      ],
+      "subcategories": [
+        "Word origins",
+        "Prefixes & suffixes",
+        "Latin & Greek roots",
+        "Word families",
+        "Cognates"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    },
+    {
+      "id": "what-gender-is-it",
+      "name": "What Gender Is It?",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "language-dependent",
+      "audiences": [
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "words-grammar",
+        "everyday-life"
+      ],
+      "subcategories": [
+        "Masculine & feminine",
+        "Articles",
+        "Gender exceptions",
+        "Noun endings",
+        "Mixed practice"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group",
+        "online",
+        "offline"
+      ]
+    }
+  ]
+}
