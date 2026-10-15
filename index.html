@@ -95,10 +95,22 @@
               <option value="all">All topics</option>
             </select>
           </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-subcategory">
+            <label class="fl" id="fg-subcategory" for="filter-subcategory">Subtopic:</label>
+            <select class="cosy-taxonomy-select" id="filter-subcategory" disabled>
+              <option value="all">All subtopics</option>
+            </select>
+          </div>
           <div class="filter-group" role="group" aria-labelledby="fg-level">
             <label class="fl" id="fg-level" for="filter-level">Level:</label>
             <select class="cosy-taxonomy-select" id="filter-level">
               <option value="all">All levels</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-audience">
+            <label class="fl" id="fg-audience" for="filter-audience">Audience:</label>
+            <select class="cosy-taxonomy-select" id="filter-audience">
+              <option value="all">All ages</option>
             </select>
           </div>
         </div>
@@ -363,7 +375,7 @@
 
           // Filter Pills Handler
           const filterPills = document.querySelectorAll('.fpill');
-          const state = { players: 'all', skill: 'all', category: 'all', level: 'all' };
+          const state = { players: 'all', skill: 'all' };
 
           function updateFilters() {
             const sections = [
@@ -381,16 +393,22 @@
                 const pAttr = (card.getAttribute('data-players') || '').split(/\s+/);
                 const sAttr = card.getAttribute('data-skill') || '';
 
-                const categories = (card.dataset.categories || '').split(/\\s+/).filter(Boolean);
-                const levels = (card.dataset.levels || '').split(/\\s+/).filter(Boolean);
+                const categories = (card.dataset.categories || '').split(/\s+/).filter(Boolean);
+                const subcategories = (card.dataset.subcategories || '').split(/\s+/).filter(Boolean);
+                const levels = (card.dataset.levels || '').split(/\s+/).filter(Boolean);
+                const audiences = (card.dataset.audiences || '').split(/\s+/).filter(Boolean);
                 const matchesPlayers = state.players === 'all' || pAttr.includes(state.players);
                 const matchesSkill = state.skill === 'all' || sAttr === state.skill;
                 const selectedCategory = document.getElementById('filter-category')?.value || 'all';
+                const selectedSubcategory = document.getElementById('filter-subcategory')?.value || 'all';
                 const selectedLevel = document.getElementById('filter-level')?.value || 'all';
+                const selectedAudience = document.getElementById('filter-audience')?.value || 'all';
                 const matchesCategory = selectedCategory === 'all' || categories.includes(selectedCategory);
+                const matchesSubcategory = selectedSubcategory === 'all' || subcategories.includes(selectedSubcategory);
                 const matchesLevel = selectedLevel === 'all' || levels.includes(selectedLevel);
+                const matchesAudience = selectedAudience === 'all' || audiences.includes(selectedAudience);
 
-                if (matchesPlayers && matchesSkill && matchesCategory && matchesLevel) {
+                if (matchesPlayers && matchesSkill && matchesCategory && matchesSubcategory && matchesLevel && matchesAudience) {
                   card.removeAttribute('hidden');
                   visibleCount++;
                 } else {
@@ -413,6 +431,8 @@
               }
             });
           }
+
+          window.updateGameHubFilters = updateFilters;
 
           filterPills.forEach(pill => {
             pill.addEventListener('click', () => {
