@@ -506,12 +506,9 @@
       "id": "opinion-arena",
       "name": "Opinion Arena",
       "levels": [
-        "A1",
-        "A2",
         "B1",
         "B2",
-        "C1",
-        "C2"
+        "C1"
       ],
       "levelAvailability": "prompt-tagged",
       "audiences": [
@@ -564,7 +561,7 @@
           "C1"
         ]
       },
-      "audienceNotes": "The activity supports expressing and weighing opinions with phrase banks. Review topic prompts for age appropriateness and sensitivity; selectable levels are setup choices rather than independent assessment of debate readiness.",
+      "audienceNotes": "The setup selector offers A1–C2, but the taxonomy only advertises B1–C1 where explicit source-level mappings currently exist. Do not treat the broader selector as proof that every language has tagged prompts at every level. Review topic prompts for age appropriateness and sensitivity.",
       "modeNotes": "The arena format is designed around contrasting positions and a shared debate meter. It can be facilitated with pairs or groups, but the setup does not enforce group size or guarantee solo-first play."
     },
     {
