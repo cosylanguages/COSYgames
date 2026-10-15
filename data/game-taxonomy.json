@@ -1396,7 +1396,6 @@
       "contentSets": [
         {
           "id": "airport",
-          "level": "B1",
           "categories": [
             "places-travel"
           ],
@@ -1404,85 +1403,101 @@
             "Airports",
             "Transport",
             "Travel problems"
+          ],
+          "levels": [
+            "B1"
           ]
         },
         {
           "id": "animals",
-          "level": "A1",
           "categories": [
             "nature-world"
           ],
           "subcategories": [
             "Animals & pets"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "apartment",
-          "level": "A1",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Home & household"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "apartment_plan",
-          "level": "A1",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Home & household"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "bathroom",
-          "level": "A1",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Home & household",
             "Daily routines"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "bedroom",
-          "level": "A1",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Home & household",
             "Daily routines"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "cafe",
-          "level": "A2",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Food & drinks",
             "Restaurants"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "calendar",
-          "level": "A1",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Time & dates",
             "Daily routines"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "city",
-          "level": "A2",
           "categories": [
             "places-travel"
           ],
@@ -1490,43 +1505,51 @@
             "My town",
             "Directions",
             "Transport"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "clothing",
-          "level": "A1",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Clothes & accessories"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "hospital",
-          "level": "B1",
           "categories": [
             "real-life-communication"
           ],
           "subcategories": [
             "Health & services",
             "Making requests"
+          ],
+          "levels": [
+            "B1"
           ]
         },
         {
           "id": "kitchen",
-          "level": "A1",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Home & household",
             "Food & drinks"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "market",
-          "level": "A2",
           "categories": [
             "everyday-life"
           ],
@@ -1534,126 +1557,151 @@
             "Shopping",
             "Food & drinks",
             "Money & prices"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "market_bakery",
-          "level": "A2",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Shopping",
             "Food & drinks"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "market_cheese",
-          "level": "A2",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Shopping",
             "Food & drinks"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "market_fish",
-          "level": "A2",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Shopping",
             "Food & drinks"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "market_fruit",
-          "level": "A2",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Shopping",
             "Food & drinks"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "market_veg",
-          "level": "A2",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Shopping",
             "Food & drinks"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "park_nature",
-          "level": "A2",
           "categories": [
             "nature-world"
           ],
           "subcategories": [
             "Landscapes",
             "Plants & flowers"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "restaurant",
-          "level": "A2",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Food & drinks",
             "Restaurants"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "routine",
-          "level": "A1",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Daily routines",
             "Time & dates"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "routine_calendar",
-          "level": "A1",
           "categories": [
             "everyday-life"
           ],
           "subcategories": [
             "Daily routines",
             "Time & dates"
+          ],
+          "levels": [
+            "A1"
           ]
         },
         {
           "id": "school_office",
-          "level": "A2",
           "categories": [
             "learning-knowledge"
           ],
           "subcategories": [
             "School subjects",
             "Workplace vocabulary"
+          ],
+          "levels": [
+            "A2"
           ]
         },
         {
           "id": "seasons",
-          "level": "A1",
           "categories": [
             "nature-world"
           ],
           "subcategories": [
             "Weather & seasons"
+          ],
+          "levels": [
+            "A1"
           ]
         }
       ]
