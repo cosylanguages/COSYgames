@@ -73,6 +73,13 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(wordLinker.contentSets.some(set => set.levelBasis === 'not-assessed'), 'Word Linker unlabelled puzzles must not be assigned guessed CEFR levels');
   assert.ok(wordLinker.contentSets.filter(set => set.levels).every(set => set.sourceLevel), 'Word Linker CEFR tags should preserve source level labels');
 
+  const hundredQuestions = taxonomy.games.find(game => game.id === '100-questions');
+  assert.deepEqual(hundredQuestions.levels, ['A2', 'B1', 'B2', 'C1', 'C2'], '100 Questions game-level CEFR list should match the explicit A2-C2 setup description');
+  assert.ok(hundredQuestions.audienceNotes.includes('depends on deck'), '100 Questions should warn that suitability varies by deck and card side');
+  assert.ok(hundredQuestions.modeNotes.includes('solo mode'), '100 Questions should distinguish individual lesson preparation from verified solo play');
+  assert.ok(hundredQuestions.contentSets.filter(set => ['family', 'student', 'myself'].includes(set.id)).every(set => set.audienceNote && set.audiences.includes('children')), 'Child-friendly sides should be documented for Family, Student, and Myself decks');
+  assert.ok(hundredQuestions.contentSets.filter(set => ['friends', 'interview', 'civic', 'netflix'].includes(set.id)).every(set => set.audienceNote && set.audiences.includes('adults')), 'Deck-specific suitability notes should exist for Friends, Interview, Civic, and Netflix');
+
   const luckyNumbers = taxonomy.games.find(game => game.id === 'lucky-numbers');
   assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–100']);
   assert.equal(luckyNumbers.specialSelection.bypassesCEFR, true);
