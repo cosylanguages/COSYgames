@@ -2290,9 +2290,7 @@
     {
       "id": "lucky-numbers",
       "name": "Lucky Numbers",
-      "levels": [
-        "A0"
-      ],
+      "levels": [],
       "levelAvailability": "special-category-selection",
       "audiences": [
         "young-learners",
