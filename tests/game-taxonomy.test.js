@@ -38,8 +38,12 @@ test('Shared game taxonomy stays aligned with the hub', () => {
     if (game.contentSets) {
       game.contentSets.forEach(set => {
         assert.ok(set.id, game.id + ' content set needs an ID');
-        assert.ok(Array.isArray(set.levels) && set.levels.length, game.id + '/' + set.id + ' needs level tags');
-        set.levels.forEach(id => assert.ok(game.levels.includes(id), game.id + '/' + set.id + ' has undeclared level ' + id));
+        if (Array.isArray(set.levels) && set.levels.length) {
+          set.levels.forEach(id => assert.ok(game.levels.includes(id), game.id + '/' + set.id + ' has undeclared level ' + id));
+        } else {
+          assert.equal(set.levelBasis, 'not-assessed', game.id + '/' + set.id + ' without CEFR tags must explicitly state levelBasis=not-assessed');
+          assert.ok(set.sourceLevelNote, game.id + '/' + set.id + ' must explain why CEFR is not assigned');
+        }
         set.categories.forEach(id => assert.ok(categoryIds.has(id), game.id + '/' + set.id + ' references unknown category ' + id));
         if (set.source) assert.ok(fs.existsSync(path.join(root, set.source)), game.id + '/' + set.id + ' source file does not exist: ' + set.source);
       });
@@ -54,6 +58,11 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   const thisOrThat = taxonomy.games.find(game => game.id === 'this-or-that');
   assert.equal(thisOrThat.contentSets.length, 12, 'This or That should tag all twelve English decks');
   assert.ok(thisOrThat.contentSets.every(set => set.levelBuckets && set.levelBuckets['A0-A1']), 'This or That decks should preserve their source CEFR buckets');
+
+  const questions = taxonomy.games.find(game => game.id === '100-questions');
+  assert.equal(questions.contentSets.length, 8, '100 Questions should tag all eight current decks');
+  assert.ok(questions.contentSets.every(set => set.levelBasis === 'not-assessed' && !set.levels), '100 Questions should not imply unverified CEFR levels for its progressive stages');
+  assert.ok(questions.contentSets.every(set => fs.existsSync(path.join(root, set.source))), '100 Questions content-set sources should exist');
 
   const luckyNumbers = taxonomy.games.find(game => game.id === 'lucky-numbers');
   assert.deepEqual(luckyNumbers.specialSelection.options, ['Alphabet', 'Numbers 0–9', 'Numbers 0–19', 'Numbers 0–100']);
