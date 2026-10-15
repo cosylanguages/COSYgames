@@ -10,6 +10,10 @@ The hub's shared taxonomy lives in `data/game-taxonomy.json`. It is designed to 
 - **Play modes:** solo, pairs, mini-groups, and big groups. **Setting:** online or in person. These are separate dimensions; “in person” means a face-to-face setting, not a guarantee that the game runs without an internet connection.
 - **Special selectors:** some games use their own meaningful practice sets rather than ordinary CEFR selection. Lucky Numbers is explicitly configured for Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–100.
 
+## Content-set audit
+
+The 100 Questions deck audit records all eight current decks (Civic, Family, Friends, Interview, Myself, Netflix, Student, Teacher) with topic and subtopic tags grounded in their content and source filenames. Their source stages are thematic/progressive rather than CEFR assessments, so these deck entries intentionally do not claim individual CEFR levels. The game's overall level list remains discovery metadata and should not be read as a verified level for every deck.
+
 ## Updating the taxonomy
 
 1. Add or revise categories in `categories` and use stable, lowercase IDs.
