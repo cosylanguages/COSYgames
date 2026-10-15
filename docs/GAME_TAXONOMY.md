@@ -8,7 +8,7 @@ The hub's shared taxonomy lives in `data/game-taxonomy.json`. It is designed to 
 - **CEFR level:** A0–C2, with A0 representing supported pre-A1 practice. A game's listed levels are initial discovery metadata, not a guarantee that every prompt or deck supports that level.
 - **Audience:** content suitability guidance, not a proxy for language proficiency or a hard age gate.
 - **Play modes:** solo, pairs, mini-groups, and big groups. **Setting:** online or in person. These are separate dimensions; “in person” means a face-to-face setting, not a guarantee that the game runs without an internet connection.
-- **Special selectors:** some games use their own meaningful practice sets rather than ordinary CEFR selection. Lucky Numbers is explicitly configured for Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–99.
+- **Special selectors:** some games use their own meaningful practice sets rather than ordinary CEFR selection. Lucky Numbers is explicitly configured for Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–99. Etymology Explorer's Easy, Medium, and Hard choices are difficulty modes, while Language Network and Word Pairs are separate modes; none are explicit CEFR labels, so its CEFR level list is intentionally empty and its mode choices are recorded separately.
 
 Cosy Crossword source audit: its setup exposes A1, A2, B1, B2, and C1, so the taxonomy does not advertise A0 or C2. It has built-in fallback vocabulary for A1 and B2 and offers English, French, Italian, Russian, and Greek in the language selector. The setup does not expose a player-count control, so solo is the direct configured mode; collaborative classroom use is a facilitation choice.
 
