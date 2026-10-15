@@ -4,7 +4,7 @@ The hub's shared taxonomy lives in `data/game-taxonomy.json`. It is designed to 
 
 ## Dimensions
 
-- **Topic category and subcategory:** broad, reusable themes (for example, Everyday Life → Food & drinks). Content can be tagged across more than one category.
+- **Topic category and subcategory:** broad, reusable themes (for example, Everyday Life → Food & drinks). Content can be tagged across more than one category. `games[].subcategories` preserves the source/game-specific labels; `games[].subcategoryMappings` explicitly maps each label to zero or more canonical subtopics. The hub's subtopic selector uses only canonical targets. An empty mapping is intentional for game-specific modes or sets that are not meaningful shared topics (for example, Lucky Numbers' number ranges or a mixed-practice selector).
 - **CEFR level:** A0–C2, with A0 representing supported pre-A1 practice. A game's listed levels are initial discovery metadata, not a guarantee that every prompt or deck supports that level.
 - **Audience:** content suitability guidance, not a proxy for language proficiency or a hard age gate.
 - **Play modes:** solo, pairs, mini-groups, and big groups. **Setting:** online or in person. These are separate dimensions; “in person” means a face-to-face setting, not a guarantee that the game runs without an internet connection.
@@ -35,14 +35,14 @@ The 100 Questions deck audit records all eight current decks (Civic, Family, Fri
 ## Updating the taxonomy
 
 1. Add or revise categories in `categories` and use stable, lowercase IDs.
-2. Tag each game with category IDs in `games[].categories`; add narrower prompts/deck tags in `games[].subcategories`.
+2. Tag each game with category IDs in `games[].categories`; preserve the labels used by the game's own content/setup in `games[].subcategories`, and map each label through `games[].subcategoryMappings` to one or more canonical `categories[].subcategories` labels. Use an empty array only when a source label is a game-specific mode/practice set rather than a reusable topic.
 3. Keep the hub's filters data-driven. `shared/js/game-taxonomy.js` loads this file and annotates existing game cards with the metadata used by the selectors.
 4. When content decks gain explicit CEFR or audience metadata, replace broad provisional game-level tags with deck- or prompt-level tags.
 5. Avoid treating age as proficiency: age suitability and language level are separate dimensions.
 
 ## Current implementation
 
-The hub combines the existing player and game-family filters with **topic, subtopic, CEFR level, audience, group-size, and setting** selectors. The original card layout and game URLs are preserved. The topic and level metadata is centralized in the JSON file; subtopics are populated dynamically from the selected topic.
+The hub combines the existing player and game-family filters with **topic, subtopic, CEFR level, audience, group-size, and setting** selectors. The original card layout and game URLs are preserved. The topic and level metadata is centralized in the JSON file; canonical subtopics are populated dynamically from the selected topic, using the explicit per-game mapping rather than mixing source labels into the shared filter.
 
 ## Source-level mapping
 
