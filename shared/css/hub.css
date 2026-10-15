@@ -348,3 +348,15 @@ body.theme-dark .gc .gtag.mystery {
 @media (max-width: 640px) {
   .cosy-taxonomy-select { width: 100%; max-width: none; }
 }
+
+
+.taxonomy-filter-note {
+  margin: -0.5rem 0 1.25rem;
+  color: var(--text-muted, #625f58);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+html[data-theme="dark"] .taxonomy-filter-note,
+body.theme-dark .taxonomy-filter-note {
+  color: var(--ink-soft, #c8d8c9);
+}
