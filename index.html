@@ -89,6 +89,18 @@
             <button class="fpill" data-group="skill" data-f="mystery" aria-pressed="false" data-i18n="section_mystery">Mystery & Guesses</button>
             <button class="fpill" data-group="skill" data-f="vocab" aria-pressed="false" data-i18n="section_vocab">Vocab & Puzzles</button>
           </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-category">
+            <label class="fl" id="fg-category" for="filter-category">Topic:</label>
+            <select class="cosy-taxonomy-select" id="filter-category">
+              <option value="all">All topics</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-level">
+            <label class="fl" id="fg-level" for="filter-level">Level:</label>
+            <select class="cosy-taxonomy-select" id="filter-level">
+              <option value="all">All levels</option>
+            </select>
+          </div>
         </div>
 
         <!-- SPEAKING & FLUENCY (9 Games) -->
@@ -351,7 +363,7 @@
 
           // Filter Pills Handler
           const filterPills = document.querySelectorAll('.fpill');
-          const state = { players: 'all', skill: 'all' };
+          const state = { players: 'all', skill: 'all', category: 'all', level: 'all' };
 
           function updateFilters() {
             const sections = [
@@ -369,10 +381,16 @@
                 const pAttr = (card.getAttribute('data-players') || '').split(/\s+/);
                 const sAttr = card.getAttribute('data-skill') || '';
 
+                const categories = (card.dataset.categories || '').split(/\\s+/).filter(Boolean);
+                const levels = (card.dataset.levels || '').split(/\\s+/).filter(Boolean);
                 const matchesPlayers = state.players === 'all' || pAttr.includes(state.players);
                 const matchesSkill = state.skill === 'all' || sAttr === state.skill;
+                const selectedCategory = document.getElementById('filter-category')?.value || 'all';
+                const selectedLevel = document.getElementById('filter-level')?.value || 'all';
+                const matchesCategory = selectedCategory === 'all' || categories.includes(selectedCategory);
+                const matchesLevel = selectedLevel === 'all' || levels.includes(selectedLevel);
 
-                if (matchesPlayers && matchesSkill) {
+                if (matchesPlayers && matchesSkill && matchesCategory && matchesLevel) {
                   card.removeAttribute('hidden');
                   visibleCount++;
                 } else {
@@ -427,7 +445,7 @@
       })();
     </script>
 
-    <div id="toast" class="toast-notification"></div>
+    <script src="./shared/js/game-taxonomy.js"></script>\n    <div id="toast" class="toast-notification"></div>
     <script defer src="./shared/js/auth-sso.js"></script>
     <script defer src="./shared/js/cms-editor.js"></script>
     <script src="./shared/utils/game-utils.js"></script>
