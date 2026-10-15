@@ -1,0 +1,2974 @@
+{
+  "schemaVersion": 1,
+  "description": "Shared, extensible taxonomy for COSYgames. Category metadata is a starting point; level availability and individual content tags should be validated against each game's content before being treated as exhaustive.",
+  "cefrLevels": [
+    {
+      "id": "A0",
+      "label": "Pre-A1 / Beginner",
+      "description": "First words, recognition, and highly supported practice"
+    },
+    {
+      "id": "A1",
+      "label": "A1 — Beginner",
+      "description": "Simple familiar words and everyday phrases"
+    },
+    {
+      "id": "A2",
+      "label": "A2 — Elementary",
+      "description": "Routine exchanges and short descriptions"
+    },
+    {
+      "id": "B1",
+      "label": "B1 — Intermediate",
+      "description": "Connected speech, experiences, and opinions"
+    },
+    {
+      "id": "B2",
+      "label": "B2 — Upper intermediate",
+      "description": "More detailed explanations and arguments"
+    },
+    {
+      "id": "C1",
+      "label": "C1 — Advanced",
+      "description": "Flexible, nuanced expression"
+    },
+    {
+      "id": "C2",
+      "label": "C2 — Proficient",
+      "description": "Precise, nuanced and sophisticated use"
+    }
+  ],
+  "audiences": [
+    {
+      "id": "young-learners",
+      "label": "Young learners"
+    },
+    {
+      "id": "children",
+      "label": "Children"
+    },
+    {
+      "id": "teens",
+      "label": "Teenagers"
+    },
+    {
+      "id": "adults",
+      "label": "Adults"
+    },
+    {
+      "id": "mixed-ages",
+      "label": "Mixed ages"
+    }
+  ],
+  "playModes": [
+    {
+      "id": "solo",
+      "label": "Solo"
+    },
+    {
+      "id": "pairs",
+      "label": "Pairs"
+    },
+    {
+      "id": "mini-group",
+      "label": "Mini groups"
+    },
+    {
+      "id": "big-group",
+      "label": "Big groups"
+    }
+  ],
+  "categories": [
+    {
+      "id": "everyday-life",
+      "label": "Everyday Life",
+      "subcategories": [
+        "Home & household",
+        "Daily routines",
+        "Food & drinks",
+        "Clothes & accessories",
+        "Shopping",
+        "Money & prices",
+        "Time & dates",
+        "Numbers",
+        "Colours & shapes",
+        "Personal belongings"
+      ]
+    },
+    {
+      "id": "nature-world",
+      "label": "Nature & the World",
+      "subcategories": [
+        "Animals & pets",
+        "Plants & flowers",
+        "Weather & seasons",
+        "Landscapes",
+        "Oceans",
+        "Space",
+        "Environment",
+        "Climate & conservation"
+      ]
+    },
+    {
+      "id": "places-travel",
+      "label": "Places & Travel",
+      "subcategories": [
+        "My town",
+        "Countries & nationalities",
+        "Transport",
+        "Directions",
+        "Holidays",
+        "Hotels",
+        "Airports",
+        "Restaurants",
+        "Sightseeing",
+        "Travel problems"
+      ]
+    },
+    {
+      "id": "hobbies-entertainment",
+      "label": "Hobbies, Fun & Entertainment",
+      "subcategories": [
+        "Sports",
+        "Games",
+        "Music",
+        "Films & TV",
+        "Books",
+        "Art & creativity",
+        "Dance",
+        "Internet culture",
+        "Celebrations",
+        "Free-time activities"
+      ]
+    },
+    {
+      "id": "people-feelings",
+      "label": "People, Feelings & Relationships",
+      "subcategories": [
+        "Family & friends",
+        "Personality",
+        "Feelings & emotions",
+        "Describing people",
+        "Friendship",
+        "Social situations",
+        "Communication",
+        "Conflict resolution",
+        "Empathy"
+      ]
+    },
+    {
+      "id": "learning-knowledge",
+      "label": "Learning & Knowledge",
+      "subcategories": [
+        "School subjects",
+        "Languages",
+        "Science",
+        "History",
+        "Geography",
+        "Mathematics",
+        "Inventions",
+        "General knowledge",
+        "Problem-solving",
+        "Study skills"
+      ]
+    },
+    {
+      "id": "work-future",
+      "label": "Work & Future",
+      "subcategories": [
+        "Jobs & professions",
+        "Workplace vocabulary",
+        "Skills & talents",
+        "Goals & ambitions",
+        "Career choices",
+        "Meetings",
+        "Interviews",
+        "Business communication",
+        "Entrepreneurship"
+      ]
+    },
+    {
+      "id": "stories-mystery",
+      "label": "Imagination, Stories & Mystery",
+      "subcategories": [
+        "Fairy tales",
+        "Fantasy",
+        "Adventure",
+        "Detective stories",
+        "Secrets & clues",
+        "Science fiction",
+        "Superheroes",
+        "Strange situations",
+        "Alternative endings",
+        "Story prompts"
+      ]
+    },
+    {
+      "id": "society-culture",
+      "label": "Society & Culture",
+      "subcategories": [
+        "Traditions & festivals",
+        "Countries & cultures",
+        "Food traditions",
+        "Community",
+        "Media",
+        "Technology in society",
+        "Social rules",
+        "Cultural differences",
+        "Current issues",
+        "Citizenship"
+      ]
+    },
+    {
+      "id": "opinions-ideas",
+      "label": "Opinions, Ideas & Big Questions",
+      "subcategories": [
+        "Agree or disagree",
+        "Choices & dilemmas",
+        "Would you rather?",
+        "Ethics",
+        "Hypothetical situations",
+        "Philosophical questions",
+        "Predictions",
+        "Arguments & counterarguments"
+      ]
+    },
+    {
+      "id": "real-life-communication",
+      "label": "Real-Life Communication",
+      "subcategories": [
+        "Greetings & introductions",
+        "Asking questions",
+        "Making requests",
+        "Giving instructions",
+        "Offering help",
+        "Apologising",
+        "Making plans",
+        "Solving misunderstandings",
+        "Telephone conversations",
+        "Role-play"
+      ]
+    },
+    {
+      "id": "words-grammar",
+      "label": "Words, Grammar & Language Discovery",
+      "subcategories": [
+        "Vocabulary themes",
+        "Verbs & actions",
+        "Adjectives",
+        "Synonyms & antonyms",
+        "Word associations",
+        "Collocations",
+        "Idioms",
+        "Phrasal verbs",
+        "Word formation",
+        "Pronunciation",
+        "Spelling",
+        "Grammar patterns",
+        "Noun gender",
+        "Etymology"
+      ]
+    }
+  ],
+  "games": [
+    {
+      "id": "fluency-flow",
+      "name": "Fluency Flow",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "levelAvailability": "prompt-tagged",
+      "audiences": [
+        "young-learners",
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "places-travel",
+        "hobbies-entertainment",
+        "people-feelings",
+        "learning-knowledge",
+        "work-future",
+        "nature-world",
+        "society-culture",
+        "opinions-ideas",
+        "real-life-communication",
+        "stories-mystery"
+      ],
+      "subcategories": [
+        "Everyday topics",
+        "Travel & experiences",
+        "Work & study",
+        "Culture & society",
+        "Technology",
+        "Environment",
+        "Personal stories",
+        "Random mix"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "sourceLevels": [
+        "starter",
+        "elementary",
+        "intermediate",
+        "upper_intermediate",
+        "advanced"
+      ],
+      "levelMapping": {
+        "starter": [
+          "A0",
+          "A1"
+        ],
+        "elementary": [
+          "A1",
+          "A2"
+        ],
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ],
+        "advanced": [
+          "C1"
+        ]
+      },
+      "contentSets": [
+        {
+          "id": "starter",
+          "name": "Starter conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "starter",
+          "levels": [
+            "A0",
+            "A1"
+          ],
+          "categories": [
+            "everyday-life",
+            "people-feelings",
+            "nature-world"
+          ],
+          "subcategories": [
+            "Daily routines",
+            "Family & friends",
+            "Weather & seasons",
+            "Animals & pets"
+          ]
+        },
+        {
+          "id": "elementary",
+          "name": "Elementary conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "elementary",
+          "levels": [
+            "A1",
+            "A2"
+          ],
+          "categories": [
+            "everyday-life",
+            "places-travel",
+            "hobbies-entertainment"
+          ],
+          "subcategories": [
+            "Daily routines",
+            "Food & drinks",
+            "Holidays",
+            "Transport",
+            "Free-time activities"
+          ]
+        },
+        {
+          "id": "intermediate",
+          "name": "Intermediate conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "intermediate",
+          "levels": [
+            "B1"
+          ],
+          "categories": [
+            "people-feelings",
+            "hobbies-entertainment",
+            "places-travel",
+            "everyday-life",
+            "society-culture"
+          ],
+          "subcategories": [
+            "Personal stories",
+            "Skills & talents",
+            "Holidays",
+            "Technology in society"
+          ]
+        },
+        {
+          "id": "upper-intermediate",
+          "name": "Upper-intermediate conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "upper_intermediate",
+          "levels": [
+            "B2"
+          ],
+          "categories": [
+            "opinions-ideas",
+            "hobbies-entertainment",
+            "places-travel",
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Hypothetical situations",
+            "Films & TV",
+            "Travel",
+            "Goals & ambitions"
+          ]
+        },
+        {
+          "id": "advanced",
+          "name": "Advanced conversation prompts",
+          "source": "data/en/fluency.js",
+          "sourceLevel": "advanced",
+          "levels": [
+            "C1"
+          ],
+          "categories": [
+            "opinions-ideas",
+            "society-culture",
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Philosophical questions",
+            "Cultural differences",
+            "Goals & ambitions"
+          ]
+        }
+      ],
+      "audienceNotes": "The setup offers A1–C2 level choices and practice-language selection; the audited English prompt source has a Starter band mapped approximately to A0/A1, but other language datasets may differ. Audience suitability depends on selected prompts and facilitation.",
+      "modeNotes": "The setup runs ten speaking prompts and does not enforce a participant count. Solo practice is directly possible; pairs and groups are facilitation options rather than distinct enforced game modes.",
+      "subcategoryMappings": {
+        "Everyday topics": [
+          "Daily routines",
+          "Food & drinks",
+          "Shopping",
+          "Family & friends"
+        ],
+        "Travel & experiences": [
+          "Holidays",
+          "Sightseeing",
+          "Travel problems"
+        ],
+        "Work & study": [
+          "Workplace vocabulary",
+          "School subjects",
+          "Study skills"
+        ],
+        "Culture & society": [
+          "Countries & cultures",
+          "Community",
+          "Cultural differences"
+        ],
+        "Technology": [
+          "Technology in society",
+          "Inventions"
+        ],
+        "Environment": [
+          "Environment"
+        ],
+        "Personal stories": [
+          "Story prompts",
+          "Family & friends"
+        ],
+        "Random mix": []
+      }
+    },
+    {
+      "id": "battle-of-wits",
+      "name": "Battle of Wits",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "content-dependent",
+      "audiences": [
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "opinions-ideas",
+        "society-culture",
+        "learning-knowledge",
+        "work-future",
+        "nature-world",
+        "hobbies-entertainment"
+      ],
+      "subcategories": [
+        "Education",
+        "Technology",
+        "Environment",
+        "Society",
+        "Ethics",
+        "Culture",
+        "Work & career"
+      ],
+      "modes": [
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "A timed team-versus-team buzzer game with a short three-round setup. Review the selected prompts and vocabulary for the learners; a CEFR selector is not a guarantee that every language has equivalent content at each level.",
+      "modeNotes": "The game explicitly scores Team A and Team B, so it is best represented as team play for a group rather than solo or a simple pair activity. The setup does not enforce participant counts.",
+      "subcategoryMappings": {
+        "Education": [
+          "School subjects",
+          "Study skills"
+        ],
+        "Technology": [
+          "Technology in society",
+          "Inventions"
+        ],
+        "Environment": [
+          "Environment"
+        ],
+        "Society": [
+          "Community",
+          "Current issues"
+        ],
+        "Ethics": [
+          "Ethics"
+        ],
+        "Culture": [
+          "Countries & cultures",
+          "Cultural differences"
+        ],
+        "Work & career": [
+          "Career choices",
+          "Jobs & professions"
+        ]
+      }
+    },
+    {
+      "id": "opinion-arena",
+      "name": "Opinion Arena",
+      "levels": [
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "levelAvailability": "prompt-tagged",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "opinions-ideas",
+        "everyday-life",
+        "hobbies-entertainment",
+        "people-feelings",
+        "society-culture",
+        "learning-knowledge",
+        "nature-world",
+        "work-future"
+      ],
+      "subcategories": [
+        "Lifestyle",
+        "Food & free time",
+        "School & work",
+        "Technology",
+        "Environment",
+        "Culture",
+        "Ethics"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "sourceLevels": [
+        "intermediate",
+        "upper_intermediate",
+        "advanced"
+      ],
+      "levelMapping": {
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ],
+        "advanced": [
+          "C1"
+        ]
+      },
+      "audienceNotes": "The setup selector offers A1–C2, but the taxonomy only advertises B1–C1 where explicit source-level mappings currently exist. Do not treat the broader selector as proof that every language has tagged prompts at every level. Review topic prompts for age appropriateness and sensitivity.",
+      "modeNotes": "The arena format is designed around contrasting positions and a shared debate meter. It can be facilitated with pairs or groups, but the setup does not enforce group size or guarantee solo-first play.",
+      "subcategoryMappings": {
+        "Lifestyle": [
+          "Daily routines",
+          "Free-time activities"
+        ],
+        "Food & free time": [
+          "Food & drinks",
+          "Free-time activities"
+        ],
+        "School & work": [
+          "School subjects",
+          "Workplace vocabulary"
+        ],
+        "Technology": [
+          "Technology in society",
+          "Inventions"
+        ],
+        "Environment": [
+          "Environment"
+        ],
+        "Culture": [
+          "Countries & cultures",
+          "Cultural differences"
+        ],
+        "Ethics": [
+          "Ethics"
+        ]
+      }
+    },
+    {
+      "id": "critics-corner",
+      "name": "Critic's Corner",
+      "levels": [
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "content-dependent",
+      "audiences": [
+        "teens",
+        "adults"
+      ],
+      "categories": [
+        "opinions-ideas",
+        "society-culture",
+        "people-feelings",
+        "learning-knowledge",
+        "stories-mystery",
+        "hobbies-entertainment"
+      ],
+      "subcategories": [
+        "Famous quotes",
+        "Philosophy",
+        "Literature",
+        "Society",
+        "Human nature"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "The setup offers Intermediate (B1) through Proficiency (C2) and practice-language selection. The level selector is a guide; topic sensitivity and language-specific prompt availability should be reviewed for the group.",
+      "modeNotes": "The setup runs five critique prompts without a fixed participant-count control. Solo responses are possible; collaborative discussion is a facilitation choice, not a separately enforced mode.",
+      "subcategoryMappings": {
+        "Famous quotes": [
+          "Philosophical questions"
+        ],
+        "Philosophy": [
+          "Philosophical questions",
+          "Ethics"
+        ],
+        "Literature": [
+          "Books",
+          "Story prompts"
+        ],
+        "Society": [
+          "Community",
+          "Current issues"
+        ],
+        "Human nature": [
+          "Personality",
+          "Feelings & emotions"
+        ]
+      }
+    },
+    {
+      "id": "100-questions",
+      "name": "100 Questions",
+      "levels": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "deck-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "hobbies-entertainment",
+        "people-feelings",
+        "places-travel",
+        "opinions-ideas",
+        "society-culture",
+        "stories-mystery"
+      ],
+      "subcategories": [
+        "Funny",
+        "Personal",
+        "Everyday life",
+        "Relationships",
+        "Deep & philosophical",
+        "Hypothetical"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "contentSets": [
+        {
+          "id": "civic",
+          "name": "Civic Exam",
+          "source": "100-questions/decks/civic.js",
+          "categories": [
+            "learning-knowledge",
+            "society-culture",
+            "places-travel"
+          ],
+          "subcategories": [
+            "Geography",
+            "History",
+            "Government",
+            "Rights & responsibilities"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses progressive content stages, not CEFR labels; no CEFR equivalence is asserted.",
+          "audiences": [
+            "teens",
+            "adults"
+          ],
+          "audienceNote": "Civic exam questions are country-specific and assume interest in civic knowledge; adapt region settings and review for learner context."
+        },
+        {
+          "id": "family",
+          "name": "Questions to Family",
+          "source": "100-questions/decks/family.js",
+          "categories": [
+            "people-feelings",
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Family & friends",
+            "Personal stories",
+            "Feelings & emotions"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source progresses from daily life to deeper relationships; these stages are not CEFR assessments.",
+          "audiences": [
+            "children",
+            "teens",
+            "adults",
+            "mixed-ages"
+          ],
+          "audienceNote": "Source provides a children-friendly card side and an adult-friendly side; choose the side appropriate to the group."
+        },
+        {
+          "id": "friends",
+          "name": "Questions to Friends",
+          "source": "100-questions/decks/friends.js",
+          "categories": [
+            "people-feelings",
+            "opinions-ideas"
+          ],
+          "subcategories": [
+            "Friendship",
+            "Feelings & emotions",
+            "Conflict resolution",
+            "Personal boundaries"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source progresses from safe icebreakers to more personal topics; stages are not CEFR assessments.",
+          "audiences": [
+            "teens",
+            "adults"
+          ],
+          "audienceNote": "Prompts become personal and include relationships, boundaries, and conflict; preview for younger groups."
+        },
+        {
+          "id": "interview",
+          "name": "Interview Questions",
+          "source": "100-questions/decks/interview.js",
+          "categories": [
+            "work-future",
+            "real-life-communication"
+          ],
+          "subcategories": [
+            "Interviews",
+            "Workplace vocabulary",
+            "Skills & talents",
+            "Problem-solving"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses interview stages, not CEFR labels; language demands vary by role and answer.",
+          "audiences": [
+            "teens",
+            "adults"
+          ],
+          "audienceNote": "Interview and workplace prompts are best suited to learners ready for career-related discussion."
+        },
+        {
+          "id": "myself",
+          "name": "Questions to Myself",
+          "source": "100-questions/decks/myself.js",
+          "categories": [
+            "people-feelings",
+            "opinions-ideas"
+          ],
+          "subcategories": [
+            "Feelings & emotions",
+            "Goals & ambitions",
+            "Hypothetical situations",
+            "Personal stories"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source contains multiple themed progressions; no CEFR equivalence is asserted.",
+          "audiences": [
+            "children",
+            "teens",
+            "adults",
+            "mixed-ages"
+          ],
+          "audienceNote": "Source provides a children-friendly card side and an adult-friendly side; choose the side appropriate to the group."
+        },
+        {
+          "id": "netflix",
+          "name": "Netflix Documentary Questions",
+          "source": "100-questions/decks/netflix.js",
+          "categories": [
+            "hobbies-entertainment",
+            "stories-mystery",
+            "society-culture"
+          ],
+          "subcategories": [
+            "Films & TV",
+            "Story prompts",
+            "Media",
+            "Secrets & clues"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses narrative stages and media themes, not CEFR labels.",
+          "audiences": [
+            "teens",
+            "adults"
+          ],
+          "audienceNote": "Media/documentary prompts may refer to mature themes; preview the selected questions and source material."
+        },
+        {
+          "id": "student",
+          "name": "Questions to Students",
+          "source": "100-questions/decks/student.js",
+          "categories": [
+            "learning-knowledge",
+            "people-feelings",
+            "everyday-life"
+          ],
+          "subcategories": [
+            "School subjects",
+            "Personal stories",
+            "Feelings & emotions",
+            "Goals & ambitions"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses progressive topic stages, not CEFR labels; audience suitability is separate from proficiency.",
+          "audiences": [
+            "children",
+            "teens",
+            "adults",
+            "mixed-ages"
+          ],
+          "audienceNote": "Source provides a children-friendly card side and an adult-friendly side; choose the side appropriate to the group."
+        },
+        {
+          "id": "teacher",
+          "name": "Teacher & Student Questions",
+          "source": "100-questions/decks/teacher.js",
+          "categories": [
+            "learning-knowledge",
+            "hobbies-entertainment",
+            "words-grammar"
+          ],
+          "subcategories": [
+            "Study skills",
+            "Languages",
+            "Grammar patterns",
+            "Pronunciation",
+            "Humour"
+          ],
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "The source uses themed stages and humour; no CEFR equivalence is asserted.",
+          "audiences": [
+            "children",
+            "teens",
+            "adults",
+            "mixed-ages"
+          ],
+          "audienceNote": "Teacher-student framing can be used across ages, but select questions and humour for the actual group."
+        }
+      ],
+      "audienceNotes": "Audience suitability depends on deck and card side. The Family, Student, and Myself decks explicitly provide a children-friendly side and an adult-friendly side. Other decks may contain personal, sensitive, civic, or adult-oriented prompts; do not treat the game-wide audience tags as blanket approval for every deck or question.",
+      "modeNotes": "The game supports individual and group lesson types. The UI says both players or the whole group can answer; solo mode should be treated as self-reflection/teacher-led preparation rather than a verified standalone game mode.",
+      "subcategoryMappings": {
+        "Funny": [],
+        "Personal": [
+          "Family & friends",
+          "Feelings & emotions"
+        ],
+        "Everyday life": [
+          "Daily routines",
+          "Personal belongings"
+        ],
+        "Relationships": [
+          "Family & friends",
+          "Friendship"
+        ],
+        "Deep & philosophical": [
+          "Philosophical questions",
+          "Ethics"
+        ],
+        "Hypothetical": [
+          "Hypothetical situations"
+        ]
+      }
+    },
+    {
+      "id": "story-chain",
+      "name": "Story Chain",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "prompt-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "stories-mystery",
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment"
+      ],
+      "subcategories": [
+        "Fantasy",
+        "Mystery",
+        "Adventure",
+        "Everyday life",
+        "Comedy",
+        "Science fiction"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "The activity is collaborative storytelling with sentence-by-sentence contributions. Audience suitability depends on the selected language, vocabulary pool, and facilitator support; the interface does not provide age-specific content filtering.",
+      "modeNotes": "Collaborative chain-building naturally supports pairs and groups. Solo use may be possible for practice, but the game description frames it as collaborative rather than a verified solo-first activity.",
+      "subcategoryMappings": {
+        "Fantasy": [
+          "Fantasy"
+        ],
+        "Mystery": [
+          "Detective stories",
+          "Secrets & clues"
+        ],
+        "Adventure": [
+          "Adventure"
+        ],
+        "Everyday life": [
+          "Daily routines",
+          "Personal belongings"
+        ],
+        "Comedy": [
+          "Strange situations"
+        ],
+        "Science fiction": [
+          "Science fiction"
+        ]
+      }
+    },
+    {
+      "id": "story-weaver",
+      "name": "Story Weaver",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "stories-mystery",
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "people-feelings",
+        "hobbies-entertainment",
+        "work-future",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday vocabulary",
+        "Travel",
+        "Nature",
+        "Emotions",
+        "Work",
+        "Adventure"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "The built-in grammar curriculum begins at A1 and progresses through higher levels. Story themes and examples should still be previewed for the intended age group; the interface is English-only.",
+      "modeNotes": "The curriculum provides prompts and grammar cues for composing stories; pairs and groups can share the storytelling task, but the setup does not enforce a particular group size.",
+      "subcategoryMappings": {
+        "Everyday vocabulary": [
+          "Vocabulary themes"
+        ],
+        "Travel": [
+          "Holidays",
+          "Transport"
+        ],
+        "Nature": [
+          "Environment",
+          "Animals & pets",
+          "Plants & flowers"
+        ],
+        "Emotions": [
+          "Feelings & emotions"
+        ],
+        "Work": [
+          "Workplace vocabulary",
+          "Jobs & professions"
+        ],
+        "Adventure": [
+          "Adventure"
+        ]
+      }
+    },
+    {
+      "id": "hot-seat",
+      "name": "Hot Seat",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment",
+        "people-feelings",
+        "work-future",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday objects",
+        "Food",
+        "Animals",
+        "Places",
+        "Professions",
+        "Actions"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "The setup describes one player guessing while others give clues. Preview vocabulary and definitions for the intended age group; proficiency selection is not an age-suitability guarantee.",
+      "modeNotes": "The rules require at least a guesser and a clue-giver, with others able to watch or contribute; pairs and larger groups fit the described roles. The game uses a 60-second timer and 15 rounds.",
+      "subcategoryMappings": {
+        "Everyday objects": [
+          "Personal belongings",
+          "Home & household"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Animals": [
+          "Animals & pets"
+        ],
+        "Places": [
+          "My town",
+          "Sightseeing"
+        ],
+        "Professions": [
+          "Jobs & professions"
+        ],
+        "Actions": [
+          "Verbs & actions"
+        ]
+      }
+    },
+    {
+      "id": "this-or-that",
+      "name": "This or That",
+      "levels": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "levelAvailability": "deck-tagged",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "hobbies-entertainment",
+        "places-travel",
+        "people-feelings",
+        "opinions-ideas",
+        "society-culture",
+        "words-grammar",
+        "work-future"
+      ],
+      "subcategories": [
+        "Describing people",
+        "Personality",
+        "Feelings & emotions",
+        "Daily routines",
+        "Time & dates",
+        "Choices & dilemmas",
+        "Hypothetical situations",
+        "Films & TV",
+        "Music",
+        "Books",
+        "Food & drinks",
+        "Grammar patterns",
+        "Free-time activities",
+        "Sports",
+        "Countries & nationalities",
+        "Cultural differences",
+        "Jobs & professions",
+        "Skills & talents",
+        "Personal belongings",
+        "Describing things",
+        "Holidays",
+        "Transport",
+        "Sightseeing"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "sourceLevels": [
+        "A0-A1",
+        "A2",
+        "B1",
+        "B2"
+      ],
+      "levelMapping": {
+        "A0-A1": [
+          "A0",
+          "A1"
+        ],
+        "A2": [
+          "A2"
+        ],
+        "B1": [
+          "B1"
+        ],
+        "B2": [
+          "B2"
+        ]
+      },
+      "contentSets": [
+        {
+          "id": "appearance",
+          "source": "this-or-that/decks/en/appearance.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Describing people",
+            "Personality"
+          ]
+        },
+        {
+          "id": "character",
+          "source": "this-or-that/decks/en/character.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Personality",
+            "Feelings & emotions"
+          ]
+        },
+        {
+          "id": "daily_habits",
+          "source": "this-or-that/decks/en/daily_habits.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Daily routines",
+            "Time & dates"
+          ]
+        },
+        {
+          "id": "dilemmas",
+          "source": "this-or-that/decks/en/dilemmas.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "opinions-ideas"
+          ],
+          "subcategories": [
+            "Choices & dilemmas",
+            "Hypothetical situations"
+          ]
+        },
+        {
+          "id": "entertainment",
+          "source": "this-or-that/decks/en/entertainment.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "hobbies-entertainment"
+          ],
+          "subcategories": [
+            "Films & TV",
+            "Music",
+            "Books"
+          ]
+        },
+        {
+          "id": "food",
+          "source": "this-or-that/decks/en/food.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Food & drinks"
+          ]
+        },
+        {
+          "id": "grammar",
+          "source": "this-or-that/decks/en/grammar.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "words-grammar"
+          ],
+          "subcategories": [
+            "Grammar patterns"
+          ]
+        },
+        {
+          "id": "hobbies",
+          "source": "this-or-that/decks/en/hobbies.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "hobbies-entertainment"
+          ],
+          "subcategories": [
+            "Free-time activities",
+            "Sports",
+            "Music"
+          ]
+        },
+        {
+          "id": "nationalities",
+          "source": "this-or-that/decks/en/nationalities.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "society-culture"
+          ],
+          "subcategories": [
+            "Countries & nationalities",
+            "Cultural differences"
+          ]
+        },
+        {
+          "id": "professions",
+          "source": "this-or-that/decks/en/professions.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "work-future"
+          ],
+          "subcategories": [
+            "Jobs & professions",
+            "Skills & talents"
+          ]
+        },
+        {
+          "id": "properties",
+          "source": "this-or-that/decks/en/properties.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Personal belongings",
+            "Describing things"
+          ]
+        },
+        {
+          "id": "travel",
+          "source": "this-or-that/decks/en/travel.json",
+          "levels": [
+            "A0",
+            "A1",
+            "A2",
+            "B1",
+            "B2"
+          ],
+          "levelBuckets": {
+            "A0-A1": [
+              "A0",
+              "A1"
+            ],
+            "A2": [
+              "A2"
+            ],
+            "B1": [
+              "B1"
+            ],
+            "B2": [
+              "B2"
+            ]
+          },
+          "categories": [
+            "places-travel"
+          ],
+          "subcategories": [
+            "Holidays",
+            "Transport",
+            "Sightseeing"
+          ]
+        }
+      ],
+      "audienceNotes": "The setup offers English, French, Italian, Russian, and Greek, CEFR bands A0–B2, and topic decks. Age suitability varies by deck (for example, dilemmas, nationalities, professions, or entertainment), so review the selected deck rather than treating all decks as interchangeable.",
+      "modeNotes": "Players choose between paired options; the setup does not enforce group size. It can be used individually or as a pair/group discussion activity, but group play is facilitation rather than a fixed participant configuration.",
+      "subcategoryMappings": {
+        "Describing people": [
+          "Describing people"
+        ],
+        "Personality": [
+          "Personality"
+        ],
+        "Feelings & emotions": [
+          "Feelings & emotions"
+        ],
+        "Daily routines": [
+          "Daily routines"
+        ],
+        "Time & dates": [
+          "Time & dates"
+        ],
+        "Choices & dilemmas": [
+          "Choices & dilemmas"
+        ],
+        "Hypothetical situations": [
+          "Hypothetical situations"
+        ],
+        "Films & TV": [
+          "Films & TV"
+        ],
+        "Music": [
+          "Music"
+        ],
+        "Books": [
+          "Books"
+        ],
+        "Food & drinks": [
+          "Food & drinks"
+        ],
+        "Grammar patterns": [
+          "Grammar patterns"
+        ],
+        "Free-time activities": [
+          "Free-time activities"
+        ],
+        "Sports": [
+          "Sports"
+        ],
+        "Countries & nationalities": [
+          "Countries & nationalities"
+        ],
+        "Cultural differences": [
+          "Cultural differences"
+        ],
+        "Jobs & professions": [
+          "Jobs & professions"
+        ],
+        "Skills & talents": [
+          "Skills & talents"
+        ],
+        "Personal belongings": [
+          "Personal belongings"
+        ],
+        "Describing things": [
+          "Adjectives"
+        ],
+        "Holidays": [
+          "Holidays"
+        ],
+        "Transport": [
+          "Transport"
+        ],
+        "Sightseeing": [
+          "Sightseeing"
+        ]
+      }
+    },
+    {
+      "id": "action-hero",
+      "name": "Action Hero",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "bucketed-word-lists",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "hobbies-entertainment",
+        "nature-world",
+        "work-future",
+        "real-life-communication",
+        "words-grammar",
+        "stories-mystery"
+      ],
+      "subcategories": [
+        "Everyday actions",
+        "Sports",
+        "Adventure",
+        "Work",
+        "Household activities"
+      ],
+      "modes": [
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "sourceLevels": [
+        "starter",
+        "elementary",
+        "intermediate",
+        "upper_intermediate",
+        "advanced",
+        "proficiency"
+      ],
+      "levelMapping": {
+        "starter": [
+          "A1"
+        ],
+        "elementary": [
+          "A1",
+          "A2"
+        ],
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ],
+        "advanced": [
+          "C1"
+        ],
+        "proficiency": [
+          "C2"
+        ]
+      },
+      "audienceNotes": "The activity asks players to act, mime, describe, or use sound effects for teammates to guess. The interface has no age-specific content filter; review vocabulary and acting prompts for the learners and group context. Movement can be adapted for accessibility.",
+      "modeNotes": "Team-based guessing is the described format, with a player acting and teammates guessing. Pairs and larger groups are plausible; the setup does not enforce a specific minimum or maximum player count.",
+      "subcategoryMappings": {
+        "Everyday actions": [
+          "Verbs & actions",
+          "Daily routines"
+        ],
+        "Sports": [
+          "Sports"
+        ],
+        "Adventure": [
+          "Adventure"
+        ],
+        "Work": [
+          "Workplace vocabulary",
+          "Jobs & professions"
+        ],
+        "Household activities": [
+          "Home & household",
+          "Daily routines"
+        ]
+      }
+    },
+    {
+      "id": "identity-mystery",
+      "name": "Identity Mystery",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "prompt-tagged",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "people-feelings",
+        "hobbies-entertainment",
+        "learning-knowledge",
+        "work-future",
+        "stories-mystery",
+        "nature-world",
+        "society-culture"
+      ],
+      "subcategories": [
+        "Famous people",
+        "Fictional characters",
+        "Professions",
+        "Historical figures",
+        "Animals"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "sourceLevels": [
+        "elementary",
+        "intermediate",
+        "upper_intermediate",
+        "advanced",
+        "proficiency"
+      ],
+      "levelMapping": {
+        "elementary": [
+          "A1",
+          "A2"
+        ],
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ],
+        "advanced": [
+          "C1"
+        ],
+        "proficiency": [
+          "C2"
+        ]
+      },
+      "audienceNotes": "The game uses hidden identities across famous people, jobs, and nationalities. Suitability depends on the chosen category and language data; review culturally specific names and nationality-related content for the group. No age-specific filter is provided.",
+      "modeNotes": "The player asks or records descriptive clues/questions to uncover a hidden identity. The UI does not set a fixed group size; pairs and groups can use it as a collaborative guessing activity. Do not assume solo play is a distinct supported mode.",
+      "subcategoryMappings": {
+        "Famous people": [
+          "History",
+          "Describing people"
+        ],
+        "Fictional characters": [
+          "Fantasy",
+          "Describing people"
+        ],
+        "Professions": [
+          "Jobs & professions"
+        ],
+        "Historical figures": [
+          "History"
+        ],
+        "Animals": [
+          "Animals & pets"
+        ]
+      }
+    },
+    {
+      "id": "object-quest",
+      "name": "Object Quest",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment",
+        "work-future",
+        "words-grammar",
+        "society-culture",
+        "learning-knowledge"
+      ],
+      "subcategories": [
+        "Household objects",
+        "Food",
+        "Clothing",
+        "Nature",
+        "Travel",
+        "Technology"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "The activity reveals hidden scene objects and target nouns. Suitability depends on the selected vocabulary, language data, and accessibility needs; the setup does not provide age-specific content filtering.",
+      "modeNotes": "The game is a visual object-discovery activity and may be used individually or collaboratively, but the setup does not define player roles or enforce group size. In-person availability does not by itself guarantee offline operation.",
+      "subcategoryMappings": {
+        "Household objects": [
+          "Home & household",
+          "Personal belongings"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Clothing": [
+          "Clothes & accessories"
+        ],
+        "Nature": [
+          "Environment",
+          "Animals & pets",
+          "Plants & flowers"
+        ],
+        "Travel": [
+          "Holidays",
+          "Transport"
+        ],
+        "Technology": [
+          "Technology in society",
+          "Inventions"
+        ]
+      }
+    },
+    {
+      "id": "scene-match",
+      "name": "Scene Match",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "scene-tagged",
+      "audiences": [
+        "young-learners",
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "places-travel",
+        "learning-knowledge",
+        "work-future",
+        "nature-world",
+        "real-life-communication"
+      ],
+      "subcategories": [
+        "Airports",
+        "Transport",
+        "Travel problems",
+        "Animals & pets",
+        "Home & household",
+        "Daily routines",
+        "Food & drinks",
+        "Restaurants",
+        "Time & dates",
+        "My town",
+        "Directions",
+        "Clothes & accessories",
+        "Health & services",
+        "Making requests",
+        "Shopping",
+        "Money & prices",
+        "Landscapes",
+        "Plants & flowers",
+        "School subjects",
+        "Workplace vocabulary",
+        "Weather & seasons"
+      ],
+      "modes": [
+        "solo"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "contentSets": [
+        {
+          "id": "airport",
+          "categories": [
+            "places-travel"
+          ],
+          "subcategories": [
+            "Airports",
+            "Transport",
+            "Travel problems"
+          ],
+          "levels": [
+            "B1"
+          ]
+        },
+        {
+          "id": "animals",
+          "categories": [
+            "nature-world"
+          ],
+          "subcategories": [
+            "Animals & pets"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "apartment",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Home & household"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "apartment_plan",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Home & household"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "bathroom",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Home & household",
+            "Daily routines"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "bedroom",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Home & household",
+            "Daily routines"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "cafe",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Food & drinks",
+            "Restaurants"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "calendar",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Time & dates",
+            "Daily routines"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "city",
+          "categories": [
+            "places-travel"
+          ],
+          "subcategories": [
+            "My town",
+            "Directions",
+            "Transport"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "clothing",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Clothes & accessories"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "hospital",
+          "categories": [
+            "real-life-communication"
+          ],
+          "subcategories": [
+            "Health & services",
+            "Making requests"
+          ],
+          "levels": [
+            "B1"
+          ]
+        },
+        {
+          "id": "kitchen",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Home & household",
+            "Food & drinks"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "market",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Shopping",
+            "Food & drinks",
+            "Money & prices"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "market_bakery",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Shopping",
+            "Food & drinks"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "market_cheese",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Shopping",
+            "Food & drinks"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "market_fish",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Shopping",
+            "Food & drinks"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "market_fruit",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Shopping",
+            "Food & drinks"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "market_veg",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Shopping",
+            "Food & drinks"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "park_nature",
+          "categories": [
+            "nature-world"
+          ],
+          "subcategories": [
+            "Landscapes",
+            "Plants & flowers"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "restaurant",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Food & drinks",
+            "Restaurants"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "routine",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Daily routines",
+            "Time & dates"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "routine_calendar",
+          "categories": [
+            "everyday-life"
+          ],
+          "subcategories": [
+            "Daily routines",
+            "Time & dates"
+          ],
+          "levels": [
+            "A1"
+          ]
+        },
+        {
+          "id": "school_office",
+          "categories": [
+            "learning-knowledge"
+          ],
+          "subcategories": [
+            "School subjects",
+            "Workplace vocabulary"
+          ],
+          "levels": [
+            "A2"
+          ]
+        },
+        {
+          "id": "seasons",
+          "categories": [
+            "nature-world"
+          ],
+          "subcategories": [
+            "Weather & seasons"
+          ],
+          "levels": [
+            "A1"
+          ]
+        }
+      ],
+      "audienceNotes": "The setup supports A1, A2, B1, B2–C2, or all scenes, depending on available scene metadata. Suitability depends on the chosen scene, target language, vocabulary, and accessibility needs; advanced scene labels should not be read as a formal assessment.",
+      "modeNotes": "The setup is a single-player scene exploration interface with clickable scenes and hotspots. Collaborative pair/group use is possible as a teaching arrangement, but the game UI itself is solo-oriented.",
+      "subcategoryMappings": {
+        "Airports": [
+          "Airports"
+        ],
+        "Transport": [
+          "Transport"
+        ],
+        "Travel problems": [
+          "Travel problems"
+        ],
+        "Animals & pets": [
+          "Animals & pets"
+        ],
+        "Home & household": [
+          "Home & household"
+        ],
+        "Daily routines": [
+          "Daily routines"
+        ],
+        "Food & drinks": [
+          "Food & drinks"
+        ],
+        "Restaurants": [
+          "Restaurants"
+        ],
+        "Time & dates": [
+          "Time & dates"
+        ],
+        "My town": [
+          "My town"
+        ],
+        "Directions": [
+          "Directions"
+        ],
+        "Clothes & accessories": [
+          "Clothes & accessories"
+        ],
+        "Health & services": [
+          "Making requests",
+          "Offering help"
+        ],
+        "Making requests": [
+          "Making requests"
+        ],
+        "Shopping": [
+          "Shopping"
+        ],
+        "Money & prices": [
+          "Money & prices"
+        ],
+        "Landscapes": [
+          "Landscapes"
+        ],
+        "Plants & flowers": [
+          "Plants & flowers"
+        ],
+        "School subjects": [
+          "School subjects"
+        ],
+        "Workplace vocabulary": [
+          "Workplace vocabulary"
+        ],
+        "Weather & seasons": [
+          "Weather & seasons"
+        ]
+      }
+    },
+    {
+      "id": "word-linker",
+      "name": "Word Linker",
+      "levels": [
+        "B1",
+        "B2"
+      ],
+      "levelAvailability": "prompt-tagged",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "people-feelings",
+        "hobbies-entertainment",
+        "work-future",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday life",
+        "Food",
+        "Nature",
+        "Emotions",
+        "Work",
+        "Travel"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "sourceLevels": [
+        "intermediate",
+        "upper_intermediate"
+      ],
+      "levelMapping": {
+        "intermediate": [
+          "B1"
+        ],
+        "upper_intermediate": [
+          "B2"
+        ]
+      },
+      "contentSets": [
+        {
+          "id": "starter-core",
+          "name": "Core concrete vocabulary links",
+          "source": "data/en/wordlinker.js",
+          "sourceLevel": "unspecified",
+          "levelBasis": "not-assessed",
+          "sourceLevelNote": "Most built-in English puzzles do not carry an explicit level field; do not assume they all belong to a CEFR band.",
+          "categories": [
+            "everyday-life",
+            "nature-world",
+            "places-travel",
+            "learning-knowledge"
+          ],
+          "subcategories": [
+            "Food & drinks",
+            "Animals & pets",
+            "Home & household",
+            "Countries & nationalities",
+            "Numbers",
+            "Colours & shapes",
+            "Jobs & professions"
+          ]
+        },
+        {
+          "id": "intermediate",
+          "name": "Intermediate labelled word links",
+          "source": "data/en/wordlinker.js",
+          "sourceLevel": "intermediate",
+          "levels": [
+            "B1"
+          ],
+          "categories": [
+            "hobbies-entertainment",
+            "people-feelings",
+            "words-grammar"
+          ],
+          "subcategories": [
+            "Music",
+            "Books",
+            "Synonyms & antonyms",
+            "Adjectives"
+          ]
+        },
+        {
+          "id": "upper-intermediate",
+          "name": "Upper-intermediate labelled word links",
+          "source": "data/en/wordlinker.js",
+          "sourceLevel": "upper_intermediate",
+          "levels": [
+            "B2"
+          ],
+          "categories": [
+            "words-grammar",
+            "people-feelings"
+          ],
+          "subcategories": [
+            "Synonyms & antonyms",
+            "Adjectives"
+          ]
+        }
+      ],
+      "audienceNotes": "The setup offers level choices A1–C2 and language selection, but the audited English built-in puzzles include explicit intermediate/upper-intermediate labels plus unlabelled core puzzles. Do not infer that every language has tagged content at every level.",
+      "modeNotes": "The setup provides Common Connection, Odd One Out, and Mixed Modes. It supports direct solo interaction; pair/group use is a facilitation option, and no fixed participant count is enforced.",
+      "subcategoryMappings": {
+        "Everyday life": [
+          "Daily routines",
+          "Personal belongings"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Nature": [
+          "Environment",
+          "Animals & pets",
+          "Plants & flowers"
+        ],
+        "Emotions": [
+          "Feelings & emotions"
+        ],
+        "Work": [
+          "Workplace vocabulary",
+          "Jobs & professions"
+        ],
+        "Travel": [
+          "Holidays",
+          "Transport"
+        ]
+      }
+    },
+    {
+      "id": "last-letter",
+      "name": "Last Letter",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday words",
+        "Animals",
+        "Food",
+        "Places",
+        "Verbs",
+        "Adjectives"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "The setup provides A1–C2 level choices and relies on vocabulary available for the selected language and level. Consider spelling conventions and whether the target language's word forms make last-letter chaining suitable.",
+      "modeNotes": "The game supports turn-based word chaining, which can be used individually or with partners/groups, but the setup does not configure a player count. Treat larger-group use as facilitation rather than a guaranteed built-in mode.",
+      "subcategoryMappings": {
+        "Everyday words": [
+          "Vocabulary themes"
+        ],
+        "Animals": [
+          "Animals & pets"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Places": [
+          "My town",
+          "Sightseeing"
+        ],
+        "Verbs": [
+          "Verbs & actions"
+        ],
+        "Adjectives": [
+          "Adjectives"
+        ]
+      }
+    },
+    {
+      "id": "emoji-odyssey",
+      "name": "Emoji Odyssey",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "puzzle-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "hobbies-entertainment",
+        "people-feelings",
+        "stories-mystery",
+        "society-culture",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Idioms",
+        "Movies & stories",
+        "Everyday expressions",
+        "Emotions",
+        "Proverbs"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "Offers Guess and Story modes. Guess mode requires enough emoji-tagged vocabulary for the selected language and level; Story mode is a separate fallback when that vocabulary is unavailable. Review emoji meanings and story prompts for cultural context and age suitability.",
+      "modeNotes": "The setup provides Guess and Story modes but does not enforce group size. Both can be adapted for individual practice or collaborative classroom play; treat those as facilitation choices rather than enforced player-count rules.",
+      "subcategoryMappings": {
+        "Idioms": [
+          "Idioms"
+        ],
+        "Movies & stories": [
+          "Films & TV",
+          "Story prompts"
+        ],
+        "Everyday expressions": [
+          "Idioms",
+          "Vocabulary themes"
+        ],
+        "Emotions": [
+          "Feelings & emotions"
+        ],
+        "Proverbs": [
+          "Idioms"
+        ]
+      }
+    },
+    {
+      "id": "cosy-crossword",
+      "name": "Cosy Crossword",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ],
+      "levelAvailability": "vocabulary-dependent",
+      "audiences": [
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "everyday-life",
+        "nature-world",
+        "places-travel",
+        "hobbies-entertainment",
+        "learning-knowledge",
+        "work-future",
+        "words-grammar"
+      ],
+      "subcategories": [
+        "Everyday vocabulary",
+        "Food",
+        "Travel",
+        "Nature",
+        "Work",
+        "Mixed practice"
+      ],
+      "modes": [
+        "solo"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "The crossword uses dynamically generated CEFR vocabulary, with built-in fallback word lists specifically shown for A1 and B2. Clue difficulty and grid size vary by level; preview generated clues and vocabulary for the intended age group. The language selector currently lists English, French, Italian, Russian, and Greek.",
+      "modeNotes": "The setup starts a crossword puzzle without a player-count selector. The taxonomy records solo as the direct setup mode; collaborative solving may be facilitated by a teacher but is not an explicitly configured game mode.",
+      "subcategoryMappings": {
+        "Everyday vocabulary": [
+          "Vocabulary themes"
+        ],
+        "Food": [
+          "Food & drinks"
+        ],
+        "Travel": [
+          "Holidays",
+          "Transport"
+        ],
+        "Nature": [
+          "Environment",
+          "Animals & pets",
+          "Plants & flowers"
+        ],
+        "Work": [
+          "Workplace vocabulary",
+          "Jobs & professions"
+        ],
+        "Mixed practice": []
+      }
+    },
+    {
+      "id": "lucky-numbers",
+      "name": "Lucky Numbers",
+      "levels": [],
+      "levelAvailability": "special-category-selection",
+      "audiences": [
+        "young-learners",
+        "children",
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "words-grammar",
+        "everyday-life"
+      ],
+      "subcategories": [
+        "Alphabet",
+        "Numbers 0–9",
+        "Numbers 0–19",
+        "Numbers 0–99"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "specialSelection": {
+        "label": "Practice set",
+        "options": [
+          "Alphabet",
+          "Numbers 0–9",
+          "Numbers 0–19",
+          "Numbers 0–99"
+        ],
+        "bypassesCEFR": true
+      },
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "The source offers a Caller role for a group and a Player role for solo play or play with a host. The alphabet and number ranges are explicit practice sets; they are not ordinary CEFR vocabulary bands. Select the range appropriate to the learners and language.",
+      "modeNotes": "Supports a Player role (solo or with a host) and a Caller role for a group. The selectable practice sets are Alphabet, Numbers 0–9, Numbers 0–19, and Numbers 0–99. The source fetches number words online with numeric fallbacks, so in-person use does not guarantee internet-free operation.",
+      "subcategoryMappings": {
+        "Alphabet": [
+          "Spelling"
+        ],
+        "Numbers 0–9": [],
+        "Numbers 0–19": [],
+        "Numbers 0–99": []
+      }
+    },
+    {
+      "id": "etymology-explorer",
+      "name": "Etymology Explorer",
+      "levels": [],
+      "levelAvailability": "mode-based-not-cefr",
+      "audiences": [
+        "teens",
+        "adults"
+      ],
+      "categories": [
+        "words-grammar",
+        "learning-knowledge",
+        "society-culture"
+      ],
+      "subcategories": [
+        "Word origins",
+        "Prefixes & suffixes",
+        "Latin & Greek roots",
+        "Word families",
+        "Cognates"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "specialSelection": {
+        "label": "Game mode / difficulty",
+        "options": [
+          "Easy",
+          "Medium",
+          "Hard",
+          "Language Network",
+          "Word Pairs"
+        ],
+        "bypassesCEFR": true
+      },
+      "audienceNotes": "The setup offers Easy, Medium, and Hard difficulty modes plus Language Network and Word Pairs modes; these are not CEFR-labelled choices. Historical and cross-language vocabulary may require advanced background knowledge, and suitability depends on the selected language and available dataset.",
+      "modeNotes": "The game supports individual play through its own setup. Language Network and Word Pairs are separate modes from the Easy/Medium/Hard etymology difficulty track. The setup does not enforce participant counts for collaborative facilitation.",
+      "subcategoryMappings": {
+        "Word origins": [
+          "Etymology"
+        ],
+        "Prefixes & suffixes": [
+          "Word formation"
+        ],
+        "Latin & Greek roots": [
+          "Etymology",
+          "Word formation"
+        ],
+        "Word families": [
+          "Word formation",
+          "Word associations"
+        ],
+        "Cognates": [
+          "Word associations"
+        ]
+      }
+    },
+    {
+      "id": "what-gender-is-it",
+      "name": "What Gender Is It?",
+      "levels": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "levelAvailability": "language-dependent",
+      "audiences": [
+        "teens",
+        "adults",
+        "mixed-ages"
+      ],
+      "categories": [
+        "words-grammar",
+        "everyday-life"
+      ],
+      "subcategories": [
+        "Masculine & feminine",
+        "Articles",
+        "Gender exceptions",
+        "Noun endings",
+        "Mixed practice"
+      ],
+      "modes": [
+        "solo",
+        "pairs",
+        "mini-group",
+        "big-group"
+      ],
+      "formats": [
+        "online",
+        "in-person"
+      ],
+      "audienceNotes": "The setup offers A1–C2 and a target-language choice. Available data is language- and level-dependent, and some supported languages have different grammatical-gender systems; review content availability and suitability for the learners before selecting a level.",
+      "modeNotes": "The setup is a solo quiz with up to ten questions and a language selector. Pair/group discussion can be added by a facilitator, but the interface does not configure group size or collaborative roles.",
+      "subcategoryMappings": {
+        "Masculine & feminine": [
+          "Noun gender"
+        ],
+        "Articles": [
+          "Grammar patterns"
+        ],
+        "Gender exceptions": [
+          "Noun gender"
+        ],
+        "Noun endings": [
+          "Noun gender"
+        ],
+        "Mixed practice": []
+      }
+    }
+  ],
+  "playFormats": [
+    {
+      "id": "online",
+      "label": "Online"
+    },
+    {
+      "id": "in-person",
+      "label": "In person"
+    }
+  ]
+}

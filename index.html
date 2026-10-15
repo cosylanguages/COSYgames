@@ -89,7 +89,46 @@
             <button class="fpill" data-group="skill" data-f="mystery" aria-pressed="false" data-i18n="section_mystery">Mystery & Guesses</button>
             <button class="fpill" data-group="skill" data-f="vocab" aria-pressed="false" data-i18n="section_vocab">Vocab & Puzzles</button>
           </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-category">
+            <label class="fl" id="fg-category" for="filter-category">Topic:</label>
+            <select class="cosy-taxonomy-select" id="filter-category">
+              <option value="all">All topics</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-subcategory">
+            <label class="fl" id="fg-subcategory" for="filter-subcategory">Subtopic:</label>
+            <select class="cosy-taxonomy-select" id="filter-subcategory" disabled>
+              <option value="all">All subtopics</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-level">
+            <label class="fl" id="fg-level" for="filter-level">Level:</label>
+            <select class="cosy-taxonomy-select" id="filter-level">
+              <option value="all">All levels</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-audience">
+            <label class="fl" id="fg-audience" for="filter-audience">Audience:</label>
+            <select class="cosy-taxonomy-select" id="filter-audience">
+              <option value="all">All ages</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-mode">
+            <label class="fl" id="fg-mode" for="filter-mode">Group size:</label>
+            <select class="cosy-taxonomy-select" id="filter-mode">
+              <option value="all">Any group size</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-format">
+            <label class="fl" id="fg-format" for="filter-format">Setting:</label>
+            <select class="cosy-taxonomy-select" id="filter-format">
+              <option value="all">Any setting</option>
+            </select>
+          </div>
         </div>
+        <p class="taxonomy-filter-note" id="level-filter-note">Level filters show games with mapped CEFR levels. Some games use difficulty modes or have content that is not yet CEFR-assessed, so they may not appear when a specific level is selected.</p>
+        <p class="taxonomy-filter-note" id="taxonomy-load-error" role="status" aria-live="polite" hidden>Topic and learning filters could not load. You can still browse all games below; please refresh the page to try again.</p>
+        <p class="taxonomy-empty-state" id="taxonomy-empty-state" role="status" aria-live="polite" hidden>No games match these filters. Try changing or clearing one or more filters.</p>
 
         <!-- SPEAKING & FLUENCY (9 Games) -->
         <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_speaking">Speaking & Fluency</span> <span class="sec-count">9 games</span></div>
@@ -354,6 +393,7 @@
           const state = { players: 'all', skill: 'all' };
 
           function updateFilters() {
+            let totalVisible = 0;
             const sections = [
               { grid: document.getElementById('grid-speaking'), title: document.querySelector('#grid-speaking')?.previousElementSibling },
               { grid: document.getElementById('grid-mystery'), title: document.querySelector('#grid-mystery')?.previousElementSibling },
@@ -369,12 +409,31 @@
                 const pAttr = (card.getAttribute('data-players') || '').split(/\s+/);
                 const sAttr = card.getAttribute('data-skill') || '';
 
+                const categories = (card.dataset.categories || '').split(/\s+/).filter(Boolean);
+                const subcategories = JSON.parse(card.dataset.subcategories || '[]');
+                const modes = (card.dataset.modes || '').split(/\s+/).filter(Boolean);
+                const formats = (card.dataset.formats || '').split(/\s+/).filter(Boolean);
+                const levels = (card.dataset.levels || '').split(/\s+/).filter(Boolean);
+                const audiences = (card.dataset.audiences || '').split(/\s+/).filter(Boolean);
                 const matchesPlayers = state.players === 'all' || pAttr.includes(state.players);
                 const matchesSkill = state.skill === 'all' || sAttr === state.skill;
+                const selectedCategory = document.getElementById('filter-category')?.value || 'all';
+                const selectedSubcategory = document.getElementById('filter-subcategory')?.value || 'all';
+                const selectedLevel = document.getElementById('filter-level')?.value || 'all';
+                const selectedAudience = document.getElementById('filter-audience')?.value || 'all';
+                const matchesCategory = selectedCategory === 'all' || categories.includes(selectedCategory);
+                const matchesSubcategory = selectedSubcategory === 'all' || subcategories.includes(selectedSubcategory);
+                const matchesLevel = selectedLevel === 'all' || levels.includes(selectedLevel);
+                const selectedMode = document.getElementById('filter-mode')?.value || 'all';
+                const selectedFormat = document.getElementById('filter-format')?.value || 'all';
+                const matchesAudience = selectedAudience === 'all' || audiences.includes(selectedAudience);
+                const matchesMode = selectedMode === 'all' || modes.includes(selectedMode);
+                const matchesFormat = selectedFormat === 'all' || formats.includes(selectedFormat);
 
-                if (matchesPlayers && matchesSkill) {
+                if (matchesPlayers && matchesSkill && matchesCategory && matchesSubcategory && matchesLevel && matchesAudience && matchesMode && matchesFormat) {
                   card.removeAttribute('hidden');
                   visibleCount++;
+                  totalVisible++;
                 } else {
                   card.setAttribute('hidden', '');
                 }
@@ -394,7 +453,11 @@
                 }
               }
             });
+            const emptyState = document.getElementById('taxonomy-empty-state');
+            if (emptyState) emptyState.hidden = totalVisible > 0;
           }
+
+          window.updateGameHubFilters = updateFilters;
 
           filterPills.forEach(pill => {
             pill.addEventListener('click', () => {
@@ -427,6 +490,7 @@
       })();
     </script>
 
+    <script src="./shared/js/game-taxonomy.js"></script>
     <div id="toast" class="toast-notification"></div>
     <script defer src="./shared/js/auth-sso.js"></script>
     <script defer src="./shared/js/cms-editor.js"></script>

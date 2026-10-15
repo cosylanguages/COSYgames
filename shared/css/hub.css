@@ -327,3 +327,45 @@ body.theme-dark .gc .gtag.mystery {
   color: #fbcfe8 !important;
   border-color: rgba(251, 207, 232, 0.2) !important;
 }
+
+
+/* Taxonomy filters on the games hub */
+.cosy-taxonomy-select {
+  max-width: min(100%, 18rem);
+  min-height: 2.5rem;
+  padding: 0.45rem 2rem 0.45rem 0.75rem;
+  border: 1px solid var(--border-color, #d8d2c8);
+  border-radius: 0.65rem;
+  background: var(--surface, #fff);
+  color: var(--text-color, #292524);
+  font: inherit;
+  cursor: pointer;
+}
+.cosy-taxonomy-select:focus-visible {
+  outline: 3px solid var(--accent-color, #0d9488);
+  outline-offset: 2px;
+}
+@media (max-width: 640px) {
+  .cosy-taxonomy-select { width: 100%; max-width: none; }
+}
+
+
+.taxonomy-filter-note {
+  margin: -0.5rem 0 1.25rem;
+  color: var(--text-muted, #625f58);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+html[data-theme="dark"] .taxonomy-filter-note,
+body.theme-dark .taxonomy-filter-note {
+  color: var(--ink-soft, #c8d8c9);
+}
+
+.taxonomy-empty-state {
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--border-color, #d8d2c8);
+  border-radius: 0.75rem;
+  color: var(--text-muted, #625f58);
+  line-height: 1.5;
+}
