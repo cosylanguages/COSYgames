@@ -64,6 +64,7 @@ Before submitting a Pull Request, please ensure the following:
 
 2. **Requirements when Adding a Game**:
    - Copy the HTML page structure from `templates/game-template.html`.
+   - Keep the `<!-- cosy:chrome:... -->` markers around the nav and footer; they are generated from `shared/chrome/*.tpl`. Run `node scripts/sync-site-chrome.js` after editing a template (see `docs/SITE_URLS.md`).
    - Add a game card to `index.html` with appropriate `data-players` and `data-skill` attributes.
    - Add a matching game metadata entry to `games/index.json`.
    - Update the total game count in the hub title, hero headline, and meta tags (validated by `tests/hub.test.js`).
