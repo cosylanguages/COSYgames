@@ -67,6 +67,7 @@ Before submitting a Pull Request, please ensure the following:
    - Keep the `<!-- cosy:chrome:... -->` markers around the nav and footer; they are generated from `shared/chrome/*.tpl`. Run `node scripts/sync-site-chrome.js` after editing a template (see `docs/SITE_URLS.md`).
    - Add a game card to `index.html` with appropriate `data-players` and `data-skill` attributes.
    - Add a matching game metadata entry to `games/index.json`.
+   - Also add the game to `GAMES_INVENTORY.json` and `data/game-taxonomy.json` (what each file means: `docs/GAME_METADATA.md`). `tests/metadata-consistency.test.js` fails if the three lists disagree; after reviewing an intentional change run `node scripts/metadata-report.js --update`.
    - Update the total game count in the hub title, hero headline, and meta tags (validated by `tests/hub.test.js`).
 
 3. **Translating Game Text**:
