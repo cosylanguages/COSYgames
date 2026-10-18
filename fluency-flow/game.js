@@ -12,7 +12,7 @@
         { key: 'setup.dur_5', val: '5 minutes', fallback: '5 minutes' }
     ];
     const LEVEL_OPTS = ['Starter (A1)', 'Primary (A2)', 'Intermediate (B1)', 'Upper (B2)', 'Advanced (C1)', 'Proficiency (C2)'];
-    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el","pt","ba","tt","br"]);
 
     function getT() {
         return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')

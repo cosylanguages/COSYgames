@@ -6,7 +6,7 @@
     const GAME_ID = 'opinion';
     const GAME_TITLE = 'Opinion Arena 🏟️';
     const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
-    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el","pt","ba","tt","br"]);
 
     function getT() {
         return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')

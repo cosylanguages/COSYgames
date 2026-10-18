@@ -19,7 +19,11 @@
       "de",
       "it",
       "ru",
-      "el"
+      "el",
+      "pt",
+      "ba",
+      "tt",
+      "br"
     ],
     "skill_focus": "fluency",
     "mode": [
@@ -69,7 +73,11 @@
       "de",
       "it",
       "ru",
-      "el"
+      "el",
+      "pt",
+      "ba",
+      "tt",
+      "br"
     ],
     "skill_focus": "speaking",
     "mode": [
@@ -223,7 +231,9 @@
       "de",
       "it",
       "ru",
-      "el"
+      "el",
+      "pt",
+      "br"
     ],
     "skill_focus": "vocabulary",
     "mode": [
@@ -249,7 +259,9 @@
       "de",
       "it",
       "ru",
-      "el"
+      "el",
+      "pt",
+      "br"
     ],
     "skill_focus": "speaking",
     "mode": [
