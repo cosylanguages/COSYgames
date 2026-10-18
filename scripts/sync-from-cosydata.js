@@ -61,8 +61,7 @@ async function runSync() {
 
 // 2. Audit local datasets
 const auditSummary = {
-    actionHero: { total: 0, matched: 0 },
-    gender: { total: 0, matched: 0 }
+    actionHero: { total: 0, matched: 0 }
 };
 
 // Audit Action Hero words in data/en/action.js or data/en/game_data.js
@@ -87,26 +86,9 @@ if (fs.existsSync(enGameDataPath)) {
     }
 }
 
-// Audit What Gender Is It? A1 concepts
-const genderA1Path = path.join(ROOT_DIR, 'data', 'gender', 'a1.js');
-if (fs.existsSync(genderA1Path)) {
-    const content = fs.readFileSync(genderA1Path, 'utf8');
-    const matches = content.match(/"concept":\s*['"](.*?)['"]/g);
-    if (matches) {
-        auditSummary.gender.total = matches.length;
-        matches.forEach(m => {
-            const concept = m.replace(/"concept":\s*['"](.*?)['"]/, '$1').toLowerCase();
-            if (canonicalWords.size === 0 || canonicalWords.has(concept)) {
-                auditSummary.gender.matched++;
-            }
-        });
-    }
-}
-
 // 3. Print report
 console.log('\n--- COSYdata Alignment Audit Report ---');
 console.log(`Action Hero A1-A2 Verbs/Nouns: ${auditSummary.actionHero.matched}/${auditSummary.actionHero.total} aligned with COSYdata canon`);
-console.log(`What Gender Is It? A1 Concepts: ${auditSummary.gender.matched}/${auditSummary.gender.total} aligned with COSYdata canon`);
 console.log('---------------------------------------\n');
 
 if (mode === 'update') {

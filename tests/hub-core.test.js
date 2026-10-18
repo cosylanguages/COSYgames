@@ -11,6 +11,7 @@ const games = JSON.parse(read('games/index.json'));
 const taxonomy = JSON.parse(read('data/game-taxonomy.json'));
 const html = read('index.html');
 const LEGACY_MAP = JSON.parse(read('tests/fixtures/hub-legacy-game-path-map.json')); // the alias map the hub used to hard-code
+const RETIRED = ['what-gender-is-it']; // games removed since; their old deep links must resolve to nothing
 
 // ---- Frozen copies of the behaviour before the refactor (do not "improve" these: they are the reference) ----
 function legacyMatches(card, st) {
@@ -55,9 +56,9 @@ function realCards() {
   return cards;
 }
 
-test('hub has the 20 real cards and each maps to a game in games/index.json', () => {
+test('hub has one real card per game in games/index.json', () => {
   const cards = realCards();
-  assert.equal(cards.length, 20);
+  assert.equal(cards.length, games.length);
   const ids = new Set(games.map((g) => g.id));
   for (const c of cards) assert.ok(ids.has(c.id), c.id);
 });
@@ -117,7 +118,10 @@ test('filtering edge cases: missing selection means all; unknown value hides eve
 
 test('deep links: every key the old hard-coded map accepted resolves to the same page', () => {
   assert.equal(Object.keys(LEGACY_MAP).length, 60);
-  for (const [key, expected] of Object.entries(LEGACY_MAP)) assert.equal(core.resolveGamePath(games, key), expected, key);
+  for (const [key, expected] of Object.entries(LEGACY_MAP)) {
+    const retired = RETIRED.includes(expected.split('/')[0]);
+    assert.equal(core.resolveGamePath(games, key), retired ? null : expected, key);
+  }
 });
 
 test('deep links: normalization and safety', () => {
@@ -157,4 +161,13 @@ test('hub page loads the pure core before the wiring, and no longer hard-codes a
   const tax_i = html.indexOf('shared/js/game-taxonomy.js');
   assert.ok(core_i > 0 && core_i < hub_i && hub_i < tax_i, 'order: hub-core.js, hub.js, game-taxonomy.js');
   assert.ok(!html.includes('GAME_PATH_MAP'), 'alias map must live in games/index.json');
+});
+
+test('the game count in the hub title matches the number of games, in every language', () => {
+  const n = String(games.length);
+  const i18n = read('shared/js/i18n.js');
+  const titles = [...i18n.matchAll(/hero_title: '([^']+)'/g)].map((m) => m[1]);
+  assert.equal(titles.length, 7);
+  for (const t of titles) assert.ok(t.startsWith(n + ' '), `hero_title "${t}" must start with ${n}`);
+  assert.ok(html.includes(`<title>${n} Language Games`), 'index.html <title> must show the game count');
 });

@@ -38,7 +38,8 @@ test('every page uses the same nav-game and footer-game output (single source)',
     .filter((d) => d.isDirectory() && fs.existsSync(path.join(repoRoot, d.name, 'index.html')))
     .map((d) => fs.readFileSync(path.join(repoRoot, d.name, 'index.html'), 'utf8'))
     .filter((t) => t.includes('cosy:chrome:nav-game'));
-  assert.ok(games.length >= 20, 'expected the game pages to use nav-game');
+  const gameCount = JSON.parse(fs.readFileSync(path.join(repoRoot, 'games', 'index.json'), 'utf8')).length;
+  assert.equal(games.length, gameCount, 'every game page must use nav-game (retired-game redirect stubs have none)');
   const blocks = (t, n) => t.match(new RegExp(`<!-- cosy:chrome:${n} -->[\\s\\S]*?<!-- /cosy:chrome:${n} -->`))[0];
   for (const n of ['nav-game', 'footer-game']) {
     assert.strictEqual(new Set(games.map((t) => blocks(t, n))).size, 1, `${n} must be identical on every game page`);

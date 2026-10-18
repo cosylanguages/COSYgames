@@ -371,27 +371,6 @@
     "externalDeps": []
   },
   {
-    "game": "what-gender-is-it",
-    "languages": [
-      "fr",
-      "es",
-      "it",
-      "de",
-      "ru",
-      "el",
-      "br"
-    ],
-    "dataFiles": [
-      "data/gender/a1.js",
-      "data/gender/a2.js",
-      "data/gender/b1.js",
-      "data/gender/b2.js",
-      "data/gender/c1.js",
-      "data/gender/c2.js"
-    ],
-    "externalDeps": []
-  },
-  {
     "game": "word-linker",
     "languages": [
       "en",

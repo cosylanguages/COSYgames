@@ -11,8 +11,9 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   const hubScript = fs.readFileSync(path.join(root, 'shared', 'js', 'hub.js'), 'utf8');
   const hubCore = require(path.join(root, 'shared', 'js', 'hub-core.js'));
 
-  assert.equal(taxonomy.games.length, 20, 'taxonomy should describe all 20 games');
-  assert.equal(new Set(taxonomy.games.map(game => game.id)).size, 20, 'game IDs must be unique');
+  const gameCount = JSON.parse(fs.readFileSync(path.join(root, 'games', 'index.json'), 'utf8')).length;
+  assert.equal(taxonomy.games.length, gameCount, 'taxonomy should describe every game in games/index.json');
+  assert.equal(new Set(taxonomy.games.map(game => game.id)).size, gameCount, 'game IDs must be unique');
   assert.equal(new Set(taxonomy.categories.map(category => category.id)).size, taxonomy.categories.length, 'category IDs must be unique');
   assert.deepEqual(taxonomy.cefrLevels.map(level => level.id), ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
 
@@ -130,7 +131,7 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   const sceneMatchAdvanced = taxonomy.games.find(game => game.id === 'scene-match');
   assert.deepEqual(sceneMatchAdvanced.levels, ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'], 'Scene Match taxonomy should include its B2–C2 setup option');
   assert.ok(sceneMatchAdvanced.modeNotes.includes('solo-oriented'));
-  for (const id of ['fluency-flow', 'critics-corner', 'this-or-that', 'word-linker', 'what-gender-is-it']) {
+  for (const id of ['fluency-flow', 'critics-corner', 'this-or-that', 'word-linker']) {
     const game = taxonomy.games.find(item => item.id === id);
     assert.ok(game.audienceNotes, id + ' should document audience caveats');
     assert.ok(game.modeNotes, id + ' should document mode caveats');

@@ -119,7 +119,6 @@ test('PART D3: Scan in-scope game.js files for absence of legacy raw HTML patter
     'opinion-arena/game.js',
     'story-chain/game.js',
     'story-weaver/game.js',
-    'what-gender-is-it/game.js',
     'word-linker/game.js'
   ];
 

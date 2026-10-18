@@ -1,147 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script>if(!location.pathname.endsWith('/')&&!location.pathname.endsWith('.html')){location.replace(location.pathname+'/'+location.search+location.hash);}</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What Gender Is It? - COSYgames Language Learning</title>
-    <meta name="description" content="Master noun genders and historical grammar rules across multiple languages.">
-    <meta name="keywords" content="grammatical gender, noun gender, French gender, Italian gender, German gender game">
-
-    <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
-
-    <link rel="stylesheet" href="../shared/css/tokens.css">
-    <link rel="stylesheet" href="../shared/css/games.css">
-    <link rel="stylesheet" href="../shared/css/cosy-icons.css">
-    <link rel="stylesheet" href="../shared/css/nav.css">
-    <link rel="stylesheet" href="../shared/styles/game-styles.css">
-    <link rel="stylesheet" href="../_engine/components.css">
-    <link rel="canonical" href="https://cosylanguages.github.io/COSYgames/what-gender-is-it/">
-    <meta property="og:title" content="What Gender Is It? - COSYgames Language Learning">
-    <meta property="og:description" content="Master noun genders and historical grammar rules across multiple languages.">
+<!DOCTYPE html><html lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8">
+<title>What Gender Is It? has been retired - COSYgames</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="This game has been retired. Redirecting to the COSYgames hub.">
+<meta http-equiv="refresh" content="0; url=../">
+<link rel="canonical" href="https://cosylanguages.github.io/COSYgames/">
+<script>location.replace('../'+location.search+location.hash)</script>
+    <meta property="og:title" content="What Gender Is It? has been retired - COSYgames">
+    <meta property="og:description" content="This game has been retired. Redirecting to the COSYgames hub.">
     <meta property="og:url" content="https://cosylanguages.github.io/COSYgames/what-gender-is-it/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="What Gender Is It? - COSYgames Language Learning">
-    <meta name="twitter:description" content="Master noun genders and historical grammar rules across multiple languages.">
+    <meta name="twitter:title" content="What Gender Is It? has been retired - COSYgames">
+    <meta name="twitter:description" content="This game has been retired. Redirecting to the COSYgames hub.">
     <meta name="twitter:url" content="https://cosylanguages.github.io/COSYgames/what-gender-is-it/">
     <meta name="twitter:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
     <meta property="og:locale" content="en_US">
-</head>
-<body class="game-standalone cosy-game-theme">
-    <!-- Top Navigation Header -->
-    <!-- cosy:chrome:nav-game -->
-    <nav class="cg-nav">
-        <a href="../index.html" class="cg-nav-brand">
-            <img src="../shared/images/cosygames-logo.png" alt="COSYgames logo" class="cg-nav-logo">
-            <span class="cg-nav-brand-text">COSYgames</span>
-        </a>
-        <div class="cg-nav-right">
-            <a href="https://cosylanguages.github.io/COSYlanguages/" class="cg-nav-hub-link cg-nav-eco" target="_blank" rel="noopener" data-i18n="nav_home">Home 🏠</a>
-            <a href="../index.html" class="cg-nav-hub-link cg-nav-eco" data-i18n="nav_all_games">All Games 🎮</a>
-            <a href="https://cosylanguages.github.io/COSYdata/" class="cg-nav-hub-link cg-nav-eco" target="_blank" rel="noopener" data-i18n="nav_data">Dictionary 📊</a>
-            <a href="https://cosylanguages.github.io/COSYtools/" class="cg-nav-hub-link cg-nav-eco" target="_blank" rel="noopener" data-i18n="nav_tools">Tools 🔎</a>
-            <a href="https://cosylanguages.github.io/COSYevents/" class="cg-nav-hub-link cg-nav-eco" target="_blank" rel="noopener" data-i18n="nav_events">Events 🎉</a>
-            <select id="cosy-ui-lang-switcher" class="cosy-lang-select" onchange="if(window.setLanguage)window.setLanguage(this.value)" aria-label="Interface language" title="Interface language">
-                <option value="en">🇬🇧 EN</option>
-                <option value="fr">🇫🇷 FR</option>
-                <option value="es">🇪🇸 ES</option>
-                <option value="de">🇩🇪 DE</option>
-                <option value="it">🇮🇹 IT</option>
-                <option value="ru">🇷🇺 RU</option>
-                <option value="el">🇬🇷 EL</option>
-            </select>
-            <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
-        </div>
-    </nav>
-    <!-- /cosy:chrome:nav-game -->
-
-    <!-- Game Container Header -->
-    <div class="game-overlay open game-overlay-standalone" id="game-overlay">
-        <div class="go-topbar">
-            <button class="go-back cg-btn cg-btn-secondary" onclick="COSYUtils.backToHub()" data-i18n="back_to_games">← Back to Games Hub</button>
-            <div class="go-title-wrapper">
-                <h1 class="go-title" id="go-title">What Gender Is It?</h1>
-                <div class="go-meta" id="go-meta">Vocab & Puzzles · Solo · CEFR A1–C2</div>
-            </div>
-            <div id="go-topbar-right">
-                <a aria-label="Report an issue" href="https://github.com/cosylanguages/COSYgames/issues" target="_blank" rel="noopener" class="report-issue-link">🚩 <span class="report-issue-text">Report Issue</span></a>
-            </div>
-        </div>
-
-        <!-- Game Description -->
-        <div class="game-header-info">
-            <p class="game-description">Guess the grammatical gender of words across languages and explore the historical reasons why they have them.</p>
-        </div>
-
-        <!-- Game Canvas / Play Area -->
-        <div class="go-body" id="go-body">
-            <div id="game-canvas" class="game-canvas-area">
-                <div class="game-loader" id="game-loader">Loading game assets...</div>
-            </div>
-        </div>
-
-        <!-- Score & Tracking Section -->
-        <div class="score-tracking-section" aria-live="polite">
-            <div class="score-display">
-                <div><strong>Current Score:</strong> <span class="score-value" id="current-score" aria-live="polite">0</span></div>
-                <div><strong>High Score:</strong> <span class="high-score-value" id="high-score" aria-live="polite">0</span></div>
-            </div>
-            <div class="related-tools-links">
-                <strong data-i18n="keep_learning">Keep learning:</strong>
-                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" data-i18n="keep_learning_reference">Grammar &amp; verb reference</a> ·
-                <a href="https://cosylanguages.github.io/COSYtools/practice/" target="_blank" rel="noopener" data-i18n="keep_learning_drills">Quick practice drills</a> ·
-                <a href="https://cosylanguages.github.io/COSYdata/" target="_blank" rel="noopener" data-i18n="keep_learning_dictionary">Vocabulary dictionary</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <!-- cosy:chrome:footer-game -->
-    <footer class="cg-footer">
-        <div class="cg-footer-inner">
-            <div class="cg-footer-brand">
-                <img src="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png" alt="COSYlanguages logo" class="cg-footer-logo" onerror="this.style.display='none'">
-                <span>COSYlanguages</span>
-            </div>
-            <p class="cg-footer-tagline" data-i18n="footer_tagline">Your friendly corner to master new languages and connect with the world. 🌍</p>
-            <div class="cg-footer-links">
-                <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener" class="cg-footer-link">COSYlanguages</a>
-                <a href="../index.html" class="cg-footer-link" data-i18n="footer_games_hub">Games Hub</a>
-                <a href="https://cosylanguages.github.io/COSYdata/" target="_blank" rel="noopener" class="cg-footer-link">COSYdata</a>
-                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cg-footer-link">COSYtools</a>
-                <a href="https://cosylanguages.github.io/COSYevents/" target="_blank" rel="noopener" class="cg-footer-link">COSYevents</a>
-                <a href="https://github.com/cosylanguages/COSYgames" target="_blank" rel="noopener" class="cg-footer-link" data-i18n="footer_github">GitHub Repository</a>
-            </div>
-            <div class="cg-footer-copy" data-i18n="footer_rights">© 2022-2026 COSY Languages. All rights reserved.</div>
-        </div>
-    </footer>
-    <!-- /cosy:chrome:footer-game -->
-
-    <!-- Scripts -->
-    <script src="../shared/utils/game-utils.js"></script>
-    <script src="../shared/js/i18n.js"></script>
-    <script src="../shared/js/game-strings.js"></script>
-    <script src="../shared/js/nav.js"></script>
-    <script src="../_engine/view_context.js"></script>
-    <script src="../_engine/game_session.js"></script>
-    <script src="../_engine/scores.js"></script>
-    <script src="../_engine/loader.js"></script>
-    <script src="game.js" onerror="console.log('Local game script checked')"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        if (typeof COSYUtils !== 'undefined') {
-          const current = COSYUtils.getScore('what-gender-is-it');
-          const high = COSYUtils.getHighScore('what-gender-is-it');
-          const scoreEl = document.getElementById('current-score');
-          const highEl = document.getElementById('high-score');
-          if (scoreEl) scoreEl.textContent = current;
-          if (highEl) highEl.textContent = high;
-        }
-      });
-    </script>
-    <script defer src=../shared/js/auth-sso.js></script>
+</head><body><h1 style="display:none;">What Gender Is It? has been retired</h1><p><a href="../">This game has been retired. Back to all games.</a></p>    <script defer src=../shared/js/auth-sso.js></script>
     <script defer src=../shared/js/cms-editor.js></script>
-</body>
-</html>
+</body></html>

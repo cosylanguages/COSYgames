@@ -2903,62 +2903,6 @@
           "Word associations"
         ]
       }
-    },
-    {
-      "id": "what-gender-is-it",
-      "name": "What Gender Is It?",
-      "levels": [
-        "A1",
-        "A2",
-        "B1",
-        "B2",
-        "C1",
-        "C2"
-      ],
-      "levelAvailability": "language-dependent",
-      "audiences": [
-        "teens",
-        "adults",
-        "mixed-ages"
-      ],
-      "categories": [
-        "words-grammar",
-        "everyday-life"
-      ],
-      "subcategories": [
-        "Masculine & feminine",
-        "Articles",
-        "Gender exceptions",
-        "Noun endings",
-        "Mixed practice"
-      ],
-      "modes": [
-        "solo",
-        "pairs",
-        "mini-group",
-        "big-group"
-      ],
-      "formats": [
-        "online",
-        "in-person"
-      ],
-      "audienceNotes": "The setup offers A1–C2 and a target-language choice. Available data is language- and level-dependent, and some supported languages have different grammatical-gender systems; review content availability and suitability for the learners before selecting a level.",
-      "modeNotes": "The setup is a solo quiz with up to ten questions and a language selector. Pair/group discussion can be added by a facilitator, but the interface does not configure group size or collaborative roles.",
-      "subcategoryMappings": {
-        "Masculine & feminine": [
-          "Noun gender"
-        ],
-        "Articles": [
-          "Grammar patterns"
-        ],
-        "Gender exceptions": [
-          "Noun gender"
-        ],
-        "Noun endings": [
-          "Noun gender"
-        ],
-        "Mixed practice": []
-      }
     }
   ],
   "playFormats": [

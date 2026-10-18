@@ -29,7 +29,6 @@ mystery or guessing games across CEFR levels. No account or setup is needed to p
 | [Cosy Crossword](cosy-crossword/) | Solve language puzzles with tailored vocabulary clues and crosswords. | Solo | A1–C2 | EN, FR, IT, RU, EL | `cosy-crossword/` |
 | [Lucky Numbers](lucky-numbers/) | Practice numbers, counting, and math expressively in your target language. | Solo or group | A0–C2 | EN, FR, ES, DE, IT, RU, EL | `lucky-numbers/` |
 | [Etymology Explorer](etymology-explorer/) | Uncover word origins, roots, and language family connections. | Solo | B1–C2 | EN, FR, IT, DE, ES, RU, EL, PT, HY, KA, BA, TT, BR | `etymology-explorer/` |
-| [What Gender Is It?](what-gender-is-it/) | Master noun genders with speed rounds and grammar memory triggers. | Solo | A1–C2 | FR, ES, IT, DE, RU, EL, BR | `what-gender-is-it/` |
 | [This or That?](this-or-that/) | Choose between two intriguing options and justify your choice. | Solo or group | A0–B2 | EN, FR, IT, RU, EL | `this-or-that/` |
 <!-- /cosy:readme:games -->
 

@@ -16,7 +16,8 @@ test('Hub drift and integrity tests', () => {
   const cardOpeningTags = [...indexHtml.matchAll(cardOpeningTagRegex)];
 
   const N = cardOpeningTags.length;
-  assert.equal(N, 20, 'Card count N should be exactly 20');
+  const gameCount = JSON.parse(fs.readFileSync(path.join(rootDir, 'games', 'index.json'), 'utf8')).length;
+  assert.equal(N, gameCount, 'Card count N should equal the number of games in games/index.json');
 
   // Load translations from i18n.js
   let transObj = {};

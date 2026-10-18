@@ -88,7 +88,7 @@ test('b. For the 7 wired games, game.js contains cosyLanguageLabels([...]) whose
 
 test('b2. Menu codes derived from game.js equal games/index.json learning_languages for every game', () => {
   const games = JSON.parse(fs.readFileSync(indexJsonPath, 'utf8'));
-  const allowList = ['100-questions', 'what-gender-is-it', 'this-or-that']; // These games use their own custom selects or deck structures
+  const allowList = ['100-questions', 'this-or-that']; // These games use their own custom selects or deck structures
 
   const loaderPath = path.join(repoRoot, '_engine', 'loader.js');
   const loaderCode = fs.readFileSync(loaderPath, 'utf8');

@@ -7,7 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const REDIRECT_STUBS = ['storytelling']; // folders that only redirect to another game
+const REDIRECT_STUBS = ['storytelling', 'what-gender-is-it']; // folders that only redirect (to another game, or to the hub for retired games)
 
 const read = (root, p) => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
 const sorted = (a) => [...(a || [])].sort();

@@ -41,7 +41,7 @@ The hub's filtering and link-building logic is pure code in `shared/js/hub-core.
 
 ## Differences waiting for a decision (see the baseline)
 
-- **Modes:** Etymology Explorer and What Gender Is It? are solo in `index.json`, but the taxonomy lists pairs and groups as facilitation options.
+- **Modes:** Etymology Explorer is solo in `index.json`, but the taxonomy lists pairs and groups as facilitation options.
 - **Languages:** 12 games differ; the largest groups are data for `ba`, `br`, `hy`, `ka`, `pt`, `tt` with no menu entry, and 100 Questions / Lucky Numbers
   offering menu languages with no data file.
 - **Levels:** 9 games differ; most are the selectable-vs-tagged distinction above, but Fluency Flow (taxonomy lists A0 and omits C2) and
