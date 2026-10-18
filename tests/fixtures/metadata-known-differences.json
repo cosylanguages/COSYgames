@@ -1,0 +1,281 @@
+{
+  "modes": {
+    "etymology-explorer": {
+      "index": [
+        "solo"
+      ],
+      "taxonomy": [
+        "big-group",
+        "mini-group",
+        "pairs",
+        "solo"
+      ]
+    },
+    "what-gender-is-it": {
+      "index": [
+        "solo"
+      ],
+      "taxonomy": [
+        "big-group",
+        "mini-group",
+        "pairs",
+        "solo"
+      ]
+    }
+  },
+  "languages": {
+    "100-questions": {
+      "menuOnly": [
+        "fr",
+        "ru"
+      ],
+      "dataOnly": []
+    },
+    "action-hero": {
+      "menuOnly": [],
+      "dataOnly": [
+        "ba",
+        "br",
+        "hy",
+        "ka",
+        "pt",
+        "tt"
+      ]
+    },
+    "battle-of-wits": {
+      "menuOnly": [],
+      "dataOnly": [
+        "ba",
+        "br",
+        "de",
+        "es",
+        "hy",
+        "ka",
+        "pt",
+        "tt"
+      ]
+    },
+    "cosy-crossword": {
+      "menuOnly": [],
+      "dataOnly": [
+        "de",
+        "es"
+      ]
+    },
+    "critics-corner": {
+      "menuOnly": [],
+      "dataOnly": [
+        "ba",
+        "br",
+        "hy",
+        "ka",
+        "pt",
+        "tt"
+      ]
+    },
+    "fluency-flow": {
+      "menuOnly": [],
+      "dataOnly": [
+        "ba",
+        "br",
+        "hy",
+        "ka",
+        "pt",
+        "tt"
+      ]
+    },
+    "identity-mystery": {
+      "menuOnly": [],
+      "dataOnly": [
+        "ba",
+        "br",
+        "hy",
+        "ka",
+        "pt",
+        "tt"
+      ]
+    },
+    "lucky-numbers": {
+      "menuOnly": [
+        "de",
+        "es"
+      ],
+      "dataOnly": [
+        "hy",
+        "ka"
+      ]
+    },
+    "opinion-arena": {
+      "menuOnly": [],
+      "dataOnly": [
+        "ba",
+        "br",
+        "hy",
+        "ka",
+        "pt",
+        "tt"
+      ]
+    },
+    "scene-match": {
+      "menuOnly": [],
+      "dataOnly": [
+        "de",
+        "es"
+      ]
+    },
+    "story-chain": {
+      "menuOnly": [],
+      "dataOnly": [
+        "ba",
+        "br",
+        "hy",
+        "ka",
+        "pt",
+        "tt"
+      ]
+    },
+    "story-weaver": {
+      "menuOnly": [],
+      "dataOnly": [
+        "de",
+        "el",
+        "es",
+        "fr",
+        "it",
+        "ru"
+      ]
+    }
+  },
+  "levels": {
+    "battle-of-wits": {
+      "index": [
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "taxonomy": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
+    },
+    "cosy-crossword": {
+      "index": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "taxonomy": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ]
+    },
+    "critics-corner": {
+      "index": [
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "taxonomy": [
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
+    },
+    "etymology-explorer": {
+      "index": [
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "taxonomy": []
+    },
+    "fluency-flow": {
+      "index": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "taxonomy": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1"
+      ]
+    },
+    "identity-mystery": {
+      "index": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "taxonomy": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
+    },
+    "lucky-numbers": {
+      "index": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "taxonomy": []
+    },
+    "opinion-arena": {
+      "index": [
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "taxonomy": [
+        "B1",
+        "B2",
+        "C1"
+      ]
+    },
+    "word-linker": {
+      "index": [
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ],
+      "taxonomy": [
+        "B1",
+        "B2"
+      ]
+    }
+  }
+}
