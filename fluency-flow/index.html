@@ -33,6 +33,7 @@
 </head>
 <body class="game-standalone cosy-game-theme">
     <!-- Top Navigation Header -->
+    <!-- cosy:chrome:nav-game -->
     <nav class="cg-nav">
         <a href="../index.html" class="cg-nav-brand">
             <img src="../shared/images/cosygames-logo.png" alt="COSYgames logo" class="cg-nav-logo">
@@ -55,6 +56,7 @@
             <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
         </div>
     </nav>
+    <!-- /cosy:chrome:nav-game -->
 
     <!-- Game Container Header -->
     <div class="game-overlay open game-overlay-standalone" id="game-overlay">
@@ -97,22 +99,24 @@
     </div>
 
     <!-- Footer -->
+    <!-- cosy:chrome:footer-game -->
     <footer class="cg-footer">
         <div class="cg-footer-inner">
             <div class="cg-footer-brand">
                 <img src="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png" alt="COSYlanguages logo" class="cg-footer-logo" onerror="this.style.display='none'">
                 <span>COSYlanguages</span>
             </div>
-            <p class="cg-footer-desc">Your friendly corner to master new languages and connect with the world. 🌍</p>
+            <p class="cg-footer-tagline">Your friendly corner to master new languages and connect with the world. 🌍</p>
             <div class="cg-footer-links">
-                <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener">COSYlanguages Home</a>
-                <a href="../index.html">Games Hub</a>
-                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools</a>
-                <a href="https://github.com/cosylanguages/COSYgames" target="_blank" rel="noopener">GitHub Repository</a>
+                <a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener" class="cg-footer-link">COSYlanguages Home</a>
+                <a href="../index.html" class="cg-footer-link">Games Hub</a>
+                <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cg-footer-link">COSYtools</a>
+                <a href="https://github.com/cosylanguages/COSYgames" target="_blank" rel="noopener" class="cg-footer-link">GitHub Repository</a>
             </div>
             <div class="cg-footer-copy">© 2022-2026 COSY Languages. All rights reserved.</div>
         </div>
     </footer>
+    <!-- /cosy:chrome:footer-game -->
 
     <!-- Scripts -->
     <script src="../shared/utils/game-utils.js"></script>

@@ -1,10 +1,68 @@
 {
   "_comment": "Single source of truth for the public base URL of each COSY site. To move a site: set its new 'base', add the old one to 'legacy', run `node scripts/sync-site-urls.js`, then remove the legacy entry once nothing links to it. See docs/SITE_URLS.md.",
   "sites": {
-    "languages": { "base": "https://cosylanguages.github.io/COSYlanguages", "legacy": [] },
-    "data":      { "base": "https://cosylanguages.github.io/COSYdata",      "legacy": [] },
-    "tools":     { "base": "https://cosylanguages.github.io/COSYtools",     "legacy": [] },
-    "events":    { "base": "https://cosylanguages.github.io/COSYevents",    "legacy": [] },
-    "games":     { "base": "https://cosylanguages.github.io/COSYgames",     "legacy": [] }
+    "languages": {
+      "base": "https://cosylanguages.github.io/COSYlanguages",
+      "legacy": []
+    },
+    "data": {
+      "base": "https://cosylanguages.github.io/COSYdata",
+      "legacy": []
+    },
+    "tools": {
+      "base": "https://cosylanguages.github.io/COSYtools",
+      "legacy": []
+    },
+    "events": {
+      "base": "https://cosylanguages.github.io/COSYevents",
+      "legacy": []
+    },
+    "games": {
+      "base": "https://cosylanguages.github.io/COSYgames",
+      "legacy": []
+    }
+  },
+  "repository": "https://github.com/cosylanguages/COSYgames",
+  "chrome": {
+    "uiLanguages": [
+      {
+        "code": "en",
+        "flag": "🇬🇧",
+        "label": "EN"
+      },
+      {
+        "code": "fr",
+        "flag": "🇫🇷",
+        "label": "FR"
+      },
+      {
+        "code": "es",
+        "flag": "🇪🇸",
+        "label": "ES"
+      },
+      {
+        "code": "de",
+        "flag": "🇩🇪",
+        "label": "DE"
+      },
+      {
+        "code": "it",
+        "flag": "🇮🇹",
+        "label": "IT"
+      },
+      {
+        "code": "ru",
+        "flag": "🇷🇺",
+        "label": "RU"
+      },
+      {
+        "code": "el",
+        "flag": "🇬🇷",
+        "label": "EL"
+      }
+    ],
+    "customPages": [
+      "scene-match/tools/hotspot-editor.html"
+    ]
   }
 }
