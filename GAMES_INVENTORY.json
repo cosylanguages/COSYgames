@@ -2,7 +2,9 @@
   {
     "game": "100-questions",
     "languages": [
-      "en"
+      "en",
+      "fr",
+      "ru"
     ],
     "dataFiles": [
       "100-questions/decks/civic.js",
