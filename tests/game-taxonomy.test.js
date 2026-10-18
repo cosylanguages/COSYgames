@@ -8,6 +8,8 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   const taxonomy = JSON.parse(fs.readFileSync(path.join(root, 'data', 'game-taxonomy.json'), 'utf8'));
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const filterScript = fs.readFileSync(path.join(root, 'shared', 'js', 'game-taxonomy.js'), 'utf8');
+  const hubScript = fs.readFileSync(path.join(root, 'shared', 'js', 'hub.js'), 'utf8');
+  const hubCore = require(path.join(root, 'shared', 'js', 'hub-core.js'));
 
   assert.equal(taxonomy.games.length, 20, 'taxonomy should describe all 20 games');
   assert.equal(new Set(taxonomy.games.map(game => game.id)).size, 20, 'game IDs must be unique');
@@ -154,11 +156,21 @@ test('Shared game taxonomy stays aligned with the hub', () => {
   assert.ok(html.includes('id="taxonomy-empty-state"'), 'hub should provide a no-results message for combined filters');
   assert.ok(html.includes('id="taxonomy-load-error"'), 'hub should provide a fallback notice if taxonomy filters fail to load');
   assert.ok(filterScript.includes("if (loadError) loadError.hidden = false;"), 'taxonomy load failure should reveal the fallback notice');
-  assert.ok(html.includes('if (emptyState) emptyState.hidden = totalVisible > 0;'), 'filter logic should show the no-results message only when no games match');
+  assert.ok(hubScript.includes('if (emptyState) emptyState.hidden = totalVisible > 0;'), 'filter logic should show the no-results message only when no games match');
   assert.ok(filterScript.includes('Object.values(game.subcategoryMappings || {}).flat()'), 'subtopic choices should use canonical mappings, not game-specific source labels');
   assert.ok(filterScript.includes('const allowedSubtopics = new Set();'), 'subtopic choices should be constrained to canonical topics');
   assert.ok(filterScript.includes("category.id === selectedCategory"), 'a selected topic should only offer subtopics owned by that topic');
-  assert.ok(filterScript.includes('card.dataset.subcategories = JSON.stringify(Array.from(new Set(Object.values(game.subcategoryMappings || {}).flat())))'), 'game cards should be tagged with deduplicated canonical subtopics');
+  assert.ok(filterScript.includes('COSYHubCore.taxonomyCardAttributes(game)'), 'game cards should be tagged through the shared hub core');
+  taxonomy.games.forEach(game => {
+    assert.equal(
+      hubCore.taxonomyCardAttributes(game).subcategories,
+      JSON.stringify(Array.from(new Set(Object.values(game.subcategoryMappings || {}).flat()))),
+      game.id + ' cards should be tagged with deduplicated canonical subtopics'
+    );
+  });
   assert.ok(filterScript.includes('data/game-taxonomy.json'), 'filter logic should load the shared taxonomy');
-  assert.ok(html.includes('matchesCategory && matchesSubcategory && matchesLevel && matchesAudience && matchesMode && matchesFormat'), 'all taxonomy selectors should combine in result filtering');
+  ['filter-category', 'filter-subcategory', 'filter-level', 'filter-audience', 'filter-mode', 'filter-format'].forEach(id => {
+    assert.ok(hubScript.includes("selectValue('" + id + "')"), 'result filtering should read ' + id);
+  });
+  assert.ok(hubScript.includes('core.cardMatches(data, selection)'), 'all taxonomy selectors should combine in result filtering through the shared core');
 });

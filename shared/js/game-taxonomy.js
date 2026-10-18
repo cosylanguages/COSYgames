@@ -71,13 +71,7 @@
         if (!match) return;
         const game = byId.get(match[1]);
         if (!game) return;
-        card.dataset.gameId = game.id;
-        card.dataset.categories = game.categories.join(' ');
-        card.dataset.levels = game.levels.join(' ');
-        card.dataset.audiences = game.audiences.join(' ');
-        card.dataset.modes = game.modes.join(' ');
-        card.dataset.formats = game.formats.join(' ');
-        card.dataset.subcategories = JSON.stringify(Array.from(new Set(Object.values(game.subcategoryMappings || {}).flat())));
+        Object.assign(card.dataset, window.COSYHubCore.taxonomyCardAttributes(game));
       });
 
       populateSubcategories(taxonomy);
