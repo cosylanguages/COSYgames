@@ -31,7 +31,7 @@ Rehearsed on a copy: moving COSYgames to another address rewrote 97 URLs in 27 f
 ## Shared header and footer
 
 The navigation bar and footer were copied by hand into every game page. They now live once in `shared/chrome/*.tpl`
-(`nav-game`, `footer-game`, `nav-hub`, `footer-hub`) and are written into each page between marker comments:
+(`nav-game`, `footer-game`, `nav-hub`, `footer-hub`, `ecosystem-strip-hub`) and are written into each page between marker comments:
 
 ```html
 <!-- cosy:chrome:nav-game -->
@@ -46,3 +46,13 @@ The navigation bar and footer were copied by hand into every game page. They now
   or if it contains a hand-copied `<nav class="cg-nav">` / `<footer class="cg-footer">` outside markers.
 - A page whose chrome is intentionally different (currently only `scene-match/tools/hotspot-editor.html`) is listed in `chrome.customPages`.
 - Not covered: the "Report Issue" link in each game's top bar still contains the GitHub repository URL directly.
+
+### Ecosystem links: one order, everywhere
+
+The cross-site links appear in this order on game pages (nav) and in the hub's ecosystem bar: **Home (COSYlanguages), All Games, Dictionary (COSYdata), Tools, Events**.
+Both footers link the same sites. `tests/chrome-consistency.test.js` fails if the order or the set of sites drifts.
+
+- Link labels are translation keys (`data-i18n="nav_data"` ...) defined in `shared/js/i18n.js` for all 7 languages. The test fails if a key used in
+  `shared/chrome/*.tpl` is missing in any language, or if a translation is still the English text. Product names in footers (COSYdata, COSYtools, ...) stay untranslated.
+- The five nav links carry the class `cg-nav-eco` and are hidden below 860px (see `shared/css/nav.css`); the footer repeats every link, so phones lose nothing.
+- To add a site (for example COSYplatform): add it to `site.config.json`, add a link to the templates in the same position everywhere, add its `nav_*` key in all 7 languages, and update the expected order in the test.
