@@ -28,10 +28,8 @@
       "menuOnly": [],
       "dataOnly": [
         "ba",
-        "br",
         "hy",
         "ka",
-        "pt",
         "tt"
       ]
     },
@@ -69,22 +67,16 @@
     "fluency-flow": {
       "menuOnly": [],
       "dataOnly": [
-        "ba",
-        "br",
         "hy",
-        "ka",
-        "pt",
-        "tt"
+        "ka"
       ]
     },
     "identity-mystery": {
       "menuOnly": [],
       "dataOnly": [
         "ba",
-        "br",
         "hy",
         "ka",
-        "pt",
         "tt"
       ]
     },
@@ -101,12 +93,8 @@
     "opinion-arena": {
       "menuOnly": [],
       "dataOnly": [
-        "ba",
-        "br",
         "hy",
-        "ka",
-        "pt",
-        "tt"
+        "ka"
       ]
     },
     "scene-match": {

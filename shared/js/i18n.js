@@ -658,7 +658,13 @@
     de: 'Deutsch 🇩🇪',
     it: 'Italiano 🇮🇹',
     ru: 'Русский 🇷🇺',
-    el: 'Ελληνικά 🇬🇷'
+    el: 'Ελληνικά 🇬🇷',
+    pt: 'Português 🇵🇹',
+    hy: 'Հայերեն 🇦🇲',
+    ka: 'ქართული 🇬🇪',
+    ba: 'Башҡортса 🇷🇺',
+    tt: 'Татарча 🇷🇺',
+    br: 'Brezhoneg 🏴'
   };
 
   window.cosyLanguageLabels = function(codes) {
