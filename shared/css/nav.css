@@ -170,3 +170,11 @@ html[data-context="phone"] .cg-nav,
     max-width: 140px;
   }
 }
+
+/* Five ecosystem links no longer fit next to the brand, language picker and theme button on narrow desktops/tablets.
+   The footer repeats every link, so hide only these (the hub's category anchors keep their own breakpoint). */
+@media (max-width: 860px) {
+  .cg-nav-eco {
+    display: none;
+  }
+}

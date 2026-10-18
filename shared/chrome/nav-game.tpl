@@ -4,10 +4,11 @@
         <span class="cg-nav-brand-text">COSYgames</span>
     </a>
     <div class="cg-nav-right">
-        <a href="{{site.languages}}/" class="cg-nav-hub-link" target="_blank" rel="noopener">Home 🏠</a>
-        <a href="{{root}}index.html" class="cg-nav-hub-link">All Games 🎮</a>
-        <a href="{{site.tools}}/" class="cg-nav-hub-link" target="_blank" rel="noopener">Tools 🔎</a>
-        <a href="{{site.events}}/" class="cg-nav-hub-link" target="_blank" rel="noopener">Events 🎉</a>
+        <a href="{{site.languages}}/" class="cg-nav-hub-link cg-nav-eco" target="_blank" rel="noopener" data-i18n="nav_home">Home 🏠</a>
+        <a href="{{root}}index.html" class="cg-nav-hub-link cg-nav-eco" data-i18n="nav_all_games">All Games 🎮</a>
+        <a href="{{site.data}}/" class="cg-nav-hub-link cg-nav-eco" target="_blank" rel="noopener" data-i18n="nav_data">Dictionary 📊</a>
+        <a href="{{site.tools}}/" class="cg-nav-hub-link cg-nav-eco" target="_blank" rel="noopener" data-i18n="nav_tools">Tools 🔎</a>
+        <a href="{{site.events}}/" class="cg-nav-hub-link cg-nav-eco" target="_blank" rel="noopener" data-i18n="nav_events">Events 🎉</a>
         <select id="cosy-ui-lang-switcher" class="cosy-lang-select" onchange="if(window.setLanguage)window.setLanguage(this.value)" aria-label="Interface language" title="Interface language">
             {{uiLanguageOptions}}
         </select>
