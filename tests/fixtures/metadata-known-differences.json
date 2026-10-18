@@ -24,13 +24,6 @@
     }
   },
   "languages": {
-    "100-questions": {
-      "menuOnly": [
-        "fr",
-        "ru"
-      ],
-      "dataOnly": []
-    },
     "action-hero": {
       "menuOnly": [],
       "dataOnly": [
