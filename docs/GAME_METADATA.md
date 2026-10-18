@@ -20,6 +20,15 @@ When you add, rename or remove a game, update all three; `tests/metadata-consist
   `game-taxonomy.json → categories` are *topic* categories (Everyday life, Society & culture, ...). They are unrelated despite the shared name.
 - **Modes.** `index.json → mode` is `solo` / `group`. The taxonomy uses finer `solo`, `pairs`, `mini-group`, `big-group`; `group` means "any of the last three".
 
+## Deep links and aliases
+
+The hub opens a game for `?game=<id>`. `shared/js/hub-core.js` resolves the id against `games/index.json`: the kebab-case `id`, its `snake_case` form
+(`fluency_flow`), or one of the game's `aliases` (legacy short names such as `fluency`, `bingo`, `storytelling`). Only ids from the file can be
+opened. To keep an old link alive after renaming a game, add the old name to that game's `aliases`; `tests/hub-core.test.js` checks that aliases are
+unique and never shadow an id, and that every key the hub accepted before the refactor still works.
+
+The hub's filtering and link-building logic is pure code in `shared/js/hub-core.js` (unit-tested in Node); `shared/js/hub.js` only wires it to the page.
+
 ## The drift guard
 
 `node scripts/metadata-report.js` prints every place the three files currently differ.
