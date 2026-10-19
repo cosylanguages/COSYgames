@@ -1,0 +1,1208 @@
+{
+  "schemaVersion": 1,
+  "description": "Interface-language labels for data/game-taxonomy.json. English comes from the taxonomy itself; keys are the taxonomy ids (subcategories use their English label as id). Machine-assisted drafts: have a native speaker review before relying on them.",
+  "languages": [
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el"
+  ],
+  "cefrLevels": {
+    "A0": {
+      "fr": "Pré-A1 / Débutant",
+      "es": "Pre-A1 / Principiante",
+      "de": "Pre-A1 / Anfänger",
+      "it": "Pre-A1 / Principiante",
+      "ru": "Pre-A1 / Начальный",
+      "el": "Pre-A1 / Αρχάριος"
+    },
+    "A1": {
+      "fr": "A1 — Débutant",
+      "es": "A1 — Principiante",
+      "de": "A1 — Anfänger",
+      "it": "A1 — Principiante",
+      "ru": "A1 — Начальный",
+      "el": "A1 — Αρχάριος"
+    },
+    "A2": {
+      "fr": "A2 — Élémentaire",
+      "es": "A2 — Elemental",
+      "de": "A2 — Grundlegend",
+      "it": "A2 — Elementare",
+      "ru": "A2 — Элементарный",
+      "el": "A2 — Βασικό"
+    },
+    "B1": {
+      "fr": "B1 — Intermédiaire",
+      "es": "B1 — Intermedio",
+      "de": "B1 — Mittelstufe",
+      "it": "B1 — Intermedio",
+      "ru": "B1 — Средний",
+      "el": "B1 — Μέτριο"
+    },
+    "B2": {
+      "fr": "B2 — Intermédiaire supérieur",
+      "es": "B2 — Intermedio alto",
+      "de": "B2 — Gehobene Mittelstufe",
+      "it": "B2 — Intermedio superiore",
+      "ru": "B2 — Выше среднего",
+      "el": "B2 — Μέτριο προχωρημένο"
+    },
+    "C1": {
+      "fr": "C1 — Avancé",
+      "es": "C1 — Avanzado",
+      "de": "C1 — Fortgeschritten",
+      "it": "C1 — Avanzato",
+      "ru": "C1 — Продвинутый",
+      "el": "C1 — Προχωρημένο"
+    },
+    "C2": {
+      "fr": "C2 — Maîtrise",
+      "es": "C2 — Maestría",
+      "de": "C2 — Annähernd muttersprachlich",
+      "it": "C2 — Padronanza",
+      "ru": "C2 — Владение в совершенстве",
+      "el": "C2 — Άριστο"
+    }
+  },
+  "audiences": {
+    "young-learners": {
+      "fr": "Jeunes apprenants",
+      "es": "Jóvenes estudiantes",
+      "de": "Junge Lernende",
+      "it": "Giovani studenti",
+      "ru": "Юные ученики",
+      "el": "Νεαροί μαθητές"
+    },
+    "children": {
+      "fr": "Enfants",
+      "es": "Niños",
+      "de": "Kinder",
+      "it": "Bambini",
+      "ru": "Дети",
+      "el": "Παιδιά"
+    },
+    "teens": {
+      "fr": "Adolescents",
+      "es": "Adolescentes",
+      "de": "Jugendliche",
+      "it": "Adolescenti",
+      "ru": "Подростки",
+      "el": "Έφηβοι"
+    },
+    "adults": {
+      "fr": "Adultes",
+      "es": "Adultos",
+      "de": "Erwachsene",
+      "it": "Adulti",
+      "ru": "Взрослые",
+      "el": "Ενήλικες"
+    },
+    "mixed-ages": {
+      "fr": "Âges mélangés",
+      "es": "Edades mixtas",
+      "de": "Gemischte Altersgruppen",
+      "it": "Età miste",
+      "ru": "Смешанный возраст",
+      "el": "Μικτές ηλικίες"
+    }
+  },
+  "playModes": {
+    "solo": {
+      "fr": "Solo",
+      "es": "Solo",
+      "de": "Einzel",
+      "it": "Solo",
+      "ru": "Соло",
+      "el": "Σόλο"
+    },
+    "pairs": {
+      "fr": "Binômes",
+      "es": "Parejas",
+      "de": "Paare",
+      "it": "Coppie",
+      "ru": "Пары",
+      "el": "Ζευγάρια"
+    },
+    "mini-group": {
+      "fr": "Petits groupes",
+      "es": "Grupos pequeños",
+      "de": "Kleingruppen",
+      "it": "Piccoli gruppi",
+      "ru": "Малые группы",
+      "el": "Μικρές ομάδες"
+    },
+    "big-group": {
+      "fr": "Grands groupes",
+      "es": "Grupos grandes",
+      "de": "Großgruppen",
+      "it": "Grandi gruppi",
+      "ru": "Большие группы",
+      "el": "Μεγάλες ομάδες"
+    }
+  },
+  "playFormats": {
+    "online": {
+      "fr": "En ligne",
+      "es": "En línea",
+      "de": "Online",
+      "it": "Online",
+      "ru": "Онлайн",
+      "el": "Διαδικτυακά"
+    },
+    "in-person": {
+      "fr": "En présentiel",
+      "es": "Presencial",
+      "de": "Vor Ort",
+      "it": "In presenza",
+      "ru": "Очно",
+      "el": "Δια ζώσης"
+    }
+  },
+  "categories": {
+    "everyday-life": {
+      "fr": "Vie quotidienne",
+      "es": "Vida cotidiana",
+      "de": "Alltag",
+      "it": "Vita quotidiana",
+      "ru": "Повседневная жизнь",
+      "el": "Καθημερινή ζωή"
+    },
+    "nature-world": {
+      "fr": "Nature et monde",
+      "es": "Naturaleza y mundo",
+      "de": "Natur & Welt",
+      "it": "Natura e mondo",
+      "ru": "Природа и мир",
+      "el": "Φύση και κόσμος"
+    },
+    "places-travel": {
+      "fr": "Lieux et voyages",
+      "es": "Lugares y viajes",
+      "de": "Orte & Reisen",
+      "it": "Luoghi e viaggi",
+      "ru": "Места и путешествия",
+      "el": "Μέρη και ταξίδια"
+    },
+    "hobbies-entertainment": {
+      "fr": "Loisirs, jeux et divertissement",
+      "es": "Aficiones, diversión y entretenimiento",
+      "de": "Hobbys, Spaß & Unterhaltung",
+      "it": "Hobby, divertimento e intrattenimento",
+      "ru": "Хобби, развлечения и досуг",
+      "el": "Χόμπι, διασκέδαση και ψυχαγωγία"
+    },
+    "people-feelings": {
+      "fr": "Personnes, émotions et relations",
+      "es": "Personas, sentimientos y relaciones",
+      "de": "Menschen, Gefühle & Beziehungen",
+      "it": "Persone, sentimenti e relazioni",
+      "ru": "Люди, чувства и отношения",
+      "el": "Άνθρωποι, συναισθήματα και σχέσεις"
+    },
+    "learning-knowledge": {
+      "fr": "Apprendre et savoir",
+      "es": "Aprendizaje y conocimiento",
+      "de": "Lernen & Wissen",
+      "it": "Apprendimento e conoscenza",
+      "ru": "Учёба и знания",
+      "el": "Μάθηση και γνώση"
+    },
+    "work-future": {
+      "fr": "Travail et avenir",
+      "es": "Trabajo y futuro",
+      "de": "Arbeit & Zukunft",
+      "it": "Lavoro e futuro",
+      "ru": "Работа и будущее",
+      "el": "Εργασία και μέλλον"
+    },
+    "stories-mystery": {
+      "fr": "Imagination, histoires et mystère",
+      "es": "Imaginación, historias y misterio",
+      "de": "Fantasie, Geschichten & Rätsel",
+      "it": "Immaginazione, storie e mistero",
+      "ru": "Воображение, истории и тайны",
+      "el": "Φαντασία, ιστορίες και μυστήριο"
+    },
+    "society-culture": {
+      "fr": "Société et culture",
+      "es": "Sociedad y cultura",
+      "de": "Gesellschaft & Kultur",
+      "it": "Società e cultura",
+      "ru": "Общество и культура",
+      "el": "Κοινωνία και πολιτισμός"
+    },
+    "opinions-ideas": {
+      "fr": "Opinions, idées et grandes questions",
+      "es": "Opiniones, ideas y grandes preguntas",
+      "de": "Meinungen, Ideen & große Fragen",
+      "it": "Opinioni, idee e grandi domande",
+      "ru": "Мнения, идеи и большие вопросы",
+      "el": "Απόψεις, ιδέες και μεγάλα ερωτήματα"
+    },
+    "real-life-communication": {
+      "fr": "Communication de la vie réelle",
+      "es": "Comunicación en la vida real",
+      "de": "Kommunikation im echten Leben",
+      "it": "Comunicazione nella vita reale",
+      "ru": "Общение в реальной жизни",
+      "el": "Επικοινωνία στην πραγματική ζωή"
+    },
+    "words-grammar": {
+      "fr": "Mots, grammaire et découverte de la langue",
+      "es": "Palabras, gramática y descubrimiento del idioma",
+      "de": "Wörter, Grammatik & Sprachentdeckung",
+      "it": "Parole, grammatica e scoperta della lingua",
+      "ru": "Слова, грамматика и открытие языка",
+      "el": "Λέξεις, γραμματική και ανακάλυψη της γλώσσας"
+    }
+  },
+  "subcategories": {
+    "Home & household": {
+      "fr": "Maison et ménage",
+      "es": "Hogar y vida doméstica",
+      "de": "Zuhause & Haushalt",
+      "it": "Casa e faccende domestiche",
+      "ru": "Дом и быт",
+      "el": "Σπίτι και νοικοκυριό"
+    },
+    "Daily routines": {
+      "fr": "Routines quotidiennes",
+      "es": "Rutinas diarias",
+      "de": "Tagesablauf",
+      "it": "Routine quotidiane",
+      "ru": "Распорядок дня",
+      "el": "Καθημερινές συνήθειες"
+    },
+    "Food & drinks": {
+      "fr": "Nourriture et boissons",
+      "es": "Comida y bebida",
+      "de": "Essen & Trinken",
+      "it": "Cibo e bevande",
+      "ru": "Еда и напитки",
+      "el": "Φαγητό και ποτά"
+    },
+    "Clothes & accessories": {
+      "fr": "Vêtements et accessoires",
+      "es": "Ropa y accesorios",
+      "de": "Kleidung & Accessoires",
+      "it": "Abbigliamento e accessori",
+      "ru": "Одежда и аксессуары",
+      "el": "Ρούχα και αξεσουάρ"
+    },
+    "Shopping": {
+      "fr": "Achats",
+      "es": "Compras",
+      "de": "Einkaufen",
+      "it": "Shopping",
+      "ru": "Покупки",
+      "el": "Αγορές"
+    },
+    "Money & prices": {
+      "fr": "Argent et prix",
+      "es": "Dinero y precios",
+      "de": "Geld & Preise",
+      "it": "Soldi e prezzi",
+      "ru": "Деньги и цены",
+      "el": "Χρήματα και τιμές"
+    },
+    "Time & dates": {
+      "fr": "Heure et dates",
+      "es": "Hora y fechas",
+      "de": "Zeit & Datum",
+      "it": "Ora e date",
+      "ru": "Время и даты",
+      "el": "Ώρα και ημερομηνίες"
+    },
+    "Numbers": {
+      "fr": "Nombres",
+      "es": "Números",
+      "de": "Zahlen",
+      "it": "Numeri",
+      "ru": "Числа",
+      "el": "Αριθμοί"
+    },
+    "Colours & shapes": {
+      "fr": "Couleurs et formes",
+      "es": "Colores y formas",
+      "de": "Farben & Formen",
+      "it": "Colori e forme",
+      "ru": "Цвета и формы",
+      "el": "Χρώματα και σχήματα"
+    },
+    "Personal belongings": {
+      "fr": "Affaires personnelles",
+      "es": "Objetos personales",
+      "de": "Persönliche Gegenstände",
+      "it": "Oggetti personali",
+      "ru": "Личные вещи",
+      "el": "Προσωπικά αντικείμενα"
+    },
+    "Animals & pets": {
+      "fr": "Animaux et animaux de compagnie",
+      "es": "Animales y mascotas",
+      "de": "Tiere & Haustiere",
+      "it": "Animali e animali domestici",
+      "ru": "Животные и домашние питомцы",
+      "el": "Ζώα και κατοικίδια"
+    },
+    "Plants & flowers": {
+      "fr": "Plantes et fleurs",
+      "es": "Plantas y flores",
+      "de": "Pflanzen & Blumen",
+      "it": "Piante e fiori",
+      "ru": "Растения и цветы",
+      "el": "Φυτά και λουλούδια"
+    },
+    "Weather & seasons": {
+      "fr": "Météo et saisons",
+      "es": "Clima y estaciones",
+      "de": "Wetter & Jahreszeiten",
+      "it": "Meteo e stagioni",
+      "ru": "Погода и времена года",
+      "el": "Καιρός και εποχές"
+    },
+    "Landscapes": {
+      "fr": "Paysages",
+      "es": "Paisajes",
+      "de": "Landschaften",
+      "it": "Paesaggi",
+      "ru": "Пейзажи",
+      "el": "Τοπία"
+    },
+    "Oceans": {
+      "fr": "Océans",
+      "es": "Océanos",
+      "de": "Ozeane",
+      "it": "Oceani",
+      "ru": "Океаны",
+      "el": "Ωκεανοί"
+    },
+    "Space": {
+      "fr": "Espace",
+      "es": "Espacio",
+      "de": "Weltraum",
+      "it": "Spazio",
+      "ru": "Космос",
+      "el": "Διάστημα"
+    },
+    "Environment": {
+      "fr": "Environnement",
+      "es": "Medio ambiente",
+      "de": "Umwelt",
+      "it": "Ambiente",
+      "ru": "Окружающая среда",
+      "el": "Περιβάλλον"
+    },
+    "Climate & conservation": {
+      "fr": "Climat et protection de la nature",
+      "es": "Clima y conservación",
+      "de": "Klima & Naturschutz",
+      "it": "Clima e conservazione",
+      "ru": "Климат и охрана природы",
+      "el": "Κλίμα και προστασία της φύσης"
+    },
+    "My town": {
+      "fr": "Ma ville",
+      "es": "Mi ciudad",
+      "de": "Meine Stadt",
+      "it": "La mia città",
+      "ru": "Мой город",
+      "el": "Η πόλη μου"
+    },
+    "Countries & nationalities": {
+      "fr": "Pays et nationalités",
+      "es": "Países y nacionalidades",
+      "de": "Länder & Nationalitäten",
+      "it": "Paesi e nazionalità",
+      "ru": "Страны и национальности",
+      "el": "Χώρες και εθνικότητες"
+    },
+    "Transport": {
+      "fr": "Transports",
+      "es": "Transporte",
+      "de": "Verkehrsmittel",
+      "it": "Trasporti",
+      "ru": "Транспорт",
+      "el": "Μεταφορές"
+    },
+    "Directions": {
+      "fr": "Indications routières",
+      "es": "Direcciones",
+      "de": "Wegbeschreibungen",
+      "it": "Indicazioni stradali",
+      "ru": "Направления",
+      "el": "Κατευθύνσεις"
+    },
+    "Holidays": {
+      "fr": "Vacances",
+      "es": "Vacaciones",
+      "de": "Urlaub",
+      "it": "Vacanze",
+      "ru": "Отпуск",
+      "el": "Διακοπές"
+    },
+    "Hotels": {
+      "fr": "Hôtels",
+      "es": "Hoteles",
+      "de": "Hotels",
+      "it": "Hotel",
+      "ru": "Отели",
+      "el": "Ξενοδοχεία"
+    },
+    "Airports": {
+      "fr": "Aéroports",
+      "es": "Aeropuertos",
+      "de": "Flughäfen",
+      "it": "Aeroporti",
+      "ru": "Аэропорты",
+      "el": "Αεροδρόμια"
+    },
+    "Restaurants": {
+      "fr": "Restaurants",
+      "es": "Restaurantes",
+      "de": "Restaurants",
+      "it": "Ristoranti",
+      "ru": "Рестораны",
+      "el": "Εστιατόρια"
+    },
+    "Sightseeing": {
+      "fr": "Visites touristiques",
+      "es": "Turismo y visitas",
+      "de": "Sehenswürdigkeiten",
+      "it": "Visite turistiche",
+      "ru": "Достопримечательности",
+      "el": "Αξιοθέατα"
+    },
+    "Travel problems": {
+      "fr": "Problèmes en voyage",
+      "es": "Problemas de viaje",
+      "de": "Reiseprobleme",
+      "it": "Problemi di viaggio",
+      "ru": "Проблемы в путешествии",
+      "el": "Προβλήματα στα ταξίδια"
+    },
+    "Sports": {
+      "fr": "Sports",
+      "es": "Deportes",
+      "de": "Sport",
+      "it": "Sport",
+      "ru": "Спорт",
+      "el": "Αθλήματα"
+    },
+    "Games": {
+      "fr": "Jeux",
+      "es": "Juegos",
+      "de": "Spiele",
+      "it": "Giochi",
+      "ru": "Игры",
+      "el": "Παιχνίδια"
+    },
+    "Music": {
+      "fr": "Musique",
+      "es": "Música",
+      "de": "Musik",
+      "it": "Musica",
+      "ru": "Музыка",
+      "el": "Μουσική"
+    },
+    "Films & TV": {
+      "fr": "Films et télévision",
+      "es": "Cine y televisión",
+      "de": "Filme & Fernsehen",
+      "it": "Film e TV",
+      "ru": "Фильмы и ТВ",
+      "el": "Ταινίες και τηλεόραση"
+    },
+    "Books": {
+      "fr": "Livres",
+      "es": "Libros",
+      "de": "Bücher",
+      "it": "Libri",
+      "ru": "Книги",
+      "el": "Βιβλία"
+    },
+    "Art & creativity": {
+      "fr": "Art et créativité",
+      "es": "Arte y creatividad",
+      "de": "Kunst & Kreativität",
+      "it": "Arte e creatività",
+      "ru": "Искусство и творчество",
+      "el": "Τέχνη και δημιουργικότητα"
+    },
+    "Dance": {
+      "fr": "Danse",
+      "es": "Baile",
+      "de": "Tanz",
+      "it": "Danza",
+      "ru": "Танцы",
+      "el": "Χορός"
+    },
+    "Internet culture": {
+      "fr": "Culture internet",
+      "es": "Cultura de internet",
+      "de": "Internetkultur",
+      "it": "Cultura di internet",
+      "ru": "Интернет-культура",
+      "el": "Κουλτούρα του διαδικτύου"
+    },
+    "Celebrations": {
+      "fr": "Fêtes et célébrations",
+      "es": "Celebraciones",
+      "de": "Feiern",
+      "it": "Celebrazioni",
+      "ru": "Праздники",
+      "el": "Γιορτές"
+    },
+    "Free-time activities": {
+      "fr": "Activités de loisirs",
+      "es": "Actividades de tiempo libre",
+      "de": "Freizeitaktivitäten",
+      "it": "Attività del tempo libero",
+      "ru": "Занятия в свободное время",
+      "el": "Δραστηριότητες ελεύθερου χρόνου"
+    },
+    "Family & friends": {
+      "fr": "Famille et amis",
+      "es": "Familia y amigos",
+      "de": "Familie & Freunde",
+      "it": "Famiglia e amici",
+      "ru": "Семья и друзья",
+      "el": "Οικογένεια και φίλοι"
+    },
+    "Personality": {
+      "fr": "Personnalité",
+      "es": "Personalidad",
+      "de": "Persönlichkeit",
+      "it": "Personalità",
+      "ru": "Характер",
+      "el": "Προσωπικότητα"
+    },
+    "Feelings & emotions": {
+      "fr": "Sentiments et émotions",
+      "es": "Sentimientos y emociones",
+      "de": "Gefühle & Emotionen",
+      "it": "Sentimenti ed emozioni",
+      "ru": "Чувства и эмоции",
+      "el": "Συναισθήματα"
+    },
+    "Describing people": {
+      "fr": "Décrire les personnes",
+      "es": "Describir personas",
+      "de": "Personen beschreiben",
+      "it": "Descrivere le persone",
+      "ru": "Описание людей",
+      "el": "Περιγραφή ανθρώπων"
+    },
+    "Friendship": {
+      "fr": "Amitié",
+      "es": "Amistad",
+      "de": "Freundschaft",
+      "it": "Amicizia",
+      "ru": "Дружба",
+      "el": "Φιλία"
+    },
+    "Social situations": {
+      "fr": "Situations sociales",
+      "es": "Situaciones sociales",
+      "de": "Soziale Situationen",
+      "it": "Situazioni sociali",
+      "ru": "Социальные ситуации",
+      "el": "Κοινωνικές καταστάσεις"
+    },
+    "Communication": {
+      "fr": "Communication",
+      "es": "Comunicación",
+      "de": "Kommunikation",
+      "it": "Comunicazione",
+      "ru": "Общение",
+      "el": "Επικοινωνία"
+    },
+    "Conflict resolution": {
+      "fr": "Résolution de conflits",
+      "es": "Resolución de conflictos",
+      "de": "Konfliktlösung",
+      "it": "Risoluzione dei conflitti",
+      "ru": "Разрешение конфликтов",
+      "el": "Επίλυση συγκρούσεων"
+    },
+    "Empathy": {
+      "fr": "Empathie",
+      "es": "Empatía",
+      "de": "Empathie",
+      "it": "Empatia",
+      "ru": "Эмпатия",
+      "el": "Ενσυναίσθηση"
+    },
+    "School subjects": {
+      "fr": "Matières scolaires",
+      "es": "Asignaturas escolares",
+      "de": "Schulfächer",
+      "it": "Materie scolastiche",
+      "ru": "Школьные предметы",
+      "el": "Σχολικά μαθήματα"
+    },
+    "Languages": {
+      "fr": "Langues",
+      "es": "Idiomas",
+      "de": "Sprachen",
+      "it": "Lingue",
+      "ru": "Языки",
+      "el": "Γλώσσες"
+    },
+    "Science": {
+      "fr": "Sciences",
+      "es": "Ciencia",
+      "de": "Wissenschaft",
+      "it": "Scienza",
+      "ru": "Наука",
+      "el": "Επιστήμη"
+    },
+    "History": {
+      "fr": "Histoire",
+      "es": "Historia",
+      "de": "Geschichte",
+      "it": "Storia",
+      "ru": "История",
+      "el": "Ιστορία"
+    },
+    "Geography": {
+      "fr": "Géographie",
+      "es": "Geografía",
+      "de": "Geografie",
+      "it": "Geografia",
+      "ru": "География",
+      "el": "Γεωγραφία"
+    },
+    "Mathematics": {
+      "fr": "Mathématiques",
+      "es": "Matemáticas",
+      "de": "Mathematik",
+      "it": "Matematica",
+      "ru": "Математика",
+      "el": "Μαθηματικά"
+    },
+    "Inventions": {
+      "fr": "Inventions",
+      "es": "Inventos",
+      "de": "Erfindungen",
+      "it": "Invenzioni",
+      "ru": "Изобретения",
+      "el": "Εφευρέσεις"
+    },
+    "General knowledge": {
+      "fr": "Culture générale",
+      "es": "Cultura general",
+      "de": "Allgemeinwissen",
+      "it": "Cultura generale",
+      "ru": "Общие знания",
+      "el": "Γενικές γνώσεις"
+    },
+    "Problem-solving": {
+      "fr": "Résolution de problèmes",
+      "es": "Resolución de problemas",
+      "de": "Problemlösung",
+      "it": "Risoluzione di problemi",
+      "ru": "Решение проблем",
+      "el": "Επίλυση προβλημάτων"
+    },
+    "Study skills": {
+      "fr": "Méthodes de travail",
+      "es": "Técnicas de estudio",
+      "de": "Lerntechniken",
+      "it": "Metodo di studio",
+      "ru": "Навыки учёбы",
+      "el": "Δεξιότητες μελέτης"
+    },
+    "Jobs & professions": {
+      "fr": "Métiers et professions",
+      "es": "Trabajos y profesiones",
+      "de": "Berufe",
+      "it": "Lavori e professioni",
+      "ru": "Работа и профессии",
+      "el": "Επαγγέλματα"
+    },
+    "Workplace vocabulary": {
+      "fr": "Vocabulaire du travail",
+      "es": "Vocabulario laboral",
+      "de": "Wortschatz am Arbeitsplatz",
+      "it": "Lessico del lavoro",
+      "ru": "Лексика рабочего места",
+      "el": "Λεξιλόγιο εργασιακού χώρου"
+    },
+    "Skills & talents": {
+      "fr": "Compétences et talents",
+      "es": "Habilidades y talentos",
+      "de": "Fähigkeiten & Talente",
+      "it": "Competenze e talenti",
+      "ru": "Навыки и таланты",
+      "el": "Δεξιότητες και ταλέντα"
+    },
+    "Goals & ambitions": {
+      "fr": "Objectifs et ambitions",
+      "es": "Metas y ambiciones",
+      "de": "Ziele & Ambitionen",
+      "it": "Obiettivi e ambizioni",
+      "ru": "Цели и стремления",
+      "el": "Στόχοι και φιλοδοξίες"
+    },
+    "Career choices": {
+      "fr": "Choix de carrière",
+      "es": "Elecciones profesionales",
+      "de": "Berufswahl",
+      "it": "Scelte di carriera",
+      "ru": "Выбор карьеры",
+      "el": "Επιλογές καριέρας"
+    },
+    "Meetings": {
+      "fr": "Réunions",
+      "es": "Reuniones",
+      "de": "Besprechungen",
+      "it": "Riunioni",
+      "ru": "Совещания",
+      "el": "Συναντήσεις"
+    },
+    "Interviews": {
+      "fr": "Entretiens",
+      "es": "Entrevistas",
+      "de": "Vorstellungsgespräche",
+      "it": "Colloqui",
+      "ru": "Собеседования",
+      "el": "Συνεντεύξεις"
+    },
+    "Business communication": {
+      "fr": "Communication professionnelle",
+      "es": "Comunicación empresarial",
+      "de": "Geschäftskommunikation",
+      "it": "Comunicazione aziendale",
+      "ru": "Деловое общение",
+      "el": "Επιχειρηματική επικοινωνία"
+    },
+    "Entrepreneurship": {
+      "fr": "Entrepreneuriat",
+      "es": "Emprendimiento",
+      "de": "Unternehmertum",
+      "it": "Imprenditorialità",
+      "ru": "Предпринимательство",
+      "el": "Επιχειρηματικότητα"
+    },
+    "Fairy tales": {
+      "fr": "Contes de fées",
+      "es": "Cuentos de hadas",
+      "de": "Märchen",
+      "it": "Fiabe",
+      "ru": "Сказки",
+      "el": "Παραμύθια"
+    },
+    "Fantasy": {
+      "fr": "Fantasy",
+      "es": "Fantasía",
+      "de": "Fantasy",
+      "it": "Fantasy",
+      "ru": "Фэнтези",
+      "el": "Φαντασία"
+    },
+    "Adventure": {
+      "fr": "Aventure",
+      "es": "Aventura",
+      "de": "Abenteuer",
+      "it": "Avventura",
+      "ru": "Приключения",
+      "el": "Περιπέτεια"
+    },
+    "Detective stories": {
+      "fr": "Histoires policières",
+      "es": "Historias de detectives",
+      "de": "Detektivgeschichten",
+      "it": "Storie poliziesche",
+      "ru": "Детективы",
+      "el": "Αστυνομικές ιστορίες"
+    },
+    "Secrets & clues": {
+      "fr": "Secrets et indices",
+      "es": "Secretos y pistas",
+      "de": "Geheimnisse & Hinweise",
+      "it": "Segreti e indizi",
+      "ru": "Тайны и улики",
+      "el": "Μυστικά και ενδείξεις"
+    },
+    "Science fiction": {
+      "fr": "Science-fiction",
+      "es": "Ciencia ficción",
+      "de": "Science-Fiction",
+      "it": "Fantascienza",
+      "ru": "Научная фантастика",
+      "el": "Επιστημονική φαντασία"
+    },
+    "Superheroes": {
+      "fr": "Super-héros",
+      "es": "Superhéroes",
+      "de": "Superhelden",
+      "it": "Supereroi",
+      "ru": "Супергерои",
+      "el": "Υπερήρωες"
+    },
+    "Strange situations": {
+      "fr": "Situations étranges",
+      "es": "Situaciones extrañas",
+      "de": "Seltsame Situationen",
+      "it": "Situazioni strane",
+      "ru": "Странные ситуации",
+      "el": "Παράξενες καταστάσεις"
+    },
+    "Alternative endings": {
+      "fr": "Fins alternatives",
+      "es": "Finales alternativos",
+      "de": "Alternative Enden",
+      "it": "Finali alternativi",
+      "ru": "Альтернативные концовки",
+      "el": "Εναλλακτικά τέλη"
+    },
+    "Story prompts": {
+      "fr": "Idées d’histoires",
+      "es": "Ideas para historias",
+      "de": "Geschichtenanfänge",
+      "it": "Spunti per storie",
+      "ru": "Идеи для историй",
+      "el": "Ιδέες για ιστορίες"
+    },
+    "Traditions & festivals": {
+      "fr": "Traditions et fêtes",
+      "es": "Tradiciones y festivales",
+      "de": "Traditionen & Feste",
+      "it": "Tradizioni e feste",
+      "ru": "Традиции и праздники",
+      "el": "Παραδόσεις και γιορτές"
+    },
+    "Countries & cultures": {
+      "fr": "Pays et cultures",
+      "es": "Países y culturas",
+      "de": "Länder & Kulturen",
+      "it": "Paesi e culture",
+      "ru": "Страны и культуры",
+      "el": "Χώρες και πολιτισμοί"
+    },
+    "Food traditions": {
+      "fr": "Traditions culinaires",
+      "es": "Tradiciones gastronómicas",
+      "de": "Esskultur",
+      "it": "Tradizioni gastronomiche",
+      "ru": "Кулинарные традиции",
+      "el": "Γαστρονομικές παραδόσεις"
+    },
+    "Community": {
+      "fr": "Communauté",
+      "es": "Comunidad",
+      "de": "Gemeinschaft",
+      "it": "Comunità",
+      "ru": "Сообщество",
+      "el": "Κοινότητα"
+    },
+    "Media": {
+      "fr": "Médias",
+      "es": "Medios de comunicación",
+      "de": "Medien",
+      "it": "Media",
+      "ru": "СМИ",
+      "el": "Μέσα ενημέρωσης"
+    },
+    "Technology in society": {
+      "fr": "La technologie dans la société",
+      "es": "La tecnología en la sociedad",
+      "de": "Technologie in der Gesellschaft",
+      "it": "La tecnologia nella società",
+      "ru": "Технологии в обществе",
+      "el": "Η τεχνολογία στην κοινωνία"
+    },
+    "Social rules": {
+      "fr": "Règles sociales",
+      "es": "Normas sociales",
+      "de": "Soziale Regeln",
+      "it": "Regole sociali",
+      "ru": "Социальные нормы",
+      "el": "Κοινωνικοί κανόνες"
+    },
+    "Cultural differences": {
+      "fr": "Différences culturelles",
+      "es": "Diferencias culturales",
+      "de": "Kulturelle Unterschiede",
+      "it": "Differenze culturali",
+      "ru": "Культурные различия",
+      "el": "Πολιτισμικές διαφορές"
+    },
+    "Current issues": {
+      "fr": "Questions d’actualité",
+      "es": "Temas de actualidad",
+      "de": "Aktuelle Themen",
+      "it": "Temi di attualità",
+      "ru": "Актуальные проблемы",
+      "el": "Επίκαιρα θέματα"
+    },
+    "Citizenship": {
+      "fr": "Citoyenneté",
+      "es": "Ciudadanía",
+      "de": "Staatsbürgerschaft",
+      "it": "Cittadinanza",
+      "ru": "Гражданство",
+      "el": "Ιθαγένεια"
+    },
+    "Agree or disagree": {
+      "fr": "D’accord ou pas d’accord",
+      "es": "De acuerdo o en desacuerdo",
+      "de": "Zustimmen oder widersprechen",
+      "it": "D’accordo o in disaccordo",
+      "ru": "Согласен или не согласен",
+      "el": "Συμφωνώ ή διαφωνώ"
+    },
+    "Choices & dilemmas": {
+      "fr": "Choix et dilemmes",
+      "es": "Decisiones y dilemas",
+      "de": "Entscheidungen & Dilemmata",
+      "it": "Scelte e dilemmi",
+      "ru": "Выбор и дилеммы",
+      "el": "Επιλογές και διλήμματα"
+    },
+    "Would you rather?": {
+      "fr": "Tu préfères ?",
+      "es": "¿Qué preferirías?",
+      "de": "Was würdest du lieber tun?",
+      "it": "Cosa preferiresti?",
+      "ru": "Что бы ты выбрал?",
+      "el": "Τι θα προτιμούσες;"
+    },
+    "Ethics": {
+      "fr": "Éthique",
+      "es": "Ética",
+      "de": "Ethik",
+      "it": "Etica",
+      "ru": "Этика",
+      "el": "Ηθική"
+    },
+    "Hypothetical situations": {
+      "fr": "Situations hypothétiques",
+      "es": "Situaciones hipotéticas",
+      "de": "Hypothetische Situationen",
+      "it": "Situazioni ipotetiche",
+      "ru": "Гипотетические ситуации",
+      "el": "Υποθετικές καταστάσεις"
+    },
+    "Philosophical questions": {
+      "fr": "Questions philosophiques",
+      "es": "Preguntas filosóficas",
+      "de": "Philosophische Fragen",
+      "it": "Domande filosofiche",
+      "ru": "Философские вопросы",
+      "el": "Φιλοσοφικά ερωτήματα"
+    },
+    "Predictions": {
+      "fr": "Prédictions",
+      "es": "Predicciones",
+      "de": "Vorhersagen",
+      "it": "Previsioni",
+      "ru": "Прогнозы",
+      "el": "Προβλέψεις"
+    },
+    "Arguments & counterarguments": {
+      "fr": "Arguments et contre-arguments",
+      "es": "Argumentos y contraargumentos",
+      "de": "Argumente & Gegenargumente",
+      "it": "Argomenti e controargomenti",
+      "ru": "Аргументы и контраргументы",
+      "el": "Επιχειρήματα και αντεπιχειρήματα"
+    },
+    "Greetings & introductions": {
+      "fr": "Salutations et présentations",
+      "es": "Saludos y presentaciones",
+      "de": "Begrüßungen & Vorstellungen",
+      "it": "Saluti e presentazioni",
+      "ru": "Приветствия и знакомства",
+      "el": "Χαιρετισμοί και συστάσεις"
+    },
+    "Asking questions": {
+      "fr": "Poser des questions",
+      "es": "Hacer preguntas",
+      "de": "Fragen stellen",
+      "it": "Fare domande",
+      "ru": "Задавать вопросы",
+      "el": "Υποβολή ερωτήσεων"
+    },
+    "Making requests": {
+      "fr": "Faire des demandes",
+      "es": "Hacer peticiones",
+      "de": "Bitten äußern",
+      "it": "Fare richieste",
+      "ru": "Просьбы",
+      "el": "Διατύπωση αιτημάτων"
+    },
+    "Giving instructions": {
+      "fr": "Donner des instructions",
+      "es": "Dar instrucciones",
+      "de": "Anweisungen geben",
+      "it": "Dare istruzioni",
+      "ru": "Давать инструкции",
+      "el": "Παροχή οδηγιών"
+    },
+    "Offering help": {
+      "fr": "Proposer son aide",
+      "es": "Ofrecer ayuda",
+      "de": "Hilfe anbieten",
+      "it": "Offrire aiuto",
+      "ru": "Предлагать помощь",
+      "el": "Προσφορά βοήθειας"
+    },
+    "Apologising": {
+      "fr": "S’excuser",
+      "es": "Pedir disculpas",
+      "de": "Sich entschuldigen",
+      "it": "Scusarsi",
+      "ru": "Извиняться",
+      "el": "Απολογία"
+    },
+    "Making plans": {
+      "fr": "Faire des projets",
+      "es": "Hacer planes",
+      "de": "Pläne machen",
+      "it": "Fare programmi",
+      "ru": "Строить планы",
+      "el": "Σχεδιασμός"
+    },
+    "Solving misunderstandings": {
+      "fr": "Résoudre les malentendus",
+      "es": "Resolver malentendidos",
+      "de": "Missverständnisse klären",
+      "it": "Chiarire i malintesi",
+      "ru": "Улаживать недоразумения",
+      "el": "Επίλυση παρεξηγήσεων"
+    },
+    "Telephone conversations": {
+      "fr": "Conversations téléphoniques",
+      "es": "Conversaciones telefónicas",
+      "de": "Telefongespräche",
+      "it": "Conversazioni telefoniche",
+      "ru": "Телефонные разговоры",
+      "el": "Τηλεφωνικές συνομιλίες"
+    },
+    "Role-play": {
+      "fr": "Jeux de rôle",
+      "es": "Juegos de rol",
+      "de": "Rollenspiele",
+      "it": "Giochi di ruolo",
+      "ru": "Ролевые игры",
+      "el": "Παιχνίδια ρόλων"
+    },
+    "Vocabulary themes": {
+      "fr": "Thèmes de vocabulaire",
+      "es": "Temas de vocabulario",
+      "de": "Wortschatzthemen",
+      "it": "Temi di vocabolario",
+      "ru": "Тематическая лексика",
+      "el": "Θεματικό λεξιλόγιο"
+    },
+    "Verbs & actions": {
+      "fr": "Verbes et actions",
+      "es": "Verbos y acciones",
+      "de": "Verben & Handlungen",
+      "it": "Verbi e azioni",
+      "ru": "Глаголы и действия",
+      "el": "Ρήματα και ενέργειες"
+    },
+    "Adjectives": {
+      "fr": "Adjectifs",
+      "es": "Adjetivos",
+      "de": "Adjektive",
+      "it": "Aggettivi",
+      "ru": "Прилагательные",
+      "el": "Επίθετα"
+    },
+    "Synonyms & antonyms": {
+      "fr": "Synonymes et antonymes",
+      "es": "Sinónimos y antónimos",
+      "de": "Synonyme & Antonyme",
+      "it": "Sinonimi e contrari",
+      "ru": "Синонимы и антонимы",
+      "el": "Συνώνυμα και αντώνυμα"
+    },
+    "Word associations": {
+      "fr": "Associations de mots",
+      "es": "Asociaciones de palabras",
+      "de": "Wortassoziationen",
+      "it": "Associazioni di parole",
+      "ru": "Ассоциации слов",
+      "el": "Συνειρμοί λέξεων"
+    },
+    "Collocations": {
+      "fr": "Collocations",
+      "es": "Colocaciones",
+      "de": "Kollokationen",
+      "it": "Collocazioni",
+      "ru": "Сочетаемость слов",
+      "el": "Λεξικές συνάψεις"
+    },
+    "Idioms": {
+      "fr": "Expressions idiomatiques",
+      "es": "Modismos",
+      "de": "Redewendungen",
+      "it": "Modi di dire",
+      "ru": "Идиомы",
+      "el": "Ιδιωματισμοί"
+    },
+    "Phrasal verbs": {
+      "fr": "Verbes à particule",
+      "es": "Verbos frasales",
+      "de": "Phrasal Verbs",
+      "it": "Phrasal verbs",
+      "ru": "Фразовые глаголы",
+      "el": "Φρασεολογικά ρήματα"
+    },
+    "Word formation": {
+      "fr": "Formation des mots",
+      "es": "Formación de palabras",
+      "de": "Wortbildung",
+      "it": "Formazione delle parole",
+      "ru": "Словообразование",
+      "el": "Σχηματισμός λέξεων"
+    },
+    "Pronunciation": {
+      "fr": "Prononciation",
+      "es": "Pronunciación",
+      "de": "Aussprache",
+      "it": "Pronuncia",
+      "ru": "Произношение",
+      "el": "Προφορά"
+    },
+    "Spelling": {
+      "fr": "Orthographe",
+      "es": "Ortografía",
+      "de": "Rechtschreibung",
+      "it": "Ortografia",
+      "ru": "Орфография",
+      "el": "Ορθογραφία"
+    },
+    "Grammar patterns": {
+      "fr": "Structures grammaticales",
+      "es": "Patrones gramaticales",
+      "de": "Grammatikmuster",
+      "it": "Strutture grammaticali",
+      "ru": "Грамматические модели",
+      "el": "Γραμματικά μοτίβα"
+    },
+    "Noun gender": {
+      "fr": "Genre des noms",
+      "es": "Género de los sustantivos",
+      "de": "Genus der Substantive",
+      "it": "Genere dei nomi",
+      "ru": "Род существительных",
+      "el": "Γένος των ουσιαστικών"
+    },
+    "Etymology": {
+      "fr": "Étymologie",
+      "es": "Etimología",
+      "de": "Etymologie",
+      "it": "Etimologia",
+      "ru": "Этимология",
+      "el": "Ετυμολογία"
+    }
+  }
+}

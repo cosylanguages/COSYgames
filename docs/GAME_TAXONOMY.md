@@ -51,3 +51,17 @@ Some existing game datasets use labels such as `starter`, `elementary`, `interme
 ## Quality note
 
 Initial tags are a practical starting point based on each game's purpose and visible description. They should be reviewed against actual prompt/deck content before being presented as precise pedagogical guarantees. Group-size tags should be checked against each game's facilitation needs. Do not advertise offline/no-internet support unless a game and its dependencies have been verified to work without a connection.
+
+## Interface-language labels
+
+`data/game-taxonomy.json` holds the English labels. `data/game-taxonomy-labels.json` holds the same items in the six other interface
+languages (fr, es, de, it, ru, el), keyed by the taxonomy ids; subtopics use their English label as the key because that is also the value
+the filter works with. The hub shows the translated text and keeps the English id as the option value, so filtering never depends on the
+language. When the interface language changes (`cosy:languagechange`), the selects relabel themselves and the subtopic list is re-sorted.
+
+- A missing translation falls back to English (`COSYHubCore.taxonomyLabel`); `tests/hub-labels.test.js` fails if a taxonomy item has no label
+  in any language, if a label no longer exists in the taxonomy, or if translations are copy-pasted English.
+- The labels are machine-assisted drafts. A native speaker should review them, especially Greek and Russian.
+- Add a new taxonomy item: add it to `game-taxonomy.json` and all six languages here in the same change.
+- Never make `game-taxonomy.js` add elements with `data-i18n` while relabelling: `i18n.js` watches for them and the two would trigger each
+  other in a loop (guarded by a test).

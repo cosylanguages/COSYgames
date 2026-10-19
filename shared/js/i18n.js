@@ -3,6 +3,23 @@
 
   const translations = {
     en: {
+      filter_label_category: 'Topic:',
+      filter_label_subcategory: 'Subtopic:',
+      filter_label_level: 'Level:',
+      filter_label_audience: 'Audience:',
+      filter_label_mode: 'Group size:',
+      filter_label_format: 'Setting:',
+      filter_all_category: 'All topics',
+      filter_all_subcategory: 'All subtopics',
+      filter_all_level: 'All levels',
+      filter_all_audience: 'All ages',
+      filter_all_mode: 'Any group size',
+      filter_all_format: 'Any setting',
+      taxonomy_level_note: 'Level filters show games with mapped CEFR levels. Some games use difficulty modes or have content that is not yet CEFR-assessed, so they may not appear when a specific level is selected.',
+      taxonomy_load_error: 'Topic and learning filters could not load. You can still browse all games below; please refresh the page to try again.',
+      taxonomy_empty_state: 'No games match these filters. Try changing or clearing one or more filters.',
+      games_count_one: '{n} game',
+      games_count_other: '{n} games',
       report_issue: 'Report Issue',
       report_issue_aria: 'Report an issue',
       game_loading: 'Loading game assets...',
@@ -91,6 +108,23 @@
       sw_english_only: 'Story Weaver currently works in English only: its grammar rules, themes and connectors are not available in other languages yet.'
     },
     fr: {
+      filter_label_category: 'Thème :',
+      filter_label_subcategory: 'Sous-thème :',
+      filter_label_level: 'Niveau :',
+      filter_label_audience: 'Public :',
+      filter_label_mode: 'Taille du groupe :',
+      filter_label_format: 'Format :',
+      filter_all_category: 'Tous les thèmes',
+      filter_all_subcategory: 'Tous les sous-thèmes',
+      filter_all_level: 'Tous les niveaux',
+      filter_all_audience: 'Tous les âges',
+      filter_all_mode: 'Toutes les tailles de groupe',
+      filter_all_format: 'Tous les formats',
+      taxonomy_level_note: 'Les filtres de niveau affichent les jeux dont les niveaux CEFR sont renseignés. Certains jeux proposent des modes de difficulté ou du contenu non encore évalué selon le CEFR : ils peuvent donc ne pas apparaître lorsqu’un niveau précis est sélectionné.',
+      taxonomy_load_error: 'Impossible de charger les filtres par thème et par apprentissage. Vous pouvez toujours parcourir tous les jeux ci-dessous ; actualisez la page pour réessayer.',
+      taxonomy_empty_state: 'Aucun jeu ne correspond à ces filtres. Essayez de modifier ou d’effacer un ou plusieurs filtres.',
+      games_count_one: '{n} jeu',
+      games_count_other: '{n} jeux',
       report_issue: 'Signaler un problème',
       report_issue_aria: 'Signaler un problème avec ce jeu',
       game_loading: 'Chargement des ressources du jeu…',
@@ -179,6 +213,23 @@
       sw_english_only: 'Story Weaver fonctionne pour l’instant en anglais uniquement : ses règles de grammaire, thèmes et connecteurs ne sont pas encore disponibles dans d’autres langues.'
     },
     es: {
+      filter_label_category: 'Tema:',
+      filter_label_subcategory: 'Subtema:',
+      filter_label_level: 'Nivel:',
+      filter_label_audience: 'Público:',
+      filter_label_mode: 'Tamaño del grupo:',
+      filter_label_format: 'Modalidad:',
+      filter_all_category: 'Todos los temas',
+      filter_all_subcategory: 'Todos los subtemas',
+      filter_all_level: 'Todos los niveles',
+      filter_all_audience: 'Todas las edades',
+      filter_all_mode: 'Cualquier tamaño de grupo',
+      filter_all_format: 'Cualquier modalidad',
+      taxonomy_level_note: 'Los filtros de nivel muestran los juegos con niveles CEFR asignados. Algunos juegos usan modos de dificultad o tienen contenido que aún no está evaluado según el CEFR, por lo que pueden no aparecer al elegir un nivel concreto.',
+      taxonomy_load_error: 'No se pudieron cargar los filtros de tema y aprendizaje. Aún puedes ver todos los juegos más abajo; actualiza la página para volver a intentarlo.',
+      taxonomy_empty_state: 'Ningún juego coincide con estos filtros. Prueba a cambiar o quitar uno o más filtros.',
+      games_count_one: '{n} juego',
+      games_count_other: '{n} juegos',
       report_issue: 'Informar de un problema',
       report_issue_aria: 'Informar de un problema con este juego',
       game_loading: 'Cargando recursos del juego…',
@@ -267,6 +318,23 @@
       sw_english_only: 'Story Weaver funciona por ahora solo en inglés: sus reglas gramaticales, temas y conectores aún no están disponibles en otros idiomas.'
     },
     de: {
+      filter_label_category: 'Thema:',
+      filter_label_subcategory: 'Unterthema:',
+      filter_label_level: 'Niveau:',
+      filter_label_audience: 'Zielgruppe:',
+      filter_label_mode: 'Gruppengröße:',
+      filter_label_format: 'Format:',
+      filter_all_category: 'Alle Themen',
+      filter_all_subcategory: 'Alle Unterthemen',
+      filter_all_level: 'Alle Niveaus',
+      filter_all_audience: 'Alle Altersgruppen',
+      filter_all_mode: 'Jede Gruppengröße',
+      filter_all_format: 'Jedes Format',
+      taxonomy_level_note: 'Die Niveaufilter zeigen Spiele mit zugeordneten CEFR-Niveaus. Einige Spiele nutzen Schwierigkeitsmodi oder enthalten Inhalte, die noch nicht nach CEFR eingestuft sind. Sie erscheinen daher möglicherweise nicht, wenn ein bestimmtes Niveau gewählt ist.',
+      taxonomy_load_error: 'Die Themen- und Lernfilter konnten nicht geladen werden. Du kannst unten trotzdem alle Spiele ansehen; lade die Seite neu, um es erneut zu versuchen.',
+      taxonomy_empty_state: 'Keine Spiele passen zu diesen Filtern. Ändere oder entferne einen oder mehrere Filter.',
+      games_count_one: '{n} Spiel',
+      games_count_other: '{n} Spiele',
       report_issue: 'Problem melden',
       report_issue_aria: 'Ein Problem mit diesem Spiel melden',
       game_loading: 'Spielressourcen werden geladen …',
@@ -355,6 +423,25 @@
       sw_english_only: 'Story Weaver funktioniert derzeit nur auf Englisch: Grammatikregeln, Themen und Konnektoren sind in anderen Sprachen noch nicht verfügbar.'
     },
     ru: {
+      filter_label_category: 'Тема:',
+      filter_label_subcategory: 'Подтема:',
+      filter_label_level: 'Уровень:',
+      filter_label_audience: 'Аудитория:',
+      filter_label_mode: 'Размер группы:',
+      filter_label_format: 'Формат:',
+      filter_all_category: 'Все темы',
+      filter_all_subcategory: 'Все подтемы',
+      filter_all_level: 'Все уровни',
+      filter_all_audience: 'Все возрасты',
+      filter_all_mode: 'Любой размер группы',
+      filter_all_format: 'Любой формат',
+      taxonomy_level_note: 'Фильтры уровня показывают игры с назначенными уровнями CEFR. Некоторые игры используют режимы сложности или содержат материалы, ещё не оценённые по CEFR, поэтому они могут не отображаться при выборе конкретного уровня.',
+      taxonomy_load_error: 'Не удалось загрузить фильтры по темам и обучению. Вы по-прежнему можете просматривать все игры ниже; обновите страницу, чтобы повторить попытку.',
+      taxonomy_empty_state: 'Нет игр, подходящих под эти фильтры. Попробуйте изменить или сбросить один или несколько фильтров.',
+      games_count_one: '{n} игра',
+      games_count_other: '{n} игры',
+      games_count_few: '{n} игры',
+      games_count_many: '{n} игр',
       report_issue: 'Сообщить о проблеме',
       report_issue_aria: 'Сообщить о проблеме с этой игрой',
       game_loading: 'Загрузка ресурсов игры…',
@@ -443,6 +530,23 @@
       sw_english_only: 'Story Weaver пока работает только на английском: грамматические правила, темы и связки ещё недоступны на других языках.'
     },
     it: {
+      filter_label_category: 'Argomento:',
+      filter_label_subcategory: 'Sottoargomento:',
+      filter_label_level: 'Livello:',
+      filter_label_audience: 'Pubblico:',
+      filter_label_mode: 'Dimensione del gruppo:',
+      filter_label_format: 'Modalità:',
+      filter_all_category: 'Tutti gli argomenti',
+      filter_all_subcategory: 'Tutti i sottoargomenti',
+      filter_all_level: 'Tutti i livelli',
+      filter_all_audience: 'Tutte le età',
+      filter_all_mode: 'Qualsiasi dimensione del gruppo',
+      filter_all_format: 'Qualsiasi modalità',
+      taxonomy_level_note: 'I filtri di livello mostrano i giochi con livelli CEFR assegnati. Alcuni giochi usano modalità di difficoltà o hanno contenuti non ancora valutati secondo il CEFR, quindi potrebbero non comparire quando si seleziona un livello specifico.',
+      taxonomy_load_error: 'Impossibile caricare i filtri per argomento e apprendimento. Puoi comunque sfogliare tutti i giochi qui sotto; aggiorna la pagina per riprovare.',
+      taxonomy_empty_state: 'Nessun gioco corrisponde a questi filtri. Prova a modificare o rimuovere uno o più filtri.',
+      games_count_one: '{n} gioco',
+      games_count_other: '{n} giochi',
       report_issue: 'Segnala un problema',
       report_issue_aria: 'Segnala un problema con questo gioco',
       game_loading: 'Caricamento delle risorse di gioco…',
@@ -531,6 +635,23 @@
       sw_english_only: 'Story Weaver funziona per ora solo in inglese: regole grammaticali, temi e connettori non sono ancora disponibili in altre lingue.'
     },
     el: {
+      filter_label_category: 'Θέμα:',
+      filter_label_subcategory: 'Υποθέμα:',
+      filter_label_level: 'Επίπεδο:',
+      filter_label_audience: 'Κοινό:',
+      filter_label_mode: 'Μέγεθος ομάδας:',
+      filter_label_format: 'Μορφή:',
+      filter_all_category: 'Όλα τα θέματα',
+      filter_all_subcategory: 'Όλα τα υποθέματα',
+      filter_all_level: 'Όλα τα επίπεδα',
+      filter_all_audience: 'Όλες οι ηλικίες',
+      filter_all_mode: 'Οποιοδήποτε μέγεθος ομάδας',
+      filter_all_format: 'Οποιαδήποτε μορφή',
+      taxonomy_level_note: 'Τα φίλτρα επιπέδου εμφανίζουν παιχνίδια με καθορισμένα επίπεδα CEFR. Ορισμένα παιχνίδια χρησιμοποιούν λειτουργίες δυσκολίας ή έχουν περιεχόμενο που δεν έχει ακόμη αξιολογηθεί κατά CEFR, επομένως μπορεί να μην εμφανίζονται όταν επιλέγεται συγκεκριμένο επίπεδο.',
+      taxonomy_load_error: 'Δεν ήταν δυνατή η φόρτωση των φίλτρων θέματος και εκμάθησης. Μπορείς να δεις όλα τα παιχνίδια παρακάτω· ανανέωσε τη σελίδα για να δοκιμάσεις ξανά.',
+      taxonomy_empty_state: 'Κανένα παιχνίδι δεν ταιριάζει με αυτά τα φίλτρα. Δοκίμασε να αλλάξεις ή να καθαρίσεις ένα ή περισσότερα φίλτρα.',
+      games_count_one: '{n} παιχνίδι',
+      games_count_other: '{n} παιχνίδια',
       report_issue: 'Αναφορά προβλήματος',
       report_issue_aria: 'Αναφορά προβλήματος με αυτό το παιχνίδι',
       game_loading: 'Φόρτωση πόρων παιχνιδιού…',
@@ -659,6 +780,22 @@
     if (typeof window.applyGameStrings === 'function') {
       window.applyGameStrings(langCode);
     }
+
+    // Lets scripts that build their own text (hub filters, counters) follow the interface language
+    if (typeof document.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
+      document.dispatchEvent(new CustomEvent('cosy:languagechange', { detail: { lang: langCode } }));
+    }
+  };
+
+  // "3 games" / "1 jeu" / "5 игр": picks the plural form the language needs (keys <kind>_count_one|few|many|other, with {n})
+  window.cosyCountText = function(kind, n, lang) {
+    const code = (lang || 'en').toLowerCase().slice(0, 2);
+    const dict = translations[code] || translations.en;
+    let category = n === 1 ? 'one' : 'other';
+    try { category = new Intl.PluralRules(code).select(n); } catch (e) {}
+    const template = dict[kind + '_count_' + category] || dict[kind + '_count_other'] ||
+      translations.en[kind + '_count_' + category] || translations.en[kind + '_count_other'];
+    return template.replace('{n}', String(n));
   };
 
   window.cosyGameMetaText = function(category, mode, levels, lang) {

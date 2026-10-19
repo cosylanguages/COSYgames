@@ -83,10 +83,19 @@
     return out.toString();
   }
 
+  // Interface-language label for a taxonomy item. labels = data/game-taxonomy-labels.json; kind = "categories", "cefrLevels",
+  // "audiences", "playModes", "playFormats" or "subcategories"; key = the item's id (subcategories: their English label).
+  // Falls back to the English label when there is no translation (or the language is English).
+  function taxonomyLabel(labels, kind, key, lang, fallback) {
+    var entry = labels && labels[kind] && labels[kind][key];
+    var code = String(lang || 'en').toLowerCase().slice(0, 2);
+    return (entry && entry[code]) || fallback;
+  }
+
   function appendQuery(href, query) {
     return query ? href + (href.indexOf('?') !== -1 ? '&' : '?') + query : href;
   }
 
   return { cardFromAttributes: cardFromAttributes, taxonomyCardAttributes: taxonomyCardAttributes, cardMatches: cardMatches,
-           resolveGamePath: resolveGamePath, buildGameQuery: buildGameQuery, appendQuery: appendQuery };
+           resolveGamePath: resolveGamePath, buildGameQuery: buildGameQuery, appendQuery: appendQuery, taxonomyLabel: taxonomyLabel };
 });

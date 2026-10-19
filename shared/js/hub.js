@@ -67,7 +67,11 @@
         });
         if (title) {
           var countSpan = title.querySelector('.sec-count');
-          if (countSpan) countSpan.textContent = visibleCount + ' game' + (visibleCount === 1 ? '' : 's');
+          if (countSpan) {
+            countSpan.textContent = typeof window.cosyCountText === 'function'
+              ? window.cosyCountText('games', visibleCount, document.documentElement.lang)
+              : visibleCount + ' game' + (visibleCount === 1 ? '' : 's');
+          }
           if (visibleCount === 0) { title.setAttribute('hidden', ''); grid.setAttribute('hidden', ''); }
           else { title.removeAttribute('hidden'); grid.removeAttribute('hidden'); }
         }
@@ -76,6 +80,7 @@
       if (emptyState) emptyState.hidden = totalVisible > 0;
     }
     window.updateGameHubFilters = updateFilters;
+    document.addEventListener('cosy:languagechange', updateFilters);
 
     document.querySelectorAll('.fpill').forEach(function (pill) {
       pill.addEventListener('click', function () {
