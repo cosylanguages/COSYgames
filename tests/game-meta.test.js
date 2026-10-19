@@ -42,7 +42,7 @@ test('game-meta.test.js - verify #go-meta formatting, game.js cleanup, and CEFR 
 
     // 1. Assert #go-meta text in {folder_path}/index.html equals target string
     const htmlContent = fs.readFileSync(htmlPath, 'utf8');
-    const metaMatch = htmlContent.match(/<div\s+class="go-meta"\s+id="go-meta">(.*?)<\/div>/);
+    const metaMatch = htmlContent.match(/<div\s+class="go-meta"\s+id="go-meta"[^>]*>(.*?)<\/div>/);
     assert.ok(metaMatch, `#go-meta element must exist in ${entry.folder_path}index.html`);
 
     const actualMetaText = metaMatch[1].trim();

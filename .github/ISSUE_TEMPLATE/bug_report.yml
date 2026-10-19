@@ -1,0 +1,33 @@
+name: Bug report
+description: A game or the hub does not work as expected
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      description: Filled in automatically when you use "Report Issue" inside a game. Write "Hub" if the problem is on the main games page.
+      placeholder: e.g. Fluency Flow
+  - type: input
+    id: language
+    attributes:
+      label: Practice language and interface language
+      placeholder: e.g. practising French, interface in English
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you see instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we reproduce it?
+      description: The settings you chose (level, topic, mode) and what you clicked.
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: e.g. iPhone 14, Safari

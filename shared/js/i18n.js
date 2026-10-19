@@ -3,6 +3,12 @@
 
   const translations = {
     en: {
+      report_issue: 'Report Issue',
+      report_issue_aria: 'Report an issue',
+      game_loading: 'Loading game assets...',
+      game_loading_cards: 'Loading cards...',
+      score_current: 'Current Score:',
+      score_high: 'High Score:',
       nav_home: 'Home 🏠',
       nav_all_games: 'All Games 🎮',
       nav_data: 'Dictionary 📊',
@@ -85,6 +91,12 @@
       sw_english_only: 'Story Weaver currently works in English only: its grammar rules, themes and connectors are not available in other languages yet.'
     },
     fr: {
+      report_issue: 'Signaler un problème',
+      report_issue_aria: 'Signaler un problème avec ce jeu',
+      game_loading: 'Chargement des ressources du jeu…',
+      game_loading_cards: 'Chargement des cartes…',
+      score_current: 'Score actuel :',
+      score_high: 'Meilleur score :',
       nav_home: 'Accueil 🏠',
       nav_all_games: 'Tous les jeux 🎮',
       nav_data: 'Dictionnaire 📊',
@@ -167,6 +179,12 @@
       sw_english_only: 'Story Weaver fonctionne pour l’instant en anglais uniquement : ses règles de grammaire, thèmes et connecteurs ne sont pas encore disponibles dans d’autres langues.'
     },
     es: {
+      report_issue: 'Informar de un problema',
+      report_issue_aria: 'Informar de un problema con este juego',
+      game_loading: 'Cargando recursos del juego…',
+      game_loading_cards: 'Cargando cartas…',
+      score_current: 'Puntuación actual:',
+      score_high: 'Mejor puntuación:',
       nav_home: 'Inicio 🏠',
       nav_all_games: 'Todos los juegos 🎮',
       nav_data: 'Diccionario 📊',
@@ -249,6 +267,12 @@
       sw_english_only: 'Story Weaver funciona por ahora solo en inglés: sus reglas gramaticales, temas y conectores aún no están disponibles en otros idiomas.'
     },
     de: {
+      report_issue: 'Problem melden',
+      report_issue_aria: 'Ein Problem mit diesem Spiel melden',
+      game_loading: 'Spielressourcen werden geladen …',
+      game_loading_cards: 'Karten werden geladen …',
+      score_current: 'Aktuelle Punktzahl:',
+      score_high: 'Bestes Ergebnis:',
       nav_home: 'Startseite 🏠',
       nav_all_games: 'Alle Spiele 🎮',
       nav_data: 'Wörterbuch 📊',
@@ -331,6 +355,12 @@
       sw_english_only: 'Story Weaver funktioniert derzeit nur auf Englisch: Grammatikregeln, Themen und Konnektoren sind in anderen Sprachen noch nicht verfügbar.'
     },
     ru: {
+      report_issue: 'Сообщить о проблеме',
+      report_issue_aria: 'Сообщить о проблеме с этой игрой',
+      game_loading: 'Загрузка ресурсов игры…',
+      game_loading_cards: 'Загрузка карточек…',
+      score_current: 'Текущий счёт:',
+      score_high: 'Рекорд:',
       nav_home: 'Главная 🏠',
       nav_all_games: 'Все игры 🎮',
       nav_data: 'Словарь 📊',
@@ -413,6 +443,12 @@
       sw_english_only: 'Story Weaver пока работает только на английском: грамматические правила, темы и связки ещё недоступны на других языках.'
     },
     it: {
+      report_issue: 'Segnala un problema',
+      report_issue_aria: 'Segnala un problema con questo gioco',
+      game_loading: 'Caricamento delle risorse di gioco…',
+      game_loading_cards: 'Caricamento delle carte…',
+      score_current: 'Punteggio attuale:',
+      score_high: 'Punteggio migliore:',
       nav_home: 'Home 🏠',
       nav_all_games: 'Tutti i giochi 🎮',
       nav_data: 'Dizionario 📊',
@@ -495,6 +531,12 @@
       sw_english_only: 'Story Weaver funziona per ora solo in inglese: regole grammaticali, temi e connettori non sono ancora disponibili in altre lingue.'
     },
     el: {
+      report_issue: 'Αναφορά προβλήματος',
+      report_issue_aria: 'Αναφορά προβλήματος με αυτό το παιχνίδι',
+      game_loading: 'Φόρτωση πόρων παιχνιδιού…',
+      game_loading_cards: 'Φόρτωση καρτών…',
+      score_current: 'Τρέχον σκορ:',
+      score_high: 'Υψηλότερο σκορ:',
       nav_home: 'Αρχική 🏠',
       nav_all_games: 'Όλα τα παιχνίδια 🎮',
       nav_data: 'Λεξικό 📊',
@@ -599,9 +641,30 @@
       }
     });
 
+    // Attributes: data-i18n-aria-label="key", data-i18n-title="key", data-i18n-placeholder="key"
+    ['aria-label', 'title', 'placeholder'].forEach(attr => {
+      document.querySelectorAll('[data-i18n-' + attr + ']').forEach(el => {
+        const text = dict[el.getAttribute('data-i18n-' + attr)];
+        if (text) el.setAttribute(attr, text);
+      });
+    });
+
+    // Game pages: "<category> · <mode> · CEFR <levels>" in the interface language
+    const meta = document.getElementById('go-meta');
+    if (meta && meta.hasAttribute('data-meta-category')) {
+      meta.textContent = window.cosyGameMetaText(
+        meta.getAttribute('data-meta-category'), meta.getAttribute('data-meta-mode'), meta.getAttribute('data-meta-levels'), langCode);
+    }
+
     if (typeof window.applyGameStrings === 'function') {
       window.applyGameStrings(langCode);
     }
+  };
+
+  window.cosyGameMetaText = function(category, mode, levels, lang) {
+    const dict = translations[(lang || 'en').toLowerCase().slice(0, 2)] || translations.en;
+    const text = (key) => dict[key] || translations.en[key] || key;
+    return [text('section_' + category), text('tag_' + mode), 'CEFR ' + levels].join(' · ');
   };
 
   window.getI18nText = function(key, lang) {

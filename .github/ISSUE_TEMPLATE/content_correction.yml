@@ -1,0 +1,27 @@
+name: Content or translation correction
+description: A mistake in a word, a prompt, a translation or a level label
+title: "[Content] "
+labels: ["content"]
+body:
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      placeholder: e.g. Opinion Arena
+  - type: input
+    id: language
+    attributes:
+      label: Language and CEFR level
+      placeholder: e.g. Portuguese, B1
+  - type: textarea
+    id: text
+    attributes:
+      label: The text with the mistake
+      description: Copy it exactly as it appears.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What it should say
+      description: Explain briefly why, if it is not obvious.

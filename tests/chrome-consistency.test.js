@@ -28,7 +28,7 @@ test('every data-i18n key used in shared/chrome templates exists in all 7 langua
   const w = loadI18n();
   const keys = new Set();
   for (const f of fs.readdirSync(chromeDir).filter((n) => n.endsWith('.tpl'))) {
-    for (const m of fs.readFileSync(path.join(chromeDir, f), 'utf8').matchAll(/data-i18n="([^"]+)"/g)) keys.add(m[1]);
+    for (const m of fs.readFileSync(path.join(chromeDir, f), 'utf8').matchAll(/data-i18n(?:-[a-z-]+)?="([^"]+)"/g)) keys.add(m[1]);
   }
   assert.ok(keys.size >= 14, 'expected the nav/footer to use translation keys');
   const missing = [];

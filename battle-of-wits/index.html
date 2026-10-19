@@ -61,16 +61,18 @@
 
     <!-- Game Container Header -->
     <div class="game-overlay open game-overlay-standalone" id="game-overlay">
+        <!-- cosy:chrome:game-topbar game="battle-of-wits" -->
         <div class="go-topbar">
             <button class="go-back cg-btn cg-btn-secondary" onclick="COSYUtils.backToHub()" data-i18n="back_to_games">← Back to Games Hub</button>
             <div class="go-title-wrapper">
                 <h1 class="go-title" id="go-title">Battle of Wits</h1>
-                <div class="go-meta" id="go-meta">Speaking & Fluency · Group · CEFR B1–C2</div>
+                <div class="go-meta" id="go-meta" data-meta-category="speaking" data-meta-mode="group" data-meta-levels="B1–C2">Speaking & Fluency · Group · CEFR B1–C2</div>
             </div>
             <div id="go-topbar-right">
-                <a aria-label="Report an issue" href="https://github.com/cosylanguages/COSYgames/issues" target="_blank" rel="noopener" class="report-issue-link">🚩 <span class="report-issue-text">Report Issue</span></a>
+                <a aria-label="Report an issue" data-i18n-aria-label="report_issue_aria" href="https://github.com/cosylanguages/COSYgames/issues/new?template=bug_report.yml&amp;game=Battle+of+Wits" target="_blank" rel="noopener" class="report-issue-link">🚩 <span class="report-issue-text" data-i18n="report_issue">Report Issue</span></a>
             </div>
         </div>
+        <!-- /cosy:chrome:game-topbar -->
 
         <!-- Game Description -->
         <div class="game-header-info">
@@ -78,17 +80,18 @@
         </div>
 
         <!-- Game Canvas / Play Area -->
-        <div class="go-body" id="go-body">
+        <div class="go-body" id="go-body" role="main">
             <div id="game-canvas" class="game-canvas-area">
-                <div class="game-loader" id="game-loader">Loading game assets...</div>
+                <div class="game-loader" id="game-loader" data-i18n="game_loading">Loading game assets...</div>
             </div>
         </div>
 
         <!-- Score & Tracking Section -->
+        <!-- cosy:chrome:game-scoreboard game="battle-of-wits" -->
         <div class="score-tracking-section" aria-live="polite">
             <div class="score-display">
-                <div><strong>Current Score:</strong> <span class="score-value" id="current-score" aria-live="polite">0</span></div>
-                <div><strong>High Score:</strong> <span class="high-score-value" id="high-score" aria-live="polite">0</span></div>
+                <div><strong data-i18n="score_current">Current Score:</strong> <span class="score-value" id="current-score" aria-live="polite">0</span></div>
+                <div><strong data-i18n="score_high">High Score:</strong> <span class="high-score-value" id="high-score" aria-live="polite">0</span></div>
             </div>
             <div class="related-tools-links">
                 <strong data-i18n="keep_learning">Keep learning:</strong>
@@ -97,6 +100,7 @@
                 <a href="https://cosylanguages.github.io/COSYdata/" target="_blank" rel="noopener" data-i18n="keep_learning_dictionary">Vocabulary dictionary</a>
             </div>
         </div>
+        <!-- /cosy:chrome:game-scoreboard -->
     </div>
 
     <!-- Footer -->
