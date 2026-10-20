@@ -7,6 +7,20 @@
     const GAME_ID = 'thisorthat';
     const GAME_TITLE = 'This or That? 🔀';
 
+    // Interface strings come from i18n/games/this-or-that.js. "Practice text" (chat openers, icebreakers, replies) is shown in the
+    // language being practised, not in the interface language.
+    const T = (window.COSYGameStrings && window.COSYGameStrings.forGame)
+        ? window.COSYGameStrings.forGame('this-or-that')
+        : (key, params, fallback) => (fallback !== undefined ? fallback : key);
+    const PRACTICE_CODES = { en: 'en', french: 'fr', italian: 'it', russian: 'ru', greek: 'el' };
+    const LANG_NATIVE = { en: 'English', french: 'Français', italian: 'Italiano', russian: 'Русский', greek: 'Ελληνικά' };
+    function practiceText(key, lang, params) {
+        const entry = ((window.COSYGameStrings || {})['this-or-that'] || { strings: {} }).strings[key] || {};
+        let value = entry[PRACTICE_CODES[lang] || 'en'] || entry.en || key;
+        Object.keys(params || {}).forEach(name => { value = value.split('{' + name + '}').join(params[name]); });
+        return value;
+    }
+
     const GENERAL_DILEMMAS = [
         {
             type: 'dilemma',
@@ -66,62 +80,60 @@
         body.innerHTML = `
             <div class="setup-screen" style="text-align: center; max-width: 440px; margin: 0 auto; padding: 1.5rem 1rem;">
               <h1 style="font-weight: 800; margin-bottom: 0.5rem; color: var(--ink);">This or That?</h1>
-              <p style="color:var(--ink-muted); margin-bottom: 1.25rem; line-height: 1.45; font-size:0.95rem;">
-                Swipe left or right on cards showing people, professions, properties and dilemmas. Pick a side, then explain why in the language you are learning.
-              </p>
+              <p style="color:var(--ink-muted); margin-bottom: 1.25rem; line-height: 1.45; font-size:0.95rem;" data-gs="setup.description">${T('setup.description')}</p>
 
               <div class="setup-field" style="margin-bottom: 1rem; text-align: left;">
-                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);">🌐 Target Language</label>
+                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);" data-gs="setup.language_label">${T('setup.language_label')}</label>
                 <select class="styled-sel" id="tot-lang-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-color); color: var(--ink); font-weight:600;">
                   <option value="en" selected>🇬🇧 English</option>
-                  <option value="french">🇫🇷 Français (French)</option>
-                  <option value="italian">🇮🇹 Italiano (Italian)</option>
-                  <option value="russian">🇷🇺 Русский (Russian)</option>
-                  <option value="greek">🇬🇷 Ελληνικά (Greek)</option>
+                  <option value="french">🇫🇷 Français</option>
+                  <option value="italian">🇮🇹 Italiano</option>
+                  <option value="russian">🇷🇺 Русский</option>
+                  <option value="greek">🇬🇷 Ελληνικά</option>
                 </select>
               </div>
 
               <div class="setup-field" style="margin-bottom: 1rem; text-align: left;">
-                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);">🎯 Target CEFR Level</label>
+                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);" data-gs="setup.level_label">${T('setup.level_label')}</label>
                 <select class="styled-sel" id="tot-level-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-color); color: var(--ink); font-weight:600;">
-                  <option value="A0_A1">A0–A1: Starter & Basic Words</option>
-                  <option value="A2" selected>A2: Elementary & Daily Life</option>
-                  <option value="B1">B1: Intermediate & Work/Travel</option>
-                  <option value="B2">B2: Upper-Inter & Abstract Concepts</option>
-                  <option value="ALL">All Levels Combined (A0–B2)</option>
+                  <option value="A0_A1" data-gs="setup.level.a0_a1">${T('setup.level.a0_a1')}</option>
+                  <option value="A2" selected data-gs="setup.level.a2">${T('setup.level.a2')}</option>
+                  <option value="B1" data-gs="setup.level.b1">${T('setup.level.b1')}</option>
+                  <option value="B2" data-gs="setup.level.b2">${T('setup.level.b2')}</option>
+                  <option value="ALL" data-gs="setup.level.all">${T('setup.level.all')}</option>
                 </select>
               </div>
 
               <div class="setup-field" style="margin-bottom: 1.75rem; text-align: left;">
-                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);">🎴 Vocabulary Deck & Topic</label>
+                <label style="font-weight:700; display:block; margin-bottom:0.4rem; font-size:0.9rem; color: var(--ink);" data-gs="setup.deck_label">${T('setup.deck_label')}</label>
                 <select class="styled-sel" id="tot-deck-sel" style="width: 100%; padding: 0.75rem; border-radius: 12px; border: 1px solid var(--border); background: var(--surface-color); color: var(--ink); font-weight:600;">
-                  <optgroup label="💬 Vocabulary & Speaking Topics">
-                    <option value="appearance" selected>👁️ Physical Appearance (People)</option>
-                    <option value="professions">💼 Professions & Careers</option>
-                    <option value="properties">🏠 Properties & Real Estate (Flats/Houses)</option>
-                    <option value="character">🧠 Character Traits & Personality</option>
-                    <option value="hobbies">🎨 Hobbies, Passions & Lifestyle</option>
-                    <option value="nationalities">🌍 Nationalities & Cultural Heritage</option>
-                    <option value="food">🍜 Food & Cuisine</option>
-                    <option value="travel">✈️ Travel & Destinations</option>
-                    <option value="entertainment">🎬 Books, Films & Music</option>
-                    <option value="daily_habits">🌅 Daily Routines & Habits</option>
-                    <option value="mixed">🔀 Mixed Full Deck (All Categories)</option>
+                  <optgroup label="${T('setup.group.topics')}" data-gs-label="setup.group.topics">
+                    <option value="appearance" selected data-gs="setup.deck.appearance">${T('setup.deck.appearance')}</option>
+                    <option value="professions" data-gs="setup.deck.professions">${T('setup.deck.professions')}</option>
+                    <option value="properties" data-gs="setup.deck.properties">${T('setup.deck.properties')}</option>
+                    <option value="character" data-gs="setup.deck.character">${T('setup.deck.character')}</option>
+                    <option value="hobbies" data-gs="setup.deck.hobbies">${T('setup.deck.hobbies')}</option>
+                    <option value="nationalities" data-gs="setup.deck.nationalities">${T('setup.deck.nationalities')}</option>
+                    <option value="food" data-gs="setup.deck.food">${T('setup.deck.food')}</option>
+                    <option value="travel" data-gs="setup.deck.travel">${T('setup.deck.travel')}</option>
+                    <option value="entertainment" data-gs="setup.deck.entertainment">${T('setup.deck.entertainment')}</option>
+                    <option value="daily_habits" data-gs="setup.deck.daily_habits">${T('setup.deck.daily_habits')}</option>
+                    <option value="mixed" data-gs="setup.deck.mixed">${T('setup.deck.mixed')}</option>
                   </optgroup>
-                  <optgroup label="🎯 Grammar Practice Drills">
-                    <option value="grammar">🎯 All Grammar Drills (Combined)</option>
-                    <option value="grammar_present">🎯 Present Tenses (Simple & Continuous)</option>
-                    <option value="grammar_past">🎯 Past Tenses & Stories (Simple & Continuous)</option>
-                    <option value="grammar_perfect">🎯 Present Perfect & Life Experiences</option>
-                    <option value="grammar_advanced">🎯 Conditionals, Passive & Subjunctive</option>
+                  <optgroup label="${T('setup.group.grammar')}" data-gs-label="setup.group.grammar">
+                    <option value="grammar" data-gs="setup.deck.grammar">${T('setup.deck.grammar')}</option>
+                    <option value="grammar_present" data-gs="setup.deck.grammar_present">${T('setup.deck.grammar_present')}</option>
+                    <option value="grammar_past" data-gs="setup.deck.grammar_past">${T('setup.deck.grammar_past')}</option>
+                    <option value="grammar_perfect" data-gs="setup.deck.grammar_perfect">${T('setup.deck.grammar_perfect')}</option>
+                    <option value="grammar_advanced" data-gs="setup.deck.grammar_advanced">${T('setup.deck.grammar_advanced')}</option>
                   </optgroup>
-                  <optgroup label="⚖️ Dilemmas">
-                    <option value="dilemmas">⚖️ "This or That" Dilemmas</option>
+                  <optgroup label="${T('setup.group.dilemmas')}" data-gs-label="setup.group.dilemmas">
+                    <option value="dilemmas" data-gs="setup.deck.dilemmas">${T('setup.deck.dilemmas')}</option>
                   </optgroup>
                 </select>
               </div>
 
-              <button class="btn-start-game" onclick="COSY_GAME.start()" style="width: 100%; border-radius: 30px;">▶ Start Swiping 🔀</button>
+              <button class="btn-start-game" onclick="COSY_GAME.start()" style="width: 100%; border-radius: 30px;" data-gs="setup.start">${T('setup.start')}</button>
             </div>`;
     }
 
@@ -131,15 +143,17 @@
         swipedChoices: [],
         activeStoryIndex: 0,
         fallbackNotice: null,
+        practiceLang: 'en',
 
         async start() {
             this.fallbackNotice = null;
             const langSel = document.getElementById('tot-lang-sel')?.value || 'en';
+            this.practiceLang = langSel;
             const levelSel = document.getElementById('tot-level-sel')?.value || 'A2';
             const deckSel = document.getElementById('tot-deck-sel')?.value || 'appearance';
             const body = document.getElementById('go-body');
 
-            if (body) body.innerHTML = '<div id="game-loader" class="game-loader">Loading cards...</div>';
+            if (body) body.innerHTML = `<div id="game-loader" class="game-loader">${T('play.loading')}</div>`;
             await new Promise(res => setTimeout(res, 200));
 
             let activeDecksSource = {};
@@ -164,7 +178,7 @@
                 } else if (window.TOT_DECKS && window.TOT_DECKS.en) {
                     activeDecksSource = window.TOT_DECKS.en;
                     if (langSel !== 'en') {
-                        this.fallbackNotice = `Language deck for "${langSel}" not found. Falling back to English 🇬🇧 deck.`;
+                        this.fallbackNotice = T('play.fallback_notice', { language: LANG_NATIVE[langSel] || langSel });
                     }
                 }
             } catch (e) {
@@ -241,7 +255,7 @@
               <div class="swipe-app">
                 <div class="swipe-top-bar">
                   <div class="swipe-brand">🔀 This or That</div>
-                  <div style="font-weight:800; font-size:0.85rem; color:var(--ink-muted);">Card ${this.currentIndex + 1} / ${this.deck.length}</div>
+                  <div style="font-weight:800; font-size:0.85rem; color:var(--ink-muted);">${T('play.card_counter', { current: this.currentIndex + 1, total: this.deck.length })}</div>
                 </div>
 
                 ${this.fallbackNotice ? `
@@ -253,9 +267,9 @@
                 <div class="card-stack">
                   <div class="swipe-card" id="active-card">
                     <!-- Dynamic Stamp Overlays -->
-                    <div class="badge-indicator badge-like" id="badge-right">${isProfile ? '❤️ LIKE' : '👉 THAT'}</div>
-                    <div class="badge-indicator badge-pass" id="badge-left">${isProfile ? '❌ PASS' : '👈 THIS'}</div>
-                    <div class="badge-indicator badge-super" id="badge-super">⭐ SUPER LIKE</div>
+                    <div class="badge-indicator badge-like" id="badge-right">${isProfile ? T('play.badge_like') : T('play.badge_that')}</div>
+                    <div class="badge-indicator badge-pass" id="badge-left">${isProfile ? T('play.badge_pass') : T('play.badge_this')}</div>
+                    <div class="badge-indicator badge-super" id="badge-super">${T('play.badge_super')}</div>
 
                     <!-- Hero Avatar Box with Story Bars & Tap Navigation -->
                     <div class="card-hero-box">
@@ -295,7 +309,7 @@
                         <div class="profile-title-row">
                           <span class="profile-name">${item.title}</span>
                           <span class="profile-age">${item.age ? ', ' + item.age : ''}</span>
-                          ${item.verified ? '<span class="verified-icon" title="Verified card">☑️</span>' : ''}
+                          ${item.verified ? `<span class="verified-icon" title="${T('play.verified')}">☑️</span>` : ''}
                         </div>
                         <div class="profile-meta-row">
                           <span>${item.location || '📍 Worldwide'}</span>
@@ -304,7 +318,7 @@
 
                         ${item.visualDescription ? `
                           <div style="font-size:0.78rem; font-style:italic; color:var(--ink-muted); background:var(--sage-mist); padding:6px 10px; border-radius:8px; margin-bottom:0.6rem; border-left:3px solid var(--teal);">
-                            🎨 <strong>Visual Details:</strong> ${item.visualDescription}
+                            🎨 <strong>${T('play.visual_details')}</strong> ${item.visualDescription}
                           </div>
                         ` : ''}
 
@@ -363,13 +377,13 @@
 
                 <!-- Swipe Action Control Bar -->
                 <div class="swipe-actions">
-                  <button class="t-btn btn-rewind" id="btn-rewind" title="Rewind / Undo Last Swipe" ${this.swipedChoices.length === 0 ? 'disabled style="opacity:0.4;cursor:default;"' : ''}>🔄</button>
-                  <button class="t-btn btn-pass" id="btn-swipe-left" title="Pass / Swipe Left">❌</button>
-                  <button class="t-btn btn-super" id="btn-super-like" title="Super Like!">⭐</button>
-                  <button class="t-btn btn-like" id="btn-swipe-right" title="Like / Swipe Right">❤️</button>
+                  <button class="t-btn btn-rewind" id="btn-rewind" title="${T('play.rewind')}" ${this.swipedChoices.length === 0 ? 'disabled style="opacity:0.4;cursor:default;"' : ''}>🔄</button>
+                  <button class="t-btn btn-pass" id="btn-swipe-left" title="${T('play.pass')}">❌</button>
+                  <button class="t-btn btn-super" id="btn-super-like" title="${T('play.super_like')}">⭐</button>
+                  <button class="t-btn btn-like" id="btn-swipe-right" title="${T('play.like')}">❤️</button>
                 </div>
                 <div style="font-size:0.78rem; color:var(--ink-faint); margin-top:0.5rem;">
-                  Tap photo sides to flip details • Keyboard Arrow Keys supported!
+                  ${T('play.hint')}
                 </div>
               </div>
             `;
@@ -504,22 +518,26 @@
             if (!item) return;
 
             let choiceName = '';
+            let kind = '';
             let points = 10;
 
             if (dir === 'right') {
-                choiceName = item.type === 'profile' ? 'Liked ❤️' : `Option B (${item.optionB ? item.optionB.title : 'Choice'})`;
+                kind = item.type === 'profile' ? 'like' : 'b';
+                choiceName = item.type === 'profile' ? T('choice.liked') : T('choice.option_b', { title: item.optionB ? item.optionB.title : T('choice.default_title') });
                 if (card) card.style.transform = 'translate3d(1000px, 0, 0) rotate(30deg)';
             } else if (dir === 'left') {
-                choiceName = item.type === 'profile' ? 'Passed ❌' : `Option A (${item.optionA ? item.optionA.title : 'Choice'})`;
+                kind = item.type === 'profile' ? 'pass' : 'a';
+                choiceName = item.type === 'profile' ? T('choice.passed') : T('choice.option_a', { title: item.optionA ? item.optionA.title : T('choice.default_title') });
                 points = 5;
                 if (card) card.style.transform = 'translate3d(-1000px, 0, 0) rotate(-30deg)';
             } else if (dir === 'up') {
-                choiceName = 'Super Like! ⭐';
+                kind = 'super';
+                choiceName = T('choice.super');
                 points = 20;
                 if (card) card.style.transform = 'translate3d(0, -1000px, 0)';
             }
 
-            this.swipedChoices.push({ item, choice: choiceName });
+            this.swipedChoices.push({ item, choice: choiceName, kind });
 
             if (window.COSYGame) COSYGame.addScore(points);
 
@@ -560,7 +578,8 @@
 
             if (nameEl) nameEl.textContent = item.title;
             if (emojiEl) emojiEl.textContent = item.avatar || '🔀';
-            const openerText = item.opener || `Great choice! What made you pick ${item.title} today?`;
+            const openerText = item.opener || practiceText('practice.opener', this.practiceLang, { title: item.title });
+            if (inputEl) inputEl.placeholder = T('match.chat_placeholder');
             if (openerEl) openerEl.textContent = openerText;
             if (inputEl) inputEl.value = '';
 
@@ -573,7 +592,7 @@
             }
 
             if (icebreakersEl) {
-                const pills = item.icebreakers || ['Great choice! What made you pick this one?', 'Tell your partner why you chose this.', 'Can you give two reasons?', 'How would you describe this in detail?'];
+                const pills = item.icebreakers || [1, 2, 3, 4].map(n => practiceText('practice.icebreaker_' + n, this.practiceLang));
                 icebreakersEl.innerHTML = pills.map(p => `
                     <button class="chat-icebreaker-btn" onclick="COSY_GAME.quickChat('${p.replace(/'/g, "\\'")}')">${p}</button>
                 `).join('');
@@ -613,12 +632,7 @@
 
             // Delayed Reply
             setTimeout(() => {
-                const replies = [
-                    "Great explanation! Tell your partner more.",
-                    "Excellent point! Can you give another reason?",
-                    "Spot on! How would you describe it further?",
-                    "Fascinating perspective! Well expressed."
-                ];
+                const replies = [1, 2, 3, 4].map(n => practiceText('practice.reply_' + n, this.practiceLang));
                 const replyText = replies[Math.floor(Math.random() * replies.length)];
                 const replyMsg = document.createElement('div');
                 replyMsg.className = 'chat-bubble-reply';
@@ -653,19 +667,19 @@
 
             body.innerHTML = `
                 <div class="setup-screen" style="max-width: 440px; margin: 0 auto; text-align: center; padding: 1.5rem 1rem;">
-                  <h2>Swipe Deck Complete! 🎉</h2>
-                  <div class="score-highlight">${scoreVal} Points</div>
-                  <p style="color:var(--ink-muted);">Here are the cards you liked and the ones you passed. Discuss your reasons with your learning partner!</p>
+                  <h2>${T('results.title')}</h2>
+                  <div class="score-highlight">${T('results.points', { points: scoreVal })}</div>
+                  <p style="color:var(--ink-muted);">${T('results.description')}</p>
 
                   <div style="text-align: left; background: var(--surface-color); border: 1px solid var(--border); color: var(--ink); border-radius: 16px; padding: 1rem; margin: 1.25rem 0; max-height: 280px; overflow-y: auto;">
-                    <h4 style="margin-top: 0; font-weight:800; color: var(--ink);">Your Choices:</h4>
+                    <h4 style="margin-top: 0; font-weight:800; color: var(--ink);">${T('results.your_choices')}</h4>
                     ${this.swipedChoices.map(c => `
                       <div style="padding: 8px 0; border-bottom: 1px dashed var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.88rem;">
                         <div>
                           <strong style="color:var(--ink);">${c.item.title}</strong> <span style="font-size:0.75rem; background:var(--sage-mist); color:var(--ink); padding:2px 6px; border-radius:8px; margin-left:4px;">${c.item.level || ''}</span>
                           <div style="font-size: 0.78rem; color: var(--ink-muted);">${c.item.category}</div>
                         </div>
-                        <span style="font-weight: 700; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; background: ${c.choice.includes('Liked') || c.choice.includes('Option B') || c.choice.includes('Super') ? 'var(--sage-mist)' : 'var(--sage-mist)'}; color: ${c.choice.includes('Liked') || c.choice.includes('Option B') || c.choice.includes('Super') ? 'var(--swipe-like)' : 'var(--swipe-pass)'};">
+                        <span style="font-weight: 700; padding: 4px 10px; border-radius: 20px; font-size: 0.78rem; background: ${['like', 'b', 'super'].includes(c.kind) ? 'var(--sage-mist)' : 'var(--sage-mist)'}; color: ${['like', 'b', 'super'].includes(c.kind) ? 'var(--swipe-like)' : 'var(--swipe-pass)'};">
                           ${c.choice}
                         </span>
                       </div>
@@ -673,8 +687,8 @@
                   </div>
 
                   <div style="display:flex; gap:1rem; justify-content:center;">
-                    <button class="btn-start-game" onclick="COSY_GAME.start()" style="padding:0.85rem 1.2rem; border-radius:30px;">Swipe Again 🔄</button>
-                    <button class="btn-g-secondary" onclick="COSY_GAME.reset()" style="padding:0.85rem 1.2rem; border-radius:30px;">Deck Settings ⚙️</button>
+                    <button class="btn-start-game" onclick="COSY_GAME.start()" style="padding:0.85rem 1.2rem; border-radius:30px;">${T('results.again')}</button>
+                    <button class="btn-g-secondary" onclick="COSY_GAME.reset()" style="padding:0.85rem 1.2rem; border-radius:30px;">${T('results.settings')}</button>
                   </div>
                 </div>`;
 
@@ -686,5 +700,12 @@
         reset: renderSetup
     };
 
-    document.addEventListener('DOMContentLoaded', renderSetup);
+    // optgroup labels and the chat placeholder are attributes, which data-gs (text only) cannot update
+    function applyAttributeStrings() {
+        document.querySelectorAll('[data-gs-label]').forEach(el => el.setAttribute('label', T(el.getAttribute('data-gs-label'))));
+        const chat = document.getElementById('chat-input');
+        if (chat) chat.placeholder = T('match.chat_placeholder');
+    }
+    document.addEventListener('cosy:languagechange', applyAttributeStrings);
+    document.addEventListener('DOMContentLoaded', () => { renderSetup(); applyAttributeStrings(); });
 })();

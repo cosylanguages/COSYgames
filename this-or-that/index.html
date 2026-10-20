@@ -106,8 +106,8 @@
     <!-- Match Celebration Modal -->
     <div class="match-modal-overlay" id="match-modal">
       <div class="match-card">
-        <div class="match-title">CARD LIKED! ❤️</div>
-        <p id="match-item-name">You liked this card!</p>
+        <div class="match-title" data-gs="match.title">CARD LIKED! ❤️</div>
+        <p id="match-item-name"></p>
         <div class="match-avatars">
           <div class="match-avatar-circle">🗣️</div>
           <div class="match-avatar-circle" id="match-item-emoji">🔀</div>
@@ -116,7 +116,7 @@
         <div class="match-prompt-box">
           <div id="chat-messages-container">
             <div class="chat-bubble-reply">
-              <span id="match-opener-text">Great choice! What made you pick this card today?</span>
+              <span id="match-opener-text"></span>
             </div>
           </div>
 
@@ -124,11 +124,11 @@
 
           <div>
             <input type="text" id="chat-input" placeholder="Type your reply / argument..." onkeydown="if(event.key==='Enter') COSY_GAME.sendChatMessage()" />
-            <button onclick="COSY_GAME.sendChatMessage()">Send 🚀</button>
+            <button onclick="COSY_GAME.sendChatMessage()" data-gs="match.send">Send 🚀</button>
           </div>
         </div>
 
-        <button class="match-btn" onclick="COSY_GAME.closeMatchModal()">Keep Swiping 🔀</button>
+        <button class="match-btn" onclick="COSY_GAME.closeMatchModal()" data-gs="match.keep_swiping">Keep Swiping 🔀</button>
       </div>
     </div>
 
@@ -163,6 +163,8 @@
     <script src="../_engine/game_session.js"></script>
     <script src="../_engine/scores.js"></script>
     <script src="../_engine/loader.js"></script>
+    <script src="../i18n/games/_common.js"></script>
+    <script src="../i18n/games/this-or-that.js"></script>
     <script src="game.js"></script>
     <script>
       function refreshThisOrThatScores() {
