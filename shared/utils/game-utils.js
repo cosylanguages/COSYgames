@@ -313,7 +313,134 @@
                 osc.stop(ctx.currentTime + 0.3);
             } catch(e) {}
         },
-        createConfetti: function() {},
+        renderTTSSpeakerHtml: function(text, langCode) {
+            if (!text) return '';
+            const safeText = String(text).replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+            const safeLang = String(langCode || 'en').replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+            return `<button class="cg-tts-btn" type="button" aria-label="Listen to pronunciation" title="Listen to pronunciation" onclick="if(window.gameUtils&&window.gameUtils.speak){window.gameUtils.speak('${safeText}', '${safeLang}');} event.stopPropagation();">🔊</button>`;
+        },
+        createConfetti: function() {
+            if (typeof document === 'undefined') return;
+            try {
+                let canvas = document.getElementById('cg-confetti-canvas');
+                if (!canvas) {
+                    canvas = document.createElement('canvas');
+                    canvas.id = 'cg-confetti-canvas';
+                    canvas.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;';
+                    document.body.appendChild(canvas);
+                }
+                const ctx = canvas.getContext('2d');
+                if (!ctx) return;
+                const width = canvas.width = window.innerWidth;
+                const height = canvas.height = window.innerHeight;
+                const particles = [];
+                const colors = ['#416b49', '#B84318', '#945e05', '#1e2f6b', '#d66161', '#4a6b50'];
+                for (let i = 0; i < 60; i++) {
+                    particles.push({
+                        x: width / 2,
+                        y: height / 2,
+                        vx: (Math.random() - 0.5) * 12,
+                        vy: (Math.random() - 0.7) * 14,
+                        size: Math.random() * 8 + 4,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        alpha: 1,
+                        decay: Math.random() * 0.02 + 0.01
+                    });
+                }
+                let animId;
+                function render() {
+                    ctx.clearRect(0, 0, width, height);
+                    let alive = false;
+                    for (const p of particles) {
+                        if (p.alpha <= 0) continue;
+                        alive = true;
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vy += 0.3; // gravity
+                        p.alpha -= p.decay;
+                        ctx.save();
+                        ctx.globalAlpha = Math.max(0, p.alpha);
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.restore();
+                    }
+                    if (alive) {
+                        animId = requestAnimationFrame(render);
+                    } else {
+                        cancelAnimationFrame(animId);
+                        ctx.clearRect(0, 0, width, height);
+                    }
+                }
+                render();
+            } catch(e) {}
+        },
+        showSessionScorecard: function(options) {
+            if (typeof document === 'undefined') return;
+            const opts = options || {};
+            const title = gameUtils.escapeHtml(opts.title || 'Session Summary');
+            const score = opts.score || 0;
+            const maxScore = opts.maxScore || 100;
+            const gameTitle = gameUtils.escapeHtml(opts.gameTitle || 'COSYgames');
+            const lang = gameUtils.escapeHtml(opts.lang || 'en');
+            const items = opts.items || [];
+
+            let overlay = document.getElementById('cg-scorecard-modal');
+            if (overlay) overlay.remove();
+
+            overlay = document.createElement('div');
+            overlay.id = 'cg-scorecard-modal';
+            overlay.className = 'cg-scorecard-modal';
+
+            let itemsHtml = '';
+            if (items.length > 0) {
+                itemsHtml = `
+                    <div class="cg-scorecard-items">
+                        ${items.map(it => `
+                            <div class="cg-scorecard-item">
+                                <span class="cg-scorecard-item-label">${gameUtils.escapeHtml(it.label)}</span>
+                                <span class="cg-scorecard-item-val">${gameUtils.escapeHtml(it.value)}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            overlay.innerHTML = `
+                <div class="cg-scorecard-content">
+                    <button class="cg-scorecard-close" onclick="document.getElementById('cg-scorecard-modal').remove()" aria-label="Close scorecard">&times;</button>
+                    <div class="cg-scorecard-header">
+                        <div class="cg-scorecard-badge">🏆 Scorecard</div>
+                        <h3>${gameTitle}</h3>
+                    </div>
+                    <div class="cg-scorecard-main-score">
+                        <span class="cg-scorecard-num">${score}</span>
+                        <span class="cg-scorecard-denom">/ ${maxScore} pts</span>
+                    </div>
+                    ${itemsHtml}
+                    <div class="cg-scorecard-actions">
+                        <button class="btn-g-primary" id="cg-scorecard-copy-btn">📋 Copy Scorecard</button>
+                        <button class="btn-g-secondary" onclick="document.getElementById('cg-scorecard-modal').remove()">Done</button>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(overlay);
+
+            const copyBtn = document.getElementById('cg-scorecard-copy-btn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', () => {
+                    const text = `${opts.gameTitle || 'COSYgames'} Session Score: ${score}/${maxScore} pts! Practiced with COSYgames.`;
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(text);
+                        alert('Scorecard summary copied to clipboard!');
+                    } else {
+                        alert(text);
+                    }
+                });
+            }
+        },
         escapeAttr: function(str) {
             if (!str) return '';
             return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

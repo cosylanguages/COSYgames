@@ -229,7 +229,8 @@
                     sentence: 'hs_prompt_sentence'
                 };
 
-                const wordHtml = `<strong>${esc(item.word)}</strong>`;
+                const ttsBtnHtml = (window.gameUtils && window.gameUtils.renderTTSSpeakerHtml) ? window.gameUtils.renderTTSSpeakerHtml(item.word, lang) : '';
+                const wordHtml = `<strong>${esc(item.word)}</strong>${ttsBtnHtml}`;
                 const promptTemplate = window.tOr(PROMPT_KEYS[type], fallbackPrompt);
                 const promptText = promptTemplate.replace('{word}', wordHtml);
 
@@ -377,6 +378,25 @@
             const best = COSYScores.best(GAME_ID, lang);
             const countStr = `<strong>${COSYGame.score / 10}</strong>`;
             const scoreVal = COSYGame.score;
+
+            // Trigger confetti celebration & scorecard modal
+            if (window.gameUtils) {
+                if (window.gameUtils.playGameSound) window.gameUtils.playGameSound('success');
+                if (window.gameUtils.createConfetti) window.gameUtils.createConfetti();
+                if (window.gameUtils.showSessionScorecard) {
+                    window.gameUtils.showSessionScorecard({
+                        gameTitle: 'Hot Seat 🎯',
+                        score: scoreVal,
+                        maxScore: COSYGame.maxRounds * 10,
+                        lang: lang,
+                        items: [
+                            { label: 'Rounds Completed', value: `${COSYGame.round}/${COSYGame.maxRounds}` },
+                            { label: 'Correct Guesses', value: `${scoreVal / 10}` }
+                        ]
+                    });
+                }
+            }
+
             const body = document.getElementById('go-body');
             body.innerHTML = `
                 <div class="round-end">
