@@ -177,3 +177,29 @@ test('e. Opt-in guarantee: exactly emoji-odyssey, object-quest, hot-seat, identi
 
     assert.deepStrictEqual(foundGames, expectedGames, `COSYVocab should only be referenced in ${expectedGames.join(', ')}, but found in: ${foundGames.join(', ')}`);
 });
+
+test('f. renderTTSSpeakerHtml(), createConfetti(), and showSessionScorecard() helpers in gameUtils', () => {
+    const { sandbox } = createSandbox();
+    const gameUtils = sandbox.window.gameUtils;
+
+    // renderTTSSpeakerHtml
+    const html = gameUtils.renderTTSSpeakerHtml('apple', 'en');
+    assert.ok(html.includes('cg-tts-btn'));
+    assert.ok(html.includes("gameUtils.speak('apple', 'en')"));
+    assert.strictEqual(gameUtils.renderTTSSpeakerHtml('', 'en'), '');
+
+    // createConfetti - runs without throwing
+    assert.doesNotThrow(() => {
+        gameUtils.createConfetti();
+    });
+
+    // showSessionScorecard - creates modal overlay without throwing
+    assert.doesNotThrow(() => {
+        gameUtils.showSessionScorecard({
+            gameTitle: 'Hot Seat 🎯',
+            score: 80,
+            maxScore: 100,
+            items: [{ label: 'Rounds Answered', value: '8/10' }]
+        });
+    });
+});
