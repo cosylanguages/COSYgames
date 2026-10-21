@@ -154,6 +154,7 @@
                     </div>
                     <div class="gender-word" style="font-size: 3rem; font-weight: 800; color: var(--ink); margin: 0.5rem 0 1.5rem 0; font-family: 'Fraunces', serif;">
                         ${trans.article ? `<span style="font-size: 1.5rem; color: var(--ink-faint); font-weight: 400; font-family: 'DM Sans', sans-serif; margin-right: 8px;">(${trans.article})</span>` : ''}${trans.word}
+                        ${(window.gameUtils && window.gameUtils.renderTTSSpeakerHtml) ? window.gameUtils.renderTTSSpeakerHtml(trans.word, targetLangCode) : ''}
                     </div>
 
                     <div class="gender-options">
@@ -274,6 +275,20 @@
                 rankTitle = "Grammar Champion 🏆";
             } else if (COSYGame.score >= 40) {
                 rankTitle = "Gender Adept ⚖️";
+            }
+
+            // Trigger Session Scorecard Modal
+            if (window.gameUtils && window.gameUtils.showSessionScorecard) {
+                window.gameUtils.showSessionScorecard({
+                    gameTitle: 'What Gender Is It? ♀️♂️',
+                    score: COSYGame.score,
+                    maxScore: COSYGame.maxRounds * 10,
+                    lang: lang,
+                    items: [
+                        { label: 'Rank Achieved', value: rankTitle },
+                        { label: 'Concepts Mastered', value: `${COSYGame.score / 10}/${COSYGame.maxRounds}` }
+                    ]
+                });
             }
 
             body.innerHTML = `
