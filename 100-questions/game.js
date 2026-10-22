@@ -22,6 +22,16 @@
         lastNavDir: 'next' // 'next' or 'prev' for slide animation direction
     };
 
+    // The game text follows the practice language the player selects. Until they choose one (or a link passes ?lang=),
+    // it follows the site's interface language when the game has content for it.
+    const SUPPORTED_LANGS = ['en', 'fr', 'ru'];
+    let langChosen = false;
+    function interfaceLang() {
+        let code = '';
+        try { code = (localStorage.getItem('cosy_ui_lang') || '').slice(0, 2); } catch (e) {}
+        return code || (document.documentElement.lang || '').slice(0, 2);
+    }
+
     let touchStartX = 0;
     let touchStartY = 0;
 
@@ -69,7 +79,25 @@
             share_btn: "🔗 Share / Follow Along",
             share_title: "Follow Along Link 📲",
             share_desc: "Remote participants can scan this QR code or open the link below to follow along on their own screen:",
-            copy_link: "📋 Copy Sync Link"
+            copy_link: "📋 Copy Sync Link",
+            lesson_individual: "Individual Lesson",
+            lesson_group: "Group Lesson",
+            sub_mother: "Mother",
+            sub_father: "Father",
+            sub_grandparents: "Grandparents",
+            sub_sibling: "Sibling",
+            self_current: "Current Self",
+            self_past: "Past Self",
+            self_future: "Future Self",
+            target_grandma: "Ask Grandma",
+            target_grandpa: "Ask Grandpa",
+            target_sister: "Ask Sister",
+            target_brother: "Ask Brother",
+            region_us: "United States",
+            region_uk: "United Kingdom",
+            region_canada: "Canada",
+            region_france: "France",
+            region_russia: "Russia"
         },
         ru: {
             setup_title: "100 Вопросов 💬",
@@ -114,7 +142,25 @@
             share_btn: "🔗 Поделиться / Следить",
             share_title: "Ссылка для участников 📲",
             share_desc: "Удаленные участники могут отсканировать QR-код или открыть ссылку ниже:",
-            copy_link: "📋 Скопировать ссылку"
+            copy_link: "📋 Скопировать ссылку",
+            lesson_individual: "Индивидуальный урок",
+            lesson_group: "Групповой урок",
+            sub_mother: "Мама",
+            sub_father: "Папа",
+            sub_grandparents: "Бабушка и дедушка",
+            sub_sibling: "Брат или сестра",
+            self_current: "Настоящее я",
+            self_past: "Прошлое я",
+            self_future: "Будущее я",
+            target_grandma: "Вопросы бабушке",
+            target_grandpa: "Вопросы дедушке",
+            target_sister: "Вопросы сестре",
+            target_brother: "Вопросы брату",
+            region_us: "США",
+            region_uk: "Великобритания",
+            region_canada: "Канада",
+            region_france: "Франция",
+            region_russia: "Россия"
         },
         fr: {
             setup_title: "100 Questions 💬",
@@ -159,7 +205,25 @@
             share_btn: "🔗 Partager / Suivre",
             share_title: "Lien de suivi 📲",
             share_desc: "Les participants à distance peuvent scanner ce QR code ou ouvrir le lien ci-dessous :",
-            copy_link: "📋 Copier le lien"
+            copy_link: "📋 Copier le lien",
+            lesson_individual: "Cours individuel",
+            lesson_group: "Cours en groupe",
+            sub_mother: "Mère",
+            sub_father: "Père",
+            sub_grandparents: "Grands-parents",
+            sub_sibling: "Frère ou sœur",
+            self_current: "Moi actuel",
+            self_past: "Moi passé",
+            self_future: "Moi futur",
+            target_grandma: "Questions pour mamie",
+            target_grandpa: "Questions pour papi",
+            target_sister: "Questions pour ma sœur",
+            target_brother: "Questions pour mon frère",
+            region_us: "États-Unis",
+            region_uk: "Royaume-Uni",
+            region_canada: "Canada",
+            region_france: "France",
+            region_russia: "Russie"
         }
     };
 
@@ -323,6 +387,9 @@
         }
 
         const isDirectToQ = applyStateFromURL();
+        const linkedLang = new URLSearchParams(window.location.search).has('lang') ||
+            Boolean(window.COSYLoader && window.COSYLoader.getHandoffParams && window.COSYLoader.getHandoffParams().lang);
+        if (!langChosen && !linkedLang && SUPPORTED_LANGS.includes(interfaceLang())) state.lang = interfaceLang();
         if (isDirectToQ) {
             COSY_GAME.renderQuestion();
             return;
@@ -383,6 +450,7 @@
         const selectDeck = document.getElementById('s-deck');
         if (selectLang) {
             selectLang.addEventListener('change', () => {
+                langChosen = true;
                 state.lang = selectLang.value;
                 renderSetup();
             });
@@ -394,6 +462,15 @@
             });
         }
     }
+
+    // The site interface language changed while the setup screen is showing: follow it, unless the player already chose a language
+    document.addEventListener('cosy:languagechange', (event) => {
+        const lang = event.detail && event.detail.lang;
+        if (!langChosen && document.getElementById('s-lang') && SUPPORTED_LANGS.includes(lang) && state.lang !== lang) {
+            state.lang = lang;
+            renderSetup();
+        }
+    });
 
     function updateDynamicFields() {
         const selectDeck = document.getElementById('s-deck');
@@ -421,8 +498,8 @@
                         ${UI_TEXTS[state.lang].lesson_type_lbl}
                     </label>
                     <select class="styled-sel" id="s-lesson-type" style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--card-bg); color: var(--ink); font-size: 1rem; cursor: pointer;">
-                        <option value="individual" ${state.lessonType === 'individual' ? 'selected' : ''}>🧑‍🎓 Individual Lesson</option>
-                        <option value="group" ${state.lessonType === 'group' ? 'selected' : ''}>👥 Group Lesson</option>
+                        <option value="individual" ${state.lessonType === 'individual' ? 'selected' : ''}>🧑‍🎓 ${UI_TEXTS[state.lang].lesson_individual}</option>
+                        <option value="group" ${state.lessonType === 'group' ? 'selected' : ''}>👥 ${UI_TEXTS[state.lang].lesson_group}</option>
                     </select>
                 </div>
             `;
@@ -433,21 +510,16 @@
                         ${UI_TEXTS[state.lang].subgroup_lbl}
                     </label>
                     <select class="styled-sel" id="s-subgroup" style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--card-bg); color: var(--ink); font-size: 1rem; cursor: pointer;">
-                        <option value="mother" ${state.subgroup === 'mother' ? 'selected' : ''}>👩 Mother</option>
-                        <option value="father" ${state.subgroup === 'father' ? 'selected' : ''}>👨 Father</option>
-                        <option value="grandparents" ${state.subgroup === 'grandparents' ? 'selected' : ''}>👵👴 Grandparents</option>
-                        <option value="sibling" ${state.subgroup === 'sibling' ? 'selected' : ''}>👧👦 Sibling</option>
+                        <option value="mother" ${state.subgroup === 'mother' ? 'selected' : ''}>👩 ${UI_TEXTS[state.lang].sub_mother}</option>
+                        <option value="father" ${state.subgroup === 'father' ? 'selected' : ''}>👨 ${UI_TEXTS[state.lang].sub_father}</option>
+                        <option value="grandparents" ${state.subgroup === 'grandparents' ? 'selected' : ''}>👵👴 ${UI_TEXTS[state.lang].sub_grandparents}</option>
+                        <option value="sibling" ${state.subgroup === 'sibling' ? 'selected' : ''}>👧👦 ${UI_TEXTS[state.lang].sub_sibling}</option>
                     </select>
                 </div>
                 <div id="family-target-container"></div>
             `;
         } else if (state.deckKey === 'myself') {
-            let currentLbl = 'Current Self', pastLbl = 'Past Self', futureLbl = 'Future Self';
-            if (state.lang === 'ru') {
-                currentLbl = 'Настоящее я'; pastLbl = 'Прошлое я'; futureLbl = 'Будущее я';
-            } else if (state.lang === 'fr') {
-                currentLbl = 'Moi actuel'; pastLbl = 'Moi passé'; futureLbl = 'Moi futur';
-            }
+            const currentLbl = UI_TEXTS[state.lang].self_current, pastLbl = UI_TEXTS[state.lang].self_past, futureLbl = UI_TEXTS[state.lang].self_future;
             fieldsHTML = `
                 <div class="setup-field" style="margin-bottom: 1.5rem;">
                     <label style="font-weight: 700; margin-bottom: 0.5rem; display: block; font-size: 0.9rem; color: var(--ink-muted); text-transform: uppercase;">
@@ -464,18 +536,18 @@
             let regionOptions = '';
             if (state.lang === 'en') {
                 regionOptions = `
-                    <option value="us" ${state.subgroup === 'us' ? 'selected' : ''}>United States 🇺🇸</option>
-                    <option value="uk" ${state.subgroup === 'uk' ? 'selected' : ''}>United Kingdom 🇬🇧</option>
-                    <option value="canada" ${state.subgroup === 'canada' ? 'selected' : ''}>Canada 🇨🇦</option>
+                    <option value="us" ${state.subgroup === 'us' ? 'selected' : ''}>${UI_TEXTS[state.lang].region_us} 🇺🇸</option>
+                    <option value="uk" ${state.subgroup === 'uk' ? 'selected' : ''}>${UI_TEXTS[state.lang].region_uk} 🇬🇧</option>
+                    <option value="canada" ${state.subgroup === 'canada' ? 'selected' : ''}>${UI_TEXTS[state.lang].region_canada} 🇨🇦</option>
                 `;
             } else if (state.lang === 'fr') {
                 regionOptions = `
-                    <option value="france" ${state.subgroup === 'france' ? 'selected' : ''}>France 🇫🇷</option>
-                    <option value="canada" ${state.subgroup === 'canada' ? 'selected' : ''}>Canada 🇨🇦</option>
+                    <option value="france" ${state.subgroup === 'france' ? 'selected' : ''}>${UI_TEXTS[state.lang].region_france} 🇫🇷</option>
+                    <option value="canada" ${state.subgroup === 'canada' ? 'selected' : ''}>${UI_TEXTS[state.lang].region_canada} 🇨🇦</option>
                 `;
             } else {
                 regionOptions = `
-                    <option value="russia" ${state.subgroup === 'russia' ? 'selected' : ''}>Russia 🇷🇺</option>
+                    <option value="russia" ${state.subgroup === 'russia' ? 'selected' : ''}>${UI_TEXTS[state.lang].region_russia} 🇷🇺</option>
                 `;
             }
 
@@ -526,8 +598,8 @@
                         ${UI_TEXTS[state.lang].target_role_lbl}
                     </label>
                     <select class="styled-sel" id="s-family-target" style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--card-bg); color: var(--ink); font-size: 1rem; cursor: pointer;">
-                        <option value="grandma" ${state.familyTarget === 'grandma' ? 'selected' : ''}>👵 Ask Grandma</option>
-                        <option value="grandpa" ${state.familyTarget === 'grandpa' ? 'selected' : ''}>👴 Ask Grandpa</option>
+                        <option value="grandma" ${state.familyTarget === 'grandma' ? 'selected' : ''}>👵 ${UI_TEXTS[state.lang].target_grandma}</option>
+                        <option value="grandpa" ${state.familyTarget === 'grandpa' ? 'selected' : ''}>👴 ${UI_TEXTS[state.lang].target_grandpa}</option>
                     </select>
                 </div>
             `;
@@ -538,8 +610,8 @@
                         ${UI_TEXTS[state.lang].target_role_lbl}
                     </label>
                     <select class="styled-sel" id="s-family-target" style="width: 100%; padding: 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--card-bg); color: var(--ink); font-size: 1rem; cursor: pointer;">
-                        <option value="sister" ${state.familyTarget === 'sister' ? 'selected' : ''}>👧 Ask Sister</option>
-                        <option value="brother" ${state.familyTarget === 'brother' ? 'selected' : ''}>👦 Ask Brother</option>
+                        <option value="sister" ${state.familyTarget === 'sister' ? 'selected' : ''}>👧 ${UI_TEXTS[state.lang].target_sister}</option>
+                        <option value="brother" ${state.familyTarget === 'brother' ? 'selected' : ''}>👦 ${UI_TEXTS[state.lang].target_brother}</option>
                     </select>
                 </div>
             `;
