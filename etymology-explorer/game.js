@@ -6,6 +6,10 @@
 (function() {
     const GAME_ID = 'etymology';
     const GAME_TITLE = 'Etymology Explorer 📜';
+    // Interface text lives in i18n/games/etymology-explorer.js (and common keys in _common.js)
+    const T = (window.COSYGameStrings && window.COSYGameStrings.forGame)
+        ? window.COSYGameStrings.forGame('etymology-explorer')
+        : (key, params, fallback) => (fallback !== undefined ? fallback : key);
     const LANG_OPTS = [
         'English 🇬🇧',
         'Français 🇫🇷',
@@ -128,20 +132,20 @@
         body.innerHTML = `
             <div class="setup-screen">
               <h2>Etymology Explorer 📜</h2>
-              <p>Unearth the archaeological root tree of vocabulary! Dig through historical strata layers from modern words back to ancient roots or explore cross-language word networks.</p>
-              <div class="setup-field"><label>Game Mode / Difficulty</label>
+              <p data-gs="setup.description">${T('setup.description')}</p>
+              <div class="setup-field"><label data-gs="setup.mode_label">${T('setup.mode_label')}</label>
                 <select class="styled-sel" id="s-level">
-                  <option value="easy">Easy (Common roots)</option>
-                  <option value="medium">Medium (Loanwords)</option>
-                  <option value="hard">Hard (Deep history)</option>
-                  <option value="network">Language Network 🌐 (Cross-language Cognates)</option>
-                  <option value="wordpairs">Word Pairs 👯 (False Friends & Doublets)</option>
+                  <option value="easy" data-gs="setup.mode.easy">${T('setup.mode.easy')}</option>
+                  <option value="medium" data-gs="setup.mode.medium">${T('setup.mode.medium')}</option>
+                  <option value="hard" data-gs="setup.mode.hard">${T('setup.mode.hard')}</option>
+                  <option value="network" data-gs="setup.mode.network">${T('setup.mode.network')}</option>
+                  <option value="wordpairs" data-gs="setup.mode.wordpairs">${T('setup.mode.wordpairs')}</option>
                 </select>
               </div>
-              <div class="setup-field" id="lang-field"><label>Focus Language</label>
+              <div class="setup-field" id="lang-field"><label data-gs="setup.focus_language">${T('setup.focus_language')}</label>
                 <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
               </div>
-              <button class="btn-start-game" onclick="COSY_GAME.start()">▶ Start journey</button>
+              <button class="btn-start-game" onclick="COSY_GAME.start()" data-gs="setup.start">${T('setup.start')}</button>
             </div>`;
 
         const levelSel = document.getElementById('s-level');
@@ -161,7 +165,7 @@
         async start() {
             const levelVal = document.getElementById('s-level')?.value || 'easy';
             const body = document.getElementById('go-body');
-            body.innerHTML = '<div style="text-align:center;padding:4rem;">Loading history...</div>';
+            body.innerHTML = `<div style="text-align:center;padding:4rem;">${T('play.loading')}</div>`;
 
             if (levelVal === 'network') {
                 const networkData = await loadNetworkData();
@@ -228,31 +232,31 @@
 
                 body.innerHTML = `
                   <div class="score-bar">
-                    <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
-                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Question</div></div>
+                    <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">${T('common.score')}</div></div>
+                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">${T('play.question')}</div></div>
                   </div>
                   <div class="game-card">
-                    <div class="game-label">🏺 Archaeological Dig Site</div>
+                    <div class="game-label">${T('play.dig_site')}</div>
                     <div class="etymology-word" style="font-size: 2.2rem; font-weight: 800; color: var(--ink); margin: 1rem 0; font-family: 'Fraunces', serif;">${q.word}</div>
 
                     <div class="dig-strata-container" id="dig-strata-container">
                       <div class="dig-strata-layer revealed">
-                        <div class="dig-layer-title">Layer I · Modern</div>
+                        <div class="dig-layer-title">${T('play.layer1')}</div>
                         <div class="dig-layer-content">${gameUtils.escapeAttr(q.word)}</div>
                       </div>
                       <div class="dig-strata-layer unrevealed" id="strata-layer-2">
-                        <div class="dig-layer-title">Layer II · Root</div>
-                        <div class="dig-layer-content">🔒 Hidden</div>
+                        <div class="dig-layer-title">${T('play.layer2')}</div>
+                        <div class="dig-layer-content">${T('play.hidden')}</div>
                       </div>
                       <div class="dig-strata-layer unrevealed" id="strata-layer-3">
-                        <div class="dig-layer-title">Layer III · Origin</div>
-                        <div class="dig-layer-content">🔒 Hidden</div>
+                        <div class="dig-layer-title">${T('play.layer3')}</div>
+                        <div class="dig-layer-content">${T('play.hidden')}</div>
                       </div>
                     </div>
 
                     ${revealedHistoryLayers.length > 0 ? `
                       <div style="margin: 0.75rem 0; text-align: left;">
-                        <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--ink-faint);">Previous Discoveries:</div>
+                        <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--ink-faint);">${T('play.previous_discoveries')}</div>
                         <div style="display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.5rem 0;">
                           ${revealedHistoryLayers.map(h => `<span style="background: rgba(180, 83, 9, 0.1); border: 1px solid rgba(180, 83, 9, 0.2); border-radius: 8px; padding: 0.25rem 0.6rem; font-size: 0.8rem; font-weight: 700; color: #78350F;">${gameUtils.escapeAttr(h)}</span>`).join('')}
                         </div>
@@ -264,8 +268,8 @@
                     </div>
                     <div class="feedback-bar" id="et-fb"></div>
                     <div class="game-controls">
-                      <button class="btn-g-primary" id="et-next" style="display:none">Next Word →</button>
-                      <button class="btn-g-danger" id="et-reset">⬅ Exit</button>
+                      <button class="btn-g-primary" id="et-next" style="display:none">${T('play.next_word')}</button>
+                      <button class="btn-g-danger" id="et-reset">${T('play.exit')}</button>
                     </div>
                   </div>`;
 
@@ -293,19 +297,19 @@
                     el.classList.add('correct');
                     if (layer2) {
                       layer2.className = 'dig-strata-layer revealed motion-unfurl';
-                      layer2.innerHTML = `<div class="dig-layer-title">Layer II · Root</div><div class="dig-layer-content">${gameUtils.escapeAttr(strataSteps[1] || selected)}</div>`;
+                      layer2.innerHTML = `<div class="dig-layer-title">${T('play.layer2')}</div><div class="dig-layer-content">${gameUtils.escapeAttr(strataSteps[1] || selected)}</div>`;
                     }
                     if (layer3) {
                       setTimeout(() => {
                         layer3.className = 'dig-strata-layer revealed motion-unfurl';
-                        layer3.innerHTML = `<div class="dig-layer-title">Layer III · Origin</div><div class="dig-layer-content">${gameUtils.escapeAttr(strataSteps[strataSteps.length - 1] || correct)}</div>`;
+                        layer3.innerHTML = `<div class="dig-layer-title">${T('play.layer3')}</div><div class="dig-layer-content">${gameUtils.escapeAttr(strataSteps[strataSteps.length - 1] || correct)}</div>`;
                       }, 250);
                     }
 
                     revealedHistoryLayers.push(`${word} ➔ ${correct}`);
 
                     fb.className = 'feedback-bar show ok';
-                    fb.innerHTML = `<div>✓ <strong>Unearthed!</strong> ${detail}</div>${pathViz}`;
+                    fb.innerHTML = `<div>✓ <strong>${T('fb.unearthed')}</strong> ${detail}</div>${pathViz}`;
                     COSYGame.addScore(10);
                     document.getElementById('et-score').textContent = COSYGame.score;
                 } else {
@@ -314,7 +318,7 @@
                         if (b.textContent === correct) b.classList.add('correct');
                     });
                     fb.className = 'feedback-bar show bad';
-                    fb.innerHTML = `<div>✗ <strong>Actually, it's ${correct}.</strong> ${detail}</div>${pathViz}`;
+                    fb.innerHTML = `<div>✗ <strong>${T('fb.actually', { answer: correct })}</strong> ${detail}</div>${pathViz}`;
                 }
             };
 
@@ -349,24 +353,24 @@
 
                 body.innerHTML = `
                   <div class="score-bar">
-                    <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
-                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Question</div></div>
+                    <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">${T('common.score')}</div></div>
+                    <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">${T('play.question')}</div></div>
                   </div>
                   <div class="game-card">
-                    <div class="game-label">🌐 Cross-Language Network</div>
-                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--teal); text-transform: uppercase; margin-top: 0.5rem;">Origin: ${gameUtils.escapeAttr(item.rootLanguage)}</div>
+                    <div class="game-label">${T('net.label')}</div>
+                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--teal); text-transform: uppercase; margin-top: 0.5rem;">${T('net.origin', { language: gameUtils.escapeAttr(item.rootLanguage) })}</div>
                     <div class="etymology-word" style="font-size: 2.2rem; font-weight: 800; color: var(--ink); margin: 0.5rem 0; font-family: 'Fraunces', serif;">${gameUtils.escapeAttr(item.root)}</div>
-                    <div style="font-size: 1.1rem; font-style: italic; color: #4B5563; margin-bottom: 1rem;">Meaning: "${gameUtils.escapeAttr(item.meaning)}"</div>
+                    <div style="font-size: 1.1rem; font-style: italic; color: #4B5563; margin-bottom: 1rem;">${T('net.meaning', { meaning: gameUtils.escapeAttr(item.meaning) })}</div>
 
                     <div style="background: rgba(13, 148, 136, 0.08); border: 1px dashed var(--teal); border-radius: 8px; padding: 1rem; margin-bottom: 1.25rem;">
-                      <div style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--teal); margin-bottom: 0.25rem;">Cognate Reflex</div>
+                      <div style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--teal); margin-bottom: 0.25rem;">${T('net.cognate_reflex')}</div>
                       <div style="font-size: 1.5rem; font-weight: 800; color: #111827;">"${gameUtils.escapeAttr(targetWord)}"</div>
-                      <div style="font-size: 0.95rem; color: #4B5563; margin-top: 0.25rem;">Which COSY language borrowed this word into its vocabulary?</div>
+                      <div style="font-size: 0.95rem; color: #4B5563; margin-top: 0.25rem;">${T('net.question')}</div>
                     </div>
 
                     ${revealedHistoryLayers.length > 0 ? `
                       <div style="margin: 0.75rem 0; text-align: left;">
-                        <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--ink-faint);">Discovered Connections:</div>
+                        <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--ink-faint);">${T('net.discovered')}</div>
                         <div style="display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.5rem 0;">
                           ${revealedHistoryLayers.map(h => `<span style="background: rgba(13, 148, 136, 0.1); border: 1px solid rgba(13, 148, 136, 0.2); border-radius: 8px; padding: 0.25rem 0.6rem; font-size: 0.8rem; font-weight: 700; color: #0D9488;">${gameUtils.escapeAttr(h)}</span>`).join('')}
                         </div>
@@ -378,8 +382,8 @@
                     </div>
                     <div class="feedback-bar" id="et-fb"></div>
                     <div class="game-controls">
-                      <button class="btn-g-primary" id="et-next" style="display:none">Next Connection →</button>
-                      <button class="btn-g-danger" id="et-reset">⬅ Exit</button>
+                      <button class="btn-g-primary" id="et-next" style="display:none">${T('net.next')}</button>
+                      <button class="btn-g-danger" id="et-reset">${T('play.exit')}</button>
                     </div>
                   </div>`;
 
@@ -395,7 +399,7 @@
                             btn.classList.add('correct');
                             revealedHistoryLayers.push(`${targetWord} ➔ ${targetLangName}`);
                             fb.className = 'feedback-bar show ok';
-                            fb.innerHTML = `<div>✓ <strong>Connected!</strong> ${gameUtils.escapeAttr(targetWord)} is the ${targetLangName} reflex of ${gameUtils.escapeAttr(item.root)}. ${gameUtils.escapeAttr(item.detail)}</div>`;
+                            fb.innerHTML = `<div>✓ <strong>${T('net.connected')}</strong> ${T('net.connected_detail', { word: gameUtils.escapeAttr(targetWord), language: targetLangName, root: gameUtils.escapeAttr(item.root), detail: gameUtils.escapeAttr(item.detail) })}</div>`;
                             COSYGame.addScore(10);
                             document.getElementById('et-score').textContent = COSYGame.score;
                         } else {
@@ -404,7 +408,7 @@
                                 if (b.dataset.correct === 'true') b.classList.add('correct');
                             });
                             fb.className = 'feedback-bar show bad';
-                            fb.innerHTML = `<div>✗ <strong>Not quite!</strong> "${gameUtils.escapeAttr(targetWord)}" appears in <strong>${targetLangName}</strong> (${gameUtils.escapeAttr(targetReflex.note)}). ${gameUtils.escapeAttr(item.detail)}</div>`;
+                            fb.innerHTML = `<div>✗ <strong>${T('net.not_quite')}</strong> ${T('net.not_quite_detail', { word: gameUtils.escapeAttr(targetWord), language: targetLangName, note: gameUtils.escapeAttr(targetReflex.note), detail: gameUtils.escapeAttr(item.detail) })}</div>`;
                         }
                     });
                 });
@@ -454,12 +458,12 @@
 
                     body.innerHTML = `
                       <div class="score-bar">
-                        <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
-                        <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Question</div></div>
+                        <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">${T('common.score')}</div></div>
+                        <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">${T('play.question')}</div></div>
                       </div>
                       <div class="game-card">
-                        <div class="game-label">👯 Word Pairs · False Friends Challenge</div>
-                        <div style="font-size: 1.1rem; margin-top: 0.5rem; color: #4B5563;">Are these two words etymologically related?</div>
+                        <div class="game-label">${T('pairs.label')}</div>
+                        <div style="font-size: 1.1rem; margin-top: 0.5rem; color: #4B5563;">${T('pairs.question')}</div>
 
                         <div style="display: flex; gap: 1rem; margin: 1rem 0; justify-content: center; align-items: stretch;">
                           <div style="flex: 1; background: rgba(13, 148, 136, 0.08); border: 1px solid var(--teal); border-radius: 8px; padding: 1rem;">
@@ -479,8 +483,8 @@
                         </div>
                         <div class="feedback-bar" id="et-fb"></div>
                         <div class="game-controls">
-                          <button class="btn-g-primary" id="et-next" style="display:none">Next Pair →</button>
-                          <button class="btn-g-danger" id="et-reset">⬅ Exit</button>
+                          <button class="btn-g-primary" id="et-next" style="display:none">${T('pairs.next')}</button>
+                          <button class="btn-g-danger" id="et-reset">${T('play.exit')}</button>
                         </div>
                       </div>`;
 
@@ -495,7 +499,7 @@
                             if (isCorrect) {
                                 btn.classList.add('correct');
                                 fb.className = 'feedback-bar show ok';
-                                fb.innerHTML = `<div>✓ <strong>Correct!</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
+                                fb.innerHTML = `<div>✓ <strong>${T('pairs.correct')}</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
                                 COSYGame.addScore(10);
                                 document.getElementById('et-score').textContent = COSYGame.score;
                             } else {
@@ -504,7 +508,7 @@
                                     if (b.dataset.correct === 'true') b.classList.add('correct');
                                 });
                                 fb.className = 'feedback-bar show bad';
-                                fb.innerHTML = `<div>✗ <strong>Not quite!</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
+                                fb.innerHTML = `<div>✗ <strong>${T('net.not_quite')}</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
                             }
                         });
                     });
@@ -515,12 +519,12 @@
 
                     body.innerHTML = `
                       <div class="score-bar">
-                        <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">Score</div></div>
-                        <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">Question</div></div>
+                        <div class="sb-item"><div class="sb-val" id="et-score">${COSYGame.score}</div><div class="sb-lbl">${T('common.score')}</div></div>
+                        <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl">${T('play.question')}</div></div>
                       </div>
                       <div class="game-card">
-                        <div class="game-label">👯 Word Pairs · Etymological Doublets (${gameUtils.escapeAttr(langName)})</div>
-                        <div style="font-size: 1.1rem; margin-top: 0.5rem; color: #4B5563;">What is the shared ancestral root of these two doublets?</div>
+                        <div class="game-label">${T('doublets.label', { language: gameUtils.escapeAttr(langName) })}</div>
+                        <div style="font-size: 1.1rem; margin-top: 0.5rem; color: #4B5563;">${T('doublets.question')}</div>
 
                         <div style="display: flex; gap: 1rem; margin: 1rem 0; justify-content: center; align-items: center; background: rgba(99, 102, 241, 0.08); border: 1px dashed #6366F1; border-radius: 8px; padding: 1rem;">
                           <div style="font-size: 1.8rem; font-weight: 800; color: #4338CA;">"${gameUtils.escapeAttr(item.wordA)}"</div>
@@ -533,8 +537,8 @@
                         </div>
                         <div class="feedback-bar" id="et-fb"></div>
                         <div class="game-controls">
-                          <button class="btn-g-primary" id="et-next" style="display:none">Next Pair →</button>
-                          <button class="btn-g-danger" id="et-reset">⬅ Exit</button>
+                          <button class="btn-g-primary" id="et-next" style="display:none">${T('pairs.next')}</button>
+                          <button class="btn-g-danger" id="et-reset">${T('play.exit')}</button>
                         </div>
                       </div>`;
 
@@ -549,7 +553,7 @@
                             if (isCorrect) {
                                 btn.classList.add('correct');
                                 fb.className = 'feedback-bar show ok';
-                                fb.innerHTML = `<div>✓ <strong>Correct Root!</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
+                                fb.innerHTML = `<div>✓ <strong>${T('doublets.correct_root')}</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
                                 COSYGame.addScore(10);
                                 document.getElementById('et-score').textContent = COSYGame.score;
                             } else {
@@ -558,7 +562,7 @@
                                     if (b.dataset.correct === 'true') b.classList.add('correct');
                                 });
                                 fb.className = 'feedback-bar show bad';
-                                fb.innerHTML = `<div>✗ <strong>Shared Root: ${gameUtils.escapeAttr(item.commonRoot)}.</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
+                                fb.innerHTML = `<div>✗ <strong>${T('doublets.shared_root', { root: gameUtils.escapeAttr(item.commonRoot) })}</strong> ${gameUtils.escapeAttr(item.detail)}</div>`;
                             }
                         });
                     });
@@ -581,13 +585,13 @@
             const body = document.getElementById('go-body');
             body.innerHTML = `
                 <div class="setup-screen">
-                  <h2>Journey Complete! 📜</h2>
+                  <h2>${T('end.title')}</h2>
                   <div class="final-score" style="font-size: 3rem; font-weight: 800; color: var(--teal); margin: 1rem 0;">${COSYGame.score}</div>
-                  ${best ? `<div class="game-sub" style="margin-bottom:1rem">Personal best: ${best.score} pts</div>` : ''}
-                  <p>You've explored the roots and connections of many words across languages!</p>
+                  ${best ? `<div class="game-sub" style="margin-bottom:1rem">${T('common.personal_best', { score: best.score })}</div>` : ''}
+                  <p>${T('end.message')}</p>
                   <div style="display:flex; gap:1rem; justify-content:center; margin-top:2rem;">
                     <button class="btn-start-game" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span></button>
-                    <button class="btn-g-danger" onclick="COSY_GAME.reset()">Back to Setup</button>
+                    <button class="btn-g-danger" onclick="COSY_GAME.reset()">${T('end.back_to_setup')}</button>
                   </div>
                 </div>`;
         },
