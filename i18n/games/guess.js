@@ -28,14 +28,23 @@ window.COSYGameStrings['guess'] = {
       "ru": "Выберите издание",
       "el": "Επιλέξτε έκδοση"
     },
+    "setup.category_label": {
+      "en": "Sub-Category Focus",
+      "fr": "Sous-catégorie ciblée",
+      "es": "Subcategoría enfocada",
+      "de": "Unterkategorie-Fokus",
+      "it": "Focus sottocategoria",
+      "ru": "Выбор подкатегории",
+      "el": "Εστίαση υποκατηγορίας"
+    },
     "setup.mode_label": {
-      "en": "CEFR Gameplay Mode",
-      "fr": "Mode de jeu CECRL",
-      "es": "Modo de juego MCER",
-      "de": "GER-Spielmodus",
-      "it": "Modalità di gioco QCER",
-      "ru": "Режим игры CEFR",
-      "el": "Λειτουργία παιχνιδιού CEFR"
+      "en": "Speaking & Gameplay Mode",
+      "fr": "Mode d'expression et de jeu",
+      "es": "Modo de habla y juego",
+      "de": "Sprech- und Spielmodus",
+      "it": "Modalità di conversazione e gioco",
+      "ru": "Режим речи и игры",
+      "el": "Λειτουργία ομιλίας και παιχνιδιού"
     },
     "setup.env_label": {
       "en": "Play Environment",
@@ -52,6 +61,7 @@ window.COSYGameStrings['guess'] = {
       "game.description": "machine",
       "setup.subtitle": "machine",
       "setup.edition_label": "machine",
+      "setup.category_label": "machine",
       "setup.mode_label": "machine",
       "setup.env_label": "machine"
     },
@@ -59,6 +69,7 @@ window.COSYGameStrings['guess'] = {
       "game.description": "machine",
       "setup.subtitle": "machine",
       "setup.edition_label": "machine",
+      "setup.category_label": "machine",
       "setup.mode_label": "machine",
       "setup.env_label": "machine"
     },
@@ -66,6 +77,7 @@ window.COSYGameStrings['guess'] = {
       "game.description": "machine",
       "setup.subtitle": "machine",
       "setup.edition_label": "machine",
+      "setup.category_label": "machine",
       "setup.mode_label": "machine",
       "setup.env_label": "machine"
     },
@@ -73,6 +85,7 @@ window.COSYGameStrings['guess'] = {
       "game.description": "machine",
       "setup.subtitle": "machine",
       "setup.edition_label": "machine",
+      "setup.category_label": "machine",
       "setup.mode_label": "machine",
       "setup.env_label": "machine"
     },
@@ -80,6 +93,7 @@ window.COSYGameStrings['guess'] = {
       "game.description": "machine",
       "setup.subtitle": "machine",
       "setup.edition_label": "machine",
+      "setup.category_label": "machine",
       "setup.mode_label": "machine",
       "setup.env_label": "machine"
     },
@@ -87,6 +101,7 @@ window.COSYGameStrings['guess'] = {
       "game.description": "machine",
       "setup.subtitle": "machine",
       "setup.edition_label": "machine",
+      "setup.category_label": "machine",
       "setup.mode_label": "machine",
       "setup.env_label": "machine"
     }

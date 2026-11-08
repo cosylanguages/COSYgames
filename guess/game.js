@@ -1,7 +1,9 @@
 /**
  * games/guess/game.js
  * Unified "Guess!" Mega-Game Engine
- * Supports 6 editions, CEFR level adaptations, and multiplayer host modes (Online, In-Person/Projector, Hybrid)
+ * Supports 6 editions, expanded sub-categories (weather, food with fruit/veg filters, Christmas,
+ * hobbies, emotions, countries/cities, nationalities, 9 CEFR-graded verb decks),
+ * and 8 gameplay modes including Charades, 1-word description, random letter constraints, and synonyms.
  */
 (function() {
     'use strict';
@@ -64,7 +66,7 @@
         }
     }
 
-    // Comprehensive Dataset across all 6 Editions and Sub-Categories from the Issue Specification
+    // Comprehensive Datasets across all Editions, Sub-Categories & CEFR Verb Groups
     const DECKS = {
         who: [
             // Historical Figures
@@ -80,25 +82,110 @@
             { word: 'Cryptographer', level: 'c1', cat: 'occupations', clues: ['Specialist who crafts and analyzes ciphers and encryption systems.', 'Operates at the intersection of discrete mathematics and information security.'], taboo: ['code', 'cipher', 'secret', 'security'], riddle: 'Architect of mathematical mazes that veil secrets behind irreversible prime numbers.' },
             { word: 'Urban Planner', level: 'c2', cat: 'occupations', clues: ['Professional designing land use, transit networks, and zoning for sustainable cities.', 'Balances municipal architecture with population growth.'], taboo: ['city', 'transit', 'buildings', 'zoning'], riddle: 'Orchestrator of civic arteries and concrete commons balancing urban growth against entropy.' },
             // Pop Culture Icons
-            { word: 'Ludwig van Beethoven', level: 'b1', cat: 'pop', clues: ['Influential classical and romantic German composer.', 'Created monumental symphonies even after losing his hearing.'], taboo: ['music', 'piano', 'symphony', 'deaf'], riddle: 'Channeled silent thunder into harmonic movements that deafened grief itself.' }
+            { word: 'Ludwig van Beethoven', level: 'b1', cat: 'pop', clues: ['Influential classical and romantic German composer.', 'Created monumental symphonies even after losing his hearing.'], taboo: ['music', 'piano', 'symphony', 'deaf'], riddle: 'Channeled silent thunder into harmonic movements that deafened grief itself.' },
+            // Nationalities
+            { word: 'Japanese', level: 'a1', cat: 'nationalities', clues: ['Relating to the island nation of Japan in East Asia.', 'Known for tea ceremonies, manga, and cherry blossoms.'], taboo: ['tokyo', 'asia', 'sushi', 'japan'], riddle: 'Born of the rising sun archipelago where tradition meets neon horizon.' },
+            { word: 'Brazilian', level: 'a2', cat: 'nationalities', clues: ['Native or inhabitant of the largest South American country.', 'Celebrates Carnival and shares borders with nearly all neighboring nations.'], taboo: ['samba', 'rio', 'amazon', 'brazil'], riddle: 'Dwellers of the emerald rainforest and sun-drenched Atlantic sands dancing to bossa nova.' },
+            { word: 'Spanish', level: 'a1', cat: 'nationalities', clues: ['From the Iberian peninsula in southwestern Europe.', 'Famous for tapas, flamenco, and sunny plazas.'], taboo: ['madrid', 'spain', 'europe', 'tapas'], riddle: 'People of the Iberian sun where afternoon siestas give way to vibrant nocturnal guitars.' },
+            { word: 'Egyptian', level: 'b1', cat: 'nationalities', clues: ['Native to the northeastern corner of Africa along the fertile Nile River.', 'Heirs to thousands of years of pharaonic monuments.'], taboo: ['cairo', 'nile', 'pyramid', 'pharaoh'], riddle: 'Guardians of the cradle carved by the ancient silt of the great northward-flowing river.' }
         ],
         what: [
             // Action Verbs & Idiomatic Gestures
             { word: 'Whisper', level: 'a2', cat: 'actions', clues: ['To speak very softly using breath rather than vocal cords.', 'Often used when sharing secrets in quiet libraries.'], taboo: ['quiet', 'speak', 'talk', 'voice'], riddle: 'A breath that carries words without a voice, slipping past eavesdroppers like velvet.' },
+            { word: 'Tripping', level: 'a1', cat: 'actions', clues: ['Catching your foot unexpectedly on an obstacle and stumbling.', 'Can happen on uneven sidewalks or carpet edges.'], taboo: ['fall', 'foot', 'stumble', 'walk'], riddle: 'A sudden misstep where an unseen edge sends balance tumbling to the floor.' },
+            { word: 'Hesitating', level: 'b1', cat: 'actions', clues: ['Pausing before saying or doing something due to uncertainty or doubt.', 'A moment of reluctance or second thought.'], taboo: ['pause', 'wait', 'doubt', 'unsure'], riddle: 'A quiet suspension of will poised on the brink of choice.' },
             { word: 'Procrastinate', level: 'b2', cat: 'actions', clues: ['To unnecessarily postpone decisions or actions until the eleventh hour.', 'Often fueled by perfectionism or executive fatigue.'], taboo: ['delay', 'later', 'lazy', 'wait'], riddle: 'The subtle art of surrendering tomorrow to the comfort of doing nothing today.' },
             { word: 'Negotiate', level: 'c1', cat: 'actions', clues: ['To confer with another so as to arrive at the settlement of some matter.', 'Involves concessions, compromise, and mutual diplomacy.'], taboo: ['deal', 'compromise', 'agreement', 'talk'], riddle: 'A verbal duel of give and take where both parties trade concessions to claim peace.' },
             // Animals & Nature
             { word: 'Frog', level: 'a1', cat: 'nature', clues: ['It is small and green.', 'It jumps and lives near ponds.', 'It says ribbit.'], taboo: ['green', 'jump', 'pond', 'amphibian'], riddle: 'A throat that swells like a jewel by the pond, singing into damp summer nights.' },
             { word: 'Chameleon', level: 'b1', cat: 'nature', clues: ['An amphibian or reptile found in warm habitats.', 'Undergoes physiological color changes to camouflage and signal mood.'], taboo: ['lizard', 'color', 'camouflage', 'reptile'], riddle: 'Master of chromatic deceit whose skin mirrors whatever branch it claims.' },
+            { word: 'Amoeba', level: 'b2', cat: 'nature', clues: ['Microscopic single-celled organism that moves by extending pseudopodia.', 'Found in freshwater ponds and moist soils.'], taboo: ['cell', 'microscope', 'single', 'tiny'], riddle: 'A shapeless droplet of microscopic life gliding through water by reaching out phantom feet.' },
             { word: 'Platypus', level: 'c1', cat: 'nature', clues: ['Semi-aquatic egg-laying mammal endemic to eastern Australia.', 'Has a duck bill, beaver tail, otter feet, and venomous ankle spurs.'], taboo: ['bill', 'duck', 'australia', 'mammal'], riddle: 'Though slow to wrath, this Gondwanan oddity unites mammalian fur with an avian bill and venomous spurs.' },
             { word: 'Volcano', level: 'a2', cat: 'nature', clues: ['Geological rupture through which molten lava, tephra, and steam erupt.', 'Forms towering mountains along tectonic plate boundaries.'], taboo: ['lava', 'eruption', 'mountain', 'magma'], riddle: 'A mountain with fire in its throat sleeping until tectonic fury shakes the earth.' },
+            { word: 'Glacier', level: 'b1', cat: 'nature', clues: ['Massive persistent body of dense ice constantly moving under its own weight.', 'Carves deep U-shaped valleys across mountain landscapes.'], taboo: ['ice', 'cold', 'snow', 'melt'], riddle: 'A river of frozen crystal creeping across bedrock over centuries, carving valleys in silent weight.' },
             // Daily Things & Technology
             { word: 'Rotary Phone', level: 'b1', cat: 'tech', clues: ['Vintage communication hardware with a circular finger dial.', 'Predecessor to touch-tone keypads and cellular smartphones.'], taboo: ['call', 'dial', 'telephone', 'wire'], riddle: 'A heavy receiver coiled to a mechanical wheel where numbers were wound by finger.' },
             { word: 'Smart Speaker', level: 'a2', cat: 'tech', clues: ['Voice-activated home audio assistant playing music and controlling smart devices.', 'Responds when called by its wake name.'], taboo: ['voice', 'alexa', 'assistant', 'music'], riddle: 'An ambient ear on the shelf answering queries spoken to the empty air.' },
             // Abstract Concepts
             { word: 'Nostalgia', level: 'b2', cat: 'abstract', clues: ['A bittersweet emotional longing for a bygone era or familiar past memories.', 'Triggered by retro aesthetics, songs, or scent.'], taboo: ['past', 'memories', 'yearning', 'homesick'], riddle: 'A bittersweet ache that paints the rearview mirror in warmer golden tones than today.' },
             { word: 'Bureaucracy', level: 'c1', cat: 'abstract', clues: ['An administrative system governed by official routine, hierarchies, and rigid red tape.', 'Often critiqued for institutional inertia.'], taboo: ['paperwork', 'rules', 'government', 'office'], riddle: 'An endless labyrinth of rubber stamps, triplicate forms, and departmental deferral.' },
-            { word: 'Irony', level: 'c2', cat: 'abstract', clues: ['A state of affairs or an expression that deliberately contraries what is expected.', 'The tension between appearance and reality.'], taboo: ['opposite', 'expected', 'funny', 'sarcasm'], riddle: 'When the fire station burns to ashes while the crew inspects hydrants across town.' }
+            { word: 'Irony', level: 'c2', cat: 'abstract', clues: ['A state of affairs or an expression that deliberately contraries what is expected.', 'The tension between appearance and reality.'], taboo: ['opposite', 'expected', 'funny', 'sarcasm'], riddle: 'When the fire station burns to ashes while the crew inspects hydrants across town.' },
+            // Weather Words
+            { word: 'Blizzard', level: 'a2', cat: 'weather', clues: ['Severe snowstorm characterized by sustained high winds and low temperatures.', 'Causes whiteout conditions where visibility approaches zero.'], taboo: ['snow', 'storm', 'cold', 'wind'], riddle: 'A furious white gale that erases every landmark beneath howling drifts.' },
+            { word: 'Drizzle', level: 'a1', cat: 'weather', clues: ['Light, steady liquid precipitation with very fine water droplets.', 'Gentler and lighter than a pouring rain shower.'], taboo: ['rain', 'wet', 'water', 'umbrella'], riddle: 'A whisper of sky-water floating in mist rather than striking the earth in drops.' },
+            { word: 'Monsoon', level: 'b1', cat: 'weather', clues: ['Seasonal reversing wind accompanied by dramatic changes in precipitation.', 'Brings months of torrential tropical rains to South Asia.'], taboo: ['rain', 'season', 'flood', 'tropical'], riddle: 'A tempestuous season riding oceanic winds to drench parched plains in unending water.' },
+            { word: 'Humidity', level: 'b2', cat: 'weather', clues: ['Concentration of water vapor present in the ambient atmosphere.', 'Makes hot summer afternoons feel muggy, heavy, and sticky.'], taboo: ['air', 'wet', 'moisture', 'sticky'], riddle: 'The unseen weight in the summer air that clings like a warm damp sponge.' },
+            // Food: Fruits & Vegetables
+            { word: 'Strawberry', level: 'a1', cat: 'food', foodType: 'fruit', clues: ['Bright red sweet fruit with exterior seeds and a green leafy cap.', 'Popular in shortcakes, ice creams, and jams.'], taboo: ['red', 'berry', 'sweet', 'fruit'], riddle: 'A ruby heart wearing its seeds on its sleeve and crowned in emerald leaves.' },
+            { word: 'Apple', level: 'a1', cat: 'food', foodType: 'fruit', clues: ['Round edible fruit with red, green, or yellow skin and a crisp core.', 'Grows in orchards and keeps the doctor away in the proverb.'], taboo: ['tree', 'red', 'fruit', 'pie'], riddle: 'The orchard orb that tempts in legends and crunches sweetly under teeth.' },
+            { word: 'Pomegranate', level: 'b1', cat: 'food', foodType: 'fruit', clues: ['Thick-skinned crimson fruit filled with glistening tart juicy arils.', 'Symbol of fertility and Persephone in Greek mythology.'], taboo: ['seeds', 'red', 'fruit', 'juice'], riddle: 'A leathery crimson vault hiding hundreds of glistening jewel-seeds in honeycombed chambers.' },
+            { word: 'Carrot', level: 'a1', cat: 'food', foodType: 'veg', clues: ['Orange root vegetable cultivated beneath the soil.', 'Favored food of rabbits, eaten raw or in stews.'], taboo: ['orange', 'rabbit', 'vegetable', 'root'], riddle: 'An orange spear sleeping underground with feathery green plumage above.' },
+            { word: 'Broccoli', level: 'a1', cat: 'food', foodType: 'veg', clues: ['Edible green plant with large flowering heads resembling tiny trees.', 'Eaten steamed, roasted, or raw in salads.'], taboo: ['green', 'tree', 'vegetable', 'healthy'], riddle: 'A miniature edible forest of green florets served upon a porcelain plate.' },
+            { word: 'Eggplant', level: 'a2', cat: 'food', foodType: 'veg', clues: ['Glossy deep purple nightshade vegetable with spongy white flesh.', 'Central to dishes like ratatouille, moussaka, and baba ghanoush.'], taboo: ['purple', 'vegetable', 'cooking', 'ratatouille'], riddle: 'A polished teardrop of royal purple guarding spongy savory flesh within.' },
+            // Hobbies & Pastimes
+            { word: 'Gardening', level: 'a1', cat: 'hobbies', clues: ['Practice of growing, cultivating, and tending flowers, vegetables, and plants.', 'Involves watering, pruning, and working with rich soil.'], taboo: ['plants', 'flowers', 'soil', 'grow'], riddle: 'A quiet communion of muddy hands, seeds, and patience waiting upon the rain.' },
+            { word: 'Photography', level: 'a2', cat: 'hobbies', clues: ['Art and technique of capturing images through light on digital sensors or film.', 'Involves framing, lenses, shutters, and lighting.'], taboo: ['camera', 'picture', 'photo', 'lens'], riddle: 'Freezing fleeting seconds of light into flat rectangular memories.' },
+            { word: 'Chess', level: 'a2', cat: 'hobbies', clues: ['Two-player strategy board game played on a 64-square checkered grid.', 'The objective is to achieve checkmate against the opposing king.'], taboo: ['board', 'king', 'queen', 'checkmate'], riddle: 'A bloodless war of thirty-two wooden soldiers fought across sixty-four checkered fields.' },
+            // "How I Feel" / Emotions & Moods
+            { word: 'Anxious', level: 'a2', cat: 'emotions', clues: ['Experiencing worry, nervousness, or unease about an upcoming event.', 'Accompanied by a fluttering stomach or racing thoughts.'], taboo: ['nervous', 'scared', 'worry', 'fear'], riddle: 'Butterflies turning to turbulent crows inside the ribcage before the curtain rises.' },
+            { word: 'Ecstatic', level: 'b1', cat: 'emotions', clues: ['Overwhelmed by intense feelings of happiness, joy, and euphoria.', 'Walking on sunshine or jumping for joy.'], taboo: ['happy', 'excited', 'joy', 'smile'], riddle: 'A sudden rush of incandescent sunlight lifting spirits so high the ground is forgotten.' },
+            { word: 'Melancholic', level: 'b2', cat: 'emotions', clues: ['A thoughtful, gentle sadness often without an immediate cause.', 'Accompanied by introspection and appreciation of poignant beauty.'], taboo: ['sad', 'depressed', 'gloom', 'crying'], riddle: 'A quiet rain falling on empty pavements, holding sorrow and beauty in equal measure.' },
+            { word: 'Serene', level: 'b2', cat: 'emotions', clues: ['Calm, peaceful, and unruffled by exterior chaos.', 'Like a mirror-still mountain lake at dawn.'], taboo: ['calm', 'peace', 'quiet', 'relax'], riddle: 'A stillness so deep that not even ripples disturb the reflective lake of consciousness.' },
+            // Christmas & Winter Holidays
+            { word: 'Christmas Tree', level: 'a1', cat: 'festivals', clues: ['Evergreen conifer decorated with twinkling fairy lights, tinsel, and ornaments.', 'Presents are placed beneath its branches in December.'], taboo: ['pine', 'decorations', 'green', 'presents'], riddle: 'A forest evergreen crowned with a star, draped in glass orbs and warm electric fire.' },
+            { word: 'Gingerbread Man', level: 'a1', cat: 'festivals', clues: ['Baked cookie flavored with ginger, cinnamon, and molasses shaped like a person.', 'Decorated with colorful icing buttons and smiles.'], taboo: ['cookie', 'bake', 'ginger', 'icing'], riddle: 'Spiced dough baked into a running figurine with sweet confection buttons.' },
+            { word: 'Mistletoe', level: 'b1', cat: 'festivals', clues: ['Parasitic plant with white berries traditionally hung above doorways during Christmas.', 'Custom dictates that two people standing beneath it must share a kiss.'], taboo: ['kiss', 'plant', 'door', 'berry'], riddle: 'Hanging bough with pale pearls demanding a stolen kiss from travelers paused in doorways.' },
+            // 9 Specific Verb Decks Graded by CEFR Level
+            // 1. Cooking Verbs
+            { word: 'Boil', level: 'a1', cat: 'verbs_cooking', clues: ['To heat liquid until bubbles form and steam rises.', 'Common way to cook pasta, potatoes, or eggs.'], taboo: ['water', 'hot', 'heat', 'bubble'], riddle: 'Subjecting liquid to furious thermal agitation until vapour escapes into air.' },
+            { word: 'Chop', level: 'a2', cat: 'verbs_cooking', clues: ['To cut food into pieces using repeated blows with a sharp knife.', 'Done on a cutting board with onions and vegetables.'], taboo: ['cut', 'knife', 'pieces', 'food'], riddle: 'Bringing down the sharpened blade in rhythmic percussion against wooden boards.' },
+            { word: 'Simmer', level: 'b1', cat: 'verbs_cooking', clues: ['To cook food gently in liquid just below boiling temperature.', 'Small, lazy bubbles rise occasionally to the surface.'], taboo: ['boil', 'cook', 'gentle', 'heat'], riddle: 'Holding liquid at the quiet threshold of bubbling without letting fury erupt.' },
+            { word: 'Sauté', level: 'b2', cat: 'verbs_cooking', clues: ['To fry ingredients quickly in a small amount of hot oil or butter.', 'Tossing food around in a shallow pan.'], taboo: ['fry', 'pan', 'oil', 'cook'], riddle: 'Dancing sliced morsels across a shimmering sheen of fat over high flames.' },
+            { word: 'Julienne', level: 'c1', cat: 'verbs_cooking', clues: ['To cut vegetables into long, thin matchstick strips.', 'Classic French culinary knife technique for carrots and peppers.'], taboo: ['cut', 'knife', 'thin', 'strips'], riddle: 'Disciplining unruly roots into uniform matchsticks of geometric precision.' },
+            { word: 'Caramelize', level: 'c2', cat: 'verbs_cooking', clues: ['Slowly heating carbohydrates and sugars until they oxidize and turn golden-brown.', 'Imparts complex nutty, sweet, and savory depth.'], taboo: ['sugar', 'brown', 'cook', 'sweet'], riddle: 'Subduing natural sucrose over gentle embers until darkness yields deep nutty sweetness.' },
+            // 2. Daily Routines Verbs
+            { word: 'Wake up', level: 'a1', cat: 'verbs_routines', clues: ['To emerge from sleep in the morning when the alarm sounds.', 'Opening your eyes to greet a new day.'], taboo: ['sleep', 'morning', 'alarm', 'bed'], riddle: 'Parting eyelids as consciousness returns from the realm of night.' },
+            { word: 'Brush', level: 'a1', cat: 'verbs_routines', clues: ['To clean teeth with paste or smooth hair with bristles.', 'Standard hygiene activity completed twice daily.'], taboo: ['teeth', 'hair', 'clean', 'paste'], riddle: 'Sweeping bristles across enamel to banish morning shadows.' },
+            { word: 'Commute', level: 'b1', cat: 'verbs_routines', clues: ['To travel regularly between home and a workplace or school.', 'Involves subways, buses, bicycles, or cars.'], taboo: ['travel', 'work', 'train', 'drive'], riddle: 'The daily migration between hearth and workstation along crowded arteries.' },
+            { word: 'Prioritize', level: 'b2', cat: 'verbs_routines', clues: ['To determine the order for dealing with tasks according to their importance.', 'Crucial skill for effective time management.'], taboo: ['important', 'first', 'tasks', 'order'], riddle: 'Elevating the indispensable above the clamor of the trivial.' },
+            { word: 'Unwind', level: 'c1', cat: 'verbs_routines', clues: ['To relax and release tension after rigorous labor or stress.', 'Sitting with a book, herbal tea, or listening to ambient music.'], taboo: ['relax', 'rest', 'stress', 'chill'], riddle: 'Loosening the taut spring of daily duties as evening softly descends.' },
+            // 3. Physical Movement Verbs
+            { word: 'Jump', level: 'a1', cat: 'verbs_movement', clues: ['To push yourself off the ground into the air using your leg muscles.', 'What frogs, kangaroos, and athletes do.'], taboo: ['air', 'feet', 'hop', 'legs'], riddle: 'Defying gravity for a brief suspended heartbeat with coiled thighs.' },
+            { word: 'Crawl', level: 'a2', cat: 'verbs_movement', clues: ['To move forward on hands and knees close to the floor.', 'How infants move before learning to walk.'], taboo: ['walk', 'baby', 'knees', 'hands'], riddle: 'Creeping belly-close to the floorboards before upright balance is won.' },
+            { word: 'Stumble', level: 'b1', cat: 'verbs_movement', clues: ['To trip or momentarily lose your footing while walking.', 'Recovering balance just before hitting the ground.'], taboo: ['fall', 'trip', 'foot', 'walk'], riddle: 'A momentary lapse where feet betray poise and stagger in the dirt.' },
+            { word: 'Leap', level: 'b2', cat: 'verbs_movement', clues: ['To spring through the air over a large gap or obstacle.', 'A dramatic, sweeping jump requiring momentum.'], taboo: ['jump', 'bound', 'gap', 'air'], riddle: 'Launching the full frame across an expanse of uncertainty.' },
+            { word: 'Traverse', level: 'c1', cat: 'verbs_movement', clues: ['To travel or extend across or through a rugged terrain.', 'Crossing glaciers, deserts, or mountain ranges.'], taboo: ['cross', 'walk', 'travel', 'across'], riddle: 'Bridging vast hostile geographies step by measured step.' },
+            // 4. Communication Verbs
+            { word: 'Speak', level: 'a1', cat: 'verbs_communication', clues: ['To utter words and talk to someone using vocal sounds.', 'How we express ideas aloud in conversation.'], taboo: ['talk', 'voice', 'words', 'mouth'], riddle: 'Shaping exhaled breath into intelligible symbols of mind.' },
+            { word: 'Debate', level: 'b1', cat: 'verbs_communication', clues: ['A formal discussion where opposing arguments are put forward.', 'Conducted between politicians or student teams.'], taboo: ['argue', 'talk', 'arguments', 'discuss'], riddle: 'Clashing intellects fencing with propositions across a lectern.' },
+            { word: 'Articulate', level: 'b2', cat: 'verbs_communication', clues: ['To express an idea fluently and coherently in clear speech.', 'Connecting words with precision.'], taboo: ['clear', 'express', 'speak', 'explain'], riddle: 'Molding nebulous thought into crisp crystalline rhetoric.' },
+            { word: 'Equivocate', level: 'c1', cat: 'verbs_communication', clues: ['To use ambiguous language intentionally to conceal the truth or avoid committing.', 'Speaking with a double tongue.'], taboo: ['ambiguous', 'lie', 'deceive', 'unclear'], riddle: 'Navigating between truth and deceit on the tightrope of slippery syntax.' },
+            // 5. Mental Actions Verbs
+            { word: 'Think', level: 'a1', cat: 'verbs_mental', clues: ['To have a conscious opinion or process thoughts in your brain.', 'Using mental faculty to consider something.'], taboo: ['mind', 'brain', 'ponder', 'idea'], riddle: 'The silent loom of the mind weaving impressions into concepts.' },
+            { word: 'Remember', level: 'a2', cat: 'verbs_mental', clues: ['To bring back into conscious thought an impression or event from the past.', 'The opposite of forgetting.'], taboo: ['forget', 'memory', 'past', 'mind'], riddle: 'Reclaiming lost shadows from the dusty corridors of yesterday.' },
+            { word: 'Contemplate', level: 'b2', cat: 'verbs_mental', clues: ['To gaze thoughtfully at something or reflect deeply for a long time.', 'Meditating on profound questions.'], taboo: ['think', 'meditate', 'reflect', 'deep'], riddle: 'Resting the quiet eye of consciousness upon an enduring enigma.' },
+            { word: 'Rationalize', level: 'c1', cat: 'verbs_mental', clues: ['To attempt to justify or explain an action or attitude with plausible reasons.', 'Finding logical excuses after the fact.'], taboo: ['justify', 'excuse', 'logic', 'reason'], riddle: 'Weaving tidy intellectual cloaks to dress irrational impulses.' },
+            // 6. Shopping & Commerce Verbs
+            { word: 'Buy', level: 'a1', cat: 'verbs_shopping', clues: ['To acquire goods or services in exchange for money.', 'Visiting a supermarket or retail boutique.'], taboo: ['purchase', 'pay', 'money', 'shop'], riddle: 'Surrendering minted coins in trade for desired wares.' },
+            { word: 'Sell', level: 'a1', cat: 'verbs_shopping', clues: ['To exchange an asset or merchandise for money.', 'Merchants and shopkeepers do this daily.'], taboo: ['money', 'buy', 'shop', 'market'], riddle: 'Parting with possessions to fill the merchant’s purse with silver.' },
+            { word: 'Bargain', level: 'b1', cat: 'verbs_shopping', clues: ['To haggle over terms, prices, or conditions in a transaction.', 'Common in street bazaars and flea markets.'], taboo: ['haggle', 'price', 'cheap', 'discount'], riddle: 'Testing the resilience of asking prices in marketplace banter.' },
+            { word: 'Negotiate', level: 'b2', cat: 'verbs_shopping', clues: ['To confer with another party to arrive at mutually acceptable terms.', 'Arranging commercial contracts and deals.'], taboo: ['deal', 'terms', 'contract', 'price'], riddle: 'Trading concessions back and forth until both signatures are won.' },
+            { word: 'Liquidate', level: 'c1', cat: 'verbs_shopping', clues: ['To convert assets or inventory into cash quickly, often at a discount.', 'Common during store closures or bankruptcies.'], taboo: ['cash', 'sell', 'assets', 'bankrupt'], riddle: 'Dissolving stubborn property into flowing currents of emergency capital.' },
+            // 7. Travel & Exploration Verbs
+            { word: 'Fly', level: 'a1', cat: 'verbs_travel', clues: ['To move through the air using wings or aboard an airplane.', 'Reaching distant international destinations.'], taboo: ['plane', 'air', 'wings', 'travel'], riddle: 'Soaring above clouds on metal wings to shrink the curvature of earth.' },
+            { word: 'Pack', level: 'a2', cat: 'verbs_travel', clues: ['To place clothes and travel essentials neatly inside a suitcase or bag.', 'Done the evening before departing on journey.'], taboo: ['suitcase', 'bag', 'clothes', 'luggage'], riddle: 'Folding daily necessities into portable zippered sanctuaries.' },
+            { word: 'Embark', level: 'b2', cat: 'verbs_travel', clues: ['To board a vessel, aircraft, or vehicle to commence a venture.', 'Setting out upon a major expedition.'], taboo: ['board', 'ship', 'start', 'journey'], riddle: 'Stepping off dry bedrock onto the deck of an unwritten voyage.' },
+            { word: 'Navigate', level: 'c1', cat: 'verbs_travel', clues: ['To plan, direct, and plot the course of a ship, vehicle, or aircraft.', 'Reading stars, maps, compasses, and charts.'], taboo: ['map', 'compass', 'steer', 'direction'], riddle: 'Reading constellation whispers and currents to guide ships through pathless waters.' },
+            // 8. Art & Creation Verbs
+            { word: 'Draw', level: 'a1', cat: 'verbs_art', clues: ['To produce a picture or diagram by marking lines with a pencil or pen.', 'Creating sketches on paper.'], taboo: ['pencil', 'paper', 'picture', 'sketch'], riddle: 'Leaving graphite trails upon bare sheets to conjure forms.' },
+            { word: 'Paint', level: 'a2', cat: 'verbs_art', clues: ['To apply pigment, color, or oil to a canvas with brushes.', 'Used by fine artists in galleries.'], taboo: ['brush', 'color', 'canvas', 'oil'], riddle: 'Stroking bristles saturated with chromatic pastes across stretched linen.' },
+            { word: 'Sculpt', level: 'b2', cat: 'verbs_art', clues: ['To create three-dimensional figures by chiseling marble, stone, or clay.', 'Freeing the form trapped inside stone.'], taboo: ['statue', 'clay', 'chisel', 'stone'], riddle: 'Chiseling away extraneous marble to liberate the imprisoned silhouette.' },
+            { word: 'Improvise', level: 'c1', cat: 'verbs_art', clues: ['To compose, recite, or perform spontaneously without preparation.', 'Hallmark of jazz musicians and theatrical artists.'], taboo: ['rehearse', 'plan', 'spontaneous', 'jazz'], riddle: 'Weaving harmonies in real time upon the open loom of the unexpected.' },
+            // 9. Conflict & Resolution Verbs
+            { word: 'Argue', level: 'a1', cat: 'verbs_conflict', clues: ['To exchange heated or angry divergent opinions.', 'Happens when people disagree strongly.'], taboo: ['fight', 'disagree', 'angry', 'shout'], riddle: 'Clashing voices raised in sharp discord over contested points.' },
+            { word: 'Fight', level: 'a2', cat: 'verbs_conflict', clues: ['To engage in a physical combat, struggle, or battle against an opponent.', 'Contested with fists, weapons, or force.'], taboo: ['battle', 'punch', 'war', 'attack'], riddle: 'Engaging sinew and will in direct violent struggle.' },
+            { word: 'Mediate', level: 'b2', cat: 'verbs_conflict', clues: ['To intervene between parties in a dispute to bring about reconciliation.', 'Acts as an impartial neutral facilitator.'], taboo: ['dispute', 'neutral', 'help', 'referee'], riddle: 'Standing calmly between flared tempers to open corridors of listening.' },
+            { word: 'Reconcile', level: 'c1', cat: 'verbs_conflict', clues: ['To restore friendly relations between alienated adversaries.', 'Healing fractures and reaching mutual peace.'], taboo: ['forgive', 'friends', 'peace', 'resolve'], riddle: 'Mending fractured trusts so ancient rivals may break bread once more.' }
         ],
         where: [
             // Famous Landmarks & World Wonders
@@ -112,7 +199,12 @@
             { word: 'International Space Station', level: 'b1', cat: 'extreme', clues: ['Habitable modular laboratory orbiting planet Earth in low Earth orbit.', 'Astronauts live and conduct experiments in zero-gravity.'], taboo: ['space', 'orbit', 'astronaut', 'nasa'], riddle: 'A floating outpost tracing sixteen sunrises a day beyond atmospheric embrace.' },
             // Fictional Universes
             { word: 'Hogwarts', level: 'a2', cat: 'fictional', clues: ['British boarding school of magic situated in the Scottish Highlands.', 'Divided into four houses with moving staircases.'], taboo: ['magic', 'potter', 'wizard', 'witch'], riddle: 'A castle of shifting turrets and enchanted ceilings teaching the wand-bearer’s craft.' },
-            { word: 'Gotham City', level: 'b1', cat: 'fictional', clues: ['Dark, brooding fictional metropolis teeming with architectural noir.', 'Guarded under darkness by the Caped Crusader.'], taboo: ['batman', 'joker', 'city', 'dc'], riddle: 'Gargoyles loom above mist-shrouded alleyways where an orphaned vigilante answers the bat-signal.' }
+            { word: 'Gotham City', level: 'b1', cat: 'fictional', clues: ['Dark, brooding fictional metropolis teeming with architectural noir.', 'Guarded under darkness by the Caped Crusader.'], taboo: ['batman', 'joker', 'city', 'dc'], riddle: 'Gargoyles loom above mist-shrouded alleyways where an orphaned vigilante answers the bat-signal.' },
+            // Countries & Cities
+            { word: 'Tokyo', level: 'a1', cat: 'countries_cities', clues: ['Vibrant neon capital city of Japan.', 'Famous for Shibuya Crossing, Shinjuku nightlife, and Tsukiji market.'], taboo: ['japan', 'capital', 'city', 'shibuya'], riddle: 'A hyper-modern metropolis where neon canyons hum beneath the watchful gaze of Mount Fuji.' },
+            { word: 'Paris', level: 'a1', cat: 'countries_cities', clues: ['The City of Light and capital of France.', 'Home to the Eiffel Tower, the Louvre museum, and the Seine River.'], taboo: ['france', 'eiffel', 'louvre', 'french'], riddle: 'Where cobbled avenues and zinc rooftops cradle iron spires along the meandering Seine.' },
+            { word: 'Brazil', level: 'a1', cat: 'countries_cities', clues: ['Largest nation in South America.', 'Home to the Amazon river basin, Copacabana beach, and Portuguese language.'], taboo: ['amazon', 'south america', 'rio', 'samba'], riddle: 'A continental giant pulsing with carnival rhythms beneath the emerald canopy of the Amazon.' },
+            { word: 'Cairo', level: 'a2', cat: 'countries_cities', clues: ['Vast historic capital of Egypt sprawling on the banks of the Nile.', 'Neighboring the Great Pyramids of Giza.'], taboo: ['egypt', 'nile', 'pyramids', 'africa'], riddle: 'An ancient dust-and-citadel metropolis guarding pharaonic tombs beside the ancient Nile.' }
         ],
         when: [
             // Historical Eras & Events
@@ -124,7 +216,9 @@
             // Future & Sci-Fi Timelines
             { word: 'Colonization of Mars', level: 'b2', cat: 'future', clues: ['Hypothetical permanent human habitation and terraforming of the Red Planet.', 'Involves pressurized domes and greenhouse habitats.'], taboo: ['mars', 'red planet', 'colony', 'space'], riddle: 'When boots tread red oxidized sands and greenhouses bloom beneath a pale distant sun.' },
             // Cultural Holidays & Festivals
+            { word: 'Carnival', level: 'a2', cat: 'festivals', clues: ['Festive season marked by public parades, elaborate costumes, masks, and samba music.', 'Precedes the liturgical season of Lent in places like Rio and Venice.'], taboo: ['parade', 'costume', 'mask', 'rio'], riddle: 'A burst of feathers, brass horns, and painted masks dancing through streets before solemn Lent.' },
             { word: 'Diwali', level: 'a2', cat: 'festivals', clues: ['Five-day Hindu festival celebrating the victory of light over darkness.', 'Celebrated with oil lamps, clay diyas, and fireworks.'], taboo: ['lights', 'india', 'festival', 'hindu'], riddle: 'Rows of terracotta lamps glowing across thresholds to banish shadow from the hearth.' },
+            { word: 'Lunar New Year', level: 'b1', cat: 'festivals', clues: ['Celebration of the arrival of spring and the beginning of a new year on the lunisolar calendar.', 'Marked by red envelopes, family reunions, and dragon dances.'], taboo: ['china', 'red envelope', 'dragon', 'spring'], riddle: 'Red paper banners flutter in the spring wind while families feast and fireworks greet the new zodiac cycle.' },
             { word: 'Halloween', level: 'a1', cat: 'festivals', clues: ['Celebrated on October 31st with costumes, trick-or-treating, and jack-o-lanterns.', 'Originated from ancient Celtic harvest festivals like Samhain.'], taboo: ['costume', 'candy', 'pumpkin', 'spooky'], riddle: 'Carved gourds grin in the crisp autumn night while disguised children knock on doors.' }
         ],
         why: [
@@ -154,7 +248,9 @@
     let state = {
         edition: 'who',
         subcat: 'all',
-        mode: 'coop', // 'coop', 'taboo', 'riddle'
+        foodFilter: 'both', // 'fruits', 'veggies', 'both'
+        mode: 'normal', // 'normal', 'charades', 'letter', 'synonyms', 'oneword', 'taboo', 'riddle', 'coop'
+        constrainedLetter: 'A',
         playEnv: 'online', // 'online', 'offline', 'hybrid'
         teamA: 0,
         teamB: 0,
@@ -166,6 +262,11 @@
         isShielded: true,
         isRoundOver: false
     };
+
+    function pickRandomLetter() {
+        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        return alphabet[Math.floor(Math.random() * alphabet.length)];
+    }
 
     function initHostCurtain() {
         const toggleBtn = document.getElementById('btn-host-toggle');
@@ -222,7 +323,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const presetEdition = urlParams.get('edition') || 'who';
         const presetSub = urlParams.get('sub') || 'all';
-        const presetMode = urlParams.get('playmode') || 'coop';
+        const presetMode = urlParams.get('playmode') || 'normal';
 
         body.innerHTML = `
             <div class="guess-setup-container">
@@ -243,11 +344,77 @@
                     </div>
 
                     <div class="guess-field">
-                        <label data-gs="setup.mode_label">${T('setup.mode_label', null, 'CEFR Gameplay Mode')}</label>
+                        <label data-gs="setup.category_label">${T('setup.category_label', null, 'Sub-Category Focus')}</label>
+                        <select class="guess-select" id="g-subcat">
+                            <option value="all">🌟 All Categories in Edition</option>
+                            <optgroup label="Edition 1: Who">
+                                <option value="historical">Historical Figures</option>
+                                <option value="fictional">Fictional & Mythological</option>
+                                <option value="occupations">Professionals & Occupations</option>
+                                <option value="nationalities">Nationalities</option>
+                                <option value="pop">Pop Culture Icons</option>
+                            </optgroup>
+                            <optgroup label="Edition 2: What (Thematic & Verbs)">
+                                <option value="weather">Weather Words</option>
+                                <option value="food">Food & Produce (Fruits / Veggies)</option>
+                                <option value="hobbies">Hobbies & Pastimes</option>
+                                <option value="emotions">Emotions ("How I Feel")</option>
+                                <option value="nature">Animals & Nature</option>
+                                <option value="tech">Daily Things & Technology</option>
+                                <option value="abstract">Abstract Concepts</option>
+                                <option value="verbs_cooking">Verbs: Cooking</option>
+                                <option value="verbs_routines">Verbs: Daily Routines</option>
+                                <option value="verbs_movement">Verbs: Physical Movement</option>
+                                <option value="verbs_communication">Verbs: Communication</option>
+                                <option value="verbs_mental">Verbs: Mental Actions</option>
+                                <option value="verbs_shopping">Verbs: Shopping & Commerce</option>
+                                <option value="verbs_travel">Verbs: Travel & Exploration</option>
+                                <option value="verbs_art">Verbs: Art & Creation</option>
+                                <option value="verbs_conflict">Verbs: Conflict & Resolution</option>
+                            </optgroup>
+                            <optgroup label="Edition 3: Where">
+                                <option value="countries_cities">Countries & Cities</option>
+                                <option value="landmarks">Famous Landmarks & Wonders</option>
+                                <option value="places">Everyday Places</option>
+                                <option value="extreme">Extreme & Unusual Environments</option>
+                            </optgroup>
+                            <optgroup label="Edition 4: When">
+                                <option value="festivals">Cultural Holidays & Christmas</option>
+                                <option value="eras">Historical Eras & Events</option>
+                                <option value="routines">Daily Routine & Seasons</option>
+                            </optgroup>
+                            <optgroup label="Edition 5: Why & Edition 6: How">
+                                <option value="science">Scientific Phenomena</option>
+                                <option value="psychology">Human Psychology & Behavior</option>
+                                <option value="history">Historical Turning Points</option>
+                                <option value="inventions">Inventions & Mechanics</option>
+                                <option value="skills">Survival & Practical Skills</option>
+                                <option value="crafts">Culinary & Crafting</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Food Sub-Filter Container (shown when Food is selected) -->
+                    <div class="guess-field" id="food-filter-wrapper" style="display:none;">
+                        <label>Food Filter:</label>
+                        <div class="guess-subfilter-container">
+                            <button type="button" class="guess-subfilter-btn active" data-filter="both">🍎🥦 All Food</button>
+                            <button type="button" class="guess-subfilter-btn" data-filter="fruits">🍎 Fruits Only</button>
+                            <button type="button" class="guess-subfilter-btn" data-filter="veggies">🥦 Veggies Only</button>
+                        </div>
+                    </div>
+
+                    <div class="guess-field">
+                        <label data-gs="setup.mode_label">${T('setup.mode_label', null, 'Speaking & Gameplay Mode')}</label>
                         <select class="guess-select" id="g-mode">
-                            <option value="coop" ${presetMode === 'coop' ? 'selected' : ''}>Cooperative Clues (A0–A2)</option>
-                            <option value="taboo" ${presetMode === 'taboo' ? 'selected' : ''}>Speed Run / Taboo (B1–B2)</option>
-                            <option value="riddle" ${presetMode === 'riddle' ? 'selected' : ''}>The Masterclass Riddle (C1–C2)</option>
+                            <option value="normal" ${presetMode === 'normal' ? 'selected' : ''}>🗣️ Normal Description (Fluency)</option>
+                            <option value="charades" ${presetMode === 'charades' ? 'selected' : ''}>🎭 Charades & Pictionary (Silent Acting / Drawing)</option>
+                            <option value="letter" ${presetMode === 'letter' ? 'selected' : ''}>🔤 Random Letter-Constrained (A–Z Constraint)</option>
+                            <option value="synonyms" ${presetMode === 'synonyms' ? 'selected' : ''}>🔄 Synonyms & Antonyms Only</option>
+                            <option value="oneword" ${presetMode === 'oneword' ? 'selected' : ''}>☝️ One-Word Clue Description</option>
+                            <option value="taboo" ${presetMode === 'taboo' ? 'selected' : ''}>⚡ Speed Run / Taboo (Hard Word Ban B1–B2)</option>
+                            <option value="riddle" ${presetMode === 'riddle' ? 'selected' : ''}>📜 The Masterclass Riddle (Advanced C1–C2)</option>
+                            <option value="coop" ${presetMode === 'coop' ? 'selected' : ''}>🤝 Cooperative Stems (Beginner A0–A2)</option>
                         </select>
                     </div>
 
@@ -275,11 +442,28 @@
             </div>
         `;
 
+        const subSelect = document.getElementById('g-subcat');
+        const foodWrapper = document.getElementById('food-filter-wrapper');
+
+        subSelect?.addEventListener('change', () => {
+            if (foodWrapper) {
+                foodWrapper.style.display = subSelect.value === 'food' ? 'block' : 'none';
+            }
+        });
+
+        document.querySelectorAll('.guess-subfilter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.guess-subfilter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                state.foodFilter = btn.dataset.filter || 'both';
+            });
+        });
+
         document.getElementById('btn-start-guess')?.addEventListener('click', () => {
             state.edition = document.getElementById('g-edition')?.value || 'who';
-            state.mode = document.getElementById('g-mode')?.value || 'coop';
+            state.subcat = document.getElementById('g-subcat')?.value || 'all';
+            state.mode = document.getElementById('g-mode')?.value || 'normal';
             state.playEnv = document.getElementById('g-env')?.value || 'online';
-            if (presetSub !== 'all') state.subcat = presetSub;
 
             // Apply environment context
             if (state.playEnv === 'offline' && window.ViewContext) {
@@ -307,12 +491,26 @@
             state.teamA = 0;
             state.teamB = 0;
 
-            const pool = DECKS[state.edition] || DECKS.who;
-            let currentDeck = [...pool];
+            // Collect deck pool from all editions if a cross-edition category is picked
+            let pool = [];
             if (state.subcat && state.subcat !== 'all') {
-                const subFiltered = currentDeck.filter(item => item.cat === state.subcat);
-                if (subFiltered.length > 0) currentDeck = subFiltered;
+                for (const ed in DECKS) {
+                    const matches = DECKS[ed].filter(item => {
+                        if (item.cat !== state.subcat) return false;
+                        if (state.subcat === 'food' && state.foodFilter !== 'both') {
+                            if (state.foodFilter === 'fruits' && item.foodType !== 'fruit') return false;
+                            if (state.foodFilter === 'veggies' && item.foodType !== 'veg') return false;
+                        }
+                        return true;
+                    });
+                    pool = pool.concat(matches);
+                }
             }
+            if (pool.length === 0) {
+                pool = DECKS[state.edition] || DECKS.who;
+            }
+
+            let currentDeck = [...pool];
 
             const nextRound = () => {
                 if (state.timerInterval) clearInterval(state.timerInterval);
@@ -325,7 +523,8 @@
                 state.cluesRevealed = 1;
                 state.isRoundOver = false;
                 state.isShielded = true;
-                state.timerVal = state.mode === 'taboo' ? 60 : 90;
+                state.constrainedLetter = pickRandomLetter();
+                state.timerVal = (state.mode === 'taboo' || state.mode === 'oneword') ? 60 : 90;
                 state.timerMax = state.timerVal;
 
                 renderRoundUI();
@@ -376,29 +575,35 @@
                 const card = state.currentCard;
                 const body = document.getElementById('go-body');
 
-                const editionLabels = {
-                    who: 'Edition 1: Guess Who? 👤',
-                    what: 'Edition 2: Guess What? 📦',
-                    where: 'Edition 3: Guess Where? 📍',
-                    when: 'Edition 4: Guess When? ⏳',
-                    why: 'Edition 5: Guess Why? 💡',
-                    how: 'Edition 6: Guess How? ⚙️'
-                };
-
                 const modeLabels = {
-                    coop: 'Cooperative (A0–A2) 🤝',
-                    taboo: 'Speed Run / Taboo (B1–B2) ⚡',
-                    riddle: 'The Masterclass Riddle (C1–C2) 🧠'
+                    normal: 'Normal Description 🗣️',
+                    charades: 'Charades & Pictionary 🎭',
+                    letter: `Constrained Letter [${state.constrainedLetter}] 🔤`,
+                    synonyms: 'Synonyms & Antonyms Only 🔄',
+                    oneword: 'One-Word Clues ☝️',
+                    taboo: 'Speed Run / Taboo ⚡',
+                    riddle: 'The Masterclass Riddle 🧠',
+                    coop: 'Cooperative Stems 🤝'
                 };
 
-                const isCoop = state.mode === 'coop';
+                const modeInstructions = {
+                    normal: 'Describe the word verbally using full sentences and natural circumlocution.',
+                    charades: 'Mute / Silent! Act out actions or draw without speaking or mouthing words.',
+                    letter: `Constraint: Every clue word or initial explanation must start with the letter "${state.constrainedLetter}"!`,
+                    synonyms: 'Give only direct synonyms, closely-related meaning equivalents, or antonyms!',
+                    oneword: 'Clue-giver may state exactly ONE single word per guessing attempt!',
+                    taboo: 'Describe the secret word without uttering ANY of the forbidden taboo words!',
+                    riddle: 'Deduce the secret concept from the cryptic literary or philosophical riddle below.',
+                    coop: 'Use simple sentence stems ("It is...", "It has...", "It does...") to help your team.'
+                };
+
                 const isTaboo = state.mode === 'taboo';
                 const isRiddle = state.mode === 'riddle';
 
                 body.innerHTML = `
                     <div class="guess-game-wrapper">
                         <div class="guess-status-bar">
-                            <span class="guess-edition-pill">${editionLabels[state.edition] || 'Guess!'}</span>
+                            <span class="guess-edition-pill">Category: ${card.cat || state.edition}</span>
                             <span class="guess-mode-pill">${modeLabels[state.mode] || 'Standard'}</span>
                             <div style="font-weight:600; color:#fbbf24;">
                                 Round ${COSYGame.round} / ${COSYGame.maxRounds}
@@ -410,6 +615,14 @@
                             <span style="font-weight:700; min-width:35px; color:#e2e8f0;" id="guess-timer-text">${state.timerVal}s</span>
                             <div class="guess-timer-wrapper">
                                 <div class="guess-timer-bar" id="guess-timer-bar" style="width:${(state.timerVal / state.timerMax) * 100}%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Mode Instruction Banner -->
+                        <div class="guess-mode-instruction-banner">
+                            ${state.mode === 'letter' ? `<span class="guess-letter-badge" id="letter-badge">${state.constrainedLetter}</span>` : ''}
+                            <div>
+                                <strong>${modeLabels[state.mode]}:</strong> ${modeInstructions[state.mode]}
                             </div>
                         </div>
 
@@ -425,12 +638,6 @@
                                         <div class="guess-taboo-tags">
                                             ${(card.taboo || []).map(w => `<span class="guess-taboo-tag">${gameUtils.escapeHtml(w)}</span>`).join('')}
                                         </div>
-                                    </div>
-                                ` : ''}
-
-                                ${isCoop ? `
-                                    <div style="margin-top:0.75rem; font-size:0.85rem; color:#94a3b8; font-style:italic;">
-                                        💡 Clue-giver: Use simple sentence stems ("It is...", "It has...", "It does...") or gestures to describe to the group!
                                     </div>
                                 ` : ''}
                             </div>
