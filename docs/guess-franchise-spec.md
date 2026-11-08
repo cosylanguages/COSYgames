@@ -2,7 +2,7 @@
 
 ## 1. Executive Summary & Vision
 
-The **"Guess!" Franchise** is a scalable, multi-edition language-learning game platform designed for interactive play across diverse learning environments. It unifies and expands upon the core question prompts of discovery (Who, What, Where, When, Why, and How) across CEFR proficiency tiers (A0 through C2).
+The **"Guess!" Franchise** is a scalable, multi-edition language-learning game platform designed for interactive play across diverse learning environments. It unifies and expands upon the core question prompts of discovery (Who, What, Where, and When) across CEFR proficiency tiers (A0 through C2).
 
 Crucially, "Guess!" is architected from the ground up to support **hosted multiplayer gameplay** in three distinct environments:
 1. **Online (Remote):** One player acts as the host/facilitator sharing their screen or running the game room via video conferencing (Zoom, Google Meet, Microsoft Teams) with remote participants.
@@ -43,9 +43,9 @@ To solve this across Online, In-Person, and Hybrid play without requiring comple
 
 ---
 
-## 3. The 6 Editions & Sub-Categories
+## 3. The 4 Editions & Sub-Categories
 
-"Guess!" unifies and expands gameplay into 6 distinct editions:
+"Guess!" unifies and expands gameplay into 4 distinct editions:
 
 ### Edition 1: Guess Who? (People & Roles)
 - **Historical Figures:** Emperors, scientists, artists, revolutionaries, world leaders.
@@ -70,16 +70,6 @@ To solve this across Online, In-Person, and Hybrid play without requiring comple
 - **Daily Routines & Seasons:** Morning rush hour, midnight, autumn harvest, winter solstice.
 - **Future & Sci-Fi Timelines:** The year 3000, Mars colonization, the age of AI.
 - **Cultural Holidays & Festivals:** Carnival, Diwali, Lunar New Year, Halloween, Midsummer.
-
-### Edition 5: Guess Why? (Motivations, Science & Philosophy)
-- **Scientific Phenomena:** Why do leaves change color? Why does ice float? Why do we yawn?
-- **Human Psychology & Behavior:** Why do people procrastinate? Why do we dream? Why do humans laugh?
-- **Historical Causation:** Why did the Roman Empire fall? Why did the Industrial Revolution start in Britain?
-
-### Edition 6: Guess How? (Processes & Inventions)
-- **Inventions & Mechanics:** How does Wi-Fi work? How is chocolate made? How does a lockpick work?
-- **Survival & Practical Skills:** How to start a fire without matches, how to perform CPR, how to tie a sailor’s knot.
-- **Culinary & Crafting:** How to bake sourdough bread, how to blow glass, how to knit a scarf.
 
 ---
 
