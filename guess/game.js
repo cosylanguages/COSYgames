@@ -444,14 +444,107 @@
         });
     }
 
+    // Localized dictionary for custom landmark, historical figure, and place entities
+    const LOCALIZED_ENTITIES = {
+        'Julius Caesar': { fr: 'Jules César', es: 'Julio César', de: 'Julius Cäsar', it: 'Giulio Cesare', ru: 'Юлий Цезарь', el: 'Ιούλιος Καίσαρας' },
+        'Alexander the Great': { fr: 'Alexandre le Grand', es: 'Alejandro Magno', de: 'Alexander der Große', it: 'Alessandro Magno', ru: 'Александр Македонский', el: 'Μέγας Αλέξανδρος' },
+        'Sherlock Holmes': { fr: 'Sherlock Holmes', es: 'Sherlock Holmes', de: 'Sherlock Holmes', it: 'Sherlock Holmes', ru: 'Шерлок Холмс', el: 'Σέρλοκ Χολμς' },
+        'Zeus': { fr: 'Zeus', es: 'Zeus', de: 'Zeus', it: 'Zeus', ru: 'Зевс', el: 'Ζευς' },
+        'Baker': { fr: 'Boulanger', es: 'Panadero', de: 'Bäcker', it: 'Panettiere', ru: 'Пекарь', el: 'Φούρναρης' },
+        'Nurse': { fr: 'Infirmier / Infirmière', es: 'Enfermero/a', de: 'Krankenpfleger/in', it: 'Infermiere', ru: 'Медсестра / Медбрат', el: 'Νοσοκόμος' },
+        'Japanese': { fr: 'Japonais', es: 'Japonés', de: 'Japanisch', it: 'Giapponese', ru: 'Японец / Японский', el: 'Ιάπωνας' },
+        'Brazilian': { fr: 'Brésilien', es: 'Brasileño', de: 'Brasilianisch', it: 'Brasiliano', ru: 'Бразилец', el: 'Βραζιλιάνος' },
+        'Spanish': { fr: 'Espagnol', es: 'Español', de: 'Spanisch', it: 'Spagnolo', ru: 'Испанец / Испанский', el: 'Ισπανός' },
+        'Egyptian': { fr: 'Égyptien', es: 'Egipcio', de: 'Ägyptisch', it: 'Egiziano', ru: 'Египтянин', el: 'Αιγύπτιος' },
+        'Colosseum': { fr: 'Le Colisée', es: 'El Coliseo', de: 'Das Kolosseum', it: 'Il Colosseo', ru: 'Колизей', el: 'Κολοσσαίο' },
+        'Machu Picchu': { fr: 'Machu Picchu', es: 'Machu Picchu', de: 'Machu Picchu', it: 'Machu Picchu', ru: 'Мачу-Пикчу', el: 'Μάτσου Πίτσου' },
+        'Bakery': { fr: 'Boulangerie', es: 'Panadería', de: 'Bäckerei', it: 'Panetteria', ru: 'Пекарня', el: 'Αρτοποιείο' },
+        'Pharmacy': { fr: 'Pharmacie', es: 'Farmacia', de: 'Apotheke', it: 'Farmacia', ru: 'Аптека', el: 'Φαρμακείο' },
+        'Tokyo': { fr: 'Tokyo', es: 'Tokio', de: 'Tokio', it: 'Tokyo', ru: 'Токио', el: 'Τόκιο' },
+        'Paris': { fr: 'Paris', es: 'París', de: 'Paris', it: 'Parigi', ru: 'Париж', el: 'Παρίσι' },
+        'Brazil': { fr: 'Le Brésil', es: 'Brasil', de: 'Brasilien', it: 'Brasile', ru: 'Бразилия', el: 'Βραζιλία' },
+        'Cairo': { fr: 'Le Caire', es: 'El Cairo', de: 'Kairo', it: 'Il Cairo', ru: 'Каир', el: 'Κάιρο' },
+        'The Renaissance': { fr: 'La Renaissance', es: 'El Renacimiento', de: 'Die Renaissance', it: 'Il Rinascimento', ru: 'Эпоха Возрождения', el: 'Αναγέννηση' },
+        'The Moon Landing': { fr: 'L\'alunissage', es: 'El alunizaje', de: 'Die Mondlandung', it: 'L\'allunaggio', ru: 'Высадка на Луну', el: 'Προσσελήνωση' },
+        'Morning Rush Hour': { fr: 'L\'heure de pointe matinale', es: 'Hora punta de la mañana', de: 'Morgendliche Hauptverkehrszeit', it: 'Ora di punta mattutina', ru: 'Утренний час пик', el: 'Πρωινή ώρα αιχμής' },
+        'Winter Solstice': { fr: 'Le solstice d\'hiver', es: 'Solsticio de invierno', de: 'Wintersonnenwende', it: 'Solstizio d\'inverno', ru: 'Зимнее солнцестояние', el: 'Χειμερινό ηλιοστάσιο' },
+        'Colonization of Mars': { fr: 'La colonisation de Mars', es: 'Colonización de Marte', de: 'Besiedlung des Mars', it: 'Colonizzazione di Marte', ru: 'Колонизация Марса', el: 'Αποικισμός του Άρη' },
+        'Carnival': { fr: 'Le Carnaval', es: 'El Carnaval', de: 'Karneval', it: 'Il Carnevale', ru: 'Карнавал', el: 'Καρναβάλι' },
+        'Halloween': { fr: 'Halloween', es: 'Halloween', de: 'Halloween', it: 'Halloween', ru: 'Хэллоуин', el: 'Χάλοουιν' }
+    };
+
+    function adaptCosyEntryToCard(entry, lang) {
+        const rawWord = entry.word || '';
+        let displayWord = rawWord;
+        if (window.COSYVocab && typeof window.COSYVocab.joinArticle === 'function' && entry.article) {
+            displayWord = window.COSYVocab.joinArticle(entry.article, rawWord);
+        } else if (entry.article) {
+            displayWord = entry.article + ' ' + rawWord;
+        }
+
+        const clues = [];
+        if (entry.definitions && entry.definitions.length > 0) {
+            for (const def of entry.definitions) {
+                const defText = typeof def === 'string' ? def : (def && def.text);
+                if (defText && defText.trim()) {
+                    clues.push(defText.trim());
+                }
+                if (def && Array.isArray(def.examples)) {
+                    for (const ex of def.examples) {
+                        const exText = typeof ex === 'string' ? ex : (ex && ex.text);
+                        if (exText && exText.trim()) {
+                            // Mask the target word in example clue
+                            const escapedWord = rawWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                            const wordRegex = new RegExp('\\b' + escapedWord + '\\b', 'gi');
+                            const masked = exText.replace(wordRegex, '______');
+                            clues.push(masked.trim());
+                        }
+                    }
+                }
+            }
+        }
+
+        if (clues.length === 0) {
+            if (entry.theme) clues.push(`Theme: ${entry.theme}`);
+            if (entry.level) clues.push(`CEFR Level: ${entry.level}`);
+        }
+
+        const taboo = [];
+        if (entry.theme) taboo.push(entry.theme.replace(/_/g, ' '));
+        if (entry.form) taboo.push(entry.form);
+        if (entry.plural && entry.plural !== rawWord) taboo.push(entry.plural);
+
+        const riddle = clues[0] || `A mysterious term related to ${entry.theme || 'everyday life'}.`;
+
+        return {
+            word: displayWord.charAt(0).toUpperCase() + displayWord.slice(1),
+            level: (entry.level || 'a1').toLowerCase(),
+            cat: entry.theme || 'general',
+            clues: clues.slice(0, 3),
+            taboo: taboo.slice(0, 4),
+            riddle: riddle,
+            rawEntry: entry
+        };
+    }
+
+    function localizeStaticCard(card, lang) {
+        if (!card || lang === 'en') return card;
+        const copy = Object.assign({}, card);
+        if (LOCALIZED_ENTITIES[card.word] && LOCALIZED_ENTITIES[card.word][lang]) {
+            copy.word = LOCALIZED_ENTITIES[card.word][lang];
+        }
+        return copy;
+    }
+
     window.COSY_GAME = {
-        start() {
+        async start() {
             const T = getT();
             const lang = (window.COSYLoader && typeof window.COSYLoader.getLangCode === 'function')
                 ? window.COSYLoader.getLangCode(document.getElementById('g-lang')?.value)
                 : 'en';
+            const rawLevel = document.getElementById('g-level')?.value;
             const level = (window.COSYLoader && typeof window.COSYLoader.getLevelCode === 'function')
-                ? window.COSYLoader.getLevelCode(document.getElementById('g-level')?.value)
+                ? window.COSYLoader.getLevelCode(rawLevel)
                 : 'a1';
 
             COSYGame.init(GAME_ID, lang, level);
@@ -459,24 +552,113 @@
             state.teamA = 0;
             state.teamB = 0;
 
+            const isEditionWhat = (state.edition === 'what');
+            const isWhatSubcat = [
+                'weather', 'food', 'hobbies', 'emotions', 'nature', 'tech', 'abstract',
+                'verbs_cooking', 'verbs_routines', 'verbs_movement', 'verbs_communication',
+                'verbs_mental', 'verbs_shopping', 'verbs_travel', 'verbs_art', 'verbs_conflict'
+            ].includes(state.subcat);
+
+            const shouldPullCOSYVocab = isEditionWhat || isWhatSubcat;
+            let dynamicVocabCards = [];
+
+            if (shouldPullCOSYVocab && window.COSYVocab) {
+                const reqLevelCode = window.COSYVocab.levelCode(rawLevel || level);
+
+                // Build fileMatch or forms filter based on subcat
+                const fileMatchMap = {
+                    food: ['food', 'fruit', 'vegetable', 'beverage', 'drink'],
+                    weather: ['nature', 'weather'],
+                    nature: ['animals', 'nature'],
+                    tech: ['technolog', 'gadget', 'house', 'science'],
+                    hobbies: ['hobbies', 'sport', 'leisure'],
+                    emotions: ['emotion', 'feelings', 'character'],
+                    all: ['food', 'nature', 'weather', 'house', 'clothing', 'verbs']
+                };
+
+                const isVerbCat = state.subcat.startsWith('verbs_');
+                const formsFilter = isVerbCat ? ['verb'] : (state.subcat === 'all' ? ['noun', 'verb'] : ['noun']);
+                let fileMatch = fileMatchMap[state.subcat] || null;
+                if (isVerbCat) {
+                    fileMatch = ['verbs'];
+                }
+
+                try {
+                    const vres = await window.COSYVocab.ensureFull(lang, reqLevelCode, {
+                        needEmoji: false,
+                        min: 8,
+                        forms: formsFilter,
+                        fileMatch: fileMatch,
+                        maxFiles: 8
+                    });
+
+                    if (typeof COSYLoader !== 'undefined') {
+                        if (vres.widened) {
+                            COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+                        } else {
+                            COSYLoader.clearLevelNote();
+                        }
+                    }
+
+                    const rawPool = (window.vocabularyData && window.vocabularyData[lang]) || [];
+                    if (rawPool.length > 0) {
+                        let filteredPool = rawPool;
+                        if (state.subcat === 'food' && state.foodFilter !== 'both') {
+                            filteredPool = rawPool.filter(item => {
+                                const t = (item.theme || '').toLowerCase();
+                                const w = (item.word || '').toLowerCase();
+                                if (state.foodFilter === 'fruits') {
+                                    return t.includes('fruit') || ['pomme', 'poire', 'fraise', 'banane', 'orange', 'apple', 'banana', 'mela', 'manzana'].some(f => w.includes(f));
+                                } else if (state.foodFilter === 'veggies') {
+                                    return t.includes('veg') || ['carotte', 'salade', 'tomate', 'carrot', 'potato', 'carota', 'zanahoria'].some(v => w.includes(v));
+                                }
+                                return true;
+                            });
+                            if (filteredPool.length === 0) filteredPool = rawPool;
+                        }
+
+                        dynamicVocabCards = filteredPool.map(entry => adaptCosyEntryToCard(entry, lang));
+                    }
+                } catch (e) {
+                    console.warn('[guess] COSYVocab ensureFull fetch fallback:', e);
+                }
+            } else if (typeof COSYLoader !== 'undefined') {
+                COSYLoader.clearLevelNote();
+            }
+
             // Collect deck pool from all editions if a cross-edition category is picked
             let pool = [];
-            if (state.subcat && state.subcat !== 'all') {
-                for (const ed in DECKS) {
-                    const matches = DECKS[ed].filter(item => {
-                        if (item.cat !== state.subcat) return false;
-                        if (state.subcat === 'food' && state.foodFilter !== 'both') {
-                            if (state.foodFilter === 'fruits' && item.foodType !== 'fruit') return false;
-                            if (state.foodFilter === 'veggies' && item.foodType !== 'veg') return false;
-                        }
-                        return true;
-                    });
-                    pool = pool.concat(matches);
+            if (dynamicVocabCards.length >= 4) {
+                pool = dynamicVocabCards;
+            } else {
+                if (state.subcat && state.subcat !== 'all') {
+                    for (const ed in DECKS) {
+                        const matches = DECKS[ed].filter(item => {
+                            if (item.cat !== state.subcat) return false;
+                            if (state.subcat === 'food' && state.foodFilter !== 'both') {
+                                if (state.foodFilter === 'fruits' && item.foodType !== 'fruit') return false;
+                                if (state.foodFilter === 'veggies' && item.foodType !== 'veg') return false;
+                            }
+                            return true;
+                        });
+                        pool = pool.concat(matches);
+                    }
                 }
+                if (pool.length === 0) {
+                    pool = DECKS[state.edition] || DECKS.who;
+                }
+
+                // If dynamic vocab items exist, combine them
+                if (dynamicVocabCards.length > 0) {
+                    pool = dynamicVocabCards.concat(pool);
+                }
+
+                // Localize entities for practice language if target language != en
+                pool = pool.map(item => localizeStaticCard(item, lang));
             }
-            if (pool.length === 0) {
-                pool = DECKS[state.edition] || DECKS.who;
-            }
+
+            // Shuffle pool
+            pool = pool.sort(() => Math.random() - 0.5);
 
             let currentDeck = [...pool];
 
