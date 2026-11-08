@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 const REDIRECT_STUBS = ['storytelling']; // folders that only redirect to another game
+const FRANCHISE_PORTALS = ['guess']; // multi-edition franchise portal directories
 
 const read = (root, p) => JSON.parse(fs.readFileSync(path.join(root, p), 'utf8'));
 const sorted = (a) => [...(a || [])].sort();
@@ -24,7 +25,7 @@ function gameFolders(root) {
   return fs.readdirSync(root, { withFileTypes: true })
     .filter((d) => d.isDirectory() && fs.existsSync(path.join(root, d.name, 'index.html')))
     .map((d) => d.name)
-    .filter((n) => !REDIRECT_STUBS.includes(n));
+    .filter((n) => !REDIRECT_STUBS.includes(n) && !FRANCHISE_PORTALS.includes(n));
 }
 
 // Hard invariants: these must always hold.
