@@ -2,13 +2,13 @@ window.COSYGameStrings = window.COSYGameStrings || {};
 window.COSYGameStrings['guess'] = {
   "strings": {
     "game.description": {
-      "en": "Discover who, what, where, when, why, and how! Play cooperatively, in speed-run taboo rounds, or tackle masterclass riddles with your host and peers.",
-      "fr": "Découvrez qui, quoi, où, quand, pourquoi et comment ! Jouez en coopération, en manches taboo ou résolvez des énigmes de haut niveau.",
-      "es": "¡Descubre quién, qué, dónde, cuándo, por qué y cómo! Juega en equipo, en rondas rápidas taboo o resuelve acertijos avanzados.",
-      "de": "Entdecke wer, was, wo, wann, warum und wie! Spiele kooperativ, in rasanten Taboo-Runden oder meistere anspruchsvolle Rätsel.",
-      "it": "Scopri chi, cosa, dove, quando, perché e come! Gioca in cooperativa, in round veloci taboo o risolvi enigmi avanzati.",
-      "ru": "Узнайте кто, что, где, когда, почему и как! Играйте сообща, в скоростные табу-раунды или разгадывайте мастерские загадки.",
-      "el": "Ανακαλύψτε ποιος, τι, πού, πότε, γιατί και πώς! Παίξτε συνεργατικά, σε γρήγορους γύρους ταμπού ή λύστε απαιτητικούς γρίφους."
+      "en": "Discover who, what, where, and when! Play cooperatively, in speed-run taboo rounds, or tackle masterclass riddles with your host and peers.",
+      "fr": "Découvrez qui, quoi, où et quand ! Jouez en coopération, en manches taboo ou résolvez des énigmes de haut niveau.",
+      "es": "¡Descubre quién, qué, dónde y cuándo! Juega en equipo, en rondas rápidas taboo o resuelve acertijos avanzados.",
+      "de": "Entdecke wer, was, wo und wann! Spiele kooperativ, in rasanten Taboo-Runden oder meistere anspruchsvolle Rätsel.",
+      "it": "Scopri chi, cosa, dove e quando! Gioca in cooperativa, in round veloci taboo o risolvi enigmi avanzati.",
+      "ru": "Узнайте кто, что, где и когда! Играйте сообща, в скоростные табу-раунды или разгадывайте мастерские загадки.",
+      "el": "Ανακαλύψτε ποιος, τι, πού και πότε! Παίξτε συνεργατικά, σε γρήγορους γύρους ταμπού ή λύστε απαιτητικούς γρίφους."
     },
     "setup.subtitle": {
       "en": "The ultimate franchise of mystery, deduction, and vocabulary circumlocution.",

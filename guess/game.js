@@ -1,7 +1,7 @@
 /**
  * games/guess/game.js
  * Unified "Guess!" Mega-Game Engine
- * Supports 6 editions, expanded sub-categories (weather, food with fruit/veg filters, Christmas,
+ * Supports 4 editions, expanded sub-categories (weather, food with fruit/veg filters, Christmas,
  * hobbies, emotions, countries/cities, nationalities, 9 CEFR-graded verb decks),
  * and 8 gameplay modes including Charades, 1-word description, random letter constraints, and synonyms.
  */
@@ -220,28 +220,6 @@
             { word: 'Diwali', level: 'a2', cat: 'festivals', clues: ['Five-day Hindu festival celebrating the victory of light over darkness.', 'Celebrated with oil lamps, clay diyas, and fireworks.'], taboo: ['lights', 'india', 'festival', 'hindu'], riddle: 'Rows of terracotta lamps glowing across thresholds to banish shadow from the hearth.' },
             { word: 'Lunar New Year', level: 'b1', cat: 'festivals', clues: ['Celebration of the arrival of spring and the beginning of a new year on the lunisolar calendar.', 'Marked by red envelopes, family reunions, and dragon dances.'], taboo: ['china', 'red envelope', 'dragon', 'spring'], riddle: 'Red paper banners flutter in the spring wind while families feast and fireworks greet the new zodiac cycle.' },
             { word: 'Halloween', level: 'a1', cat: 'festivals', clues: ['Celebrated on October 31st with costumes, trick-or-treating, and jack-o-lanterns.', 'Originated from ancient Celtic harvest festivals like Samhain.'], taboo: ['costume', 'candy', 'pumpkin', 'spooky'], riddle: 'Carved gourds grin in the crisp autumn night while disguised children knock on doors.' }
-        ],
-        why: [
-            // Scientific Phenomena
-            { word: 'Why leaves change color', level: 'b1', cat: 'science', clues: ['Deciduous trees cease chlorophyll production as sunlight wanes.', 'Carotenoids and anthocyanins unmask vibrant yellow and red hues.'], taboo: ['autumn', 'chlorophyll', 'fall', 'green'], riddle: 'When green retreat leaves hidden amber and crimson sugars blazing in the frost.' },
-            { word: 'Why ice floats', level: 'b2', cat: 'science', clues: ['Water expands upon freezing due to stable hydrogen bonding forming a crystalline lattice.', 'Solid state possesses lower density than liquid water.'], taboo: ['water', 'freeze', 'cold', 'density'], riddle: 'A crystalline anomaly where the solid rests gently above its own liquid mother.' },
-            { word: 'Why we yawn', level: 'a2', cat: 'science', clues: ['Involuntary reflex inhaling air, cooling cerebral blood, and promoting alertness.', 'Famously contagious among social groups.'], taboo: ['sleep', 'tired', 'mouth', 'contagious'], riddle: 'A wide-jawed reflex that cools the tired brain and ripples irresistibly through the room.' },
-            // Human Psychology & Behavior
-            { word: 'Why people dream', level: 'b2', cat: 'psychology', clues: ['Neurobiological memory consolidation and threat simulation occurring during REM sleep.', 'Synthesizes subconscious associations and emotions.'], taboo: ['sleep', 'night', 'brain', 'rem'], riddle: 'Subconscious cinema projecting nocturnal metaphors while the waking world is stilled.' },
-            // Historical Turning Points
-            { word: 'Why the Roman Empire fell', level: 'c1', cat: 'history', clues: ['Catalyzed by military overextension, economic instability, and successive migration waves.', 'Culminated in 476 CE when Romulus Augustulus was deposed.'], taboo: ['rome', 'barbarians', 'collapse', 'empire'], riddle: 'A slow crumbling of frontiers under currency debasement, factional discord, and migratory pressure.' },
-            { word: 'Why the Industrial Revolution started in Britain', level: 'c1', cat: 'history', clues: ['Abundance of domestic coal and iron, patent protections, agricultural surpluses, and capital.', 'Spurred mechanized textile production and steam locomotion.'], taboo: ['coal', 'factory', 'steam', 'england'], riddle: 'Where coal, canals, capital, and mechanical looms converged to forge the modern age.' }
-        ],
-        how: [
-            // Inventions & Mechanics
-            { word: 'How Wi-Fi works', level: 'b1', cat: 'inventions', clues: ['High-frequency radio waves transmitting encoded packets between routers and antennas.', 'Operates on standard 2.4 GHz and 5 GHz frequency bands.'], taboo: ['internet', 'wireless', 'router', 'network'], riddle: 'Invisible microwave whispers hopping through antennas to bridge screens across the room.' },
-            { word: 'How chocolate is made', level: 'a2', cat: 'inventions', clues: ['Fermenting, drying, roasting, and grinding cacao beans into cocoa butter and liquor.', 'Conching with sugar and milk to produce silky confections.'], taboo: ['cocoa', 'candy', 'sweet', 'bean'], riddle: 'Bitter jungle pods fermented, roasted, and conched into silky dark indulgence.' },
-            // Survival & Practical Skills
-            { word: 'How to start a fire without matches', level: 'b2', cat: 'skills', clues: ['Generating sufficient friction or focused sunlight to ignite fine combustible tinder.', 'Utilizes bow drills, flint-and-steel strikers, or optical lenses.'], taboo: ['match', 'spark', 'flame', 'friction'], riddle: 'Spinning dry wood until smoking ash catches breath and feeds a newborn blaze.' },
-            { word: 'How to tie a sailor’s knot', level: 'b1', cat: 'skills', clues: ['Creating a secure loop that will not slip under tension yet unties easily when slackened.', 'Examples include the bowline and clove hitch.'], taboo: ['rope', 'loop', 'boat', 'tie'], riddle: 'Intertwining braided cordage into a bight that holds firm against gales but loosens on command.' },
-            // Culinary & Crafting
-            { word: 'How to bake sourdough bread', level: 'b1', cat: 'crafts', clues: ['Fermenting dough via wild yeast and lactic acid bacteria rather than baker’s yeast.', 'Requires a cultured starter, stretching, proofing, and steam.'], taboo: ['flour', 'starter', 'yeast', 'oven'], riddle: 'Nurturing bubbling micro-flora with flour and water to lift a crisp blistered loaf.' },
-            { word: 'How to knit a scarf', level: 'a2', cat: 'crafts', clues: ['Looping yarn through consecutive stitches using two pointed needles.', 'Alternating knit and purl rows to weave warm fabric.'], taboo: ['yarn', 'wool', 'needles', 'stitch'], riddle: 'Guiding wool through interlocking loops on twin needles to wrap winter in warmth.' }
         ]
     };
 
@@ -338,8 +316,6 @@
                             <option value="what" ${presetEdition === 'what' ? 'selected' : ''}>Edition 2: Guess What? (Objects, Concepts & Actions)</option>
                             <option value="where" ${presetEdition === 'where' ? 'selected' : ''}>Edition 3: Guess Where? (Locations & Settings)</option>
                             <option value="when" ${presetEdition === 'when' ? 'selected' : ''}>Edition 4: Guess When? (Time, History & Culture)</option>
-                            <option value="why" ${presetEdition === 'why' ? 'selected' : ''}>Edition 5: Guess Why? (Science, Philosophy & Motivations)</option>
-                            <option value="how" ${presetEdition === 'how' ? 'selected' : ''}>Edition 6: Guess How? (Processes & Inventions)</option>
                         </select>
                     </div>
 
@@ -382,14 +358,6 @@
                                 <option value="festivals">Cultural Holidays & Christmas</option>
                                 <option value="eras">Historical Eras & Events</option>
                                 <option value="routines">Daily Routine & Seasons</option>
-                            </optgroup>
-                            <optgroup label="Edition 5: Why & Edition 6: How">
-                                <option value="science">Scientific Phenomena</option>
-                                <option value="psychology">Human Psychology & Behavior</option>
-                                <option value="history">Historical Turning Points</option>
-                                <option value="inventions">Inventions & Mechanics</option>
-                                <option value="skills">Survival & Practical Skills</option>
-                                <option value="crafts">Culinary & Crafting</option>
                             </optgroup>
                         </select>
                     </div>
