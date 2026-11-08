@@ -203,8 +203,25 @@
             // Countries & Cities
             { word: 'Tokyo', level: 'a1', cat: 'countries_cities', clues: ['Vibrant neon capital city of Japan.', 'Famous for Shibuya Crossing, Shinjuku nightlife, and Tsukiji market.'], taboo: ['japan', 'capital', 'city', 'shibuya'], riddle: 'A hyper-modern metropolis where neon canyons hum beneath the watchful gaze of Mount Fuji.' },
             { word: 'Paris', level: 'a1', cat: 'countries_cities', clues: ['The City of Light and capital of France.', 'Home to the Eiffel Tower, the Louvre museum, and the Seine River.'], taboo: ['france', 'eiffel', 'louvre', 'french'], riddle: 'Where cobbled avenues and zinc rooftops cradle iron spires along the meandering Seine.' },
-            { word: 'Brazil', level: 'a1', cat: 'countries_cities', clues: ['Largest nation in South America.', 'Home to the Amazon river basin, Copacabana beach, and Portuguese language.'], taboo: ['amazon', 'south america', 'rio', 'samba'], riddle: 'A continental giant pulsing with carnival rhythms beneath the emerald canopy of the Amazon.' },
-            { word: 'Cairo', level: 'a2', cat: 'countries_cities', clues: ['Vast historic capital of Egypt sprawling on the banks of the Nile.', 'Neighboring the Great Pyramids of Giza.'], taboo: ['egypt', 'nile', 'pyramids', 'africa'], riddle: 'An ancient dust-and-citadel metropolis guarding pharaonic tombs beside the ancient Nile.' }
+            { word: 'Cairo', level: 'a2', cat: 'countries_cities', clues: ['Vast historic capital of Egypt sprawling on the banks of the Nile.', 'Neighboring the Great Pyramids of Giza.'], taboo: ['egypt', 'nile', 'pyramids', 'africa'], riddle: 'An ancient dust-and-citadel metropolis guarding pharaonic tombs beside the ancient Nile.' },
+            // Requested Countries
+            { word: 'The USA', level: 'a1', cat: 'countries_cities', clues: ['Federal republic composed of 50 states spanning North America.', 'Capital is Washington, D.C., with New York as its largest metropolis.'], taboo: ['america', 'states', 'dollar', 'washington'], riddle: 'From sea to shining sea, a nation of fifty stars and thirteen stripes.' },
+            { word: 'The UK', level: 'a1', cat: 'countries_cities', clues: ['Island nation in northwestern Europe comprising England, Scotland, Wales, and Northern Ireland.', 'Known for Big Ben, Buckingham Palace, and fish and chips.'], taboo: ['london', 'england', 'britain', 'queen'], riddle: 'An ancient royal realm nestled amidst misty northern isles where Big Ben chimes.' },
+            { word: 'France', level: 'a1', cat: 'countries_cities', clues: ['Western European nation renowned for wine, haute cuisine, philosophy, and art.', 'Hexagonal country bordered by the Atlantic and Mediterranean.'], taboo: ['paris', 'eiffel', 'baguette', 'french'], riddle: 'A hexagonal heartland of romance, vineyards, and revolutionary liberty.' },
+            { word: 'Russia', level: 'a1', cat: 'countries_cities', clues: ['The largest country in the world by land area, spanning eastern Europe and northern Asia.', 'Famous for the Kremlin, Lake Baikal, and the Trans-Siberian railway.'], taboo: ['moscow', 'kremlin', 'siberia', 'ruble'], riddle: 'A vast northern realm stretching across eleven time zones from the Baltic to the Pacific.' },
+            { word: 'Spain', level: 'a1', cat: 'countries_cities', clues: ['Iberian nation celebrated for tapas, flamenco, sunny beaches, and vibrant fiestas.', 'Capital is Madrid, with Barcelona along the Mediterranean coast.'], taboo: ['madrid', 'barcelona', 'tapas', 'flamenco'], riddle: 'Land of sunlit plazas, acoustic guitars, and passionate flamenco rhythms.' },
+            { word: 'Italy', level: 'a1', cat: 'countries_cities', clues: ['Boot-shaped southern European peninsula famous for Roman history, Renaissance art, pasta, and espresso.', 'Surrounded by the Mediterranean Sea.'], taboo: ['rome', 'pizza', 'pasta', 'venice'], riddle: 'The boot-shaped cradle of empire and art where marble statues watch over ancient cobblestones.' },
+            { word: 'Germany', level: 'a1', cat: 'countries_cities', clues: ['Central European power known for engineering, fairy-tale castles, the Autobahn, and classical music.', 'Capital is Berlin.'], taboo: ['berlin', 'beer', 'autobahn', 'munich'], riddle: 'The forested heart of central Europe where precision engineering meets castles along the Rhine.' },
+            { word: 'Portugal', level: 'a1', cat: 'countries_cities', clues: ['Atlantic coastal nation on the Iberian Peninsula renowned for maritime explorers, fado music, and pastel de nata.', 'Capital is Lisbon.'], taboo: ['lisbon', 'porto', 'atlantic', 'fado'], riddle: 'Where tiled balconies listen to melancholic fado melodies overlooking the vast Atlantic.' },
+            { word: 'Armenia', level: 'a2', cat: 'countries_cities', clues: ['Ancient mountainous country in the South Caucasus region with a rich Christian heritage and Mount Ararat as its symbol.', 'Capital is Yerevan.'], taboo: ['yerevan', 'caucasus', 'ararat', 'khachkar'], riddle: 'An ancient highland cradle where apricot orchards bloom beneath the sacred peak of Ararat.' },
+            { word: 'Georgia', level: 'a2', cat: 'countries_cities', clues: ['Caucasus nation famous for ancient winemaking traditions, polyphonic singing, and the Black Sea coast.', 'Capital is Tbilisi.'], taboo: ['tbilisi', 'caucasus', 'wine', 'khachapuri'], riddle: 'Cradle of ancient qvevri wine nestled where the high Caucasus peaks touch the sky.' },
+            { word: 'Australia', level: 'a1', cat: 'countries_cities', clues: ['Vast continent and country surrounded by the Indian and Pacific Oceans.', 'Known for kangaroos, the Sydney Opera House, and the Great Barrier Reef.'], taboo: ['sydney', 'kangaroo', 'outback', 'koala'], riddle: 'An island continent down under where marsupials roam red deserts rimmed by coral reefs.' },
+            { word: 'China', level: 'a1', cat: 'countries_cities', clues: ['East Asian nation with thousands of years of continuous civilization.', 'Famous for the Great Wall, pandas, and the Forbidden City.'], taboo: ['beijing', 'wall', 'panda', 'asia'], riddle: 'An ancient celestial civilization watched over by a serpentine dragon of stone across misty peaks.' },
+            { word: 'Japan', level: 'a1', cat: 'countries_cities', clues: ['Island nation in East Asia renowned for cherry blossoms, bullet trains, anime, and culinary traditions.', 'Capital is Tokyo.'], taboo: ['tokyo', 'sushi', 'samurai', 'cherry blossom'], riddle: 'Land of the rising sun where bullet trains glide past sacred cedar shrines and Mount Fuji.' },
+            { word: 'Korea', level: 'a1', cat: 'countries_cities', clues: ['Peninsula in East Asia known for rich cultural traditions, K-pop, and historic hanok palaces.', 'Capital of South Korea is Seoul.'], taboo: ['seoul', 'kpop', 'kimchi', 'peninsula'], riddle: 'Land of the morning calm where vibrant modern music echoes among royal Joseon palaces.' },
+            { word: 'Greece', level: 'a1', cat: 'countries_cities', clues: ['Southeastern European country known as the cradle of Western democracy, philosophy, and the Olympic Games.', 'Surrounded by thousands of Mediterranean islands.'], taboo: ['athens', 'acropolis', 'islands', 'olympics'], riddle: 'Whitewashed island villages and marble temples overlooking the deep sapphire Aegean.' },
+            { word: 'Mexico', level: 'a1', cat: 'countries_cities', clues: ['North American nation renowned for Mayan and Aztec pyramids, mariachi music, and vibrant cuisine.', 'Capital is Mexico City.'], taboo: ['tacos', 'aztec', 'sombrero', 'mariachi'], riddle: 'Land of pyramids, mariachi melodies, and colorful Day of the Dead marigolds.' },
+            { word: 'Brasil', level: 'a1', cat: 'countries_cities', clues: ['Largest nation in South America.', 'Home to the Amazon river basin, Copacabana beach, and Portuguese language.'], taboo: ['amazon', 'south america', 'rio', 'samba'], riddle: 'A continental giant pulsing with carnival rhythms beneath the emerald canopy of the Amazon.' }
         ],
         when: [
             // Historical Eras & Events
@@ -216,10 +233,12 @@
             // Future & Sci-Fi Timelines
             { word: 'Colonization of Mars', level: 'b2', cat: 'future', clues: ['Hypothetical permanent human habitation and terraforming of the Red Planet.', 'Involves pressurized domes and greenhouse habitats.'], taboo: ['mars', 'red planet', 'colony', 'space'], riddle: 'When boots tread red oxidized sands and greenhouses bloom beneath a pale distant sun.' },
             // Cultural Holidays & Festivals
+            { word: 'Christmas', level: 'a1', cat: 'festivals', clues: ['Worldwide celebration on December 25th commemorating festive cheer and gift-giving.', 'Celebrated with pine trees, carols, and feasts with loved ones.'], taboo: ['december', 'santa', 'tree', 'presents'], riddle: 'When bells chime in the winter chill and evergreen boughs glow with candlelight and wrapped surprises.' },
+            { word: 'Halloween', level: 'a1', cat: 'festivals', clues: ['Celebrated on October 31st with costumes, trick-or-treating, and jack-o-lanterns.', 'Originated from ancient Celtic harvest festivals like Samhain.'], taboo: ['costume', 'candy', 'pumpkin', 'spooky'], riddle: 'Carved gourds grin in the crisp autumn night while disguised children knock on doors.' },
+            { word: "Valentine's Day", level: 'a1', cat: 'festivals', clues: ['Annual celebration on February 14th honoring romantic love and affection.', 'Marked by greeting cards, red roses, and chocolates.'], taboo: ['love', 'february', 'heart', 'chocolate'], riddle: 'A feast of ruby roses and sweet confections exchanged when winter whispers of romance.' },
             { word: 'Carnival', level: 'a2', cat: 'festivals', clues: ['Festive season marked by public parades, elaborate costumes, masks, and samba music.', 'Precedes the liturgical season of Lent in places like Rio and Venice.'], taboo: ['parade', 'costume', 'mask', 'rio'], riddle: 'A burst of feathers, brass horns, and painted masks dancing through streets before solemn Lent.' },
             { word: 'Diwali', level: 'a2', cat: 'festivals', clues: ['Five-day Hindu festival celebrating the victory of light over darkness.', 'Celebrated with oil lamps, clay diyas, and fireworks.'], taboo: ['lights', 'india', 'festival', 'hindu'], riddle: 'Rows of terracotta lamps glowing across thresholds to banish shadow from the hearth.' },
-            { word: 'Lunar New Year', level: 'b1', cat: 'festivals', clues: ['Celebration of the arrival of spring and the beginning of a new year on the lunisolar calendar.', 'Marked by red envelopes, family reunions, and dragon dances.'], taboo: ['china', 'red envelope', 'dragon', 'spring'], riddle: 'Red paper banners flutter in the spring wind while families feast and fireworks greet the new zodiac cycle.' },
-            { word: 'Halloween', level: 'a1', cat: 'festivals', clues: ['Celebrated on October 31st with costumes, trick-or-treating, and jack-o-lanterns.', 'Originated from ancient Celtic harvest festivals like Samhain.'], taboo: ['costume', 'candy', 'pumpkin', 'spooky'], riddle: 'Carved gourds grin in the crisp autumn night while disguised children knock on doors.' }
+            { word: 'Lunar New Year', level: 'b1', cat: 'festivals', clues: ['Celebration of the arrival of spring and the beginning of a new year on the lunisolar calendar.', 'Marked by red envelopes, family reunions, and dragon dances.'], taboo: ['china', 'red envelope', 'dragon', 'spring'], riddle: 'Red paper banners flutter in the spring wind while families feast and fireworks greet the new zodiac cycle.' }
         ]
     };
 
@@ -252,13 +271,14 @@
         const toggleIcon = document.getElementById('host-toggle-icon');
 
         function updateBtn() {
+            const T = getT();
             if (state.isShielded) {
                 toggleBtn?.classList.remove('revealed');
-                if (toggleText) toggleText.textContent = 'Host View: Shielded';
+                if (toggleText) toggleText.textContent = T('ui.host_view_shielded', null, 'Host View: Shielded');
                 if (toggleIcon) toggleIcon.textContent = '👁️';
             } else {
                 toggleBtn?.classList.add('revealed');
-                if (toggleText) toggleText.textContent = 'Host View: Revealed';
+                if (toggleText) toggleText.textContent = T('ui.host_view_revealed', null, 'Host View: Revealed');
                 if (toggleIcon) toggleIcon.textContent = '🔓';
             }
             const secretBox = document.getElementById('guess-secret-container');
@@ -419,6 +439,20 @@
             }
         });
 
+        // Sync interface language when practice language dropdown changes
+        document.getElementById('g-lang')?.addEventListener('change', (e) => {
+            const langCode = (window.COSYLoader && typeof window.COSYLoader.getLangCode === 'function')
+                ? window.COSYLoader.getLangCode(e.target.value)
+                : 'en';
+            if (window.setLanguage && typeof window.setLanguage === 'function') {
+                window.setLanguage(langCode);
+            }
+            if (window.applyGameStrings && typeof window.applyGameStrings === 'function') {
+                window.applyGameStrings(langCode);
+            }
+            renderSetup();
+        });
+
         document.querySelectorAll('.guess-subfilter-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 document.querySelectorAll('.guess-subfilter-btn').forEach(b => b.classList.remove('active'));
@@ -462,8 +496,26 @@
         'Pharmacy': { fr: 'Pharmacie', es: 'Farmacia', de: 'Apotheke', it: 'Farmacia', ru: 'Аптека', el: 'Φαρμακείο' },
         'Tokyo': { fr: 'Tokyo', es: 'Tokio', de: 'Tokio', it: 'Tokyo', ru: 'Токио', el: 'Τόκιο' },
         'Paris': { fr: 'Paris', es: 'París', de: 'Paris', it: 'Parigi', ru: 'Париж', el: 'Παρίσι' },
-        'Brazil': { fr: 'Le Brésil', es: 'Brasil', de: 'Brasilien', it: 'Brasile', ru: 'Бразилия', el: 'Βραζιλία' },
         'Cairo': { fr: 'Le Caire', es: 'El Cairo', de: 'Kairo', it: 'Il Cairo', ru: 'Каир', el: 'Κάιρο' },
+        'The USA': { fr: 'Les États-Unis', es: 'Estados Unidos', de: 'Die USA', it: 'Gli Stati Uniti', ru: 'США', el: 'ΗΠΑ' },
+        'The UK': { fr: 'Le Royaume-Uni', es: 'El Reino Unido', de: 'Das Vereinigte Königreich', it: 'Il Regno Unito', ru: 'Великобритания', el: 'Ηνωμένο Βασίλειο' },
+        'France': { fr: 'La France', es: 'Francia', de: 'Frankreich', it: 'La Francia', ru: 'Франция', el: 'Γαλλία' },
+        'Russia': { fr: 'La Russie', es: 'Rusia', de: 'Russland', it: 'La Russia', ru: 'Россия', el: 'Ρωσία' },
+        'Spain': { fr: 'L\'Espagne', es: 'España', de: 'Spanien', it: 'La Spagna', ru: 'Испания', el: 'Ισπανία' },
+        'Italy': { fr: 'L\'Italie', es: 'Italia', de: 'Italien', it: 'L\'Italia', ru: 'Италия', el: 'Ιταλία' },
+        'Germany': { fr: 'L\'Allemagne', es: 'Alemania', de: 'Deutschland', it: 'La Germania', ru: 'Германия', el: 'Γερμανία' },
+        'Portugal': { fr: 'Le Portugal', es: 'Portugal', de: 'Portugal', it: 'Il Portogallo', ru: 'Португалия', el: 'Πορτογαλία' },
+        'Armenia': { fr: 'L\'Arménie', es: 'Armenia', de: 'Armenien', it: 'L\'Armenia', ru: 'Армения', el: 'Αρμενία' },
+        'Georgia': { fr: 'La Géorgie', es: 'Georgia', de: 'Georgien', it: 'La Georgia', ru: 'Грузия', el: 'Γεωργία' },
+        'Australia': { fr: 'L\'Australie', es: 'Australia', de: 'Australien', it: 'L\'Australia', ru: 'Австралия', el: 'Αυστραλία' },
+        'China': { fr: 'La Chine', es: 'China', de: 'China', it: 'La Cina', ru: 'Китай', el: 'Κίνα' },
+        'Japan': { fr: 'Le Japon', es: 'Japón', de: 'Japan', it: 'Il Giappone', ru: 'Япония', el: 'Ιαπωνία' },
+        'Korea': { fr: 'La Corée', es: 'Corea', de: 'Korea', it: 'La Corea', ru: 'Корея', el: 'Κορέα' },
+        'Greece': { fr: 'La Grèce', es: 'Grecia', de: 'Griechenland', it: 'La Grecia', ru: 'Греция', el: 'Ελλάδα' },
+        'Mexico': { fr: 'Le Mexique', es: 'México', de: 'Mexiko', it: 'Il Messico', ru: 'Мексика', el: 'Μεξικό' },
+        'Brasil': { fr: 'Le Brésil', es: 'Brasil', de: 'Brasilien', it: 'Il Brasile', ru: 'Бразилия', el: 'Βραζιλία' },
+        'Christmas': { fr: 'Noël', es: 'Navidad', de: 'Weihnachten', it: 'Natale', ru: 'Рождество', el: 'Χριστούγεννα' },
+        "Valentine's Day": { fr: 'La Saint-Valentin', es: 'San Valentín', de: 'Valentinstag', it: 'San Valentino', ru: 'День святого Валентина', el: 'Ημέρα του Αγίου Βαλεντίνου' },
         'The Renaissance': { fr: 'La Renaissance', es: 'El Renacimiento', de: 'Die Renaissance', it: 'Il Rinascimento', ru: 'Эпоха Возрождения', el: 'Αναγέννηση' },
         'The Moon Landing': { fr: 'L\'alunissage', es: 'El alunizaje', de: 'Die Mondlandung', it: 'L\'allunaggio', ru: 'Высадка на Луну', el: 'Προσσελήνωση' },
         'Morning Rush Hour': { fr: 'L\'heure de pointe matinale', es: 'Hora punta de la mañana', de: 'Morgendliche Hauptverkehrszeit', it: 'Ora di punta mattutina', ru: 'Утренний час пик', el: 'Πρωινή ώρα αιχμής' },
@@ -803,7 +855,7 @@
                                 ` : `
                                     ${card.clues.slice(0, state.cluesRevealed).map((clue, idx) => `
                                         <div class="guess-clue-card">
-                                            <span class="guess-clue-index">Clue #${idx + 1}:</span>
+                                            <span class="guess-clue-index">${T('ui.clue_number', { number: idx + 1 }, `Clue #${idx + 1}:`)}</span>
                                             <span>${gameUtils.escapeHtml(clue)}</span>
                                         </div>
                                     `).join('')}
@@ -814,13 +866,13 @@
                             <div class="guess-actions-panel">
                                 ${!state.isRoundOver ? `
                                     ${state.cluesRevealed < card.clues.length ? `
-                                        <button class="guess-btn guess-btn-warning" id="btn-next-clue">+ <span>Reveal Next Clue</span></button>
+                                        <button class="guess-btn guess-btn-warning" id="btn-next-clue">+ <span>${T('btn.reveal_next_clue', null, 'Reveal Next Clue')}</span></button>
                                     ` : ''}
-                                    <button class="guess-btn guess-btn-success" id="btn-solved-a">🎉 Team A Got It (+10)</button>
-                                    <button class="guess-btn guess-btn-success" id="btn-solved-b" style="background:#0284c7;">🎉 Team B Got It (+10)</button>
-                                    <button class="guess-btn guess-btn-danger" id="btn-pass">Pass / Skip →</button>
+                                    <button class="guess-btn guess-btn-success" id="btn-solved-a">🎉 ${T('btn.team_a_got_it', null, 'Team A Got It (+10)')}</button>
+                                    <button class="guess-btn guess-btn-success" id="btn-solved-b" style="background:#0284c7;">🎉 ${T('btn.team_b_got_it', null, 'Team B Got It (+10)')}</button>
+                                    <button class="guess-btn guess-btn-danger" id="btn-pass">${T('btn.pass_skip', null, 'Pass / Skip →')}</button>
                                 ` : `
-                                    <button class="guess-btn guess-btn-success" id="btn-next-round">Next Round →</button>
+                                    <button class="guess-btn guess-btn-success" id="btn-next-round">${T('btn.next_round', null, 'Next Round →')}</button>
                                 `}
                             </div>
                         </div>
