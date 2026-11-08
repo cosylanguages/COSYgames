@@ -557,16 +557,14 @@
         }
 
         if (clues.length === 0) {
-            if (entry.theme) clues.push(`Theme: ${entry.theme}`);
-            if (entry.level) clues.push(`CEFR Level: ${entry.level}`);
+            if (entry.theme) clues.push(`Theme: ${entry.theme.replace(/_/g, ' ')}`);
         }
 
         const taboo = [];
         if (entry.theme) taboo.push(entry.theme.replace(/_/g, ' '));
-        if (entry.form) taboo.push(entry.form);
         if (entry.plural && entry.plural !== rawWord) taboo.push(entry.plural);
 
-        const riddle = clues[0] || `A mysterious term related to ${entry.theme || 'everyday life'}.`;
+        const riddle = clues[0] || `A term related to ${entry.theme || 'everyday life'}.`;
 
         return {
             word: displayWord.charAt(0).toUpperCase() + displayWord.slice(1),
@@ -678,11 +676,40 @@
                 COSYLoader.clearLevelNote();
             }
 
-            // Collect deck pool from all editions if a cross-edition category is picked
+            // Select appropriate deck pool ensuring grammatical & lexical level appropriateness
+            const CEFR_ORDER = { a0: 1, a1: 1, a2: 2, b1: 3, b2: 4, c1: 5, c2: 6 };
+            const reqCefrKey = (window.COSYVocab ? window.COSYVocab.levelCode(rawLevel || level) : (level || 'A1')).toLowerCase();
+            const targetRank = CEFR_ORDER[reqCefrKey] || 1;
+
+            const filterByLevelAppropriateness = (items, minCount = 4) => {
+                if (!Array.isArray(items) || items.length === 0) return items;
+                // Group items by exact rank distance
+                const ranked = items.filter(i => i && typeof i.level === 'string');
+                if (ranked.length === 0) return items;
+
+                // Priority 1: Exact CEFR match
+                const exact = ranked.filter(i => (CEFR_ORDER[i.level.toLowerCase()] || 1) === targetRank);
+                if (exact.length >= minCount) return exact;
+
+                // Priority 2: Expanding outwards from target rank (closest distance first)
+                let collected = [...exact];
+                for (let dist = 1; dist <= 5; dist++) {
+                    const lower = ranked.filter(i => (CEFR_ORDER[i.level.toLowerCase()] || 1) === (targetRank - dist));
+                    collected = collected.concat(lower);
+                    if (collected.length >= minCount) break;
+
+                    const higher = ranked.filter(i => (CEFR_ORDER[i.level.toLowerCase()] || 1) === (targetRank + dist));
+                    collected = collected.concat(higher);
+                    if (collected.length >= minCount) break;
+                }
+                return collected.length > 0 ? collected : items;
+            };
+
             let pool = [];
             if (dynamicVocabCards.length >= 4) {
-                pool = dynamicVocabCards;
+                pool = filterByLevelAppropriateness(dynamicVocabCards, 4);
             } else {
+                let candidatePool = [];
                 if (state.subcat && state.subcat !== 'all') {
                     for (const ed in DECKS) {
                         const matches = DECKS[ed].filter(item => {
@@ -693,17 +720,20 @@
                             }
                             return true;
                         });
-                        pool = pool.concat(matches);
+                        candidatePool = candidatePool.concat(matches);
                     }
                 }
-                if (pool.length === 0) {
-                    pool = DECKS[state.edition] || DECKS.who;
+                if (candidatePool.length === 0) {
+                    candidatePool = DECKS[state.edition] || DECKS.who;
                 }
 
                 // If dynamic vocab items exist, combine them
                 if (dynamicVocabCards.length > 0) {
-                    pool = dynamicVocabCards.concat(pool);
+                    candidatePool = dynamicVocabCards.concat(candidatePool);
                 }
+
+                // Filter items by level appropriateness
+                pool = filterByLevelAppropriateness(candidatePool, 4);
 
                 // Localize entities for practice language if target language != en
                 pool = pool.map(item => localizeStaticCard(item, lang));
