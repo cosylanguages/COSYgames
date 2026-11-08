@@ -64,46 +64,90 @@
         }
     }
 
-    // Core Dataset across 6 Editions and CEFR levels
+    // Comprehensive Dataset across all 6 Editions and Sub-Categories from the Issue Specification
     const DECKS = {
         who: [
-            { word: 'Julius Caesar', level: 'a2', cat: 'historical', clues: ['Ancient Roman statesman and military general.', 'Famously associated with the Ides of March.'], taboo: ['emperor', 'rome', 'brutus', 'senate'] },
-            { word: 'Marie Curie', level: 'b1', cat: 'historical', clues: ['Pioneering physicist and chemist.', 'First person to win two Nobel Prizes in distinct sciences.'], taboo: ['radiation', 'science', 'nobel', 'radium'] },
-            { word: 'Sherlock Holmes', level: 'a2', cat: 'fictional', clues: ['Legendary consulting detective residing at 221B Baker Street.', 'Possesses unmatched powers of deductive reasoning.'], taboo: ['watson', 'pipe', 'detective', 'london'] },
-            { word: 'Zeus', level: 'a1', cat: 'fictional', clues: ['Supreme ruler of Mount Olympus and king of the Greek gods.', 'Wields the thunderbolt as his weapon.'], taboo: ['god', 'olympus', 'lightning', 'greece'] },
-            { word: 'Cryptographer', level: 'c1', cat: 'occupations', clues: ['Specialist who crafts and analyzes ciphers and encryption systems.', 'Operates at the intersection of discrete mathematics and information security.'], taboo: ['code', 'cipher', 'secret', 'security'] },
-            { word: 'Firefighter', level: 'a1', cat: 'occupations', clues: ['Emergency responder equipped to extinguish blazes.', 'Rescues people and pets from perilous structural hazards.'], taboo: ['fire', 'water', 'hose', 'truck'] },
-            { word: 'Ludwig van Beethoven', level: 'b1', cat: 'pop', clues: ['Influential classical and romantic German composer.', 'Created monumental symphonies even after losing his hearing.'], taboo: ['music', 'piano', 'symphony', 'deaf'] }
+            // Historical Figures
+            { word: 'Julius Caesar', level: 'a2', cat: 'historical', clues: ['Ancient Roman statesman and military general.', 'Famously associated with the Ides of March.'], taboo: ['emperor', 'rome', 'brutus', 'senate'], riddle: 'A conqueror crowned by victory yet undone by knives within the marble hall of senators.' },
+            { word: 'Marie Curie', level: 'b1', cat: 'historical', clues: ['Pioneering physicist and chemist.', 'First person to win two Nobel Prizes in distinct sciences.'], taboo: ['radiation', 'science', 'nobel', 'radium'], riddle: 'A luminous intellect whose notebooks still pulse with the invisible glow of the elements she named.' },
+            { word: 'Alexander the Great', level: 'b2', cat: 'historical', clues: ['Ancient Macedonian king who created one of history’s vastest empires.', 'Undefeated in battle from Greece to northwest India.'], taboo: ['macedon', 'empire', 'king', 'conquer'], riddle: 'Wept upon the shores of the known earth when told there were no further worlds to tame.' },
+            // Fictional & Mythological Characters
+            { word: 'Sherlock Holmes', level: 'a2', cat: 'fictional', clues: ['Legendary consulting detective residing at 221B Baker Street.', 'Possesses unmatched powers of deductive reasoning.'], taboo: ['watson', 'pipe', 'detective', 'london'], riddle: 'From tobacco ash and scuffed boot leather, the world’s lone consulting intellect reconstructs the crime.' },
+            { word: 'Zeus', level: 'a1', cat: 'fictional', clues: ['Supreme ruler of Mount Olympus and king of the Greek gods.', 'Wields the thunderbolt as his weapon.'], taboo: ['god', 'olympus', 'lightning', 'greece'], riddle: 'Sovereign of cloud and lightning perched above the Aegean peaks.' },
+            // Professionals & Occupations
+            { word: 'Baker', level: 'a1', cat: 'occupations', clues: ['Wakes before dawn to mix dough and bake fresh bread.', 'Works beside hot ovens with flour and yeast.'], taboo: ['bread', 'flour', 'oven', 'pastry'], riddle: 'Transforms powdery harvest into golden crusts before the morning bells chime.' },
+            { word: 'Nurse', level: 'a2', cat: 'occupations', clues: ['Healthcare professional caring for injured and sick patients.', 'Monitors vitals and administers medicine in hospitals.'], taboo: ['hospital', 'doctor', 'patient', 'medicine'], riddle: 'A sentinel in scrubs administering care in corridors where breath is measured.' },
+            { word: 'Cryptographer', level: 'c1', cat: 'occupations', clues: ['Specialist who crafts and analyzes ciphers and encryption systems.', 'Operates at the intersection of discrete mathematics and information security.'], taboo: ['code', 'cipher', 'secret', 'security'], riddle: 'Architect of mathematical mazes that veil secrets behind irreversible prime numbers.' },
+            { word: 'Urban Planner', level: 'c2', cat: 'occupations', clues: ['Professional designing land use, transit networks, and zoning for sustainable cities.', 'Balances municipal architecture with population growth.'], taboo: ['city', 'transit', 'buildings', 'zoning'], riddle: 'Orchestrator of civic arteries and concrete commons balancing urban growth against entropy.' },
+            // Pop Culture Icons
+            { word: 'Ludwig van Beethoven', level: 'b1', cat: 'pop', clues: ['Influential classical and romantic German composer.', 'Created monumental symphonies even after losing his hearing.'], taboo: ['music', 'piano', 'symphony', 'deaf'], riddle: 'Channeled silent thunder into harmonic movements that deafened grief itself.' }
         ],
         what: [
-            { word: 'Whisper', level: 'a2', cat: 'actions', clues: ['To speak very softly using breath rather than vocal cords.', 'Often used when sharing secrets in quiet libraries.'], taboo: ['quiet', 'speak', 'talk', 'voice'] },
-            { word: 'Procrastinate', level: 'b2', cat: 'actions', clues: ['To unnecessarily postpone decisions or actions until the eleventh hour.', 'Often fueled by perfectionism or executive fatigue.'], taboo: ['delay', 'later', 'lazy', 'wait'] },
-            { word: 'Chameleon', level: 'b1', cat: 'nature', clues: ['Specialized clade of Old World lizards with zygodactylous feet.', 'Famous for shifting dermal pigments to camouflage.'], taboo: ['lizard', 'color', 'camouflage', 'reptile'] },
-            { word: 'Volcano', level: 'a2', cat: 'nature', clues: ['Geological rupture through which molten lava, tephra, and steam erupt.', 'Forms towering mountains along tectonic plate boundaries.'], taboo: ['lava', 'eruption', 'mountain', 'magma'] },
-            { word: 'Rotary Phone', level: 'b1', cat: 'tech', clues: ['Vintage communication hardware with a circular finger dial.', 'Predecessor to touch-tone keypads and cellular smartphones.'], taboo: ['call', 'dial', 'telephone', 'wire'] },
-            { word: 'Bureaucracy', level: 'c1', cat: 'abstract', clues: ['An administrative system governed by official routine, hierarchies, and rigid red tape.', 'Often critiqued for institutional inertia.'], taboo: ['paperwork', 'rules', 'government', 'office'] },
-            { word: 'Nostalgia', level: 'b2', cat: 'abstract', clues: ['A bittersweet emotional longing for a bygone era or familiar past memories.', 'Triggered by retro aesthetics, songs, or scent.'], taboo: ['past', 'memories', 'yearning', 'homesick'] }
+            // Action Verbs & Idiomatic Gestures
+            { word: 'Whisper', level: 'a2', cat: 'actions', clues: ['To speak very softly using breath rather than vocal cords.', 'Often used when sharing secrets in quiet libraries.'], taboo: ['quiet', 'speak', 'talk', 'voice'], riddle: 'A breath that carries words without a voice, slipping past eavesdroppers like velvet.' },
+            { word: 'Procrastinate', level: 'b2', cat: 'actions', clues: ['To unnecessarily postpone decisions or actions until the eleventh hour.', 'Often fueled by perfectionism or executive fatigue.'], taboo: ['delay', 'later', 'lazy', 'wait'], riddle: 'The subtle art of surrendering tomorrow to the comfort of doing nothing today.' },
+            { word: 'Negotiate', level: 'c1', cat: 'actions', clues: ['To confer with another so as to arrive at the settlement of some matter.', 'Involves concessions, compromise, and mutual diplomacy.'], taboo: ['deal', 'compromise', 'agreement', 'talk'], riddle: 'A verbal duel of give and take where both parties trade concessions to claim peace.' },
+            // Animals & Nature
+            { word: 'Frog', level: 'a1', cat: 'nature', clues: ['It is small and green.', 'It jumps and lives near ponds.', 'It says ribbit.'], taboo: ['green', 'jump', 'pond', 'amphibian'], riddle: 'A throat that swells like a jewel by the pond, singing into damp summer nights.' },
+            { word: 'Chameleon', level: 'b1', cat: 'nature', clues: ['An amphibian or reptile found in warm habitats.', 'Undergoes physiological color changes to camouflage and signal mood.'], taboo: ['lizard', 'color', 'camouflage', 'reptile'], riddle: 'Master of chromatic deceit whose skin mirrors whatever branch it claims.' },
+            { word: 'Platypus', level: 'c1', cat: 'nature', clues: ['Semi-aquatic egg-laying mammal endemic to eastern Australia.', 'Has a duck bill, beaver tail, otter feet, and venomous ankle spurs.'], taboo: ['bill', 'duck', 'australia', 'mammal'], riddle: 'Though slow to wrath, this Gondwanan oddity unites mammalian fur with an avian bill and venomous spurs.' },
+            { word: 'Volcano', level: 'a2', cat: 'nature', clues: ['Geological rupture through which molten lava, tephra, and steam erupt.', 'Forms towering mountains along tectonic plate boundaries.'], taboo: ['lava', 'eruption', 'mountain', 'magma'], riddle: 'A mountain with fire in its throat sleeping until tectonic fury shakes the earth.' },
+            // Daily Things & Technology
+            { word: 'Rotary Phone', level: 'b1', cat: 'tech', clues: ['Vintage communication hardware with a circular finger dial.', 'Predecessor to touch-tone keypads and cellular smartphones.'], taboo: ['call', 'dial', 'telephone', 'wire'], riddle: 'A heavy receiver coiled to a mechanical wheel where numbers were wound by finger.' },
+            { word: 'Smart Speaker', level: 'a2', cat: 'tech', clues: ['Voice-activated home audio assistant playing music and controlling smart devices.', 'Responds when called by its wake name.'], taboo: ['voice', 'alexa', 'assistant', 'music'], riddle: 'An ambient ear on the shelf answering queries spoken to the empty air.' },
+            // Abstract Concepts
+            { word: 'Nostalgia', level: 'b2', cat: 'abstract', clues: ['A bittersweet emotional longing for a bygone era or familiar past memories.', 'Triggered by retro aesthetics, songs, or scent.'], taboo: ['past', 'memories', 'yearning', 'homesick'], riddle: 'A bittersweet ache that paints the rearview mirror in warmer golden tones than today.' },
+            { word: 'Bureaucracy', level: 'c1', cat: 'abstract', clues: ['An administrative system governed by official routine, hierarchies, and rigid red tape.', 'Often critiqued for institutional inertia.'], taboo: ['paperwork', 'rules', 'government', 'office'], riddle: 'An endless labyrinth of rubber stamps, triplicate forms, and departmental deferral.' },
+            { word: 'Irony', level: 'c2', cat: 'abstract', clues: ['A state of affairs or an expression that deliberately contraries what is expected.', 'The tension between appearance and reality.'], taboo: ['opposite', 'expected', 'funny', 'sarcasm'], riddle: 'When the fire station burns to ashes while the crew inspects hydrants across town.' }
         ],
         where: [
-            { word: 'Colosseum', level: 'a2', cat: 'landmarks', clues: ['Flavian amphitheater located in the heart of Rome.', 'Historically hosted gladiatorial contests and public spectacles.'], taboo: ['rome', 'gladiator', 'italy', 'arena'] },
-            { word: 'Mariana Trench', level: 'b2', cat: 'extreme', clues: ['The deepest oceanic trench on planet Earth.', 'Located in the western Pacific with pressures exceeding 1,000 atmospheres.'], taboo: ['ocean', 'deep', 'sea', 'pacific'] },
-            { word: 'Bakery', level: 'a1', cat: 'places', clues: ['Establishment that bakes and retails bread, pastries, and croissants.', 'Fills the neighborhood street with aromas of fresh yeast and flour.'], taboo: ['bread', 'cake', 'flour', 'bake'] },
-            { word: 'Gotham City', level: 'b1', cat: 'fictional', clues: ['Dark, brooding fictional metropolis teeming with architectural noir.', 'Guarded under darkness by the Caped Crusader.'], taboo: ['batman', 'joker', 'city', 'dc'] }
+            // Famous Landmarks & World Wonders
+            { word: 'Colosseum', level: 'a2', cat: 'landmarks', clues: ['Flavian amphitheater located in the heart of Rome.', 'Historically hosted gladiatorial contests and public spectacles.'], taboo: ['rome', 'gladiator', 'italy', 'arena'], riddle: 'A travertine colossus standing where emperors turned thumbs down in the dust.' },
+            { word: 'Machu Picchu', level: 'b1', cat: 'landmarks', clues: ['Incan citadel set high in the Andes Mountains of Peru.', 'Renowned for dry-stone walls fused without mortar.'], taboo: ['peru', 'inca', 'andes', 'ruins'], riddle: 'A lost citadel carved from cloud-kissed granite crests high above the Urubamba.' },
+            // Everyday Places
+            { word: 'Bakery', level: 'a1', cat: 'places', clues: ['Establishment that bakes and retails bread, pastries, and croissants.', 'Fills the neighborhood street with aromas of fresh yeast and flour.'], taboo: ['bread', 'cake', 'flour', 'bake'], riddle: 'Follow the fragrance of proving yeast and caramelizing crusts at first daylight.' },
+            { word: 'Pharmacy', level: 'a2', cat: 'places', clues: ['Retail shop or hospital ward preparing and dispensing medicinal remedies.', 'Staffed by pharmacists and pharmacy technicians.'], taboo: ['medicine', 'drugs', 'doctor', 'prescription'], riddle: 'Where ailments find numbered vials and soothing salves beneath bright clinical lights.' },
+            // Extreme & Unusual Environments
+            { word: 'Mariana Trench', level: 'b2', cat: 'extreme', clues: ['The deepest oceanic trench on planet Earth.', 'Located in the western Pacific with pressures exceeding 1,000 atmospheres.'], taboo: ['ocean', 'deep', 'sea', 'pacific'], riddle: 'The planet’s profoundest abyss where abyssal creatures glide beneath immense pressure and perpetual night.' },
+            { word: 'International Space Station', level: 'b1', cat: 'extreme', clues: ['Habitable modular laboratory orbiting planet Earth in low Earth orbit.', 'Astronauts live and conduct experiments in zero-gravity.'], taboo: ['space', 'orbit', 'astronaut', 'nasa'], riddle: 'A floating outpost tracing sixteen sunrises a day beyond atmospheric embrace.' },
+            // Fictional Universes
+            { word: 'Hogwarts', level: 'a2', cat: 'fictional', clues: ['British boarding school of magic situated in the Scottish Highlands.', 'Divided into four houses with moving staircases.'], taboo: ['magic', 'potter', 'wizard', 'witch'], riddle: 'A castle of shifting turrets and enchanted ceilings teaching the wand-bearer’s craft.' },
+            { word: 'Gotham City', level: 'b1', cat: 'fictional', clues: ['Dark, brooding fictional metropolis teeming with architectural noir.', 'Guarded under darkness by the Caped Crusader.'], taboo: ['batman', 'joker', 'city', 'dc'], riddle: 'Gargoyles loom above mist-shrouded alleyways where an orphaned vigilante answers the bat-signal.' }
         ],
         when: [
-            { word: 'The Renaissance', level: 'b1', cat: 'eras', clues: ['A fervent period of European cultural, artistic, and scientific rebirth.', 'Bridged the gap between the Middle Ages and modern history.'], taboo: ['art', 'italy', 'davinci', 'rebirth'] },
-            { word: 'Winter Solstice', level: 'b2', cat: 'routines', clues: ['Astronomical phenomenon marking the day with the shortest period of daylight.', 'Occurs when one of the Earth’s poles has its maximum tilt away from the Sun.'], taboo: ['winter', 'short', 'sun', 'cold'] },
-            { word: 'Diwali', level: 'a2', cat: 'festivals', clues: ['Five-day Hindu festival celebrating the victory of light over darkness.', 'Celebrated with oil lamps, clay diyas, and fireworks.'], taboo: ['lights', 'india', 'festival', 'hindu'] }
+            // Historical Eras & Events
+            { word: 'The Renaissance', level: 'b1', cat: 'eras', clues: ['A fervent period of European cultural, artistic, and scientific rebirth.', 'Bridged the gap between the Middle Ages and modern history.'], taboo: ['art', 'italy', 'davinci', 'rebirth'], riddle: 'When humanism awoke from medieval cloistered dreams and painted perspective into reality.' },
+            { word: 'The Moon Landing', level: 'a2', cat: 'eras', clues: ['Historic July 1969 Apollo 11 mission when humans first walked on lunar regolith.', 'Commemorated by the famous phrase "one small step for man".'], taboo: ['apollo', 'armstrong', 'space', 'lunar'], riddle: 'A boot print pressed into cosmic grey dust witnessed live across monochrome television screens.' },
+            // Daily Routine & Seasons
+            { word: 'Morning Rush Hour', level: 'a1', cat: 'routines', clues: ['Peak commuting hours when roads and trains are densely packed with workers.', 'Happens early on weekday mornings.'], taboo: ['commute', 'traffic', 'morning', 'train'], riddle: 'A symphony of car horns, hurried sips of espresso, and crowded platform turnstiles.' },
+            { word: 'Winter Solstice', level: 'b2', cat: 'routines', clues: ['Astronomical phenomenon marking the day with the shortest period of daylight.', 'Occurs when one of the Earth’s poles has its maximum tilt away from the Sun.'], taboo: ['winter', 'short', 'sun', 'cold'], riddle: 'The longest mantle of darkness draped over the hemisphere before the light turns north once more.' },
+            // Future & Sci-Fi Timelines
+            { word: 'Colonization of Mars', level: 'b2', cat: 'future', clues: ['Hypothetical permanent human habitation and terraforming of the Red Planet.', 'Involves pressurized domes and greenhouse habitats.'], taboo: ['mars', 'red planet', 'colony', 'space'], riddle: 'When boots tread red oxidized sands and greenhouses bloom beneath a pale distant sun.' },
+            // Cultural Holidays & Festivals
+            { word: 'Diwali', level: 'a2', cat: 'festivals', clues: ['Five-day Hindu festival celebrating the victory of light over darkness.', 'Celebrated with oil lamps, clay diyas, and fireworks.'], taboo: ['lights', 'india', 'festival', 'hindu'], riddle: 'Rows of terracotta lamps glowing across thresholds to banish shadow from the hearth.' },
+            { word: 'Halloween', level: 'a1', cat: 'festivals', clues: ['Celebrated on October 31st with costumes, trick-or-treating, and jack-o-lanterns.', 'Originated from ancient Celtic harvest festivals like Samhain.'], taboo: ['costume', 'candy', 'pumpkin', 'spooky'], riddle: 'Carved gourds grin in the crisp autumn night while disguised children knock on doors.' }
         ],
         why: [
-            { word: 'Why leaves change color', level: 'b1', cat: 'science', clues: ['Deciduous trees cease chlorophyll production as sunlight wanes.', 'Carotenoids and anthocyanins unmask vibrant yellow and red hues.'], taboo: ['autumn', 'chlorophyll', 'fall', 'green'] },
-            { word: 'Why people dream', level: 'b2', cat: 'psychology', clues: ['Neurobiological memory consolidation and threat simulation occurring during REM sleep.', 'Synthesizes subconscious associations and emotions.'], taboo: ['sleep', 'night', 'brain', 'rem'] },
-            { word: 'Fall of the Western Roman Empire', level: 'c1', cat: 'history', clues: ['Catalyzed by military overextension, economic instability, and successive migration waves.', 'Culminated in 476 CE when Romulus Augustulus was deposed.'], taboo: ['rome', 'barbarians', 'collapse', 'empire'] }
+            // Scientific Phenomena
+            { word: 'Why leaves change color', level: 'b1', cat: 'science', clues: ['Deciduous trees cease chlorophyll production as sunlight wanes.', 'Carotenoids and anthocyanins unmask vibrant yellow and red hues.'], taboo: ['autumn', 'chlorophyll', 'fall', 'green'], riddle: 'When green retreat leaves hidden amber and crimson sugars blazing in the frost.' },
+            { word: 'Why ice floats', level: 'b2', cat: 'science', clues: ['Water expands upon freezing due to stable hydrogen bonding forming a crystalline lattice.', 'Solid state possesses lower density than liquid water.'], taboo: ['water', 'freeze', 'cold', 'density'], riddle: 'A crystalline anomaly where the solid rests gently above its own liquid mother.' },
+            { word: 'Why we yawn', level: 'a2', cat: 'science', clues: ['Involuntary reflex inhaling air, cooling cerebral blood, and promoting alertness.', 'Famously contagious among social groups.'], taboo: ['sleep', 'tired', 'mouth', 'contagious'], riddle: 'A wide-jawed reflex that cools the tired brain and ripples irresistibly through the room.' },
+            // Human Psychology & Behavior
+            { word: 'Why people dream', level: 'b2', cat: 'psychology', clues: ['Neurobiological memory consolidation and threat simulation occurring during REM sleep.', 'Synthesizes subconscious associations and emotions.'], taboo: ['sleep', 'night', 'brain', 'rem'], riddle: 'Subconscious cinema projecting nocturnal metaphors while the waking world is stilled.' },
+            // Historical Turning Points
+            { word: 'Why the Roman Empire fell', level: 'c1', cat: 'history', clues: ['Catalyzed by military overextension, economic instability, and successive migration waves.', 'Culminated in 476 CE when Romulus Augustulus was deposed.'], taboo: ['rome', 'barbarians', 'collapse', 'empire'], riddle: 'A slow crumbling of frontiers under currency debasement, factional discord, and migratory pressure.' },
+            { word: 'Why the Industrial Revolution started in Britain', level: 'c1', cat: 'history', clues: ['Abundance of domestic coal and iron, patent protections, agricultural surpluses, and capital.', 'Spurred mechanized textile production and steam locomotion.'], taboo: ['coal', 'factory', 'steam', 'england'], riddle: 'Where coal, canals, capital, and mechanical looms converged to forge the modern age.' }
         ],
         how: [
-            { word: 'How Wi-Fi works', level: 'b1', cat: 'inventions', clues: ['High-frequency radio waves transmitting encoded packets between routers and antennas.', 'Operates on standard 2.4 GHz and 5 GHz frequency bands.'], taboo: ['internet', 'wireless', 'router', 'network'] },
-            { word: 'How to start a fire without matches', level: 'b2', cat: 'skills', clues: ['Generating sufficient friction or focused sunlight to ignite fine combustible tinder.', 'Utilizes bow drills, flint-and-steel strikers, or optical lenses.'], taboo: ['match', 'spark', 'flame', 'friction'] },
-            { word: 'How to bake sourdough bread', level: 'b1', cat: 'crafts', clues: ['Fermenting dough via wild yeast and lactic acid bacteria rather than baker’s yeast.', 'Requires a cultured starter, stretching, proofing, and steam.'], taboo: ['flour', 'starter', 'yeast', 'oven'] }
+            // Inventions & Mechanics
+            { word: 'How Wi-Fi works', level: 'b1', cat: 'inventions', clues: ['High-frequency radio waves transmitting encoded packets between routers and antennas.', 'Operates on standard 2.4 GHz and 5 GHz frequency bands.'], taboo: ['internet', 'wireless', 'router', 'network'], riddle: 'Invisible microwave whispers hopping through antennas to bridge screens across the room.' },
+            { word: 'How chocolate is made', level: 'a2', cat: 'inventions', clues: ['Fermenting, drying, roasting, and grinding cacao beans into cocoa butter and liquor.', 'Conching with sugar and milk to produce silky confections.'], taboo: ['cocoa', 'candy', 'sweet', 'bean'], riddle: 'Bitter jungle pods fermented, roasted, and conched into silky dark indulgence.' },
+            // Survival & Practical Skills
+            { word: 'How to start a fire without matches', level: 'b2', cat: 'skills', clues: ['Generating sufficient friction or focused sunlight to ignite fine combustible tinder.', 'Utilizes bow drills, flint-and-steel strikers, or optical lenses.'], taboo: ['match', 'spark', 'flame', 'friction'], riddle: 'Spinning dry wood until smoking ash catches breath and feeds a newborn blaze.' },
+            { word: 'How to tie a sailor’s knot', level: 'b1', cat: 'skills', clues: ['Creating a secure loop that will not slip under tension yet unties easily when slackened.', 'Examples include the bowline and clove hitch.'], taboo: ['rope', 'loop', 'boat', 'tie'], riddle: 'Intertwining braided cordage into a bight that holds firm against gales but loosens on command.' },
+            // Culinary & Crafting
+            { word: 'How to bake sourdough bread', level: 'b1', cat: 'crafts', clues: ['Fermenting dough via wild yeast and lactic acid bacteria rather than baker’s yeast.', 'Requires a cultured starter, stretching, proofing, and steam.'], taboo: ['flour', 'starter', 'yeast', 'oven'], riddle: 'Nurturing bubbling micro-flora with flour and water to lift a crisp blistered loaf.' },
+            { word: 'How to knit a scarf', level: 'a2', cat: 'crafts', clues: ['Looping yarn through consecutive stitches using two pointed needles.', 'Alternating knit and purl rows to weave warm fabric.'], taboo: ['yarn', 'wool', 'needles', 'stitch'], riddle: 'Guiding wool through interlocking loops on twin needles to wrap winter in warmth.' }
         ]
     };
 
@@ -344,8 +388,12 @@
                 const modeLabels = {
                     coop: 'Cooperative (A0–A2) 🤝',
                     taboo: 'Speed Run / Taboo (B1–B2) ⚡',
-                    riddle: 'Masterclass Riddle (C1–C2) 🧠'
+                    riddle: 'The Masterclass Riddle (C1–C2) 🧠'
                 };
+
+                const isCoop = state.mode === 'coop';
+                const isTaboo = state.mode === 'taboo';
+                const isRiddle = state.mode === 'riddle';
 
                 body.innerHTML = `
                     <div class="guess-game-wrapper">
@@ -371,24 +419,38 @@
                                 <div class="guess-secret-shield-msg">🛡️ Host Screen Safe — Press 'H' or Click Host View to Reveal</div>
                                 <div class="guess-secret-word">${gameUtils.escapeHtml(card.word)}</div>
 
-                                ${state.mode === 'taboo' ? `
+                                ${isTaboo ? `
                                     <div class="guess-taboo-box">
-                                        <div class="guess-taboo-title">🚫 Taboo Forbidden Words (Do not say!):</div>
+                                        <div class="guess-taboo-title">🚫 Taboo Forbidden Root Words (Hard Ban):</div>
                                         <div class="guess-taboo-tags">
                                             ${(card.taboo || []).map(w => `<span class="guess-taboo-tag">${gameUtils.escapeHtml(w)}</span>`).join('')}
                                         </div>
+                                    </div>
+                                ` : ''}
+
+                                ${isCoop ? `
+                                    <div style="margin-top:0.75rem; font-size:0.85rem; color:#94a3b8; font-style:italic;">
+                                        💡 Clue-giver: Use simple sentence stems ("It is...", "It has...", "It does...") or gestures to describe to the group!
                                     </div>
                                 ` : ''}
                             </div>
 
                             <!-- Clues & Riddles Box -->
                             <div class="guess-clues-section">
-                                ${card.clues.slice(0, state.cluesRevealed).map((clue, idx) => `
-                                    <div class="guess-clue-card">
-                                        <span class="guess-clue-index">Clue #${idx + 1}:</span>
-                                        <span>${gameUtils.escapeHtml(clue)}</span>
+                                ${isRiddle ? `
+                                    <div class="guess-riddle-card">
+                                        <div class="guess-riddle-heading">📜 Formal Deductive Riddle & Nuance:</div>
+                                        <div class="guess-riddle-body">"${gameUtils.escapeHtml(card.riddle || card.clues[0])}"</div>
+                                        <div class="guess-riddle-instruction">Deduce the exact term and debate its register and connotations!</div>
                                     </div>
-                                `).join('')}
+                                ` : `
+                                    ${card.clues.slice(0, state.cluesRevealed).map((clue, idx) => `
+                                        <div class="guess-clue-card">
+                                            <span class="guess-clue-index">Clue #${idx + 1}:</span>
+                                            <span>${gameUtils.escapeHtml(clue)}</span>
+                                        </div>
+                                    `).join('')}
+                                `}
                             </div>
 
                             <!-- Action Controls -->

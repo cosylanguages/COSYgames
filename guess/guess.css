@@ -284,6 +284,35 @@
     font-size: 0.85rem;
 }
 
+/* Masterclass Riddle Card */
+.guess-riddle-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+.guess-riddle-heading {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fbbf24;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+.guess-riddle-body {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #f1f5f9;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    font-family: var(--cg-font-heading, Georgia, serif);
+}
+.guess-riddle-instruction {
+    font-size: 0.85rem;
+    color: var(--guess-text-muted);
+}
+
 /* Action Controls Panel */
 .guess-actions-panel {
     display: flex;
