@@ -307,6 +307,8 @@
                 }
             }
         });
+
+        updateBtn();
     }
 
     function renderSetup() {
@@ -806,27 +808,28 @@
             function renderRoundUI() {
                 const card = state.currentCard;
                 const body = document.getElementById('go-body');
+                const T = getT();
 
                 const modeLabels = {
-                    normal: 'Normal Description 🗣️',
-                    charades: 'Charades & Pictionary 🎭',
-                    letter: `Constrained Letter [${state.constrainedLetter}] 🔤`,
-                    synonyms: 'Synonyms & Antonyms Only 🔄',
-                    oneword: 'One-Word Clues ☝️',
-                    taboo: 'Speed Run / Taboo ⚡',
-                    riddle: 'The Masterclass Riddle 🧠',
-                    coop: 'Cooperative Stems 🤝'
+                    normal: T('ui.mode_normal', null, 'Normal Description 🗣️'),
+                    charades: T('ui.mode_charades', null, 'Charades & Pictionary 🎭'),
+                    letter: T('ui.mode_letter', { letter: state.constrainedLetter }, 'Constrained Letter 🔤'),
+                    synonyms: T('ui.mode_synonyms', null, 'Synonyms & Antonyms Only 🔄'),
+                    oneword: T('ui.mode_oneword', null, 'One-Word Clues ☝️'),
+                    taboo: T('ui.mode_taboo', null, 'Speed Run / Taboo ⚡'),
+                    riddle: T('ui.mode_riddle', null, 'The Masterclass Riddle 🧠'),
+                    coop: T('ui.mode_coop', null, 'Cooperative Stems 🤝')
                 };
 
                 const modeInstructions = {
-                    normal: 'Describe the word verbally using full sentences and natural circumlocution.',
-                    charades: 'Mute / Silent! Act out actions or draw without speaking or mouthing words.',
-                    letter: `Constraint: Every clue word or initial explanation must start with the letter "${state.constrainedLetter}"!`,
-                    synonyms: 'Give only direct synonyms, closely-related meaning equivalents, or antonyms!',
-                    oneword: 'Clue-giver may state exactly ONE single word per guessing attempt!',
-                    taboo: 'Describe the secret word without uttering ANY of the forbidden taboo words!',
-                    riddle: 'Deduce the secret concept from the cryptic literary or philosophical riddle below.',
-                    coop: 'Use simple sentence stems ("It is...", "It has...", "It does...") to help your team.'
+                    normal: T('ui.instr_normal', null, 'Describe the word verbally using full sentences and natural circumlocution.'),
+                    charades: T('ui.instr_charades', null, 'Mute / Silent! Act out actions or draw without speaking or mouthing words.'),
+                    letter: T('ui.instr_letter', { letter: state.constrainedLetter }, 'Every clue word must start with the set letter!'),
+                    synonyms: T('ui.instr_synonyms', null, 'Give only direct synonyms, closely-related meaning equivalents, or antonyms!'),
+                    oneword: T('ui.instr_oneword', null, 'Clue-giver may state exactly ONE single word per guessing attempt!'),
+                    taboo: T('ui.instr_taboo', null, 'Describe the secret word without uttering ANY of the forbidden taboo words!'),
+                    riddle: T('ui.instr_riddle', null, 'Deduce the secret concept from the cryptic literary or philosophical riddle below.'),
+                    coop: T('ui.instr_coop', null, 'Use simple sentence stems to help your team.')
                 };
 
                 const isTaboo = state.mode === 'taboo';
@@ -835,10 +838,10 @@
                 body.innerHTML = `
                     <div class="guess-game-wrapper">
                         <div class="guess-status-bar">
-                            <span class="guess-edition-pill">Category: ${card.cat || state.edition}</span>
+                            <span class="guess-edition-pill">${T('ui.category_pill', { cat: card.cat || state.edition }, `Category: ${card.cat || state.edition}`)}</span>
                             <span class="guess-mode-pill">${modeLabels[state.mode] || 'Standard'}</span>
                             <div style="font-weight:600; color:#fbbf24;">
-                                Round ${COSYGame.round} / ${COSYGame.maxRounds}
+                                ${T('ui.round_progress', { round: COSYGame.round, total: COSYGame.maxRounds }, `Round ${COSYGame.round} / ${COSYGame.maxRounds}`)}
                             </div>
                         </div>
 
@@ -861,7 +864,7 @@
                         <!-- Mystery Secret Card -->
                         <div class="guess-mystery-card">
                             <div class="guess-secret-container ${state.isShielded ? 'guess-secret-shielded' : ''}" id="guess-secret-container">
-                                <div class="guess-secret-shield-msg">🛡️ Host Screen Safe — Press 'H' or Click Host View to Reveal</div>
+                                <div class="guess-secret-shield-msg">${T('ui.shield_message', null, "🛡️ Host Screen Safe — Press 'H' or Click Host View to Reveal")}</div>
                                 <div class="guess-secret-word">${gameUtils.escapeHtml(card.word)}</div>
 
                                 ${isTaboo ? `
@@ -878,9 +881,9 @@
                             <div class="guess-clues-section">
                                 ${isRiddle ? `
                                     <div class="guess-riddle-card">
-                                        <div class="guess-riddle-heading">📜 Formal Deductive Riddle & Nuance:</div>
+                                        <div class="guess-riddle-heading">${T('ui.riddle_heading', null, '📜 Formal Deductive Riddle & Nuance:')}</div>
                                         <div class="guess-riddle-body">"${gameUtils.escapeHtml(card.riddle || card.clues[0])}"</div>
-                                        <div class="guess-riddle-instruction">Deduce the exact term and debate its register and connotations!</div>
+                                        <div class="guess-riddle-instruction">${T('ui.riddle_instruction', null, 'Deduce the exact term and debate its register and connotations!')}</div>
                                     </div>
                                 ` : `
                                     ${card.clues.slice(0, state.cluesRevealed).map((clue, idx) => `
@@ -910,15 +913,15 @@
                         <!-- Scoreboard -->
                         <div class="guess-teams-tracker">
                             <div class="guess-team-box">
-                                <div class="guess-team-label">Team A</div>
+                                <div class="guess-team-label">${T('ui.team_a', null, 'Team A')}</div>
                                 <div class="guess-team-score" id="score-team-a">${state.teamA}</div>
                             </div>
                             <div class="guess-team-box">
-                                <div class="guess-team-label">Team B</div>
+                                <div class="guess-team-label">${T('ui.team_b', null, 'Team B')}</div>
                                 <div class="guess-team-score" id="score-team-b">${state.teamB}</div>
                             </div>
                             <div class="guess-team-box">
-                                <div class="guess-team-label">Overall Score</div>
+                                <div class="guess-team-label">${T('ui.overall_score', null, 'Overall Score')}</div>
                                 <div class="guess-team-score">${COSYGame.score}</div>
                             </div>
                         </div>
@@ -983,22 +986,22 @@
             body.innerHTML = `
                 <div class="guess-setup-container" style="text-align:center;">
                     <div style="font-size:3rem; margin-bottom:0.5rem;">🏆</div>
-                    <h2 class="guess-setup-title">Game Finished!</h2>
-                    <p class="guess-setup-subtitle">Great teamwork and deduction across the rounds.</p>
+                    <h2 class="guess-setup-title">${T('ui.game_finished', null, 'Game Finished!')}</h2>
+                    <p class="guess-setup-subtitle">${T('ui.end_subtitle', null, 'Great teamwork and deduction across the rounds.')}</p>
                     <div style="font-size:1.5rem; margin-bottom:1.5rem; color:#fbbf24;">
-                        Final Score: <strong>${COSYGame.score}</strong>
+                        ${T('ui.final_score', null, 'Final Score:')} <strong>${COSYGame.score}</strong>
                     </div>
                     <div class="guess-teams-tracker" style="margin-bottom:1.5rem;">
                         <div class="guess-team-box">
-                            <div class="guess-team-label">Team A</div>
+                            <div class="guess-team-label">${T('ui.team_a', null, 'Team A')}</div>
                             <div class="guess-team-score">${state.teamA}</div>
                         </div>
                         <div class="guess-team-box">
-                            <div class="guess-team-label">Team B</div>
+                            <div class="guess-team-label">${T('ui.team_b', null, 'Team B')}</div>
                             <div class="guess-team-score">${state.teamB}</div>
                         </div>
                     </div>
-                    <button class="guess-start-btn" onclick="COSY_GAME.reset()">Play Another Edition ↺</button>
+                    <button class="guess-start-btn" onclick="COSY_GAME.reset()">${T('ui.play_another', null, 'Play Another Edition ↺')}</button>
                 </div>
             `;
         }
