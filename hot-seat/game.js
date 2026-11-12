@@ -94,7 +94,7 @@
                 try {
                     await COSYLoader.loadLevelData(lang, level);
                 } catch (e) {
-                    console.log('Level data fallback', e);
+                    console.warn('Level data fallback', e);
                 }
             }
 

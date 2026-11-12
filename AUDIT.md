@@ -1,5 +1,34 @@
 # Repository Audit: COSYgames
 
+> **Historical snapshot — not a live description of `main`.**
+> This report captures the repository as of commit `19d3b2b` (2026-10-14) and is kept for historical reference.
+> Parts of it no longer match the current tree (branch count, the `vocabulary/` mirror, `shared/js/core/` contents,
+> `100-questions/decks/` filenames, and `i18n/games/` extensions have since changed).
+> For the current, machine-checked view of game metadata use `docs/GAME_METADATA.md` and `node scripts/metadata-report.js`.
+
+## Audit addendum (2026-11-12)
+
+Corrections applied on top of the tree described below; the rest of this document remains a
+historical snapshot.
+
+| Area | Finding | Action |
+| --- | --- | --- |
+| i18n (`guess`) | `guess/game.js` called 8 `T()` keys never defined in `i18n/games/guess.js`, so in-game chrome (team buttons, mode labels, score, end screen, category pill, round counter, host-shield message) leaked English into every non-English UI. | Added the missing keys (now 42 keys × 7 languages) and routed the remaining hardcoded strings through `T()`. |
+| i18n (shared chrome) | `Current Score:` / `High Score:` sidebar labels were hardcoded English on all 21 game pages while their siblings used `data-i18n`. | Added `ui_current_score` / `ui_high_score` to all 7 language blocks in `shared/js/i18n.js` and `data-i18n` attributes to every game page. |
+| Tests | `tests/translations.test.js` ran `git checkout -- i18n/games/` in a `finally` block, silently discarding uncommitted translation work. | Replaced with an in-memory snapshot/restore; git state is no longer mutated. |
+| Tests | No guard existed for `T()` keys referenced in `game.js` but absent from the i18n files — the root cause of the `guess` bug. | Added `tests/i18n-key-coverage.test.js` (game `T()` coverage, six-language completeness, shared `data-i18n` coverage, seven-language key parity). |
+| SEO | `guess/` is a canonical, internally linked franchise page but was absent from `sitemap.xml`. | Added the `<loc>` entry. |
+| Console | `fluency-flow/game.js` and `hot-seat/game.js` used `console.log` for loader-fallback errors; 8 other games use `console.warn`. | Aligned to `console.warn`. |
+
+### Known, intentional items (no change)
+
+- `shared/js/core/entitlements.js` is referenced by no page or script on `main`; it is dormant access-control scaffolding retained for future use.
+- Metadata "soft diffs" (game modes for `etymology-explorer` / `what-gender-is-it`; `learning_languages` on 11 games) are intentional and validated by `node scripts/metadata-report.js`.
+- 17 `// TODO: verify level classification` markers live in `data/*/unsorted/` staging files — legitimate data-entry notes.
+- `shared/js/cosy-loader.js` is intentionally double-loaded on some pages (idempotent guard).
+
+---
+
 This document presents a comprehensive read-only audit of the `COSYgames` repository within the COSY ecosystem (**COSYlanguages**, **COSYdata**, **COSYtools**, **COSYmanuals**, **COSYplatform**, **COSYevents**, **COSYgames**).
 
 ---
@@ -122,7 +151,7 @@ Below is the directory tree to depth 3 with direct file counts, total nested fil
     - `css/`: (7 direct files, 7 total nested files) — Ecosystem CSS stylesheets (nav, hub, tokens, games, motion).
     - `images/`: (1 direct file, 1 total nested file) — Shared branding image assets (`cosygames-logo.png`).
     - `js/`: (7 direct files, 8 total nested files) — Ecosystem JavaScript scripts (SSO auth, CMS editor, vocab loader, i18n).
-      - `core/`: (1 direct file, 1 total nested file) — Core ecosystem loading helper (`cosy-core.js`).
+      - `core/`: (1 direct file, 1 total nested file) — Access-control/entitlements helper (`entitlements.js`).
     - `styles/`: (1 direct file, 1 total nested file) — Standardized game canvas UI layout stylesheet (`game-styles.css`).
     - `utils/`: (1 direct file, 1 total nested file) — Core shared game utilities (`game-utils.js`).
   - `story-chain/`: (3 direct files, 3 total nested files) — Collaborative sentence-building story chain game ("Story Chain").
@@ -152,10 +181,10 @@ Below is the directory tree to depth 3 with direct file counts, total nested fil
 | **Core Game Datasets** (`data/<lang>/*.js`) | `en`, `es`, `de`, `fr`, `it`, `ru`, `el`, `hy`, `ka`, `ba`, `br`, `pt`, `tt` | A0, A1, A2, B1, B2, C1, C2 | `data/<lang>/` (`action.js`, `battle.js`, `critic.js`, `etymology.js`, `fluency.js`, `identity.js`, `opinions.js`, `storychain.js`, `wordlinker.js`) |
 | **Grammatical Gender Datasets** | `fr`, `de`, `es`, `it`, `ru` | A1, A2, B1, B2, C1, C2 | `data/gender/a1.js` through `c2.js`, `what-gender-is-it/` |
 | **This or That Decks** | `en`, `fr`, `it`, `ru`, `el` | A0_A1, A2, B1, B2 | `this-or-that/decks/cefr_all_decks.json`, `french.json`, `italian.json`, `russian.json`, `greek.json`, `this-or-that/decks/en/*.json` |
-| **100 Questions Decks** | `en`, `es`, `de`, `fr`, `it`, `ru` | A1, A2, B1, B2 | `100-questions/decks/` (`general.js`, `casual.js`, `deep.js`, `would_you_rather.js`, `teacher.js`) |
+| **100 Questions Decks** | `en`, `es`, `de`, `fr`, `it`, `ru` | A1, A2, B1, B2 | `100-questions/decks/` (`civic.js`, `family.js`, `friends.js`, `interview.js`, `myself.js`, `netflix.js`, `student.js`, `teacher.js`) |
 | **Canonical Vocabulary Mirror** | `en` | A0, A1 | `vocabulary/_canonical/en/A0-A1_master.json` |
 | **Unsorted Staging Data** | `fr`, `it`, `ru`, `el`, `es`, `de`, `hy`, `ka`, `ba`, `br`, `cv`, `pt`, `tt` | A2 | `data/<lang>/unsorted/` |
-| **UI Translations (i18n)** | `en`, `es`, `de`, `fr`, `it`, `ru`, `el`, `hy`, `ka`, `ba`, `br`, `cv`, `pt`, `tt` | N/A (UI text) | `shared/js/i18n.js`, `i18n/games/*.json` |
+| **UI Translations (i18n)** | `en`, `es`, `de`, `fr`, `it`, `ru`, `el`, `hy`, `ka`, `ba`, `br`, `cv`, `pt`, `tt` | N/A (UI text) | `shared/js/i18n.js`, `i18n/games/*.js` |
 
 ---
 

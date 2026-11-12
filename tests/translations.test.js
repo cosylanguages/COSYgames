@@ -155,8 +155,17 @@ test('translations integrity and pipeline tests', async (t) => {
   });
 
   await t.test('e. Round trip with temp copies (including _common)', () => {
+    const gamesDir = path.join(__dirname, '..', 'i18n', 'games');
     const tmpDir = path.join(__dirname, '..', 'translations', 'tmp_test');
     fs.mkdirSync(tmpDir, { recursive: true });
+
+    // Snapshot only the files this test may rewrite, then restore those exact
+    // bytes afterwards. A blanket `git checkout -- i18n/games/` would discard
+    // unrelated uncommitted work in this directory.
+    const snapshot = new Map();
+    for (const f of fs.readdirSync(gamesDir)) {
+      snapshot.set(f, fs.readFileSync(path.join(gamesDir, f)));
+    }
 
     try {
       const exportCmd = `node scripts/translations-export.js fr --game _common`;
@@ -187,7 +196,9 @@ test('translations integrity and pipeline tests', async (t) => {
         'Paramètres'
       );
     } finally {
-      execSync('git checkout -- i18n/games/', { cwd: path.join(__dirname, '..') });
+      for (const [f, bytes] of snapshot) {
+        fs.writeFileSync(path.join(gamesDir, f), bytes);
+      }
       fs.rmSync(tmpDir, { recursive: true, force: true });
     }
   });

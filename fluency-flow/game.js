@@ -138,7 +138,7 @@
                 try {
                     await COSYLoader.loadLevelData(lang, level, 'fluency');
                 } catch (e) {
-                    console.log('Level data load fallback', e);
+                    console.warn('Level data load fallback', e);
                 }
             }
 
