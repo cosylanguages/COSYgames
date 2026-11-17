@@ -1,0 +1,30 @@
+{
+  "name": "COSYgames",
+  "short_name": "COSYgames",
+  "description": "20 interactive language-learning games: vocabulary, speaking, mystery and puzzles. Free, no account needed.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#416b49",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "shared/images/cosygames-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "shared/images/cosygames-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "games"
+  ],
+  "lang": "en"
+}

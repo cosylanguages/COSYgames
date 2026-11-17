@@ -139,7 +139,7 @@ test('f. levelCode("Starter (A1)") === "A1", levelCode("A2") === "A2"', () => {
 test('g. Opt-in guarantee: exactly emoji-odyssey, guess, hot-seat, identity-mystery, last-letter, object-quest, and word-linker game.js reference COSYVocab', () => {
     const gamesDir = path.join(__dirname, '..');
     const files = fs.readdirSync(gamesDir, { recursive: true });
-    const gameJsFiles = files.filter(f => f.endsWith('game.js'));
+    const gameJsFiles = files.filter(f => f.endsWith('game.js') && !f.split(path.sep).includes('native'));
 
     const expectedGames = ['emoji-odyssey', 'guess', 'hot-seat', 'identity-mystery', 'last-letter', 'object-quest', 'word-linker'];
     const foundGames = [];

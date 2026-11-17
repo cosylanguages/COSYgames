@@ -107,7 +107,7 @@ test('shared i18n.js: every data-i18n key used in a page is defined in all seven
   const failures = [];
 
   const htmlFiles = fs.readdirSync(ROOT)
-    .filter((name) => fs.existsSync(path.join(ROOT, name, 'index.html')))
+    .filter((name) => name !== 'native' && fs.existsSync(path.join(ROOT, name, 'index.html')))
     .map((name) => path.join(name, 'index.html'));
   htmlFiles.push('index.html');
 

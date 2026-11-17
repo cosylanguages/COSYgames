@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SCAN_EXT = new Set(['.html', '.xml', '.txt', '.js']);
-const SKIP_DIRS = new Set(['.git', 'node_modules', 'tests', 'docs', '.github']);
+const SKIP_DIRS = new Set(['.git', 'node_modules', 'tests', 'docs', '.github', 'native']);
 const END = '(?![A-Za-z0-9_-])'; // so ".../COSYlanguages" never matches ".../COSYlanguagesss"
 const ANY_COSY_URL = /https?:\/\/[a-z0-9.-]+\.github\.io\/COSY[A-Za-z0-9_-]*/g;
 

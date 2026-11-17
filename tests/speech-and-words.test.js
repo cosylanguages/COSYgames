@@ -156,7 +156,7 @@ test('d. wordSet(): with a stub fetch -> Set of lower-cased words; failure -> nu
 test('e. Opt-in guarantee: exactly emoji-odyssey, guess, hot-seat, identity-mystery, last-letter, object-quest, and word-linker game.js reference COSYVocab', () => {
     const gamesDir = path.join(__dirname, '..');
     const files = fs.readdirSync(gamesDir, { recursive: true });
-    const gameJsFiles = files.filter(f => f.endsWith('game.js'));
+    const gameJsFiles = files.filter(f => f.endsWith('game.js') && !f.split(path.sep).includes('native'));
 
     const expectedGames = ['emoji-odyssey', 'guess', 'hot-seat', 'identity-mystery', 'last-letter', 'object-quest', 'word-linker'];
     const foundGames = [];

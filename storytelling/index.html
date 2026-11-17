@@ -1,5 +1,15 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8">
+    <!-- cosy:pwa:start -->
+    <link rel="manifest" href="../manifest.json">
+    <script>
+      if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('../sw.js').catch(() => {});
+        });
+      }
+    </script>
+    <!-- cosy:pwa:end -->
 <title>Story Weaver Redirect - COSYgames</title>
     <meta name="robots" content="noindex, follow">
     <meta name="description" content="Redirecting to Story Weaver language learning game on COSYgames.">

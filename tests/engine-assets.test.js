@@ -24,7 +24,7 @@ test('All relative CSS and JS links in HTML files exist on disk', () => {
     const list = fs.readdirSync(dir);
     list.forEach(file => {
       const fullPath = path.join(dir, file);
-      if (file === 'node_modules' || file === '.git') return;
+      if (file === 'node_modules' || file === '.git' || file === 'native') return;
       const stat = fs.statSync(fullPath);
       if (stat && stat.isDirectory()) {
         results = results.concat(findHtmlFiles(fullPath));
