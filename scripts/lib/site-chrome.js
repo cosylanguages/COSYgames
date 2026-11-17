@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const { loadConfig } = require('./site-urls');
 
-const SKIP_DIRS = new Set(['.git', 'node_modules', 'tests', 'docs', '.github', 'shared']);
+const SKIP_DIRS = new Set(['.git', 'node_modules', 'tests', 'docs', '.github', 'shared', 'native']);
 const BLOCK = /^([ \t]*)<!-- cosy:chrome:([a-z0-9-]+) -->[ \t]*\n([\s\S]*?)\n\1<!-- \/cosy:chrome:\2 -->/gm;
 const RAW_NAV = /<nav class="cg-nav">/;
 const RAW_FOOTER = /<footer class="cg-footer">/;

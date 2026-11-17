@@ -3,12 +3,22 @@
 <head>
     <script>if(!location.pathname.endsWith('/')&&!location.pathname.endsWith('.html')){location.replace(location.pathname+'/'+location.search+location.hash);}</script>
     <meta charset="UTF-8">
+    <!-- cosy:pwa:start -->
+    <link rel="manifest" href="../manifest.json">
+    <script>
+      if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('../sw.js').catch(() => {});
+        });
+      }
+    </script>
+    <!-- cosy:pwa:end -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This or That? 🔀 - COSYgames Language Learning</title>
     <meta name="description" content="Swipe choice cards and justify your decisions in your target language.">
     <meta name="keywords" content="this or that, speaking practice, conversation drills, CEFR decks, fluency practice">
 
-    <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+    <link rel="icon" href="../shared/images/cosylanguages.png">
 
     <link rel="stylesheet" href="../shared/css/tokens.css">
     <link rel="stylesheet" href="../shared/css/motion.css">
@@ -133,7 +143,7 @@
     <footer class="cg-footer">
         <div class="cg-footer-inner">
             <div class="cg-footer-brand">
-                <img src="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png" alt="COSYlanguages logo" class="cg-footer-logo" onerror="this.style.display='none'">
+                <img src="../shared/images/cosylanguages.png" alt="COSYlanguages logo" class="cg-footer-logo" onerror="this.style.display='none'">
                 <span>COSYlanguages</span>
             </div>
             <p class="cg-footer-tagline" data-i18n="footer_tagline">Your friendly corner to master new languages and connect with the world. 🌍</p>

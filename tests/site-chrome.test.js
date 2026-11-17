@@ -35,7 +35,7 @@ test('repository pages are up to date with shared/chrome templates, and none has
 
 test('every page uses the same nav-game and footer-game output (single source)', () => {
   const games = fs.readdirSync(repoRoot, { withFileTypes: true })
-    .filter((d) => d.isDirectory() && fs.existsSync(path.join(repoRoot, d.name, 'index.html')))
+    .filter((d) => d.isDirectory() && d.name !== 'native' && fs.existsSync(path.join(repoRoot, d.name, 'index.html')))
     .map((d) => fs.readFileSync(path.join(repoRoot, d.name, 'index.html'), 'utf8'))
     .filter((t) => t.includes('cosy:chrome:nav-game'));
   assert.ok(games.length >= 20, 'expected the game pages to use nav-game');

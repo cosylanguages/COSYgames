@@ -6,7 +6,7 @@ const path = require('node:path');
 test('page wiring and script tag ordering tests', async (t) => {
     const rootDir = path.join(__dirname, '..');
     const files = fs.readdirSync(rootDir, { recursive: true });
-    const gameJsFiles = files.filter(f => f.endsWith('game.js') && !f.includes('node_modules'));
+    const gameJsFiles = files.filter(f => f.endsWith('game.js') && !f.includes('node_modules') && !f.split(path.sep).includes('native'));
 
     const gamesWithForGame = [];
 

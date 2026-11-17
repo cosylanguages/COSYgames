@@ -1,7 +1,7 @@
 <footer class="cg-footer">
     <div class="cg-footer-inner">
         <div class="cg-footer-brand">
-            <img src="{{site.languages}}/images/logos/cosylanguages.png" alt="COSYlanguages logo" class="cg-footer-logo" onerror="this.style.display='none'">
+            <img src="{{root}}shared/images/cosylanguages.png" alt="COSYlanguages logo" class="cg-footer-logo" onerror="this.style.display='none'">
             <span>COSYlanguages</span>
         </div>
         <p class="cg-footer-tagline" data-i18n="footer_tagline">Your friendly corner to master new languages and connect with the world. 🌍</p>

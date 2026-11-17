@@ -1,0 +1,20 @@
+{
+  "name": "cosygames",
+  "version": "1.0.0",
+  "private": true,
+  "description": "COSYgames — 20 interactive language-learning games (static, client-side).",
+  "scripts": {
+    "test": "node --test tests/*.js",
+    "check:chrome": "node scripts/sync-site-chrome.js --check",
+    "check:urls": "node scripts/sync-site-urls.js --check",
+    "check:pwa": "node scripts/sync-pwa.js --check",
+    "sync:pwa": "node scripts/sync-pwa.js",
+    "vendor:fonts": "node scripts/vendor-fonts.js",
+    "app:build": "node scripts/build-app.js",
+    "app:sources": "node scripts/generate-app-sources.js",
+    "check:app-bundle": "node scripts/build-app.js --check"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}
