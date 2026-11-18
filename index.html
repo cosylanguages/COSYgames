@@ -26,22 +26,13 @@
     <meta name="twitter:url" content="https://cosylanguages.github.io/COSYgames/">
     <meta name="twitter:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
     <meta property="og:locale" content="en_US">
+    <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/ecosystem-strip.css">
 </head>
 <body class="games-hub-page cosy-game-theme">
     <!-- Ecosystem Strip -->
     <!-- cosy:chrome:ecosystem-strip-hub -->
-    <div class="cosy-ecosystem-strip" role="navigation" aria-label="COSY Ecosystem Products">
-      <div class="cosy-strip-inner">
-        <span class="cosy-strip-brand" data-i18n="ecosystem_strip">🌐 COSY Ecosystem:</span>
-        <ul class="cosy-strip-links">
-          <li><a href="https://cosylanguages.github.io/COSYlanguages/" target="_blank" rel="noopener" class="cosy-strip-link">COSYlanguages 🏠</a></li>
-          <li><a href="index.html" class="cosy-strip-link active">COSYgames 🎮</a></li>
-          <li><a href="https://cosylanguages.github.io/COSYdata/" target="_blank" rel="noopener" class="cosy-strip-link">COSYdata 📊</a></li>
-          <li><a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener" class="cosy-strip-link">COSYtools 🔎</a></li>
-          <li><a href="https://cosylanguages.github.io/COSYevents/" target="_blank" rel="noopener" class="cosy-strip-link">COSYevents 🎉</a></li>
-        </ul>
-      </div>
-    </div>
+    <!-- Shared ecosystem strip (component hosted in COSYlanguages). -->
+    <div data-ecosystem-strip data-self="games"></div>
     <!-- /cosy:chrome:ecosystem-strip-hub -->
 
     <!-- Top Navigation Header -->
@@ -296,5 +287,6 @@
     <script src="./shared/utils/game-utils.js"></script>
     <script src="shared/js/i18n.js"></script>
     <script src="./shared/js/nav.js"></script>
+    <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
 </body>
 </html>
