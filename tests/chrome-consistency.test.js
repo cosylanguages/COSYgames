@@ -47,9 +47,12 @@ test('translated labels differ from English where the language is not English (n
 
 test('game nav and hub ecosystem bar link the same sites in the same order', () => {
   const nav = linkedSites(onlyClass(tpl('nav-game'), 'cg-nav-eco'));
-  const strip = linkedSites(tpl('ecosystem-strip-hub'));
   assert.deepStrictEqual(nav, ['languages', 'games', 'data', 'tools', 'events']);
-  assert.deepStrictEqual(strip, nav);
+  // The hub bar is now the shared component (COSYlanguages/js/ecosystem-strip.js), which renders
+  // its own links at runtime; the template only mounts it.
+  const strip = tpl('ecosystem-strip-hub');
+  assert.match(strip, /data-ecosystem-strip/, 'hub strip must mount the shared component');
+  assert.match(strip, /data-self="games"/, 'hub strip must identify the host as COSYgames');
 });
 
 test('footers also link every ecosystem site', () => {
