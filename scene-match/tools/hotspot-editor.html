@@ -89,6 +89,11 @@
             color: var(--text-muted);
         }
 
+        input::placeholder, textarea::placeholder {
+            color: color-mix(in srgb, currentColor 70%, transparent);
+            opacity: 1;
+        }
+
         input, select {
             background: #0f172a;
             border: 1px solid var(--panel-border);
