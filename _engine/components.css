@@ -254,3 +254,42 @@ html[data-context="online"] .buzzer-button,
     animation: none !important;
   }
 }
+
+/* ── Contrast fixes ──────────────────────────────────────────────────── */
+/* Standalone dark games: the score strip must not paint a light surface */
+body.game-standalone.cosy-game-theme .score-tracking-section {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.16);
+  color: inherit;
+}
+body.game-standalone.cosy-game-theme .score-display,
+body.game-standalone.cosy-game-theme .score-display strong,
+body.game-standalone.cosy-game-theme .score-display span { color: inherit; }
+/* Overlay links painted amber on a peach panel */
+#game-overlay a[style*="fbbf24"], #game-overlay a[style*="FBBF24"] { color: #8a5200 !important; }
+/* White banner ink needs a fill dark enough for 4.5:1 */
+.turn-banner { background: color-mix(in srgb, var(--game-accent, #416b49) 76%, #000); }
+/* Standalone dark games: overlay ink follows the theme, not the dark body */
+body.game-standalone.cosy-game-theme .game-overlay { color: #1f2a24; }
+body.game-standalone.cosy-game-theme .game-overlay h1,
+body.game-standalone.cosy-game-theme .game-overlay h2,
+body.game-standalone.cosy-game-theme .game-overlay h3,
+body.game-standalone.cosy-game-theme .game-overlay h4,
+body.game-standalone.cosy-game-theme .game-overlay p,
+body.game-standalone.cosy-game-theme .game-overlay li,
+body.game-standalone.cosy-game-theme .game-overlay label,
+body.game-standalone.cosy-game-theme .game-overlay dt,
+body.game-standalone.cosy-game-theme .game-overlay dd,
+body.game-standalone.cosy-game-theme .game-overlay small,
+body.game-standalone.cosy-game-theme .game-overlay strong,
+body.game-standalone.cosy-game-theme .game-overlay span { color: inherit; }
+
+html[data-theme="dark"] body.game-standalone.cosy-game-theme .game-overlay,
+body.theme-dark.game-standalone.cosy-game-theme .game-overlay { color: #eef3ee; }
+/* Amber overlay links need the light step on dark panels */
+html[data-theme="dark"] #game-overlay a[style*="fbbf24"],
+html[data-theme="dark"] #game-overlay a[style*="FBBF24"],
+body.theme-dark #game-overlay a[style*="fbbf24"] { color: #f6c65a !important; }
+/* Play buttons: white ink needs a deeper fill */
+.gc-play { background: color-mix(in srgb, var(--card-accent, var(--teal)) 66%, #000); }
+

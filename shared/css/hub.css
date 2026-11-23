@@ -336,8 +336,8 @@ body.theme-dark .gc .gtag.mystery {
   padding: 0.45rem 2rem 0.45rem 0.75rem;
   border: 1px solid var(--border-color, #d8d2c8);
   border-radius: 0.65rem;
-  background: var(--surface, #fff);
-  color: var(--text-color, #292524);
+  background: var(--surface-color, #fff);
+  color: var(--ink, #292524);
   font: inherit;
   cursor: pointer;
 }

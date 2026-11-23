@@ -36,6 +36,12 @@
     --warm-white:                        var(--cosy-color-warm-white);
     --surface-color:                     var(--cosy-color-surface);
     --background-color:                  var(--cosy-color-cream);
+    /* legacy aliases used by hub/game components */
+    --surface:                           var(--surface-color);
+    --border-color:                      var(--border);
+    --text-color:                        var(--ink);
+    --teal-hover:                        color-mix(in srgb, var(--teal) 80%, #000);
+    --font-body:                         var(--font-sans, system-ui, sans-serif);
     --ink:                               var(--cosy-color-ink);
     --ink-soft:                          var(--cosy-color-ink-soft);
     --ink-muted:                         var(--cosy-color-ink-muted);
@@ -408,6 +414,8 @@ html[data-theme="dark"], body.theme-dark {
     --cosy-color-sage-mist:              #1f2720;
     --cosy-color-sage-light:             #222c23;
 
+    --cosy-color-honey:                  #e0a83a;
+    --cosy-color-honey-dark:             #f0c15c;
     --cosy-color-honey-pale:             #2d2417;
     --cosy-color-honey-mid:              #35291b;
     --cosy-color-coral-light:            #2d1a15;
