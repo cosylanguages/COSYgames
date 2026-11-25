@@ -30,7 +30,9 @@
     if (typeof window !== 'undefined' && window.supabase && typeof window.supabase.createClient === 'function') {
       try {
         var cfg = getConfig();
-        supabaseClient = window.supabase.createClient(cfg.supabaseUrl, cfg.anonKey);
+        supabaseClient = window.supabase.createClient(cfg.supabaseUrl, cfg.anonKey, {
+          auth: { storageKey: 'cosy-auth', persistSession: true, autoRefreshToken: true }
+        });
         return Promise.resolve(supabaseClient);
       } catch (e) {
         console.warn('Failed to initialize Supabase client:', e);
@@ -52,7 +54,9 @@
         if (typeof window !== 'undefined' && window.supabase && typeof window.supabase.createClient === 'function') {
           try {
             var cfg = getConfig();
-            supabaseClient = window.supabase.createClient(cfg.supabaseUrl, cfg.anonKey);
+            supabaseClient = window.supabase.createClient(cfg.supabaseUrl, cfg.anonKey, {
+              auth: { storageKey: 'cosy-auth', persistSession: true, autoRefreshToken: true }
+            });
             resolve(supabaseClient);
           } catch (e) {
             console.warn('Failed to create Supabase client on load:', e);
