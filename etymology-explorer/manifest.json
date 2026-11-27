@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "etymology-explorer",
+  "displayName": "Etymology Explorer",
+  "description": "Uncover word origins, roots, and language family connections.",
+  "category": "Vocab & Puzzles",
+  "skillFocus": "vocabulary",
+  "cefrLevels": [
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "it",
+    "de",
+    "es",
+    "ru",
+    "el",
+    "pt",
+    "hy",
+    "ka",
+    "ba",
+    "tt",
+    "br"
+  ],
+  "modes": [
+    "solo"
+  ],
+  "aliases": [
+    "etymology"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "data/*/etymology.js",
+      "scope": "shared"
+    },
+    {
+      "path": "data/shared/etymology_network.js",
+      "scope": "shared"
+    },
+    {
+      "path": "data/shared/doublets.js",
+      "scope": "shared"
+    },
+    {
+      "path": "data/shared/false_friends.js",
+      "scope": "shared"
+    }
+  ],
+  "externalDependencies": [],
+  "discovery": {
+    "topics": [
+      "words-grammar",
+      "learning-knowledge",
+      "society-culture"
+    ],
+    "audiences": [
+      "teens",
+      "adults"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "mode-based-not-cefr",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

@@ -3,6 +3,8 @@
     "id": "fluency-flow",
     "folder_path": "fluency-flow/",
     "display_name": "Fluency Flow",
+    "icon": "🗣️",
+    "description_key": "desc_fluency_flow",
     "category": "Speaking & Fluency",
     "cefr_levels": [
       "A1",
@@ -37,6 +39,8 @@
     "id": "battle-of-wits",
     "folder_path": "battle-of-wits/",
     "display_name": "Battle of Wits",
+    "icon": "⚖️",
+    "description_key": "desc_battle_wits",
     "category": "Speaking & Fluency",
     "cefr_levels": [
       "B1",
@@ -63,6 +67,8 @@
     "id": "opinion-arena",
     "folder_path": "opinion-arena/",
     "display_name": "Opinion Arena",
+    "icon": "🏟️",
+    "description_key": "desc_opinion_arena",
     "category": "Speaking & Fluency",
     "cefr_levels": [
       "A2",
@@ -96,6 +102,8 @@
     "id": "critics-corner",
     "folder_path": "critics-corner/",
     "display_name": "Critic's Corner",
+    "icon": "🎭",
+    "description_key": "desc_critics_corner",
     "category": "Speaking & Fluency",
     "cefr_levels": [
       "B2",
@@ -124,6 +132,8 @@
     "id": "100-questions",
     "folder_path": "100-questions/",
     "display_name": "100 Questions",
+    "icon": "💬",
+    "description_key": "desc_100_questions",
     "category": "Speaking & Fluency",
     "cefr_levels": [
       "A2",
@@ -151,6 +161,8 @@
     "id": "story-chain",
     "folder_path": "story-chain/",
     "display_name": "Story Chain",
+    "icon": "🃏",
+    "description_key": "desc_story_chain",
     "category": "Speaking & Fluency",
     "cefr_levels": [
       "A1",
@@ -182,6 +194,8 @@
     "id": "story-weaver",
     "folder_path": "story-weaver/",
     "display_name": "Story Weaver",
+    "icon": "📖",
+    "description_key": "desc_story_weaver",
     "category": "Speaking & Fluency",
     "cefr_levels": [
       "A1",
@@ -207,6 +221,8 @@
     "id": "hot-seat",
     "folder_path": "hot-seat/",
     "display_name": "Hot Seat",
+    "icon": "🎯",
+    "description_key": "desc_hot_seat",
     "category": "Speaking & Fluency",
     "cefr_levels": [
       "A1",
@@ -238,6 +254,8 @@
     "id": "guess",
     "folder_path": "guess/",
     "display_name": "Guess!",
+    "icon": "🎲",
+    "description_key": "desc_guess",
     "category": "Mystery & Guesses",
     "cefr_levels": [
       "A1",
@@ -278,6 +296,8 @@
     "id": "scene-match",
     "folder_path": "scene-match/",
     "display_name": "Scene Match",
+    "icon": "🖼️",
+    "description_key": "desc_scene_match",
     "category": "Vocab & Puzzles",
     "cefr_levels": [
       "A1",
@@ -306,6 +326,8 @@
     "id": "word-linker",
     "folder_path": "word-linker/",
     "display_name": "Word Linker",
+    "icon": "🔗",
+    "description_key": "desc_word_linker",
     "category": "Vocab & Puzzles",
     "cefr_levels": [
       "A1",
@@ -337,6 +359,8 @@
     "id": "last-letter",
     "folder_path": "last-letter/",
     "display_name": "Last Letter",
+    "icon": "🔤",
+    "description_key": "desc_last_letter",
     "category": "Vocab & Puzzles",
     "cefr_levels": [
       "A1",
@@ -368,6 +392,8 @@
     "id": "emoji-odyssey",
     "folder_path": "emoji-odyssey/",
     "display_name": "Emoji Odyssey",
+    "icon": "📖",
+    "description_key": "desc_emoji_odyssey",
     "category": "Vocab & Puzzles",
     "cefr_levels": [
       "A1",
@@ -399,6 +425,8 @@
     "id": "cosy-crossword",
     "folder_path": "cosy-crossword/",
     "display_name": "Cosy Crossword",
+    "icon": "🧩",
+    "description_key": "desc_cosy_crossword",
     "category": "Vocab & Puzzles",
     "cefr_levels": [
       "A1",
@@ -423,6 +451,8 @@
     "id": "lucky-numbers",
     "folder_path": "lucky-numbers/",
     "display_name": "Lucky Numbers",
+    "icon": "🔢",
+    "description_key": "desc_lucky_numbers",
     "category": "Vocab & Puzzles",
     "cefr_levels": [
       "A0",
@@ -450,6 +480,8 @@
     "id": "etymology-explorer",
     "folder_path": "etymology-explorer/",
     "display_name": "Etymology Explorer",
+    "icon": "📜",
+    "description_key": "desc_etymology_explorer",
     "category": "Vocab & Puzzles",
     "cefr_levels": [
       "B1",
@@ -484,6 +516,8 @@
     "id": "what-gender-is-it",
     "folder_path": "what-gender-is-it/",
     "display_name": "What Gender Is It?",
+    "icon": "♀️♂️",
+    "description_key": "desc_what_gender",
     "category": "Vocab & Puzzles",
     "cefr_levels": [
       "A1",
@@ -514,6 +548,8 @@
     "id": "this-or-that",
     "folder_path": "this-or-that/",
     "display_name": "This or That?",
+    "icon": "🔀",
+    "description_key": "desc_this_or_that",
     "category": "Speaking & Fluency",
     "cefr_levels": [
       "A0",

@@ -5,7 +5,7 @@ When you add, rename or remove a game, update all three; `tests/metadata-consist
 
 | File | Answers | Used by |
 |---|---|---|
-| `games/index.json` | What does the game's own setup screen offer? (menu languages, selectable levels, solo/group) | hub cards, `shared/js/*`, level/language tests |
+| `games/index.json` | What does the game's own setup screen offer? (menu languages, selectable levels, solo/group) | generated hub cards, `shared/js/*`, level/language tests |
 | `GAMES_INVENTORY.json` | Which language data files and external dependencies does the game load? | data audits, migration |
 | `data/game-taxonomy.json` | How should the game be discovered? (topics, subtopics, content-tagged levels, formats, audiences) | hub filters (`shared/js/game-taxonomy.js`) |
 
@@ -19,6 +19,22 @@ When you add, rename or remove a game, update all three; `tests/metadata-consist
 - **Category.** `index.json → category` is the hub's *game family* (Speaking & Fluency, Mystery & Guesses, Vocab & Puzzles).
   `game-taxonomy.json → categories` are *topic* categories (Everyday life, Society & culture, ...). They are unrelated despite the shared name.
 - **Modes.** `index.json → mode` is `solo` / `group`. The taxonomy uses finer `solo`, `pairs`, `mini-group`, `big-group`; `group` means "any of the last three".
+
+## Hub presentation fields
+
+`games/index.json` also carries two hub-only presentation fields:
+
+- **`icon`** — the emoji shown on the game card.
+- **`description_key`** — the `data-i18n` key for the card description. The key must
+  exist in every supported language in `shared/js/i18n.js`.
+
+`node scripts/sync-hub.js` regenerates the static cards inside `index.html` from
+these fields, so the cards are never edited by hand. `tests/hub-sync.test.js`
+fails if the generated cards drift or a description key is missing.
+
+Each game also gets a `manifest.json` and a generated “At a glance” block in its
+`README.md`. Both are produced by `node scripts/sync-game-manifests.js` from the
+three metadata files above.
 
 ## Deep links and aliases
 

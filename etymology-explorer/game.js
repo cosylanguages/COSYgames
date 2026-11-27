@@ -368,7 +368,7 @@
                       <div style="margin: 0.75rem 0; text-align: left;">
                         <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--ink-faint);">Discovered Connections:</div>
                         <div style="display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.5rem 0;">
-                          ${revealedHistoryLayers.map(h => `<span style="background: rgba(13, 148, 136, 0.1); border: 1px solid rgba(13, 148, 136, 0.2); border-radius: 8px; padding: 0.25rem 0.6rem; font-size: 0.8rem; font-weight: 700; color: #0D9488;">${gameUtils.escapeAttr(h)}</span>`).join('')}
+                          ${revealedHistoryLayers.map(h => `<span style="background: var(--cosy-brand-tint, rgba(10, 187, 181, 0.12)); border: 1px solid var(--cosy-brand-border, rgba(10, 187, 181, 0.22)); border-radius: 8px; padding: 0.25rem 0.6rem; font-size: 0.8rem; font-weight: 700; color: var(--cosy-brand-deep, #067a77);">${gameUtils.escapeAttr(h)}</span>`).join('')}
                         </div>
                       </div>
                     ` : ''}

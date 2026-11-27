@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "critics-corner",
+  "displayName": "Critic's Corner",
+  "description": "A famous quote appears. What does it mean to you? Deep discussion for advanced levels.",
+  "category": "Speaking & Fluency",
+  "skillFocus": "speaking",
+  "cefrLevels": [
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "critic"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "data/*/critic.js",
+      "scope": "shared"
+    }
+  ],
+  "externalDependencies": [
+    "shared/js/game-strings.js",
+    "i18n/games/critics-corner.js"
+  ],
+  "discovery": {
+    "topics": [
+      "opinions-ideas",
+      "society-culture",
+      "people-feelings",
+      "learning-knowledge",
+      "stories-mystery",
+      "hobbies-entertainment"
+    ],
+    "audiences": [
+      "teens",
+      "adults"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "content-dependent",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

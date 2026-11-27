@@ -1,17 +1,17 @@
 /* word-linker/word-linker.css - Magnetic Bridge Identity */
 :root {
-  --game-accent: var(--cosy-color-green, #4a6b50);
-  --game-accent-dim: rgba(74, 107, 80, 0.15);
-  --game-accent-contrast: #ffffff;
+  --game-accent: var(--cosy-brand-primary, #0abbb5);
+  --game-accent-dim: var(--cosy-brand-glow, rgba(10, 187, 181, 0.18));
+  --game-accent-contrast: var(--cosy-brand-ink, #033b39);
   --bridge-wood: var(--cosy-color-plum, #7a5c3a);
   --bridge-plank: var(--cosy-color-honey, #945e05);
   --bridge-metal: var(--cosy-color-sage-soft, #6b9474);
 }
 
 [data-theme="dark"] {
-  --game-accent: var(--cosy-color-sage, #688e6e);
-  --game-accent-dim: rgba(104, 142, 110, 0.25);
-  --game-accent-contrast: #ffffff;
+  --game-accent: var(--cosy-brand-primary, #2fd6cf);
+  --game-accent-dim: var(--cosy-brand-glow, rgba(47, 214, 207, 0.2));
+  --game-accent-contrast: var(--cosy-brand-ink, #032b29);
   --bridge-wood: #451a03;
   --bridge-plank: #854d0e;
 }

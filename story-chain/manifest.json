@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "id": "story-chain",
+  "displayName": "Story Chain",
+  "description": "Add one sentence at a time to build a collaborative story with prompts and connectors.",
+  "category": "Speaking & Fluency",
+  "skillFocus": "speaking",
+  "cefrLevels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "storychain"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "data/*/storychain.js",
+      "scope": "shared"
+    }
+  ],
+  "externalDependencies": [
+    "shared/js/game-strings.js",
+    "i18n/games/story-chain.js"
+  ],
+  "discovery": {
+    "topics": [
+      "stories-mystery",
+      "everyday-life",
+      "nature-world",
+      "places-travel",
+      "hobbies-entertainment"
+    ],
+    "audiences": [
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "prompt-dependent",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

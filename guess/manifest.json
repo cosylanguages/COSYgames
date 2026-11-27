@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "guess",
+  "displayName": "Guess!",
+  "description": "Guess Who, What, Where and When across four editions. One game now: it replaces the three separate games Identity Mystery, Object Quest and Action Hero.",
+  "category": "Mystery & Guesses",
+  "skillFocus": "speaking",
+  "cefrLevels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "guess-who",
+    "guess-what",
+    "guess-where",
+    "guess-when",
+    "identity",
+    "identity-mystery",
+    "objectquest",
+    "object-quest",
+    "action",
+    "action-hero"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [],
+  "externalDependencies": [
+    "COSYdata / shared/js/vocab-loader.js",
+    "i18n/games/guess.js"
+  ],
+  "discovery": {
+    "topics": [
+      "people-feelings",
+      "hobbies-entertainment",
+      "learning-knowledge",
+      "work-future",
+      "stories-mystery",
+      "nature-world",
+      "society-culture",
+      "everyday-life",
+      "places-travel",
+      "words-grammar",
+      "real-life-communication",
+      "opinions-ideas"
+    ],
+    "audiences": [
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "prompt-tagged",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

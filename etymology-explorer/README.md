@@ -4,6 +4,33 @@ Trace the fascinating origins and historical journeys of everyday vocabulary!
 
 Etymology Explorer is an interactive vocabulary game in the COSYgames suite that lets players excavate the linguistic roots of words.
 
+<!-- cosy:manifest:start -->
+**At a glance**
+
+| Field | Value |
+| --- | --- |
+| Category | Vocab & Puzzles |
+| Skill focus | vocabulary |
+| CEFR levels | B1–C2 |
+| Learning languages | English 🇬🇧, Français 🇫🇷, Italiano 🇮🇹, Deutsch 🇩🇪, Español 🇪🇸, Русский 🇷🇺, Ελληνικά 🇬🇷, Português 🇵🇹, Հայերեն 🇦🇲, ქართული 🇬🇪, Башҡортса 🇷🇺, Татарча 🇷🇺, Brezhoneg 🏴 |
+| Modes | Solo |
+| Duration | Varies by round settings; the setup screen shows the available modes. |
+| Entry point | [`index.html`](index.html) |
+
+**Data and dependencies**
+
+- **Shared data:** `data/*/etymology.js`, `data/shared/etymology_network.js`, `data/shared/doublets.js`, `data/shared/false_friends.js`
+- **External dependencies:** None listed
+- **Discovery topics:** words-grammar, learning-knowledge, society-culture
+
+**Contract**
+
+This game does not import code or assets from another game. It may use the shared shell, the COSY turquoise brand layer, and shared COSYdata loaders.
+See [`docs/ARCHITECTURE.md`](../docs/ARCHITECTURE.md) for the isolation contract and the design system.
+
+*Generated from `games/index.json`, `GAMES_INVENTORY.json`, and `data/game-taxonomy.json` by `node scripts/sync-game-manifests.js`.*
+<!-- cosy:manifest:end -->
+
 ---
 
 ## 🎮 Game Modes

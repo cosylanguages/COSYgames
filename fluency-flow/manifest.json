@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "fluency-flow",
+  "displayName": "Fluency Flow",
+  "description": "Spin for a random topic and speak for 1–5 minutes without stopping. Flow, not perfection.",
+  "category": "Speaking & Fluency",
+  "skillFocus": "fluency",
+  "cefrLevels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el",
+    "pt",
+    "ba",
+    "tt"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "fluency"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "data/*/fluency.js",
+      "scope": "shared"
+    }
+  ],
+  "externalDependencies": [
+    "shared/js/game-strings.js",
+    "i18n/games/fluency-flow.js"
+  ],
+  "discovery": {
+    "topics": [
+      "everyday-life",
+      "places-travel",
+      "hobbies-entertainment",
+      "people-feelings",
+      "learning-knowledge",
+      "work-future",
+      "nature-world",
+      "society-culture",
+      "opinions-ideas",
+      "real-life-communication",
+      "stories-mystery"
+    ],
+    "audiences": [
+      "young-learners",
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "prompt-tagged",
+    "contentSetCount": 5
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

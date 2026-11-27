@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "emoji-odyssey",
+  "displayName": "Emoji Odyssey",
+  "description": "Decode phrases and idioms represented purely through emoji sequences.",
+  "category": "Vocab & Puzzles",
+  "skillFocus": "vocabulary",
+  "cefrLevels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "emoji"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [],
+  "externalDependencies": [
+    "COSYdata / shared/js/vocab-loader.js",
+    "i18n/games/emoji-odyssey.js"
+  ],
+  "discovery": {
+    "topics": [
+      "everyday-life",
+      "hobbies-entertainment",
+      "people-feelings",
+      "stories-mystery",
+      "society-culture",
+      "words-grammar"
+    ],
+    "audiences": [
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "puzzle-dependent",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

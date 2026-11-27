@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "id": "opinion-arena",
+  "displayName": "Opinion Arena",
+  "description": "Agree or disagree with a statement, then defend your view. Real opinions, real language.",
+  "category": "Speaking & Fluency",
+  "skillFocus": "speaking",
+  "cefrLevels": [
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el",
+    "pt",
+    "ba",
+    "tt"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "opinion"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "data/*/opinions.js",
+      "scope": "shared"
+    }
+  ],
+  "externalDependencies": [
+    "shared/js/game-strings.js",
+    "i18n/games/opinion-arena.js"
+  ],
+  "discovery": {
+    "topics": [
+      "opinions-ideas",
+      "everyday-life",
+      "hobbies-entertainment",
+      "people-feelings",
+      "society-culture",
+      "learning-knowledge",
+      "nature-world",
+      "work-future"
+    ],
+    "audiences": [
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "prompt-tagged",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

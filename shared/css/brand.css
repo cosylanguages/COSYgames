@@ -1,0 +1,550 @@
+/* ==========================================================================
+   COSYgames Brand Identity Layer
+   Loaded after shared/css/tokens.css on every page.
+
+   The two logo colours are the visual anchor:
+     #0abbb5  primary   (COSYlanguages logo)
+     #0ca2b0  secondary (supporting teal)
+
+   Exact colours are used on decorative surfaces (top bars, icon tiles,
+   gradients, underlines, badges). Text and primary buttons use the deeper
+   variants so contrast stays readable.
+   ========================================================================== */
+
+:root {
+  /* ── Brand palette ─────────────────────────────────────────────────── */
+  --cosy-brand-primary: #0abbb5;
+  --cosy-brand-secondary: #0ca2b0;
+  --cosy-brand-deep: #067a77;
+  --cosy-brand-deepest: #034744;
+  --cosy-brand-ink: #033b39;
+  --cosy-brand-tint: #e7fbf9;
+  --cosy-brand-tint-strong: #c9f5f1;
+  --cosy-brand-mist: #f2fdfc;
+  --cosy-brand-border: rgba(10, 187, 181, 0.22);
+  --cosy-brand-border-strong: rgba(10, 187, 181, 0.45);
+  --cosy-brand-glow: rgba(10, 187, 181, 0.18);
+  --cosy-brand-gradient: linear-gradient(135deg, #0abbb5 0%, #0ca2b0 100%);
+  --cosy-brand-gradient-soft: linear-gradient(135deg, #e7fbf9 0%, #f2fdfc 100%);
+
+  /* ── Re-point ecosystem tokens used by shared components ───────────── */
+  --cosy-color-forest-green: var(--cosy-brand-deep);
+  --cosy-color-sage: var(--cosy-brand-deep);
+  --cosy-color-sage-dark: #056461;
+  --cosy-color-sage-deep: var(--cosy-brand-deepest);
+  --cosy-color-sage-soft: #56d6cf;
+  --cosy-color-sage-mist: var(--cosy-brand-mist);
+  --cosy-color-sage-pale: var(--cosy-brand-tint);
+  --cosy-color-sage-light: var(--cosy-brand-tint);
+
+  --sage: var(--cosy-brand-deep);
+  --sage-dark: #056461;
+  --sage-deep: var(--cosy-brand-deepest);
+  --sage-soft: #56d6cf;
+  --sage-mist: var(--cosy-brand-mist);
+  --sage-pale: var(--cosy-brand-tint);
+  --sage-light: var(--cosy-brand-tint);
+
+  --teal: var(--cosy-brand-deep);
+  --teal-light: var(--cosy-brand-tint);
+  --teal-hover: #055f5c;
+  --primary-color: var(--cosy-brand-deep);
+
+  --game-accent: var(--cosy-brand-deep);
+  --game-accent-dim: rgba(10, 187, 181, 0.15);
+  --game-accent-contrast: #ffffff;
+
+  --cosy-color-border: var(--cosy-brand-border);
+  --cosy-color-border-hover: var(--cosy-brand-border-strong);
+  --border: var(--cosy-brand-border);
+  --border-hover: var(--cosy-brand-border-strong);
+  --cosy-semantic-focus: var(--cosy-brand-secondary);
+  --focus-ring: 0 0 0 3px rgba(10, 187, 181, 0.35);
+
+  --btn-primary-bg: var(--cosy-brand-deep);
+  --btn-primary-hover-bg: var(--cosy-brand-deepest);
+  --btn-secondary-border: 1.5px solid var(--cosy-brand-secondary);
+  --btn-secondary-color: var(--cosy-brand-deep);
+  --btn-secondary-hover-bg: var(--cosy-brand-tint);
+  --btn-secondary-hover-color: var(--cosy-brand-deepest);
+  --btn-tertiary-color: var(--cosy-brand-deep);
+  --btn-tertiary-hover-color: var(--cosy-brand-deepest);
+
+  --cg-footer-bg: var(--cosy-brand-deepest);
+  --cg-footer-text: #f0fdfc;
+  --cg-footer-muted: rgba(240, 253, 252, 0.68);
+  --cg-footer-link: #7fe9e3;
+
+  accent-color: var(--cosy-brand-secondary);
+  scrollbar-color: var(--cosy-brand-secondary) var(--cosy-brand-tint);
+}
+
+::selection {
+  background: var(--cosy-brand-primary);
+  color: var(--cosy-brand-ink);
+}
+
+:focus-visible {
+  outline-color: var(--cosy-brand-secondary);
+}
+
+/* ── Ambient brand wash ───────────────────────────────────────────────── */
+body.games-hub-page,
+body.cosy-game-theme {
+  background-image:
+    radial-gradient(circle at 10% -4%, rgba(10, 187, 181, 0.12), transparent 30rem),
+    radial-gradient(circle at 92% 2%, rgba(12, 162, 176, 0.09), transparent 26rem);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ── Ecosystem strip ──────────────────────────────────────────────────── */
+.cosy-ecosystem-strip {
+  background: var(--cosy-brand-deepest);
+}
+
+/* ── Navigation ───────────────────────────────────────────────────────── */
+.cg-nav {
+  border-bottom-color: var(--cosy-brand-border);
+}
+
+.cg-nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: var(--cosy-brand-gradient);
+}
+
+.cg-nav-brand-text {
+  color: var(--cosy-brand-deepest);
+}
+
+.cg-nav-brand:hover .cg-nav-brand-text {
+  color: var(--cosy-brand-deep);
+}
+
+.cg-nav-logo {
+  box-shadow: 0 0 0 1px var(--cosy-brand-border);
+}
+
+.cg-nav-hub-link {
+  position: relative;
+}
+
+.cg-nav-hub-link::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 8px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--cosy-brand-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.cg-nav-hub-link:hover,
+.cg-nav-hub-link:focus-visible {
+  color: var(--cosy-brand-deep);
+}
+
+.cg-nav-hub-link:hover::after,
+.cg-nav-hub-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.cg-theme-btn:hover {
+  background: var(--cosy-brand-tint);
+  color: var(--cosy-brand-deep);
+}
+
+/* ── Hub hero ─────────────────────────────────────────────────────────── */
+.hero-tag {
+  background: var(--cosy-brand-tint);
+  color: var(--cosy-brand-deep);
+  border: 1px solid var(--cosy-brand-border);
+}
+
+.hero h1 {
+  position: relative;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 5.5rem;
+  height: 4px;
+  margin: 1.1rem auto 0;
+  border-radius: 999px;
+  background: var(--cosy-brand-gradient);
+}
+
+/* ── Section headings ─────────────────────────────────────────────────── */
+.sec-title {
+  position: relative;
+  border-bottom-color: transparent;
+}
+
+.sec-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cosy-brand-primary), var(--cosy-brand-secondary) 42%, var(--cosy-brand-border) 100%);
+}
+
+.sec-title .cosy-icon {
+  color: var(--cosy-brand-secondary);
+}
+
+.sec-title .sec-title-text {
+  color: var(--cosy-brand-deepest);
+}
+
+/* ── Filters ──────────────────────────────────────────────────────────── */
+.fpill {
+  background: var(--cosy-color-warm-white, #fffefb);
+  border-color: var(--cosy-brand-border);
+  color: var(--cosy-brand-deepest);
+}
+
+.fpill:hover {
+  background: var(--cosy-brand-tint);
+  border-color: var(--cosy-brand-secondary);
+  color: var(--cosy-brand-deepest);
+}
+
+.fpill.active {
+  background: var(--cosy-brand-primary);
+  border-color: var(--cosy-brand-primary);
+  color: var(--cosy-brand-ink);
+  box-shadow: 0 2px 10px var(--cosy-brand-glow);
+}
+
+.cosy-taxonomy-select {
+  border-color: var(--cosy-brand-border);
+}
+
+.cosy-taxonomy-select:hover {
+  border-color: var(--cosy-brand-secondary);
+}
+
+.cosy-taxonomy-select:focus-visible {
+  outline-color: var(--cosy-brand-secondary);
+}
+
+/* ── Game cards ───────────────────────────────────────────────────────── */
+.gc {
+  background: linear-gradient(135deg, var(--cosy-color-warm-white, #fffefb) 0%, var(--cosy-brand-mist) 100%);
+  border-color: var(--cosy-brand-border);
+}
+
+.gc::before {
+  background: var(--cosy-brand-gradient);
+  opacity: 0.5;
+}
+
+.gc:hover {
+  border-color: var(--cosy-brand-secondary);
+  box-shadow: 0 16px 32px rgba(3, 71, 68, 0.12);
+}
+
+.gc:hover::before {
+  opacity: 1;
+}
+
+.gc-icon {
+  background: var(--cosy-brand-gradient-soft);
+  border: 1px solid var(--cosy-brand-border);
+}
+
+.gc-name,
+.gc-name a {
+  color: var(--cosy-brand-deepest);
+}
+
+.gc-play {
+  background: var(--cosy-brand-primary);
+  color: var(--cosy-brand-ink);
+  box-shadow: 0 2px 8px var(--cosy-brand-glow);
+}
+
+.gc-play:hover {
+  background: #22c7c1;
+  color: var(--cosy-brand-ink);
+  filter: brightness(1.02);
+}
+
+.gtag,
+.gtag.solo,
+.gtag.combo,
+.gtag.multi,
+.gtag.mystery {
+  background: var(--cosy-brand-tint);
+  border-color: var(--cosy-brand-border);
+  color: var(--cosy-brand-deep);
+}
+
+.gtag.multi,
+.gtag.mystery {
+  background: var(--cosy-brand-tint-strong);
+  color: var(--cosy-brand-deepest);
+}
+
+.gc-featured {
+  background: linear-gradient(135deg, var(--cosy-brand-deepest) 0%, var(--cosy-brand-deep) 100%);
+}
+
+.gc-featured .gc-play {
+  background: #ffffff;
+  color: var(--cosy-brand-deepest);
+}
+
+/* ── Game-shell controls ──────────────────────────────────────────────── */
+.btn-start-game,
+.btn-g-primary,
+.cg-btn-primary {
+  background: var(--cosy-brand-primary);
+  color: var(--cosy-brand-ink);
+}
+
+.btn-start-game:hover,
+.btn-g-primary:hover,
+.cg-btn-primary:hover {
+  background: #22c7c1;
+  color: var(--cosy-brand-ink);
+}
+
+.go-topbar {
+  background: linear-gradient(135deg, var(--cosy-brand-deepest) 0%, #02201f 100%);
+}
+
+.btn-g-secondary:hover,
+.cg-btn-outline:hover {
+  border-color: var(--cosy-brand-secondary);
+  background: var(--cosy-brand-tint);
+  color: var(--cosy-brand-deepest);
+}
+
+.cg-btn-outline {
+  border-color: var(--cosy-brand-secondary);
+  color: var(--cosy-brand-deep);
+}
+
+.score-bar {
+  background: var(--cosy-brand-mist);
+  border-color: var(--cosy-brand-border);
+}
+
+progress {
+  accent-color: var(--cosy-brand-secondary);
+}
+
+progress::-webkit-progress-bar {
+  background: var(--cosy-brand-tint);
+  border-radius: 999px;
+}
+
+progress::-webkit-progress-value {
+  background: var(--cosy-brand-gradient);
+  border-radius: 999px;
+}
+
+progress::-moz-progress-bar {
+  background: var(--cosy-brand-secondary);
+  border-radius: 999px;
+}
+
+/* ── Footer ───────────────────────────────────────────────────────────── */
+.cg-footer,
+#hub footer {
+  position: relative;
+}
+
+.cg-footer::before,
+#hub footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--cosy-brand-gradient);
+}
+
+#hub footer {
+  background: var(--cosy-brand-deepest);
+  color: var(--cg-footer-text);
+}
+
+#hub footer .fb-name {
+  color: #ffffff;
+}
+
+#hub footer .footer-brand p,
+#hub footer .footer-links-col h5,
+#hub footer .footer-bottom {
+  color: var(--cg-footer-muted);
+}
+
+#hub footer .footer-links-col a {
+  color: var(--cg-footer-link);
+}
+
+#hub footer .footer-links-col a:hover,
+#hub footer .footer-links-col a:focus-visible {
+  color: #ffffff;
+}
+
+/* ── Dark mode ────────────────────────────────────────────────────────── */
+html[data-theme="dark"],
+body.theme-dark {
+  --cosy-brand-primary: #2fd6cf;
+  --cosy-brand-secondary: #35b8c4;
+  --cosy-brand-deep: #7fe9e3;
+  --cosy-brand-deepest: #02201f;
+  --cosy-brand-ink: #032b29;
+  --cosy-brand-tint: #0f2f2e;
+  --cosy-brand-tint-strong: #14403e;
+  --cosy-brand-mist: #0d2423;
+  --cosy-brand-border: rgba(47, 214, 207, 0.28);
+  --cosy-brand-border-strong: rgba(47, 214, 207, 0.5);
+  --cosy-brand-glow: rgba(47, 214, 207, 0.16);
+  --cosy-brand-gradient-soft: linear-gradient(135deg, #0f2f2e 0%, #0d2423 100%);
+
+  --cosy-color-sage: var(--cosy-brand-deep);
+  --cosy-color-sage-dark: #5fd8d2;
+  --cosy-color-sage-deep: #d8fffc;
+  --cosy-color-sage-soft: #35b8c4;
+  --cosy-color-sage-mist: var(--cosy-brand-mist);
+  --cosy-color-sage-pale: var(--cosy-brand-tint);
+  --cosy-color-sage-light: var(--cosy-brand-tint);
+
+  --sage: var(--cosy-brand-deep);
+  --sage-dark: #5fd8d2;
+  --sage-deep: #d8fffc;
+  --sage-soft: #35b8c4;
+  --sage-mist: var(--cosy-brand-mist);
+  --sage-pale: var(--cosy-brand-tint);
+  --sage-light: var(--cosy-brand-tint);
+
+  --teal: var(--cosy-brand-deep);
+  --teal-light: var(--cosy-brand-tint);
+  --teal-hover: #a5f2ee;
+
+  --game-accent: var(--cosy-brand-primary);
+  --game-accent-dim: rgba(47, 214, 207, 0.2);
+  --game-accent-contrast: var(--cosy-brand-ink);
+
+  --cosy-color-border: var(--cosy-brand-border);
+  --cosy-color-border-hover: var(--cosy-brand-border-strong);
+  --border: var(--cosy-brand-border);
+  --border-hover: var(--cosy-brand-border-strong);
+  --focus-ring: 0 0 0 3px rgba(47, 214, 207, 0.45);
+
+  --cg-footer-bg: #02201f;
+  --cg-footer-text: #e6fffd;
+  --cg-footer-muted: rgba(230, 255, 253, 0.7);
+  --cg-footer-link: #7fe9e3;
+}
+
+html[data-theme="dark"] .cosy-ecosystem-strip,
+body.theme-dark .cosy-ecosystem-strip {
+  background: #011817;
+}
+
+html[data-theme="dark"] .fpill,
+body.theme-dark .fpill {
+  background: var(--cosy-color-surface, #222b22);
+  border-color: var(--cosy-brand-border);
+  color: var(--cosy-color-ink, #f0f7f1);
+}
+
+html[data-theme="dark"] .fpill:hover,
+body.theme-dark .fpill:hover {
+  background: var(--cosy-brand-tint);
+  border-color: var(--cosy-brand-secondary);
+}
+
+html[data-theme="dark"] .fpill.active,
+body.theme-dark .fpill.active {
+  background: var(--cosy-brand-primary);
+  border-color: var(--cosy-brand-primary);
+  color: var(--cosy-brand-ink);
+}
+
+html[data-theme="dark"] .hero-tag,
+body.theme-dark .hero-tag {
+  background: var(--cosy-brand-tint);
+  color: var(--cosy-brand-deep);
+  border-color: var(--cosy-brand-border);
+}
+
+html[data-theme="dark"] .gc,
+body.theme-dark .gc {
+  background: linear-gradient(135deg, var(--cosy-color-surface, #222b22) 0%, var(--cosy-brand-mist) 100%);
+  border-color: var(--cosy-brand-border);
+}
+
+html[data-theme="dark"] .gc-name,
+html[data-theme="dark"] .gc-name a,
+body.theme-dark .gc-name,
+body.theme-dark .gc-name a {
+  color: var(--cosy-color-ink, #f0f7f1);
+}
+
+html[data-theme="dark"] .gtag,
+body.theme-dark .gtag,
+html[data-theme="dark"] .gtag.solo,
+body.theme-dark .gtag.solo,
+html[data-theme="dark"] .gtag.combo,
+body.theme-dark .gtag.combo,
+html[data-theme="dark"] .gtag.multi,
+body.theme-dark .gtag.multi,
+html[data-theme="dark"] .gtag.mystery,
+body.theme-dark .gtag.mystery {
+  background: var(--cosy-brand-tint);
+  border-color: var(--cosy-brand-border);
+  color: var(--cosy-brand-primary);
+}
+
+html[data-theme="dark"] .sec-title .sec-title-text,
+body.theme-dark .sec-title .sec-title-text {
+  color: var(--cosy-color-ink, #f0f7f1);
+}
+
+html[data-theme="dark"] .cg-nav-brand-text,
+body.theme-dark .cg-nav-brand-text {
+  color: var(--cosy-color-ink, #f0f7f1);
+}
+
+html[data-theme="dark"] .cg-nav-hub-link:hover,
+html[data-theme="dark"] .cg-nav-hub-link:focus-visible,
+body.theme-dark .cg-nav-hub-link:hover,
+body.theme-dark .cg-nav-hub-link:focus-visible {
+  color: var(--cosy-brand-primary);
+}
+
+html[data-theme="dark"] body.games-hub-page,
+html[data-theme="dark"] body.cosy-game-theme,
+body.theme-dark.games-hub-page,
+body.theme-dark.cosy-game-theme {
+  background-image:
+    radial-gradient(circle at 10% -4%, rgba(47, 214, 207, 0.14), transparent 30rem),
+    radial-gradient(circle at 92% 2%, rgba(53, 184, 196, 0.1), transparent 26rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cg-nav-hub-link::after,
+  .gc,
+  .gc::before {
+    transition: none;
+  }
+}

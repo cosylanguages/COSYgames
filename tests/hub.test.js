@@ -101,7 +101,7 @@ test('Hub drift and integrity tests', () => {
     const countNumber = parseInt(match[1], 10);
 
     // Count .gc cards inside this specific grid
-    const gridBlockMatch = indexHtml.match(new RegExp(`<div\\s+class="game-grid\\s+fi"\\s+id="${sec.id}">([\\s\\S]*?)(?=<div\\s+class="sec-title|<\\/div>\\s*<\\/div>\\s*<!-- Footer -->)`));
+    const gridBlockMatch = indexHtml.match(new RegExp(`<div\\s+class="game-grid\\s+fi"\\s+id="${sec.id}">([\\s\\S]*?)(?=<div\\s+class="sec-title|<!-- \\/cosy:hub:end -->)`));
     assert.ok(gridBlockMatch, `Grid element with id ${sec.id} must exist`);
     const cardsInGrid = [...gridBlockMatch[1].matchAll(/<div\s+[^>]*class="(?:\w+\s+)*gc(?:\s+[^"]*)?"[^>]*>/g)].length;
 
@@ -131,7 +131,7 @@ test('Hub cross-check with games/index.json', () => {
   const indexHtml = fs.readFileSync(indexPath, 'utf8');
   const gamesJson = JSON.parse(fs.readFileSync(gamesJsonPath, 'utf8'));
 
-  const cardBlockRegex = /<div\s+[^>]*class="(?:\w+\s+)*gc(?:\s+[^"]*)?"[^>]*>[\s\S]*?(?=<div\s+[^>]*class="(?:\w+\s+)*gc(?:\s+[^"]*)?"|<div\s+class="sec-title|<\/div>\s*<\/div>\s*<!-- Footer -->)/g;
+  const cardBlockRegex = /<div\s+[^>]*class="(?:\w+\s+)*gc(?:\s+[^"]*)?"[^>]*>[\s\S]*?(?=<div\s+[^>]*class="(?:\w+\s+)*gc(?:\s+[^"]*)?"|<div\s+class="sec-title|<!-- \/cosy:hub:end -->)/g;
   const blocks = indexHtml.match(cardBlockRegex) || [];
 
   const hubCards = blocks.map((block, idx) => {

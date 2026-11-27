@@ -81,21 +81,21 @@
 .sm-progress-track {
   flex: 1;
   height: 10px;
-  background: #e5e7eb;
+  background: var(--cosy-brand-tint, #e7fbf9);
   border-radius: 5px;
   overflow: hidden;
 }
 
 .sm-progress-fill {
   height: 100%;
-  background: var(--game-accent);
+  background: var(--cosy-brand-gradient, linear-gradient(135deg, #0abbb5, #0ca2b0));
   transition: width 0.3s ease;
 }
 
 .sm-progress-text {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #374151;
+  color: var(--cosy-brand-deepest, #034744);
   white-space: nowrap;
 }
 

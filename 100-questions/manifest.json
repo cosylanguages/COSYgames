@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "100-questions",
+  "displayName": "100 Questions",
+  "description": "Pick a deck and answer deep, funny, or philosophical questions. Perfect for speaking practice.",
+  "category": "Speaking & Fluency",
+  "skillFocus": "speaking",
+  "cefrLevels": [
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "ru"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "questions",
+    "hundred-questions"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "decks/civic.js",
+      "scope": "game"
+    },
+    {
+      "path": "decks/family.js",
+      "scope": "game"
+    },
+    {
+      "path": "decks/friends.js",
+      "scope": "game"
+    },
+    {
+      "path": "decks/interview.js",
+      "scope": "game"
+    },
+    {
+      "path": "decks/myself.js",
+      "scope": "game"
+    },
+    {
+      "path": "decks/netflix.js",
+      "scope": "game"
+    },
+    {
+      "path": "decks/student.js",
+      "scope": "game"
+    },
+    {
+      "path": "decks/teacher.js",
+      "scope": "game"
+    }
+  ],
+  "externalDependencies": [],
+  "discovery": {
+    "topics": [
+      "everyday-life",
+      "hobbies-entertainment",
+      "people-feelings",
+      "places-travel",
+      "opinions-ideas",
+      "society-culture",
+      "stories-mystery"
+    ],
+    "audiences": [
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "deck-dependent",
+    "contentSetCount": 8
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

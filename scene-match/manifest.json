@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "scene-match",
+  "displayName": "Scene Match",
+  "description": "Explore interactive visual rooms and match vocabulary items to scene objects.",
+  "category": "Vocab & Puzzles",
+  "skillFocus": "vocabulary",
+  "cefrLevels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "solo"
+  ],
+  "aliases": [
+    "scenematch"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "data/scenes/*.js",
+      "scope": "shared"
+    }
+  ],
+  "externalDependencies": [],
+  "discovery": {
+    "topics": [
+      "everyday-life",
+      "places-travel",
+      "learning-knowledge",
+      "work-future",
+      "nature-world",
+      "real-life-communication"
+    ],
+    "audiences": [
+      "young-learners",
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "scene-tagged",
+    "contentSetCount": 24
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}
