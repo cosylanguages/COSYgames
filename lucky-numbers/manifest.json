@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "lucky-numbers",
+  "displayName": "Lucky Numbers",
+  "description": "Practice numbers, counting, and math expressively in your target language.",
+  "category": "Vocab & Puzzles",
+  "skillFocus": "listening",
+  "cefrLevels": [
+    "A0",
+    "A1"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "bingo"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [],
+  "externalDependencies": [
+    "COSYdata (a0_a1/numbers.json)",
+    "i18n/games/lucky-numbers.js"
+  ],
+  "discovery": {
+    "topics": [
+      "words-grammar",
+      "everyday-life"
+    ],
+    "audiences": [
+      "young-learners",
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "special-category-selection",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

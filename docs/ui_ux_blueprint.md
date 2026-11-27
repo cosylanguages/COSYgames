@@ -37,14 +37,29 @@ COSYgames supports three distinct learning environments:
 ## 2. 🎨 Color Palette & Theme Logic
 
 ### Core Tokens (`shared/css/tokens.css`)
-* **Brand Accent (Sage Teal):** `--sage` (`#416b49`), `--sage-dark` (`#375742`), `--sage-mist` (`#f0f5f1`).
+* **Ecosystem Base:** neutrals, typography, spacing, radii, shadows, and semantic
+  feedback colours. This file is shared across the COSY ecosystem.
 * **Background & Surfaces:**
   * Light Mode: Background `--cream` (`#fdfcf8`), Surface `#FFFFFF`, Text `--ink` (`#2a2a2a`).
   * Dark Mode: Background `--cream` (`#1a1f1a`), Surface `#222b22`, Text `--ink` (`#e8f0e9`).
-* **Game Category Accents:**
-  * **Speaking & Fluency:** Teal (`#0D9488` / `#416b49`) - Focus & Expression.
-  * **Mystery & Guesses:** Gold / Honey (`#D97706` / `#945e05`) - Curiosity & Discovery.
-  * **Vocab & Puzzles:** Plum / Purple (`#7E22CE` / `#7a5c3a`) - Logic & Memory.
+
+### Brand Layer (`shared/css/brand.css`)
+Loaded last on every page. It re-points the legacy `--sage` / `--teal` aliases
+to the COSY turquoise family and adds the game-specific identity details.
+
+* **Primary:** `--cosy-brand-primary` (`#0abbb5`) — the COSYlanguages logo colour.
+  Used on the logo, active filters, play badges, and decorative gradients.
+* **Secondary:** `--cosy-brand-secondary` (`#0ca2b0`) — supporting accents,
+  hover states, and the second stop of brand gradients.
+* **Readable text:** `--cosy-brand-deep` (`#067a77`) on light surfaces and
+  `--cosy-brand-ink` (`#033b39`) on turquoise surfaces. This keeps contrast
+  accessible without dulling the identity.
+* **Tints:** `--cosy-brand-tint` (`#e7fbf9`), `--cosy-brand-tint-strong`
+  (`#c9f5f1`), `--cosy-brand-mist` (`#f2fdfc`) for icon tiles, tags, and soft
+  backgrounds.
+* **Game categories:** all categories stay inside the turquoise family.
+  Differentiation comes from the icon, label, and badge shape rather than a
+  competing hue. This keeps COSYgames recognisable at a glance.
 
 ---
 

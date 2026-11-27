@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "what-gender-is-it",
+  "displayName": "What Gender Is It?",
+  "description": "Master noun genders with speed rounds and grammar memory triggers.",
+  "category": "Vocab & Puzzles",
+  "skillFocus": "grammar",
+  "cefrLevels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "fr",
+    "es",
+    "it",
+    "de",
+    "ru",
+    "el",
+    "br"
+  ],
+  "modes": [
+    "solo"
+  ],
+  "aliases": [
+    "gender"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "data/gender/a1.js",
+      "scope": "shared"
+    },
+    {
+      "path": "data/gender/a2.js",
+      "scope": "shared"
+    },
+    {
+      "path": "data/gender/b1.js",
+      "scope": "shared"
+    },
+    {
+      "path": "data/gender/b2.js",
+      "scope": "shared"
+    },
+    {
+      "path": "data/gender/c1.js",
+      "scope": "shared"
+    },
+    {
+      "path": "data/gender/c2.js",
+      "scope": "shared"
+    }
+  ],
+  "externalDependencies": [],
+  "discovery": {
+    "topics": [
+      "words-grammar",
+      "everyday-life"
+    ],
+    "audiences": [
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "language-dependent",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

@@ -1,7 +1,7 @@
 :root {
-  --game-accent: linear-gradient(135deg, var(--cosy-color-sage, #416b49), var(--cosy-color-forest-green, #416b49));
-  --game-accent-dim: rgba(65, 107, 73, 0.15);
-  --game-accent-contrast: #ffffff;
+  --game-accent: var(--cosy-brand-gradient, linear-gradient(135deg, #0abbb5, #0ca2b0));
+  --game-accent-dim: var(--cosy-brand-glow, rgba(10, 187, 181, 0.18));
+  --game-accent-contrast: var(--cosy-brand-ink, #033b39);
   --river-surface: var(--cosy-color-sage-light, #e8f0e9);
   --river-border: var(--cosy-color-sage-soft, #6b9474);
   --chip-bg: linear-gradient(180deg, #ffffff 0%, var(--cosy-color-sage-mist, #f0f5f1) 100%);
@@ -186,8 +186,8 @@
 .flow-instructions-badge {
   display: inline-block;
   font-size: 0.82rem;
-  color: #0369a1;
-  background: #e0f2fe;
+  color: var(--cosy-brand-deep, #067a77);
+  background: var(--cosy-brand-tint, #e7fbf9);
   padding: 0.3rem 0.75rem;
   border-radius: 12px;
   margin-bottom: 0.75rem;

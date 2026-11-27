@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "battle-of-wits",
+  "displayName": "Battle of Wits",
+  "description": "Two topics, two sides. Build your arguments and debate in the language you're learning.",
+  "category": "Speaking & Fluency",
+  "skillFocus": "speaking",
+  "cefrLevels": [
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "group"
+  ],
+  "aliases": [
+    "battle"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "data/*/battle.js",
+      "scope": "shared"
+    }
+  ],
+  "externalDependencies": [
+    "shared/js/game-strings.js",
+    "i18n/games/battle-of-wits.js"
+  ],
+  "discovery": {
+    "topics": [
+      "opinions-ideas",
+      "society-culture",
+      "learning-knowledge",
+      "work-future",
+      "nature-world",
+      "hobbies-entertainment"
+    ],
+    "audiences": [
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "content-dependent",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

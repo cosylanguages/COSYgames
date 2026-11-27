@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "last-letter",
+  "displayName": "Last Letter",
+  "description": "Chain vocabulary words by matching the last letter of each word to the next.",
+  "category": "Vocab & Puzzles",
+  "skillFocus": "vocabulary",
+  "cefrLevels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "lastletter"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [],
+  "externalDependencies": [
+    "COSYdata / shared/js/vocab-loader.js",
+    "i18n/games/last-letter.js"
+  ],
+  "discovery": {
+    "topics": [
+      "everyday-life",
+      "nature-world",
+      "places-travel",
+      "hobbies-entertainment",
+      "words-grammar"
+    ],
+    "audiences": [
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "vocabulary-dependent",
+    "contentSetCount": 0
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

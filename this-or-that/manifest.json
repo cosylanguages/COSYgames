@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "this-or-that",
+  "displayName": "This or That?",
+  "description": "Choose between two intriguing options and justify your choice.",
+  "category": "Speaking & Fluency",
+  "skillFocus": "speaking",
+  "cefrLevels": [
+    "A0",
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "thisorthat"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "decks/cefr_all_decks.json",
+      "scope": "game"
+    },
+    {
+      "path": "decks/french.json",
+      "scope": "game"
+    },
+    {
+      "path": "decks/greek.json",
+      "scope": "game"
+    },
+    {
+      "path": "decks/italian.json",
+      "scope": "game"
+    },
+    {
+      "path": "decks/russian.json",
+      "scope": "game"
+    },
+    {
+      "path": "decks/en/*.json",
+      "scope": "game"
+    }
+  ],
+  "externalDependencies": [],
+  "discovery": {
+    "topics": [
+      "everyday-life",
+      "hobbies-entertainment",
+      "places-travel",
+      "people-feelings",
+      "opinions-ideas",
+      "society-culture",
+      "words-grammar",
+      "work-future"
+    ],
+    "audiences": [
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "deck-tagged",
+    "contentSetCount": 12
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}

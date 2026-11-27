@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "word-linker",
+  "displayName": "Word Linker",
+  "description": "Connect related vocabulary words to build semantic chains.",
+  "category": "Vocab & Puzzles",
+  "skillFocus": "vocabulary",
+  "cefrLevels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "learningLanguages": [
+    "en",
+    "fr",
+    "es",
+    "de",
+    "it",
+    "ru",
+    "el"
+  ],
+  "modes": [
+    "solo",
+    "group"
+  ],
+  "aliases": [
+    "wordlinker"
+  ],
+  "entry": "index.html",
+  "duration": "varies-by-round-settings",
+  "dataFiles": [
+    {
+      "path": "data/*/wordlinker.js",
+      "scope": "shared"
+    }
+  ],
+  "externalDependencies": [
+    "COSYdata / shared/js/vocab-loader.js",
+    "i18n/games/word-linker.js"
+  ],
+  "discovery": {
+    "topics": [
+      "everyday-life",
+      "nature-world",
+      "places-travel",
+      "people-feelings",
+      "hobbies-entertainment",
+      "work-future",
+      "words-grammar"
+    ],
+    "audiences": [
+      "children",
+      "teens",
+      "adults",
+      "mixed-ages"
+    ],
+    "formats": [
+      "online",
+      "in-person"
+    ],
+    "levelAvailability": "prompt-tagged",
+    "contentSetCount": 3
+  },
+  "generatedBy": "scripts/sync-game-manifests.js"
+}
