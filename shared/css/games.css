@@ -679,3 +679,11 @@ body.theme-dark .btn-gender {
 .gc-gold { --card-accent: var(--gold); --card-bg: var(--gold-light); }
 .gc-ink { --card-accent: var(--ink); --card-bg: var(--tan); }
 .gc-pink { --card-accent: #d53f8c; --card-bg: #fff5f7; }
+
+/* ── Product identity ─────────────────────────────────────────────────────
+   The hub cards take their corner and lift from the product layer, so the
+   `playful` identity set on <body> drives them instead of a fixed choice. */
+[data-product] .gc {
+  border-radius: var(--cosy-product-radius, var(--r-lg));
+  box-shadow: var(--cosy-product-shadow, var(--cosy-shadow-sm));
+}
