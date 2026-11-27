@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 Language Games That Actually Teach 🎮: COSYlanguages</title>
+    <meta name="description" content="18 interactive language games that actually teach speaking, vocabulary, mystery, and puzzles. Free, no account needed. Solo or with friends.">
+    <link rel="icon" href="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+    <meta name="theme-color" content="#FAF7F2">
+
+    <link rel="stylesheet" href="./shared/css/tokens.css">
+    <link rel="stylesheet" href="./shared/css/games.css">
+    <link rel="stylesheet" href="./shared/css/cosy-icons.css">
+    <link rel="stylesheet" href="./shared/css/nav.css">
+    <link rel="stylesheet" href="./shared/styles/game-styles.css">
+    <link rel="stylesheet" href="./shared/css/hub.css">
+    <link rel="canonical" href="https://cosylanguages.github.io/COSYgames/">
+    <meta property="og:title" content="18 Language Games That Actually Teach 🎮: COSYlanguages">
+    <meta property="og:description" content="18 interactive language games that actually teach speaking, vocabulary, mystery, and puzzles. Free, no account needed. Solo or with friends.">
+    <meta property="og:url" content="https://cosylanguages.github.io/COSYgames/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="18 Language Games That Actually Teach 🎮: COSYlanguages">
+    <meta name="twitter:description" content="18 interactive language games that actually teach speaking, vocabulary, mystery, and puzzles. Free, no account needed. Solo or with friends.">
+    <meta name="twitter:url" content="https://cosylanguages.github.io/COSYgames/">
+    <meta name="twitter:image" content="https://cosylanguages.github.io/COSYlanguages/images/logos/cosylanguages.png">
+    <meta property="og:locale" content="en_US">
+    <link rel="stylesheet" href="https://cosylanguages.github.io/COSYlanguages/css/ecosystem-strip.css">
+</head>
+<body class="games-hub-page cosy-game-theme">
+    <!-- Ecosystem Strip -->
+    <!-- cosy:chrome:ecosystem-strip-hub -->
+    <!-- Shared ecosystem strip (component hosted in COSYlanguages). -->
+    <div data-ecosystem-strip data-self="games"></div>
+    <!-- /cosy:chrome:ecosystem-strip-hub -->
+
+    <!-- Top Navigation Header -->
+    <!-- cosy:chrome:nav-hub -->
+    <nav class="cg-nav">
+        <a href="index.html" class="cg-nav-brand">
+            <img src="shared/images/cosygames-logo.png" alt="COSYgames logo" class="cg-nav-logo">
+            <span class="cg-nav-brand-text">COSYgames</span>
+        </a>
+        <div class="cg-nav-right">
+            <a href="#grid-speaking" class="cg-nav-hub-link" data-i18n="nav_speaking">Speaking & Fluency 🗣️</a>
+            <a href="#grid-mystery" class="cg-nav-hub-link" data-i18n="nav_mystery">Mystery & Guesses 🔍</a>
+            <a href="#grid-vocab" class="cg-nav-hub-link" data-i18n="nav_vocab">Vocab & Puzzles 🧩</a>
+            <select id="cosy-ui-lang-switcher" class="cosy-lang-select" onchange="if(window.setLanguage)window.setLanguage(this.value)" aria-label="Interface language" title="Interface language">
+                <option value="en">🇬🇧 EN</option>
+                <option value="fr">🇫🇷 FR</option>
+                <option value="es">🇪🇸 ES</option>
+                <option value="de">🇩🇪 DE</option>
+                <option value="it">🇮🇹 IT</option>
+                <option value="ru">🇷🇺 RU</option>
+                <option value="el">🇬🇷 EL</option>
+            </select>
+            <button class="cg-theme-btn" onclick="toggleCosyGamesTheme()" aria-label="Toggle dark mode">🌓</button>
+        </div>
+    </nav>
+    <!-- /cosy:chrome:nav-hub -->
+
+    <div id="hub">
+      <!-- Hero Section -->
+      <div class="hero">
+        <div class="hero-inner hero-inner-centered">
+            <div class="hero-tag" data-i18n="tagline">Free · No account needed · Solo or with friends</div>
+            <h1 data-i18n="hero_title">18 Language Games That Actually Teach</h1>
+        </div>
+      </div>
+
+      <div class="page">
+        <!-- Filter Bar -->
+        <div class="filter-bar fi">
+          <div class="filter-group" role="group" aria-labelledby="fg-players">
+            <span class="fl" id="fg-players" data-i18n="filter_players">Players:</span>
+            <button class="fpill active" data-group="players" data-f="all" aria-pressed="true" data-i18n="filter_any">Any</button>
+            <button class="fpill" data-group="players" data-f="solo" aria-pressed="false" data-i18n="filter_solo">Solo</button>
+            <button class="fpill" data-group="players" data-f="group" aria-pressed="false" data-i18n="filter_friends">With Friends</button>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-skill">
+            <span class="fl" id="fg-skill" data-i18n="filter_skill">Skill:</span>
+            <button class="fpill active" data-group="skill" data-f="all" aria-pressed="true" data-i18n="filter_any">Any</button>
+            <button class="fpill" data-group="skill" data-f="speaking" aria-pressed="false" data-i18n="section_speaking">Speaking & Fluency</button>
+            <button class="fpill" data-group="skill" data-f="mystery" aria-pressed="false" data-i18n="section_mystery">Mystery & Guesses</button>
+            <button class="fpill" data-group="skill" data-f="vocab" aria-pressed="false" data-i18n="section_vocab">Vocab & Puzzles</button>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-category">
+            <label class="fl" id="fg-category" for="filter-category" data-i18n="filter_topic">Topic:</label>
+            <select class="cosy-taxonomy-select" id="filter-category">
+              <option value="all" data-i18n="filter_all_topics">All topics</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-subcategory">
+            <label class="fl" id="fg-subcategory" for="filter-subcategory" data-i18n="filter_subtopic">Subtopic:</label>
+            <select class="cosy-taxonomy-select" id="filter-subcategory" disabled>
+              <option value="all" data-i18n="filter_all_subtopics">All subtopics</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-level">
+            <label class="fl" id="fg-level" for="filter-level" data-i18n="filter_level">Level:</label>
+            <select class="cosy-taxonomy-select" id="filter-level">
+              <option value="all" data-i18n="filter_all_levels">All levels</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-audience">
+            <label class="fl" id="fg-audience" for="filter-audience" data-i18n="filter_audience">Audience:</label>
+            <select class="cosy-taxonomy-select" id="filter-audience">
+              <option value="all" data-i18n="filter_all_ages">All ages</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-mode">
+            <label class="fl" id="fg-mode" for="filter-mode">Group size:</label>
+            <select class="cosy-taxonomy-select" id="filter-mode">
+              <option value="all">Any group size</option>
+            </select>
+          </div>
+          <div class="filter-group" role="group" aria-labelledby="fg-format">
+            <label class="fl" id="fg-format" for="filter-format">Setting:</label>
+            <select class="cosy-taxonomy-select" id="filter-format">
+              <option value="all">Any setting</option>
+            </select>
+          </div>
+        </div>
+        <p class="taxonomy-filter-note" id="level-filter-note">Level filters show games with mapped CEFR levels. Some games use difficulty modes or have content that is not yet CEFR-assessed, so they may not appear when a specific level is selected.</p>
+        <p class="taxonomy-filter-note" id="taxonomy-load-error" role="status" aria-live="polite" hidden>Topic and learning filters could not load. You can still browse all games below; please refresh the page to try again.</p>
+        <p class="taxonomy-empty-state" id="taxonomy-empty-state" role="status" aria-live="polite" hidden>No games match these filters. Try changing or clearing one or more filters.</p>
+
+        <!-- SPEAKING & FLUENCY (9 Games) -->
+        <div class="sec-title fi"><span class="cosy-icon icon-speech sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_speaking">Speaking & Fluency</span> <span class="sec-count">9 games</span></div>
+        <div class="game-grid fi" id="grid-speaking">
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🗣️</div><div class="gc-name"><a class="gc-link" href="fluency-flow/index.html">Fluency Flow</a></div></div>
+            <div class="gc-desc" data-i18n="desc_fluency_flow">Spin for a random topic and speak for 1–5 minutes without stopping. Flow, not perfection.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-teal" data-players="group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">⚖️</div><div class="gc-name"><a class="gc-link" href="battle-of-wits/index.html">Battle of Wits</a></div></div>
+            <div class="gc-desc" data-i18n="desc_battle_wits">Two topics, two sides. Build your arguments and debate in the language you're learning.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag multi" data-i18n="tag_group">Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🏟️</div><div class="gc-name"><a class="gc-link" href="opinion-arena/index.html">Opinion Arena</a></div></div>
+            <div class="gc-desc" data-i18n="desc_opinion_arena">Agree or disagree with a statement, then defend your view. Real opinions, real language.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🎭</div><div class="gc-name"><a class="gc-link" href="critics-corner/index.html">Critic's Corner</a></div></div>
+            <div class="gc-desc" data-i18n="desc_critics_corner">A famous quote appears. What does it mean to you? Deep discussion for advanced levels.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">💬</div><div class="gc-name"><a class="gc-link" href="100-questions/index.html">100 Questions</a></div></div>
+            <div class="gc-desc" data-i18n="desc_100_questions">Pick a deck and answer deep, funny, or philosophical questions. Perfect for speaking practice.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🃏</div><div class="gc-name"><a class="gc-link" href="story-chain/index.html">Story Chain</a></div></div>
+            <div class="gc-desc" data-i18n="desc_story_chain">Add one sentence at a time to build a collaborative story with prompts and connectors.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">📖</div><div class="gc-name"><a class="gc-link" href="story-weaver/index.html">Story Weaver</a></div></div>
+            <div class="gc-desc" data-i18n="desc_story_weaver">Weave target words into a coherent narrative. Turn vocabulary study into creative writing.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🎯</div><div class="gc-name"><a class="gc-link" href="hot-seat/index.html">Hot Seat</a></div></div>
+            <div class="gc-desc" data-i18n="desc_hot_seat">One player faces away from the board while team members explain target words without saying them.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-teal" data-players="solo group" data-skill="speaking">
+            <div class="gc-top"><div class="gc-icon">🔀</div><div class="gc-name"><a class="gc-link" href="this-or-that/index.html">This or That</a></div></div>
+            <div class="gc-desc" data-i18n="desc_this_or_that">Choose between two intriguing options and justify your choice.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+        </div>
+
+        <!-- MYSTERY & GUESSES (1 Game) -->
+        <div class="sec-title fi"><span class="cosy-icon icon-search sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_mystery">Mystery & Guesses</span> <span class="sec-count">1 game</span></div>
+        <div class="game-grid fi" id="grid-mystery">
+          <div class="gc gc-gold" data-players="solo group" data-skill="mystery">
+            <div class="gc-top"><div class="gc-icon">🎲</div><div class="gc-name"><a class="gc-link" href="guess/index.html">Guess!</a></div></div>
+            <div class="gc-desc" data-i18n="desc_guess">Guess Who, What, Where and When across four editions. One game now: it replaces the three separate games Identity Mystery, Object Quest and Action Hero.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+        </div>
+
+        <!-- VOCAB & PUZZLES (8 Games) -->
+        <div class="sec-title fi"><span class="cosy-icon icon-puzzle sec-title-icon" aria-hidden="true"></span><span class="sec-title-text" data-i18n="section_vocab">Vocab & Puzzles</span> <span class="sec-count">8 games</span></div>
+        <div class="game-grid fi" id="grid-vocab">
+          <div class="gc gc-plum" data-players="solo" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🖼️</div><div class="gc-name"><a class="gc-link" href="scene-match/index.html">Scene Match</a></div></div>
+            <div class="gc-desc" data-i18n="desc_scene_match">Explore interactive visual rooms and match vocabulary items to scene objects.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-plum" data-players="solo group" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🔗</div><div class="gc-name"><a class="gc-link" href="word-linker/index.html">Word Linker</a></div></div>
+            <div class="gc-desc" data-i18n="desc_word_linker">Connect related vocabulary words to build semantic chains.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-plum" data-players="solo group" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🔤</div><div class="gc-name"><a class="gc-link" href="last-letter/index.html">Last Letter</a></div></div>
+            <div class="gc-desc" data-i18n="desc_last_letter">Chain vocabulary words by matching the last letter of each word to the next.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-plum" data-players="solo group" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">📖</div><div class="gc-name"><a class="gc-link" href="emoji-odyssey/index.html">Emoji Odyssey</a></div></div>
+            <div class="gc-desc" data-i18n="desc_emoji_odyssey">Decode phrases and idioms represented purely through emoji sequences.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-plum" data-players="solo" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🧩</div><div class="gc-name"><a class="gc-link" href="cosy-crossword/index.html">Cosy Crossword</a></div></div>
+            <div class="gc-desc" data-i18n="desc_cosy_crossword">Solve language puzzles with tailored vocabulary clues and crosswords.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-plum" data-players="solo group" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">🔢</div><div class="gc-name"><a class="gc-link" href="lucky-numbers/index.html">Lucky Numbers</a></div></div>
+            <div class="gc-desc" data-i18n="desc_lucky_numbers">Practice numbers, counting, and math expressively in your target language.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag combo" data-i18n="tag_solo_group">Solo or Group</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-plum" data-players="solo" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">📜</div><div class="gc-name"><a class="gc-link" href="etymology-explorer/index.html">Etymology Explorer</a></div></div>
+            <div class="gc-desc" data-i18n="desc_etymology_explorer">Uncover word origins, roots, and language family connections.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+          <div class="gc gc-plum" data-players="solo" data-skill="vocab">
+            <div class="gc-top"><div class="gc-icon">♀️♂️</div><div class="gc-name"><a class="gc-link" href="what-gender-is-it/index.html">What Gender Is It?</a></div></div>
+            <div class="gc-desc" data-i18n="desc_what_gender">Master noun genders with speed rounds and grammar memory triggers.</div>
+            <div class="gc-foot"><div class="gc-tags"><span class="gtag solo" data-i18n="tag_solo">Solo</span></div><span class="gc-play" aria-hidden="true" data-i18n="btn_play">► Play</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <!-- cosy:chrome:footer-hub -->
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="fb-logo">
+              <img src="shared/images/cosygames-logo.png" alt="COSYgames logo" class="cg-footer-logo">
+              <span class="fb-name">COSYgames</span>
+            </div>
+            <p data-cms-key="footer-brand-text">Your friendly corner to master new languages and connect with the world. 🌍</p>
+          </div>
+          <div class="footer-links-col">
+            <h5 data-i18n="footer_ecosystem">COSY Ecosystem</h5>
+            <a href="https://cosylanguages.github.io/COSYdata/" target="_blank" rel="noopener">COSYdata 📊</a>
+            <a href="https://cosylanguages.github.io/COSYtools/" target="_blank" rel="noopener">COSYtools 🛠️</a>
+            <a href="https://cosylanguages.github.io/COSYevents/" target="_blank" rel="noopener">COSYevents 🎉</a>
+          </div>
+          <div class="footer-links-col">
+            <h5 data-i18n="footer_explore">Explore</h5>
+            <a href="https://cosylanguages.github.io/COSYlanguages/#languages" target="_blank" rel="noopener" data-i18n="footer_languages">Languages 🌍</a>
+            <a href="https://cosylanguages.github.io/COSYlanguages/practice/" target="_blank" rel="noopener" data-i18n="footer_practice">Free Practice 💡</a>
+          </div>
+          <div class="footer-links-col">
+            <h5 data-i18n="footer_contact">Contact</h5>
+            <a href="https://wa.me/330766784195" target="_blank" rel="noopener">WhatsApp 📱</a>
+            <a href="https://t.me/cosylanguagesproject" target="_blank" rel="noopener">Telegram ✈️</a>
+            <a href="mailto:cosylanguages@gmail.com">cosylanguages@gmail.com ✉️</a>
+          </div>
+        </div>
+        <div class="footer-bottom" data-i18n="footer_rights">© 2022-2026 COSY Languages. All rights reserved.</div>
+      </footer>
+      <!-- /cosy:chrome:footer-hub -->
+    </div><!-- /hub -->
+
+    <!-- Scripts -->
+    <script src="./shared/js/hub-core.js"></script>
+    <script src="./shared/js/hub.js"></script>
+
+    <script src="./shared/js/game-taxonomy.js"></script>
+    <div id="toast" class="toast-notification"></div>
+    <script defer src="./shared/js/auth-sso.js"></script>
+    <script defer src="./shared/js/cms-editor.js"></script>
+    <script src="./shared/utils/game-utils.js"></script>
+    <script src="shared/js/i18n.js"></script>
+    <script src="./shared/js/nav.js"></script>
+    <script src="https://cosylanguages.github.io/COSYlanguages/js/ecosystem-strip.js" defer></script>
+</body>
+</html>

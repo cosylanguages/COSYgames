@@ -1,0 +1,7 @@
+{
+  "name": "@cosy/shared",
+  "version": "1.0.0",
+  "description": "Shared Design Tokens, Utilities and UI Assets for COSYlanguages",
+  "private": true,
+  "dependencies": {}
+}

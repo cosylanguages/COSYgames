@@ -1,0 +1,2698 @@
+{
+  "A0_A1": [
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Kenji",
+      "age": "24",
+      "location": "📍 Tokyo, Japan • 🇯🇵 Japanese",
+      "verified": true,
+      "avatar": "🇯🇵",
+      "gradient": "linear-gradient(135deg, #dc2626 0%, #f87171 100%)",
+      "visualDescription": "Young Japanese man with neat short dark hair, wearing a traditional yukata.",
+      "interests": [
+        "#Japanese",
+        "#Tokyo",
+        "#Ramen"
+      ],
+      "anthem": "🎵 'Sukiyaki' by Kyu Sakamoto",
+      "film": "🎬 'Spirited Away' (Hayao Miyazaki)",
+      "pages": [
+        {
+          "tag": "🖼️ Tokyo Profile",
+          "bio": "Konnichiwa! I am Kenji from Tokyo, Japan. I have short straight dark hair and brown eyes. I wear dark blue clothes and clean white sneakers.",
+          "greenFlags": [
+            "✓ Very polite and neat",
+            "✓ Stylish blue clothes",
+            "✓ Respectful greeting"
+          ],
+          "redFlags": [
+            "✗ Bows repeatedly",
+            "✗ Very quiet at first",
+            "✗ Wears slippers everywhere"
+          ]
+        },
+        {
+          "tag": "⚡ Tokyo Life",
+          "bio": "I live near Shibuya in Tokyo. I ride fast trains to work. I eat hot ramen noodles and green tea ice cream.",
+          "greenFlags": [
+            "✓ Knows Tokyo spots",
+            "✓ Loves ramen soup",
+            "✓ Punctual train rider"
+          ],
+          "redFlags": [
+            "✗ Eats noodles very fast",
+            "✗ Drinks green tea all day",
+            "✗ Walks very quickly"
+          ]
+        }
+      ],
+      "opener": "Konnichiwa! What is your nationality? Where are you from?",
+      "icebreakers": [
+        "I am from Spain!",
+        "I love Japanese food!",
+        "Tokyo is a big city!"
+      ],
+      "prompt": "What is Kenji's nationality and home country? What food does he eat?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Sofia",
+      "age": "23",
+      "location": "📍 Rome, Italy • 🇮🇹 Italian",
+      "verified": true,
+      "avatar": "🇮🇹",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #facc15 100%)",
+      "visualDescription": "Italian woman with brown wavy hair in Rome.",
+      "interests": [
+        "#Italian",
+        "#Rome",
+        "#Pasta"
+      ],
+      "anthem": "🎵 'Volare' by Domenico Modugno",
+      "film": "🎬 'La Dolce Vita' (Federico Fellini)",
+      "pages": [
+        {
+          "tag": "🖼️ Rome Profile",
+          "bio": "Ciao! I am Sofia from Rome, Italy. I have long dark wavy hair and brown eyes. I love colorful summer dresses and sunglasses.",
+          "greenFlags": [
+            "✓ Stylish Italian dress",
+            "✓ Warm friendly personality",
+            "✓ Expressive eyes"
+          ],
+          "redFlags": [
+            "✗ Speaks with hands constantly",
+            "✗ Always wearing dark sunglasses",
+            "✗ Late for lunch"
+          ]
+        },
+        {
+          "tag": "⚡ Italian Daily Life",
+          "bio": "In Rome, I drink espresso coffee at small cafes. I walk near historical fountains and talk with my family every evening.",
+          "greenFlags": [
+            "✓ Loves Italian coffee",
+            "✓ Family person",
+            "✓ Knows historic Rome"
+          ],
+          "redFlags": [
+            "✗ Drinks 4 espressos daily",
+            "✗ Talks loud on phone",
+            "✗ Refuses instant coffee"
+          ]
+        },
+        {
+          "tag": "💭 Food & Traditions",
+          "bio": "My grandmother teaches me how to cook fresh pasta. I love hot pizza with basil and cheese. Eating together is important!",
+          "greenFlags": [
+            "✓ Bakes fresh pizza",
+            "✓ Family recipe traditions",
+            "✓ Welcoming host"
+          ],
+          "redFlags": [
+            "✗ Strict about pasta recipes",
+            "✗ No pineapple on pizza",
+            "✗ Long 3-hour dinners"
+          ]
+        }
+      ],
+      "opener": "Ciao! Do you like Italian pizza or sweet gelato?",
+      "icebreakers": [
+        "I love pizza and gelato!",
+        "I want to visit Rome!",
+        "Ciao Sofia!"
+      ],
+      "prompt": "Where is Sofia from? What is her nationality and native food?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Anna",
+      "age": "20",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A0-A1Level",
+        "#Lifestyle9"
+      ],
+      "anthem": "🎵 'Shake It Off' by Taylor Swift",
+      "film": "🎬 'Paddington 2' (Paul King)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hello! I am Anna. I am 20 years old. I like simple daily routines, happy music, and meeting friendly people!",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Describe Anna. What does Anna like to do every day?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "David",
+      "age": "21",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👨",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A0-A1Level",
+        "#Lifestyle11"
+      ],
+      "anthem": "🎵 'Happy' by Pharrell Williams",
+      "film": "🎬 'Finding Nemo' (Pixar)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hello! I am David. I am 21 years old. I like simple daily routines, happy music, and meeting friendly people!",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Describe David. What does David like to do every day?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Sophia",
+      "age": "22",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🦱",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A0-A1Level",
+        "#Lifestyle13"
+      ],
+      "anthem": "🎵 'Sweet Caroline' by Neil Diamond",
+      "film": "🎬 'Chef' (Jon Favreau)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hello! I am Sophia. I am 22 years old. I like simple daily routines, happy music, and meeting friendly people!",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Describe Sophia. What does Sophia like to do every day?"
+    },
+    {
+      "type": "profile",
+      "level": "A0-A1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Alex",
+      "age": "23",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🍳",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A0-A1Level",
+        "#Lifestyle15"
+      ],
+      "anthem": "🎵 'Fix You' by Coldplay",
+      "film": "🎬 'Patch Adams' (Tom Shadyac)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hello! I am Alex. I am 23 years old. I like simple daily routines, happy music, and meeting friendly people!",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Describe Alex. What does Alex like to do every day?"
+    }
+  ],
+  "A2": [
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Mateo",
+      "age": "26",
+      "location": "📍 Oaxaca, Mexico • 🇲🇽 Spanish",
+      "verified": true,
+      "avatar": "🇲🇽",
+      "gradient": "linear-gradient(135deg, #059669 0%, #dc2626 100%)",
+      "visualDescription": "Mexican man in an embroidered shirt holding corn tacos in a town square.",
+      "interests": [
+        "#MexicanFood",
+        "#Oaxaca",
+        "#Tacos"
+      ],
+      "anthem": "🎵 'Cielito Lindo' by Mariachi Vargas",
+      "film": "🎬 'Coco' (Pixar)",
+      "pages": [
+        {
+          "tag": "🖼️ Oaxaca Roots",
+          "bio": "Hola! I am Mateo from Oaxaca, Mexico. I am proud of my country and traditions. We celebrate festivals with colorful flowers, music, and fresh corn tacos.",
+          "greenFlags": [
+            "✓ Makes homemade guacamole",
+            "✓ Friendly and welcoming",
+            "✓ Teaches salsa steps"
+          ],
+          "redFlags": [
+            "✗ Says spicy food is mild",
+            "✗ Arrives late to events",
+            "✗ Plays loud music"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "I work in a local craft market. During breaks, I chat with neighbors and drink traditional chocolate drinks made with cinnamon and hot milk.",
+          "greenFlags": [
+            "✓ Loves local craft markets",
+            "✓ Shares traditional drinks",
+            "✓ Friendly community ties"
+          ],
+          "redFlags": [
+            "✗ Spends hours chatting",
+            "✗ Takes very long coffee breaks",
+            "✗ Over-spices lunch dishes"
+          ]
+        },
+        {
+          "tag": "💭 Family & Joy",
+          "bio": "Family gatherings are the center of life in Oaxaca. We play guitars, share home-cooked meals, and celebrate life with lots of laughter and dancing.",
+          "greenFlags": [
+            "✓ Great family host",
+            "✓ Plays acoustic guitar",
+            "✓ Joyful social energy"
+          ],
+          "redFlags": [
+            "✗ Parties go past midnight",
+            "✗ Invites 20 cousins over",
+            "✗ Plays guitar during nap time"
+          ]
+        }
+      ],
+      "opener": "Hola! Do you like spicy food or traditional festivals?",
+      "icebreakers": [
+        "I love spicy food!",
+        "Festivals look fun!",
+        "Teach me salsa!"
+      ],
+      "prompt": "Where is Mateo from? What food does he make at home?"
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Freja",
+      "age": "25",
+      "location": "📍 Copenhagen, Denmark • 🇩🇰 Danish",
+      "verified": true,
+      "avatar": "🇩🇰",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #38bdf8 100%)",
+      "visualDescription": "Danish woman riding a bicycle along Copenhagen harbor in a sweater.",
+      "interests": [
+        "#DanishStyle",
+        "#Copenhagen",
+        "#Bicycles"
+      ],
+      "anthem": "🎵 '7 Years' by Lukas Graham",
+      "film": "🎬 'Another Round' (Thomas Vinterberg)",
+      "pages": [
+        {
+          "tag": "🖼️ Danish Profile",
+          "bio": "Hej! My name is Freja. I am Danish and I live in Copenhagen, Denmark. In Denmark, we like cozy indoor spaces with candles, soft blankets, and warm drinks.",
+          "greenFlags": [
+            "✓ Cozy candlelit dinners",
+            "✓ Rides bike every day",
+            "✓ Friendly and direct"
+          ],
+          "redFlags": [
+            "✗ Dislikes taking short car rides",
+            "✗ Lights many candles at home",
+            "✗ Very strict about rye bread"
+          ]
+        },
+        {
+          "tag": "⚡ Copenhagen Life",
+          "bio": "I ride my bicycle to my university every morning, even when rain or cold wind arrives. We wear warm waterproof coats and ride everywhere together.",
+          "greenFlags": [
+            "✓ Strong weather resilience",
+            "✓ Eco-friendly lifestyle",
+            "✓ Active commuting habit"
+          ],
+          "redFlags": [
+            "✗ Refuses taxi rides",
+            "✗ Clothes always smell like rain",
+            "✗ Insists on cycling in snow"
+          ]
+        }
+      ],
+      "opener": "Hej! Do you like riding bicycles in the city or taking café breaks?",
+      "icebreakers": [
+        "I love riding bikes!",
+        "Café breaks for me!",
+        "Copenhagen sounds nice!"
+      ],
+      "prompt": "What country is Freja from? How does she travel around her city?"
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Freja",
+      "age": "24",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍💼",
+      "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle17"
+      ],
+      "anthem": "🎵 'Home' by Edward Sharpe",
+      "film": "🎬 '500 Days of Summer' (Marc Webb)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Freja! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Freja's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Marcus",
+      "age": "25",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🔬",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle19"
+      ],
+      "anthem": "🎵 'Wildflowers' by Tom Petty",
+      "film": "🎬 'The Secret Garden' (Marc Munden)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Marcus! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Marcus's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Aria",
+      "age": "26",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🎨",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f97316 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle21"
+      ],
+      "anthem": "🎵 'Count on Me' by Bruno Mars",
+      "film": "🎬 'Inside Out' (Pixar)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Aria! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Aria's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Soren",
+      "age": "27",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🌾",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #84cc16 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle23"
+      ],
+      "anthem": "🎵 'You\\'ve Got a Friend' by Carole King",
+      "film": "🎬 'Paddington' (Paul King)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Soren! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Soren's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Sienna",
+      "age": "28",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍💻",
+      "gradient": "linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle25"
+      ],
+      "anthem": "🎵 'Bicycle Race' by Queen",
+      "film": "🎬 'E.T. the Extra-Terrestrial' (Steven Spielberg)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Sienna! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Sienna's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Sebastian",
+      "age": "29",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🏫",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle27"
+      ],
+      "anthem": "🎵 'Sunflower' by Post Malone",
+      "film": "🎬 'A Bug\\'s Life' (Pixar)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Sebastian! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Sebastian's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Carmen",
+      "age": "30",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🎤",
+      "gradient": "linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle29"
+      ],
+      "anthem": "🎵 'Sukiyaki' by Kyu Sakamoto",
+      "film": "🎬 'Spirited Away' (Hayao Miyazaki)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Carmen! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Carmen's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Lars",
+      "age": "31",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "🏃‍♂️",
+      "gradient": "linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle31"
+      ],
+      "anthem": "🎵 'Volare' by Domenico Modugno",
+      "film": "🎬 'La Dolce Vita' (Federico Fellini)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Lars! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Lars's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Manon",
+      "age": "32",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "🏋️‍♀️",
+      "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle33"
+      ],
+      "anthem": "🎵 'Island in the Sun' by Weezer",
+      "film": "🎬 'Moana' (Clements & Musker)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Manon! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Manon's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Bjorn",
+      "age": "33",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "🧗‍♂️",
+      "gradient": "linear-gradient(135deg, #78350f 0%, #b45309 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle35"
+      ],
+      "anthem": "🎵 'Postcards' by James Blunt",
+      "film": "🎬 'Roman Holiday' (William Wyler)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Bjorn! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Bjorn's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Yasmin",
+      "age": "34",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "💃",
+      "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle37"
+      ],
+      "anthem": "🎵 'Can\\'t Stop the Feeling!' by Justin Timberlake",
+      "film": "🎬 'Toy Story' (John Lasseter)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Yasmin! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Yasmin's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Gael",
+      "age": "20",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "🧔",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle39"
+      ],
+      "anthem": "🎵 'Three Little Birds' by Bob Marley",
+      "film": "🎬 'School of Rock' (Richard Linklater)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Gael! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Gael's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "A2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Evelyn",
+      "age": "21",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🦰",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#A2Level",
+        "#Lifestyle41"
+      ],
+      "anthem": "🎵 'Here Comes the Sun' by The Beatles",
+      "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "Hi, I'm Evelyn! I live near the city center and work in a creative environment. In my free time, I enjoy casual weekend activities with friends.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Talk about Evelyn's lifestyle, daily habits, and weekend preferences in simple A2 sentences."
+    }
+  ],
+  "B1": [
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Amara",
+      "age": "28",
+      "location": "📍 Lagos, Nigeria • 🇳🇬 Igbo & English",
+      "verified": true,
+      "avatar": "🇳🇬",
+      "gradient": "linear-gradient(135deg, #15803d 0%, #22c55e 100%)",
+      "visualDescription": "Nigerian woman wearing a patterned Ankara headwrap and traditional attire in Lagos.",
+      "interests": [
+        "#NigerianFood",
+        "#Afrobeats",
+        "#LagosLife"
+      ],
+      "anthem": "🎵 'Last Last' by Burna Boy",
+      "film": "🎬 'The Wedding Party' (Kemi Adetiba)",
+      "pages": [
+        {
+          "tag": "🖼️ Lagos Roots",
+          "bio": "Kedu! I'm Amara from Lagos, Nigeria. Nigeria has many cultural groups, lively Afrobeats music, and great food. We love getting together with family to eat spicy Jollof rice and listen to music.",
+          "greenFlags": [
+            "✓ Hosts fun dinners with great music",
+            "✓ Cooks delicious spicy Jollof rice",
+            "✓ Welcoming and cheerful"
+          ],
+          "redFlags": [
+            "✗ Long debates about who cooks the best rice",
+            "✗ Loud phone conversations",
+            "✗ Expects traditional politeness"
+          ]
+        },
+        {
+          "tag": "⚡ Lagos Energy",
+          "bio": "Lagos is an energetic city that never sleeps. I love visiting colorful fabric markets, dancing to Afrobeats at weekend celebrations, and cooking rich stews for friends.",
+          "greenFlags": [
+            "✓ Vibrant social host",
+            "✓ Great music playlists",
+            "✓ Generous cooking portions"
+          ],
+          "redFlags": [
+            "✗ Music always turned to maximum volume",
+            "✗ Debates Jollof rice recipes for hours",
+            "✗ Generous portions cause food comas"
+          ]
+        }
+      ],
+      "opener": "Kedu! Do you like trying spicy foods or listening to music from other countries?",
+      "icebreakers": [
+        "I love spicy food!",
+        "I listen to music from everywhere!",
+        "Tell me more about Lagos!"
+      ],
+      "prompt": "Describe Amara's country and food traditions using simple B1 sentences."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Aarav",
+      "age": "27",
+      "location": "📍 Jaipur, India • 🇮🇳 Hindi & English",
+      "verified": true,
+      "avatar": "🇮🇳",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "visualDescription": "Indian man in a blue kurta near Jaipur monuments holding cardamom chai.",
+      "interests": [
+        "#IndianCulture",
+        "#Jaipur",
+        "#MasalaChai"
+      ],
+      "anthem": "🎵 'Jai Ho' by A.R. Rahman",
+      "film": "🎬 '3 Idiots' (Rajkumar Hirani)",
+      "pages": [
+        {
+          "tag": "🖼️ Jaipur Heritage",
+          "bio": "Namaste! I'm Aarav from Jaipur, India. India is famous for colorful festivals, ancient palaces, and delicious spices. In Indian culture, welcoming guests is very important. I drink warm cardamom tea every morning.",
+          "greenFlags": [
+            "✓ Very welcoming to guests",
+            "✓ Knows how to cook with rich spices",
+            "✓ Enjoys sharing local traditions"
+          ],
+          "redFlags": [
+            "✗ Dislikes instant tea bags",
+            "✗ Talks for hours about cricket",
+            "✗ Wiggles head while talking"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Rhythms",
+          "bio": "I work in textile design, preserving traditional block-printing patterns passed down through generations. Every morning starts with fresh spiced chai brewed with real ginger and cardamom.",
+          "greenFlags": [
+            "✓ Preserves cultural craftsmanship",
+            "✓ Master of authentic spiced chai",
+            "✓ Artistic attention to detail"
+          ],
+          "redFlags": [
+            "✗ Rejects microwave tea heating",
+            "✗ Gets passionate about cricket match umpire decisions",
+            "✗ Fills home with patterned fabrics"
+          ]
+        },
+        {
+          "tag": "💭 Hospitality Values",
+          "bio": "'Atithi Devo Bhava' means the guest is like God in our culture. Hosting friends for home-cooked thali dinners with aromatic spices brings me immense satisfaction.",
+          "greenFlags": [
+            "✓ Exceptional guest hospitality",
+            "✓ Authentic Indian home cooking",
+            "✓ Warm cultural pride"
+          ],
+          "redFlags": [
+            "✗ Insists guests eat third helpings",
+            "✗ Disapproves of bland unspiced food",
+            "✗ Long elaborate dinner preparation"
+          ]
+        }
+      ],
+      "opener": "Namaste! Have you ever tasted Indian food or visited historical monuments?",
+      "icebreakers": [
+        "I love Indian spices!",
+        "I want to visit Jaipur!",
+        "Masala chai is great!"
+      ],
+      "prompt": "Describe Aarav's home city and cultural traditions."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Andre",
+      "age": "22",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍💼",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle43"
+      ],
+      "anthem": "🎵 'Blinding Lights' by The Weeknd",
+      "film": "🎬 'Night at the Museum' (Shawn Levy)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Andre, 29 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Andre's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Alina",
+      "age": "23",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🦳",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle45"
+      ],
+      "anthem": "🎵 'Levitating' by Dua Lipa",
+      "film": "🎬 'La La Land' (Damien Chazelle)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Alina, 30 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Alina's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Emil",
+      "age": "24",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🎨",
+      "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle47"
+      ],
+      "anthem": "🎵 'Smooth Operator' by Sade",
+      "film": "🎬 'The Devil Wears Prada' (David Frankel)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Emil, 31 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Emil's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Sarah",
+      "age": "25",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🍳",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle49"
+      ],
+      "anthem": "🎵 'Colors' by Halsey",
+      "film": "🎬 'Inception' (Christopher Nolan)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Sarah, 32 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Sarah's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "David",
+      "age": "26",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍💻",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f97316 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle51"
+      ],
+      "anthem": "🎵 'Coffee & TV' by Blur",
+      "film": "🎬 'Father of the Bride' (Charles Shyer)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm David, 33 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss David's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Maya",
+      "age": "27",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🔬",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #84cc16 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle53"
+      ],
+      "anthem": "🎵 'Midnight City' by M83",
+      "film": "🎬 'The Social Network' (David Fincher)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Maya, 34 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Maya's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Alex",
+      "age": "28",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🎤",
+      "gradient": "linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle55"
+      ],
+      "anthem": "🎵 'Our House' by Madness",
+      "film": "🎬 'Ferris Bueller\\'s Day Off' (John Hughes)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Alex, 35 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Alex's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Chloe",
+      "age": "29",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🌾",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle57"
+      ],
+      "anthem": "🎵 'Unstoppable' by Sia",
+      "film": "🎬 'Julie & Julia' (Nora Ephron)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Chloe, 24 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Chloe's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Marcus",
+      "age": "30",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "🏋️‍♂️",
+      "gradient": "linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle59"
+      ],
+      "anthem": "🎵 'Best Day of My Life' by American Authors",
+      "film": "🎬 'The Secret Life of Walter Mitty' (Ben Stiller)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Marcus, 25 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Marcus's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Nora",
+      "age": "31",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🏫",
+      "gradient": "linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle61"
+      ],
+      "anthem": "🎵 'Banana Pancakes' by Jack Johnson",
+      "film": "🎬 'Coco' (Pixar)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Nora, 26 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Nora's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Soren",
+      "age": "32",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "🚴‍♂️",
+      "gradient": "linear-gradient(135deg, #1e293b 0%, #475569 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle63"
+      ],
+      "anthem": "🎵 'Photograph' by Ed Sheeran",
+      "film": "🎬 'Another Round' (Thomas Vinterberg)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Soren, 27 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Soren's main interests and explain why this lifestyle appeals to them."
+    },
+    {
+      "type": "profile",
+      "level": "B1",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Valerie",
+      "age": "33",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "🏃‍♀️",
+      "gradient": "linear-gradient(135deg, #78350f 0%, #b45309 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B1Level",
+        "#Lifestyle65"
+      ],
+      "anthem": "🎵 'Cielito Lindo' by Mariachi Vargas",
+      "film": "🎬 'Chocolat' (Lasse Hallström)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Valerie, 28 years old. I'm passionate about developing meaningful personal skills and sharing authentic experiences with like-minded people.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Discuss Valerie's main interests and explain why this lifestyle appeals to them."
+    }
+  ],
+  "B2": [
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Camille",
+      "age": "29",
+      "location": "📍 Paris, France • 🇫🇷 French",
+      "verified": true,
+      "avatar": "🇫🇷",
+      "gradient": "linear-gradient(135deg, #1d4ed8 0%, #ef4444 100%)",
+      "visualDescription": "French woman in a trench coat seated at a Parisian pavement café with wine.",
+      "interests": [
+        "#FrenchCulture",
+        "#ParisianLife",
+        "#GoodFood"
+      ],
+      "anthem": "🎵 'La Vie en rose' by Édith Piaf",
+      "film": "🎬 'Amélie' (Jean-Pierre Jeunet)",
+      "pages": [
+        {
+          "tag": "🖼️ Parisian Lifestyle",
+          "bio": "Bonjour! I'm Camille from Paris. In France, we value enjoying life through good food, art, and long discussions over dinner. I love exploring Parisian cafes, fresh pastries, and local markets.",
+          "greenFlags": [
+            "✓ Great knowledge of food and cheese",
+            "✓ Loves lively, deep conversations",
+            "✓ Elegant daily lifestyle"
+          ],
+          "redFlags": [
+            "✗ Very particular about fresh bread",
+            "✗ Sighs if the coffee isn't hot enough",
+            "✗ Always compares food to French cuisine"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Parisian Rhythms",
+          "bio": "My morning starts with a fresh crispy baguette from the neighborhood boulangerie. On weekends, I browse contemporary art exhibits at the Palais de Tokyo before enjoying wine with friends.",
+          "greenFlags": [
+            "✓ Connoisseur of artisanal bakeries",
+            "✓ Passionate art commentator",
+            "✓ Cultured weekend itinerary"
+          ],
+          "redFlags": [
+            "✗ Refuses day-old bread under any condition",
+            "✗ Debates art theory for hours",
+            "✗ Critical of non-espresso coffee"
+          ]
+        }
+      ],
+      "opener": "Bonjour! How much do food and cultural traditions influence your daily life?",
+      "icebreakers": [
+        "Food is a huge part of culture!",
+        "French pastry is amazing!",
+        "I love good dinner conversations!"
+      ],
+      "prompt": "Discuss French lifestyle and food traditions as described in Camille's profile."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Leandro",
+      "age": "30",
+      "location": "📍 Rio de Janeiro, Brazil • 🇧🇷 Portuguese",
+      "verified": true,
+      "avatar": "🇧🇷",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #eab308 100%)",
+      "visualDescription": "Brazilian man playing beach volleyball on Ipanema Beach in Rio de Janeiro.",
+      "interests": [
+        "#BrazilianVibes",
+        "#RioDeJaneiro",
+        "#BossaNova"
+      ],
+      "anthem": "🎵 'The Girl from Ipanema' by Stan Getz & Astrud Gilberto",
+      "film": "🎬 'City of God' (Fernando Meirelles)",
+      "pages": [
+        {
+          "tag": "🖼️ Rio Spirit",
+          "bio": "Olá! I'm Leandro from Rio de Janeiro. Brazil is a vibrant country rich in music, beach sports, and outdoor gatherings. From bossa nova melodies to lively weekend barbecues, community and music are at the heart of daily life.",
+          "greenFlags": [
+            "✓ Warm and welcoming personality",
+            "✓ Plays acoustic guitar and bossa nova",
+            "✓ Cooks delicious traditional feijoada"
+          ],
+          "redFlags": [
+            "✗ Flexible idea of arrival times",
+            "✗ Very loud social gatherings",
+            "✗ Plays music late into the night"
+          ]
+        },
+        {
+          "tag": "⚡ Carioca Life",
+          "bio": "I spend weekends playing footvolley on Ipanema beach, strumming samba chords on my nylon-string guitar, and preparing slow-cooked feijoada for big gatherings of family and friends.",
+          "greenFlags": [
+            "✓ Athletic beach lifestyle",
+            "✓ Musical bossa nova talent",
+            "✓ Master of slow-cooked Brazilian feast"
+          ],
+          "redFlags": [
+            "✗ Sand everywhere in the apartment",
+            "✗ Operates on relaxed 'Carioca time'",
+            "✗ Jam sessions extend past 1 AM"
+          ]
+        },
+        {
+          "tag": "💭 Musical Connections",
+          "bio": "Music in Brazil isn't just entertainment; it's our collective language for processing joy and saudade. Gathering people around rhythm and good food creates lifelong bonds.",
+          "greenFlags": [
+            "✓ Expressive emotional depth",
+            "✓ Unifies people through music",
+            "✓ Welcoming heart"
+          ],
+          "redFlags": [
+            "✗ Cannot stand quiet solitary silence for long",
+            "✗ Spontaneous samba circles anywhere",
+            "✗ Invites entire neighborhood to dinner"
+          ]
+        }
+      ],
+      "opener": "Olá! What comes to mind when you think about Brazilian music and culture?",
+      "icebreakers": [
+        "Bossa nova is so relaxing!",
+        "Rio de Janeiro looks incredible!",
+        "I love lively music and food!"
+      ],
+      "prompt": "Talk about how music and social gatherings shape daily life in Brazil according to Leandro."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Sebastian",
+      "age": "34",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "🕺",
+      "gradient": "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle67"
+      ],
+      "anthem": "🎵 '7 Years' by Lukas Graham",
+      "film": "🎬 'Into the Wild' (Sean Penn)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Sebastian. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Sebastian's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Astrid",
+      "age": "20",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩",
+      "gradient": "linear-gradient(135deg, #f43f5e 0%, #fb7185 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle69"
+      ],
+      "anthem": "🎵 'La Vie en Rose' by Édith Piaf",
+      "film": "🎬 'Before Sunrise' (Richard Linklater)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Astrid. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Astrid's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Lars",
+      "age": "21",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👨",
+      "gradient": "linear-gradient(135deg, #0284c7 0%, #38bdf8 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle71"
+      ],
+      "anthem": "🎵 'Oye Como Va' by Santana",
+      "film": "🎬 'Lord of the Rings' (Peter Jackson)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Lars. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Lars's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Ingrid",
+      "age": "22",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🦱",
+      "gradient": "linear-gradient(135deg, #d97706 0%, #f59e0b 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle73"
+      ],
+      "anthem": "🎵 'I\\'m Gonna Be (500 Miles)' by The Proclaimers",
+      "film": "🎬 'Eat Pray Love' (Ryan Murphy)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Ingrid. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Ingrid's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Bjorn",
+      "age": "23",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🍳",
+      "gradient": "linear-gradient(135deg, #059669 0%, #34d399 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle75"
+      ],
+      "anthem": "🎵 'Fast Car' by Tracy Chapman",
+      "film": "🎬 'The Pursuit of Happyness' (Gabriele Muccino)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Bjorn. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Bjorn's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Ines",
+      "age": "24",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍💼",
+      "gradient": "linear-gradient(135deg, #8b5cf6 0%, #c084fc 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle77"
+      ],
+      "anthem": "🎵 'Dreams' by Fleetwood Mac",
+      "film": "🎬 'Frida' (Julie Taymor)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Ines. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Ines's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Gael",
+      "age": "25",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🔬",
+      "gradient": "linear-gradient(135deg, #16a34a 0%, #4ade80 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle79"
+      ],
+      "anthem": "🎵 'Don\\'t Stop Believin\\'' by Journey",
+      "film": "🎬 'The Matrix' (The Wachowskis)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Gael. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Gael's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Flora",
+      "age": "26",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🎨",
+      "gradient": "linear-gradient(135deg, #ef4444 0%, #f97316 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle81"
+      ],
+      "anthem": "🎵 'Unwritten' by Natasha Bedingfield",
+      "film": "🎬 'Spotlight' (Tom McCarthy)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Flora. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Flora's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Andre",
+      "age": "27",
+      "location": "📍 3 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🌾",
+      "gradient": "linear-gradient(135deg, #eab308 0%, #84cc16 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle83"
+      ],
+      "anthem": "🎵 'Higher Love' by Kygo & Whitney Houston",
+      "film": "🎬 'The Grand Budapest Hotel' (Wes Anderson)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Andre. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Andre's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Lina",
+      "age": "28",
+      "location": "📍 4 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍💻",
+      "gradient": "linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle85"
+      ],
+      "anthem": "🎵 'Dog Days Are Over' by Florence + The Machine",
+      "film": "🎬 'Mary Poppins Returns' (Rob Marshall)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Lina. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Lina's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Emil",
+      "age": "29",
+      "location": "📍 5 miles away • City District",
+      "verified": true,
+      "avatar": "👨‍🏫",
+      "gradient": "linear-gradient(135deg, #2563eb 0%, #60a5fa 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle87"
+      ],
+      "anthem": "🎵 'Take Me Home, Country Roads' by John Denver",
+      "film": "🎬 'Good Will Hunting' (Gus Van Sant)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Emil. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Emil's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "Lily",
+      "age": "30",
+      "location": "📍 1 miles away • City District",
+      "verified": true,
+      "avatar": "👩‍🎤",
+      "gradient": "linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle89"
+      ],
+      "anthem": "🎵 'Digital Love' by Daft Punk",
+      "film": "🎬 'Wonder' (Stephen Chbosky)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm Lily. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze Lily's perspective and evaluate the trade-offs involved in their personal choices."
+    },
+    {
+      "type": "profile",
+      "level": "B2",
+      "category": "Nationalities & Cultures 🌍",
+      "title": "David",
+      "age": "31",
+      "location": "📍 2 miles away • City District",
+      "verified": true,
+      "avatar": "🏃‍♂️",
+      "gradient": "linear-gradient(135deg, #0d9488 0%, #2dd4bf 100%)",
+      "visualDescription": "Friendly person in a stylish jacket with short hair and an expressive smile.",
+      "interests": [
+        "#Nationalities",
+        "#B2Level",
+        "#Lifestyle91"
+      ],
+      "anthem": "🎵 'Blowin\\' in the Wind' by Bob Dylan",
+      "film": "🎬 'Free Solo' (Jimmy Chin)",
+      "pages": [
+        {
+          "tag": "🖼️ Heritage",
+          "bio": "I'm David. My lifestyle centers on strategic self-discipline, sophisticated cultural engagement, and pursuing long-term professional fulfillment.",
+          "greenFlags": [
+            "✓ Friendly and welcoming attitude",
+            "✓ Great communication skills"
+          ],
+          "redFlags": [
+            "✗ Easily distracted",
+            "✗ Busy weekend schedule"
+          ]
+        },
+        {
+          "tag": "⚡ Daily Culture",
+          "bio": "During the day, I focus on my goals and enjoy sharing great meals and stories with friends.",
+          "greenFlags": [
+            "✓ Positive energy",
+            "✓ Helpful team player"
+          ],
+          "redFlags": [
+            "✗ Always checks phone",
+            "✗ Late on mornings"
+          ]
+        }
+      ],
+      "opener": "Hello! What is your favorite way to spend a free afternoon?",
+      "icebreakers": [
+        "I love outdoor walks!",
+        "I prefer reading quietly!",
+        "Let's grab a coffee!"
+      ],
+      "prompt": "Analyze David's perspective and evaluate the trade-offs involved in their personal choices."
+    }
+  ]
+}

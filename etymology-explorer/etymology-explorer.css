@@ -1,0 +1,79 @@
+:root {
+  --game-accent: #B45309;
+  --game-accent-dim: rgba(180, 83, 9, 0.15);
+  --game-accent-contrast: #FFFFFF;
+}
+
+/* Archaeological Dig Strata Container (Desktop / Default) */
+.dig-strata-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1.5rem 1rem;
+  margin: 1.25rem 0;
+  background: #FDFBF7;
+  border: 2px dashed rgba(180, 83, 9, 0.3);
+  border-radius: 14px;
+  scroll-behavior: smooth;
+}
+
+/* Individual Soil Layer */
+.dig-strata-layer {
+  flex: 1;
+  min-width: 140px;
+  min-height: 110px;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Not-yet-revealed Layer: Flat Gray */
+.dig-strata-layer.unrevealed {
+  background: #9CA3AF;
+  color: #F3F4F6;
+  border: 2px solid #6B7280;
+}
+
+/* Revealed Layer: Warm Sepia/Bronze Gradient */
+.dig-strata-layer.revealed {
+  background: linear-gradient(135deg, #78350F 0%, #B45309 50%, #D97706 100%);
+  color: #FFFDF9;
+  border: 2px solid #92400E;
+  box-shadow: 0 6px 16px rgba(180, 83, 9, 0.3);
+}
+
+.dig-layer-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+  margin-bottom: 0.35rem;
+}
+
+.dig-layer-content {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Fraunces', serif;
+}
+
+/* Phone Context: Stack Layers Vertically */
+[data-context="phone"] .dig-strata-container {
+  flex-direction: column !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  max-height: 380px;
+}
+
+[data-context="phone"] .dig-strata-layer {
+  width: 100%;
+  min-height: 80px;
+}

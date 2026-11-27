@@ -1,0 +1,416 @@
+/**
+ * hot-seat/game.js
+ * Standalone logic for Hot Seat with spotlighted seat + ticking ring identity and TurnBanner role clarification.
+ */
+(function() {
+    const GAME_ID = 'hotseat';
+    const GAME_TITLE = 'Hot Seat 🎯';
+    const LEVEL_OPTS = ['Starter (A1)','Primary (A2)','Intermediate (B1)','Upper (B2)','Advanced (C1)','Proficiency (C2)'];
+    const LANG_OPTS = window.cosyLanguageLabels(["en","fr","es","de","it","ru","el"]);
+
+    let activeRole = 'guessing'; // 'guessing' | 'clue_giver' | 'watching'
+    let currentTimerInterval = null;
+    let turnBannerInstance = null;
+    let totalTimeSec = 60;
+    let remainingTimeSec = 60;
+
+    function getT() {
+        return (window.COSYGameStrings && typeof window.COSYGameStrings.forGame === 'function')
+            ? window.COSYGameStrings.forGame('hot-seat')
+            : function(key, params, fallback) { return fallback || key; };
+    }
+
+    function getUtils() {
+        return window.COSYUtils || window.gameUtils || {};
+    }
+
+    function esc(str) {
+        const div = document.createElement('div');
+        div.textContent = str || '';
+        return div.innerHTML;
+    }
+
+    function parseLangCode(val) {
+        if (window.COSYLoader && typeof window.COSYLoader.getLangCode === 'function') {
+            return window.COSYLoader.getLangCode(val);
+        }
+        if (!val) return 'en';
+        const clean = val.toLowerCase();
+        if (clean.includes('fr') || clean.includes('french')) return 'fr';
+        if (clean.includes('es') || clean.includes('spanish')) return 'es';
+        if (clean.includes('de') || clean.includes('german')) return 'de';
+        if (clean.includes('it') || clean.includes('italian')) return 'it';
+        if (clean.includes('ru') || clean.includes('russian')) return 'ru';
+        if (clean.includes('el') || clean.includes('greek')) return 'el';
+        return 'en';
+    }
+
+    function parseLevelCode(val) {
+        if (!val) return 'starter';
+        const clean = val.toLowerCase();
+        if (clean.includes('primary') || clean.includes('a2')) return 'elementary';
+        if (clean.includes('intermediate') && !clean.includes('upper')) return 'intermediate';
+        if (clean.includes('upper') || clean.includes('b2')) return 'upper_intermediate';
+        if (clean.includes('advanced') || clean.includes('c1')) return 'advanced';
+        if (clean.includes('proficiency') || clean.includes('c2')) return 'advanced';
+        return 'starter';
+    }
+
+    function renderSetup() {
+        if (typeof COSYLoader !== 'undefined' && COSYLoader.clearLevelNote) {
+            COSYLoader.clearLevelNote();
+        }
+        document.getElementById('go-title').textContent = GAME_TITLE;
+        const T = getT();
+        const body = document.getElementById('go-body');
+        body.innerHTML = `
+            <div class="setup-screen">
+              <h2>Hot Seat 🎯</h2>
+              <p data-gs="setup.description">${T('setup.description', null, 'Quick-fire vocabulary round against the ticking ring! One player is in the spotlighted Hot Seat guessing, while others give clues.')}</p>
+              <div class="setup-field"><label data-i18n="ui_level">Level</label>
+                <select class="styled-sel" id="s-level">${window.cosyLevelOptions(LEVEL_OPTS)}</select>
+              </div>
+              <div class="setup-field"><label data-i18n="ui_practice_language">Practice language</label>
+                <select class="styled-sel" id="s-lang">${LANG_OPTS.map(l=>`<option>${l}</option>`).join('')}</select>
+              </div>
+              <button class="btn-start-game" id="hs-start">▶ <span data-i18n="ui_start_game">Start game</span></button>
+            </div>`;
+
+        document.getElementById('hs-start').addEventListener('click', () => COSY_GAME.start());
+    }
+
+    window.COSY_GAME = {
+        async start() {
+            const T = getT();
+            const rawLang = document.getElementById('s-lang')?.value;
+            const rawLevel = document.getElementById('s-level')?.value;
+            const lang = parseLangCode(rawLang);
+            const level = parseLevelCode(rawLevel);
+            const utils = getUtils();
+
+            document.getElementById('go-body').innerHTML = `<div style="text-align:center;padding:4rem;" data-gs="common.loading">${T('common.loading', null, 'Loading...')}</div>`;
+
+            if (typeof COSYLoader !== 'undefined' && COSYLoader.loadLevelData) {
+                try {
+                    await COSYLoader.loadLevelData(lang, level);
+                } catch (e) {
+                    console.warn('Level data fallback', e);
+                }
+            }
+
+            const reqLevelCode = window.COSYVocab ? window.COSYVocab.levelCode(rawLevel) : level;
+            const vres = window.COSYVocab ? await window.COSYVocab.ensureFull(lang, reqLevelCode, { needEmoji: false, min: 30, forms: ['noun', 'verb', 'adjective'], maxFiles: 10 }) : { ok: false };
+
+            if (typeof COSYLoader !== 'undefined') {
+                COSYLoader.clearLevelNote();
+                if (vres.widened) {
+                    COSYLoader.showLevelNote(COSYLoader.levelNoteText());
+                }
+            }
+
+            COSYGame.init(GAME_ID, lang, level);
+            COSYGame.maxRounds = 15;
+
+            const body = document.getElementById('go-body');
+            let active = true;
+
+            const fallbackVocab = [
+                { isFallback: true, word: 'Apple', plural: 'Apples', definitions: [{ text: 'A round fruit with red or green skin', examples: [{ text: 'I ate an apple.' }] }] },
+                { isFallback: true, word: 'Book', plural: 'Books', definitions: [{ text: 'Written pages bound together', examples: [{ text: 'She reads a book.' }] }] },
+                { isFallback: true, word: 'Guitar', plural: 'Guitars', definitions: [{ text: 'A stringed musical instrument', examples: [{ text: 'He plays guitar.' }] }] },
+                { isFallback: true, word: 'Coffee', plural: 'Coffees', definitions: [{ text: 'A hot roasted bean drink', examples: [{ text: 'I drink morning coffee.' }] }] },
+                { isFallback: true, word: 'Sun', plural: 'Suns', definitions: [{ text: 'The star at the center of our solar system', examples: [{ text: 'The sun is bright.' }] }] },
+                { isFallback: true, word: 'Tree', plural: 'Trees', definitions: [{ text: 'A woody perennial plant', examples: [{ text: 'Birds sit in the tree.' }] }] }
+            ];
+
+            let vocab = [];
+            if (vres.ok && window.vocabularyData && window.vocabularyData[lang]) {
+                vocab = window.vocabularyData[lang].filter(item => {
+                    const hasPluralNoun = Boolean(item.plural && item.form === 'noun');
+                    const hasDefinition = Boolean(item.definitions && item.definitions[0] && item.definitions[0].text);
+                    const hasExample = Boolean(item.definitions && item.definitions[0] && item.definitions[0].examples && item.definitions[0].examples[0] && (item.definitions[0].examples[0].text || typeof item.definitions[0].examples[0] === 'string'));
+                    return hasPluralNoun || hasDefinition || hasExample;
+                });
+            }
+
+            if (!vres.ok || vocab.length < 8) {
+                vocab = fallbackVocab;
+            }
+
+            const drawBag = utils.createDrawBag ? utils.createDrawBag(vocab) : { next: () => vocab[Math.floor(Math.random() * vocab.length)] };
+
+            const updateRoleUI = () => {
+                const roleCard = document.getElementById('hs-main-card');
+                if (roleCard) {
+                    roleCard.className = `hotseat-spotlight-card role-${activeRole}`;
+                }
+
+                // Update TurnBanner role text
+                if (turnBannerInstance) {
+                    if (activeRole === 'guessing') {
+                        turnBannerInstance.setTurn(T('common.turn_guessing', null, "You're guessing"), T('common.turn_guessing_sub', null, "Guesser in the Hot Seat 🔥"));
+                    } else if (activeRole === 'clue_giver') {
+                        turnBannerInstance.setTurn(T('common.turn_clues', null, "You're giving clues"), T('common.turn_clues_sub', null, "Give clues without saying the word!"));
+                    } else {
+                        turnBannerInstance.setTurn(T('common.turn_watching', null, "You're watching"), T('common.turn_watching_sub', null, "Audience Spectator View"));
+                    }
+                }
+
+                // Toggle role buttons
+                document.querySelectorAll('.role-btn').forEach(btn => {
+                    if (btn.dataset.role === activeRole) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            };
+
+            const nextQ = () => {
+                if (!active) return;
+                if (!COSYGame.nextRound()) {
+                    active = false;
+                    COSY_GAME.renderEnd();
+                    return;
+                }
+
+                let item = drawBag.next();
+                let availableTypes = [];
+
+                const getTypes = (it) => {
+                    const list = [];
+                    if (it.plural && (it.form === 'noun' || it.isFallback)) {
+                        list.push('plural');
+                    }
+                    if (it.definitions && it.definitions[0] && it.definitions[0].text) {
+                        list.push('definition');
+                    }
+                    if (it.definitions && it.definitions[0] && it.definitions[0].examples && it.definitions[0].examples[0]) {
+                        const ex = it.definitions[0].examples[0];
+                        if (typeof ex === 'string' ? ex.trim() !== '' : (ex.text && ex.text.trim() !== '')) {
+                            list.push('sentence');
+                        }
+                    }
+                    return list;
+                };
+
+                availableTypes = getTypes(item);
+                if (availableTypes.length === 0) {
+                    for (let attempts = 0; attempts < 20; attempts++) {
+                        item = drawBag.next();
+                        availableTypes = getTypes(item);
+                        if (availableTypes.length > 0) break;
+                    }
+                    if (availableTypes.length === 0) {
+                        item = fallbackVocab[0];
+                        availableTypes = ['plural', 'definition', 'sentence'];
+                    }
+                }
+
+                const type = availableTypes[Math.floor(Math.random() * availableTypes.length)];
+
+                let answerText = '';
+                let fallbackPrompt = '';
+                if (type === 'plural') {
+                    fallbackPrompt = `What is the plural of {word}?`;
+                    answerText = item.plural;
+                } else if (type === 'definition') {
+                    fallbackPrompt = `Define the word {word}.`;
+                    answerText = item.definitions[0].text;
+                } else {
+                    fallbackPrompt = `Use {word} in a sentence.`;
+                    const ex = item.definitions[0].examples[0];
+                    answerText = typeof ex === 'string' ? ex : ex.text;
+                }
+
+                const PROMPT_KEYS = {
+                    plural: 'hs_prompt_plural',
+                    definition: 'hs_prompt_define',
+                    sentence: 'hs_prompt_sentence'
+                };
+
+                const ttsBtnHtml = (window.gameUtils && window.gameUtils.renderTTSSpeakerHtml) ? window.gameUtils.renderTTSSpeakerHtml(item.word, lang) : '';
+                const wordHtml = `<strong>${esc(item.word)}</strong>${ttsBtnHtml}`;
+                const promptTemplate = window.tOr(PROMPT_KEYS[type], fallbackPrompt);
+                const promptText = promptTemplate.replace('{word}', wordHtml);
+
+                const radius = 70;
+                const circumference = 2 * Math.PI * radius; // ~439.8
+
+                const ansEsc = `<strong>${esc(answerText)}</strong>`;
+
+                body.innerHTML = `
+                    <div class="score-bar">
+                        <div class="sb-item"><div class="sb-val" id="hs-score">${COSYGame.score}</div><div class="sb-lbl" data-gs="common.score">${T('common.score', null, 'Score')}</div></div>
+                        <div class="sb-item"><div class="sb-val">${COSYGame.round}/${COSYGame.maxRounds}</div><div class="sb-lbl" data-gs="common.round">${T('common.round', null, 'Round')}</div></div>
+                    </div>
+
+                    <div id="turn-banner-mount" style="margin-bottom: 1rem;"></div>
+
+                    <div class="role-toggle-bar">
+                        <button class="role-btn ${activeRole === 'guessing' ? 'active' : ''}" data-role="guessing">🎯 <span data-gs="role.guessing">${T('role.guessing', null, 'Guessing')}</span></button>
+                        <button class="role-btn ${activeRole === 'clue_giver' ? 'active' : ''}" data-role="clue_giver">🗣️ <span data-gs="role.giving_clues">${T('role.giving_clues', null, 'Giving Clues')}</span></button>
+                        <button class="role-btn ${activeRole === 'watching' ? 'active' : ''}" data-role="watching">👁️ <span data-gs="role.watching">${T('role.watching', null, 'Watching')}</span></button>
+                    </div>
+
+                    <div class="hotseat-spotlight-card role-${activeRole}" id="hs-main-card">
+                        <div class="game-label">🎯 <span data-gs="play.spotlight_title">${T('play.spotlight_title', null, 'Spotlighted Hot Seat')}</span></div>
+
+                        <!-- Radial SVG Countdown Ring -->
+                        <div class="hotseat-ring-wrapper">
+                            <svg class="hotseat-ring-svg" viewBox="0 0 160 160">
+                                <circle class="hotseat-ring-bg" cx="80" cy="80" r="${radius}" />
+                                <circle class="hotseat-ring-circle" id="hs-ring-circle" cx="80" cy="80" r="${radius}"
+                                        stroke-dasharray="${circumference}" stroke-dashoffset="0" />
+                            </svg>
+                            <div class="hotseat-avatar-content">
+                                <div class="hotseat-guesser-name">🔥 <span data-gs="play.hot_seat_label">${T('play.hot_seat_label', null, 'Hot Seat')}</span></div>
+                                <div class="hotseat-timer-sec" id="hs-timer-val">60</div>
+                            </div>
+                        </div>
+
+                        <!-- Prompt & Answer (hidden on phone for guesser) -->
+                        <div class="hotseat-prompt-area">
+                            <div class="game-prompt" style="font-size:1.4rem">${promptText}</div>
+                            <div class="hotseat-answer-hint" style="font-size:0.9rem; color:var(--ink-faint); margin: 0.75rem 0;">
+                                ${T('play.suggested_answer', { answer: ansEsc }, `Suggested Answer: "${ansEsc}"`)}
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="game-controls" style="justify-content:center; gap:1rem; margin-top: 1rem;">
+                            <button class="btn-g-primary" style="background:#16a34a;" id="hs-got-it">✓ <span data-gs="btn.got_it">${T('btn.got_it', null, 'Got it!')}</span></button>
+                            <button class="btn-pass-large" id="hs-pass">➔ <span data-gs="btn.pass">${T('btn.pass', null, 'Pass')}</span></button>
+                        </div>
+                    </div>`;
+
+                // Initialize TurnBanner
+                const bannerContainer = document.getElementById('turn-banner-mount');
+                if (bannerContainer && typeof TurnBanner !== 'undefined') {
+                    turnBannerInstance = new TurnBanner(bannerContainer, {
+                        label: T('common.turn_guessing', null, "You're guessing"),
+                        currentTurn: T('common.turn_guessing_sub', null, "Guesser in the Hot Seat 🔥")
+                    });
+                }
+
+                updateRoleUI();
+
+                document.querySelectorAll('.role-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        activeRole = e.currentTarget.dataset.role;
+                        updateRoleUI();
+                    });
+                });
+
+                document.getElementById('hs-got-it').addEventListener('click', () => COSY_GAME.hsResult(true));
+                document.getElementById('hs-pass').addEventListener('click', () => COSY_GAME.hsResult(false));
+            };
+
+            window.COSY_GAME.hsResult = (ok) => {
+                if (ok) {
+                    COSYGame.addScore(10);
+                    const scoreEl = document.getElementById('hs-score');
+                    if (scoreEl) scoreEl.textContent = COSYGame.score;
+                }
+                nextQ();
+            };
+
+            // Start 60s Ticking Ring Timer
+            totalTimeSec = 60;
+            remainingTimeSec = 60;
+
+            if (currentTimerInterval) clearInterval(currentTimerInterval);
+
+            const circumference = 2 * Math.PI * 70; // ~439.8
+
+            currentTimerInterval = setInterval(() => {
+                if (!active) {
+                    clearInterval(currentTimerInterval);
+                    return;
+                }
+
+                remainingTimeSec -= 0.2; // Update every 200ms for smooth ring depletion
+                if (remainingTimeSec < 0) remainingTimeSec = 0;
+
+                const timerValEl = document.getElementById('hs-timer-val');
+                const ringCircle = document.getElementById('hs-ring-circle');
+                const card = document.getElementById('hs-main-card');
+
+                if (timerValEl) {
+                    timerValEl.textContent = Math.ceil(remainingTimeSec);
+                }
+
+                if (ringCircle) {
+                    const progress = remainingTimeSec / totalTimeSec;
+                    const offset = circumference * (1 - progress);
+                    ringCircle.style.strokeDashoffset = offset;
+                }
+
+                // Final 5 seconds warning pulse
+                if (remainingTimeSec <= 5 && remainingTimeSec > 0) {
+                    if (card) card.classList.add('pulse-warning');
+                    if (ringCircle) ringCircle.classList.add('pulse-warning');
+                    if (timerValEl) timerValEl.classList.add('pulse-warning');
+                } else {
+                    if (card) card.classList.remove('pulse-warning');
+                    if (ringCircle) ringCircle.classList.remove('pulse-warning');
+                    if (timerValEl) timerValEl.classList.remove('pulse-warning');
+                }
+
+                if (remainingTimeSec <= 0) {
+                    clearInterval(currentTimerInterval);
+                    active = false;
+                    COSY_GAME.renderEnd();
+                }
+            }, 200);
+
+            nextQ();
+        },
+
+        reset: renderSetup,
+
+        renderEnd() {
+            const T = getT();
+            if (currentTimerInterval) clearInterval(currentTimerInterval);
+            const lang = COSYGame.language;
+            const level = COSYGame.level;
+            COSYScores.save(GAME_ID, lang, level, COSYGame.score);
+            const best = COSYScores.best(GAME_ID, lang);
+            const countStr = `<strong>${COSYGame.score / 10}</strong>`;
+            const scoreVal = COSYGame.score;
+
+            // Trigger confetti celebration & scorecard modal
+            if (window.gameUtils) {
+                if (window.gameUtils.playGameSound) window.gameUtils.playGameSound('success');
+                if (window.gameUtils.createConfetti) window.gameUtils.createConfetti();
+                if (window.gameUtils.showSessionScorecard) {
+                    window.gameUtils.showSessionScorecard({
+                        gameTitle: 'Hot Seat 🎯',
+                        score: scoreVal,
+                        maxScore: COSYGame.maxRounds * 10,
+                        lang: lang,
+                        items: [
+                            { label: 'Rounds Completed', value: `${COSYGame.round}/${COSYGame.maxRounds}` },
+                            { label: 'Correct Guesses', value: `${scoreVal / 10}` }
+                        ]
+                    });
+                }
+            }
+
+            const body = document.getElementById('go-body');
+            body.innerHTML = `
+                <div class="round-end">
+                    <div class="re-icon">🏆</div>
+                    <div class="re-title" data-gs="end.title">${T('end.title', null, 'Round Over!')}</div>
+                    <div class="re-sub">${T('end.sub', { count: countStr, score: scoreVal }, `You answered <strong>${COSYGame.score / 10}</strong> questions correctly. Total: ${COSYGame.score} pts.`)}</div>
+                    ${best ? `<div class="game-sub" style="margin-bottom:1rem">${T('common.personal_best', { score: best.score }, `Personal best: ${best.score} pts`)}</div>` : ''}
+                    <div class="re-actions">
+                        <button class="btn-g-primary" onclick="COSY_GAME.start()"><span data-i18n="ui_play_again">Play again</span> ↺</button>
+                        <button class="btn-g-secondary" onclick="COSY_GAME.reset()"><span data-gs="common.btn_setup">${T('common.btn_setup', null, 'Setup')}</span></button>
+                    </div>
+                </div>`;
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', renderSetup);
+})();

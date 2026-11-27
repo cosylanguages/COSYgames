@@ -1,0 +1,180 @@
+/* COSYgames Navigation Bar CSS */
+
+.cg-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: var(--surface-color, var(--warm-white, #FFFEFB));
+  border-bottom: 1px solid var(--border, rgba(74, 107, 80, 0.12));
+  box-shadow: var(--shadow-sm, 0 2px 12px rgba(0, 0, 0, 0.05));
+  transition: all var(--motion-duration-med, 300ms) ease;
+  min-width: 0;
+}
+
+.cg-nav-brand {
+  font-family: var(--font-serif, 'Fraunces', Georgia, serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-color, var(--ink, #2a2a2a));
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+.cg-nav-logo {
+  height: 32px;
+  width: auto;
+  border-radius: var(--cosy-radius-sm, 6px);
+  object-fit: contain;
+}
+
+.cg-nav-brand:hover {
+  color: var(--game-accent, var(--teal, #416b49));
+}
+
+.cg-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.cg-nav-hub-link {
+  font-size: 0.85rem;
+  color: var(--ink-muted, #4a4a4a);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 6px;
+  border-radius: var(--radius-sm, 8px);
+  transition: color var(--motion-duration-fast, 150ms) ease;
+}
+
+.cg-nav-hub-link:hover {
+  color: var(--game-accent, var(--teal, #416b49));
+}
+
+.cg-theme-btn {
+  background: none;
+  border: 1px solid transparent;
+  font-size: 1.15rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: var(--r-sm, 8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--motion-duration-fast, 150ms) ease;
+}
+
+.cg-theme-btn:hover {
+  background: var(--sage-mist, rgba(65, 107, 73, 0.1));
+}
+
+/* Context Switcher Styling */
+.cosy-context-switcher-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cosy-teacher-badge {
+  background: transparent;
+  border: none;
+  font-size: 1.15rem;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: var(--radius-sm, 8px);
+}
+
+.cosy-teacher-badge:focus-visible {
+  outline: 2px solid var(--game-accent, var(--teal, #416b49));
+  outline-offset: 2px;
+}
+
+.cosy-context-select {
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm, 10px);
+  border: 1px solid var(--border, rgba(0, 0, 0, 0.15));
+  background: var(--surface-color, #ffffff);
+  color: var(--text-color, #2a2a2a);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--motion-duration-fast, 150ms) ease;
+  min-height: 38px;
+  max-width: 9rem;
+}
+
+.cosy-context-select:hover,
+.cosy-context-select:focus-visible {
+  border-color: var(--game-accent, var(--teal, #416b49));
+  box-shadow: 0 0 0 3px var(--game-accent-dim, rgba(65, 107, 73, 0.15));
+}
+
+/* Context-dependent adaptations for Navbar */
+html[data-context="projector"] .cg-nav,
+[data-context="projector"] .cg-nav {
+  padding: 1rem 2rem;
+  border-bottom-width: 3px;
+}
+
+html[data-context="projector"] .cg-nav-brand,
+[data-context="projector"] .cg-nav-brand {
+  font-size: 1.4rem;
+}
+
+html[data-context="projector"] .cosy-context-select,
+[data-context="projector"] .cosy-context-select {
+  font-size: 1.05rem;
+  padding: 0.5rem 0.85rem;
+  min-height: 48px;
+}
+
+html[data-context="phone"] .cg-nav,
+[data-context="phone"] .cg-nav {
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 640px) {
+  .cosy-context-switcher-wrapper {
+    display: none;
+  }
+  .cg-nav-hub-link {
+    display: none; /* Hide verbose external links on narrow phones to preserve game area */
+  }
+  .cg-nav-right {
+    gap: 8px;
+  }
+  .cosy-context-select {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.4rem;
+    max-width: 140px;
+  }
+}
+
+/* Five ecosystem links no longer fit next to the brand, language picker and theme button on narrow desktops/tablets.
+   The footer repeats every link, so hide only these (the hub's category anchors keep their own breakpoint). */
+@media (max-width: 860px) {
+  .cg-nav-eco {
+    display: none;
+  }
+}

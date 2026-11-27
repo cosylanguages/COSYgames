@@ -1,0 +1,8 @@
+/**
+ * COSYlanguages Master Design Tokens
+ * Location: shared/css/cosy-tokens.css
+ * Vendored in COSYgames on: March 2026 from https://cosylanguages.github.io/COSYlanguages/shared/css/tokens.css
+ *
+ * This file redirects/imports shared/css/tokens.css for backward compatibility.
+ */
+@import url('./tokens.css');
